@@ -22,8 +22,9 @@
 
       <div class="header-actions">
         <div class="mode-segmented">
-          <button class="mode-btn active" data-mode="interactive">📱 Vue Interactive</button>
-          <button class="mode-btn" data-mode="print">📄 Planches A4 (Recto/Verso)</button>
+          <button class="mode-btn active" data-mode="duo">📖 Vue Dépliée (Recto + Verso)</button>
+          <button class="mode-btn" data-mode="flip">🔄 Fiches Réversibles</button>
+          <button class="mode-btn" data-mode="print">📄 Planches A4 Impression</button>
         </div>
         <button id="btn-print" class="btn btn-gold">
           <span>🖨️ Imprimer les fiches</span>
@@ -58,7 +59,7 @@
   <main class="main-container">
     <div class="view-stats">
       <span id="view-stats">Chargement des données...</span>
-      <span style="font-size: 0.75rem; color: var(--slate-400);">Cliquez sur "🔄 Tourner la fiche" pour basculer entre Identité et Tactique</span>
+      <span id="view-hint" style="font-size: 0.75rem; color: var(--slate-400);">Mode Déplié : Face A (Identité) et Face B (Tactique) affichées côte-à-côte</span>
     </div>
 
     <div class="cards-grid" id="cards-grid">

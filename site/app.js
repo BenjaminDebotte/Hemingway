@@ -7,7 +7,7 @@ const MONTHS = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'];
 let currentFilterCategory = 'all';
 let currentFilterBiotope = 'all';
 let currentSearchTerm = '';
-let currentViewMode = 'interactive'; // 'interactive' | 'print'
+let currentViewMode = 'duo'; // 'duo' (dépliée) | 'flip' (carte 3D) | 'print' (A4)
 
 document.addEventListener('DOMContentLoaded', () => {
   initApp();
@@ -146,14 +146,31 @@ function renderApp() {
     statsEl.textContent = `${speciesList.length} espèce${plural} affichée${plural} sur 32`;
   }
 
-  if (currentViewMode === 'interactive') {
-    renderInteractiveView(speciesList);
+  const hintEl = document.getElementById('view-hint');
+  if (hintEl) {
+    if (currentViewMode === 'duo') {
+      hintEl.textContent = 'Mode Déplié : Face A (Identité) et Face B (Tactique) affichées côte-à-côte en pleine largeur';
+    } else if (currentViewMode === 'flip') {
+      hintEl.textContent = 'Mode Réversible : Cliquez sur "🔄 Tourner la fiche" pour basculer en 3D';
+    } else {
+      hintEl.textContent = 'Mode Impression : Aperçu des planches A4 paysage duplex prêtes pour l\'imprimante';
+    }
+  }
+
+  if (currentViewMode === 'duo') {
+    renderDuoView(speciesList);
+  } else if (currentViewMode === 'flip') {
+    renderFlipView(speciesList);
   } else {
     renderPrintView(speciesList);
   }
 }
 
-function renderInteractiveView(speciesList) {
+// --------------------------------------------------------------------------
+// VUE 1 : DÉPLIÉE CÔTE-À-CÔTE (CONFORT ÉCRAN MAXIMAL)
+// --------------------------------------------------------------------------
+
+function renderDuoView(speciesList) {
   const container = document.getElementById('cards-grid');
   if (!container) return;
 
@@ -167,6 +184,38 @@ function renderInteractiveView(speciesList) {
     return;
   }
 
+  container.className = 'duo-cards-container';
+  container.innerHTML = speciesList.map(fish => `
+    <div class="duo-card" id="duo-${fish.id}">
+      <div class="duo-card-column col-recto">
+        ${renderCardFront(fish)}
+      </div>
+      <div class="duo-card-column col-verso">
+        ${renderCardBack(fish)}
+      </div>
+    </div>
+  `).join('');
+}
+
+// --------------------------------------------------------------------------
+// VUE 2 : FICHES RÉVERSIBLES (ANIMATION 3D GRAND FORMAT)
+// --------------------------------------------------------------------------
+
+function renderFlipView(speciesList) {
+  const container = document.getElementById('cards-grid');
+  if (!container) return;
+
+  if (speciesList.length === 0) {
+    container.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--slate-500);">
+        <h3>Aucun poisson ne correspond à ces critères</h3>
+        <p>Essayez de réinitialiser la recherche ou les filtres.</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.className = 'cards-grid';
   container.innerHTML = speciesList.map(fish => `
     <div class="interactive-card" id="card-${fish.id}">
       <button class="card-flip-trigger" onclick="toggleCardFlip('${fish.id}')">
