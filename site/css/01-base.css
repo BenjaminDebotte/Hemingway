@@ -90,7 +90,7 @@
      DESIGN TOKENS SÉMANTIQUES UNIFIÉS (--theme-*)
      ========================================================================== */
 
-  /* Valeurs par défaut : De School / Archief (Brutalisme Minimaliste Amsterdam) */
+  /* Valeurs par défaut : Archief (Brutalisme Minimaliste & Papier d'Archive) */
   --theme-bg: #f9f6ef;
   --theme-bg-pattern-dot: rgb(0 0 0 / 0.05);
   --theme-header-bg: #000000;
@@ -173,7 +173,7 @@
   --font-display: "Basis Grotesque Pro Medium", "Basis Grotesque Pro", "Basis Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "Courier Prime", "Courier New", "JetBrains Mono", ui-monospace, monospace;
 
-  /* Architecture Minimaliste De School : Zéro Rayon (0px) & Zéro Arrondi */
+  /* Architecture Minimaliste : Zéro Rayon (0px) & Zéro Arrondi */
   --bezel-outer-radius: 0px;
   --bezel-padding: 0px;
   --bezel-inner-radius: 0px;
@@ -224,12 +224,12 @@ body {
   min-height: 100dvh;
 }
 
-/* Pureté minimaliste De School */
+/* Pureté minimaliste */
 body::before {
   display: none !important;
 }
 
-/* Typographie & Liens Brutalistes De School */
+/* Typographie & Liens Brutalistes */
 a:hover,
 .brand-title:hover,
 .duo-title:hover,

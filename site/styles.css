@@ -4,7 +4,7 @@
    ==========================================================================
    Ce fichier agrège les 7 modules de styles spécialisés situés dans site/css/ :
    - site/css/01-base.css       : Tokens CSS racine, reset, typographie, icônes SVG, accessibilité
-   - site/css/02-themes.css     : Les 6 univers de design (De School, Estran, Épaves, etc.)
+   - site/css/02-themes.css     : Les 11 univers de design (Archief, Estran, Épaves, etc.)
    - site/css/03-header.css     : Header, barre de recherche, pills de filtrage, popover de thème
    - site/css/04-views.css      : Châssis Vue Dépliée (.duo-card), Carte 3D (.interactive-card)
    - site/css/05-card-front.css : Face A (En-tête, badges, repères, cockpit règles, morpho, heatmap, notes)

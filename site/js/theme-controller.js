@@ -6,59 +6,64 @@ export const STORAGE_KEY_THEME = 'peche-theme-universe';
 export const STORAGE_KEY_MODE = 'peche-theme-mode';
 
 export const THEME_DEFINITIONS = {
+  archief: {
+    label: 'Archief',
+    name: 'Archief',
+    color: '#000000'
+  },
   deschool: {
     label: 'Archief',
-    name: 'De School / Archief',
+    name: 'Archief',
     color: '#000000'
   },
   estran: {
     label: 'Varech',
-    name: 'De School / Varech',
+    name: 'Estran & Varech',
     color: '#047857'
   },
   epaves: {
     label: 'Rouille',
-    name: 'De School / Rouille',
+    name: 'Épaves & Rouille',
     color: '#c2410c'
   },
   dune: {
     label: 'Ocre',
-    name: 'De School / Ocre',
+    name: 'Dune & Calcaire',
     color: '#b45309'
   },
   carbon: {
     label: 'Sondeur',
-    name: 'De School / Sondeur',
+    name: 'Carbone Sondeur',
     color: '#65a30d'
   },
   shom: {
     label: 'SHOM',
-    name: 'De School / SHOM',
+    name: 'Carte SHOM',
     color: '#1d4ed8'
   },
   beton: {
-    label: 'Beton',
-    name: 'De School / Beton',
+    label: 'Béton',
+    name: 'Béton Brut',
     color: '#525252'
   },
   krant: {
-    label: 'Krant',
-    name: 'De School / Krant',
+    label: 'Journal',
+    name: 'Journal & Fanzine',
     color: '#171717'
   },
   kraft: {
     label: 'Kraft',
-    name: 'De School / Kraft',
+    name: 'Carton Kraft',
     color: '#78350f'
   },
   asfalt: {
-    label: 'Asfalt',
-    name: 'De School / Asfalt',
+    label: 'Bitume',
+    name: 'Bitume & Craie',
     color: '#0a0a0a'
   },
   staal: {
-    label: 'Staal',
-    name: 'De School / Staal',
+    label: 'Acier',
+    name: 'Acier & Poutres',
     color: '#334155'
   }
 };
@@ -68,21 +73,19 @@ export const MODE_ICONS = {
   dark: `<svg class="ui-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`
 };
 
-export let currentThemeUniverse = 'deschool';
+export let currentThemeUniverse = 'archief';
 export let currentThemeMode = 'light';
 
 export function initThemeController() {
   let savedTheme = localStorage.getItem(STORAGE_KEY_THEME);
   const savedMode = localStorage.getItem(STORAGE_KEY_MODE);
 
-  // Découverte directe du nouveau thème De School
-  const SEEN_DESCHOOL_KEY = 'peche-seen-deschool-v1';
-  if (!localStorage.getItem(SEEN_DESCHOOL_KEY)) {
+  // Migration de l'ancien token 'deschool' vers 'archief'
+  if (savedTheme === 'deschool') {
+    savedTheme = 'archief';
     try {
-      localStorage.setItem(SEEN_DESCHOOL_KEY, '1');
-      localStorage.setItem(STORAGE_KEY_THEME, 'deschool');
+      localStorage.setItem(STORAGE_KEY_THEME, 'archief');
     } catch (e) {}
-    savedTheme = 'deschool';
   }
 
   // Migration de l'ancien thème 'tactical'
@@ -93,7 +96,7 @@ export function initThemeController() {
   if (savedTheme && THEME_DEFINITIONS[savedTheme]) {
     currentThemeUniverse = savedTheme;
   } else {
-    currentThemeUniverse = 'deschool';
+    currentThemeUniverse = 'archief';
   }
 
   if (savedMode === 'light' || savedMode === 'dark') {
@@ -187,7 +190,7 @@ export function applyTheme(theme, mode, persist = true) {
   const dotEl = document.getElementById('theme-trigger-dot');
   const modeIconEl = document.getElementById('theme-trigger-mode-icon');
 
-  const themeMeta = THEME_DEFINITIONS[theme] || THEME_DEFINITIONS.deschool;
+  const themeMeta = THEME_DEFINITIONS[theme] || THEME_DEFINITIONS.archief;
 
   if (labelEl) {
     labelEl.textContent = themeMeta.label;

@@ -1,6 +1,6 @@
 /* ==========================================================================
-   MATRICE DES 22 THÈMES DYNAMIQUES (11 NUANCES DE SCHOOL × JOUR / NUIT)
-   Identité Brutaliste J.B. Ingwersen 1973 & Éditions Risographe
+   MATRICE DES 22 THÈMES DYNAMIQUES (11 NUANCES × JOUR / NUIT)
+   Identité Brutaliste & Éditions Risographe Haute Densité
    ========================================================================== */
 
 /* ==========================================================================
@@ -8,11 +8,13 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   0. DE SCHOOL / ARCHIEF — Brutalisme Minimaliste Amsterdam (Het Altijd)
+   0. ARCHIEF — Brutalisme Minimaliste & Papier d'Archive
    -------------------------------------------------------------------------- */
 
-/* 0A. De School Archief - Mode Jour (Papier Archief & Encre Noire) */
+/* 0A. Archief - Mode Jour (Papier Archief & Encre Noire) */
+html[data-theme="archief"][data-mode="light"],
 html[data-theme="deschool"][data-mode="light"],
+html[data-theme="archief"]:not([data-mode="dark"]),
 html[data-theme="deschool"]:not([data-mode="dark"]),
 :root:not([data-theme]):not([data-mode="dark"]) {
   --theme-bg: #f9f6ef;
@@ -93,7 +95,8 @@ html[data-theme="deschool"]:not([data-mode="dark"]),
   --theme-gauge-fill: #000000;
 }
 
-/* 0B. De School Archief - Mode Nuit (Club Zwart Pure Black & White) */
+/* 0B. Archief - Mode Nuit (Club Zwart Pure Black & White) */
+html[data-theme="archief"][data-mode="dark"],
 html[data-theme="deschool"][data-mode="dark"],
 html[data-mode="dark"]:not([data-theme]) {
   --theme-bg: #000000;
@@ -175,7 +178,7 @@ html[data-mode="dark"]:not([data-theme]) {
 }
 
 /* --------------------------------------------------------------------------
-   1. ESTRAN & VARECH (De School / Varech — Vert Risographe & Laminaires)
+   1. ESTRAN & VARECH (Varech — Vert Risographe & Laminaires)
    -------------------------------------------------------------------------- */
 
 /* 1A. Estran - Mode Jour (Papier d'Archive Lichen & Encre Varech #047857) */
@@ -340,7 +343,7 @@ html[data-theme="estran"][data-mode="dark"] {
 }
 
 /* --------------------------------------------------------------------------
-   2. ÉPAVES & ROUILLE (De School / Rouille — Terracotta 1944 & Acier Brut)
+   2. ÉPAVES & ROUILLE (Rouille — Terracotta 1944 & Acier Brut)
    -------------------------------------------------------------------------- */
 
 /* 2A. Épaves - Mode Jour (Papier d'Archive Brique & Encre Rouille #c2410c) */
@@ -505,7 +508,7 @@ html[data-theme="epaves"][data-mode="dark"] {
 }
 
 /* --------------------------------------------------------------------------
-   3. DUNE & CALCAIRE (De School / Ocre — Moutarde Minérale & Pierre de Caen)
+   3. DUNE & CALCAIRE (Ocre — Moutarde Minérale & Pierre de Caen)
    -------------------------------------------------------------------------- */
 
 /* 3A. Dune - Mode Jour (Papier d'Archive Calcaire & Encre Ocre #b45309) */
@@ -670,7 +673,7 @@ html[data-theme="dune"][data-mode="dark"] {
 }
 
 /* --------------------------------------------------------------------------
-   4. CARBONE SONDEUR (De School / Sondeur — Graphite & Acid Lime CHIRP)
+   4. CARBONE SONDEUR (Sondeur — Graphite & Acid Lime CHIRP)
    -------------------------------------------------------------------------- */
 
 /* 4A. Carbone - Mode Jour (Papier Minéral Neutre & Encre Lime Radar #4d7c0f) */
@@ -838,7 +841,7 @@ html[data-theme="tactical"][data-mode="dark"] {
 }
 
 /* --------------------------------------------------------------------------
-   5. CARTE SHOM (De School / SHOM — Bleu Cobalt Hydrographique)
+   5. CARTE SHOM (SHOM — Bleu Cobalt Hydrographique)
    -------------------------------------------------------------------------- */
 
 /* 5A. SHOM - Mode Jour (Papier d'Archive Glacé & Encre Cobalt #1d4ed8) */
@@ -1007,7 +1010,7 @@ html[data-theme="shom"][data-mode="dark"] {
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   6. BETON (De School / Beton — Ciment Brut, Silice & Acier Minéral)
+   6. BETON (Béton Brut — Ciment Brut, Silice & Acier Minéral)
    -------------------------------------------------------------------------- */
 
 /* 6A. Beton - Mode Jour (Papier Ciment Minéral & Encre Anthracite #262626) */
@@ -1172,7 +1175,7 @@ html[data-theme="beton"][data-mode="dark"] {
 }
 
 /* --------------------------------------------------------------------------
-   7. KRANT (De School / Krant — Papier Journal Recyclé & Typographie Charbon)
+   7. KRANT (Journal & Fanzine — Papier Journal Recyclé & Typographie Charbon)
    -------------------------------------------------------------------------- */
 
 /* 7A. Krant - Mode Jour (Papier Journal Fanzine & Encre Charbon #171717) */
@@ -1337,7 +1340,7 @@ html[data-theme="krant"][data-mode="dark"] {
 }
 
 /* --------------------------------------------------------------------------
-   8. KRAFT (De School / Kraft — Carton Brut & Fibre d'Archive Industrielle)
+   8. KRAFT (Carton Kraft — Carton Brut & Fibre d'Archive Industrielle)
    -------------------------------------------------------------------------- */
 
 /* 8A. Kraft - Mode Jour (Papier Kraft Brut & Encre Ombre Chaude #78350f) */
@@ -1502,7 +1505,7 @@ html[data-theme="kraft"][data-mode="dark"] {
 }
 
 /* --------------------------------------------------------------------------
-   9. ASFALT (De School / Asfalt — Cour d'École d'Amsterdam & Craie Blanche)
+   9. ASFALT (Bitume & Craie — Cour d'École d'Amsterdam & Craie Blanche)
    -------------------------------------------------------------------------- */
 
 /* 9A. Asfalt - Mode Jour (Papier Asphalte Cendré & Noir Pur #0a0a0a) */
@@ -1667,7 +1670,7 @@ html[data-theme="asfalt"][data-mode="dark"] {
 }
 
 /* --------------------------------------------------------------------------
-   10. STAAL (De School / Staal — Acier Froid, Poutres 1973 & Gris Fer)
+   10. STAAL (Acier & Poutres — Acier Froid, Poutres 1973 & Gris Fer)
    -------------------------------------------------------------------------- */
 
 /* 10A. Staal - Mode Jour (Papier Acier Froid & Encre Gris Fer #334155) */

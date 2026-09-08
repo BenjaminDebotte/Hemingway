@@ -185,7 +185,7 @@ Afin d'éviter le phénomène de **Context Flooding** (> 5 000 lignes) et de pr�
 ### B. Architecture CSS Modulaire (`site/css/`)
 Le CSS est découpé en 7 modules étanches. Pour toute retouche visuelle, charger **uniquement** le module concerné :
 * `site/css/01-base.css` (~270 l.) : Tokens racines, reset, typographie, icônes vectorielles SVG, accessibilité motion.
-* `site/css/02-themes.css` (~1 500 l.) : Les 11 nuances De School (Éditions Risographe & Nuances Architecturales) en modes Jour et Nuit.
+* `site/css/02-themes.css` (~1 500 l.) : Les 11 univers graphiques (Éditions Risographe & Nuances Matières) en modes Jour et Nuit.
 * `site/css/03-header.css` (~635 l.) : Header, champ de recherche, filtres pills, biotope select, popover de thème.
 * `site/css/04-views.css` (~670 l.) : Conteneur principal, scroll reveal, Vue Dépliée `.duo-card`, Vue Réversible 3D `.interactive-card`, responsive.
 * `site/css/05-card-front.css` (~555 l.) : Face A (titres, repères, cockpit réglementation, jauge de capture, morphologie, heatmap 12 mois, bloc notes).
@@ -197,7 +197,7 @@ Le CSS est découpé en 7 modules étanches. Pour toute retouche visuelle, charg
 ### C. Architecture JS Modulaire en ES Modules (`site/js/`)
 L'application JavaScript est découpée en modules ES natifs indépendants :
 * `site/js/icons.js` : Bibliothèque d'icônes SVG et helper `uiIcon()`.
-* `site/js/theme-controller.js` : Contrôleur des 11 nuances De School, mode clair/sombre et persistance localStorage.
+* `site/js/theme-controller.js` : Contrôleur des 11 univers graphiques, mode clair/sombre et persistance localStorage.
 * `site/js/parsers.js` : Algorithmes halieutiques (courbe des douzièmes, coefficients, morphologie, règles de prélèvement).
 * `site/js/render-front.js` : Gabarit HTML Face A (Recto).
 * `site/js/render-back.js` : Gabarit HTML Face B (Verso).
