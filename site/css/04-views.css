@@ -1,0 +1,671 @@
+/* ==========================================================================
+   MAIN CONTENT AREA
+   ========================================================================== */
+
+.main-container {
+  max-width: 1400px;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.view-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--slate-500);
+}
+
+.view-stats-count {
+  font-weight: 600;
+  color: var(--theme-text-title);
+}
+
+.view-hint {
+  font-size: 0.75rem;
+  color: var(--theme-text-muted);
+}
+
+/* ==========================================================================
+   CINEMATIC SCROLL REVEAL (INTERSECTION OBSERVER DRIVEN)
+   ========================================================================== */
+
+.duo-card-shell,
+.interactive-card {
+  opacity: 0;
+  transform: translateY(24px) scale(0.985);
+  transition: opacity 0.72s var(--ease-inertia),
+              transform 0.72s var(--ease-inertia),
+              box-shadow 0.28s var(--ease-spring),
+              border-color 0.22s var(--ease-inertia);
+  will-change: opacity, transform;
+}
+
+.duo-card-shell.is-revealed,
+.interactive-card.is-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .duo-card-shell,
+  .interactive-card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
+  }
+}
+
+/* ==========================================================================
+   WEB INTERACTIVE VIEWS (DOUBLE-BEZEL ARCHITECTURE & CHOREOGRAPHED FLIP)
+   ========================================================================== */
+
+/* --- MODE 1 : VUE DÉPLIÉE CÔTE-À-CÔTE (GRAND CONFORT ÉCRAN) --- */
+.duo-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+/* Châssis Minimaliste Épuré */
+.duo-card-shell {
+  background: transparent;
+  padding: 0;
+  border-radius: var(--radius-lg);
+  border: none;
+  box-shadow: none;
+}
+
+.duo-card-shell.is-revealed:hover {
+  transform: translateY(-2px);
+  box-shadow: none;
+}
+
+/* Carte Intérieure Minimaliste */
+.duo-card {
+  background: var(--theme-card-inner-bg);
+  color: var(--theme-text-main);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--theme-card-inner-border);
+  box-shadow: 0 1px 3px var(--theme-shadow-ambient);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+  padding: 1.65rem 1.75rem;
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.duo-card-shell.is-revealed:hover .duo-card {
+  border-color: var(--theme-canal-accent);
+  box-shadow: 0 4px 12px -2px var(--theme-shadow-ambient);
+}
+
+.duo-card-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  gap: 0.65rem;
+}
+
+.duo-card-column > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.duo-card-column.col-recto {
+  border-right: 1px solid var(--theme-card-divider);
+  padding-right: 1.75rem;
+}
+
+.duo-card-column.col-recto .notes-box {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 85px;
+}
+
+.duo-card-column.col-recto .notes-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.duo-card-column.col-recto .notes-line {
+  flex: 1;
+  min-height: 20px;
+  max-height: 32px;
+}
+
+.duo-card-column.col-verso .biotope-section {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 980px) {
+  .duo-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1.25rem;
+  }
+  .duo-card-column.col-recto {
+    border-right: none;
+    border-bottom: 1px solid var(--theme-card-divider);
+    padding-right: 0;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    position: relative;
+    top: auto;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+    padding: 0.95rem 1.15rem;
+    border-radius: 0;
+  }
+  .header-top {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .header-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.65rem;
+  }
+  .mode-segmented {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .mode-btn {
+    padding: 0.45rem 0.35rem;
+    font-size: 0.72rem;
+    justify-content: center;
+  }
+  .theme-picker-wrap {
+    width: 100%;
+  }
+  .theme-trigger-btn {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+  .theme-popover {
+    position: fixed;
+    top: auto;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    max-width: calc(100vw - 2rem);
+    z-index: 300;
+  }
+  .btn-gold.btn-island {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .search-and-toggles {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .biotope-select {
+    width: 100%;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .interactive-card {
+    height: 820px;
+  }
+  .duo-card-shell {
+    padding: 0;
+    border-radius: 0;
+  }
+  .duo-card {
+    padding: 1.15rem 1.1rem;
+    border-radius: 0;
+  }
+  .card-face-shell {
+    padding: 0;
+    border-radius: 0;
+  }
+  .card-face-shell .card-face {
+    border-radius: 0;
+    padding: 1.15rem 1.1rem;
+  }
+  .tide-weather-cockpit {
+    grid-template-columns: 1fr;
+  }
+  .canal-triggers-cockpit {
+    grid-template-columns: 1fr;
+  }
+  .twelfths-chart-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .twelfths-bell-curve {
+    justify-content: space-around;
+  }
+}
+
+/* --- MODE 2 : VUE CARTE FLIP RÉVERSIBLE (GÉOMÉTRIE A5 RATIO 1:1.414 SANS SCROLL) --- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 510px));
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.interactive-card {
+  perspective: 1600px;
+  width: 100%;
+  max-width: 510px;
+  height: 800px; /* Hauteur A5 calibrée pour loger l'intégralité des sections + cadre notes */
+  margin: 0 auto;
+  position: relative;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.65s var(--ease-inertia);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.interactive-card.flipped .card-inner {
+  transform: rotateY(180deg) translateZ(-10px);
+}
+
+/* Châssis pour Face A & Face B (Minimaliste) */
+.card-face-shell {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  background: transparent;
+  padding: 0;
+  border-radius: var(--radius-lg);
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.card-face-shell.back {
+  transform: rotateY(180deg) translate3d(0, 0, 0);
+}
+
+.interactive-card:hover .card-face-shell {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.card-face-shell .card-face {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 3px var(--theme-shadow-ambient);
+  overflow: hidden !important;
+  border: 1px solid var(--theme-card-inner-border);
+  background: var(--theme-card-inner-bg);
+  color: var(--theme-text-main);
+  padding: 0.85rem 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.interactive-card:hover .card-face {
+  border-color: var(--theme-canal-accent);
+  box-shadow: 0 4px 12px -2px var(--theme-shadow-ambient);
+}
+
+/* Biotope Card Switcher (Onglets compacts sur Face B en Mode Flip) */
+.biotope-card-switcher {
+  display: flex;
+  background: var(--theme-surface-inset);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: var(--radius-full);
+  padding: 2px;
+  gap: 2px;
+  margin-bottom: 0.35rem;
+  width: 100%;
+}
+
+.biotope-switch-btn {
+  flex: 1;
+  padding: 0.25rem 0.55rem;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 0.71rem;
+  font-weight: 700;
+  color: var(--theme-text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  transition: background-color 0.2s var(--ease-inertia),
+              color 0.2s var(--ease-inertia),
+              box-shadow 0.22s var(--ease-spring),
+              transform 0.15s var(--ease-spring);
+}
+
+.biotope-switch-btn:hover {
+  color: var(--theme-text-title);
+}
+
+.biotope-switch-btn.active {
+  background: var(--theme-canal-accent);
+  color: #ffffff;
+  box-shadow: 0 1px 2px var(--theme-shadow-ambient);
+}
+
+.interactive-card .tab-hidden {
+  display: none !important;
+}
+
+/* Optimisation de densité pour Mode Flip (Zéro ascenseur vertical) */
+.interactive-card .card-face {
+  padding: 0.72rem 0.9rem;
+  font-size: 0.76rem;
+  line-height: 1.32;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.22rem;
+}
+
+.interactive-card .card-face > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.interactive-card .card-header {
+  padding-bottom: 0.28rem;
+  margin-bottom: 0.28rem;
+}
+
+.interactive-card .species-title {
+  font-size: 1.28rem;
+  line-height: 1.15;
+}
+
+.interactive-card .recognition-box {
+  padding: 0.35rem 0.55rem;
+  margin-bottom: 0.28rem;
+  font-size: 0.72rem;
+  line-height: 1.3;
+}
+
+.interactive-card .regs-block {
+  padding: 0.35rem 0.55rem;
+  margin-bottom: 0.28rem;
+}
+
+.interactive-card .regs-grid {
+  gap: 0.3rem;
+  margin-bottom: 0.25rem;
+}
+
+.interactive-card .reg-pill {
+  padding: 0.2rem 0.3rem;
+}
+
+.interactive-card .reg-pill-val {
+  font-size: 0.9rem;
+}
+
+.interactive-card .val-harvest {
+  font-size: 0.82rem;
+}
+
+.interactive-card .harvest-gauge-track {
+  height: 4.5px;
+}
+
+.interactive-card .harvest-gauge-ticks {
+  font-size: 0.5rem;
+}
+
+.interactive-card .regs-rules-list {
+  font-size: 0.69rem;
+  line-height: 1.22;
+  gap: 0.08rem;
+}
+
+.interactive-card .biology-section {
+  gap: 0.35rem;
+  margin-bottom: 0.28rem;
+}
+
+.interactive-card .bio-card {
+  padding: 0.35rem 0.5rem;
+}
+
+.interactive-card .diet-tags {
+  gap: 0.15rem;
+  margin-top: 0.1rem;
+}
+
+.interactive-card .diet-tag {
+  font-size: 0.6rem;
+  padding: 0.06rem 0.28rem;
+}
+
+.interactive-card .secret-local-box {
+  padding: 0.35rem 0.55rem;
+  font-size: 0.71rem;
+  line-height: 1.3;
+  margin: 0.25rem 0;
+}
+
+.interactive-card .calendar-block {
+  padding-top: 0.28rem;
+  margin-top: 0;
+}
+
+.interactive-card .month-cell {
+  height: 17px;
+  font-size: 0.58rem;
+}
+
+.interactive-card .notes-box {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 40px;
+  padding: 0.25rem 0.45rem 0.28rem;
+  margin-top: 0;
+}
+
+.interactive-card .notes-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.interactive-card .notes-line {
+  flex: 1;
+  min-height: 12px;
+  max-height: 22px;
+}
+
+.interactive-card .biotope-section:not(.tab-hidden) {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.interactive-card .verso-header {
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.interactive-card .verso-title {
+  font-size: 1.2rem;
+}
+
+.interactive-card .biotope-section {
+  padding: 0.4rem 0.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.interactive-card .spots-chip-grid {
+  gap: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.interactive-card .spot-chip {
+  padding: 0.2rem 0.35rem;
+  font-size: 0.66rem;
+  line-height: 1.24;
+}
+
+.interactive-card .canal-triggers-cockpit,
+.interactive-card .tide-weather-cockpit {
+  gap: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.interactive-card .trigger-card,
+.interactive-card .cockpit-box {
+  padding: 0.22rem 0.42rem;
+}
+
+.interactive-card .twelfths-card {
+  padding: 0.32rem 0.52rem;
+  margin: 0.28rem 0;
+}
+
+.interactive-card .twelfths-bell-curve {
+  height: 30px;
+}
+
+.interactive-card .twelfth-bar-track {
+  height: 17px;
+}
+
+.interactive-card .twelfths-note {
+  font-size: 0.68rem;
+  line-height: 1.24;
+}
+
+.interactive-card .tactics-bullets {
+  font-size: 0.7rem;
+  line-height: 1.24;
+  gap: 0.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.interactive-card .terminal-tackle-card {
+  padding: 0.28rem 0.45rem;
+  margin: 0.28rem 0;
+}
+
+.interactive-card .terminal-card-header {
+  margin-bottom: 0.2rem;
+  padding-bottom: 0.15rem;
+}
+
+.interactive-card .terminal-card-title {
+  font-size: 0.62rem;
+}
+
+.interactive-card .terminal-specs-grid {
+  gap: 0.18rem;
+}
+
+.interactive-card .terminal-spec-item {
+  font-size: 0.68rem;
+  line-height: 1.24;
+  gap: 0.35rem;
+}
+
+.interactive-card .terminal-pill {
+  font-size: 0.56rem;
+  padding: 0.05rem 0.25rem;
+  width: 4.4rem;
+}
+
+.interactive-card .terminal-val {
+  font-size: 0.68rem;
+}
+
+.interactive-card .combos-compact-card {
+  padding: 0.32rem 0.52rem;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+/* Déclencheur tactile de retournement (Minimalist Square Coin) */
+.card-flip-trigger {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  width: 30px;
+  height: 30px;
+  background: var(--theme-surface-subtle);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--theme-text-main);
+  z-index: 10;
+  transition: background-color 0.15s ease,
+              border-color 0.15s ease,
+              color 0.15s ease;
+  user-select: none;
+}
+
+.card-flip-trigger .flip-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.55s var(--ease-spring);
+}
+
+.card-flip-trigger .flip-icon-wrap .ui-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.card-flip-trigger:hover {
+  background: var(--theme-canal-accent);
+  border-color: var(--theme-canal-accent);
+  color: #ffffff;
+  box-shadow: 0 2px 4px var(--theme-shadow-ambient);
+  transform: translateY(-1px);
+}
+
+.card-flip-trigger:hover .flip-icon-wrap {
+  transform: rotate(180deg) scale(1.08);
+}
+
+.card-flip-trigger:active {
+  transform: translateY(0) scale(0.94);
+}

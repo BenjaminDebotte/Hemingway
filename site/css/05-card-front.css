@@ -1,0 +1,556 @@
+/* ==========================================================================
+   TECHNICAL CARD COMPONENT (A5 GEOMETRY & TYPOGRAPHY ENHANCEMENT)
+   ========================================================================== */
+
+.card-face {
+  background: var(--theme-card-inner-bg);
+  color: var(--theme-text-main);
+  display: flex;
+  flex-direction: column;
+  padding: 1.05rem 1.15rem;
+  font-size: 0.81rem;
+  position: relative;
+  line-height: 1.38;
+}
+
+/* --- CARD HEADER --- */
+.card-header {
+  border-bottom: 2px solid var(--theme-surface-subtle-border);
+  padding-bottom: 0.45rem;
+  margin-bottom: 0.45rem;
+}
+
+.header-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.3rem;
+}
+
+.badge-cat {
+  background: var(--theme-badge-cat-bg);
+  color: var(--theme-badge-cat-text);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--theme-badge-cat-border);
+}
+
+.badge-biotope {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  letter-spacing: 0.02em;
+}
+
+.badge-canal {
+  background: var(--theme-canal-badge-bg);
+  color: var(--theme-canal-badge-text);
+  border: 1px solid var(--theme-canal-badge-border);
+}
+
+.badge-mer {
+  background: var(--theme-bateau-badge-bg);
+  color: var(--theme-bateau-badge-text);
+  border: 1px solid var(--theme-bateau-badge-border);
+}
+
+.species-title {
+  font-family: var(--font-display);
+  font-size: 1.42rem;
+  font-weight: 800;
+  color: var(--theme-text-title);
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.species-scientific {
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--theme-text-muted);
+  font-weight: 500;
+}
+
+.species-meta {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.74rem;
+  color: var(--theme-text-faint);
+  margin-top: 0.18rem;
+}
+
+.meta-pipe {
+  color: var(--theme-surface-subtle-border);
+}
+
+.species-local-names {
+  color: var(--theme-text-muted);
+  font-weight: 500;
+  font-size: 0.72rem;
+}
+
+/* --- RECOGNITION BOX (PRECISION INSTRUMENT CAPSULE) --- */
+.recognition-box {
+  background: var(--theme-surface-subtle);
+  border: 1px solid var(--theme-surface-subtle-border);
+  padding: 0.58rem 0.8rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 0.45rem;
+  font-size: 0.78rem;
+  color: var(--theme-text-main);
+  line-height: 1.38;
+  box-shadow: none;
+  position: relative;
+}
+
+.recognition-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--theme-text-title);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+}
+
+/* --- REGULATIONS BLOCK (COCKPIT INSTRUMENTATION) --- */
+.regs-block {
+  background: var(--theme-card-inner-bg);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.72rem;
+  margin-bottom: 0.45rem;
+  box-shadow: 0 1px 3px var(--theme-shadow-ambient);
+}
+
+.block-title {
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--theme-text-title);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.35rem;
+}
+
+.regs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.45rem;
+  margin-bottom: 0.4rem;
+}
+
+.reg-pill {
+  background: var(--theme-reg-pill-bg);
+  border: 1px solid var(--theme-reg-pill-border);
+  border-radius: var(--radius-xs);
+  padding: 0.35rem 0.45rem;
+  text-align: center;
+}
+
+.reg-pill-label {
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  color: var(--theme-reg-pill-label);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  display: block;
+  margin-bottom: 0.12rem;
+}
+
+.reg-pill-val {
+  font-family: var(--font-mono);
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--theme-text-title);
+  line-height: 1.1;
+}
+
+.val-green {
+  color: var(--theme-reg-legal);
+  font-weight: 800;
+}
+
+.val-amber {
+  color: var(--theme-secret-accent);
+  font-weight: 800;
+}
+
+.val-red {
+  color: var(--theme-reg-nokill);
+  font-weight: 800;
+}
+
+/* Jauge de Prélèvement Graduée (Rouge vers Vert) */
+.reg-pill-harvest {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.val-harvest {
+  font-family: var(--font-mono);
+  font-size: 0.86rem;
+  font-weight: 800;
+  line-height: 1.1;
+  white-space: nowrap;
+  color: var(--theme-text-title);
+}
+
+.harvest-gauge-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.14rem;
+  margin-top: 0.15rem;
+}
+
+.harvest-gauge-track {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #ef4444 0%, #f59e0b 50%, #10b981 100%);
+  border-radius: var(--radius-full);
+}
+
+.harvest-gauge-cursor {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  width: 4px;
+  background: var(--theme-text-title);
+  border: 1px solid var(--white);
+  border-radius: var(--radius-full);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  transform: translateX(-50%);
+}
+
+.harvest-gauge-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tick-strict {
+  color: var(--theme-reg-nokill);
+}
+
+.tick-libre {
+  color: var(--theme-reg-legal);
+}
+
+.regs-rules-list {
+  list-style: none;
+  font-size: 0.75rem;
+  color: var(--theme-text-main);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  line-height: 1.32;
+}
+
+.regs-rules-list li {
+  position: relative;
+  padding-left: 0.95rem;
+}
+
+.regs-rules-list li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.45rem;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--theme-canal-accent);
+}
+
+/* --- BIOLOGY STATS & GAUGE --- */
+.biology-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.55rem;
+  margin-bottom: 0.45rem;
+}
+
+.bio-card {
+  background: var(--theme-surface-subtle);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.68rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.bio-morpho-card {
+  gap: 0.25rem;
+}
+
+.bio-title {
+  font-size: 0.66rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--theme-text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.size-gauge-track-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 0.12rem 0;
+}
+
+.size-gauge-track {
+  position: relative;
+  width: 100%;
+  height: 7px;
+  background: var(--theme-gauge-track);
+  border-radius: var(--radius-full);
+}
+
+.size-gauge-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: var(--theme-canal-accent);
+  border-radius: var(--radius-full);
+  box-shadow: none;
+}
+
+.size-gauge-pin {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  width: 2.5px;
+  background: var(--theme-text-title);
+  border-radius: 2px;
+  transform: translateX(-100%);
+}
+
+.size-gauge-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.size-val-avg {
+  color: var(--theme-canal-accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.size-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--theme-canal-accent);
+}
+
+.size-val-max {
+  color: var(--theme-text-muted);
+  font-size: 0.66rem;
+}
+
+.bio-weight-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.74rem;
+  margin-top: auto;
+  padding-top: 0.2rem;
+  border-top: 1px dashed var(--theme-surface-subtle-border);
+}
+
+.weight-label {
+  color: var(--theme-text-muted);
+  font-weight: 600;
+}
+
+.weight-val {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--theme-text-title);
+}
+
+.weight-max {
+  color: var(--theme-text-muted);
+  font-weight: 500;
+  font-size: 0.68rem;
+}
+
+.diet-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.2rem;
+}
+
+.diet-tag {
+  background: var(--theme-surface-inset);
+  color: var(--theme-text-main);
+  font-size: 0.68rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  font-weight: 600;
+  border: 1px solid var(--theme-surface-subtle-border);
+}
+
+/* --- CALENDAR HEATMAP --- */
+.calendar-block {
+  border-top: 1px solid var(--theme-surface-subtle-border);
+  padding-top: 0.45rem;
+}
+
+.cal-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.cal-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--theme-text-main);
+  width: 68px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.cal-months {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3px;
+  flex: 1;
+}
+
+.month-cell {
+  height: 20px;
+  border-radius: var(--radius-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  color: var(--white);
+  transition: transform 0.18s var(--ease-spring), box-shadow 0.18s var(--ease-spring);
+  user-select: none;
+}
+
+.month-cell:hover {
+  transform: scale(1.2);
+  z-index: 5;
+  box-shadow: 0 4px 8px -1px var(--theme-shadow-ambient);
+}
+
+.heat-0 { background-color: var(--theme-surface-inset); color: var(--theme-text-faint); border: 1px solid var(--theme-surface-subtle-border); }
+.heat-1 { background-color: var(--theme-canal-badge-bg); color: var(--theme-canal-badge-text); border: 1px solid var(--theme-canal-badge-border); font-weight: 600; }
+.heat-2 { background-color: var(--theme-canal-surface-border); color: var(--theme-canal-badge-text); border: 1px solid var(--theme-canal-accent); font-weight: 700; }
+.heat-3 { background-color: var(--theme-canal-accent); color: #ffffff; border: 1px solid var(--theme-canal-accent); font-weight: 800; box-shadow: none; }
+
+/* --- NOTES BOX (CADRE DE NOTES MANUSCRITES - MINIMALIST LOGBOOK) --- */
+.notes-box {
+  background: var(--theme-surface-subtle);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: var(--radius-md);
+  padding: 0.45rem 0.65rem 0.45rem;
+  margin-top: 0.45rem;
+  box-shadow: none;
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notes-box:hover {
+  border-color: var(--theme-canal-accent);
+  box-shadow: 0 2px 4px var(--theme-shadow-ambient);
+}
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.notes-title {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--theme-text-title);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+}
+
+.notes-title .ui-icon {
+  color: var(--theme-canal-accent);
+  transition: transform 0.25s var(--ease-spring);
+}
+
+.notes-box:hover .notes-title .ui-icon {
+  transform: rotate(-10deg) scale(1.12);
+}
+
+.notes-hint {
+  font-size: 0.62rem;
+  color: var(--theme-text-muted);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.notes-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.notes-line {
+  height: 18px;
+  border-bottom: 1px dashed var(--theme-surface-subtle-border);
+  position: relative;
+}
+
+.notes-line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  height: 1px;
+  background: var(--theme-canal-accent);
+  opacity: 0.7;
+}
+
+.notes-line:last-child {
+  border-bottom: 1px dashed var(--theme-surface-subtle-border);
+}

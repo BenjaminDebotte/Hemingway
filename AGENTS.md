@@ -170,3 +170,37 @@ Le code sous `site/` doit respecter les conventions suivantes :
   * Format : **A4 Paysage**.
   * Recto-verso : **Retourner sur les bords courts**.
   * Graphismes d'arrière-plan : **Activés**.
+
+---
+
+## 8. Économie de Tokens & Context Engineering (Garde-fous LLM)
+
+Afin d'éviter le phénomène de **Context Flooding** (> 5 000 lignes) et de préserver l'attention et le budget de tokens du modèle, tout agent doit impérativement respecter les règles de ciblage suivantes :
+
+### A. Règle d'or Données : BANNISSEMENT DE LA LECTURE DE `site/data.js`
+* **NE JAMAIS LIRE NI CHERCHER DANS `site/data.js`** : Ce fichier est un artefact de compilation de 5 000 lignes (~55 000 tokens). Toute lecture ou recherche globale le ciblant gaspille massivement le contexte.
+* Pour consulter ou modifier une espèce : ouvrir exclusivement son fichier unitaire `data/species/<id>.json` (~150 lignes, ~1 500 tokens).
+* Pour mettre à jour `site/data.js` après édition d'une espèce, exécuter `npm run build`.
+
+### B. Architecture CSS Modulaire (`site/css/`)
+Le CSS est découpé en 7 modules étanches. Pour toute retouche visuelle, charger **uniquement** le module concerné :
+* `site/css/01-base.css` (~270 l.) : Tokens racines, reset, typographie, icônes vectorielles SVG, accessibilité motion.
+* `site/css/02-themes.css` (~1 000 l.) : Les 6 univers graphiques en modes Jour et Nuit.
+* `site/css/03-header.css` (~635 l.) : Header, champ de recherche, filtres pills, biotope select, popover de thème.
+* `site/css/04-views.css` (~670 l.) : Conteneur principal, scroll reveal, Vue Dépliée `.duo-card`, Vue Réversible 3D `.interactive-card`, responsive.
+* `site/css/05-card-front.css` (~555 l.) : Face A (titres, repères, cockpit réglementation, jauge de capture, morphologie, heatmap 12 mois, bloc notes).
+* `site/css/06-card-back.css` (~625 l.) : Face B (spots canal & mer, déclencheurs éclusées, cockpit marée/météo, jauge douzièmes, armement/leurres, secret normand).
+* `site/css/07-print.css` (~285 l.) : Planches A4 paysage duplex, calibration millimétrique A5, règles `@media print`.
+
+*Note :* `site/styles.css` est conservé comme index d'imports `@import` pour compatibilité descendante.
+
+### C. Architecture JS Modulaire en ES Modules (`site/js/`)
+L'application JavaScript est découpée en modules ES natifs indépendants :
+* `site/js/icons.js` : Bibliothèque d'icônes SVG et helper `uiIcon()`.
+* `site/js/theme-controller.js` : Contrôleur des 6 univers, mode clair/sombre et persistance localStorage.
+* `site/js/parsers.js` : Algorithmes halieutiques (courbe des douzièmes, coefficients, morphologie, règles de prélèvement).
+* `site/js/render-front.js` : Gabarit HTML Face A (Recto).
+* `site/js/render-back.js` : Gabarit HTML Face B (Verso).
+* `site/js/views.js` : Orchestration des 3 modes d'affichage (Duo, Flip, Print).
+* `site/js/app.js` : Orchestration principale, état, filtres et écouteurs d'événements.
+

@@ -1,0 +1,635 @@
+/* ==========================================================================
+   APP HEADER & NAVIGATION (MINIMALIST REFINED DECK)
+   ========================================================================== */
+
+.app-header {
+  position: sticky;
+  top: 0.85rem;
+  z-index: 100;
+  max-width: 1380px;
+  margin: 0.85rem auto 1.5rem auto;
+  padding: 0.95rem 1.5rem;
+  background: var(--theme-header-bg);
+  border: 1px solid var(--theme-header-border);
+  border-radius: 0;
+  color: var(--theme-header-text);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.brand-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--theme-canal-accent);
+  margin-bottom: 0.2rem;
+}
+
+.brand-icon {
+  width: 38px;
+  height: 38px;
+  background: var(--theme-canal-accent);
+  border-radius: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--theme-header-bg);
+  line-height: 1;
+  border: 1px solid var(--theme-header-border);
+  flex-shrink: 0;
+}
+
+.brand-icon .ui-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.brand-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.brand-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--theme-header-text-muted);
+  letter-spacing: 0.04em;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.95rem;
+  border-radius: 0;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  border: 1px solid currentColor;
+  transition: background-color 0.15s ease,
+              border-color 0.15s ease,
+              color 0.15s ease;
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: var(--theme-canal-accent);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  opacity: 0.92;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--theme-controls-border);
+  color: var(--theme-header-text);
+}
+
+.btn-outline:hover {
+  background-color: var(--theme-controls-bg);
+}
+
+/* Minimalist Button CTA */
+.btn-gold.btn-island {
+  position: relative;
+  background: var(--theme-btn-primary-bg);
+  color: var(--theme-btn-primary-text);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.42rem 0.65rem 0.42rem 0.95rem;
+  border-radius: 0;
+  border: 1px solid var(--theme-btn-primary-text);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.btn-gold.btn-island:hover {
+  opacity: 0.9;
+}
+
+.btn-gold.btn-island:active {
+  transform: scale(0.98);
+}
+
+.btn-icon-bubble {
+  width: 24px;
+  height: 24px;
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid currentColor;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+.btn-gold.btn-island:hover .btn-icon-bubble {
+  transform: translate(2px, -1px);
+}
+
+/* ==========================================================================
+   FILTER & CONTROLS BAR
+   ========================================================================== */
+
+.controls-bar {
+  width: 100%;
+  margin: 1.15rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.search-and-toggles {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.search-input-wrap {
+  flex: 1;
+  min-width: 280px;
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.5rem 0.85rem 0.5rem 2.3rem;
+  background: var(--theme-input-bg);
+  border: 1px solid var(--theme-input-border);
+  border-radius: 0;
+  color: var(--theme-input-text);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  transition: border-color 0.15s ease;
+}
+
+.search-input::placeholder {
+  color: var(--theme-input-placeholder);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--theme-canal-accent);
+  background: var(--theme-input-bg);
+  box-shadow: none;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--theme-header-text-muted);
+  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Biotope dropdown styling */
+.biotope-filter-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.biotope-label {
+  font-size: 0.74rem;
+  color: var(--theme-header-text-muted);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.biotope-select-shell {
+  position: relative;
+}
+
+.biotope-select {
+  background: var(--theme-input-bg);
+  color: var(--theme-input-text);
+  border: 1px solid var(--theme-input-border);
+  border-radius: 0;
+  padding: 0.48rem 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: border-color 0.15s ease;
+}
+
+.biotope-select:focus {
+  outline: none;
+  border-color: var(--theme-canal-accent);
+  box-shadow: none;
+}
+
+.biotope-select:active {
+  transform: scale(0.98);
+}
+
+.biotope-select option {
+  background: var(--theme-card-outer-bg);
+  color: var(--theme-text-title);
+}
+
+.filter-pills {
+  display: flex;
+  gap: 0.45rem;
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--theme-controls-border) transparent;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.32rem 0.65rem;
+  border-radius: 0;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--theme-pill-bg);
+  color: var(--theme-pill-text);
+  border: 1px solid var(--theme-pill-border);
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.pill-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 0;
+  background: currentColor;
+}
+
+.pill:hover {
+  background: var(--theme-controls-bg);
+  color: #ffffff;
+  border-color: var(--theme-controls-border);
+}
+
+.pill:active {
+  transform: scale(0.98);
+}
+
+.pill.active {
+  background: var(--theme-pill-active-bg);
+  color: var(--theme-pill-active-text);
+  border-color: var(--theme-canal-accent);
+  box-shadow: none;
+}
+
+.pill.active .pill-dot {
+  background: #ffffff;
+  box-shadow: none;
+}
+
+.mode-segmented {
+  display: inline-flex;
+  background: var(--theme-segmented-bg);
+  border: 1px solid var(--theme-controls-border);
+  border-radius: 0;
+  padding: 0;
+  gap: 0;
+  box-shadow: none;
+}
+
+.mode-btn {
+  padding: 0.42rem 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: none;
+  border-right: 1px solid var(--theme-controls-border);
+  background: transparent;
+  color: var(--theme-header-text-muted);
+  border-radius: 0;
+  cursor: pointer;
+  transition: background-color 0.15s ease,
+              color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  user-select: none;
+}
+
+.mode-btn:last-child {
+  border-right: none;
+}
+
+.mode-btn:hover {
+  color: #ffffff;
+  background: var(--theme-controls-bg);
+}
+
+.mode-btn:active {
+  transform: scale(0.98);
+}
+
+.mode-btn.active {
+  background: var(--theme-segmented-active-bg);
+  color: var(--theme-segmented-active-text);
+}
+
+/* ==========================================================================
+   THEME PICKER & DAY/NIGHT SWITCHER COMPONENT
+   ========================================================================== */
+
+.theme-picker-wrap {
+  position: relative;
+}
+
+.theme-trigger-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.42rem 0.75rem;
+  background: var(--theme-segmented-bg);
+  border: 1px solid var(--theme-controls-border);
+  border-radius: 0;
+  color: #ffffff;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background-color 0.15s ease,
+              border-color 0.15s ease;
+  user-select: none;
+}
+
+.theme-trigger-btn:hover {
+  background: var(--theme-controls-bg);
+  border-color: var(--theme-canal-accent);
+}
+
+.theme-trigger-btn:active {
+  transform: scale(0.98);
+}
+
+.theme-trigger-btn[aria-expanded="true"] {
+  border-color: var(--theme-canal-accent);
+  box-shadow: none;
+}
+
+.theme-trigger-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 0;
+  background: var(--theme-canal-accent);
+  box-shadow: none;
+  flex-shrink: 0;
+}
+
+.theme-trigger-label {
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+}
+
+.theme-trigger-mode-icon {
+  display: inline-flex;
+  align-items: center;
+  color: var(--theme-secret-accent);
+  font-size: 0.82rem;
+  flex-shrink: 0;
+}
+
+/* Panneau Popover Déroulant (Minimaliste) */
+.theme-popover {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  right: 0;
+  width: 320px;
+  max-height: min(520px, calc(100dvh - 90px));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--theme-controls-border) transparent;
+  background: var(--theme-header-bg);
+  border: 1px solid var(--theme-header-border);
+  border-radius: 0;
+  padding: 1rem;
+  z-index: 250;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  animation: themePopoverEnter 0.22s var(--ease-spring);
+  transform-origin: top right;
+}
+
+.theme-popover[hidden] {
+  display: none !important;
+}
+
+@keyframes themePopoverEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.theme-popover-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--theme-controls-border);
+  padding-bottom: 0.5rem;
+}
+
+.theme-popover-title {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.theme-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.theme-section-label {
+  font-size: 0.65rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--theme-header-text-muted);
+}
+
+.theme-universes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.theme-opt-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.45rem 0.6rem;
+  background: var(--theme-controls-bg);
+  border: 1px solid var(--theme-controls-border);
+  border-radius: 0;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  width: 100%;
+}
+
+.theme-opt-btn:hover {
+  background: rgb(255 255 255 / 0.12);
+  border-color: var(--theme-canal-accent);
+}
+
+.theme-opt-btn.active {
+  background: rgb(255 255 255 / 0.16);
+  border-color: var(--theme-canal-accent);
+  box-shadow: none;
+}
+
+.theme-opt-swatches {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+  padding: 2px;
+  background: transparent;
+  border: 1px solid var(--theme-controls-border);
+  border-radius: 0;
+}
+
+.theme-swatch {
+  width: 8px;
+  height: 20px;
+  border-radius: 0;
+}
+
+.theme-opt-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  flex: 1;
+}
+
+.theme-opt-name {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.theme-opt-desc {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--theme-header-text-muted);
+}
+
+/* Commutateur Segmented Jour / Nuit */
+.theme-mode-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--theme-segmented-bg);
+  border: 1px solid var(--theme-controls-border);
+  border-radius: 0;
+  padding: 0;
+  gap: 0;
+}
+
+.mode-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.42rem 0.6rem;
+  border-radius: 0;
+  border: none;
+  border-right: 1px solid var(--theme-controls-border);
+  background: transparent;
+  color: var(--theme-header-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: background-color 0.15s ease,
+              color 0.15s ease;
+}
+
+.mode-switch-btn:last-child {
+  border-right: none;
+}
+
+.mode-switch-btn:hover {
+  color: #ffffff;
+}
+
+.mode-switch-btn.active {
+  background: var(--theme-canal-accent);
+  color: #ffffff;
+}

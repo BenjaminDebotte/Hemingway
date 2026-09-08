@@ -1,0 +1,625 @@
+/* ==========================================================================
+   FACE B (VERSO) - TERRAIN, TACTIQUES & MATÉRIEL
+   ========================================================================== */
+
+.verso-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--theme-surface-subtle-border);
+  padding-bottom: 0.45rem;
+  margin-bottom: 0.45rem;
+}
+
+.verso-eyebrow {
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--theme-canal-accent);
+  margin-bottom: 0.12rem;
+}
+
+.verso-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--theme-text-title);
+  line-height: 1.18;
+}
+
+.verso-badge {
+  background: var(--theme-secret-surface);
+  border: 1px solid var(--theme-secret-border);
+  color: var(--theme-secret-text);
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.22rem 0.6rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  box-shadow: none;
+}
+
+.biotope-section {
+  background: var(--theme-card-inner-bg);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: var(--radius-sm);
+  padding: 0.52rem 0.72rem;
+  margin-bottom: 0.45rem;
+  box-shadow: 0 1px 2px var(--theme-shadow-ambient);
+}
+
+.section-canal {
+  border-left: 3.5px solid var(--theme-canal-accent);
+  background: var(--theme-canal-surface);
+}
+
+.section-bateau {
+  border-left: 3.5px solid var(--theme-bateau-accent);
+  background: var(--theme-bateau-surface);
+}
+
+.section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.35rem;
+}
+
+.presence-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.12rem 0.45rem;
+  border-radius: var(--radius-full);
+  background: var(--theme-surface-inset);
+  color: var(--theme-text-muted);
+}
+
+/* Micro-grille compacte des spots */
+.spots-chip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.spot-chip {
+  background: var(--theme-surface-subtle);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.72rem;
+  line-height: 1.32;
+  color: var(--theme-text-main);
+}
+
+.spot-tag {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  letter-spacing: 0.03em;
+  color: var(--theme-canal-accent);
+  margin-bottom: 0.12rem;
+}
+
+.section-bateau .spot-tag {
+  color: var(--theme-bateau-accent);
+}
+
+/* Déclencheurs Canal Cockpit */
+.canal-triggers-cockpit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.trigger-card {
+  background: var(--theme-surface-subtle);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: 4px;
+  padding: 0.32rem 0.55rem;
+  font-size: 0.72rem;
+  line-height: 1.32;
+}
+
+.trigger-ecluse {
+  border-left: 3px solid var(--theme-canal-accent);
+}
+
+.trigger-light {
+  border-left: 3px solid var(--theme-text-muted);
+}
+
+.trigger-header {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--theme-text-title);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.15rem;
+}
+
+.trigger-text {
+  color: var(--theme-text-main);
+}
+
+/* Cockpit Marée & Météo */
+.tide-weather-cockpit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+  margin-bottom: 0.4rem;
+}
+
+.cockpit-box {
+  background: var(--theme-surface-subtle);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: 4px;
+  padding: 0.35rem 0.52rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.cockpit-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.cockpit-box-title {
+  font-family: var(--font-display);
+  font-size: 0.66rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--theme-text-title);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.cockpit-pill-val {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  background: var(--theme-canal-badge-bg);
+  color: var(--theme-canal-badge-text);
+  border: 1px solid var(--theme-canal-badge-border);
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+/* Jauge de coefficient horizontale (20 à 120) */
+.coef-track-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+  margin-top: 0.1rem;
+}
+
+.coef-track {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background: var(--theme-surface-inset);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.coef-fill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, var(--theme-canal-accent) 0%, var(--theme-bateau-accent) 100%);
+  border-radius: var(--radius-full);
+  box-shadow: none;
+}
+
+.coef-fill.is-all {
+  background: linear-gradient(90deg, var(--theme-canal-accent) 0%, var(--theme-bateau-accent) 50%, var(--theme-secret-accent) 100%);
+}
+
+.coef-tick {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  background: var(--theme-border-subtle);
+  pointer-events: none;
+}
+
+.coef-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--theme-text-muted);
+}
+
+.wind-desc-text {
+  font-size: 0.72rem;
+  color: var(--theme-text-main);
+  line-height: 1.28;
+}
+
+/* Jauge Règle des Douzièmes (Stepped Bell Curve) */
+.twelfths-card {
+  background: var(--theme-bateau-surface);
+  border: 1px solid var(--theme-bateau-surface-border);
+  border-radius: var(--radius-md);
+  padding: 0.52rem 0.72rem;
+  margin: 0.4rem 0;
+  box-shadow: 0 2px 6px -1px var(--theme-shadow-ambient);
+}
+
+.twelfths-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.35rem;
+}
+
+.twelfths-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+  color: var(--theme-bateau-accent);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.twelfths-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.twelfths-hours-pill {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  font-size: 0.68rem;
+  background: var(--theme-bateau-accent);
+  color: #ffffff;
+  padding: 0.12rem 0.48rem;
+  border-radius: var(--radius-full);
+}
+
+.twelfths-flow-pill {
+  font-size: 0.66rem;
+  font-weight: 700;
+  color: var(--theme-bateau-badge-text);
+  background: var(--theme-bateau-badge-bg);
+  border: 1px solid var(--theme-bateau-badge-border);
+  padding: 0.12rem 0.45rem;
+  border-radius: var(--radius-full);
+}
+
+.twelfths-chart-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* La Cloche des 6 Heures (Stepped Bell Curve) */
+.twelfths-bell-curve {
+  display: flex;
+  align-items: flex-end;
+  gap: 3.5px;
+  height: 38px;
+  padding: 2px 4px 0;
+  background: var(--theme-card-inner-bg);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.twelfth-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22px;
+  height: 100%;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: transform 0.15s var(--ease-spring);
+}
+
+.twelfth-col:hover {
+  transform: translateY(-2px);
+}
+
+.twelfth-bar-track {
+  width: 100%;
+  height: 22px;
+  display: flex;
+  align-items: flex-end;
+  background: var(--theme-surface-inset);
+  border-radius: 2px 2px 0 0;
+  overflow: hidden;
+}
+
+.twelfth-bar-fill {
+  width: 100%;
+  background: var(--theme-surface-subtle-border);
+  border-radius: 2px 2px 0 0;
+  transition: background-color 0.25s var(--ease-inertia);
+}
+
+.twelfth-col.active .twelfth-bar-fill {
+  background: var(--theme-bateau-accent);
+  box-shadow: none;
+}
+
+.twelfth-hour-name {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: var(--theme-text-muted);
+  line-height: 1;
+  margin-top: 1px;
+}
+
+.twelfth-col.active .twelfth-hour-name {
+  color: var(--theme-bateau-accent);
+  font-weight: 800;
+}
+
+.twelfth-frac-label {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  color: var(--theme-text-faint);
+  line-height: 1;
+}
+
+.twelfth-col.active .twelfth-frac-label {
+  color: var(--theme-bateau-accent);
+  font-weight: 700;
+}
+
+.twelfths-note {
+  font-size: 0.74rem;
+  color: var(--theme-text-main);
+  line-height: 1.34;
+  flex: 1;
+}
+
+.tactics-bullets {
+  list-style: none;
+  font-size: 0.74rem;
+  color: var(--theme-text-main);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 0.35rem;
+  line-height: 1.34;
+}
+
+.tactics-bullets li {
+  position: relative;
+  padding-left: 0.95rem;
+}
+
+.tactics-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.45rem;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--theme-bateau-accent);
+}
+
+/* --- CARTOUCHE DÉDIÉ : TOP LEURRES & ARMEMENT --- */
+.terminal-tackle-card {
+  background: var(--theme-surface-subtle);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: var(--radius-md);
+  padding: 0.52rem 0.72rem;
+  margin: 0.45rem 0 0.35rem;
+  box-shadow: none;
+  position: relative;
+}
+
+.terminal-canal {
+  border-left: 3px solid var(--theme-canal-accent);
+}
+
+.terminal-bateau {
+  border-left: 3px solid var(--theme-bateau-accent);
+}
+
+.terminal-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+  padding-bottom: 0.22rem;
+  border-bottom: 1px solid var(--theme-surface-subtle-border);
+}
+
+.terminal-card-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--theme-text-title);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.terminal-card-title .ui-icon {
+  color: var(--theme-secret-accent);
+}
+
+.terminal-specs-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.terminal-spec-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  font-size: 0.73rem;
+  line-height: 1.32;
+}
+
+.terminal-pill {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.08rem 0.38rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: 5.2rem;
+  text-align: center;
+}
+
+.pill-combo {
+  background: var(--theme-canal-badge-bg);
+  color: var(--theme-canal-badge-text);
+  border: 1px solid var(--theme-canal-badge-border);
+}
+
+.pill-rigid {
+  background: var(--theme-canal-badge-bg);
+  color: var(--theme-canal-badge-text);
+  border: 1px solid var(--theme-canal-badge-border);
+}
+
+.pill-soft {
+  background: var(--theme-canal-badge-bg);
+  color: var(--theme-canal-badge-text);
+  border: 1px solid var(--theme-canal-badge-border);
+}
+
+.pill-natural {
+  background: var(--theme-secret-surface);
+  color: var(--theme-secret-text);
+  border: 1px solid var(--theme-secret-border);
+}
+
+.pill-hook {
+  background: var(--theme-bateau-badge-bg);
+  color: var(--theme-bateau-badge-text);
+  border: 1px solid var(--theme-bateau-badge-border);
+}
+
+.pill-leader {
+  background: var(--theme-surface-inset);
+  color: var(--theme-text-muted);
+  border: 1px solid var(--theme-surface-subtle-border);
+}
+
+.terminal-val {
+  color: var(--theme-text-main);
+  font-size: 0.72rem;
+  word-break: break-word;
+}
+
+/* --- COMBOS MATÉRIEL COMPACTS --- */
+.combos-compact-card {
+  background: var(--theme-surface-subtle);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.68rem;
+  margin-top: auto;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+}
+
+.combo-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.74rem;
+  line-height: 1.34;
+}
+
+.combo-tag {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  padding: 0.12rem 0.45rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+}
+
+.tag-canal {
+  background: var(--theme-canal-badge-bg);
+  color: var(--theme-canal-badge-text);
+  border: 1px solid var(--theme-canal-badge-border);
+}
+
+.tag-mer {
+  background: var(--theme-bateau-badge-bg);
+  color: var(--theme-bateau-badge-text);
+  border: 1px solid var(--theme-bateau-badge-border);
+}
+
+.combo-specs {
+  color: var(--theme-text-muted);
+}
+
+.combo-specs strong {
+  color: var(--theme-text-title);
+}
+
+/* --- SECRET LOCAL (BRUSHED GOLD / BRASS FOIL) --- */
+.secret-local-box {
+  background: var(--theme-secret-surface);
+  border: 1px solid var(--theme-secret-border);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 0.82rem;
+  margin: 0.45rem 0;
+  font-size: 0.77rem;
+  color: var(--theme-secret-text);
+  line-height: 1.4;
+  box-shadow: none;
+  position: relative;
+}
+
+.secret-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--theme-secret-accent);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.2rem;
+}

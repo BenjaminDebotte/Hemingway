@@ -1,0 +1,6 @@
+# Context Engineering — Fichiers et dossiers à exclure de l'indexation/recherche LLM
+# Empêche le "Context Flooding" (>5 000 lignes)
+site/data.js
+node_modules/
+.git/
+*.log

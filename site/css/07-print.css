@@ -1,0 +1,284 @@
+/* ==========================================================================
+   PRINT MODE & DUPLEX A4 LANDSCAPE IMPOSITION (WYSIWYG SCREEN & PRINT)
+   ========================================================================== */
+
+.print-view-container {
+  display: none;
+}
+
+body.print-mode .main-container {
+  display: none;
+}
+
+body.print-mode .print-view-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  padding: 2.5rem 1rem;
+}
+
+/* La planche A4 paysage (297 × 210 mm) */
+.a4-sheet-preview {
+  width: 297mm;
+  height: 210mm;
+  background: var(--white);
+  box-shadow: 0 16px 40px -10px rgb(6 14 26 / 0.22);
+  border: 1px solid rgb(15 23 42 / 0.12);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5mm;
+  padding: 5mm;
+  box-sizing: border-box;
+  position: relative;
+  page-break-after: always;
+  break-after: page;
+}
+
+/* Repère de découpe / massicotage central A5 (à 148.5 mm) */
+.a4-sheet-preview::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 148.5mm;
+  width: 0;
+  border-left: 1px dashed rgba(148, 163, 184, 0.6);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Les 2 fiches A5 dans la planche A4 */
+.a4-sheet-preview .card-face {
+  height: 200mm;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 4mm 5mm;
+  font-size: 7.5pt;
+  line-height: 1.28;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2mm;
+  background: #ffffff;
+}
+
+.a4-sheet-preview .card-face > * {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Calibrage typographique et structurel A5 (Screen Proof & Print) */
+.a4-sheet-preview .species-title { font-size: 11.5pt; line-height: 1.15; margin-bottom: 0.8mm; }
+.a4-sheet-preview .species-scientific { font-size: 8pt; }
+.a4-sheet-preview .card-header { padding-bottom: 1.5mm; margin-bottom: 1.5mm; }
+.a4-sheet-preview .recognition-box { padding: 1.5mm 2.5mm; margin-bottom: 1.5mm; font-size: 7.2pt; line-height: 1.26; }
+.a4-sheet-preview .recognition-title { font-size: 6.8pt; }
+.a4-sheet-preview .regs-block { padding: 1.5mm 2.2mm; margin-bottom: 1.5mm; }
+.a4-sheet-preview .block-title { font-size: 7.2pt; margin-bottom: 1mm; }
+.a4-sheet-preview .reg-pill { padding: 1mm 1.5mm; }
+.a4-sheet-preview .reg-pill-label { font-size: 5.6pt; margin-bottom: 0.5mm; }
+.a4-sheet-preview .reg-pill-val { font-size: 9pt; }
+.a4-sheet-preview .val-harvest { font-size: 7.6pt; }
+.a4-sheet-preview .harvest-gauge-track { height: 3.5px; }
+.a4-sheet-preview .harvest-gauge-cursor { top: -1.5px; bottom: -1.5px; width: 3px; }
+.a4-sheet-preview .harvest-gauge-ticks { font-size: 4.6pt; }
+.a4-sheet-preview .regs-rules-list { font-size: 6.8pt; line-height: 1.24; gap: 0.5mm; }
+.a4-sheet-preview .biology-section { margin-bottom: 1.5mm; gap: 1.8mm; }
+.a4-sheet-preview .bio-card { padding: 1.5mm 2.2mm; }
+.a4-sheet-preview .bio-title { font-size: 6.2pt; margin-bottom: 0.8mm; }
+.a4-sheet-preview .size-gauge-track { height: 5px; }
+.a4-sheet-preview .size-gauge-labels { font-size: 6.8pt; }
+.a4-sheet-preview .bio-weight-row { font-size: 6.8pt; padding-top: 0.8mm; }
+.a4-sheet-preview .diet-tags { gap: 1mm; margin-top: 0.8mm; }
+.a4-sheet-preview .diet-tag { font-size: 6.2pt; padding: 0.5mm 1.2mm; }
+.a4-sheet-preview .calendar-block { padding-top: 1.2mm; margin-top: 0 !important; }
+.a4-sheet-preview .cal-row { margin-bottom: 0.8mm; gap: 1.5mm; }
+.a4-sheet-preview .cal-label { font-size: 6.4pt; width: 55px; }
+.a4-sheet-preview .month-cell { height: 13px; font-size: 5.2pt; }
+.a4-sheet-preview .notes-box {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 16mm;
+  margin-top: 0;
+  padding: 1.0mm 2mm 1.2mm;
+  border: 1px dashed #94a3b8;
+  border-radius: 3px;
+  background: #ffffff;
+}
+.a4-sheet-preview .notes-header {
+  margin-bottom: 0.5mm;
+}
+.a4-sheet-preview .notes-title {
+  font-size: 6.4pt;
+}
+.a4-sheet-preview .notes-hint {
+  font-size: 5.2pt;
+}
+.a4-sheet-preview .notes-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.a4-sheet-preview .notes-line {
+  flex: 1;
+  min-height: 4mm;
+  max-height: 6.5mm;
+  border-bottom: 1px dashed #cbd5e1;
+}
+.a4-sheet-preview .notes-line::before {
+  display: none;
+}
+.a4-sheet-preview .biotope-section:only-of-type {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.a4-sheet-preview .verso-header { padding-bottom: 1.5mm; margin-bottom: 1.5mm; }
+.a4-sheet-preview .verso-eyebrow { font-size: 5.8pt; }
+.a4-sheet-preview .verso-title { font-size: 10.5pt; line-height: 1.15; }
+.a4-sheet-preview .verso-badge { font-size: 6.2pt; padding: 0.8mm 1.8mm; }
+.a4-sheet-preview .biotope-section { padding: 1.2mm 1.8mm; margin-bottom: 1.0mm; }
+.a4-sheet-preview .presence-badge { font-size: 6.2pt; padding: 0.5mm 1.2mm; }
+.a4-sheet-preview .spots-chip-grid { gap: 1mm; margin-bottom: 0.8mm; }
+.a4-sheet-preview .spot-chip { padding: 0.8mm 1.2mm; font-size: 6.4pt; line-height: 1.2; }
+.a4-sheet-preview .spot-tag { font-size: 5.2pt; margin-bottom: 0.3mm; }
+.a4-sheet-preview .canal-triggers-cockpit { gap: 1mm; margin-bottom: 0.8mm; }
+.a4-sheet-preview .trigger-card { padding: 0.8mm 1.2mm; font-size: 6.4pt; line-height: 1.2; }
+.a4-sheet-preview .trigger-header { font-size: 5.6pt; margin-bottom: 0.3mm; }
+.a4-sheet-preview .tide-weather-cockpit { gap: 1mm; margin-bottom: 0.8mm; }
+.a4-sheet-preview .cockpit-box { padding: 0.8mm 1.2mm; }
+.a4-sheet-preview .cockpit-box-title { font-size: 5.8pt; }
+.a4-sheet-preview .cockpit-pill-val { font-size: 5.6pt; }
+.a4-sheet-preview .coef-track { height: 4.5px; }
+.a4-sheet-preview .coef-labels { font-size: 5pt; }
+.a4-sheet-preview .wind-desc-text { font-size: 6.2pt; line-height: 1.18; }
+.a4-sheet-preview .twelfths-card { border: 1px solid #cbd5e1; background: #f8fafc; box-shadow: none; padding: 1mm 1.8mm; margin: 0.8mm 0; }
+.a4-sheet-preview .twelfths-title { font-size: 6.2pt; }
+.a4-sheet-preview .twelfths-hours-pill { font-size: 6pt; padding: 0.4mm 1.2mm; }
+.a4-sheet-preview .twelfths-flow-pill { font-size: 5.8pt; padding: 0.4mm 1mm; }
+.a4-sheet-preview .twelfths-bell-curve { height: 22px; }
+.a4-sheet-preview .twelfth-col { width: 16px; }
+.a4-sheet-preview .twelfth-bar-track { height: 12px; }
+.a4-sheet-preview .twelfth-hour-name { font-size: 5pt; }
+.a4-sheet-preview .twelfth-frac-label { font-size: 4.4pt; }
+.a4-sheet-preview .twelfths-note { font-size: 6.4pt; line-height: 1.18; }
+.a4-sheet-preview .tactics-bullets { font-size: 6.4pt; line-height: 1.2; gap: 0.4mm; margin-bottom: 0.6mm; }
+.a4-sheet-preview .terminal-tackle-card {
+  padding: 0.6mm 1mm;
+  margin: 0.5mm 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 3px;
+  background: #f8fafc;
+}
+.a4-sheet-preview .terminal-canal { border-left: 2px solid var(--theme-canal-accent); }
+.a4-sheet-preview .terminal-bateau { border-left: 2px solid var(--theme-bateau-accent); }
+.a4-sheet-preview .terminal-card-header { margin-bottom: 0.25mm; padding-bottom: 0.2mm; border-bottom: 1px solid #e2e8f0; }
+.a4-sheet-preview .terminal-card-title { font-size: 5.4pt; }
+.a4-sheet-preview .terminal-specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.3mm 1.5mm;
+}
+.a4-sheet-preview .terminal-spec-item { font-size: 5.9pt; line-height: 1.15; gap: 0.6mm; }
+.a4-sheet-preview .terminal-spec-item.spec-combo { grid-column: 1 / -1; }
+.a4-sheet-preview .terminal-pill { font-size: 4.5pt; padding: 0.15mm 0.5mm; width: 12mm; }
+.a4-sheet-preview .terminal-val { font-size: 5.9pt; line-height: 1.15; }
+.a4-sheet-preview .combos-compact-card { display: none !important; }
+.a4-sheet-preview .combo-line { font-size: 6.6pt; line-height: 1.22; }
+.a4-sheet-preview .combo-tag { font-size: 5.6pt; padding: 0.5mm 1.2mm; }
+.a4-sheet-preview .secret-local-box { padding: 1.5mm 2.5mm; font-size: 7pt; line-height: 1.25; margin: 1.5mm 0; border: 1px solid var(--theme-secret-border); background: var(--theme-secret-surface); color: var(--theme-secret-text); }
+.a4-sheet-preview .secret-title { font-size: 6.6pt; margin-bottom: 0.5mm; color: var(--theme-secret-accent); }
+.a4-sheet-preview .ui-icon { width: 1.05em; height: 1.05em; }
+
+/* En impression réelle (@media print) */
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 5mm;
+  }
+
+  :root,
+  html,
+  body {
+    --theme-bg: #ffffff !important;
+    --theme-card-outer-bg: #ffffff !important;
+    --theme-card-inner-bg: #ffffff !important;
+    --theme-text-title: #0f172a !important;
+    --theme-text-main: #1e293b !important;
+    --theme-text-muted: #475569 !important;
+    --theme-text-faint: #64748b !important;
+    --theme-surface-subtle: #f8fafc !important;
+    --theme-surface-inset: #f1f5f9 !important;
+    --theme-surface-subtle-border: #e2e8f0 !important;
+    --theme-border-subtle: #e2e8f0 !important;
+    --theme-reg-pill-bg: #f8fafc !important;
+    --theme-reg-pill-border: #e2e8f0 !important;
+    --theme-reg-pill-label: #64748b !important;
+    --theme-badge-cat-bg: #0f172a !important;
+    --theme-badge-cat-text: #ffffff !important;
+  }
+
+  html, body {
+    background: #ffffff !important;
+    background-image: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 7.5pt !important;
+    line-height: 1.28 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body::before {
+    display: none !important;
+  }
+
+  .duo-card-shell,
+  .interactive-card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .app-header,
+  .controls-bar,
+  .view-stats,
+  .card-flip-trigger,
+  .btn,
+  .interactive-view {
+    display: none !important;
+  }
+
+  .print-view-container {
+    display: block !important;
+    padding: 0 !important;
+  }
+
+  .a4-sheet-preview {
+    width: 287mm !important;
+    height: 200mm !important;
+    padding: 0 !important;
+    gap: 5mm !important;
+    box-shadow: none !important;
+    border: none !important;
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  .a4-sheet-preview::before {
+    display: none !important;
+  }
+
+  .a4-sheet-preview .card-face {
+    height: 200mm !important;
+    padding: 4mm 5mm !important;
+    border: 1px solid #cbd5e1 !important;
+    overflow: hidden !important;
+  }
+}
