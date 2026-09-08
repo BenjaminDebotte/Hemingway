@@ -27,6 +27,22 @@
   font-display: swap;
 }
 
+/* Typographie Basis Grotesque Mono (variante technique de la famille Colophon Foundry) */
+@font-face {
+  font-family: "Basis Grotesque Mono";
+  src: local("Basis Grotesque Mono Medium"),
+       local("BasisGrotesqueMono-Medium"),
+       local("Basis Grotesque Mono"),
+       local("BasisGrotesqueMono"),
+       url("../fonts/BasisGrotesqueMono-Medium.woff2") format("woff2"),
+       url("../fonts/BasisGrotesqueMono-Medium.woff") format("woff"),
+       url("../fonts/BasisGrotesqueMono-Regular.woff2") format("woff2"),
+       url("../fonts/BasisGrotesqueMono-Regular.woff") format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Nuances Océaniques Profondes & Calcaire Normand */
   --ocean-950: #060e1a;
@@ -171,7 +187,7 @@
   /* Typographie : Grotesk Technique & Monospace */
   --font-sans: "Basis Grotesque Pro Medium", "Basis Grotesque Pro", "Basis Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-display: "Basis Grotesque Pro Medium", "Basis Grotesque Pro", "Basis Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: "Courier Prime", "Courier New", "JetBrains Mono", ui-monospace, monospace;
+  --font-mono: "Basis Grotesque Mono", "Basis Grotesque Mono Medium", "JetBrains Mono", "Courier Prime", ui-monospace, monospace;
 
   /* Architecture Minimaliste : Zéro Rayon (0px) & Zéro Arrondi */
   --bezel-outer-radius: 0px;

@@ -125,9 +125,9 @@ export function renderRegionalMiniMap() {
       </div>
       <div class="mini-map-legend-bar" aria-label="Légende vue d'ensemble">
         <span>${uiIcon('permit')} AAPPMA</span>
-        <span>${uiIcon('dpm')} DPM</span>
+        <span>${uiIcon('bridge')} Ponts</span>
+        <span>${uiIcon('locks')} Écluses</span>
         <span>${uiIcon('reef')} Roches</span>
-        <span>${uiIcon('wreck')} Épaves</span>
       </div>
     </div>
   `;

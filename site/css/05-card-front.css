@@ -631,12 +631,13 @@
 .mini-map-svg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--theme-surface-subtle);
   display: block;
   transition: filter 0.25s ease;
 }
 
-[data-theme-mode="dark"] .mini-map-osm-img {
+html[data-mode="dark"] .mini-map-osm-img {
   filter: invert(0.9) hue-rotate(180deg) brightness(0.85) contrast(1.15);
 }
 
