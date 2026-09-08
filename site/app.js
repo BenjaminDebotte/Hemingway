@@ -4,6 +4,12 @@
 
 const MONTHS = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'];
 
+const VIEW_HINTS = {
+  duo: 'Mode Déplié : Face A (Identité) et Face B (Tactique) affichées côte-à-côte en pleine largeur',
+  flip: "Mode Réversible : Cliquez sur l'icône de rotation pour basculer en 3D",
+  print: "Mode Impression : Aperçu des planches A4 paysage duplex prêtes pour l'imprimante"
+};
+
 const SVG_ICONS = {
   search: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`,
   scale: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M12 3v18M6 7l6-2 6 2M3 13l3-6 3 6a3 3 0 0 1-6 0zM15 13l3-6 3 6a3 3 0 0 1-6 0zM4 21h16"/></svg>`,
@@ -172,13 +178,7 @@ function renderApp() {
 
   const hintEl = document.getElementById('view-hint');
   if (hintEl) {
-    if (currentViewMode === 'duo') {
-      hintEl.textContent = 'Mode Déplié : Face A (Identité) et Face B (Tactique) affichées côte-à-côte en pleine largeur';
-    } else if (currentViewMode === 'flip') {
-      hintEl.textContent = "Mode Réversible : Cliquez sur l'icône de rotation pour basculer en 3D";
-    } else {
-      hintEl.textContent = 'Mode Impression : Aperçu des planches A4 paysage duplex prêtes pour l\'imprimante';
-    }
+    hintEl.textContent = VIEW_HINTS[currentViewMode] || '';
   }
 
   if (currentViewMode === 'duo') {
@@ -233,6 +233,15 @@ function setupScrollObserver() {
   });
 }
 
+function renderEmptyState() {
+  return `
+    <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--slate-500);">
+      <h3>Aucun poisson ne correspond à ces critères</h3>
+      <p>Essayez de réinitialiser la recherche ou les filtres.</p>
+    </div>
+  `;
+}
+
 // --------------------------------------------------------------------------
 // VUE 1 : DÉPLIÉE CÔTE-À-CÔTE (CONFORT ÉCRAN MAXIMAL)
 // --------------------------------------------------------------------------
@@ -242,12 +251,7 @@ function renderDuoView(speciesList) {
   if (!container) return;
 
   if (speciesList.length === 0) {
-    container.innerHTML = `
-      <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--slate-500);">
-        <h3>Aucun poisson ne correspond à ces critères</h3>
-        <p>Essayez de réinitialiser la recherche ou les filtres.</p>
-      </div>
-    `;
+    container.innerHTML = renderEmptyState();
     return;
   }
 
@@ -275,12 +279,7 @@ function renderFlipView(speciesList) {
   if (!container) return;
 
   if (speciesList.length === 0) {
-    container.innerHTML = `
-      <div style="grid-column: 1 / -1; text-align: center; padding: 4rem 1rem; color: var(--slate-500);">
-        <h3>Aucun poisson ne correspond à ces critères</h3>
-        <p>Essayez de réinitialiser la recherche ou les filtres.</p>
-      </div>
-    `;
+    container.innerHTML = renderEmptyState();
     return;
   }
 
@@ -325,13 +324,9 @@ window.switchCardBiotope = function(e, fishId, tab) {
   }
   const canalSection = card.querySelector('.section-canal');
   const bateauSection = card.querySelector('.section-bateau');
-  const canalCombo = card.querySelector('.combo-line-canal');
-  const bateauCombo = card.querySelector('.combo-line-bateau');
 
   if (canalSection) canalSection.classList.toggle('tab-hidden', tab !== 'canal');
   if (bateauSection) bateauSection.classList.toggle('tab-hidden', tab !== 'bateau');
-  if (canalCombo) canalCombo.classList.toggle('tab-hidden', tab !== 'canal');
-  if (bateauCombo) bateauCombo.classList.toggle('tab-hidden', tab !== 'bateau');
 };
 
 function renderPrintView(speciesList) {
@@ -387,31 +382,19 @@ function parseTwelfths(text) {
   if (!text) return { hours: [false, false, false, false, false, false], hoursStr: 'N/A', flow: 'Marée active', detail: '' };
   const hours = [false, false, false, false, false, false];
 
-  const rangeMatches = text.matchAll(/H([1-6])\s*(?:à|-|–)\s*H([1-6])/gi);
-  for (const match of rangeMatches) {
-    const start = parseInt(match[1], 10);
-    const end = parseInt(match[2], 10);
-    for (let h = Math.min(start, end); h <= Math.max(start, end); h++) {
-      hours[h - 1] = true;
-    }
+  for (const [, s, e] of text.matchAll(/H([1-6])\s*(?:à|-|–)\s*H([1-6])/gi)) {
+    const start = Math.min(+s, +e);
+    const end = Math.max(+s, +e);
+    for (let h = start; h <= end; h++) hours[h - 1] = true;
   }
 
-  const singleMatches = text.matchAll(/\bH([1-6])\b/gi);
-  for (const match of singleMatches) {
-    const h = parseInt(match[1], 10);
-    hours[h - 1] = true;
+  for (const [, h] of text.matchAll(/\bH([1-6])\b/gi)) {
+    hours[+h - 1] = true;
   }
 
-  const activeList = [];
-  hours.forEach((act, idx) => {
-    if (act) activeList.push(`H${idx + 1}`);
-  });
+  const activeList = hours.map((act, i) => act ? `H${i + 1}` : null).filter(Boolean);
   const hoursStr = activeList.length > 0 ? activeList.join(' • ') : 'Toutes heures';
-
-  let detail = text;
-  if (text.includes(':')) {
-    detail = text.split(':').slice(1).join(':').trim();
-  }
+  const detail = text.includes(':') ? text.split(':').slice(1).join(':').trim() : text;
 
   let flow = 'Marée active';
   if (hours[2] && hours[3] && !hours[0] && !hours[5]) {
@@ -562,24 +545,16 @@ function renderCanalTriggers(ecluseText, lightText) {
   `;
 }
 
-function parseLengths(avgStr, maxStr) {
-  const avgMatch = (avgStr || '').match(/(\d+)\s*(?:-|à)\s*(\d+)/);
-  const maxMatch = (maxStr || '').match(/(\d+)/);
-  const maxVal = maxMatch ? parseInt(maxMatch[1], 10) : 100;
-  let minAvg = 0, maxAvg = 0;
-  if (avgMatch) {
-    minAvg = parseInt(avgMatch[1], 10);
-    maxAvg = parseInt(avgMatch[2], 10);
-  } else {
-    const single = (avgStr || '').match(/(\d+)/);
-    if (single) {
-      minAvg = parseInt(single[1], 10);
-      maxAvg = minAvg;
-    }
-  }
-  const minPercent = Math.max(0, Math.min(100, Math.round((minAvg / maxVal) * 100)));
-  const maxPercent = Math.max(0, Math.min(100, Math.round((maxAvg / maxVal) * 100)));
-  return { minAvg, maxAvg, maxVal, minPercent, maxPercent };
+function parseLengths(avgStr = '', maxStr = '') {
+  const maxVal = parseInt((maxStr.match(/\d+/) || [100])[0], 10);
+  const range = avgStr.match(/(\d+)\s*(?:-|à)\s*(\d+)/);
+  const single = avgStr.match(/\d+/);
+
+  const minAvg = range ? +range[1] : (single ? +single[0] : 0);
+  const maxAvg = range ? +range[2] : minAvg;
+
+  const toPct = (val) => Math.max(0, Math.min(100, Math.round((val / maxVal) * 100)));
+  return { minAvg, maxAvg, maxVal, minPercent: toPct(minAvg), maxPercent: toPct(maxAvg) };
 }
 
 function renderMorphologyGauge(biology) {
@@ -649,41 +624,25 @@ function renderExhaustiveTackleBlock(terminal, combo, biotopeLabel, biotopeKey) 
   `;
 }
 
+const HARVEST_RULES = [
+  { match: (t) => t.includes('no-kill'), pct: 8, color: 'red', shortLabel: 'No-Kill', desc: 'No-Kill strict' },
+  { match: (t, id) => id === 'bar-commun' || t.includes('2 bars'), pct: 15, color: 'red', shortLabel: '2 / jour', desc: 'Quota strict 2/j' },
+  { match: (t, id) => id === 'lieu-jaune' || t.includes('2 lieux'), pct: 15, color: 'red', shortLabel: '2 / jour', desc: 'Quota strict 2/j' },
+  { match: (t) => t.includes('2 brochets'), pct: 18, color: 'red', shortLabel: 'Max 2 / jour', desc: 'Quota max 2/j' },
+  { match: (t) => t.includes('1 à 2'), pct: 18, color: 'red', shortLabel: '1-2 / jour', desc: 'Quota 1-2/j' },
+  { match: (t, id) => id === 'anguille-europe' || t.includes('strictement réglementé'), pct: 12, color: 'red', shortLabel: 'Strict (Carnet)', desc: 'Carnet obligatoire' },
+  { match: (t) => t.includes('très limité') || t.includes('patrimonial'), pct: 22, color: 'red', shortLabel: 'Très limité', desc: 'Prélèvement très limité' },
+  { match: (t) => t.includes('3 carnassiers'), pct: 45, color: 'amber', shortLabel: '3 / jour', desc: 'Quota 3 carnassiers/j' },
+  { match: (t) => t.includes('très modéré'), pct: 45, color: 'amber', shortLabel: 'Modéré', desc: 'Prélèvement modéré' },
+  { match: (t) => t.includes('non soumis') || t.includes('libre'), pct: 92, color: 'green', shortLabel: 'Libre', desc: 'Sans quota statutaire' }
+];
+
+const DEFAULT_HARVEST_GAUGE = { pct: 80, color: 'green', shortLabel: 'Raisonné', desc: 'Prélèvement raisonné' };
+
 function getHarvestGauge(bagLimit, speciesId) {
   const text = (bagLimit || '').toLowerCase();
-
-  if (text.includes('no-kill')) {
-    return { pct: 8, color: 'red', shortLabel: 'No-Kill', desc: 'No-Kill strict' };
-  }
-  if (speciesId === 'bar-commun' || text.includes('2 bars')) {
-    return { pct: 15, color: 'red', shortLabel: '2 / jour', desc: 'Quota strict 2/j' };
-  }
-  if (speciesId === 'lieu-jaune' || text.includes('2 lieux')) {
-    return { pct: 15, color: 'red', shortLabel: '2 / jour', desc: 'Quota strict 2/j' };
-  }
-  if (text.includes('maximum 2 brochets') || text.includes('2 brochets')) {
-    return { pct: 18, color: 'red', shortLabel: 'Max 2 / jour', desc: 'Quota max 2/j' };
-  }
-  if (text.includes('1 à 2 par jour') || text.includes('1 à 2')) {
-    return { pct: 18, color: 'red', shortLabel: '1-2 / jour', desc: 'Quota 1-2/j' };
-  }
-  if (text.includes('strictement réglementé') || speciesId === 'anguille-europe') {
-    return { pct: 12, color: 'red', shortLabel: 'Strict (Carnet)', desc: 'Carnet obligatoire' };
-  }
-  if (text.includes('très limité') || text.includes('patrimonial')) {
-    return { pct: 22, color: 'red', shortLabel: 'Très limité', desc: 'Prélèvement très limité' };
-  }
-  if (text.includes('3 carnassiers')) {
-    return { pct: 45, color: 'amber', shortLabel: '3 / jour', desc: 'Quota 3 carnassiers/j' };
-  }
-  if (text.includes('très modéré')) {
-    return { pct: 45, color: 'amber', shortLabel: 'Modéré', desc: 'Prélèvement modéré' };
-  }
-  if (text.includes('non soumis') || text.includes('libre')) {
-    return { pct: 92, color: 'green', shortLabel: 'Libre', desc: 'Sans quota statutaire' };
-  }
-  // Default for "Prélèvement raisonné"
-  return { pct: 80, color: 'green', shortLabel: 'Raisonné', desc: 'Prélèvement raisonné' };
+  const rule = HARVEST_RULES.find(r => r.match(text, speciesId));
+  return rule ? { pct: rule.pct, color: rule.color, shortLabel: rule.shortLabel, desc: rule.desc } : DEFAULT_HARVEST_GAUGE;
 }
 
 function renderHarvestPill(bagLimit, speciesId) {
