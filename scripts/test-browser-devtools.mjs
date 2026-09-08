@@ -226,8 +226,8 @@ await cdp.evaluate('document.dispatchEvent(new KeyboardEvent("keydown", { key: "
 const popoverHiddenAfterEsc = await cdp.evaluate('document.getElementById("theme-popover").hasAttribute("hidden")');
 assert(popoverHiddenAfterEsc === true, 'Le popover se referme avec la touche Échap');
 
-console.log('\n--- AXE 4 : MATRICE MULTI-THÈMES (6 UNIVERS × JOUR/NUIT) ---');
-const themes = ['deschool', 'estran', 'epaves', 'dune', 'carbon', 'shom'];
+console.log('\n--- AXE 4 : MATRICE MULTI-THÈMES (11 NUANCES DE SCHOOL × JOUR/NUIT) ---');
+const themes = ['deschool', 'estran', 'epaves', 'dune', 'carbon', 'shom', 'beton', 'krant', 'kraft', 'asfalt', 'staal'];
 for (const th of themes) {
   await cdp.evaluate(`
     (() => {

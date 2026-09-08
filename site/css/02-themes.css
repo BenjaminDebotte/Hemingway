@@ -1,12 +1,17 @@
 /* ==========================================================================
-   MATRICES DES 12 THÈMES DYNAMIQUES (6 UNIVERS × 2 MODES JOUR / NUIT)
+   MATRICE DES 22 THÈMES DYNAMIQUES (11 NUANCES DE SCHOOL × JOUR / NUIT)
+   Identité Brutaliste J.B. Ingwersen 1973 & Éditions Risographe
+   ========================================================================== */
+
+/* ==========================================================================
+   GROUPE 1 : ÉDITIONS RISOGRAPHE LITTORALES (6 UNIVERS × JOUR / NUIT)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
    0. DE SCHOOL / ARCHIEF — Brutalisme Minimaliste Amsterdam (Het Altijd)
    -------------------------------------------------------------------------- */
 
-/* 0A. De School - Mode Jour (Papier Archief rgb(249 246 239) & Encre Noire) */
+/* 0A. De School Archief - Mode Jour (Papier Archief & Encre Noire) */
 html[data-theme="deschool"][data-mode="light"],
 html[data-theme="deschool"]:not([data-mode="dark"]),
 :root:not([data-theme]):not([data-mode="dark"]) {
@@ -88,7 +93,7 @@ html[data-theme="deschool"]:not([data-mode="dark"]),
   --theme-gauge-fill: #000000;
 }
 
-/* 0B. De School - Mode Nuit (Club Zwart Pure Black & White) */
+/* 0B. De School Archief - Mode Nuit (Club Zwart Pure Black & White) */
 html[data-theme="deschool"][data-mode="dark"],
 html[data-mode="dark"]:not([data-theme]) {
   --theme-bg: #000000;
@@ -169,836 +174,1659 @@ html[data-mode="dark"]:not([data-theme]) {
   --theme-gauge-fill: #ffffff;
 }
 
-/* ==========================================================================
-   MATRICES DES 10 THÈMES DYNAMIQUES (5 UNIVERS × 2 MODES JOUR / NUIT)
-   ========================================================================== */
-
 /* --------------------------------------------------------------------------
-   1. ESTRAN & VARECH — Végétal marin, Roches du Calvados, Laminaires & Écume
+   1. ESTRAN & VARECH (De School / Varech — Vert Risographe & Laminaires)
    -------------------------------------------------------------------------- */
 
-/* 1A. Estran - Mode Jour */
+/* 1A. Estran - Mode Jour (Papier d'Archive Lichen & Encre Varech #047857) */
 html[data-theme="estran"][data-mode="light"],
-html[data-theme="estran"]:not([data-mode="dark"]),
-:root:not([data-theme]):not([data-mode="dark"]) {
-  --theme-bg: #f5f7f6;
-  --theme-bg-pattern-dot: rgb(0 0 0 / 0.05);
-  --theme-header-bg: #0d1e17;
-  --theme-header-border: rgb(255 255 255 / 0.1);
+html[data-theme="estran"]:not([data-mode="dark"]) {
+  --theme-bg: #f5f8f5;
+  --theme-bg-pattern-dot: rgb(4 120 87 / 0.05);
+  --theme-header-bg: #000000;
+  --theme-header-border: #000000;
   --theme-header-text: #ffffff;
-  --theme-header-text-muted: #94a3b8;
-  --theme-controls-bg: rgb(255 255 255 / 0.06);
-  --theme-controls-border: rgb(255 255 255 / 0.12);
-  --theme-input-bg: rgb(255 255 255 / 0.06);
-  --theme-input-border: rgb(255 255 255 / 0.14);
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #171717;
+  --theme-controls-border: #333333;
+  --theme-input-bg: #000000;
+  --theme-input-border: #404040;
   --theme-input-text: #ffffff;
-  --theme-input-placeholder: #94a3b8;
+  --theme-input-placeholder: #737373;
 
   --theme-card-outer-bg: transparent;
-  --theme-card-outer-border: #e2e8f0;
+  --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
-  --theme-card-inner-border: #e2e8f0;
-  --theme-card-divider: #cbd5e1;
-  --theme-surface-subtle: #f8fafc;
-  --theme-surface-subtle-border: #e2e8f0;
-  --theme-surface-inset: #f1f5f9;
-  --theme-shadow-ambient: rgb(0 0 0 / 0.04);
+  --theme-card-inner-border: #000000;
+  --theme-card-divider: #000000;
+  --theme-surface-subtle: #edf4ee;
+  --theme-surface-subtle-border: #000000;
+  --theme-surface-inset: #e5ede6;
+  --theme-shadow-ambient: transparent;
   --theme-glow-accent: transparent;
 
-  --theme-text-title: #062e20;
-  --theme-text-main: #132a22;
-  --theme-text-muted: #4b6358;
-  --theme-text-faint: #64748b;
+  --theme-text-title: #000000;
+  --theme-text-main: #000000;
+  --theme-text-muted: #3f4a43;
+  --theme-text-faint: #6b776f;
 
-  --theme-canal-accent: #15803d;
-  --theme-canal-surface: #f4fbf6;
-  --theme-canal-surface-border: #c6ebd2;
-  --theme-canal-badge-bg: #e8f8ed;
-  --theme-canal-badge-text: #14532d;
-  --theme-canal-badge-border: #a7dfb8;
+  --theme-canal-accent: #047857;
+  --theme-canal-surface: #edf4ee;
+  --theme-canal-surface-border: #047857;
+  --theme-canal-badge-bg: #047857;
+  --theme-canal-badge-text: #ffffff;
+  --theme-canal-badge-border: #047857;
 
   --theme-bateau-accent: #0f766e;
-  --theme-bateau-surface: #f2fbf9;
-  --theme-bateau-surface-border: #bcefe7;
-  --theme-bateau-badge-bg: #e2f7f3;
-  --theme-bateau-badge-text: #115e59;
-  --theme-bateau-badge-border: #8de2d3;
+  --theme-bateau-surface: #ffffff;
+  --theme-bateau-surface-border: #000000;
+  --theme-bateau-badge-bg: #ffffff;
+  --theme-bateau-badge-text: #047857;
+  --theme-bateau-badge-border: #047857;
 
-  --theme-secret-accent: #b45309;
-  --theme-secret-surface: #fdfbf7;
-  --theme-secret-border: #eddcc6;
-  --theme-secret-text: #78350f;
+  --theme-secret-accent: #047857;
+  --theme-secret-surface: #edf4ee;
+  --theme-secret-border: #047857;
+  --theme-secret-text: #047857;
   --theme-secret-glow: transparent;
 
-  --theme-reg-title: #062e20;
-  --theme-reg-pill-bg: #f8fafc;
-  --theme-reg-pill-border: #e2e8f0;
-  --theme-reg-pill-label: #64748b;
-  --theme-reg-legal: #059669;
-  --theme-reg-nokill: #dc2626;
+  --theme-reg-title: #000000;
+  --theme-reg-pill-bg: #edf4ee;
+  --theme-reg-pill-border: #000000;
+  --theme-reg-pill-label: #525252;
+  --theme-reg-legal: #047857;
+  --theme-reg-nokill: #b91c1c;
 
-  --theme-badge-cat-bg: #0d281e;
+  --theme-badge-cat-bg: #047857;
   --theme-badge-cat-text: #ffffff;
-  --theme-badge-cat-border: rgb(255 255 255 / 0.12);
+  --theme-badge-cat-border: #047857;
 
-  --theme-btn-primary-bg: #059669;
+  --theme-btn-primary-bg: #047857;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #047857;
+  --theme-btn-primary-hover: #065f46;
 
-  --theme-segmented-bg: rgb(0 0 0 / 0.24);
-  --theme-segmented-active-bg: #059669;
+  --theme-segmented-bg: #171717;
+  --theme-segmented-active-bg: #047857;
   --theme-segmented-active-text: #ffffff;
 
-  --theme-pill-bg: rgb(255 255 255 / 0.06);
-  --theme-pill-border: rgb(255 255 255 / 0.12);
-  --theme-pill-text: #cbd5e1;
-  --theme-pill-active-bg: #059669;
+  --theme-pill-bg: #171717;
+  --theme-pill-border: #404040;
+  --theme-pill-text: #a3a3a3;
+  --theme-pill-active-bg: #047857;
   --theme-pill-active-text: #ffffff;
 
-  --theme-gauge-track: #e2e8f0;
-  --theme-gauge-fill: #059669;
+  --theme-gauge-track: #e5ede6;
+  --theme-gauge-fill: #047857;
 }
 
-/* 1B. Estran - Mode Nuit */
-html[data-theme="estran"][data-mode="dark"],
-html[data-mode="dark"]:not([data-theme]) {
-  --theme-bg: #080f0b;
-  --theme-bg-pattern-dot: rgb(255 255 255 / 0.03);
-  --theme-header-bg: #070e0a;
-  --theme-header-border: rgb(255 255 255 / 0.08);
-  --theme-header-text: #f0fdf4;
-  --theme-header-text-muted: #86efac;
-  --theme-controls-bg: rgb(255 255 255 / 0.04);
-  --theme-controls-border: rgb(255 255 255 / 0.08);
-  --theme-input-bg: rgb(255 255 255 / 0.05);
-  --theme-input-border: rgb(255 255 255 / 0.1);
-  --theme-input-text: #f0fdf4;
-  --theme-input-placeholder: #6b7280;
+/* 1B. Estran - Mode Nuit (Club Noir Absolu & Vert Risographe #10b981) */
+html[data-theme="estran"][data-mode="dark"] {
+  --theme-bg: #000000;
+  --theme-bg-pattern-dot: rgb(16 185 129 / 0.04);
+  --theme-header-bg: #000000;
+  --theme-header-border: #262626;
+  --theme-header-text: #ffffff;
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #111111;
+  --theme-controls-border: #262626;
+  --theme-input-bg: #000000;
+  --theme-input-border: #333333;
+  --theme-input-text: #ffffff;
+  --theme-input-placeholder: #737373;
 
   --theme-card-outer-bg: transparent;
-  --theme-card-outer-border: rgb(255 255 255 / 0.08);
-  --theme-card-inner-bg: #0e1913;
-  --theme-card-inner-border: rgb(255 255 255 / 0.08);
-  --theme-card-divider: rgb(255 255 255 / 0.1);
-  --theme-surface-subtle: #14221a;
-  --theme-surface-subtle-border: rgb(255 255 255 / 0.08);
-  --theme-surface-inset: #070e0a;
-  --theme-shadow-ambient: rgb(0 0 0 / 0.35);
+  --theme-card-outer-border: #262626;
+  --theme-card-inner-bg: #080808;
+  --theme-card-inner-border: #262626;
+  --theme-card-divider: #262626;
+  --theme-surface-subtle: #0e1913;
+  --theme-surface-subtle-border: #1b3327;
+  --theme-surface-inset: #000000;
+  --theme-shadow-ambient: transparent;
   --theme-glow-accent: transparent;
 
-  --theme-text-title: #f0fdf4;
-  --theme-text-main: #dcfce7;
-  --theme-text-muted: #86efac;
-  --theme-text-faint: #4ade80;
+  --theme-text-title: #ffffff;
+  --theme-text-main: #ededed;
+  --theme-text-muted: #94a39b;
+  --theme-text-faint: #67786f;
 
-  --theme-canal-accent: #4ade80;
-  --theme-canal-surface: rgb(22 101 52 / 0.18);
-  --theme-canal-surface-border: rgb(74 222 128 / 0.28);
-  --theme-canal-badge-bg: rgb(22 101 52 / 0.32);
-  --theme-canal-badge-text: #bbf7d0;
-  --theme-canal-badge-border: rgb(74 222 128 / 0.45);
+  --theme-canal-accent: #10b981;
+  --theme-canal-surface: #0e1913;
+  --theme-canal-surface-border: #10b981;
+  --theme-canal-badge-bg: #10b981;
+  --theme-canal-badge-text: #000000;
+  --theme-canal-badge-border: #10b981;
 
   --theme-bateau-accent: #2dd4bf;
-  --theme-bateau-surface: rgb(15 118 110 / 0.16);
-  --theme-bateau-surface-border: rgb(45 212 191 / 0.28);
-  --theme-bateau-badge-bg: rgb(15 118 110 / 0.32);
-  --theme-bateau-badge-text: #99f6e4;
-  --theme-bateau-badge-border: rgb(45 212 191 / 0.45);
+  --theme-bateau-surface: #080d0a;
+  --theme-bateau-surface-border: #262626;
+  --theme-bateau-badge-bg: #16281e;
+  --theme-bateau-badge-text: #10b981;
+  --theme-bateau-badge-border: #10b981;
 
-  --theme-secret-accent: #fbbf24;
-  --theme-secret-surface: #141208;
-  --theme-secret-border: rgb(251 191 36 / 0.25);
-  --theme-secret-text: #fef08a;
+  --theme-secret-accent: #34d399;
+  --theme-secret-surface: #0e1913;
+  --theme-secret-border: #10b981;
+  --theme-secret-text: #34d399;
   --theme-secret-glow: transparent;
 
-  --theme-reg-title: #f0fdf4;
-  --theme-reg-pill-bg: #14221a;
-  --theme-reg-pill-border: rgb(255 255 255 / 0.08);
-  --theme-reg-pill-label: #86efac;
-  --theme-reg-legal: #34d399;
+  --theme-reg-title: #ffffff;
+  --theme-reg-pill-bg: #0e1913;
+  --theme-reg-pill-border: #262626;
+  --theme-reg-pill-label: #737373;
+  --theme-reg-legal: #10b981;
   --theme-reg-nokill: #f87171;
 
-  --theme-badge-cat-bg: #14221a;
-  --theme-badge-cat-text: #f0fdf4;
-  --theme-badge-cat-border: rgb(255 255 255 / 0.12);
+  --theme-badge-cat-bg: #16281e;
+  --theme-badge-cat-text: #34d399;
+  --theme-badge-cat-border: #10b981;
 
   --theme-btn-primary-bg: #10b981;
-  --theme-btn-primary-text: #040806;
+  --theme-btn-primary-text: #000000;
   --theme-btn-primary-hover: #34d399;
 
-  --theme-segmented-bg: rgb(0 0 0 / 0.4);
-  --theme-segmented-active-bg: #059669;
-  --theme-segmented-active-text: #ffffff;
+  --theme-segmented-bg: #000000;
+  --theme-segmented-active-bg: #10b981;
+  --theme-segmented-active-text: #000000;
 
-  --theme-pill-bg: rgb(255 255 255 / 0.04);
-  --theme-pill-border: rgb(255 255 255 / 0.08);
-  --theme-pill-text: #86efac;
-  --theme-pill-active-bg: #059669;
-  --theme-pill-active-text: #ffffff;
+  --theme-pill-bg: #000000;
+  --theme-pill-border: #262626;
+  --theme-pill-text: #a3a3a3;
+  --theme-pill-active-bg: #10b981;
+  --theme-pill-active-text: #000000;
 
-  --theme-gauge-track: #14221a;
-  --theme-gauge-fill: #34d399;
+  --theme-gauge-track: #16281e;
+  --theme-gauge-fill: #10b981;
 }
 
 /* --------------------------------------------------------------------------
-   2. ÉPAVES & ROUILLE — Mémoire d'acier 1944, Ponts du Canal & Terracotta
+   2. ÉPAVES & ROUILLE (De School / Rouille — Terracotta 1944 & Acier Brut)
    -------------------------------------------------------------------------- */
 
-/* 2A. Épaves - Mode Jour */
+/* 2A. Épaves - Mode Jour (Papier d'Archive Brique & Encre Rouille #c2410c) */
 html[data-theme="epaves"][data-mode="light"],
 html[data-theme="epaves"]:not([data-mode="dark"]) {
-  --theme-bg: #f7f5f2;
-  --theme-bg-pattern-dot: rgb(0 0 0 / 0.05);
-  --theme-header-bg: #1c1917;
-  --theme-header-border: rgb(255 255 255 / 0.1);
+  --theme-bg: #fbf7f4;
+  --theme-bg-pattern-dot: rgb(194 65 12 / 0.05);
+  --theme-header-bg: #000000;
+  --theme-header-border: #000000;
   --theme-header-text: #ffffff;
-  --theme-header-text-muted: #a8a29e;
-  --theme-controls-bg: rgb(255 255 255 / 0.06);
-  --theme-controls-border: rgb(255 255 255 / 0.12);
-  --theme-input-bg: rgb(255 255 255 / 0.06);
-  --theme-input-border: rgb(255 255 255 / 0.14);
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #171717;
+  --theme-controls-border: #333333;
+  --theme-input-bg: #000000;
+  --theme-input-border: #404040;
   --theme-input-text: #ffffff;
-  --theme-input-placeholder: #a8a29e;
+  --theme-input-placeholder: #737373;
 
   --theme-card-outer-bg: transparent;
-  --theme-card-outer-border: #e7e5e4;
+  --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
-  --theme-card-inner-border: #e7e5e4;
-  --theme-card-divider: #d6d3d1;
-  --theme-surface-subtle: #faf8f6;
-  --theme-surface-subtle-border: #f0ebe5;
-  --theme-surface-inset: #f2ede7;
-  --theme-shadow-ambient: rgb(0 0 0 / 0.04);
+  --theme-card-inner-border: #000000;
+  --theme-card-divider: #000000;
+  --theme-surface-subtle: #f6ebe5;
+  --theme-surface-subtle-border: #000000;
+  --theme-surface-inset: #eedfd7;
+  --theme-shadow-ambient: transparent;
   --theme-glow-accent: transparent;
 
-  --theme-text-title: #29180b;
-  --theme-text-main: #1c1917;
-  --theme-text-muted: #57534e;
-  --theme-text-faint: #78716c;
+  --theme-text-title: #000000;
+  --theme-text-main: #000000;
+  --theme-text-muted: #4a3e39;
+  --theme-text-faint: #7a6d67;
 
   --theme-canal-accent: #c2410c;
-  --theme-canal-surface: #fff7ed;
-  --theme-canal-surface-border: #fed7aa;
-  --theme-canal-badge-bg: #ffedd5;
-  --theme-canal-badge-text: #9a3412;
-  --theme-canal-badge-border: #fdba74;
+  --theme-canal-surface: #f6ebe5;
+  --theme-canal-surface-border: #c2410c;
+  --theme-canal-badge-bg: #c2410c;
+  --theme-canal-badge-text: #ffffff;
+  --theme-canal-badge-border: #c2410c;
 
-  --theme-bateau-accent: #b45309;
-  --theme-bateau-surface: #fffbeb;
-  --theme-bateau-surface-border: #fde68a;
-  --theme-bateau-badge-bg: #fef3c7;
-  --theme-bateau-badge-text: #78350f;
-  --theme-bateau-badge-border: #fcd34d;
+  --theme-bateau-accent: #9a3412;
+  --theme-bateau-surface: #ffffff;
+  --theme-bateau-surface-border: #000000;
+  --theme-bateau-badge-bg: #ffffff;
+  --theme-bateau-badge-text: #c2410c;
+  --theme-bateau-badge-border: #c2410c;
 
-  --theme-secret-accent: #ea580c;
-  --theme-secret-surface: #fdf8f4;
-  --theme-secret-border: #fed7aa;
-  --theme-secret-text: #7c2d12;
+  --theme-secret-accent: #c2410c;
+  --theme-secret-surface: #f6ebe5;
+  --theme-secret-border: #c2410c;
+  --theme-secret-text: #c2410c;
   --theme-secret-glow: transparent;
 
-  --theme-reg-title: #29180b;
-  --theme-reg-pill-bg: #faf8f6;
-  --theme-reg-pill-border: #e7e5e4;
-  --theme-reg-pill-label: #78716c;
-  --theme-reg-legal: #059669;
-  --theme-reg-nokill: #dc2626;
+  --theme-reg-title: #000000;
+  --theme-reg-pill-bg: #f6ebe5;
+  --theme-reg-pill-border: #000000;
+  --theme-reg-pill-label: #525252;
+  --theme-reg-legal: #047857;
+  --theme-reg-nokill: #c2410c;
 
-  --theme-badge-cat-bg: #292524;
+  --theme-badge-cat-bg: #c2410c;
   --theme-badge-cat-text: #ffffff;
-  --theme-badge-cat-border: rgb(255 255 255 / 0.12);
+  --theme-badge-cat-border: #c2410c;
 
   --theme-btn-primary-bg: #c2410c;
   --theme-btn-primary-text: #ffffff;
   --theme-btn-primary-hover: #9a3412;
 
-  --theme-segmented-bg: rgb(0 0 0 / 0.24);
+  --theme-segmented-bg: #171717;
   --theme-segmented-active-bg: #c2410c;
   --theme-segmented-active-text: #ffffff;
 
-  --theme-pill-bg: rgb(255 255 255 / 0.06);
-  --theme-pill-border: rgb(255 255 255 / 0.12);
-  --theme-pill-text: #a8a29e;
+  --theme-pill-bg: #171717;
+  --theme-pill-border: #404040;
+  --theme-pill-text: #a3a3a3;
   --theme-pill-active-bg: #c2410c;
   --theme-pill-active-text: #ffffff;
 
-  --theme-gauge-track: #e7e5e4;
+  --theme-gauge-track: #eedfd7;
   --theme-gauge-fill: #c2410c;
 }
 
-/* 2B. Épaves - Mode Nuit */
+/* 2B. Épaves - Mode Nuit (Club Noir Absolu & Encre Forge #f97316) */
 html[data-theme="epaves"][data-mode="dark"] {
-  --theme-bg: #0f0e0d;
-  --theme-bg-pattern-dot: rgb(255 255 255 / 0.03);
-  --theme-header-bg: #0e0d0c;
-  --theme-header-border: rgb(255 255 255 / 0.08);
-  --theme-header-text: #fafaf9;
-  --theme-header-text-muted: #a8a29e;
-  --theme-controls-bg: rgb(255 255 255 / 0.04);
-  --theme-controls-border: rgb(255 255 255 / 0.08);
-  --theme-input-bg: rgb(255 255 255 / 0.05);
-  --theme-input-border: rgb(255 255 255 / 0.1);
-  --theme-input-text: #fafaf9;
-  --theme-input-placeholder: #78716c;
+  --theme-bg: #000000;
+  --theme-bg-pattern-dot: rgb(249 115 22 / 0.04);
+  --theme-header-bg: #000000;
+  --theme-header-border: #262626;
+  --theme-header-text: #ffffff;
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #111111;
+  --theme-controls-border: #262626;
+  --theme-input-bg: #000000;
+  --theme-input-border: #333333;
+  --theme-input-text: #ffffff;
+  --theme-input-placeholder: #737373;
 
   --theme-card-outer-bg: transparent;
-  --theme-card-outer-border: rgb(255 255 255 / 0.08);
-  --theme-card-inner-bg: #171513;
-  --theme-card-inner-border: rgb(255 255 255 / 0.08);
-  --theme-card-divider: rgb(255 255 255 / 0.1);
-  --theme-surface-subtle: #221e1b;
-  --theme-surface-subtle-border: rgb(255 255 255 / 0.08);
-  --theme-surface-inset: #0a0908;
-  --theme-shadow-ambient: rgb(0 0 0 / 0.4);
+  --theme-card-outer-border: #262626;
+  --theme-card-inner-bg: #080808;
+  --theme-card-inner-border: #262626;
+  --theme-card-divider: #262626;
+  --theme-surface-subtle: #19110d;
+  --theme-surface-subtle-border: #331e16;
+  --theme-surface-inset: #000000;
+  --theme-shadow-ambient: transparent;
   --theme-glow-accent: transparent;
 
-  --theme-text-title: #fafaf9;
-  --theme-text-main: #f5f5f4;
-  --theme-text-muted: #d6d3d1;
-  --theme-text-faint: #a8a29e;
+  --theme-text-title: #ffffff;
+  --theme-text-main: #ededed;
+  --theme-text-muted: #a39791;
+  --theme-text-faint: #786b65;
 
-  --theme-canal-accent: #fb923c;
-  --theme-canal-surface: rgb(194 65 12 / 0.18);
-  --theme-canal-surface-border: rgb(251 146 60 / 0.3);
-  --theme-canal-badge-bg: rgb(194 65 12 / 0.32);
-  --theme-canal-badge-text: #fed7aa;
-  --theme-canal-badge-border: rgb(251 146 60 / 0.45);
+  --theme-canal-accent: #f97316;
+  --theme-canal-surface: #19110d;
+  --theme-canal-surface-border: #f97316;
+  --theme-canal-badge-bg: #f97316;
+  --theme-canal-badge-text: #000000;
+  --theme-canal-badge-border: #f97316;
 
   --theme-bateau-accent: #fbbf24;
-  --theme-bateau-surface: rgb(180 83 9 / 0.16);
-  --theme-bateau-surface-border: rgb(251 191 36 / 0.28);
-  --theme-bateau-badge-bg: rgb(180 83 9 / 0.32);
-  --theme-bateau-badge-text: #fef08a;
-  --theme-bateau-badge-border: rgb(251 191 36 / 0.45);
+  --theme-bateau-surface: #0e0a07;
+  --theme-bateau-surface-border: #262626;
+  --theme-bateau-badge-bg: #29160e;
+  --theme-bateau-badge-text: #f97316;
+  --theme-bateau-badge-border: #f97316;
 
-  --theme-secret-accent: #fdba74;
-  --theme-secret-surface: #17120e;
-  --theme-secret-border: rgb(251 146 60 / 0.25);
-  --theme-secret-text: #ffedd5;
+  --theme-secret-accent: #fb923c;
+  --theme-secret-surface: #19110d;
+  --theme-secret-border: #f97316;
+  --theme-secret-text: #fb923c;
   --theme-secret-glow: transparent;
 
-  --theme-reg-title: #fafaf9;
-  --theme-reg-pill-bg: #221e1b;
-  --theme-reg-pill-border: rgb(255 255 255 / 0.08);
-  --theme-reg-pill-label: #a8a29e;
+  --theme-reg-title: #ffffff;
+  --theme-reg-pill-bg: #19110d;
+  --theme-reg-pill-border: #262626;
+  --theme-reg-pill-label: #737373;
   --theme-reg-legal: #34d399;
   --theme-reg-nokill: #f87171;
 
-  --theme-badge-cat-bg: #292524;
-  --theme-badge-cat-text: #fafaf9;
-  --theme-badge-cat-border: rgb(255 255 255 / 0.12);
+  --theme-badge-cat-bg: #29160e;
+  --theme-badge-cat-text: #fb923c;
+  --theme-badge-cat-border: #f97316;
 
   --theme-btn-primary-bg: #ea580c;
   --theme-btn-primary-text: #ffffff;
   --theme-btn-primary-hover: #f97316;
 
-  --theme-segmented-bg: rgb(0 0 0 / 0.4);
-  --theme-segmented-active-bg: #c2410c;
+  --theme-segmented-bg: #000000;
+  --theme-segmented-active-bg: #ea580c;
   --theme-segmented-active-text: #ffffff;
 
-  --theme-pill-bg: rgb(255 255 255 / 0.04);
-  --theme-pill-border: rgb(255 255 255 / 0.08);
-  --theme-pill-text: #d6d3d1;
+  --theme-pill-bg: #000000;
+  --theme-pill-border: #262626;
+  --theme-pill-text: #a3a3a3;
   --theme-pill-active-bg: #ea580c;
   --theme-pill-active-text: #ffffff;
 
-  --theme-gauge-track: #221e1b;
-  --theme-gauge-fill: #fb923c;
+  --theme-gauge-track: #29160e;
+  --theme-gauge-fill: #f97316;
 }
 
 /* --------------------------------------------------------------------------
-   3. DUNE & CALCAIRE — Pierre de Caen dorée, Sable dunaire & Lin normand
+   3. DUNE & CALCAIRE (De School / Ocre — Moutarde Minérale & Pierre de Caen)
    -------------------------------------------------------------------------- */
 
-/* 3A. Dune - Mode Jour */
+/* 3A. Dune - Mode Jour (Papier d'Archive Calcaire & Encre Ocre #b45309) */
 html[data-theme="dune"][data-mode="light"],
 html[data-theme="dune"]:not([data-mode="dark"]) {
-  --theme-bg: #f8f6f2;
-  --theme-bg-pattern-dot: rgb(0 0 0 / 0.05);
-  --theme-header-bg: #1e150f;
-  --theme-header-border: rgb(255 255 255 / 0.1);
+  --theme-bg: #fbf9f2;
+  --theme-bg-pattern-dot: rgb(180 83 9 / 0.05);
+  --theme-header-bg: #000000;
+  --theme-header-border: #000000;
   --theme-header-text: #ffffff;
-  --theme-header-text-muted: #cbd5e1;
-  --theme-controls-bg: rgb(255 255 255 / 0.06);
-  --theme-controls-border: rgb(255 255 255 / 0.12);
-  --theme-input-bg: rgb(255 255 255 / 0.06);
-  --theme-input-border: rgb(255 255 255 / 0.14);
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #171717;
+  --theme-controls-border: #333333;
+  --theme-input-bg: #000000;
+  --theme-input-border: #404040;
   --theme-input-text: #ffffff;
-  --theme-input-placeholder: #cbd5e1;
+  --theme-input-placeholder: #737373;
 
   --theme-card-outer-bg: transparent;
-  --theme-card-outer-border: #e7e5e4;
+  --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
-  --theme-card-inner-border: #e7e5e4;
-  --theme-card-divider: #d6d3d1;
-  --theme-surface-subtle: #faf8f4;
-  --theme-surface-subtle-border: #f0eae1;
-  --theme-surface-inset: #f2ece3;
-  --theme-shadow-ambient: rgb(0 0 0 / 0.04);
+  --theme-card-inner-border: #000000;
+  --theme-card-divider: #000000;
+  --theme-surface-subtle: #f6f0df;
+  --theme-surface-subtle-border: #000000;
+  --theme-surface-inset: #eee6d0;
+  --theme-shadow-ambient: transparent;
   --theme-glow-accent: transparent;
 
-  --theme-text-title: #2a1708;
-  --theme-text-main: #1c1917;
-  --theme-text-muted: #57534e;
-  --theme-text-faint: #78716c;
+  --theme-text-title: #000000;
+  --theme-text-main: #000000;
+  --theme-text-muted: #474135;
+  --theme-text-faint: #756e5f;
 
-  --theme-canal-accent: #9a3412;
-  --theme-canal-surface: #fbf7f2;
-  --theme-canal-surface-border: #fed7aa;
-  --theme-canal-badge-bg: #ffedd5;
-  --theme-canal-badge-text: #7c2d12;
-  --theme-canal-badge-border: #fdba74;
+  --theme-canal-accent: #b45309;
+  --theme-canal-surface: #f6f0df;
+  --theme-canal-surface-border: #b45309;
+  --theme-canal-badge-bg: #b45309;
+  --theme-canal-badge-text: #ffffff;
+  --theme-canal-badge-border: #b45309;
 
-  --theme-bateau-accent: #b45309;
-  --theme-bateau-surface: #fffbeb;
-  --theme-bateau-surface-border: #fde68a;
-  --theme-bateau-badge-bg: #fef3c7;
-  --theme-bateau-badge-text: #78350f;
-  --theme-bateau-badge-border: #fcd34d;
+  --theme-bateau-accent: #92400e;
+  --theme-bateau-surface: #ffffff;
+  --theme-bateau-surface-border: #000000;
+  --theme-bateau-badge-bg: #ffffff;
+  --theme-bateau-badge-text: #b45309;
+  --theme-bateau-badge-border: #b45309;
 
-  --theme-secret-accent: #ca8a04;
-  --theme-secret-surface: #fdfaf3;
-  --theme-secret-border: #fde68a;
-  --theme-secret-text: #713f12;
+  --theme-secret-accent: #b45309;
+  --theme-secret-surface: #f6f0df;
+  --theme-secret-border: #b45309;
+  --theme-secret-text: #b45309;
   --theme-secret-glow: transparent;
 
-  --theme-reg-title: #2a1708;
-  --theme-reg-pill-bg: #faf8f4;
-  --theme-reg-pill-border: #e7e5e4;
-  --theme-reg-pill-label: #78716c;
-  --theme-reg-legal: #059669;
-  --theme-reg-nokill: #dc2626;
+  --theme-reg-title: #000000;
+  --theme-reg-pill-bg: #f6f0df;
+  --theme-reg-pill-border: #000000;
+  --theme-reg-pill-label: #525252;
+  --theme-reg-legal: #047857;
+  --theme-reg-nokill: #b91c1c;
 
-  --theme-badge-cat-bg: #2b1d14;
+  --theme-badge-cat-bg: #b45309;
   --theme-badge-cat-text: #ffffff;
-  --theme-badge-cat-border: rgb(255 255 255 / 0.12);
+  --theme-badge-cat-border: #b45309;
 
   --theme-btn-primary-bg: #b45309;
   --theme-btn-primary-text: #ffffff;
   --theme-btn-primary-hover: #92400e;
 
-  --theme-segmented-bg: rgb(0 0 0 / 0.24);
+  --theme-segmented-bg: #171717;
   --theme-segmented-active-bg: #b45309;
   --theme-segmented-active-text: #ffffff;
 
-  --theme-pill-bg: rgb(255 255 255 / 0.06);
-  --theme-pill-border: rgb(255 255 255 / 0.12);
-  --theme-pill-text: #a8a29e;
+  --theme-pill-bg: #171717;
+  --theme-pill-border: #404040;
+  --theme-pill-text: #a3a3a3;
   --theme-pill-active-bg: #b45309;
   --theme-pill-active-text: #ffffff;
 
-  --theme-gauge-track: #e7e5e4;
+  --theme-gauge-track: #eee6d0;
   --theme-gauge-fill: #b45309;
 }
 
-/* 3B. Dune - Mode Nuit */
+/* 3B. Dune - Mode Nuit (Club Noir Absolu & Encre Ambre Ocre #f59e0b) */
 html[data-theme="dune"][data-mode="dark"] {
-  --theme-bg: #100d0a;
-  --theme-bg-pattern-dot: rgb(255 255 255 / 0.03);
-  --theme-header-bg: #100d0a;
-  --theme-header-border: rgb(255 255 255 / 0.08);
-  --theme-header-text: #fef3c7;
-  --theme-header-text-muted: #d6d3d1;
-  --theme-controls-bg: rgb(255 255 255 / 0.04);
-  --theme-controls-border: rgb(255 255 255 / 0.08);
-  --theme-input-bg: rgb(255 255 255 / 0.05);
-  --theme-input-border: rgb(255 255 255 / 0.1);
-  --theme-input-text: #fef3c7;
-  --theme-input-placeholder: #78716c;
+  --theme-bg: #000000;
+  --theme-bg-pattern-dot: rgb(245 158 11 / 0.04);
+  --theme-header-bg: #000000;
+  --theme-header-border: #262626;
+  --theme-header-text: #ffffff;
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #111111;
+  --theme-controls-border: #262626;
+  --theme-input-bg: #000000;
+  --theme-input-border: #333333;
+  --theme-input-text: #ffffff;
+  --theme-input-placeholder: #737373;
 
   --theme-card-outer-bg: transparent;
-  --theme-card-outer-border: rgb(255 255 255 / 0.08);
-  --theme-card-inner-bg: #191410;
-  --theme-card-inner-border: rgb(255 255 255 / 0.08);
-  --theme-card-divider: rgb(255 255 255 / 0.1);
-  --theme-surface-subtle: #241d17;
-  --theme-surface-subtle-border: rgb(255 255 255 / 0.08);
-  --theme-surface-inset: #0c0a08;
-  --theme-shadow-ambient: rgb(0 0 0 / 0.4);
+  --theme-card-outer-border: #262626;
+  --theme-card-inner-bg: #080808;
+  --theme-card-inner-border: #262626;
+  --theme-card-divider: #262626;
+  --theme-surface-subtle: #19140c;
+  --theme-surface-subtle-border: #332714;
+  --theme-surface-inset: #000000;
+  --theme-shadow-ambient: transparent;
   --theme-glow-accent: transparent;
 
-  --theme-text-title: #fef3c7;
-  --theme-text-main: #f5f5f4;
-  --theme-text-muted: #d6d3d1;
-  --theme-text-faint: #a8a29e;
+  --theme-text-title: #ffffff;
+  --theme-text-main: #ededed;
+  --theme-text-muted: #a39b8d;
+  --theme-text-faint: #756f63;
 
-  --theme-canal-accent: #fb923c;
-  --theme-canal-surface: rgb(154 52 18 / 0.18);
-  --theme-canal-surface-border: rgb(251 146 60 / 0.28);
-  --theme-canal-badge-bg: rgb(154 52 18 / 0.32);
-  --theme-canal-badge-text: #fed7aa;
-  --theme-canal-badge-border: rgb(251 146 60 / 0.45);
+  --theme-canal-accent: #f59e0b;
+  --theme-canal-surface: #19140c;
+  --theme-canal-surface-border: #f59e0b;
+  --theme-canal-badge-bg: #f59e0b;
+  --theme-canal-badge-text: #000000;
+  --theme-canal-badge-border: #f59e0b;
 
-  --theme-bateau-accent: #f59e0b;
-  --theme-bateau-surface: rgb(180 83 9 / 0.16);
-  --theme-bateau-surface-border: rgb(245 158 11 / 0.28);
-  --theme-bateau-badge-bg: rgb(180 83 9 / 0.32);
-  --theme-bateau-badge-text: #fde68a;
-  --theme-bateau-badge-border: rgb(245 158 11 / 0.45);
+  --theme-bateau-accent: #fde047;
+  --theme-bateau-surface: #0e0b06;
+  --theme-bateau-surface-border: #262626;
+  --theme-bateau-badge-bg: #291e0e;
+  --theme-bateau-badge-text: #f59e0b;
+  --theme-bateau-badge-border: #f59e0b;
 
-  --theme-secret-accent: #fde047;
-  --theme-secret-surface: #17130a;
-  --theme-secret-border: rgb(253 224 71 / 0.25);
-  --theme-secret-text: #fef9c3;
+  --theme-secret-accent: #f59e0b;
+  --theme-secret-surface: #19140c;
+  --theme-secret-border: #f59e0b;
+  --theme-secret-text: #f59e0b;
   --theme-secret-glow: transparent;
 
-  --theme-reg-title: #fef3c7;
-  --theme-reg-pill-bg: #241d17;
-  --theme-reg-pill-border: rgb(255 255 255 / 0.08);
-  --theme-reg-pill-label: #a8a29e;
+  --theme-reg-title: #ffffff;
+  --theme-reg-pill-bg: #19140c;
+  --theme-reg-pill-border: #262626;
+  --theme-reg-pill-label: #737373;
   --theme-reg-legal: #34d399;
   --theme-reg-nokill: #f87171;
 
-  --theme-badge-cat-bg: #241d17;
-  --theme-badge-cat-text: #fef3c7;
-  --theme-badge-cat-border: rgb(255 255 255 / 0.12);
+  --theme-badge-cat-bg: #291e0e;
+  --theme-badge-cat-text: #fde047;
+  --theme-badge-cat-border: #f59e0b;
 
   --theme-btn-primary-bg: #d97706;
   --theme-btn-primary-text: #ffffff;
   --theme-btn-primary-hover: #f59e0b;
 
-  --theme-segmented-bg: rgb(0 0 0 / 0.4);
-  --theme-segmented-active-bg: #b45309;
+  --theme-segmented-bg: #000000;
+  --theme-segmented-active-bg: #d97706;
   --theme-segmented-active-text: #ffffff;
 
-  --theme-pill-bg: rgb(255 255 255 / 0.04);
-  --theme-pill-border: rgb(255 255 255 / 0.08);
-  --theme-pill-text: #d6d3d1;
+  --theme-pill-bg: #000000;
+  --theme-pill-border: #262626;
+  --theme-pill-text: #a3a3a3;
   --theme-pill-active-bg: #d97706;
   --theme-pill-active-text: #ffffff;
 
-  --theme-gauge-track: #241d17;
+  --theme-gauge-track: #291e0e;
   --theme-gauge-fill: #f59e0b;
 }
 
 /* --------------------------------------------------------------------------
-   4. CARBONE SONDEUR — Graphite Furtif & Signal Radar Lime CHIRP
+   4. CARBONE SONDEUR (De School / Sondeur — Graphite & Acid Lime CHIRP)
    -------------------------------------------------------------------------- */
 
-/* 4A. Carbone - Mode Jour */
+/* 4A. Carbone - Mode Jour (Papier Minéral Neutre & Encre Lime Radar #4d7c0f) */
 html[data-theme="carbon"][data-mode="light"],
 html[data-theme="carbon"]:not([data-mode="dark"]),
 html[data-theme="tactical"][data-mode="light"],
 html[data-theme="tactical"]:not([data-mode="dark"]) {
-  --theme-bg: #f4f4f5;
-  --theme-bg-pattern-dot: rgb(0 0 0 / 0.05);
-  --theme-header-bg: #18181b;
-  --theme-header-border: rgb(255 255 255 / 0.1);
+  --theme-bg: #f7f7f5;
+  --theme-bg-pattern-dot: rgb(77 124 15 / 0.05);
+  --theme-header-bg: #000000;
+  --theme-header-border: #000000;
   --theme-header-text: #ffffff;
-  --theme-header-text-muted: #a1a1aa;
-  --theme-controls-bg: rgb(255 255 255 / 0.06);
-  --theme-controls-border: rgb(255 255 255 / 0.12);
-  --theme-input-bg: rgb(255 255 255 / 0.06);
-  --theme-input-border: rgb(255 255 255 / 0.14);
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #171717;
+  --theme-controls-border: #333333;
+  --theme-input-bg: #000000;
+  --theme-input-border: #404040;
   --theme-input-text: #ffffff;
-  --theme-input-placeholder: #a1a1aa;
+  --theme-input-placeholder: #737373;
 
   --theme-card-outer-bg: transparent;
-  --theme-card-outer-border: #e4e4e7;
+  --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
-  --theme-card-inner-border: #e4e4e7;
-  --theme-card-divider: #d4d4d8;
-  --theme-surface-subtle: #fafafa;
-  --theme-surface-subtle-border: #e4e4e7;
-  --theme-surface-inset: #f4f4f5;
-  --theme-shadow-ambient: rgb(0 0 0 / 0.04);
+  --theme-card-inner-border: #000000;
+  --theme-card-divider: #000000;
+  --theme-surface-subtle: #eeeeeb;
+  --theme-surface-subtle-border: #000000;
+  --theme-surface-inset: #e6e6e2;
+  --theme-shadow-ambient: transparent;
   --theme-glow-accent: transparent;
 
-  --theme-text-title: #09090b;
-  --theme-text-main: #18181b;
-  --theme-text-muted: #52525b;
-  --theme-text-faint: #71717a;
+  --theme-text-title: #000000;
+  --theme-text-main: #000000;
+  --theme-text-muted: #42423f;
+  --theme-text-faint: #6e6e6a;
 
   --theme-canal-accent: #4d7c0f;
-  --theme-canal-surface: #f7fee7;
-  --theme-canal-surface-border: #d9f99d;
-  --theme-canal-badge-bg: #ecfccb;
-  --theme-canal-badge-text: #365314;
-  --theme-canal-badge-border: #bef264;
+  --theme-canal-surface: #eeeeeb;
+  --theme-canal-surface-border: #4d7c0f;
+  --theme-canal-badge-bg: #4d7c0f;
+  --theme-canal-badge-text: #ffffff;
+  --theme-canal-badge-border: #4d7c0f;
 
-  --theme-bateau-accent: #059669;
-  --theme-bateau-surface: #f0fdf4;
-  --theme-bateau-surface-border: #bbf7d0;
-  --theme-bateau-badge-bg: #dcfce7;
-  --theme-bateau-badge-text: #14532d;
-  --theme-bateau-badge-border: #86efac;
+  --theme-bateau-accent: #15803d;
+  --theme-bateau-surface: #ffffff;
+  --theme-bateau-surface-border: #000000;
+  --theme-bateau-badge-bg: #ffffff;
+  --theme-bateau-badge-text: #4d7c0f;
+  --theme-bateau-badge-border: #4d7c0f;
 
-  --theme-secret-accent: #ca8a04;
-  --theme-secret-surface: #fdfce8;
-  --theme-secret-border: #fef08a;
-  --theme-secret-text: #854d0e;
+  --theme-secret-accent: #4d7c0f;
+  --theme-secret-surface: #eeeeeb;
+  --theme-secret-border: #4d7c0f;
+  --theme-secret-text: #4d7c0f;
   --theme-secret-glow: transparent;
 
-  --theme-reg-title: #18181b;
-  --theme-reg-pill-bg: #fafafa;
-  --theme-reg-pill-border: #e4e4e7;
-  --theme-reg-pill-label: #71717a;
-  --theme-reg-legal: #059669;
-  --theme-reg-nokill: #e11d48;
+  --theme-reg-title: #000000;
+  --theme-reg-pill-bg: #eeeeeb;
+  --theme-reg-pill-border: #000000;
+  --theme-reg-pill-label: #525252;
+  --theme-reg-legal: #047857;
+  --theme-reg-nokill: #b91c1c;
 
-  --theme-badge-cat-bg: #18181b;
+  --theme-badge-cat-bg: #4d7c0f;
   --theme-badge-cat-text: #ffffff;
-  --theme-badge-cat-border: rgb(255 255 255 / 0.12);
+  --theme-badge-cat-border: #4d7c0f;
 
-  --theme-btn-primary-bg: #65a30d;
+  --theme-btn-primary-bg: #4d7c0f;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #4d7c0f;
+  --theme-btn-primary-hover: #365314;
 
-  --theme-segmented-bg: rgb(0 0 0 / 0.24);
-  --theme-segmented-active-bg: #65a30d;
+  --theme-segmented-bg: #171717;
+  --theme-segmented-active-bg: #4d7c0f;
   --theme-segmented-active-text: #ffffff;
 
-  --theme-pill-bg: rgb(255 255 255 / 0.06);
-  --theme-pill-border: rgb(255 255 255 / 0.12);
-  --theme-pill-text: #a1a1aa;
-  --theme-pill-active-bg: #65a30d;
+  --theme-pill-bg: #171717;
+  --theme-pill-border: #404040;
+  --theme-pill-text: #a3a3a3;
+  --theme-pill-active-bg: #4d7c0f;
   --theme-pill-active-text: #ffffff;
 
-  --theme-gauge-track: #e4e4e7;
+  --theme-gauge-track: #e6e6e2;
   --theme-gauge-fill: #65a30d;
 }
 
-/* 4B. Carbone - Mode Nuit */
+/* 4B. Carbone - Mode Nuit (Club Noir Absolu & Signal Acid Lime #84cc16) */
 html[data-theme="carbon"][data-mode="dark"],
 html[data-theme="tactical"][data-mode="dark"] {
-  --theme-bg: #09090b;
-  --theme-bg-pattern-dot: rgb(255 255 255 / 0.03);
-  --theme-header-bg: #09090b;
-  --theme-header-border: rgb(255 255 255 / 0.08);
-  --theme-header-text: #fafafa;
-  --theme-header-text-muted: #a1a1aa;
-  --theme-controls-bg: rgb(255 255 255 / 0.03);
-  --theme-controls-border: rgb(255 255 255 / 0.08);
-  --theme-input-bg: rgb(255 255 255 / 0.05);
-  --theme-input-border: rgb(255 255 255 / 0.1);
-  --theme-input-text: #fafafa;
-  --theme-input-placeholder: #71717a;
+  --theme-bg: #000000;
+  --theme-bg-pattern-dot: rgb(132 204 22 / 0.04);
+  --theme-header-bg: #000000;
+  --theme-header-border: #262626;
+  --theme-header-text: #ffffff;
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #111111;
+  --theme-controls-border: #262626;
+  --theme-input-bg: #000000;
+  --theme-input-border: #333333;
+  --theme-input-text: #ffffff;
+  --theme-input-placeholder: #737373;
 
   --theme-card-outer-bg: transparent;
-  --theme-card-outer-border: rgb(255 255 255 / 0.08);
-  --theme-card-inner-bg: #141417;
-  --theme-card-inner-border: rgb(255 255 255 / 0.08);
-  --theme-card-divider: rgb(255 255 255 / 0.1);
-  --theme-surface-subtle: #1c1c21;
-  --theme-surface-subtle-border: rgb(255 255 255 / 0.08);
-  --theme-surface-inset: #09090b;
-  --theme-shadow-ambient: rgb(0 0 0 / 0.4);
+  --theme-card-outer-border: #262626;
+  --theme-card-inner-bg: #080808;
+  --theme-card-inner-border: #262626;
+  --theme-card-divider: #262626;
+  --theme-surface-subtle: #10140c;
+  --theme-surface-subtle-border: #222c16;
+  --theme-surface-inset: #000000;
+  --theme-shadow-ambient: transparent;
   --theme-glow-accent: transparent;
 
-  --theme-text-title: #fafafa;
-  --theme-text-main: #e4e4e7;
-  --theme-text-muted: #a1a1aa;
-  --theme-text-faint: #71717a;
+  --theme-text-title: #ffffff;
+  --theme-text-main: #ededed;
+  --theme-text-muted: #9ea391;
+  --theme-text-faint: #6c7360;
 
-  --theme-canal-accent: #a3e635;
-  --theme-canal-surface: rgb(77 124 15 / 0.18);
-  --theme-canal-surface-border: rgb(163 230 53 / 0.28);
-  --theme-canal-badge-bg: rgb(77 124 15 / 0.32);
-  --theme-canal-badge-text: #d9f99d;
-  --theme-canal-badge-border: rgb(163 230 53 / 0.45);
+  --theme-canal-accent: #84cc16;
+  --theme-canal-surface: #10140c;
+  --theme-canal-surface-border: #84cc16;
+  --theme-canal-badge-bg: #84cc16;
+  --theme-canal-badge-text: #000000;
+  --theme-canal-badge-border: #84cc16;
 
   --theme-bateau-accent: #34d399;
-  --theme-bateau-surface: rgb(5 150 105 / 0.16);
-  --theme-bateau-surface-border: rgb(52 211 153 / 0.28);
-  --theme-bateau-badge-bg: rgb(5 150 105 / 0.32);
-  --theme-bateau-badge-text: #a7f3d0;
-  --theme-bateau-badge-border: rgb(52 211 153 / 0.45);
+  --theme-bateau-surface: #0a0e06;
+  --theme-bateau-surface-border: #262626;
+  --theme-bateau-badge-bg: #1a260c;
+  --theme-bateau-badge-text: #84cc16;
+  --theme-bateau-badge-border: #84cc16;
 
-  --theme-secret-accent: #facc15;
-  --theme-secret-surface: #141308;
-  --theme-secret-border: rgb(250 204 21 / 0.25);
-  --theme-secret-text: #fef08a;
+  --theme-secret-accent: #a3e635;
+  --theme-secret-surface: #10140c;
+  --theme-secret-border: #84cc16;
+  --theme-secret-text: #a3e635;
   --theme-secret-glow: transparent;
 
-  --theme-reg-title: #fafafa;
-  --theme-reg-pill-bg: #1c1c21;
-  --theme-reg-pill-border: rgb(255 255 255 / 0.08);
-  --theme-reg-pill-label: #a1a1aa;
+  --theme-reg-title: #ffffff;
+  --theme-reg-pill-bg: #10140c;
+  --theme-reg-pill-border: #262626;
+  --theme-reg-pill-label: #737373;
   --theme-reg-legal: #34d399;
   --theme-reg-nokill: #fb7185;
 
-  --theme-badge-cat-bg: #27272a;
-  --theme-badge-cat-text: #fafafa;
-  --theme-badge-cat-border: rgb(255 255 255 / 0.12);
+  --theme-badge-cat-bg: #1a260c;
+  --theme-badge-cat-text: #a3e635;
+  --theme-badge-cat-border: #84cc16;
 
   --theme-btn-primary-bg: #84cc16;
-  --theme-btn-primary-text: #09090b;
+  --theme-btn-primary-text: #000000;
   --theme-btn-primary-hover: #a3e635;
 
-  --theme-segmented-bg: rgb(0 0 0 / 0.4);
-  --theme-segmented-active-bg: #65a30d;
-  --theme-segmented-active-text: #ffffff;
+  --theme-segmented-bg: #000000;
+  --theme-segmented-active-bg: #84cc16;
+  --theme-segmented-active-text: #000000;
 
-  --theme-pill-bg: rgb(255 255 255 / 0.04);
-  --theme-pill-border: rgb(255 255 255 / 0.08);
-  --theme-pill-text: #a1a1aa;
-  --theme-pill-active-bg: #65a30d;
-  --theme-pill-active-text: #ffffff;
+  --theme-pill-bg: #000000;
+  --theme-pill-border: #262626;
+  --theme-pill-text: #a3a3a3;
+  --theme-pill-active-bg: #84cc16;
+  --theme-pill-active-text: #000000;
 
-  --theme-gauge-track: #1c1c21;
-  --theme-gauge-fill: #a3e635;
+  --theme-gauge-track: #1a260c;
+  --theme-gauge-fill: #84cc16;
 }
 
 /* --------------------------------------------------------------------------
-   5. CARTE SHOM — Marine Royale, Bleu Nuit d'Encre & Estran Côtière
+   5. CARTE SHOM (De School / SHOM — Bleu Cobalt Hydrographique)
    -------------------------------------------------------------------------- */
 
-/* 5A. SHOM - Mode Jour */
+/* 5A. SHOM - Mode Jour (Papier d'Archive Glacé & Encre Cobalt #1d4ed8) */
 html[data-theme="shom"][data-mode="light"],
 html[data-theme="shom"]:not([data-mode="dark"]) {
-  --theme-bg: #f3f5f8;
-  --theme-bg-pattern-dot: rgb(0 0 0 / 0.05);
-  --theme-header-bg: #0a1322;
-  --theme-header-border: rgb(255 255 255 / 0.1);
+  --theme-bg: #f4f6fa;
+  --theme-bg-pattern-dot: rgb(29 78 216 / 0.05);
+  --theme-header-bg: #000000;
+  --theme-header-border: #000000;
   --theme-header-text: #ffffff;
-  --theme-header-text-muted: #94a3b8;
-  --theme-controls-bg: rgb(255 255 255 / 0.06);
-  --theme-controls-border: rgb(255 255 255 / 0.12);
-  --theme-input-bg: rgb(255 255 255 / 0.06);
-  --theme-input-border: rgb(255 255 255 / 0.14);
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #171717;
+  --theme-controls-border: #333333;
+  --theme-input-bg: #000000;
+  --theme-input-border: #404040;
   --theme-input-text: #ffffff;
-  --theme-input-placeholder: #94a3b8;
+  --theme-input-placeholder: #737373;
 
   --theme-card-outer-bg: transparent;
-  --theme-card-outer-border: #cbd5e1;
+  --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
-  --theme-card-inner-border: #e2e8f0;
-  --theme-card-divider: #cbd5e1;
-  --theme-surface-subtle: #f8fafc;
-  --theme-surface-subtle-border: #e2e8f0;
-  --theme-surface-inset: #edf2f7;
-  --theme-shadow-ambient: rgb(0 0 0 / 0.04);
+  --theme-card-inner-border: #000000;
+  --theme-card-divider: #000000;
+  --theme-surface-subtle: #e9eef7;
+  --theme-surface-subtle-border: #000000;
+  --theme-surface-inset: #dce3f0;
+  --theme-shadow-ambient: transparent;
   --theme-glow-accent: transparent;
 
-  --theme-text-title: #091322;
-  --theme-text-main: #1e293b;
-  --theme-text-muted: #475569;
-  --theme-text-faint: #64748b;
+  --theme-text-title: #000000;
+  --theme-text-main: #000000;
+  --theme-text-muted: #3e4757;
+  --theme-text-faint: #6b7587;
 
   --theme-canal-accent: #1d4ed8;
-  --theme-canal-surface: #eff6ff;
-  --theme-canal-surface-border: #bfdbfe;
-  --theme-canal-badge-bg: #dbeafe;
-  --theme-canal-badge-text: #1e40af;
-  --theme-canal-badge-border: #93c5fd;
+  --theme-canal-surface: #e9eef7;
+  --theme-canal-surface-border: #1d4ed8;
+  --theme-canal-badge-bg: #1d4ed8;
+  --theme-canal-badge-text: #ffffff;
+  --theme-canal-badge-border: #1d4ed8;
 
   --theme-bateau-accent: #0f766e;
-  --theme-bateau-surface: #f0fdfa;
-  --theme-bateau-surface-border: #99f6e4;
-  --theme-bateau-badge-bg: #ccfbf1;
-  --theme-bateau-badge-text: #0f766e;
-  --theme-bateau-badge-border: #5eead4;
+  --theme-bateau-surface: #ffffff;
+  --theme-bateau-surface-border: #000000;
+  --theme-bateau-badge-bg: #ffffff;
+  --theme-bateau-badge-text: #1d4ed8;
+  --theme-bateau-badge-border: #1d4ed8;
 
-  --theme-secret-accent: #b45309;
-  --theme-secret-surface: #fdfbf7;
-  --theme-secret-border: #fde68a;
-  --theme-secret-text: #78350f;
+  --theme-secret-accent: #1d4ed8;
+  --theme-secret-surface: #e9eef7;
+  --theme-secret-border: #1d4ed8;
+  --theme-secret-text: #1d4ed8;
   --theme-secret-glow: transparent;
 
-  --theme-reg-title: #1e293b;
-  --theme-reg-pill-bg: #f8fafc;
-  --theme-reg-pill-border: #e2e8f0;
-  --theme-reg-pill-label: #64748b;
-  --theme-reg-legal: #059669;
-  --theme-reg-nokill: #dc2626;
+  --theme-reg-title: #000000;
+  --theme-reg-pill-bg: #e9eef7;
+  --theme-reg-pill-border: #000000;
+  --theme-reg-pill-label: #525252;
+  --theme-reg-legal: #047857;
+  --theme-reg-nokill: #b91c1c;
 
-  --theme-badge-cat-bg: #0f172a;
+  --theme-badge-cat-bg: #1d4ed8;
   --theme-badge-cat-text: #ffffff;
-  --theme-badge-cat-border: rgb(255 255 255 / 0.12);
+  --theme-badge-cat-border: #1d4ed8;
 
   --theme-btn-primary-bg: #1d4ed8;
   --theme-btn-primary-text: #ffffff;
   --theme-btn-primary-hover: #1e40af;
 
-  --theme-segmented-bg: rgb(0 0 0 / 0.24);
+  --theme-segmented-bg: #171717;
   --theme-segmented-active-bg: #1d4ed8;
   --theme-segmented-active-text: #ffffff;
 
-  --theme-pill-bg: rgb(255 255 255 / 0.06);
-  --theme-pill-border: rgb(255 255 255 / 0.12);
-  --theme-pill-text: #cbd5e1;
+  --theme-pill-bg: #171717;
+  --theme-pill-border: #404040;
+  --theme-pill-text: #a3a3a3;
   --theme-pill-active-bg: #1d4ed8;
   --theme-pill-active-text: #ffffff;
 
-  --theme-gauge-track: #e2e8f0;
+  --theme-gauge-track: #dce3f0;
   --theme-gauge-fill: #1d4ed8;
 }
 
-/* 5B. SHOM - Mode Nuit */
+/* 5B. SHOM - Mode Nuit (Club Noir Absolu & Encre Cobalt #3b82f6) */
 html[data-theme="shom"][data-mode="dark"] {
-  --theme-bg: #080e18;
-  --theme-bg-pattern-dot: rgb(255 255 255 / 0.03);
-  --theme-header-bg: #070d18;
-  --theme-header-border: rgb(255 255 255 / 0.08);
-  --theme-header-text: #f8fafc;
-  --theme-header-text-muted: #94a3b8;
-  --theme-controls-bg: rgb(255 255 255 / 0.04);
-  --theme-controls-border: rgb(255 255 255 / 0.08);
-  --theme-input-bg: rgb(255 255 255 / 0.05);
-  --theme-input-border: rgb(255 255 255 / 0.1);
-  --theme-input-text: #f8fafc;
-  --theme-input-placeholder: #64748b;
+  --theme-bg: #000000;
+  --theme-bg-pattern-dot: rgb(59 130 246 / 0.04);
+  --theme-header-bg: #000000;
+  --theme-header-border: #262626;
+  --theme-header-text: #ffffff;
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #111111;
+  --theme-controls-border: #262626;
+  --theme-input-bg: #000000;
+  --theme-input-border: #333333;
+  --theme-input-text: #ffffff;
+  --theme-input-placeholder: #737373;
 
   --theme-card-outer-bg: transparent;
-  --theme-card-outer-border: rgb(255 255 255 / 0.08);
-  --theme-card-inner-bg: #0d1726;
-  --theme-card-inner-border: rgb(255 255 255 / 0.08);
-  --theme-card-divider: rgb(255 255 255 / 0.1);
-  --theme-surface-subtle: #13223b;
-  --theme-surface-subtle-border: rgb(255 255 255 / 0.08);
-  --theme-surface-inset: #060c16;
-  --theme-shadow-ambient: rgb(0 0 0 / 0.4);
+  --theme-card-outer-border: #262626;
+  --theme-card-inner-bg: #080808;
+  --theme-card-inner-border: #262626;
+  --theme-card-divider: #262626;
+  --theme-surface-subtle: #0c1322;
+  --theme-surface-subtle-border: #1b2a47;
+  --theme-surface-inset: #000000;
+  --theme-shadow-ambient: transparent;
   --theme-glow-accent: transparent;
 
-  --theme-text-title: #f8fafc;
-  --theme-text-main: #e2e8f0;
-  --theme-text-muted: #94a3b8;
-  --theme-text-faint: #64748b;
+  --theme-text-title: #ffffff;
+  --theme-text-main: #ededed;
+  --theme-text-muted: #96a2b8;
+  --theme-text-faint: #66748c;
 
-  --theme-canal-accent: #60a5fa;
-  --theme-canal-surface: rgb(29 78 216 / 0.18);
-  --theme-canal-surface-border: rgb(96 165 250 / 0.28);
-  --theme-canal-badge-bg: rgb(29 78 216 / 0.32);
-  --theme-canal-badge-text: #bfdbfe;
-  --theme-canal-badge-border: rgb(96 165 250 / 0.45);
+  --theme-canal-accent: #3b82f6;
+  --theme-canal-surface: #0c1322;
+  --theme-canal-surface-border: #3b82f6;
+  --theme-canal-badge-bg: #3b82f6;
+  --theme-canal-badge-text: #ffffff;
+  --theme-canal-badge-border: #3b82f6;
 
   --theme-bateau-accent: #2dd4bf;
-  --theme-bateau-surface: rgb(13 148 136 / 0.16);
-  --theme-bateau-surface-border: rgb(45 212 191 / 0.28);
-  --theme-bateau-badge-bg: rgb(13 148 136 / 0.32);
-  --theme-bateau-badge-text: #99f6e4;
-  --theme-bateau-badge-border: rgb(45 212 191 / 0.45);
+  --theme-bateau-surface: #060a12;
+  --theme-bateau-surface-border: #262626;
+  --theme-bateau-badge-bg: #132038;
+  --theme-bateau-badge-text: #3b82f6;
+  --theme-bateau-badge-border: #3b82f6;
 
-  --theme-secret-accent: #f59e0b;
-  --theme-secret-surface: #141208;
-  --theme-secret-border: rgb(245 158 11 / 0.25);
-  --theme-secret-text: #fef3c7;
+  --theme-secret-accent: #60a5fa;
+  --theme-secret-surface: #0c1322;
+  --theme-secret-border: #3b82f6;
+  --theme-secret-text: #60a5fa;
   --theme-secret-glow: transparent;
 
-  --theme-reg-title: #e2e8f0;
-  --theme-reg-pill-bg: #13223b;
-  --theme-reg-pill-border: rgb(255 255 255 / 0.08);
-  --theme-reg-pill-label: #94a3b8;
+  --theme-reg-title: #ffffff;
+  --theme-reg-pill-bg: #0c1322;
+  --theme-reg-pill-border: #262626;
+  --theme-reg-pill-label: #737373;
   --theme-reg-legal: #34d399;
   --theme-reg-nokill: #f87171;
 
-  --theme-badge-cat-bg: #1e293b;
-  --theme-badge-cat-text: #f8fafc;
-  --theme-badge-cat-border: rgb(255 255 255 / 0.12);
+  --theme-badge-cat-bg: #132038;
+  --theme-badge-cat-text: #93c5fd;
+  --theme-badge-cat-border: #3b82f6;
 
   --theme-btn-primary-bg: #3b82f6;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #2563eb;
+  --theme-btn-primary-hover: #60a5fa;
 
-  --theme-segmented-bg: rgb(0 0 0 / 0.4);
-  --theme-segmented-active-bg: #1d4ed8;
+  --theme-segmented-bg: #000000;
+  --theme-segmented-active-bg: #3b82f6;
   --theme-segmented-active-text: #ffffff;
 
-  --theme-pill-bg: rgb(255 255 255 / 0.04);
-  --theme-pill-border: rgb(255 255 255 / 0.08);
-  --theme-pill-text: #94a3b8;
-  --theme-pill-active-bg: #1d4ed8;
+  --theme-pill-bg: #000000;
+  --theme-pill-border: #262626;
+  --theme-pill-text: #a3a3a3;
+  --theme-pill-active-bg: #3b82f6;
   --theme-pill-active-text: #ffffff;
 
-  --theme-gauge-track: #13223b;
+  --theme-gauge-track: #132038;
   --theme-gauge-fill: #60a5fa;
+}
+
+/* ==========================================================================
+   GROUPE 2 : NUANCES ARCHITECTURALES (5 MATIÈRES J.B. INGWERSEN 1973)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   6. BETON (De School / Beton — Ciment Brut, Silice & Acier Minéral)
+   -------------------------------------------------------------------------- */
+
+/* 6A. Beton - Mode Jour (Papier Ciment Minéral & Encre Anthracite #262626) */
+html[data-theme="beton"][data-mode="light"],
+html[data-theme="beton"]:not([data-mode="dark"]) {
+  --theme-bg: #edece8;
+  --theme-bg-pattern-dot: rgb(0 0 0 / 0.05);
+  --theme-header-bg: #000000;
+  --theme-header-border: #000000;
+  --theme-header-text: #ffffff;
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #171717;
+  --theme-controls-border: #333333;
+  --theme-input-bg: #000000;
+  --theme-input-border: #404040;
+  --theme-input-text: #ffffff;
+  --theme-input-placeholder: #737373;
+
+  --theme-card-outer-bg: transparent;
+  --theme-card-outer-border: #000000;
+  --theme-card-inner-bg: #ffffff;
+  --theme-card-inner-border: #000000;
+  --theme-card-divider: #000000;
+  --theme-surface-subtle: #dfded9;
+  --theme-surface-subtle-border: #000000;
+  --theme-surface-inset: #d5d4ce;
+  --theme-shadow-ambient: transparent;
+  --theme-glow-accent: transparent;
+
+  --theme-text-title: #000000;
+  --theme-text-main: #000000;
+  --theme-text-muted: #454542;
+  --theme-text-faint: #737370;
+
+  --theme-canal-accent: #262626;
+  --theme-canal-surface: #dfded9;
+  --theme-canal-surface-border: #000000;
+  --theme-canal-badge-bg: #262626;
+  --theme-canal-badge-text: #ffffff;
+  --theme-canal-badge-border: #000000;
+
+  --theme-bateau-accent: #525252;
+  --theme-bateau-surface: #ffffff;
+  --theme-bateau-surface-border: #000000;
+  --theme-bateau-badge-bg: #ffffff;
+  --theme-bateau-badge-text: #262626;
+  --theme-bateau-badge-border: #000000;
+
+  --theme-secret-accent: #262626;
+  --theme-secret-surface: #dfded9;
+  --theme-secret-border: #000000;
+  --theme-secret-text: #000000;
+  --theme-secret-glow: transparent;
+
+  --theme-reg-title: #000000;
+  --theme-reg-pill-bg: #dfded9;
+  --theme-reg-pill-border: #000000;
+  --theme-reg-pill-label: #525252;
+  --theme-reg-legal: #000000;
+  --theme-reg-nokill: #000000;
+
+  --theme-badge-cat-bg: #262626;
+  --theme-badge-cat-text: #ffffff;
+  --theme-badge-cat-border: #000000;
+
+  --theme-btn-primary-bg: #262626;
+  --theme-btn-primary-text: #ffffff;
+  --theme-btn-primary-hover: #404040;
+
+  --theme-segmented-bg: #171717;
+  --theme-segmented-active-bg: #ffffff;
+  --theme-segmented-active-text: #000000;
+
+  --theme-pill-bg: #171717;
+  --theme-pill-border: #404040;
+  --theme-pill-text: #a3a3a3;
+  --theme-pill-active-bg: #ffffff;
+  --theme-pill-active-text: #000000;
+
+  --theme-gauge-track: #d5d4ce;
+  --theme-gauge-fill: #404040;
+}
+
+/* 6B. Beton - Mode Nuit (Béton Obscur & Ciment Lumineux #e5e5e5) */
+html[data-theme="beton"][data-mode="dark"] {
+  --theme-bg: #0a0a0a;
+  --theme-bg-pattern-dot: rgb(255 255 255 / 0.04);
+  --theme-header-bg: #000000;
+  --theme-header-border: #262626;
+  --theme-header-text: #ffffff;
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #111111;
+  --theme-controls-border: #262626;
+  --theme-input-bg: #000000;
+  --theme-input-border: #333333;
+  --theme-input-text: #ffffff;
+  --theme-input-placeholder: #737373;
+
+  --theme-card-outer-bg: transparent;
+  --theme-card-outer-border: #262626;
+  --theme-card-inner-bg: #0f0f0f;
+  --theme-card-inner-border: #262626;
+  --theme-card-divider: #262626;
+  --theme-surface-subtle: #1a1a1a;
+  --theme-surface-subtle-border: #333333;
+  --theme-surface-inset: #000000;
+  --theme-shadow-ambient: transparent;
+  --theme-glow-accent: transparent;
+
+  --theme-text-title: #ffffff;
+  --theme-text-main: #ededed;
+  --theme-text-muted: #a3a3a3;
+  --theme-text-faint: #737373;
+
+  --theme-canal-accent: #e5e5e5;
+  --theme-canal-surface: #1a1a1a;
+  --theme-canal-surface-border: #333333;
+  --theme-canal-badge-bg: #e5e5e5;
+  --theme-canal-badge-text: #000000;
+  --theme-canal-badge-border: #ffffff;
+
+  --theme-bateau-accent: #a3a3a3;
+  --theme-bateau-surface: #141414;
+  --theme-bateau-surface-border: #262626;
+  --theme-bateau-badge-bg: #262626;
+  --theme-bateau-badge-text: #e5e5e5;
+  --theme-bateau-badge-border: #404040;
+
+  --theme-secret-accent: #e5e5e5;
+  --theme-secret-surface: #1a1a1a;
+  --theme-secret-border: #333333;
+  --theme-secret-text: #ffffff;
+  --theme-secret-glow: transparent;
+
+  --theme-reg-title: #ffffff;
+  --theme-reg-pill-bg: #1a1a1a;
+  --theme-reg-pill-border: #262626;
+  --theme-reg-pill-label: #737373;
+  --theme-reg-legal: #ffffff;
+  --theme-reg-nokill: #ffffff;
+
+  --theme-badge-cat-bg: #262626;
+  --theme-badge-cat-text: #ffffff;
+  --theme-badge-cat-border: #404040;
+
+  --theme-btn-primary-bg: #e5e5e5;
+  --theme-btn-primary-text: #000000;
+  --theme-btn-primary-hover: #ffffff;
+
+  --theme-segmented-bg: #000000;
+  --theme-segmented-active-bg: #e5e5e5;
+  --theme-segmented-active-text: #000000;
+
+  --theme-pill-bg: #000000;
+  --theme-pill-border: #262626;
+  --theme-pill-text: #a3a3a3;
+  --theme-pill-active-bg: #e5e5e5;
+  --theme-pill-active-text: #000000;
+
+  --theme-gauge-track: #262626;
+  --theme-gauge-fill: #a3a3a3;
+}
+
+/* --------------------------------------------------------------------------
+   7. KRANT (De School / Krant — Papier Journal Recyclé & Typographie Charbon)
+   -------------------------------------------------------------------------- */
+
+/* 7A. Krant - Mode Jour (Papier Journal Fanzine & Encre Charbon #171717) */
+html[data-theme="krant"][data-mode="light"],
+html[data-theme="krant"]:not([data-mode="dark"]) {
+  --theme-bg: #f2efe9;
+  --theme-bg-pattern-dot: rgb(0 0 0 / 0.05);
+  --theme-header-bg: #000000;
+  --theme-header-border: #000000;
+  --theme-header-text: #ffffff;
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #171717;
+  --theme-controls-border: #333333;
+  --theme-input-bg: #000000;
+  --theme-input-border: #404040;
+  --theme-input-text: #ffffff;
+  --theme-input-placeholder: #737373;
+
+  --theme-card-outer-bg: transparent;
+  --theme-card-outer-border: #000000;
+  --theme-card-inner-bg: #ffffff;
+  --theme-card-inner-border: #000000;
+  --theme-card-divider: #000000;
+  --theme-surface-subtle: #e8e4db;
+  --theme-surface-subtle-border: #000000;
+  --theme-surface-inset: #ded8ce;
+  --theme-shadow-ambient: transparent;
+  --theme-glow-accent: transparent;
+
+  --theme-text-title: #000000;
+  --theme-text-main: #000000;
+  --theme-text-muted: #3d3b38;
+  --theme-text-faint: #6b6863;
+
+  --theme-canal-accent: #171717;
+  --theme-canal-surface: #e8e4db;
+  --theme-canal-surface-border: #000000;
+  --theme-canal-badge-bg: #171717;
+  --theme-canal-badge-text: #ffffff;
+  --theme-canal-badge-border: #000000;
+
+  --theme-bateau-accent: #404040;
+  --theme-bateau-surface: #ffffff;
+  --theme-bateau-surface-border: #000000;
+  --theme-bateau-badge-bg: #ffffff;
+  --theme-bateau-badge-text: #171717;
+  --theme-bateau-badge-border: #000000;
+
+  --theme-secret-accent: #171717;
+  --theme-secret-surface: #e8e4db;
+  --theme-secret-border: #000000;
+  --theme-secret-text: #000000;
+  --theme-secret-glow: transparent;
+
+  --theme-reg-title: #000000;
+  --theme-reg-pill-bg: #e8e4db;
+  --theme-reg-pill-border: #000000;
+  --theme-reg-pill-label: #525252;
+  --theme-reg-legal: #000000;
+  --theme-reg-nokill: #000000;
+
+  --theme-badge-cat-bg: #171717;
+  --theme-badge-cat-text: #ffffff;
+  --theme-badge-cat-border: #000000;
+
+  --theme-btn-primary-bg: #171717;
+  --theme-btn-primary-text: #ffffff;
+  --theme-btn-primary-hover: #333333;
+
+  --theme-segmented-bg: #171717;
+  --theme-segmented-active-bg: #ffffff;
+  --theme-segmented-active-text: #000000;
+
+  --theme-pill-bg: #171717;
+  --theme-pill-border: #404040;
+  --theme-pill-text: #a3a3a3;
+  --theme-pill-active-bg: #ffffff;
+  --theme-pill-active-text: #000000;
+
+  --theme-gauge-track: #ded8ce;
+  --theme-gauge-fill: #171717;
+}
+
+/* 7B. Krant - Mode Nuit (Édition Minuit Charbon Furtif) */
+html[data-theme="krant"][data-mode="dark"] {
+  --theme-bg: #0d0d0d;
+  --theme-bg-pattern-dot: rgb(255 255 255 / 0.04);
+  --theme-header-bg: #000000;
+  --theme-header-border: #262626;
+  --theme-header-text: #ffffff;
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #111111;
+  --theme-controls-border: #262626;
+  --theme-input-bg: #000000;
+  --theme-input-border: #333333;
+  --theme-input-text: #ffffff;
+  --theme-input-placeholder: #737373;
+
+  --theme-card-outer-bg: transparent;
+  --theme-card-outer-border: #262626;
+  --theme-card-inner-bg: #050505;
+  --theme-card-inner-border: #262626;
+  --theme-card-divider: #262626;
+  --theme-surface-subtle: #1a1a1a;
+  --theme-surface-subtle-border: #262626;
+  --theme-surface-inset: #000000;
+  --theme-shadow-ambient: transparent;
+  --theme-glow-accent: transparent;
+
+  --theme-text-title: #ffffff;
+  --theme-text-main: #ededed;
+  --theme-text-muted: #a3a3a3;
+  --theme-text-faint: #737373;
+
+  --theme-canal-accent: #ffffff;
+  --theme-canal-surface: #1a1a1a;
+  --theme-canal-surface-border: #262626;
+  --theme-canal-badge-bg: #ffffff;
+  --theme-canal-badge-text: #000000;
+  --theme-canal-badge-border: #ffffff;
+
+  --theme-bateau-accent: #d4d4d4;
+  --theme-bateau-surface: #121212;
+  --theme-bateau-surface-border: #262626;
+  --theme-bateau-badge-bg: #262626;
+  --theme-bateau-badge-text: #ffffff;
+  --theme-bateau-badge-border: #404040;
+
+  --theme-secret-accent: #ffffff;
+  --theme-secret-surface: #1a1a1a;
+  --theme-secret-border: #262626;
+  --theme-secret-text: #ffffff;
+  --theme-secret-glow: transparent;
+
+  --theme-reg-title: #ffffff;
+  --theme-reg-pill-bg: #1a1a1a;
+  --theme-reg-pill-border: #262626;
+  --theme-reg-pill-label: #737373;
+  --theme-reg-legal: #ffffff;
+  --theme-reg-nokill: #ffffff;
+
+  --theme-badge-cat-bg: #262626;
+  --theme-badge-cat-text: #ffffff;
+  --theme-badge-cat-border: #404040;
+
+  --theme-btn-primary-bg: #ffffff;
+  --theme-btn-primary-text: #000000;
+  --theme-btn-primary-hover: #e5e5e5;
+
+  --theme-segmented-bg: #000000;
+  --theme-segmented-active-bg: #ffffff;
+  --theme-segmented-active-text: #000000;
+
+  --theme-pill-bg: #000000;
+  --theme-pill-border: #262626;
+  --theme-pill-text: #a3a3a3;
+  --theme-pill-active-bg: #ffffff;
+  --theme-pill-active-text: #000000;
+
+  --theme-gauge-track: #262626;
+  --theme-gauge-fill: #d4d4d4;
+}
+
+/* --------------------------------------------------------------------------
+   8. KRAFT (De School / Kraft — Carton Brut & Fibre d'Archive Industrielle)
+   -------------------------------------------------------------------------- */
+
+/* 8A. Kraft - Mode Jour (Papier Kraft Brut & Encre Ombre Chaude #78350f) */
+html[data-theme="kraft"][data-mode="light"],
+html[data-theme="kraft"]:not([data-mode="dark"]) {
+  --theme-bg: #ece2ce;
+  --theme-bg-pattern-dot: rgb(120 53 15 / 0.06);
+  --theme-header-bg: #000000;
+  --theme-header-border: #000000;
+  --theme-header-text: #ffffff;
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #171717;
+  --theme-controls-border: #333333;
+  --theme-input-bg: #000000;
+  --theme-input-border: #404040;
+  --theme-input-text: #ffffff;
+  --theme-input-placeholder: #737373;
+
+  --theme-card-outer-bg: transparent;
+  --theme-card-outer-border: #000000;
+  --theme-card-inner-bg: #ffffff;
+  --theme-card-inner-border: #000000;
+  --theme-card-divider: #000000;
+  --theme-surface-subtle: #e1d4bb;
+  --theme-surface-subtle-border: #000000;
+  --theme-surface-inset: #d7c8ad;
+  --theme-shadow-ambient: transparent;
+  --theme-glow-accent: transparent;
+
+  --theme-text-title: #000000;
+  --theme-text-main: #000000;
+  --theme-text-muted: #473e31;
+  --theme-text-faint: #756956;
+
+  --theme-canal-accent: #78350f;
+  --theme-canal-surface: #e1d4bb;
+  --theme-canal-surface-border: #78350f;
+  --theme-canal-badge-bg: #78350f;
+  --theme-canal-badge-text: #ffffff;
+  --theme-canal-badge-border: #78350f;
+
+  --theme-bateau-accent: #92400e;
+  --theme-bateau-surface: #ffffff;
+  --theme-bateau-surface-border: #000000;
+  --theme-bateau-badge-bg: #ffffff;
+  --theme-bateau-badge-text: #78350f;
+  --theme-bateau-badge-border: #78350f;
+
+  --theme-secret-accent: #78350f;
+  --theme-secret-surface: #e1d4bb;
+  --theme-secret-border: #78350f;
+  --theme-secret-text: #78350f;
+  --theme-secret-glow: transparent;
+
+  --theme-reg-title: #000000;
+  --theme-reg-pill-bg: #e1d4bb;
+  --theme-reg-pill-border: #000000;
+  --theme-reg-pill-label: #525252;
+  --theme-reg-legal: #047857;
+  --theme-reg-nokill: #b91c1c;
+
+  --theme-badge-cat-bg: #78350f;
+  --theme-badge-cat-text: #ffffff;
+  --theme-badge-cat-border: #78350f;
+
+  --theme-btn-primary-bg: #78350f;
+  --theme-btn-primary-text: #ffffff;
+  --theme-btn-primary-hover: #92400e;
+
+  --theme-segmented-bg: #171717;
+  --theme-segmented-active-bg: #78350f;
+  --theme-segmented-active-text: #ffffff;
+
+  --theme-pill-bg: #171717;
+  --theme-pill-border: #404040;
+  --theme-pill-text: #a3a3a3;
+  --theme-pill-active-bg: #78350f;
+  --theme-pill-active-text: #ffffff;
+
+  --theme-gauge-track: #d7c8ad;
+  --theme-gauge-fill: #92400e;
+}
+
+/* 8B. Kraft - Mode Nuit (Fibre Sombre & Encre Ambre Brûlé #d97706) */
+html[data-theme="kraft"][data-mode="dark"] {
+  --theme-bg: #0b0906;
+  --theme-bg-pattern-dot: rgb(217 119 6 / 0.04);
+  --theme-header-bg: #000000;
+  --theme-header-border: #262626;
+  --theme-header-text: #ffffff;
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #111111;
+  --theme-controls-border: #262626;
+  --theme-input-bg: #000000;
+  --theme-input-border: #333333;
+  --theme-input-text: #ffffff;
+  --theme-input-placeholder: #737373;
+
+  --theme-card-outer-bg: transparent;
+  --theme-card-outer-border: #262626;
+  --theme-card-inner-bg: #080705;
+  --theme-card-inner-border: #262626;
+  --theme-card-divider: #262626;
+  --theme-surface-subtle: #19140d;
+  --theme-surface-subtle-border: #332414;
+  --theme-surface-inset: #000000;
+  --theme-shadow-ambient: transparent;
+  --theme-glow-accent: transparent;
+
+  --theme-text-title: #ffffff;
+  --theme-text-main: #ededed;
+  --theme-text-muted: #a3998b;
+  --theme-text-faint: #786d5e;
+
+  --theme-canal-accent: #d97706;
+  --theme-canal-surface: #19140d;
+  --theme-canal-surface-border: #d97706;
+  --theme-canal-badge-bg: #d97706;
+  --theme-canal-badge-text: #000000;
+  --theme-canal-badge-border: #d97706;
+
+  --theme-bateau-accent: #f59e0b;
+  --theme-bateau-surface: #120e08;
+  --theme-bateau-surface-border: #262626;
+  --theme-bateau-badge-bg: #2b1b0b;
+  --theme-bateau-badge-text: #d97706;
+  --theme-bateau-badge-border: #d97706;
+
+  --theme-secret-accent: #f59e0b;
+  --theme-secret-surface: #19140d;
+  --theme-secret-border: #d97706;
+  --theme-secret-text: #f59e0b;
+  --theme-secret-glow: transparent;
+
+  --theme-reg-title: #ffffff;
+  --theme-reg-pill-bg: #19140d;
+  --theme-reg-pill-border: #262626;
+  --theme-reg-pill-label: #737373;
+  --theme-reg-legal: #34d399;
+  --theme-reg-nokill: #f87171;
+
+  --theme-badge-cat-bg: #2b1b0b;
+  --theme-badge-cat-text: #fde68a;
+  --theme-badge-cat-border: #d97706;
+
+  --theme-btn-primary-bg: #d97706;
+  --theme-btn-primary-text: #000000;
+  --theme-btn-primary-hover: #f59e0b;
+
+  --theme-segmented-bg: #000000;
+  --theme-segmented-active-bg: #d97706;
+  --theme-segmented-active-text: #000000;
+
+  --theme-pill-bg: #000000;
+  --theme-pill-border: #262626;
+  --theme-pill-text: #a3a3a3;
+  --theme-pill-active-bg: #d97706;
+  --theme-pill-active-text: #000000;
+
+  --theme-gauge-track: #2b1b0b;
+  --theme-gauge-fill: #d97706;
+}
+
+/* --------------------------------------------------------------------------
+   9. ASFALT (De School / Asfalt — Cour d'École d'Amsterdam & Craie Blanche)
+   -------------------------------------------------------------------------- */
+
+/* 9A. Asfalt - Mode Jour (Papier Asphalte Cendré & Noir Pur #0a0a0a) */
+html[data-theme="asfalt"][data-mode="light"],
+html[data-theme="asfalt"]:not([data-mode="dark"]) {
+  --theme-bg: #e5e5e5;
+  --theme-bg-pattern-dot: rgb(0 0 0 / 0.05);
+  --theme-header-bg: #000000;
+  --theme-header-border: #000000;
+  --theme-header-text: #ffffff;
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #171717;
+  --theme-controls-border: #333333;
+  --theme-input-bg: #000000;
+  --theme-input-border: #404040;
+  --theme-input-text: #ffffff;
+  --theme-input-placeholder: #737373;
+
+  --theme-card-outer-bg: transparent;
+  --theme-card-outer-border: #000000;
+  --theme-card-inner-bg: #ffffff;
+  --theme-card-inner-border: #000000;
+  --theme-card-divider: #000000;
+  --theme-surface-subtle: #d8d8d8;
+  --theme-surface-subtle-border: #000000;
+  --theme-surface-inset: #cccccc;
+  --theme-shadow-ambient: transparent;
+  --theme-glow-accent: transparent;
+
+  --theme-text-title: #000000;
+  --theme-text-main: #000000;
+  --theme-text-muted: #404040;
+  --theme-text-faint: #737373;
+
+  --theme-canal-accent: #0a0a0a;
+  --theme-canal-surface: #d8d8d8;
+  --theme-canal-surface-border: #000000;
+  --theme-canal-badge-bg: #0a0a0a;
+  --theme-canal-badge-text: #ffffff;
+  --theme-canal-badge-border: #000000;
+
+  --theme-bateau-accent: #404040;
+  --theme-bateau-surface: #ffffff;
+  --theme-bateau-surface-border: #000000;
+  --theme-bateau-badge-bg: #ffffff;
+  --theme-bateau-badge-text: #0a0a0a;
+  --theme-bateau-badge-border: #000000;
+
+  --theme-secret-accent: #0a0a0a;
+  --theme-secret-surface: #d8d8d8;
+  --theme-secret-border: #000000;
+  --theme-secret-text: #000000;
+  --theme-secret-glow: transparent;
+
+  --theme-reg-title: #000000;
+  --theme-reg-pill-bg: #d8d8d8;
+  --theme-reg-pill-border: #000000;
+  --theme-reg-pill-label: #525252;
+  --theme-reg-legal: #000000;
+  --theme-reg-nokill: #000000;
+
+  --theme-badge-cat-bg: #0a0a0a;
+  --theme-badge-cat-text: #ffffff;
+  --theme-badge-cat-border: #000000;
+
+  --theme-btn-primary-bg: #0a0a0a;
+  --theme-btn-primary-text: #ffffff;
+  --theme-btn-primary-hover: #262626;
+
+  --theme-segmented-bg: #171717;
+  --theme-segmented-active-bg: #ffffff;
+  --theme-segmented-active-text: #000000;
+
+  --theme-pill-bg: #171717;
+  --theme-pill-border: #404040;
+  --theme-pill-text: #a3a3a3;
+  --theme-pill-active-bg: #ffffff;
+  --theme-pill-active-text: #000000;
+
+  --theme-gauge-track: #cccccc;
+  --theme-gauge-fill: #0a0a0a;
+}
+
+/* 9B. Asfalt - Mode Nuit (Bitume Profond & Craie Vive #ffffff) */
+html[data-theme="asfalt"][data-mode="dark"] {
+  --theme-bg: #050505;
+  --theme-bg-pattern-dot: rgb(255 255 255 / 0.04);
+  --theme-header-bg: #000000;
+  --theme-header-border: #262626;
+  --theme-header-text: #ffffff;
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #111111;
+  --theme-controls-border: #262626;
+  --theme-input-bg: #000000;
+  --theme-input-border: #333333;
+  --theme-input-text: #ffffff;
+  --theme-input-placeholder: #737373;
+
+  --theme-card-outer-bg: transparent;
+  --theme-card-outer-border: #262626;
+  --theme-card-inner-bg: #0a0a0a;
+  --theme-card-inner-border: #262626;
+  --theme-card-divider: #262626;
+  --theme-surface-subtle: #141414;
+  --theme-surface-subtle-border: #262626;
+  --theme-surface-inset: #000000;
+  --theme-shadow-ambient: transparent;
+  --theme-glow-accent: transparent;
+
+  --theme-text-title: #ffffff;
+  --theme-text-main: #ededed;
+  --theme-text-muted: #a3a3a3;
+  --theme-text-faint: #737373;
+
+  --theme-canal-accent: #ffffff;
+  --theme-canal-surface: #141414;
+  --theme-canal-surface-border: #262626;
+  --theme-canal-badge-bg: #ffffff;
+  --theme-canal-badge-text: #000000;
+  --theme-canal-badge-border: #ffffff;
+
+  --theme-bateau-accent: #d4d4d4;
+  --theme-bateau-surface: #0f0f0f;
+  --theme-bateau-surface-border: #262626;
+  --theme-bateau-badge-bg: #262626;
+  --theme-bateau-badge-text: #ffffff;
+  --theme-bateau-badge-border: #404040;
+
+  --theme-secret-accent: #ffffff;
+  --theme-secret-surface: #141414;
+  --theme-secret-border: #262626;
+  --theme-secret-text: #ffffff;
+  --theme-secret-glow: transparent;
+
+  --theme-reg-title: #ffffff;
+  --theme-reg-pill-bg: #141414;
+  --theme-reg-pill-border: #262626;
+  --theme-reg-pill-label: #737373;
+  --theme-reg-legal: #ffffff;
+  --theme-reg-nokill: #ffffff;
+
+  --theme-badge-cat-bg: #262626;
+  --theme-badge-cat-text: #ffffff;
+  --theme-badge-cat-border: #404040;
+
+  --theme-btn-primary-bg: #ffffff;
+  --theme-btn-primary-text: #000000;
+  --theme-btn-primary-hover: #e5e5e5;
+
+  --theme-segmented-bg: #000000;
+  --theme-segmented-active-bg: #ffffff;
+  --theme-segmented-active-text: #000000;
+
+  --theme-pill-bg: #000000;
+  --theme-pill-border: #262626;
+  --theme-pill-text: #a3a3a3;
+  --theme-pill-active-bg: #ffffff;
+  --theme-pill-active-text: #000000;
+
+  --theme-gauge-track: #262626;
+  --theme-gauge-fill: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   10. STAAL (De School / Staal — Acier Froid, Poutres 1973 & Gris Fer)
+   -------------------------------------------------------------------------- */
+
+/* 10A. Staal - Mode Jour (Papier Acier Froid & Encre Gris Fer #334155) */
+html[data-theme="staal"][data-mode="light"],
+html[data-theme="staal"]:not([data-mode="dark"]) {
+  --theme-bg: #e8ecf0;
+  --theme-bg-pattern-dot: rgb(51 65 85 / 0.05);
+  --theme-header-bg: #000000;
+  --theme-header-border: #000000;
+  --theme-header-text: #ffffff;
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #171717;
+  --theme-controls-border: #333333;
+  --theme-input-bg: #000000;
+  --theme-input-border: #404040;
+  --theme-input-text: #ffffff;
+  --theme-input-placeholder: #737373;
+
+  --theme-card-outer-bg: transparent;
+  --theme-card-outer-border: #000000;
+  --theme-card-inner-bg: #ffffff;
+  --theme-card-inner-border: #000000;
+  --theme-card-divider: #000000;
+  --theme-surface-subtle: #dbe2ea;
+  --theme-surface-subtle-border: #000000;
+  --theme-surface-inset: #cdd5df;
+  --theme-shadow-ambient: transparent;
+  --theme-glow-accent: transparent;
+
+  --theme-text-title: #000000;
+  --theme-text-main: #000000;
+  --theme-text-muted: #3b4654;
+  --theme-text-faint: #677382;
+
+  --theme-canal-accent: #334155;
+  --theme-canal-surface: #dbe2ea;
+  --theme-canal-surface-border: #334155;
+  --theme-canal-badge-bg: #334155;
+  --theme-canal-badge-text: #ffffff;
+  --theme-canal-badge-border: #334155;
+
+  --theme-bateau-accent: #475569;
+  --theme-bateau-surface: #ffffff;
+  --theme-bateau-surface-border: #000000;
+  --theme-bateau-badge-bg: #ffffff;
+  --theme-bateau-badge-text: #334155;
+  --theme-bateau-badge-border: #334155;
+
+  --theme-secret-accent: #334155;
+  --theme-secret-surface: #dbe2ea;
+  --theme-secret-border: #334155;
+  --theme-secret-text: #334155;
+  --theme-secret-glow: transparent;
+
+  --theme-reg-title: #000000;
+  --theme-reg-pill-bg: #dbe2ea;
+  --theme-reg-pill-border: #000000;
+  --theme-reg-pill-label: #525252;
+  --theme-reg-legal: #047857;
+  --theme-reg-nokill: #b91c1c;
+
+  --theme-badge-cat-bg: #334155;
+  --theme-badge-cat-text: #ffffff;
+  --theme-badge-cat-border: #334155;
+
+  --theme-btn-primary-bg: #334155;
+  --theme-btn-primary-text: #ffffff;
+  --theme-btn-primary-hover: #1e293b;
+
+  --theme-segmented-bg: #171717;
+  --theme-segmented-active-bg: #334155;
+  --theme-segmented-active-text: #ffffff;
+
+  --theme-pill-bg: #171717;
+  --theme-pill-border: #404040;
+  --theme-pill-text: #a3a3a3;
+  --theme-pill-active-bg: #334155;
+  --theme-pill-active-text: #ffffff;
+
+  --theme-gauge-track: #cdd5df;
+  --theme-gauge-fill: #334155;
+}
+
+/* 10B. Staal - Mode Nuit (Acier Sombre & Lame Métallique #94a3b8) */
+html[data-theme="staal"][data-mode="dark"] {
+  --theme-bg: #07090c;
+  --theme-bg-pattern-dot: rgb(148 163 184 / 0.04);
+  --theme-header-bg: #000000;
+  --theme-header-border: #262626;
+  --theme-header-text: #ffffff;
+  --theme-header-text-muted: #a3a3a3;
+  --theme-controls-bg: #111111;
+  --theme-controls-border: #262626;
+  --theme-input-bg: #000000;
+  --theme-input-border: #333333;
+  --theme-input-text: #ffffff;
+  --theme-input-placeholder: #737373;
+
+  --theme-card-outer-bg: transparent;
+  --theme-card-outer-border: #262626;
+  --theme-card-inner-bg: #0a0d12;
+  --theme-card-inner-border: #262626;
+  --theme-card-divider: #262626;
+  --theme-surface-subtle: #11161d;
+  --theme-surface-subtle-border: #1e2733;
+  --theme-surface-inset: #000000;
+  --theme-shadow-ambient: transparent;
+  --theme-glow-accent: transparent;
+
+  --theme-text-title: #ffffff;
+  --theme-text-main: #ededed;
+  --theme-text-muted: #94a3b8;
+  --theme-text-faint: #64748b;
+
+  --theme-canal-accent: #94a3b8;
+  --theme-canal-surface: #11161d;
+  --theme-canal-surface-border: #94a3b8;
+  --theme-canal-badge-bg: #94a3b8;
+  --theme-canal-badge-text: #000000;
+  --theme-canal-badge-border: #94a3b8;
+
+  --theme-bateau-accent: #cbd5e1;
+  --theme-bateau-surface: #0a0d12;
+  --theme-bateau-surface-border: #262626;
+  --theme-bateau-badge-bg: #1e2733;
+  --theme-bateau-badge-text: #94a3b8;
+  --theme-bateau-badge-border: #94a3b8;
+
+  --theme-secret-accent: #cbd5e1;
+  --theme-secret-surface: #11161d;
+  --theme-secret-border: #94a3b8;
+  --theme-secret-text: #cbd5e1;
+  --theme-secret-glow: transparent;
+
+  --theme-reg-title: #ffffff;
+  --theme-reg-pill-bg: #11161d;
+  --theme-reg-pill-border: #262626;
+  --theme-reg-pill-label: #737373;
+  --theme-reg-legal: #34d399;
+  --theme-reg-nokill: #f87171;
+
+  --theme-badge-cat-bg: #1e2733;
+  --theme-badge-cat-text: #e2e8f0;
+  --theme-badge-cat-border: #94a3b8;
+
+  --theme-btn-primary-bg: #94a3b8;
+  --theme-btn-primary-text: #000000;
+  --theme-btn-primary-hover: #cbd5e1;
+
+  --theme-segmented-bg: #000000;
+  --theme-segmented-active-bg: #94a3b8;
+  --theme-segmented-active-text: #000000;
+
+  --theme-pill-bg: #000000;
+  --theme-pill-border: #262626;
+  --theme-pill-text: #a3a3a3;
+  --theme-pill-active-bg: #94a3b8;
+  --theme-pill-active-text: #000000;
+
+  --theme-gauge-track: #1e2733;
+  --theme-gauge-fill: #94a3b8;
 }

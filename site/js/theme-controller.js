@@ -7,34 +7,59 @@ export const STORAGE_KEY_MODE = 'peche-theme-mode';
 
 export const THEME_DEFINITIONS = {
   deschool: {
-    label: 'De School',
+    label: 'Archief',
     name: 'De School / Archief',
     color: '#000000'
   },
   estran: {
-    label: 'Estran',
-    name: 'Estran Monolith',
-    color: '#059669'
+    label: 'Varech',
+    name: 'De School / Varech',
+    color: '#047857'
   },
   epaves: {
-    label: 'Épaves',
-    name: 'Épaves & Rouille',
+    label: 'Rouille',
+    name: 'De School / Rouille',
     color: '#c2410c'
   },
   dune: {
-    label: 'Dune',
-    name: 'Dune & Calcaire',
+    label: 'Ocre',
+    name: 'De School / Ocre',
     color: '#b45309'
   },
   carbon: {
-    label: 'Carbone',
-    name: 'Carbone Sondeur',
-    color: '#84cc16'
+    label: 'Sondeur',
+    name: 'De School / Sondeur',
+    color: '#65a30d'
   },
   shom: {
     label: 'SHOM',
-    name: 'Carte SHOM',
+    name: 'De School / SHOM',
     color: '#1d4ed8'
+  },
+  beton: {
+    label: 'Beton',
+    name: 'De School / Beton',
+    color: '#525252'
+  },
+  krant: {
+    label: 'Krant',
+    name: 'De School / Krant',
+    color: '#171717'
+  },
+  kraft: {
+    label: 'Kraft',
+    name: 'De School / Kraft',
+    color: '#78350f'
+  },
+  asfalt: {
+    label: 'Asfalt',
+    name: 'De School / Asfalt',
+    color: '#0a0a0a'
+  },
+  staal: {
+    label: 'Staal',
+    name: 'De School / Staal',
+    color: '#334155'
   }
 };
 
