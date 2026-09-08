@@ -4,6 +4,29 @@
 
 const MONTHS = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'];
 
+const SVG_ICONS = {
+  search: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`,
+  scale: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M12 3v18M6 7l6-2 6 2M3 13l3-6 3 6a3 3 0 0 1-6 0zM15 13l3-6 3 6a3 3 0 0 1-6 0zM4 21h16"/></svg>`,
+  calendar: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`,
+  anchor: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><circle cx="12" cy="5" r="3"/><line x1="12" y1="8" x2="12" y2="21"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><line x1="9" y1="11" x2="15" y2="11"/></svg>`,
+  boat: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M2 17l2 4h16l2-4L2 17z"/><path d="M12 4v11"/><path d="M12 4l6 8H6l6-8z"/></svg>`,
+  zap: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
+  wave: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M2 12c2.5-3 5-3 7.5 0s5 3 7.5 0 5-3 7.5 0"/><path d="M2 17c2.5-3 5-3 7.5 0s5 3 7.5 0 5-3 7.5 0"/></svg>`,
+  clock: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M10 2h4"/></svg>`,
+  rod: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><line x1="4" y1="20" x2="20" y2="4"/><path d="M20 4l-2 2"/><path d="M15 9l-2 2"/><path d="M10 14l-2 2"/><circle cx="5" cy="19" r="1.5"/></svg>`,
+  sparkle: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+  rotate: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4L21 8"/><polyline points="21 3 21 8 16 8"/></svg>`,
+  fish: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M19 12c-4 4-10 4-15 0 5-4 11-4 15 0z"/><path d="M4 12L2 9.5v5L4 12z"/><circle cx="15" cy="11" r="1" fill="currentColor"/></svg>`,
+  moon: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`,
+  compass: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polygon points="12 8 10 14 16 12 12 8"/></svg>`
+};
+
+function uiIcon(name, extraClass = '') {
+  const raw = SVG_ICONS[name] || '';
+  if (!raw || !extraClass) return raw;
+  return raw.replace('class="ui-icon"', `class="ui-icon ${extraClass}"`);
+}
+
 let currentFilterCategory = 'all';
 let currentFilterBiotope = 'all';
 let currentSearchTerm = '';
@@ -36,7 +59,7 @@ function setupFilterPills(data) {
   container.innerHTML = categories.map(cat => {
     const label = cat === 'all' ? 'Toutes les catégories' : cat;
     const activeClass = cat === currentFilterCategory ? 'active' : '';
-    return `<button class="pill ${activeClass}" data-category="${cat}">${label}</button>`;
+    return `<button class="pill ${activeClass}" data-category="${cat}"><span class="pill-dot"></span><span>${label}</span></button>`;
   }).join('');
 
   container.addEventListener('click', (e) => {
@@ -151,7 +174,7 @@ function renderApp() {
     if (currentViewMode === 'duo') {
       hintEl.textContent = 'Mode Déplié : Face A (Identité) et Face B (Tactique) affichées côte-à-côte en pleine largeur';
     } else if (currentViewMode === 'flip') {
-      hintEl.textContent = 'Mode Réversible : Cliquez sur "🔄 Tourner la fiche" pour basculer en 3D';
+      hintEl.textContent = "Mode Réversible : Cliquez sur l'icône de rotation pour basculer en 3D";
     } else {
       hintEl.textContent = 'Mode Impression : Aperçu des planches A4 paysage duplex prêtes pour l\'imprimante';
     }
@@ -185,15 +208,17 @@ function renderDuoView(speciesList) {
   }
 
   container.className = 'duo-cards-container';
-  container.innerHTML = speciesList.map(fish => `
-    <div class="duo-card" id="duo-${fish.id}">
-      <div class="duo-card-column col-recto">
-        ${renderCardFront(fish)}
+  container.innerHTML = speciesList.map((fish, index) => `
+    <article class="duo-card-shell" id="duo-${fish.id}" style="animation-delay: ${Math.min(index * 40, 400)}ms;">
+      <div class="duo-card">
+        <div class="duo-card-column col-recto">
+          ${renderCardFront(fish)}
+        </div>
+        <div class="duo-card-column col-verso">
+          ${renderCardBack(fish)}
+        </div>
       </div>
-      <div class="duo-card-column col-verso">
-        ${renderCardBack(fish)}
-      </div>
-    </div>
+    </article>
   `).join('');
 }
 
@@ -216,20 +241,24 @@ function renderFlipView(speciesList) {
   }
 
   container.className = 'cards-grid';
-  container.innerHTML = speciesList.map(fish => `
-    <div class="interactive-card" id="card-${fish.id}">
-      <button class="card-flip-trigger" onclick="toggleCardFlip('${fish.id}')">
-        <span>🔄 Tourner la fiche</span>
+  container.innerHTML = speciesList.map((fish, index) => `
+    <article class="interactive-card" id="card-${fish.id}" style="animation-delay: ${Math.min(index * 40, 400)}ms;">
+      <button type="button" class="card-flip-trigger" onclick="toggleCardFlip('${fish.id}')" title="Tourner la fiche" aria-label="Tourner la fiche technique de ${fish.identity.name}">
+        <span class="flip-icon-wrap" aria-hidden="true">${uiIcon('rotate')}</span>
       </button>
       <div class="card-inner">
-        <div class="card-face front">
-          ${renderCardFront(fish)}
+        <div class="card-face-shell front">
+          <div class="card-face">
+            ${renderCardFront(fish)}
+          </div>
         </div>
-        <div class="card-face back">
-          ${renderCardBack(fish)}
+        <div class="card-face-shell back">
+          <div class="card-face">
+            ${renderCardBack(fish, true)}
+          </div>
         </div>
       </div>
-    </div>
+    </article>
   `).join('');
 }
 
@@ -238,6 +267,27 @@ window.toggleCardFlip = function(id) {
   if (el) {
     el.classList.toggle('flipped');
   }
+};
+
+window.switchCardBiotope = function(e, fishId, tab) {
+  if (e) e.stopPropagation();
+  const card = document.getElementById(`card-${fishId}`);
+  if (!card) return;
+  const switcher = card.querySelector('.biotope-card-switcher');
+  if (switcher) {
+    switcher.querySelectorAll('.biotope-switch-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.tab === tab);
+    });
+  }
+  const canalSection = card.querySelector('.section-canal');
+  const bateauSection = card.querySelector('.section-bateau');
+  const canalCombo = card.querySelector('.combo-line-canal');
+  const bateauCombo = card.querySelector('.combo-line-bateau');
+
+  if (canalSection) canalSection.classList.toggle('tab-hidden', tab !== 'canal');
+  if (bateauSection) bateauSection.classList.toggle('tab-hidden', tab !== 'bateau');
+  if (canalCombo) canalCombo.classList.toggle('tab-hidden', tab !== 'canal');
+  if (bateauCombo) bateauCombo.classList.toggle('tab-hidden', tab !== 'bateau');
 };
 
 function renderPrintView(speciesList) {
@@ -286,6 +336,318 @@ function renderPrintView(speciesList) {
 }
 
 // --------------------------------------------------------------------------
+// MOTEURS DE RENDU GRAPHIQUE & GAUGES VISUELLES
+// --------------------------------------------------------------------------
+
+function parseTwelfths(text) {
+  if (!text) return { hours: [false, false, false, false, false, false], hoursStr: 'N/A', flow: 'Marée active', detail: '' };
+  const hours = [false, false, false, false, false, false];
+
+  const rangeMatches = text.matchAll(/H([1-6])\s*(?:à|-|–)\s*H([1-6])/gi);
+  for (const match of rangeMatches) {
+    const start = parseInt(match[1], 10);
+    const end = parseInt(match[2], 10);
+    for (let h = Math.min(start, end); h <= Math.max(start, end); h++) {
+      hours[h - 1] = true;
+    }
+  }
+
+  const singleMatches = text.matchAll(/\bH([1-6])\b/gi);
+  for (const match of singleMatches) {
+    const h = parseInt(match[1], 10);
+    hours[h - 1] = true;
+  }
+
+  const activeList = [];
+  hours.forEach((act, idx) => {
+    if (act) activeList.push(`H${idx + 1}`);
+  });
+  const hoursStr = activeList.length > 0 ? activeList.join(' • ') : 'Toutes heures';
+
+  let detail = text;
+  if (text.includes(':')) {
+    detail = text.split(':').slice(1).join(':').trim();
+  }
+
+  let flow = 'Marée active';
+  if (hours[2] && hours[3] && !hours[0] && !hours[5]) {
+    flow = 'Mi-marée (Courant max)';
+  } else if ((hours[0] || hours[5]) && !hours[2] && !hours[3]) {
+    flow = 'Étales (Courant faible/nul)';
+  } else if (hours[1] || hours[4]) {
+    flow = 'Courant modéré (Flot/Jusant)';
+  }
+
+  return { hours, hoursStr, flow, detail };
+}
+
+function renderTwelfthsGauge(ruleOfTwelfthsText) {
+  const tw = parseTwelfths(ruleOfTwelfthsText);
+  const steps = [
+    { h: 'H1', frac: '1/12', pct: 33, act: tw.hours[0] },
+    { h: 'H2', frac: '2/12', pct: 66, act: tw.hours[1] },
+    { h: 'H3', frac: '3/12', pct: 100, act: tw.hours[2] },
+    { h: 'H4', frac: '3/12', pct: 100, act: tw.hours[3] },
+    { h: 'H5', frac: '2/12', pct: 66, act: tw.hours[4] },
+    { h: 'H6', frac: '1/12', pct: 33, act: tw.hours[5] }
+  ];
+
+  return `
+    <div class="twelfths-card">
+      <div class="twelfths-top-row">
+        <div class="twelfths-title">${uiIcon('clock')} Règle des douzièmes (Courant & Marnage)</div>
+        <div class="twelfths-badge-group">
+          <span class="twelfths-hours-pill">${tw.hoursStr}</span>
+          <span class="twelfths-flow-pill">${tw.flow}</span>
+        </div>
+      </div>
+      <div class="twelfths-chart-container">
+        <div class="twelfths-bell-curve" role="img" aria-label="Jauge des 6 heures de marée : ${tw.hoursStr} actives">
+          ${steps.map(s => `
+            <div class="twelfth-col ${s.act ? 'active' : ''}" title="${s.h} (${s.frac} du marnage)${s.act ? ' — Actif pour cette espèce' : ''}">
+              <div class="twelfth-bar-track">
+                <div class="twelfth-bar-fill" style="height: ${s.pct}%;"></div>
+              </div>
+              <span class="twelfth-hour-name">${s.h}</span>
+              <span class="twelfth-frac-label">${s.frac}</span>
+            </div>
+          `).join('')}
+        </div>
+        <div class="twelfths-note">
+          <span class="twelfths-note-text">${tw.detail}</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function parseCoefficients(text) {
+  if (!text) return { min: 20, max: 120, isAll: true, label: 'Tous coefs', detail: '' };
+  if (/tous coefficients/i.test(text)) {
+    return { min: 20, max: 120, isAll: true, label: 'Tous coefs (20-120)', detail: text };
+  }
+
+  const match = text.match(/(\d{2})\s*(?:-|à|et)\s*(\d{2,3})/i);
+  if (match) {
+    const min = parseInt(match[1], 10);
+    const max = parseInt(match[2], 10);
+    let type = 'Moyens';
+    if (max <= 65) type = 'Mortes-eaux';
+    else if (min >= 70) type = 'Vives-eaux';
+    return { min, max, isAll: false, label: `Coefs ${min}-${max} (${type})`, detail: text };
+  }
+
+  const single = text.match(/(\d{2})/);
+  if (single) {
+    const v = parseInt(single[1], 10);
+    return { min: v, max: v, isAll: false, label: `Coef ~${v}`, detail: text };
+  }
+
+  return { min: 20, max: 120, isAll: true, label: 'Tous coefficients', detail: text };
+}
+
+function formatWindCondition(text) {
+  if (!text) return { badge: 'Vent variable' };
+  let badge = 'Vent variable';
+  if (/Sud[\s/-]*SO|Sud-Ouest|terre/i.test(text)) {
+    badge = 'Vent de terre (S/SO)';
+  } else if (/Est/i.test(text)) {
+    badge = "Brise d'Est";
+  } else if (/Ouest/i.test(text)) {
+    badge = "Brise d'Ouest";
+  } else if (/faible|nul|calme/i.test(text)) {
+    badge = 'Vent faible / Mer calme';
+  } else if (/Beaufort/i.test(text)) {
+    badge = '2 à 3 Beaufort';
+  }
+  return { badge };
+}
+
+function renderTideAndWeather(coefText, windText) {
+  const cf = parseCoefficients(coefText);
+  const wind = formatWindCondition(windText);
+
+  const leftPct = cf.isAll ? 0 : Math.max(0, Math.round(((cf.min - 20) / 100) * 100));
+  const widthPct = cf.isAll ? 100 : Math.max(12, Math.round(((cf.max - cf.min) / 100) * 100));
+
+  return `
+    <div class="tide-weather-cockpit">
+      <div class="cockpit-box coef-gauge-box">
+        <div class="cockpit-box-header">
+          <span class="cockpit-box-title">${uiIcon('wave')} Coefficients</span>
+          <span class="cockpit-pill-val">${cf.label}</span>
+        </div>
+        <div class="coef-track-wrap" title="${cf.detail}">
+          <div class="coef-track">
+            <div class="coef-fill ${cf.isAll ? 'is-all' : ''}" style="left: ${leftPct}%; width: ${widthPct}%;"></div>
+            <span class="coef-tick" style="left: 25%;" title="Mortes-eaux : 45"></span>
+            <span class="coef-tick" style="left: 50%;" title="Moyenne : 70"></span>
+            <span class="coef-tick" style="left: 75%;" title="Vives-eaux : 95"></span>
+          </div>
+          <div class="coef-labels">
+            <span>20 (ME)</span>
+            <span>70 (Moy)</span>
+            <span>120 (VE)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cockpit-box wind-weather-box">
+        <div class="cockpit-box-header">
+          <span class="cockpit-box-title">${uiIcon('compass')} Météo & Vents</span>
+          <span class="cockpit-pill-val">${wind.badge}</span>
+        </div>
+        <div class="wind-desc-text">${windText}</div>
+      </div>
+    </div>
+  `;
+}
+
+function renderCanalTriggers(ecluseText, lightText) {
+  return `
+    <div class="canal-triggers-cockpit">
+      <div class="trigger-card trigger-ecluse">
+        <div class="trigger-header">${uiIcon('zap')} Éclusées d'Ouistreham</div>
+        <div class="trigger-text">${ecluseText}</div>
+      </div>
+      <div class="trigger-card trigger-light">
+        <div class="trigger-header">${uiIcon('moon')} Luminosité & Chasse</div>
+        <div class="trigger-text">${lightText}</div>
+      </div>
+    </div>
+  `;
+}
+
+function parseLengths(avgStr, maxStr) {
+  const avgMatch = (avgStr || '').match(/(\d+)\s*(?:-|à)\s*(\d+)/);
+  const maxMatch = (maxStr || '').match(/(\d+)/);
+  const maxVal = maxMatch ? parseInt(maxMatch[1], 10) : 100;
+  let minAvg = 0, maxAvg = 0;
+  if (avgMatch) {
+    minAvg = parseInt(avgMatch[1], 10);
+    maxAvg = parseInt(avgMatch[2], 10);
+  } else {
+    const single = (avgStr || '').match(/(\d+)/);
+    if (single) {
+      minAvg = parseInt(single[1], 10);
+      maxAvg = minAvg;
+    }
+  }
+  const minPercent = Math.max(0, Math.min(100, Math.round((minAvg / maxVal) * 100)));
+  const maxPercent = Math.max(0, Math.min(100, Math.round((maxAvg / maxVal) * 100)));
+  return { minAvg, maxAvg, maxVal, minPercent, maxPercent };
+}
+
+function renderMorphologyGauge(biology) {
+  const len = parseLengths(biology.averageLengthCm, biology.maxLengthCm);
+  const barWidth = Math.max(10, len.maxPercent - len.minPercent);
+
+  return `
+    <div class="bio-card bio-morpho-card">
+      <div class="bio-title">Morphologie & Gabarit</div>
+      <div class="size-gauge-track-wrap" title="Longueur moyenne : ${biology.averageLengthCm} | Maximum : ${biology.maxLengthCm}">
+        <div class="size-gauge-track">
+          <div class="size-gauge-fill" style="left: ${len.minPercent}%; width: ${barWidth}%;"></div>
+          <div class="size-gauge-pin" style="left: 100%;" title="Taille maximale record : ${biology.maxLengthCm}"></div>
+        </div>
+        <div class="size-gauge-labels">
+          <span class="size-val-avg"><span class="size-dot"></span>${biology.averageLengthCm}</span>
+          <span class="size-val-max">Max: ${biology.maxLengthCm}</span>
+        </div>
+      </div>
+      <div class="bio-weight-row">
+        <span class="weight-label">Poids :</span>
+        <span class="weight-val">${biology.averageWeightKg} <span class="weight-max">(max ${biology.maxWeightKg})</span></span>
+      </div>
+    </div>
+  `;
+}
+
+function renderGearBlock(fish, isTabbed = false, activeTab = 'canal') {
+  const hasCanal = fish.canal.present && fish.gear.canalCombo && fish.gear.canalCombo.rod && !fish.gear.canalCombo.rod.includes('Non applicable');
+  const hasBoat = fish.bateau.present && fish.gear.boatCombo && fish.gear.boatCombo.rod && !fish.gear.boatCombo.rod.includes('Non applicable');
+
+  if (!hasCanal && !hasBoat) return '';
+
+  const canalHidden = isTabbed && activeTab !== 'canal' ? 'tab-hidden' : '';
+  const bateauHidden = isTabbed && activeTab !== 'bateau' ? 'tab-hidden' : '';
+
+  return `
+    <div class="combos-compact-card">
+      ${hasCanal ? `
+        <div class="combo-line combo-line-canal ${canalHidden}">
+          <span class="combo-tag tag-canal">${uiIcon('anchor')} Canal</span>
+          <span class="combo-specs"><strong>Canne :</strong> ${fish.gear.canalCombo.rod} • <strong>Ligne :</strong> ${fish.gear.canalCombo.line} • <strong>BDL :</strong> ${fish.gear.canalCombo.leader}</span>
+        </div>
+      ` : ''}
+      ${hasBoat ? `
+        <div class="combo-line combo-line-bateau ${bateauHidden}">
+          <span class="combo-tag tag-mer">${uiIcon('boat')} Bateau</span>
+          <span class="combo-specs"><strong>Canne :</strong> ${fish.gear.boatCombo.rod} • <strong>Ligne :</strong> ${fish.gear.boatCombo.line} • <strong>BDL :</strong> ${fish.gear.boatCombo.leader}</span>
+        </div>
+      ` : ''}
+    </div>
+  `;
+}
+
+function getHarvestGauge(bagLimit, speciesId) {
+  const text = (bagLimit || '').toLowerCase();
+
+  if (text.includes('no-kill')) {
+    return { pct: 8, color: 'red', shortLabel: 'No-Kill', desc: 'No-Kill strict' };
+  }
+  if (speciesId === 'bar-commun' || text.includes('2 bars')) {
+    return { pct: 15, color: 'red', shortLabel: '2 / jour', desc: 'Quota strict 2/j' };
+  }
+  if (speciesId === 'lieu-jaune' || text.includes('2 lieux')) {
+    return { pct: 15, color: 'red', shortLabel: '2 / jour', desc: 'Quota strict 2/j' };
+  }
+  if (text.includes('maximum 2 brochets') || text.includes('2 brochets')) {
+    return { pct: 18, color: 'red', shortLabel: 'Max 2 / jour', desc: 'Quota max 2/j' };
+  }
+  if (text.includes('1 à 2 par jour') || text.includes('1 à 2')) {
+    return { pct: 18, color: 'red', shortLabel: '1-2 / jour', desc: 'Quota 1-2/j' };
+  }
+  if (text.includes('strictement réglementé') || speciesId === 'anguille-europe') {
+    return { pct: 12, color: 'red', shortLabel: 'Strict (Carnet)', desc: 'Carnet obligatoire' };
+  }
+  if (text.includes('très limité') || text.includes('patrimonial')) {
+    return { pct: 22, color: 'red', shortLabel: 'Très limité', desc: 'Prélèvement très limité' };
+  }
+  if (text.includes('3 carnassiers')) {
+    return { pct: 45, color: 'amber', shortLabel: '3 / jour', desc: 'Quota 3 carnassiers/j' };
+  }
+  if (text.includes('très modéré')) {
+    return { pct: 45, color: 'amber', shortLabel: 'Modéré', desc: 'Prélèvement modéré' };
+  }
+  if (text.includes('non soumis') || text.includes('libre')) {
+    return { pct: 92, color: 'green', shortLabel: 'Libre', desc: 'Sans quota statutaire' };
+  }
+  // Default for "Prélèvement raisonné"
+  return { pct: 80, color: 'green', shortLabel: 'Raisonné', desc: 'Prélèvement raisonné' };
+}
+
+function renderHarvestPill(bagLimit, speciesId) {
+  const h = getHarvestGauge(bagLimit, speciesId);
+
+  return `
+    <div class="reg-pill reg-pill-harvest" title="Réglementation prélèvement : ${bagLimit}">
+      <span class="reg-pill-label">Prélèvement</span>
+      <span class="reg-pill-val val-harvest val-${h.color}">${h.shortLabel}</span>
+      <div class="harvest-gauge-wrap">
+        <div class="harvest-gauge-track">
+          <div class="harvest-gauge-cursor" style="left: ${h.pct}%;"></div>
+        </div>
+        <div class="harvest-gauge-ticks">
+          <span class="tick-label tick-strict">Strict</span>
+          <span class="tick-label tick-libre">Libre</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// --------------------------------------------------------------------------
 // TEMPLATE FACE A (RECTO) : IDENTITÉ, BIOLOGIE & RÈGLES
 // --------------------------------------------------------------------------
 
@@ -302,30 +664,28 @@ function renderCardFront(fish) {
     <div class="card-header">
       <div class="header-badges">
         <span class="badge-cat">${fish.identity.category}</span>
-        ${fish.canal.present ? '<span class="badge-biotope badge-canal">⚓ Canal de Caen</span>' : ''}
-        ${fish.bateau.present ? '<span class="badge-biotope badge-mer">🚤 Côte de Nacre</span>' : ''}
+        ${fish.canal.present ? `<span class="badge-biotope badge-canal">${uiIcon('anchor')} Canal de Caen</span>` : ''}
+        ${fish.bateau.present ? `<span class="badge-biotope badge-mer">${uiIcon('boat')} Côte de Nacre</span>` : ''}
       </div>
       <h2 class="species-title">${fish.identity.name}</h2>
       <div class="species-meta">
         <span class="species-scientific">${fish.identity.scientificName}</span>
         <span>•</span>
         <span>${fish.identity.family}</span>
-      </div>
-      ${fish.identity.localNames && fish.identity.localNames.length > 0 ? `
-        <div class="species-meta" style="font-size: 0.68rem; margin-top: 0.15rem;">
-          <span style="color: var(--slate-500);">Noms locaux :</span>
+        ${fish.identity.localNames && fish.identity.localNames.length > 0 ? `
+          <span class="meta-pipe">|</span>
           <span class="species-local-names">${fish.identity.localNames.join(', ')}</span>
-        </div>
-      ` : ''}
+        ` : ''}
+      </div>
     </div>
 
     <div class="recognition-box">
-      <div class="recognition-title">🔍 Repères d'identification clés</div>
-      <div>${fish.identity.identificationNotes}</div>
+      <div class="recognition-title">${uiIcon('search')} Repères d'identification clés</div>
+      <div class="recognition-text">${fish.identity.identificationNotes}</div>
     </div>
 
     <div class="regs-block">
-      <div class="block-title">⚖️ Réglementation & Mailles (${fish.regulations.zone})</div>
+      <div class="block-title">${uiIcon('scale')} Réglementation & Mailles (${fish.regulations.zone})</div>
       <div class="regs-grid">
         <div class="reg-pill">
           <span class="reg-pill-label">Maille légale</span>
@@ -335,10 +695,7 @@ function renderCardFront(fish) {
           <span class="reg-pill-label">Taille éthique</span>
           <span class="reg-pill-val">${recSize}</span>
         </div>
-        <div class="reg-pill">
-          <span class="reg-pill-label">Quota jour</span>
-          <span class="reg-pill-val" style="font-size: 0.75rem;">${fish.regulations.bagLimit.replace(' par jour et par pêcheur', '/jour')}</span>
-        </div>
+        ${renderHarvestPill(fish.regulations.bagLimit, fish.id)}
       </div>
       <ul class="regs-rules-list">
         <li><strong>Fermeture :</strong> ${fish.regulations.closedSeason}</li>
@@ -347,26 +704,8 @@ function renderCardFront(fish) {
     </div>
 
     <div class="biology-section">
-      <div class="bio-card">
-        <div class="bio-title">Morphologie</div>
-        <div class="bio-metric-row">
-          <span>Longueur :</span>
-          <span class="bio-metric-val">${fish.biology.averageLengthCm}</span>
-        </div>
-        <div class="bio-metric-row">
-          <span>Maxi :</span>
-          <span class="bio-metric-val">${fish.biology.maxLengthCm}</span>
-        </div>
-        <div class="bio-metric-row">
-          <span>Poids moy. :</span>
-          <span class="bio-metric-val">${fish.biology.averageWeightKg}</span>
-        </div>
-        <div class="bio-metric-row">
-          <span>Poids max :</span>
-          <span class="bio-metric-val">${fish.biology.maxWeightKg}</span>
-        </div>
-      </div>
-      <div class="bio-card">
+      ${renderMorphologyGauge(fish.biology)}
+      <div class="bio-card bio-diet-card">
         <div class="bio-title">Proies cibles & Régime</div>
         <div class="diet-tags">
           ${fish.biology.diet.map(d => `<span class="diet-tag">${d}</span>`).join('')}
@@ -374,24 +713,33 @@ function renderCardFront(fish) {
       </div>
     </div>
 
+    <div class="secret-local-box">
+      <div class="secret-title">${uiIcon('sparkle')} Le Secret du Pêcheur Normand</div>
+      <div class="secret-text">${fish.localSecret}</div>
+    </div>
+
     <div class="calendar-block">
-      <div class="block-title" style="margin-bottom: 0.25rem;">📅 Calendrier d'Activité Annuel</div>
-      <div class="cal-row">
-        <span class="cal-label">⚓ Canal</span>
-        <div class="cal-months">
-          ${fish.calendar.canal.map((score, m) => `
-            <div class="month-cell heat-${score}" title="${MONTHS[m]} : score ${score}/3">${MONTHS[m]}</div>
-          `).join('')}
+      <div class="block-title">${uiIcon('calendar')} Calendrier d'Activité Annuel</div>
+      ${fish.canal.present ? `
+        <div class="cal-row">
+          <span class="cal-label">${uiIcon('anchor')} Canal</span>
+          <div class="cal-months">
+            ${fish.calendar.canal.map((score, m) => `
+              <div class="month-cell heat-${score}" title="${MONTHS[m]} : score ${score}/3">${MONTHS[m]}</div>
+            `).join('')}
+          </div>
         </div>
-      </div>
-      <div class="cal-row">
-        <span class="cal-label">🚤 Bateau</span>
-        <div class="cal-months">
-          ${fish.calendar.bateau.map((score, m) => `
-            <div class="month-cell heat-${score}" title="${MONTHS[m]} : score ${score}/3">${MONTHS[m]}</div>
-          `).join('')}
+      ` : ''}
+      ${fish.bateau.present ? `
+        <div class="cal-row">
+          <span class="cal-label">${uiIcon('boat')} Bateau</span>
+          <div class="cal-months">
+            ${fish.calendar.bateau.map((score, m) => `
+              <div class="month-cell heat-${score}" title="${MONTHS[m]} : score ${score}/3">${MONTHS[m]}</div>
+            `).join('')}
+          </div>
         </div>
-      </div>
+      ` : ''}
     </div>
   `;
 }
@@ -400,84 +748,77 @@ function renderCardFront(fish) {
 // TEMPLATE FACE B (VERSO) : TACTIQUES, POSTES & MATÉRIEL
 // --------------------------------------------------------------------------
 
-function renderCardBack(fish) {
+function renderCardBack(fish, isFlipCard = false) {
+  const isDual = fish.canal.present && fish.bateau.present;
+  const defaultTab = currentFilterBiotope === 'bateau' ? 'bateau' : 'canal';
+  const canalHidden = isFlipCard && isDual && defaultTab !== 'canal' ? 'tab-hidden' : '';
+  const bateauHidden = isFlipCard && isDual && defaultTab !== 'bateau' ? 'tab-hidden' : '';
+
   return `
     <div class="verso-header">
       <div>
-        <span style="font-size: 0.65rem; text-transform: uppercase; color: var(--slate-500); font-weight: 700;">Tactique Terrain Normandie</span>
+        <span class="verso-eyebrow">Tactique Terrain Normandie</span>
         <h3 class="verso-title">${fish.identity.name}</h3>
       </div>
       <span class="verso-badge">Guide Pratique</span>
     </div>
 
+    ${isFlipCard && isDual ? `
+      <div class="biotope-card-switcher" role="tablist" aria-label="Choisir le biotope terrain">
+        <button type="button" class="biotope-switch-btn ${defaultTab === 'canal' ? 'active' : ''}" data-tab="canal" onclick="switchCardBiotope(event, '${fish.id}', 'canal')">
+          ${uiIcon('anchor')} Volet Canal de Caen
+        </button>
+        <button type="button" class="biotope-switch-btn ${defaultTab === 'bateau' ? 'active' : ''}" data-tab="bateau" onclick="switchCardBiotope(event, '${fish.id}', 'bateau')">
+          ${uiIcon('boat')} Volet Côte de Nacre
+        </button>
+      </div>
+    ` : ''}
+
     ${fish.canal.present ? `
-      <div class="biotope-section">
+      <div class="biotope-section section-canal ${canalHidden}">
         <div class="section-header-row">
-          <div class="block-title" style="margin: 0; color: #0369a1;">⚓ Volet Canal de Caen à la mer</div>
-          <span style="font-size: 0.65rem; font-weight: 700; color: var(--slate-600);">${fish.canal.presenceSeason}</span>
+          <div class="block-title section-canal-title">${uiIcon('anchor')} Volet Canal de Caen à la mer</div>
+          <span class="presence-badge">${fish.canal.presenceSeason}</span>
         </div>
-        <div class="spots-compact-list">
-          <div class="spot-item"><strong>Enrochements :</strong> ${fish.canal.keySpots.enrochements}</div>
-          <div class="spot-item"><strong>Palplanches :</strong> ${fish.canal.keySpots.palplanches}</div>
-          <div class="spot-item"><strong>Piles & Ouvrages :</strong> ${fish.canal.keySpots.pilesDePont}</div>
+        <div class="spots-chip-grid">
+          <div class="spot-chip"><span class="spot-tag">Enrochements</span> ${fish.canal.keySpots.enrochements}</div>
+          <div class="spot-chip"><span class="spot-tag">Palplanches</span> ${fish.canal.keySpots.palplanches}</div>
+          <div class="spot-chip"><span class="spot-tag">Piles/Ponts</span> ${fish.canal.keySpots.pilesDePont}</div>
         </div>
-        <div style="font-size: 0.68rem; color: var(--slate-700); margin-bottom: 0.3rem;">
-          <strong>⚡ Déclencheurs :</strong> ${fish.canal.triggers.ecluseesOuistreham} ${fish.canal.triggers.luminositeEtNuit}
-        </div>
+        ${renderCanalTriggers(fish.canal.triggers.ecluseesOuistreham, fish.canal.triggers.luminositeEtNuit)}
         <ul class="tactics-bullets">
           ${fish.canal.tactics.map(t => `<li>${t}</li>`).join('')}
         </ul>
         <div class="lures-row">
-          <strong>Top Leurres/Appâts Canal :</strong> ${fish.canal.recommendedLuresAndBaits.join(' • ')}
+          <span class="lures-title">Top Leurres/Appâts Canal :</span>
+          <span class="lures-list">${fish.canal.recommendedLuresAndBaits.join(' • ')}</span>
         </div>
       </div>
     ` : ''}
 
     ${fish.bateau.present ? `
-      <div class="biotope-section">
+      <div class="biotope-section section-bateau ${bateauHidden}">
         <div class="section-header-row">
-          <div class="block-title" style="margin: 0; color: #0f766e;">🚤 Volet Côte de Nacre en Bateau</div>
-          <span style="font-size: 0.65rem; font-weight: 700; color: var(--slate-600);">${fish.bateau.presenceSeason}</span>
+          <div class="block-title section-bateau-title">${uiIcon('boat')} Volet Côte de Nacre en Bateau</div>
+          <span class="presence-badge">${fish.bateau.presenceSeason}</span>
         </div>
-        <div class="spots-compact-list">
-          <div class="spot-item"><strong>Roches Calvados :</strong> ${fish.bateau.habitats.rochesDuCalvados}</div>
-          <div class="spot-item"><strong>Épaves 1944 :</strong> ${fish.bateau.habitats.epavesDDay}</div>
-          <div class="spot-item"><strong>Bancs de sable :</strong> ${fish.bateau.habitats.bancsDeSableEtRidens}</div>
+        <div class="spots-chip-grid">
+          <div class="spot-chip"><span class="spot-tag">Roches Calvados</span> ${fish.bateau.habitats.rochesDuCalvados}</div>
+          <div class="spot-chip"><span class="spot-tag">Épaves 1944</span> ${fish.bateau.habitats.epavesDDay}</div>
+          <div class="spot-chip"><span class="spot-tag">Bancs/Ridens</span> ${fish.bateau.habitats.bancsDeSableEtRidens}</div>
         </div>
-        <div style="font-size: 0.72rem; color: var(--slate-700); margin-bottom: 0.35rem;">
-          <strong>🌊 Marée & Vents :</strong> ${fish.bateau.tideAndCurrent.bestCoefficients} | ${fish.bateau.weatherImpact.favorableWinds}
-        </div>
-        <div class="twelfths-banner">
-          <div class="twelfths-title">⏱️ Règle des douzièmes (Créneau optimal)</div>
-          <div class="twelfths-text">${fish.bateau.tideAndCurrent.ruleOfTwelfths}</div>
-        </div>
+        ${renderTideAndWeather(fish.bateau.tideAndCurrent.bestCoefficients, fish.bateau.weatherImpact.favorableWinds)}
+        ${renderTwelfthsGauge(fish.bateau.tideAndCurrent.ruleOfTwelfths)}
         <ul class="tactics-bullets">
           ${fish.bateau.tactics.map(t => `<li>${t}</li>`).join('')}
         </ul>
         <div class="lures-row">
-          <strong>Top Leurres/Appâts Mer :</strong> ${fish.bateau.recommendedLuresAndBaits.join(' • ')}
+          <span class="lures-title">Top Leurres/Appâts Mer :</span>
+          <span class="lures-list">${fish.bateau.recommendedLuresAndBaits.join(' • ')}</span>
         </div>
       </div>
     ` : ''}
 
-    <div class="gear-grid">
-      <div class="gear-box">
-        <div class="gear-box-title">🎣 Combo Canal</div>
-        <div class="gear-row"><span class="gear-row-label">Canne:</span><span class="gear-row-val">${fish.gear.canalCombo.rod}</span></div>
-        <div class="gear-row"><span class="gear-row-label">Ligne:</span><span class="gear-row-val">${fish.gear.canalCombo.line}</span></div>
-        <div class="gear-row"><span class="gear-row-label">B.D.L:</span><span class="gear-row-val">${fish.gear.canalCombo.leader}</span></div>
-      </div>
-      <div class="gear-box">
-        <div class="gear-box-title">⚓ Combo Bateau</div>
-        <div class="gear-row"><span class="gear-row-label">Canne:</span><span class="gear-row-val">${fish.gear.boatCombo.rod}</span></div>
-        <div class="gear-row"><span class="gear-row-label">Ligne:</span><span class="gear-row-val">${fish.gear.boatCombo.line}</span></div>
-        <div class="gear-row"><span class="gear-row-label">B.D.L:</span><span class="gear-row-val">${fish.gear.boatCombo.leader}</span></div>
-      </div>
-    </div>
-
-    <div class="secret-local-box">
-      <div class="secret-title">💡 Le Secret du Pêcheur Normand</div>
-      <div>${fish.localSecret}</div>
-    </div>
+    ${renderGearBlock(fish, isFlipCard && isDual, defaultTab)}
   `;
 }

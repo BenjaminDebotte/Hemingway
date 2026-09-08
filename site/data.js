@@ -162,7 +162,7 @@ window.SPECIES_DATA = [
       "zone": "Manche Est - CIEM 7.d (Calvados)",
       "legalSizeCm": 30,
       "recommendedSizeCm": 35,
-      "bagLimit": "Prélèvement raisonné (non soumis au quota européen strict du bar commun)",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Aucune fermeture biologique légale spécifique en Manche",
       "specialRules": [
         "Attention : ne pas confondre avec un juvénile de bar commun (qui perd ses taches vers 20 cm)",
@@ -444,7 +444,7 @@ window.SPECIES_DATA = [
       "zone": "Manche Est - CIEM 7.d (Calvados)",
       "legalSizeCm": 20,
       "recommendedSizeCm": 25,
-      "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
         "Ablation obligatoire du lobe inférieur de la nageoire caudale",
@@ -589,7 +589,7 @@ window.SPECIES_DATA = [
       "bagLimit": "Non soumis à quota journalier statutaire",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
-        "Prélèvement raisonné pour consommation personnelle",
+        "Prélèvement raisonné",
         "Pêche de surface très sportive à la ligne fine"
       ]
     },
@@ -726,7 +726,7 @@ window.SPECIES_DATA = [
       "zone": "Manche Est - CIEM 7.d (Calvados)",
       "legalSizeCm": 27,
       "recommendedSizeCm": 30,
-      "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
         "Maille légale de 27 cm strictement applicable en Manche Est",
@@ -871,7 +871,7 @@ window.SPECIES_DATA = [
       "bagLimit": "Non soumis à quota journalier strict",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
-        "Prélèvement raisonné pour consommation personnelle immédiate (chair fragile)",
+        "Prélèvement raisonné",
         "Excellente esche fraîche pour la traque du bar ou du congre sur épave"
       ]
     },
@@ -1009,7 +1009,7 @@ window.SPECIES_DATA = [
       "zone": "Manche Est - CIEM 7.d (Calvados)",
       "legalSizeCm": 23,
       "recommendedSizeCm": 35,
-      "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
         "Ablation obligatoire du bas du lobe caudal dès la capture conservée",
@@ -1152,7 +1152,7 @@ window.SPECIES_DATA = [
       "zone": "Manche Est - CIEM 7.d (Calvados)",
       "legalSizeCm": 23,
       "recommendedSizeCm": 28,
-      "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
         "Maille légale de 23 cm strictement applicable en Manche Est",
@@ -1292,7 +1292,7 @@ window.SPECIES_DATA = [
       "zone": "Manche Est - CIEM 7.d (Calvados)",
       "legalSizeCm": null,
       "recommendedSizeCm": 25,
-      "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
         "Attention : ne pas confondre avec la plie (qui a une maille stricte de 27 cm et des taches orange)",
@@ -1434,7 +1434,7 @@ window.SPECIES_DATA = [
       "zone": "Manche Est - CIEM 7.d (Calvados)",
       "legalSizeCm": 27,
       "recommendedSizeCm": 30,
-      "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
         "Maille minimale légale obligatoire de 27 cm en Manche Est",
@@ -1575,7 +1575,7 @@ window.SPECIES_DATA = [
       "zone": "Manche Est - CIEM 7.d (Calvados)",
       "legalSizeCm": 24,
       "recommendedSizeCm": 28,
-      "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
         "Ablation obligatoire du bas du lobe de la nageoire caudale dès la capture",
@@ -1715,7 +1715,7 @@ window.SPECIES_DATA = [
       "zone": "Manche Est - CIEM 7.d (Calvados)",
       "legalSizeCm": 30,
       "recommendedSizeCm": 40,
-      "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
         "Maille minimale légale de 30 cm strictement obligatoire en Manche",
@@ -1993,7 +1993,7 @@ window.SPECIES_DATA = [
       "zone": "Manche Est - CIEM 7.d (Calvados)",
       "legalSizeCm": 60,
       "recommendedSizeCm": 80,
-      "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
         "Maille légale obligatoire de 60 cm (Annexe I Arrêté ministériel du 26/10/2012)",
@@ -2135,7 +2135,7 @@ window.SPECIES_DATA = [
       "zone": "Manche Est - CIEM 7.d (Calvados)",
       "legalSizeCm": 30,
       "recommendedSizeCm": 35,
-      "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
         "Maille légale de 30 cm en Manche et Atlantique",
@@ -2277,7 +2277,7 @@ window.SPECIES_DATA = [
       "zone": "Manche Est - CIEM 7.d (Calvados)",
       "legalSizeCm": 20,
       "recommendedSizeCm": 28,
-      "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
         "Maille légale minimale de 20 cm en Manche et Atlantique",
@@ -2418,7 +2418,7 @@ window.SPECIES_DATA = [
       "zone": "Canal de Caen à la mer (Bassin St-Pierre jusqu'à Ouistreham)",
       "legalSizeCm": 20,
       "recommendedSizeCm": 28,
-      "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
         "Bassin Saint-Pierre (amont Pont de la Fonderie) : Carte AAPPMA requise",
@@ -2979,7 +2979,7 @@ window.SPECIES_DATA = [
       "zone": "Manche Est - CIEM 7.d (Calvados)",
       "legalSizeCm": null,
       "recommendedSizeCm": 15,
-      "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
         "Pêche récréative libre à la turlutte (eging) du bord et en bateau",
@@ -3120,7 +3120,7 @@ window.SPECIES_DATA = [
       "zone": "Manche Est - CIEM 7.d (Calvados)",
       "legalSizeCm": null,
       "recommendedSizeCm": 15,
-      "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
         "Pêche récréative nocturne très prisée sous les éclairages artificiels",
@@ -4246,7 +4246,7 @@ window.SPECIES_DATA = [
       "zone": "Canal de Caen à la mer (Bassin St-Pierre & berges arborées)",
       "legalSizeCm": null,
       "recommendedSizeCm": 25,
-      "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+      "bagLimit": "Prélèvement raisonné",
       "closedSeason": "Pêche autorisée toute l'année",
       "specialRules": [
         "Bassin Saint-Pierre : Carte fédérale de pêche obligatoire",

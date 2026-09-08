@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fiches Techniques Pêche — Littoral Normand</title>
   <meta name="description" content="Guide technique et fiches halieutiques haute-densité pour la pêche sur le Canal de Caen à la mer et la Côte de Nacre en bateau.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,21 +16,54 @@
   <header class="app-header">
     <div class="header-top">
       <div class="brand">
-        <div class="brand-icon">🐟</div>
+        <div class="brand-icon" aria-hidden="true">
+          <svg class="ui-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+            <path d="M19 12c-4 4-10 4-15 0 5-4 11-4 15 0z"/>
+            <path d="M4 12L2 9.5v5L4 12z"/>
+            <circle cx="15" cy="11" r="1" fill="currentColor"/>
+          </svg>
+        </div>
         <div>
+          <div class="brand-eyebrow">Normandie Maritime • DPM & Mer</div>
           <h1 class="brand-title">Fiches Techniques Pêche</h1>
-          <p class="brand-subtitle">Littoral Normand • Canal de Caen & Côte de Nacre</p>
+          <p class="brand-subtitle">Canal de Caen à la mer & Côte de Nacre en bateau</p>
         </div>
       </div>
 
       <div class="header-actions">
-        <div class="mode-segmented">
-          <button class="mode-btn active" data-mode="duo">📖 Vue Dépliée (Recto + Verso)</button>
-          <button class="mode-btn" data-mode="flip">🔄 Fiches Réversibles</button>
-          <button class="mode-btn" data-mode="print">📄 Planches A4 Impression</button>
+        <div class="mode-segmented" role="tablist" aria-label="Modes d'affichage">
+          <button class="mode-btn active" data-mode="duo" role="tab" aria-selected="true">
+            <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+              <path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15z"/>
+            </svg>
+            <span>Vue Dépliée</span>
+          </button>
+          <button class="mode-btn" data-mode="flip" role="tab" aria-selected="false">
+            <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M21 12a9 9 0 1 1-2.6-6.4L21 8"/>
+              <polyline points="21 3 21 8 16 8"/>
+            </svg>
+            <span>Fiches Réversibles</span>
+          </button>
+          <button class="mode-btn" data-mode="print" role="tab" aria-selected="false">
+            <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <line x1="12" y1="3" x2="12" y2="21"/>
+            </svg>
+            <span>Planches A4</span>
+          </button>
         </div>
-        <button id="btn-print" class="btn btn-gold">
-          <span>🖨️ Imprimer les fiches</span>
+
+        <button id="btn-print" class="btn btn-gold btn-island" aria-label="Imprimer les fiches techniques au format A4">
+          <span class="btn-text">Imprimer les fiches</span>
+          <span class="btn-icon-bubble" aria-hidden="true">
+            <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <polyline points="6 9 6 2 18 2 18 9"/>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+              <rect x="6" y="14" width="12" height="8"/>
+            </svg>
+          </span>
         </button>
       </div>
     </div>
@@ -35,17 +71,24 @@
     <div class="controls-bar">
       <div class="search-and-toggles">
         <div class="search-input-wrap">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="search-input" class="search-input" placeholder="Rechercher un poisson, un leurre, un spot, une technique...">
+          <span class="search-icon" aria-hidden="true">
+            <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <circle cx="11" cy="11" r="7"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </span>
+          <input type="text" id="search-input" class="search-input" placeholder="Rechercher un poisson, un leurre, un spot, une technique..." aria-label="Recherche">
         </div>
 
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-          <label for="biotope-select" style="font-size: 0.8rem; color: var(--slate-300); font-weight: 600;">Milieu :</label>
-          <select id="biotope-select" style="background: rgb(255 255 255 / 0.15); color: #fff; border: 1px solid rgb(255 255 255 / 0.2); border-radius: 6px; padding: 0.5rem 0.75rem; font-size: 0.85rem;">
-            <option value="all" style="color: #000;">Tous les biotopes</option>
-            <option value="canal" style="color: #000;">⚓ Canal de Caen uniquement</option>
-            <option value="bateau" style="color: #000;">🚤 Côte de Nacre en bateau</option>
-          </select>
+        <div class="biotope-filter-wrap">
+          <label for="biotope-select" class="biotope-label">Milieu :</label>
+          <div class="biotope-select-shell">
+            <select id="biotope-select" class="biotope-select">
+              <option value="all">Tous les biotopes</option>
+              <option value="canal">Canal de Caen uniquement</option>
+              <option value="bateau">Côte de Nacre en bateau</option>
+            </select>
+          </div>
         </div>
       </div>
 
@@ -58,8 +101,8 @@
   <!-- CONTENU PRINCIPAL : VUE INTERACTIVE -->
   <main class="main-container">
     <div class="view-stats">
-      <span id="view-stats">Chargement des données...</span>
-      <span id="view-hint" style="font-size: 0.75rem; color: var(--slate-400);">Mode Déplié : Face A (Identité) et Face B (Tactique) affichées côte-à-côte</span>
+      <span id="view-stats" class="view-stats-count">Chargement des données...</span>
+      <span id="view-hint" class="view-hint">Mode Déplié : Face A (Identité) et Face B (Tactique) affichées côte-à-côte</span>
     </div>
 
     <div class="cards-grid" id="cards-grid">
