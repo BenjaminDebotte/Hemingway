@@ -8,8 +8,8 @@ Ce document consigne le contexte halieutique, les contraintes architecturales, l
 
 * **Objectif :** Générer des fiches techniques haute-densité, design et modernes pour la pêche de loisir sur le littoral normand.
 * **Double délivrable :**
-  1. **Dashboard web interactif :** Consultation mobile et desktop avec filtres (zone, catégorie, saison).
-  2. **Format d'impression physique :** Exactement **2 fiches techniques par feuille A4 horizontale (Paysage - 297 × 210 mm)**, soit deux cartes au format **A5 portrait (~148 × 210 mm)**.
+  1. **Dashboard web interactif :** Consultation mobile et desktop avec 3 modes d'affichage (Vue Dépliée côte-à-côte, Fiches Réversibles 3D, Planches A4) et filtres (zone, catégorie, recherche textuelle).
+  2. **Format d'impression physique en Recto/Verso duplex :** Exactement **2 fiches techniques par feuille A4 Paysage (297 × 210 mm)**, chaque espèce bénéficiant d'une **Face A (Recto)** et d'une **Face B (Verso)** au format **A5 portrait (~148 × 210 mm)** prêt pour massicotage central et plastification étanche.
 * **Périmètre géographique strict :**
   * **Le Canal de Caen à la mer :** De Caen (Bassin Saint-Pierre / Pont de la Fonderie) jusqu'aux écluses d'Ouistreham (14 km de voie maritime DPM et bassin d'eau douce).
   * **La Côte de Nacre en bateau :** De Ouistreham à Courseulles-sur-Mer, incluant le plateau des Roches du Calvados, les bancs de sable (Lion, Bernières) et les épaves du Débarquement 1944 (Juno, Sword, Gold).
@@ -57,20 +57,21 @@ Enum strict de 9 valeurs autorisées dans le schéma :
 
 ---
 
-## 4. Contraintes Physiques & Géométrie d'Impression (A5 Portrait)
+## 4. Contraintes Physiques & Géométrie d'Impression Duplex (Recto/Verso A5)
 
-La contrainte d'impression (**2 fiches par A4 Paysage**) impose une discipline rédactionnelle absolue :
+Le système d'impression repose sur une architecture **recto/verso par paire** qui double la surface utile par espèce :
 * **Format brut d'une carte :** 148,5 × 210 mm (A5 portrait).
-* **Surface imprimable nette (marges 6 mm déduites) :** ~136,5 × 198 mm.
-* **Budget texte maximal :** **2 300 à 2 600 caractères bruts** (environ 4 000 à 4 600 caractères pour le fichier JSON complet incluant les clés).
-* **Règles rédactionnelles :**
-  * Pas de paragraphes continus de plus de 2 lignes.
-  * Privilégier des puces concises (max 70-90 caractères par puce).
-  * Chiffrer systématiquement les métriques (grammages, tailles de leurres, diamètres de ligne en centièmes, coefficients de marée).
+* **Surface imprimable nette par face (marges 5 mm déduites) :** ~138 × 200 mm.
+* **Répartition logique par face :**
+  * **Face A (Recto - Identité & Réglementation) :** En-tête (nom, scientifique, famille, noms locaux normands), encadré des repères d'identification clés, bloc réglementation Manche Est (maille légale, taille éthique, quotas, dates de fermeture, marquage caudal), morphologie & régime, et calendrier d'activité thermique 12 mois (Canal vs Bateau).
+  * **Face B (Verso - Terrain, Tactique & Matériel) :** Volet Canal de Caen (postes, déclencheurs éclusées/cargos, techniques, top leurres/appâts), volet Côte de Nacre en bateau (Roches Calvados, épaves 1944, bancs de sable, coefficients, marée, météo), combos matériel (canne/moulinet/ligne) et encadré d'or "Le Secret du Pêcheur Normand".
+* **Règle d'imposition d'impression (Retournement sur bords courts) :**
+  * *Feuille 1 (Rectos) :* `[ Poisson A - Face A ]` | `[ Poisson B - Face A ]`
+  * *Feuille 2 (Versos) :* `[ Poisson B - Face B ]` | `[ Poisson A - Face B ]`
+  * Grâce à l'inversion horizontale sur la feuille verso, la découpe centrale à 148,5 mm aligne automatiquement la Face B derrière la Face A pour les deux poissons.
 * **Traitement de l'asymétrie écologique :**
-  * Pour les espèces d'eau douce (`bateau: false`), la section bateau est remplie avec les sentinelles neutres (`"Non applicable"`).
-  * Pour les espèces marines exclusives (`canal: false`), la section canal est remplie avec `"Non applicable"`.
-  * *Règle pour le moteur de rendu HTML :* Lorsque `present === false`, le conteneur correspondant doit être masqué dynamiquement pour redistribuer l'espace vertical au biotope actif.
+  * Pour les espèces d'eau douce (`bateau: false`), la section bateau est masquée sur l'interface pour aérer le volet canal.
+  * Pour les espèces marines exclusives (`canal: false`), la section canal est masquée.
 
 ---
 
@@ -130,21 +131,37 @@ Le script vérifie :
 
 ---
 
-## 7. Directives pour les Phases Suivantes (Génération HTML & Print)
+## 7. Directives pour l'Interface Web & le Moteur d'Impression
 
-Lors de la mise en place du générateur et du design HTML/CSS :
-* Conserver l'approche sans dépendances lourdes (Node.js natif ou simple bundler Vite, Tailwind CSS ou CSS moderne avec variables).
-* Implémenter un CSS d'impression dédié :
-  ```css
-  @page {
-    size: A4 landscape;
-    margin: 6mm;
-  }
-  .print-sheet {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8mm;
-    page-break-after: always;
-  }
-  ```
-* Veiller à ce qu'une fiche technique ne déborde **JAMAIS** sur une seconde page.
+Le code sous `site/` doit respecter les conventions suivantes :
+
+### A. Les 3 modes d'affichage de l'application
+1. **Mode Déplié (`data-mode="duo"`) [Mode par défaut] :**
+   * Présente Face A et Face B côte-à-côte dans un grand conteneur `.duo-card`.
+   * Hauteur naturelle non contrainte (zéro ascenseur vertical interne, zéro coupure).
+   * Responsive : bascule en colonne unique sur écrans < 980 px.
+2. **Mode Réversible (`data-mode="flip"`) :**
+   * Carte interactive 3D avec bouton `🔄 Tourner la fiche`.
+   * Hauteur généreuse fixée à **760 px minimum** (largeur min 440 px) pour contenir l'intégralité des sections sans forcer de défilement.
+3. **Mode Planches A4 (`data-mode="print"`) :**
+   * Affiche les planches A4 Paysage (`.a4-sheet-preview`) prêtes pour l'impression physique.
+
+### B. Règles CSS & Imposition d'Impression (`@media print`)
+```css
+@page {
+  size: A4 landscape;
+  margin: 5mm;
+}
+.a4-sheet-preview {
+  width: 287mm !important;
+  height: 200mm !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6mm;
+  page-break-after: always;
+}
+```
+* Dans le dialogue d'impression navigateur :
+  * Format : **A4 Paysage**.
+  * Recto-verso : **Retourner sur les bords courts**.
+  * Graphismes d'arrière-plan : **Activés**.

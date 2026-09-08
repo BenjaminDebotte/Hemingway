@@ -74,15 +74,35 @@ Le projet couvre deux écosystèmes complémentaires et hyper-productifs du dép
 
 ---
 
-## 📑 Structure d'une Fiche Technique
+## 📑 Structure des Fiches Techniques (Recto / Verso)
 
-Chaque fiche respecte un canevas en 5 blocs calibrés pour tenir sur une page A5 sans débordement :
+L'architecture repose sur un format **double-face (2 × A5 par espèce)** qui sépare clairement la reconnaissance immédiate et la tactique de terrain :
 
-1. **🏷️ En-tête & Identité :** Nom officiel, nom scientifique, famille, appellations locales normandes, points clés d'identification visuelle immédiate.
-2. **⚖️ Réglementation & Biologie :** Maille légale Manche Est (CIEM 7.d), taille éthique conseillée, quota journalier par pêcheur, périodes de fermeture biologique, règles spécifiques (ablation caudale, carnet de capture, statut DPM). Tailles et poids moyens/maxima, régime alimentaire.
-3. **⚓ Volet Canal de Caen à la mer :** Présence, saisonnalité, postes types (enrochements, palplanches, piles de pont, berges arborées, structures portuaires), déclencheurs (éclusées, passage de navires, éclairage nocturne, turbidité), techniques et leurres/appâts phares.
-4. **🚤 Volet Côte de Nacre en bateau :** Présence, saisonnalité, habitats (Roches du Calvados, épaves 1944, bancs de sable), coefficients de marée idéaux, phases de courant (flot/jusant), impact des vents (Nord-Est haché vs Sud/SO plat), techniques bateau (traction, ascenseur, dérive au lançon, tenya).
-5. **🎯 Matériel, Calendrier & Secret Local :** Combos canne/moulinet/ligne spécifiques pour le canal et le bateau, accessoires indispensables, calendrier mensuel d'activité (12 mois notés de 0 à 3), et l'astuce secrète du pêcheur local normand.
+```
+┌───────────────────────────────────────┐   ┌───────────────────────────────────────┐
+│             FACE A (RECTO)            │   │             FACE B (VERSO)            │
+│      IDENTITÉ, BIOLOGIE & RÈGLES      │   │          TERRAIN & TACTIQUES          │
+├───────────────────────────────────────┤   ├───────────────────────────────────────┤
+│ 🏷️ En-tête : Nom, latin, famille,     │   │ ⚓ VOLET CANAL DE CAEN DE CAEN        │
+│    badges biotope & noms locaux       │   │  • Postes : Enrochements, Palplanches,│
+│                                       │   │    Pegasus Bridge, Arbres Ranville    │
+│ 🔍 Repères d'identification clés      │   │  • Déclencheurs : Éclusées Ouistreham,│
+│    (critères visuels sans équivoque)  │   │    cargos, lampadaires de nuit        │
+│                                       │   │  • Techniques & Montages du bord      │
+│ ⚖️ Réglementation Manche Est (CIEM 7d)│   │  • Top 3 Leurres / Appâts Canal       │
+│  • Maille légale (vert) & conseillée  │   ├───────────────────────────────────────┤
+│  • Quota journalier par pêcheur       │   │ 🚤 VOLET CÔTE DE NACRE EN BATEAU      │
+│  • Fermetures & No-kill obligatoire   │   │  • Roches du Calvados (Lion/Luc)      │
+│  • Marquage caudal / DPM / Carnets    │   │  • Épaves Débarquement 1944 (Juno)    │
+│                                       │   │  • Marées, Coefficients & Vents       │
+│ 🧬 Fiche Biologique : Longueurs et    │   │  • Techniques (Traction, Ascenseur)   │
+│    poids moyens/max, proies cibles    │   ├───────────────────────────────────────┤
+│                                       │   │ 🎯 Combos Matériel (Canne/Ligne/BDL)  │
+│ 📅 Calendrier d'Activité Annuel       │   │ 💡 Le Secret du Pêcheur Normand       │
+│    (Heatmap thermique 12 mois         │   │    (Encadré or avec astuce locale)    │
+│    distincte pour Canal et Bateau)    │   │                                       │
+└───────────────────────────────────────┘   └───────────────────────────────────────┘
+```
 
 ---
 
@@ -197,13 +217,30 @@ node scripts/validate-species.mjs
 
 ---
 
-## 📐 Spécifications d'Impression (A4 & A5)
+## 📐 Spécifications d'Impression & Modes de Visualisation
 
+### 1. Les 3 Modes de l'Interface Web
+* **📖 Vue Dépliée (Recto + Verso) [Mode par défaut] :** 
+  * Affiche chaque espèce sous forme de double-page (Face A et Face B côte-à-côte).
+  * Hauteur 100 % naturelle sans aucun défilement interne ni coupure de texte.
+  * Idéal pour une lecture confortable sur écran d'ordinateur ou tablette.
+* **🔄 Fiches Réversibles (3D Flip) :** 
+  * Présentation unitaire façon carte bristol réversible avec animation 3D fluide.
+  * Hauteur généreuse de **760 px** (largeur min 440 px) pour accueillir l'intégralité du contenu.
+* **📄 Planches A4 Impression :** 
+  * Prévisualisation fidèle des planches physiques avant impression papier.
+
+### 2. Le Moteur d'Impression Duplex (A4 Paysage)
 * **Format du support papier :** Feuille standard **A4 Paysage (297 × 210 mm)**.
-* **Agencement :** Grille 2 colonnes (2 fiches A5 Portrait de 148,5 × 210 mm côte à côte).
-* **Zone imprimable utile :** Marges de sécurité de 6 mm $\rightarrow$ surface active de **136,5 × 198 mm**.
-* **Densité typographique :** Police de labeur 7,5 à 8 pt avec interlignage 10 pt.
-* **Comportement dynamique :** Pour les espèces à milieu unique (ex: poisson d'eau douce sans volet bateau, ou poisson du large sans volet canal), le conteneur inactif est masqué afin d'éviter les lignes *"Non applicable"* et d'offrir une respiration visuelle au biotope actif.
+* **Règle d'imposition par paire :**
+  * *Feuille 1 (Rectos) :* `[ Poisson 1 - Face A ]` | `[ Poisson 2 - Face A ]`
+  * *Feuille 2 (Versos) :* `[ Poisson 2 - Face B ]` | `[ Poisson 1 - Face B ]` *(inversion horizontale pour correspondance au retournement bord court)*.
+* **Paramètres recommandés dans le dialogue d'impression (`Ctrl + P`) :**
+  * **Disposition :** Paysage (*Landscape*).
+  * **Recto-verso :** Oui $\rightarrow$ **Retourner sur les bords courts** (*Flip on short edge*).
+  * **Marges :** Minimales (5 mm).
+  * **Graphismes d'arrière-plan :** Activés (pour imprimer les fonds de badges et les jauges colorées).
+* **Finition :** Découpez la feuille A4 en son milieu à 148,5 mm : vous obtenez deux cartes A5 indépendantes prêtes à être glissées dans une pochette de plastification A5 standard pour un usage étanche à bord ou au bord de l'eau.
 
 ---
 
