@@ -6,8 +6,8 @@
   "scripts": {
     "validate": "node scripts/validate-species.mjs",
     "build": "node scripts/build-site.mjs",
-    "start": "node --watch --watch-path=data --watch-path=scripts --watch-path=site scripts/serve.mjs",
-    "dev": "node --watch --watch-path=data --watch-path=scripts --watch-path=site scripts/serve.mjs",
+    "start": "node --watch --watch-path=data --watch-path=scripts --watch-path=site/index.html --watch-path=site/styles.css --watch-path=site/app.js scripts/serve.mjs",
+    "dev": "node --watch --watch-path=data --watch-path=scripts --watch-path=site/index.html --watch-path=site/styles.css --watch-path=site/app.js scripts/serve.mjs",
     "serve": "node scripts/serve.mjs"
   },
   "keywords": [

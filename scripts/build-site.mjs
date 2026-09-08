@@ -26,11 +26,21 @@ window.SPECIES_DATA = ${JSON.stringify(allSpecies, null, 2)};
 window.PROJECT_INDEX = ${JSON.stringify(index, null, 2)};
 `;
 
-  fs.writeFileSync('site/data.js', dataJsContent, 'utf8');
+  const targetPath = 'site/data.js';
+  const existingContent = fs.existsSync(targetPath) ? fs.readFileSync(targetPath, 'utf8') : null;
 
-  if (!quiet) {
-    console.log(`✓ Fichier site/data.js généré avec succès (${allSpecies.length} espèces).`);
+  // N'écrire sur le disque que si le contenu a réellement changé (évite de trigger watch)
+  if (existingContent !== dataJsContent) {
+    fs.writeFileSync(targetPath, dataJsContent, 'utf8');
+    if (!quiet) {
+      console.log(`✓ Fichier site/data.js généré avec succès (${allSpecies.length} espèces).`);
+    }
+  } else {
+    if (!quiet) {
+      console.log(`✓ Fichier site/data.js déjà à jour (${allSpecies.length} espèces).`);
+    }
   }
+
   return true;
 }
 
