@@ -7,7 +7,7 @@ if (!fs.existsSync('site/images/maps')) {
   fs.mkdirSync('site/images/maps', { recursive: true });
 }
 
-// 1. Template Canal de Caen avec CartoDB Positron
+// 1. Template Canal de Caen
 const htmlCanal = `
 <!DOCTYPE html>
 <html>
@@ -17,14 +17,12 @@ const htmlCanal = `
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <style>
     body, html {
-      margin: 0;
-      padding: 0;
-      width: 800px;
-      height: 560px;
+      margin: 0; padding: 0;
+      width: 800px; height: 560px;
       background: #ffffff;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
-    #map { width: 800px; height: 560px; background: #f8fafc; }
+    #map { width: 800px; height: 560px; background: #ffffff; }
     .spot-badge {
       background: #ffffff;
       color: #0f172a;
@@ -32,27 +30,16 @@ const htmlCanal = `
       border-radius: 3px;
       padding: 3px 7px;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: -0.01em;
       white-space: nowrap;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
       display: inline-flex;
       align-items: center;
       gap: 4px;
     }
-    .spot-icon {
-      font-size: 10px;
-      color: #0284c7;
-    }
-    .spot-km {
-      font-family: monospace;
-      font-size: 9.5px;
-      color: #64748b;
-      margin-left: 2px;
-    }
-    .leaflet-tile {
-      filter: saturate(0.35) contrast(1.18) brightness(1.05);
-    }
+    .spot-icon { font-size: 11px; color: #0284c7; }
+    .spot-km { font-family: monospace; font-size: 9.5px; color: #475569; margin-left: 2px; }
   </style>
 </head>
 <body>
@@ -91,15 +78,13 @@ const htmlCanal = `
     });
 
     window.mapReady = false;
-    map.whenReady(() => {
-      setTimeout(() => { window.mapReady = true; }, 2500);
-    });
+    map.whenReady(() => { setTimeout(() => { window.mapReady = true; }, 2500); });
   </script>
 </body>
 </html>
 `;
 
-// 2. Template Côte de Nacre avec CartoDB Positron
+// 2. Template Côte de Nacre
 const htmlMer = `
 <!DOCTYPE html>
 <html>
@@ -109,14 +94,12 @@ const htmlMer = `
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <style>
     body, html {
-      margin: 0;
-      padding: 0;
-      width: 800px;
-      height: 500px;
+      margin: 0; padding: 0;
+      width: 800px; height: 500px;
       background: #ffffff;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
-    #map { width: 800px; height: 500px; background: #f8fafc; }
+    #map { width: 800px; height: 500px; background: #ffffff; }
     .spot-badge {
       background: #ffffff;
       color: #0f172a;
@@ -124,27 +107,18 @@ const htmlMer = `
       border-radius: 3px;
       padding: 3px 7px;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: -0.01em;
       white-space: nowrap;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
       display: inline-flex;
       align-items: center;
       gap: 4px;
     }
-    .badge-mer {
-      border-color: #0d9488;
-      color: #0f172a;
-    }
-    .badge-wreck {
-      border-color: #b45309;
-      color: #78350f;
-    }
-    .spot-icon-mer { color: #0d9488; font-size: 10px; }
-    .spot-icon-wreck { color: #b45309; font-size: 10px; }
-    .leaflet-tile {
-      filter: saturate(0.35) contrast(1.18) brightness(1.05);
-    }
+    .badge-mer { border-color: #0369a1; color: #0f172a; }
+    .badge-wreck { border-color: #b45309; color: #78350f; }
+    .spot-icon-mer { color: #0284c7; font-size: 11px; }
+    .spot-icon-wreck { color: #b45309; font-size: 11px; }
   </style>
 </head>
 <body>
@@ -182,15 +156,13 @@ const htmlMer = `
     });
 
     window.mapReady = false;
-    map.whenReady(() => {
-      setTimeout(() => { window.mapReady = true; }, 2500);
-    });
+    map.whenReady(() => { setTimeout(() => { window.mapReady = true; }, 2500); });
   </script>
 </body>
 </html>
 `;
 
-// 3. Template Vue d'Ensemble Régionale avec CartoDB Positron
+// 3. Template Vue d'ensemble Régionale
 const htmlRegional = `
 <!DOCTYPE html>
 <html>
@@ -200,14 +172,12 @@ const htmlRegional = `
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <style>
     body, html {
-      margin: 0;
-      padding: 0;
-      width: 500px;
-      height: 500px;
+      margin: 0; padding: 0;
+      width: 500px; height: 500px;
       background: #ffffff;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     }
-    #map { width: 500px; height: 500px; background: #f8fafc; }
+    #map { width: 500px; height: 500px; background: #ffffff; }
     .spot-badge {
       background: #ffffff;
       color: #0f172a;
@@ -215,20 +185,14 @@ const htmlRegional = `
       border-radius: 3px;
       padding: 2px 5px;
       font-size: 10px;
-      font-weight: 700;
+      font-weight: 800;
       white-space: nowrap;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.25);
       display: inline-flex;
       align-items: center;
       gap: 3px;
     }
-    .spot-badge-accent {
-      border-color: #0284c7;
-      color: #0369a1;
-    }
-    .leaflet-tile {
-      filter: saturate(0.35) contrast(1.18) brightness(1.05);
-    }
+    .spot-badge-accent { border-color: #0284c7; color: #0369a1; }
   </style>
 </head>
 <body>
@@ -266,21 +230,18 @@ const htmlRegional = `
     });
 
     window.mapReady = false;
-    map.whenReady(() => {
-      setTimeout(() => { window.mapReady = true; }, 2500);
-    });
+    map.whenReady(() => { setTimeout(() => { window.mapReady = true; }, 2500); });
   </script>
 </body>
 </html>
 `;
 
-fs.writeFileSync('site/temp-canal-cartodb.html', htmlCanal);
-fs.writeFileSync('site/temp-mer-cartodb.html', htmlMer);
-fs.writeFileSync('site/temp-reg-cartodb.html', htmlRegional);
+fs.writeFileSync('site/temp-canal-bw.html', htmlCanal);
+fs.writeFileSync('site/temp-mer-bw.html', htmlMer);
+fs.writeFileSync('site/temp-reg-bw.html', htmlRegional);
 
-// Serveur HTTP pour permettre à Chrome headless de charger les pages avec leurs dépendances Leaflet/CDN
-const PORT = 3358;
-const CDP_PORT = 9247;
+const PORT = 3360;
+const CDP_PORT = 9249;
 const SITE_DIR = path.resolve('site');
 
 const server = http.createServer((req, res) => {
@@ -300,7 +261,7 @@ const chrome = spawn('C:/Program Files/Google/Chrome/Application/chrome.exe', [
 ]);
 await new Promise(r => setTimeout(r, 1000));
 
-async function captureMap(pageUrl, width, height, outputFile) {
+async function captureAndProcessMap(pageUrl, width, height, outputFile) {
   const newPageRes = await fetch(`http://localhost:${CDP_PORT}/json/new?http://localhost:${PORT}/${pageUrl}`, { method: 'PUT' });
   const { webSocketDebuggerUrl } = await newPageRes.json();
   const ws = new WebSocket(webSocketDebuggerUrl);
@@ -330,24 +291,89 @@ async function captureMap(pageUrl, width, height, outputFile) {
   }
   await new Promise(r => setTimeout(r, 1200));
 
+  // 1. Capture de l'image de base (2x Retina)
   const screenshot = await send('Page.captureScreenshot', {
     format: 'png',
     clip: { x: 0, y: 0, width, height, scale: 2 }
   });
 
-  fs.writeFileSync(outputFile, Buffer.from(screenshot.data, 'base64'));
-  console.log(`Saved CartoDB map to ${outputFile}`);
+  // 2. Traitement Pixel dans le contexte du navigateur :
+  // Terre en Noir et Blanc pur (blancs poussés pour économiser l'encre)
+  // Eau seule colorée en Bleu Nautique Cyan Universel
+  const processedBase64 = await send('Runtime.evaluate', {
+    expression: `new Promise((resolve) => {
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+
+        const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const d = imgData.data;
+
+        for (let i = 0; i < d.length; i += 4) {
+          const r = d[i], g = d[i+1], b = d[i+2];
+
+          // Détection ultra-précise de l'eau OpenStreetMap :
+          // L'eau OSM standard est dans l'intervalle strict #aad3df (R: 150-195, G: 190-230, B: 210-240)
+          const isWater = (r >= 140 && r <= 200) &&
+                          (g >= 180 && g <= 235) &&
+                          (b >= 200 && b <= 245) &&
+                          (b > r + 18);
+
+          if (isWater) {
+            // Nuance fixe et universelle : Bleu hydrographique net, frais et élégant
+            d[i] = 148;
+            d[i+1] = 202;
+            d[i+2] = 232;
+          } else {
+            // Terre, routes, bâtis, labels, badges : Noir et Blanc pur haute précision
+            const gray = 0.299 * r + 0.587 * g + 0.114 * b;
+
+            // Blanchiment des fonds (champs, zones urbaines) pour préserver le toner d'impression
+            if (gray > 195) {
+              d[i] = 255;
+              d[i+1] = 255;
+              d[i+2] = 255;
+            } else if (gray > 140) {
+              const soft = Math.min(255, Math.round(gray * 1.1));
+              d[i] = soft;
+              d[i+1] = soft;
+              d[i+2] = soft;
+            } else {
+              // Routes, textes, contours, badges : noir franc
+              const dark = Math.round(gray * 0.85);
+              d[i] = dark;
+              d[i+1] = dark;
+              d[i+2] = dark;
+            }
+          }
+        }
+
+        ctx.putImageData(imgData, 0, 0);
+        resolve(canvas.toDataURL('image/png').split(',')[1]);
+      };
+      img.src = 'data:image/png;base64,${screenshot.data}';
+    })`,
+    returnByValue: true,
+    awaitPromise: true
+  });
+
+  fs.writeFileSync(outputFile, Buffer.from(processedBase64.result.value, 'base64'));
+  console.log(`Saved B&W + Water Colored map to ${outputFile}`);
   ws.close();
 }
 
-console.log('Capture des cartes CartoDB Positron (OpenStreetMap épuré)...');
-await captureMap('temp-canal-cartodb.html', 800, 560, 'site/images/maps/canal-caen.png');
-await captureMap('temp-mer-cartodb.html', 800, 500, 'site/images/maps/cote-de-nacre.png');
-await captureMap('temp-reg-cartodb.html', 500, 500, 'site/images/maps/calvados-overview.png');
+console.log('Génération des cartes Noir & Blanc avec Eau Seule Colorée...');
+await captureAndProcessMap('temp-canal-bw.html', 800, 560, 'site/images/maps/canal-caen.png');
+await captureAndProcessMap('temp-mer-bw.html', 800, 500, 'site/images/maps/cote-de-nacre.png');
+await captureAndProcessMap('temp-reg-bw.html', 500, 500, 'site/images/maps/calvados-overview.png');
 
-fs.unlinkSync('site/temp-canal-cartodb.html');
-fs.unlinkSync('site/temp-mer-cartodb.html');
-fs.unlinkSync('site/temp-reg-cartodb.html');
+fs.unlinkSync('site/temp-canal-bw.html');
+fs.unlinkSync('site/temp-mer-bw.html');
+fs.unlinkSync('site/temp-reg-bw.html');
 
 chrome.kill();
 server.close();
