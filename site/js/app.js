@@ -217,7 +217,7 @@ window.switchCardBiotope = function(e, fishId, tab) {
   if (e) e.stopPropagation();
   const card = document.getElementById(`card-${fishId}`);
   if (!card) return;
-  const switcher = card.querySelector('.biotope-card-switcher');
+  const switcher = card.querySelector('.biotope-card-switcher:not(.mono-card-switcher)');
   if (switcher) {
     switcher.querySelectorAll('.biotope-switch-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.tab === tab);
@@ -228,6 +228,23 @@ window.switchCardBiotope = function(e, fishId, tab) {
 
   if (canalSection) canalSection.classList.toggle('tab-hidden', tab !== 'canal');
   if (bateauSection) bateauSection.classList.toggle('tab-hidden', tab !== 'bateau');
+};
+
+window.switchMonoCardTab = function(e, fishId, tab) {
+  if (e) e.stopPropagation();
+  const card = document.getElementById(`card-${fishId}`);
+  if (!card) return;
+  const switcher = card.querySelector('.mono-card-switcher');
+  if (switcher) {
+    switcher.querySelectorAll('.biotope-switch-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.tab === tab);
+    });
+  }
+  const biotopeSection = card.querySelector('.biotope-section');
+  const mapWrap = card.querySelector('.mono-map-wrap');
+
+  if (biotopeSection) biotopeSection.classList.toggle('tab-hidden', tab !== 'tactique');
+  if (mapWrap) mapWrap.classList.toggle('tab-hidden', tab !== 'carte');
 };
 
 // --------------------------------------------------------------------------

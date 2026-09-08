@@ -501,21 +501,21 @@
 }
 
 .pill-combo {
-  background: var(--theme-canal-badge-bg);
-  color: var(--theme-canal-badge-text);
-  border: 1px solid var(--theme-canal-badge-border);
+  background: var(--theme-surface-inset);
+  color: var(--theme-text-title);
+  border: 1px solid var(--theme-surface-subtle-border);
 }
 
 .pill-rigid {
-  background: var(--theme-canal-badge-bg);
-  color: var(--theme-canal-badge-text);
-  border: 1px solid var(--theme-canal-badge-border);
+  background: var(--theme-canal-surface);
+  color: var(--theme-canal-accent);
+  border: 1px solid var(--theme-canal-surface-border);
 }
 
 .pill-soft {
-  background: var(--theme-canal-badge-bg);
-  color: var(--theme-canal-badge-text);
-  border: 1px solid var(--theme-canal-badge-border);
+  background: var(--theme-bateau-surface);
+  color: var(--theme-bateau-accent);
+  border: 1px solid var(--theme-bateau-surface-border);
 }
 
 .pill-natural {
@@ -525,9 +525,9 @@
 }
 
 .pill-hook {
-  background: var(--theme-bateau-badge-bg);
-  color: var(--theme-bateau-badge-text);
-  border: 1px solid var(--theme-bateau-badge-border);
+  background: var(--theme-surface-subtle);
+  color: var(--theme-bateau-accent);
+  border: 1px solid var(--theme-bateau-surface-border);
 }
 
 .pill-leader {

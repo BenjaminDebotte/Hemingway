@@ -116,6 +116,17 @@ export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 
       </div>
     ` : ''}
 
+    ${isFlipCard && !isDual ? `
+      <div class="biotope-card-switcher mono-card-switcher" role="tablist" aria-label="Choisir la vue tactique ou cartographique">
+        <button type="button" class="biotope-switch-btn active" data-tab="tactique" onclick="switchMonoCardTab(event, '${fish.id}', 'tactique')">
+          ${uiIcon(fish.canal.present ? 'anchor' : 'boat')} Tactique & Postes
+        </button>
+        <button type="button" class="biotope-switch-btn" data-tab="carte" onclick="switchMonoCardTab(event, '${fish.id}', 'carte')">
+          ${uiIcon('compass')} Carte Interactive OSM
+        </button>
+      </div>
+    ` : ''}
+
     ${fish.canal.present ? `
       <div class="biotope-section section-canal ${canalHidden}">
         <div class="section-header-row">
@@ -134,7 +145,7 @@ export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 
         </ul>
         ${renderExhaustiveTackleBlock(fish.canal.terminalTackle, fish.gear.canalCombo, 'Canal', 'canal')}
       </div>
-      ${!isDual ? renderCanalDedicatedMap(fish) : ''}
+      ${!isDual ? `<div class="mono-map-wrap ${isFlipCard ? 'tab-hidden' : ''}">${renderCanalDedicatedMap(fish)}</div>` : ''}
     ` : ''}
 
     ${fish.bateau.present ? `
@@ -156,7 +167,7 @@ export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 
         </ul>
         ${renderExhaustiveTackleBlock(fish.bateau.terminalTackle, fish.gear.boatCombo, 'Mer', 'bateau')}
       </div>
-      ${!isDual ? renderCoteDeNacreDedicatedMap(fish) : ''}
+      ${!isDual ? `<div class="mono-map-wrap ${isFlipCard ? 'tab-hidden' : ''}">${renderCoteDeNacreDedicatedMap(fish)}</div>` : ''}
     ` : ''}
   `;
 }

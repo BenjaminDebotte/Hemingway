@@ -141,9 +141,6 @@ html[data-mode="dark"] .a4-sheet-preview .map-habitat-chip,
 html[data-mode="dark"] .a4-sheet-preview .map-badge-osm,
 html[data-mode="dark"] .a4-sheet-preview .presence-badge,
 html[data-mode="dark"] .a4-sheet-preview .diet-tag,
-html[data-mode="dark"] .a4-sheet-preview .terminal-pill,
-html[data-mode="dark"] .a4-sheet-preview .twelfths-hours-pill,
-html[data-mode="dark"] .a4-sheet-preview .twelfths-flow-pill,
 html[data-mode="dark"] .a4-sheet-preview .verso-badge {
   background: var(--theme-surface-subtle);
 }
@@ -314,6 +311,8 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
   border: 1px solid var(--theme-surface-subtle-border);
   background: #ffffff;
   box-sizing: border-box;
+  min-height: 0 !important;
+  overflow: hidden !important;
 }
 
 .a4-sheet-preview .regional-mini-map {
@@ -361,7 +360,7 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
   width: 100%;
   height: 100%;
   min-height: 0;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .a4-sheet-preview .mini-map-osm-img,
@@ -412,8 +411,8 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
 
 /* Face B (Verso) - Utilisation optimale de tout l'espace disponible */
 .a4-sheet-preview .verso-header {
-  padding-bottom: 1.5mm;
-  margin-bottom: 1.2mm;
+  padding-bottom: 1mm;
+  margin-bottom: 0.8mm;
   flex-shrink: 0;
   width: 100%;
   display: flex;
@@ -421,9 +420,9 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
   align-items: center;
   box-sizing: border-box;
 }
-.a4-sheet-preview .verso-eyebrow { font-size: 5.8pt; }
-.a4-sheet-preview .verso-title { font-size: 10.5pt; line-height: 1.15; }
-.a4-sheet-preview .verso-badge { font-size: 6.2pt; padding: 0.8mm 1.8mm; }
+.a4-sheet-preview .verso-eyebrow { font-size: 5.6pt; }
+.a4-sheet-preview .verso-title { font-size: 10pt; line-height: 1.15; }
+.a4-sheet-preview .verso-badge { font-size: 6pt; padding: 0.6mm 1.5mm; }
 
 .a4-sheet-preview .biotope-section {
   flex: 1 1 0;
@@ -431,9 +430,9 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 0.8mm;
-  padding: 1.4mm 2mm;
-  margin-bottom: 0.8mm;
+  gap: 0.5mm;
+  padding: 1mm 1.8mm;
+  margin-bottom: 0.5mm;
   width: 100%;
   box-sizing: border-box;
 }
@@ -448,15 +447,25 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 0.9mm;
-  padding: 1.6mm 2.2mm;
-  margin-bottom: 1.2mm;
+  gap: 0.8mm;
+  padding: 1.4mm 2mm;
+  margin-bottom: 1mm;
 }
 
 /* Carte dédiée Face B mono-biotope */
+.a4-sheet-preview .mono-map-wrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+}
+
 .a4-sheet-preview .biotope-map-card {
   flex: 1 1 auto;
   min-height: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -622,86 +631,86 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5mm;
-  margin-bottom: 0.6mm;
+  gap: 1.2mm;
+  margin-bottom: 0.35mm;
   flex-shrink: 0;
 }
 
 .a4-sheet-preview .section-header-row .block-title {
   margin-bottom: 0 !important;
   white-space: nowrap;
-  font-size: 6.8pt;
+  font-size: 6.5pt;
 }
 
 .a4-sheet-preview .section-header-row .presence-badge {
-  font-size: 5.4pt;
-  padding: 0.2mm 0.8mm;
+  font-size: 5.2pt;
+  padding: 0.15mm 0.7mm;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 62%;
 }
 
-.a4-sheet-preview .presence-badge { font-size: 6.2pt; padding: 0.5mm 1.2mm; }
+.a4-sheet-preview .presence-badge { font-size: 6pt; padding: 0.4mm 1mm; }
 .a4-sheet-preview .spots-chip-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1mm;
-  margin-bottom: 0.8mm;
+  gap: 0.6mm;
+  margin-bottom: 0.5mm;
   width: 100%;
   box-sizing: border-box;
 }
 .a4-sheet-preview .spot-chip {
-  padding: 0.8mm 1.2mm;
-  font-size: 6.4pt;
-  line-height: 1.2;
+  padding: 0.45mm 0.9mm;
+  font-size: 5.9pt;
+  line-height: 1.15;
   width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.a4-sheet-preview .spot-tag { font-size: 5.2pt; margin-bottom: 0.3mm; }
+.a4-sheet-preview .spot-tag { font-size: 4.8pt; margin-bottom: 0.15mm; }
 .a4-sheet-preview .canal-triggers-cockpit {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1mm;
-  margin-bottom: 0.8mm;
+  gap: 0.6mm;
+  margin-bottom: 0.5mm;
   width: 100%;
   box-sizing: border-box;
 }
 .a4-sheet-preview .trigger-card {
-  padding: 0.8mm 1.2mm;
-  font-size: 6.4pt;
-  line-height: 1.2;
+  padding: 0.45mm 0.9mm;
+  font-size: 5.9pt;
+  line-height: 1.14;
   width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.a4-sheet-preview .trigger-header { font-size: 5.6pt; margin-bottom: 0.3mm; }
+.a4-sheet-preview .trigger-header { font-size: 5.2pt; margin-bottom: 0.2mm; }
 .a4-sheet-preview .tide-weather-cockpit {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1mm;
-  margin-bottom: 0.8mm;
+  gap: 0.6mm;
+  margin-bottom: 0.5mm;
   width: 100%;
   box-sizing: border-box;
 }
 .a4-sheet-preview .cockpit-box {
-  padding: 0.8mm 1.2mm;
+  padding: 0.45mm 0.9mm;
   width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.a4-sheet-preview .cockpit-box-title { font-size: 5.8pt; }
-.a4-sheet-preview .cockpit-pill-val { font-size: 5.6pt; }
-.a4-sheet-preview .coef-track { height: 4.5px; width: 100%; }
-.a4-sheet-preview .coef-labels { font-size: 5pt; }
-.a4-sheet-preview .wind-desc-text { font-size: 6.2pt; line-height: 1.18; }
+.a4-sheet-preview .cockpit-box-title { font-size: 5.6pt; }
+.a4-sheet-preview .cockpit-pill-val { font-size: 5.4pt; }
+.a4-sheet-preview .coef-track { height: 4px; width: 100%; }
+.a4-sheet-preview .coef-labels { font-size: 4.8pt; }
+.a4-sheet-preview .wind-desc-text { font-size: 5.8pt; line-height: 1.14; }
 .a4-sheet-preview .twelfths-card {
   border: 1px solid var(--theme-surface-subtle-border);
   background: #ffffff;
@@ -709,36 +718,41 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
   box-shadow: none;
   border-radius: 0;
   padding: 1mm 1.8mm;
-  margin: 0.8mm 0;
+  margin: 0.6mm 0;
   width: 100%;
   box-sizing: border-box;
 }
 .a4-sheet-preview .twelfths-chart-container {
   display: flex;
   align-items: center;
-  gap: 1.8mm;
+  gap: 2mm;
   width: 100%;
 }
 .a4-sheet-preview .twelfths-title { font-size: 6.2pt; }
-.a4-sheet-preview .twelfths-hours-pill { font-size: 6pt; padding: 0.4mm 1.2mm; }
-.a4-sheet-preview .twelfths-flow-pill { font-size: 5.8pt; padding: 0.4mm 1mm; }
-.a4-sheet-preview .twelfths-bell-curve { height: 22px; flex-shrink: 0; }
+.a4-sheet-preview .twelfths-hours-pill { font-size: 5.6pt; padding: 0.3mm 1mm; }
+.a4-sheet-preview .twelfths-flow-pill { font-size: 5.4pt; padding: 0.3mm 0.8mm; }
+.a4-sheet-preview .twelfths-bell-curve {
+  height: 28px;
+  padding: 1.5px 3px 0;
+  gap: 2px;
+  flex-shrink: 0;
+}
 .a4-sheet-preview .twelfth-col { width: 16px; }
-.a4-sheet-preview .twelfth-bar-track { height: 12px; }
-.a4-sheet-preview .twelfth-hour-name { font-size: 5pt; }
+.a4-sheet-preview .twelfth-bar-track { height: 17px; }
+.a4-sheet-preview .twelfth-hour-name { font-size: 5pt; font-weight: 700; margin-top: 1px; }
 .a4-sheet-preview .twelfth-frac-label { font-size: 4.4pt; }
-.a4-sheet-preview .twelfths-note { font-size: 6.4pt; line-height: 1.18; flex: 1 1 auto; }
+.a4-sheet-preview .twelfths-note { font-size: 6pt; line-height: 1.18; flex: 1 1 auto; }
 .a4-sheet-preview .tactics-bullets {
-  font-size: 6.4pt;
-  line-height: 1.2;
-  gap: 0.4mm;
-  margin-bottom: 0.6mm;
+  font-size: 5.9pt;
+  line-height: 1.14;
+  gap: 0.2mm;
+  margin-bottom: 0.35mm;
   width: 100%;
   box-sizing: border-box;
 }
 .a4-sheet-preview .terminal-tackle-card {
-  padding: 0.6mm 1mm;
-  margin: 0.5mm 0;
+  padding: 0.35mm 0.8mm;
+  margin: 0.25mm 0;
   border: 1px solid var(--theme-surface-subtle-border);
   border-radius: 0;
   background: #ffffff;
@@ -748,17 +762,108 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
 }
 .a4-sheet-preview .terminal-canal { border-left: 2px solid var(--theme-canal-accent); }
 .a4-sheet-preview .terminal-bateau { border-left: 2px solid var(--theme-bateau-accent); }
-.a4-sheet-preview .terminal-card-header { margin-bottom: 0.25mm; padding-bottom: 0.2mm; border-bottom: 1px solid var(--theme-surface-subtle-border); }
-.a4-sheet-preview .terminal-card-title { font-size: 5.4pt; }
+.a4-sheet-preview .terminal-card-header { margin-bottom: 0.15mm; padding-bottom: 0.15mm; border-bottom: 1px solid var(--theme-surface-subtle-border); }
+.a4-sheet-preview .terminal-card-title { font-size: 5.2pt; }
 .a4-sheet-preview .terminal-specs-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.3mm 1.5mm;
+  gap: 0.2mm 1mm;
   width: 100%;
 }
-.a4-sheet-preview .terminal-spec-item { font-size: 5.9pt; line-height: 1.15; gap: 0.6mm; width: 100%; }
+.a4-sheet-preview .terminal-spec-item { font-size: 5.5pt; line-height: 1.1; gap: 0.4mm; width: 100%; }
 .a4-sheet-preview .terminal-spec-item.spec-combo { grid-column: 1 / -1; }
 .a4-sheet-preview .terminal-pill { font-size: 4.5pt; padding: 0.15mm 0.5mm; width: 12mm; }
+.a4-sheet-preview .pill-combo {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1 !important;
+}
+.a4-sheet-preview .pill-leader {
+  background: #f8fafc !important;
+  color: #475569 !important;
+  border: 1px solid #e2e8f0 !important;
+}
+.a4-sheet-preview .pill-hook {
+  background: #f1f5f9 !important;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1 !important;
+}
+.a4-sheet-preview .pill-rigid {
+  background: #f0fdf4 !important;
+  color: #166534 !important;
+  border: 1px solid #bbf7d0 !important;
+}
+.a4-sheet-preview .pill-soft {
+  background: #eff6ff !important;
+  color: #1e40af !important;
+  border: 1px solid #bfdbfe !important;
+}
+.a4-sheet-preview .pill-natural {
+  background: #fffbeb !important;
+  color: #92400e !important;
+  border: 1px solid #fde68a !important;
+}
+.a4-sheet-preview .twelfths-hours-pill {
+  background: #1e293b !important;
+  color: #ffffff !important;
+  border: 1px solid #0f172a !important;
+}
+.a4-sheet-preview .twelfths-flow-pill {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1 !important;
+}
+.a4-sheet-preview .verso-badge {
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+html[data-mode="dark"] .a4-sheet-preview .pill-combo {
+  background: var(--theme-surface-subtle) !important;
+  color: var(--theme-text-title) !important;
+  border: 1px solid var(--theme-surface-subtle-border) !important;
+}
+html[data-mode="dark"] .a4-sheet-preview .pill-leader {
+  background: var(--theme-surface-inset) !important;
+  color: var(--theme-text-muted) !important;
+  border: 1px solid var(--theme-surface-subtle-border) !important;
+}
+html[data-mode="dark"] .a4-sheet-preview .pill-hook {
+  background: var(--theme-surface-subtle) !important;
+  color: var(--theme-bateau-accent) !important;
+  border: 1px solid var(--theme-bateau-surface-border) !important;
+}
+html[data-mode="dark"] .a4-sheet-preview .pill-rigid {
+  background: var(--theme-canal-surface) !important;
+  color: var(--theme-canal-accent) !important;
+  border: 1px solid var(--theme-canal-surface-border) !important;
+}
+html[data-mode="dark"] .a4-sheet-preview .pill-soft {
+  background: var(--theme-bateau-surface) !important;
+  color: var(--theme-bateau-accent) !important;
+  border: 1px solid var(--theme-bateau-surface-border) !important;
+}
+html[data-mode="dark"] .a4-sheet-preview .pill-natural {
+  background: var(--theme-secret-surface) !important;
+  color: var(--theme-secret-text) !important;
+  border: 1px solid var(--theme-secret-border) !important;
+}
+html[data-mode="dark"] .a4-sheet-preview .twelfths-hours-pill {
+  background: var(--theme-bateau-accent) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--theme-bateau-accent) !important;
+}
+html[data-mode="dark"] .a4-sheet-preview .twelfths-flow-pill {
+  background: var(--theme-bateau-badge-bg) !important;
+  color: var(--theme-bateau-badge-text) !important;
+  border: 1px solid var(--theme-bateau-badge-border) !important;
+}
+html[data-mode="dark"] .a4-sheet-preview .verso-badge {
+  background: var(--theme-secret-surface) !important;
+  color: var(--theme-secret-text) !important;
+  border: 1px solid var(--theme-secret-border) !important;
+}
 .a4-sheet-preview .terminal-val { font-size: 5.9pt; line-height: 1.15; flex: 1 1 auto; }
 .a4-sheet-preview .combos-compact-card { display: none !important; }
 .a4-sheet-preview .combo-line { font-size: 6.6pt; line-height: 1.22; }
@@ -902,6 +1007,14 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
     gap: 0.9mm !important;
   }
 
+  .a4-sheet-preview .mono-map-wrap {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+  }
+
   .a4-sheet-preview .biotope-map-card {
     flex: 1 1 auto !important;
     display: flex !important;
@@ -955,9 +1068,9 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
 }
 
 .a4-sheet-preview .waypoints-block {
-  padding: 0.35mm 0.8mm !important;
-  margin: 0.3mm 0 !important;
-  gap: 0.2mm !important;
+  padding: 0.2mm 0.6mm !important;
+  margin: 0.2mm 0 !important;
+  gap: 0.15mm !important;
   border-radius: 0 !important;
   border: 1px solid var(--theme-surface-subtle-border) !important;
   background: #ffffff;
@@ -981,16 +1094,16 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
 .a4-sheet-preview .waypoints-cards-list {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
-  gap: 0.6mm !important;
+  gap: 0.5mm !important;
 }
 
 .a4-sheet-preview .waypoint-card {
-  padding: 0.2mm 0.5mm !important;
+  padding: 0.12mm 0.35mm !important;
   border: 1px solid var(--theme-surface-subtle-border) !important;
   border-radius: 0 !important;
   background: #ffffff;
   min-width: 0 !important;
-  gap: 0.2mm !important;
+  gap: 0.15mm !important;
 }
 
 .a4-sheet-preview .waypoint-icon-badge {
