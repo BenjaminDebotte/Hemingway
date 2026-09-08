@@ -17,7 +17,13 @@ export function renderCanalDedicatedMap(fish) {
         <div class="map-header-title">
           ${uiIcon('anchor')} <span>Topographie & Postes Clés : Canal de Caen à la mer (14 km)</span>
         </div>
-        <span class="map-badge-osm">Cartographie OpenStreetMap</span>
+        <a
+          href="https://www.openstreetmap.org/#map=13/49.2330/-0.3015"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="map-badge-osm"
+          title="Ouvrir le Canal de Caen sur OpenStreetMap"
+        >OSM ↗</a>
       </div>
       <div class="map-img-wrap">
         <img
@@ -67,7 +73,13 @@ export function renderCoteDeNacreDedicatedMap(fish) {
         <div class="map-header-title">
           ${uiIcon('boat')} <span>Fonds Marins & Amers : Côte de Nacre (Courseulles ➔ Ouistreham)</span>
         </div>
-        <span class="map-badge-osm">Cartographie OpenStreetMap</span>
+        <a
+          href="https://www.openstreetmap.org/#map=12/49.3175/-0.3450"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="map-badge-osm"
+          title="Ouvrir la Côte de Nacre sur OpenStreetMap"
+        >OSM ↗</a>
       </div>
       <div class="map-img-wrap">
         <img
@@ -114,7 +126,13 @@ export function renderRegionalMiniMap() {
     <div class="regional-mini-map" aria-label="Carte OpenStreetMap de situation Canal de Caen et Côte de Nacre">
       <div class="mini-map-title-row">
         <span class="mini-map-title">Littoral Calvados • Caen ➔ Mer</span>
-        <span class="mini-map-tag">OSM</span>
+        <a
+          href="https://www.openstreetmap.org/#map=11/49.2670/-0.3400"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mini-map-tag"
+          title="Ouvrir le secteur Caen - Côte de Nacre sur OpenStreetMap"
+        >OSM ↗</a>
       </div>
       <div class="mini-map-img-wrap">
         <img

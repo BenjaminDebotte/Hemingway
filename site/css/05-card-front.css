@@ -607,11 +607,22 @@
   font-family: var(--font-mono);
   font-size: 0.52rem;
   font-weight: 800;
-  padding: 0.05rem 0.25rem;
+  padding: 0.05rem 0.28rem;
   border-radius: 2px;
   background: var(--theme-canal-badge-bg);
   color: var(--theme-canal-badge-text);
   border: 1px solid var(--theme-canal-badge-border);
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.mini-map-tag:hover {
+  opacity: 0.85;
+  background: var(--theme-surface-subtle);
+  color: var(--theme-text-title);
 }
 
 .mini-map-img-wrap,

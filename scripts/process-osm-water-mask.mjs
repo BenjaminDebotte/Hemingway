@@ -104,7 +104,7 @@ const htmlCanal = `
         html: '${SVG.dpm} Pont Fonderie <span class=\"spot-km\">Limite DPM</span>',
         pos: [49.1834, -0.3518],
         cls: 'badge-dpm', dotCls: 'pin-dot-dpm',
-        style: 'transform: translate(7px, 8px);'
+        style: 'transform: translate(-50%, 8px);'
       },
       {
         html: '${SVG.bridge} Calix <span class=\"spot-km\">km 2.5</span>',
@@ -377,8 +377,8 @@ const htmlRegional = `
     }).addTo(map);
 
     const spots = [
-      { html: '${SVG.permit} Caen', pos: [49.1838, -0.3561], style: 'transform: translate(6px, -50%);' },
-      { html: '${SVG.bridge} Calix', pos: [49.1866, -0.3293], style: 'transform: translate(6px, 2px);' },
+      { html: '${SVG.permit} Caen', pos: [49.1838, -0.3561], style: 'transform: translate(-100%, -50%); margin-left: -6px;' },
+      { html: '${SVG.bridge} Calix', pos: [49.1866, -0.3293], style: 'transform: translate(6px, -50%);' },
       { html: '${SVG.bridge} Pegasus', pos: [49.2420, -0.2745], style: 'transform: translate(6px, -50%);' },
       { html: '${SVG.locks} Ouistreham', pos: [49.2803, -0.2491], style: 'transform: translate(6px, -50%);' },
       { html: '${SVG.sandbank} Hermanville', pos: [49.2940, -0.2980], style: 'transform: translate(-100%, 6px); margin-left: -4px;' },
