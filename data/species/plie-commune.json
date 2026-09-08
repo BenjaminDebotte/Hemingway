@@ -4,7 +4,11 @@
     "name": "Plie commune (Carrelet)",
     "scientificName": "Pleuronectes platessa",
     "family": "Pleuronectidés",
-    "localNames": ["Carrelet", "Plie", "Pléhisse"],
+    "localNames": [
+      "Carrelet",
+      "Plie",
+      "Pléhisse"
+    ],
     "category": "Poisson plat",
     "identificationNotes": "Peau très lisse au toucher (contrairement au flet rugueux), robe brune parsemée de taches rouge orangé vif très distinctes, crête osseuse de 4 à 7 petites bosses derrière les yeux situés sur le côté droit."
   },
@@ -68,7 +72,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients moyens de 50 à 75 assurant une dérive continue.",
       "tidalPhase": "Flot montant et début de jusant quand le courant pousse sur les bancs.",
-      "slackVsCurrent": "Très active en courant modéré ; s'enfouit lors des très violents courants."
+      "slackVsCurrent": "Très active en courant modéré ; s'enfouit lors des très violents courants.",
+      "ruleOfTwelfths": "H2 à H4 (2/12 à 3/12) : courant actif décollant les arénicoles sur les ridens de Bernières"
     },
     "weatherImpact": {
       "favorableWinds": "Vent faible de Sud ou brise d'Est permettant une dérive linéaire régulière.",
@@ -103,8 +108,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 1, 2, 3, 3, 3, 3, 3, 2, 1, 0],
-    "bateau": [0, 0, 2, 3, 3, 3, 3, 3, 3, 3, 2, 0]
+    "canal": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      0
+    ]
   },
   "localSecret": "Sur le banc de Bernières en bateau, montez une petite perle ovale jaune fluo et une rouge juste au-dessus de l'hameçon : la plie est très visuelle et curieuse, ces couleurs imitent de petits crustacés et déclenchent l'attaque 3 fois plus vite qu'un montage nu !"
 }

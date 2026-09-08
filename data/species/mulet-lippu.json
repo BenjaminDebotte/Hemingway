@@ -4,7 +4,11 @@
     "name": "Mulet lippu",
     "scientificName": "Chelon labrosus",
     "family": "Mugilidés",
-    "localNames": ["Mulet à grosses lèvres", "Muge", "Grosse lèvre"],
+    "localNames": [
+      "Mulet à grosses lèvres",
+      "Muge",
+      "Grosse lèvre"
+    ],
     "category": "Mugilidé",
     "identificationNotes": "Lèvre supérieure exceptionnellement épaisse et charnue garnie de rangées de tubercules verruqueux (papilles), pas de tache operculaire dorée, opercule armé d'une seule écaille pointue, corps fuselé gris ardoise."
   },
@@ -69,7 +73,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients de 60 à 85 apportant une eau riche sur les roches.",
       "tidalPhase": "Les deux premières heures de flot montant sur les plateaux côtiers.",
-      "slackVsCurrent": "S'alimente activement dans les zones d'amorti de courant."
+      "slackVsCurrent": "S'alimente activement dans les zones d'amorti de courant.",
+      "ruleOfTwelfths": "H1 et H2 (début de flot, 1/12 puis 2/12) : le banc monte explorer les plateaux découvrants"
     },
     "weatherImpact": {
       "favorableWinds": "Beau temps chaud, vent faible de terre maintenant une surface lisse.",
@@ -104,8 +109,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 1, 2, 3, 3, 3, 3, 3, 2, 1, 0],
-    "bateau": [0, 0, 0, 1, 2, 3, 3, 3, 2, 1, 0, 0]
+    "canal": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0,
+      0
+    ]
   },
   "localSecret": "Au Bassin Saint-Pierre et à Pegasus Bridge, lancez quelques croûtes de pain pour faire monter le banc de mulets lippus en surface. Pêchez avec une bouchée de mie de pain blanche légèrement humidifiée et pressée uniquement autour de la hampe de l'hameçon : le mulet aspire la mie libre et engame l'hameçon en douceur !"
 }

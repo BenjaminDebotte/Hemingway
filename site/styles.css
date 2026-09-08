@@ -796,6 +796,32 @@ body {
   color: var(--navy-900);
 }
 
+.twelfths-banner {
+  background: #f0fdfa;
+  border-left: 3.5px solid var(--teal-600);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 0.35rem 0.55rem;
+  margin: 0.35rem 0 0.45rem;
+  font-size: 0.74rem;
+}
+
+.twelfths-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  letter-spacing: 0.03em;
+  color: var(--teal-600);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-bottom: 0.15rem;
+}
+
+.twelfths-text {
+  color: var(--slate-800);
+  line-height: 1.35;
+}
+
 /* --- COMBOS MATÉRIEL --- */
 .gear-grid {
   display: grid;

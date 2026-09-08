@@ -102,6 +102,11 @@ Tout agent rédigeant ou modifiant du contenu doit se conformer aux sources offi
    * Les éclusées d'Ouistreham (remplissage/vidange des sas) créent un courant d'appel d'eau salée fraîche qui déclenche les chasses.
    * Le passage des cargos/ferries génère un effet de piston scannant les enrochements et délogeant crabes et crevettes.
    * La nuit, les cônes de lumière des lampadaires (Pegasus Bridge, Blainville, Calix) créent une frontière ombre/lumière idéale pour les embuscades.
+8. **La Règle des Douzièmes de Marée en Normandie (Côte de Nacre) :**
+   * Le marnage en Manche (jusqu'à 7,8 m) découpe chaque demi-marée (6h) en fractions de débit : H1 (1/12), H2 (2/12), H3 (3/12), H4 (3/12), H5 (2/12), H6 (1/12).
+   * Les carnassiers actifs (Bar, Lieu au leurre, Maquereau) chassent aux heures de fort courant (H3 et H4 - les deux tiers de 3/12e de mi-marée).
+   * Les sparidés et poissons benthiques (Daurade, Sole, Congre, Céphalopodes) exigent des courants modérés ou nuls (H1-H2 ou H5-H6/étales) pour que les lignes tiennent le fond sans dériver trop vite.
+   * Chaque fiche intègre obligatoirement la propriété `bateau.tideAndCurrent.ruleOfTwelfths`.
 
 ---
 

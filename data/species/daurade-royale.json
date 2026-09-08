@@ -4,7 +4,11 @@
     "name": "Daurade royale",
     "scientificName": "Sparus aurata",
     "family": "Sparidés",
-    "localNames": ["Vraie daurade", "Sourcil d'or", "Belle aux sourcils d'or"],
+    "localNames": [
+      "Vraie daurade",
+      "Sourcil d'or",
+      "Belle aux sourcils d'or"
+    ],
     "category": "Sparidé",
     "identificationNotes": "Bande dorée brillante très nette entre les deux yeux soulignée d'une ligne noire, grande tache sombre à l'origine de la ligne latérale, mâchoires puissantes pavées de molaires broyeuses de coquillages."
   },
@@ -69,7 +73,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients moyens de 55 à 75 permettant de tenir le fond sans dérive trop forte.",
       "tidalPhase": "Les deux dernières heures de flot et la première heure de jusant.",
-      "slackVsCurrent": "Activité intense dès que le courant faiblit à l'approche de la pleine mer."
+      "slackVsCurrent": "Activité intense dès que le courant faiblit à l'approche de la pleine mer.",
+      "ruleOfTwelfths": "H2 et H5 (2/12 du marnage) : courant modéré idéal pour ancrer les montages au crabe ou couteau"
     },
     "weatherImpact": {
       "favorableWinds": "Vent de terre (Sud/Sud-Ouest), mer calme et eau cristalline réchauffée.",
@@ -105,8 +110,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 0, 0, 1, 2, 3, 3, 2, 1, 0, 0],
-    "bateau": [0, 0, 0, 0, 1, 2, 3, 3, 3, 1, 0, 0]
+    "canal": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      1,
+      0,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      3,
+      1,
+      0,
+      0
+    ]
   },
   "localSecret": "Le long des palplanches d'Hérouville, grattez la tôle avec un râteau ou un manche plombé pour faire tomber quelques moules au fond : 10 minutes après, descendez délicatement un crabe vert vivant le long de la paroi. La daurade royale ne résiste jamais à cette amorce naturelle !"
 }

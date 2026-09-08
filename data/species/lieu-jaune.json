@@ -4,7 +4,11 @@
     "name": "Lieu jaune",
     "scientificName": "Pollachius pollachius",
     "family": "Gadidés",
-    "localNames": ["Lieu", "Colin jaune", "Goberge"],
+    "localNames": [
+      "Lieu",
+      "Colin jaune",
+      "Goberge"
+    ],
     "category": "Carnassier marin",
     "identificationNotes": "Mâchoire inférieure nettement proéminente, ligne latérale sombre s'incurvant fortement au-dessus des pectorales, pas de barbillon mentonnier chez l'adulte, robe bronze dorée à reflets verdâtres."
   },
@@ -67,7 +71,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients faibles de 40 à 60 (mortes-eaux) pour dériver sur épaves.",
       "tidalPhase": "Étales de marée et début de renverse pour pêcher à l'aplomb des structures.",
-      "slackVsCurrent": "Courant modéré idéal pour l'ascenseur sans bannière excessive."
+      "slackVsCurrent": "Courant modéré idéal pour l'ascenseur sans bannière excessive.",
+      "ruleOfTwelfths": "H1, H2, H5 et H6 (1/12 et 2/12) : étales et début/fin de marée quand le courant faiblit sous 1.2 nœud"
     },
     "weatherImpact": {
       "favorableWinds": "Vent de Sud/SO nul à faible : dérive stable indispensable au-dessus des épaves.",
@@ -103,8 +108,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 0, 0, 1, 2, 2, 2, 2, 1, 1, 0],
-    "bateau": [0, 0, 0, 0, 2, 3, 3, 3, 3, 3, 2, 0]
+    "canal": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      2,
+      2,
+      2,
+      1,
+      1,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      0
+    ]
   },
   "localSecret": "Sur les épaves de Sword Beach, si vous prenez une touche à 10 m au-dessus de la ferraille lors de la remontée en ascenseur, ne ferrez pas violemment : continuez simplement de mouliner régulièrement. Le lieu jaune engame par l'arrière et s'auto-ferre sous la tension !"
 }

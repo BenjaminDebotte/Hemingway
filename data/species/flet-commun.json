@@ -4,7 +4,12 @@
     "name": "Flet commun",
     "scientificName": "Platichthys flesus",
     "family": "Pleuronectidés",
-    "localNames": ["Flet", "Picaud", "Sole bâtarde", "Flondre"],
+    "localNames": [
+      "Flet",
+      "Picaud",
+      "Sole bâtarde",
+      "Flondre"
+    ],
     "category": "Poisson plat",
     "identificationNotes": "Corps plat ovale avec yeux généralement situés sur le côté droit (mais parfois à gauche), peau rugueuse au toucher due à de petits tubercules épineux le long de la ligne latérale et des nageoires. Pas de taches orange vif (contrairement à la plie)."
   },
@@ -69,7 +74,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Tous coefficients ; se pêche facilement par mortes-eaux.",
       "tidalPhase": "Les deux dernières heures de jusant et première heure de flot.",
-      "slackVsCurrent": "Pêche optimale en dérive très lente sur les fonds meubles."
+      "slackVsCurrent": "Pêche optimale en dérive très lente sur les fonds meubles.",
+      "ruleOfTwelfths": "H2 à H5 (2/12 à 3/12) : dérive lente et continue faisant glisser le plomb sur les bancs de sable"
     },
     "weatherImpact": {
       "favorableWinds": "Vent faible permettant de faire dériver le bateau lentement sur le sable.",
@@ -104,8 +110,34 @@
     ]
   },
   "calendar": {
-    "canal": [2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2],
-    "bateau": [1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 2, 1]
+    "canal": [
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2
+    ],
+    "bateau": [
+      1,
+      1,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1
+    ]
   },
   "localSecret": "Dans le canal de Caen entre Blainville et Hérouville, faites glisser lentement votre plombée de 10 cm toutes les 2 minutes le long du fond de vase : le nuage de limon soulevé attire immédiatement les flets curieux qui se ruent sur l'arénicole !"
 }

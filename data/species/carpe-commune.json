@@ -4,7 +4,12 @@
     "name": "Carpe commune (et Miroir)",
     "scientificName": "Cyprinus carpio",
     "family": "Cyprinidés",
-    "localNames": ["Carpe miroir", "Carpe cuir", "Escargo", "Nourrice"],
+    "localNames": [
+      "Carpe miroir",
+      "Carpe cuir",
+      "Escargo",
+      "Nourrice"
+    ],
     "category": "Cyprinidé / Poisson blanc",
     "identificationNotes": "Corps massif et trapu brun-doré avec de grandes écailles régulières (commune) ou quelques écailles géantes disséminées (miroir), bouche protractile dirigée vers le bas garnie de 4 barbillons (2 longs et 2 courts), première épine dorsale forte et dentelée."
   },
@@ -70,7 +75,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Non applicable",
       "tidalPhase": "Non applicable",
-      "slackVsCurrent": "S'alimente paisiblement en eau lente"
+      "slackVsCurrent": "S'alimente paisiblement en eau lente",
+      "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
     },
     "weatherImpact": {
       "favorableWinds": "Vent d'Ouest ou de Sud doux poussant sur la berge avec baisse barométrique",
@@ -102,8 +108,34 @@
     ]
   },
   "calendar": {
-    "canal": [1, 1, 2, 3, 3, 3, 2, 3, 3, 3, 2, 1],
-    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    "canal": [
+      1,
+      1,
+      2,
+      3,
+      3,
+      3,
+      2,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "localSecret": "Sur les berges enrochées entre Calix et Blainville, intercalez une tête de ligne de 10 m en gros nylon 50/100 ou fluorocarbone : les carpes du canal ont une puissance phénoménale et se frottent immédiatement contre les blocs de pierres acérés pour couper la ligne fine !"
 }

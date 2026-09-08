@@ -4,7 +4,12 @@
     "name": "Brème commune",
     "scientificName": "Abramis brama",
     "family": "Cyprinidés",
-    "localNames": ["Brème", "Plate", "Plaquette" , "Baveuse"],
+    "localNames": [
+      "Brème",
+      "Plate",
+      "Plaquette",
+      "Baveuse"
+    ],
     "category": "Cyprinidé / Poisson blanc",
     "identificationNotes": "Corps très haut et très comprimé latéralement (profil en forme de plateau), robe bronze doré chez les gros adultes (argentée chez les jeunes), œil relativement petit par rapport à la tête, nageoire anale très longue, mucus abondant sur les écailles."
   },
@@ -70,7 +75,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Préfère les eaux calmes sans forte salinité",
       "tidalPhase": "Non applicable",
-      "slackVsCurrent": "Alimentation maximale en eau lente et stabilisée"
+      "slackVsCurrent": "Alimentation maximale en eau lente et stabilisée",
+      "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
     },
     "weatherImpact": {
       "favorableWinds": "Temps doux, couvert, vent faible créant une légère risée sans grosses vagues",
@@ -103,8 +109,34 @@
     ]
   },
   "calendar": {
-    "canal": [1, 1, 2, 3, 3, 2, 2, 3, 3, 3, 2, 1],
-    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    "canal": [
+      1,
+      1,
+      2,
+      3,
+      3,
+      2,
+      2,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "localSecret": "Pour sélectionner les grosses brèmes du canal de Caen et repousser les petits poissons, hachez 4 à 5 vers de terreau aux ciseaux et insérez-les au cœur de votre cage feeder entre deux pincées d'amorce au caramel. L'émission immédiate d'effluves déclenche les grosses brèmes qui 'bullent' distinctement en surface !"
 }

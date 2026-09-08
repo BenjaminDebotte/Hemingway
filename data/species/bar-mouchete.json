@@ -4,7 +4,11 @@
     "name": "Bar moucheté",
     "scientificName": "Dicentrarchus punctatus",
     "family": "Moronidés",
-    "localNames": ["Pitorre", "Moucheté", "Pigassou"],
+    "localNames": [
+      "Pitorre",
+      "Moucheté",
+      "Pigassou"
+    ],
     "category": "Carnassier marin",
     "identificationNotes": "Ponctuations noires nettes sur le dos et les flancs conservées à l'âge adulte. Tache noire très marquée sur le bord de l'opercule. Profil plus trapu que le bar commun."
   },
@@ -68,7 +72,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients de 60 à 80 pour une dérive modérée.",
       "tidalPhase": "Flot montant ramenant les poissons vers les plages et ridens.",
-      "slackVsCurrent": "Plein courant de 2e et 3e heure de marée le long des couloirs de sable."
+      "slackVsCurrent": "Plein courant de 2e et 3e heure de marée le long des couloirs de sable.",
+      "ruleOfTwelfths": "H2 et H3 (2/12 puis 3/12) : accélération du flot montant sur les ridens sablonneux"
     },
     "weatherImpact": {
       "favorableWinds": "Vent faible de Sud/Sud-Ouest ou brise thermique d'Est formant un clapot modéré.",
@@ -103,8 +108,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 0, 0, 1, 2, 2, 2, 1, 0, 0, 0],
-    "bateau": [0, 0, 0, 0, 1, 2, 3, 3, 2, 1, 0, 0]
+    "canal": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      2,
+      2,
+      1,
+      0,
+      0,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      1,
+      0,
+      0
+    ]
   },
   "localSecret": "Vérifiez bien la nageoire operculaire : le moucheté a une tache noire foncée très nette. Sa maille légale est de 30 cm, mais veillez à ne pas le confondre avec un jeune bar commun de 30 cm dont la maille reste 42 cm !"
 }

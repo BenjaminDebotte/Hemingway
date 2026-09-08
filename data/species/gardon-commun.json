@@ -4,7 +4,11 @@
     "name": "Gardon commun",
     "scientificName": "Rutilus rutilus",
     "family": "Cyprinidés",
-    "localNames": ["Gardon", "Rousse", "Roche"],
+    "localNames": [
+      "Gardon",
+      "Rousse",
+      "Roche"
+    ],
     "category": "Cyprinidé / Poisson blanc",
     "identificationNotes": "Corps fuselé argenté, œil avec un iris teinté de rouge-orangé très caractéristique, nageoires pelviennes et anale orangées à rouges, insertion de la nageoire dorsale située exactement à l'aplomb des nageoires ventrales."
   },
@@ -70,7 +74,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Préfère les eaux calmes sans forts courants de vidange maritime",
       "tidalPhase": "Non applicable",
-      "slackVsCurrent": "Pêche optimale en eau stabilisée entre deux manœuvres d'écluse"
+      "slackVsCurrent": "Pêche optimale en eau stabilisée entre deux manœuvres d'écluse",
+      "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
     },
     "weatherImpact": {
       "favorableWinds": "Vent faible dans le dos de la rive facilitant la tenue de la grande canne",
@@ -103,8 +108,34 @@
     ]
   },
   "calendar": {
-    "canal": [1, 1, 2, 2, 3, 3, 3, 3, 3, 2, 2, 1],
-    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    "canal": [
+      1,
+      1,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      1
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "localSecret": "Dans le canal de Caen, incorporez 25 à 30% de terre de Somme ou d'argile lourde dans votre amorce : cela empêche les boules d'amorce de dévaler le talus d'enrochement vers les 9 m de fond et ancre solidement le coup malgré le ressac créé par les cargos."
 }

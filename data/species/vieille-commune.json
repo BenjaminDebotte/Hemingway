@@ -4,7 +4,11 @@
     "name": "Vieille commune",
     "scientificName": "Labrus bergylta",
     "family": "Labridés",
-    "localNames": ["Vieille grande", "Vras", "Tanche de mer"],
+    "localNames": [
+      "Vieille grande",
+      "Vras",
+      "Tanche de mer"
+    ],
     "category": "Poisson de roche / épave",
     "identificationNotes": "Corps massif et puissant, grosses lèvres charnues bordées de dents coniques fortes, livrée extrêmement variable (du brun-vert marbré au rouge-orangé vif selon l'âge et la profondeur), nageoire dorsale longue garnie d'épines dures."
   },
@@ -65,7 +69,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients moyens de 45 à 70 pour pêcher à l'aplomb des trous.",
       "tidalPhase": "Les étales de marée et les périodes de ralentissement de courant.",
-      "slackVsCurrent": "S'alimente au cœur de sa faille quand le courant ne la contraint pas à lutter."
+      "slackVsCurrent": "S'alimente au cœur de sa faille quand le courant ne la contraint pas à lutter.",
+      "ruleOfTwelfths": "H1 et H6 (1/12, étales) : absence de dérive indispensable pour pêcher à l'aplomb des failles rocheuses"
     },
     "weatherImpact": {
       "favorableWinds": "Vent faible de terre (Sud/SO), eau claire et soleil éclairant les fonds rocheux.",
@@ -101,8 +106,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    "bateau": [0, 0, 0, 0, 2, 3, 3, 3, 3, 2, 1, 0]
+    "canal": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0
+    ]
   },
   "localSecret": "Dès que vous sentez les 'toques' sèches et brutales de la vieille sur les Roches du Calvados, ferrez immédiatement et bridez sans ménagement en moulinant aussitôt : la vieille tente d'entrer à reculons dans son trou en quelques fractions de seconde. Si elle y parvient, elle bloque ses opercules épineux et vous couperez la ligne !"
 }

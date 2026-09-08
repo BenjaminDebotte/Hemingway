@@ -4,7 +4,11 @@
     "name": "Tanche",
     "scientificName": "Tinca tinca",
     "family": "Cyprinidés",
-    "localNames": ["Beurrée", "Docteur", "Tanche de vase"],
+    "localNames": [
+      "Beurrée",
+      "Docteur",
+      "Tanche de vase"
+    ],
     "category": "Cyprinidé / Poisson blanc",
     "identificationNotes": "Corps trapu et épais vert-olive sombre à reflets cuivrés dorés, peau recouverte d'écailles minuscules profondément enrobées dans un épais mucus transparent, petits yeux d'un rouge-rubis caractéristique, bouche terminale ornée de 2 petits barbillons délicats, nageoires larges et arrondies."
   },
@@ -69,7 +73,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Non applicable",
       "tidalPhase": "Non applicable",
-      "slackVsCurrent": "Recherche les eaux mortes et calmes"
+      "slackVsCurrent": "Recherche les eaux mortes et calmes",
+      "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
     },
     "weatherImpact": {
       "favorableWinds": "Matinées chaudes et humides sans un souffle d'air avec légère brume",
@@ -101,8 +106,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 1, 2, 3, 3, 3, 3, 2, 1, 0, 0],
-    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    "canal": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "localSecret": "Au lever du jour le long des herbiers de Ranville, surveillez la surface de l'eau : des grappes de minuscules bulles serrées indiquent qu'une tanche fouille la vase. Déposez délicatement à cet endroit un ver de terreau coiffé d'un asticot rouge sur un flotteur fin : la touche se traduit par une remontée magique du flotteur qui s'incline !"
 }

@@ -4,7 +4,11 @@
     "name": "Sole commune",
     "scientificName": "Solea solea",
     "family": "Soléidés",
-    "localNames": ["Sole franche", "Sole de Manche", "Cordonnier"],
+    "localNames": [
+      "Sole franche",
+      "Sole de Manche",
+      "Cordonnier"
+    ],
     "category": "Poisson plat",
     "identificationNotes": "Corps ovale allongé très caractéristique, museau arrondi proéminent surplombant la bouche arquée, nageoire pectorale de la face supérieure marquée d'une tache noire bien distincte à son extrémité, face aveugle garnie de villosités sensorielles."
   },
@@ -68,7 +72,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients faibles à moyens (40 à 65) pour une dérive douce.",
       "tidalPhase": "Les deux dernières heures de flot et l'étale de pleine mer nocturne.",
-      "slackVsCurrent": "S'alimente activement quand le courant ralentit."
+      "slackVsCurrent": "S'alimente activement quand le courant ralentit.",
+      "ruleOfTwelfths": "H5 et H6 (fin de flot et étale de nuit, 1/12) : courant ralenti permettant la prospection olfactive"
     },
     "weatherImpact": {
       "favorableWinds": "Nuits douces d'été sans vent avec mer parfaitement calme et lisse.",
@@ -103,8 +108,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 0, 0, 2, 3, 3, 3, 2, 1, 0, 0],
-    "bateau": [0, 0, 0, 0, 2, 3, 3, 3, 3, 1, 0, 0]
+    "canal": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      3,
+      3,
+      3,
+      3,
+      1,
+      0,
+      0
+    ]
   },
   "localSecret": "Pour la sole dans le canal ou en mer, utilisez des hameçons fins de fer à tige longue (n°6 ou 8) et enfilez le ver jusqu'à recouvrir le nœud d'attache : la sole a une bouche minuscule et tâte longuement l'esche avant d'aspirer. Si elle sent l'acier du fer, elle recrache immédiatement !"
 }

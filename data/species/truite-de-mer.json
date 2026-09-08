@@ -4,7 +4,11 @@
     "name": "Truite de mer",
     "scientificName": "Salmo trutta trutta",
     "family": "Salmonidés",
-    "localNames": ["Bécard", "Truite blanche", "Finock (jeune)"],
+    "localNames": [
+      "Bécard",
+      "Truite blanche",
+      "Finock (jeune)"
+    ],
     "category": "Grand migrateur",
     "identificationNotes": "Corps fuselé argenté parsemé de points noirs souvent en forme de croix ou d'étoiles (disparition des points rouges en mer), petite nageoire adipeuse entre la dorsale et la queue, queue peu échancrée à pédoncule épais."
   },
@@ -70,7 +74,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients de 60 à 85 créant une forte dynamique côtière.",
       "tidalPhase": "Mi-marée montante poussant les migrateurs vers l'estuaire.",
-      "slackVsCurrent": "Activité maximale dans les vagues de déferlement."
+      "slackVsCurrent": "Activité maximale dans les vagues de déferlement.",
+      "ruleOfTwelfths": "H2 et H3 (flot montant) : poussée d'eau salée guidant les migrateurs vers l'estuaire de l'Orne"
     },
     "weatherImpact": {
       "favorableWinds": "Vent thermique d'Ouest ou de Sud créant une belle risée sans eau mâchée.",
@@ -104,8 +109,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 0, 1, 2, 3, 3, 3, 2, 1, 0, 0],
-    "bateau": [0, 0, 0, 2, 3, 3, 3, 2, 1, 0, 0, 0]
+    "canal": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      2,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0,
+      0,
+      0
+    ]
   },
   "localSecret": "Lors des coups d'eau orageux de juillet-août, postez-vous à la tombée de la nuit en aval immédiat de Pegasus Bridge : les truites de mer en migration s'arrêtent dans la zone de calme créée par la pile. Un poisson nageur suspending de 7 cm ramené par à-coups vigoureux déclenche des attaques foudroyantes accompagnées de bonds spectaculaires !"
 }

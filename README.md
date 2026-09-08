@@ -70,7 +70,12 @@ Le projet couvre deux écosystèmes complémentaires et hyper-productifs du dép
 ### 2. La Côte de Nacre en bateau (Ouistreham à Courseulles)
 * **Les Roches du Calvados :** Immense plateau calcaire jurassique de 15 km au large de Lion-sur-Mer, Luc-sur-Mer et Bernières. Champs denses de laminaires, moulières naturelles, crevettes, araignées et tourteaux.
 * **Les Épaves du Débarquement 1944 (Opération Neptune) :** Plus de 150 épaves historiques (navires de guerre, transports *Susan B. Anthony*, *Empire Broadsword*, caissons Phoenix d'Arromanches) gisant entre 15 et 35 m de fond, véritables récifs artificiels abritant les géants du large.
-* **Dynamique des Marées :** Régime macrotidal puissant (jusqu'à 7,8 m de marnage). Flot portant à l'Est, Jusant portant à l'Ouest. Dérives tactiques en mortes-eaux (coeff 40-60 sur épaves profondes) ou chasses en vives-eaux (coeff 70-95 sur les pointes rocheuses).
+* **Dynamique des Marées & Règle des Douzièmes :** 
+  * Régime macrotidal puissant (jusqu'à 7,8 m de marnage). Flot portant à l'Est, Jusant portant à l'Ouest.
+  * Découpage horaire selon **la règle des douzièmes** (H1 à H6) :
+    - *H1 (1/12) & H6 (1/12) :* Courant faible ou nul (étales) $\rightarrow$ Idéal pour épaves profondes (Lieu, Congre, Tacaud) et prospections au ras du fond (Céphalopodes, Vieille).
+    - *H2 (2/12) & H5 (2/12) :* Courant modéré $\rightarrow$ Idéal pour la tenue des appâts naturels et sparidés (Daurade royale, Griset).
+    - *H3 (3/12) & H4 (3/12) :* Mi-marée, vitesse de pointe du jus $\rightarrow$ Chasses violentes des carnassiers pélagiques (Bar, Maquereau, Orphie, Turbot en dérive sur ridens).
 
 ---
 

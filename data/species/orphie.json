@@ -4,7 +4,11 @@
     "name": "Orphie (Aiguillette)",
     "scientificName": "Belone belone",
     "family": "Bélonidés",
-    "localNames": ["Aiguillette", "Poisson-serpent", "Bécassine de mer"],
+    "localNames": [
+      "Aiguillette",
+      "Poisson-serpent",
+      "Bécassine de mer"
+    ],
     "category": "Carnassier marin",
     "identificationNotes": "Corps extrêmement allongé et comprimé argenté, mâchoires prolongées en un long bec effilé armé de dents fines, arêtes d'une couleur vert émeraude caractéristique due à la biliverdine."
   },
@@ -68,7 +72,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients de 50 à 80 assurant une bonne circulation d'eau.",
       "tidalPhase": "Activité continue tout au long du flot et du début de jusant.",
-      "slackVsCurrent": "Très active en plein courant de surface."
+      "slackVsCurrent": "Très active en plein courant de surface.",
+      "ruleOfTwelfths": "H2 à H4 (2/12 à 3/12) : courant porteur bien établi avec clapot de surface favorable"
     },
     "weatherImpact": {
       "favorableWinds": "Mer d'huile ou très légère brise thermique réchauffant la surface.",
@@ -102,8 +107,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 0, 0, 2, 3, 3, 3, 2, 1, 0, 0],
-    "bateau": [0, 0, 0, 0, 2, 3, 3, 3, 3, 1, 0, 0]
+    "canal": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      3,
+      3,
+      3,
+      3,
+      1,
+      0,
+      0
+    ]
   },
   "localSecret": "Pour éviter les décrochés fréquents dus à sa bouche très dure et osseuse, remplacez l'hameçon par un morceau de tresse de soie défilée rouge : les micro-dents du bec s'y emmêlent irrémédiablement sans blesser le poisson, garantissant 100% de captures au canal !"
 }

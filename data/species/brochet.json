@@ -4,7 +4,11 @@
     "name": "Brochet",
     "scientificName": "Esox lucius",
     "family": "Ésocidés",
-    "localNames": ["Bec", "Grand gousier", "Brochet maillé"],
+    "localNames": [
+      "Bec",
+      "Grand gousier",
+      "Brochet maillé"
+    ],
     "category": "Carnassier eau douce / saumâtre",
     "identificationNotes": "Corps cylindrique allongé en forme de torpille, museau large aplati rappelant un bec de canard garni de plus de 700 dents acérées orientées vers l'arrière, nageoire dorsale très reculée à l'aplomb de l'anale, robe camouflage vert-olive mouchetée de jaune pâle."
   },
@@ -70,7 +74,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Non applicable",
       "tidalPhase": "Non applicable",
-      "slackVsCurrent": "Affectionne les eaux calmes et amorties"
+      "slackVsCurrent": "Affectionne les eaux calmes et amorties",
+      "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
     },
     "weatherImpact": {
       "favorableWinds": "Temps gris, doux et venteux créant un beau clapot de berge",
@@ -102,8 +107,34 @@
     ]
   },
   "calendar": {
-    "canal": [1, 0, 0, 0, 2, 3, 2, 2, 3, 3, 3, 2],
-    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    "canal": [
+      1,
+      0,
+      0,
+      0,
+      2,
+      3,
+      2,
+      2,
+      3,
+      3,
+      3,
+      2
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "localSecret": "Au Bassin Saint-Pierre et sur les darses de Colombelles, pêchez avec un jerkbait coulant de 15 cm : lancez le long des péniches amarrées, donnez deux coups de scion vifs pour désaxer le leurre et marquez une pause de 4 secondes complètes. C'est à la reprise que le brochet surgit de dessous la coque !"
 }

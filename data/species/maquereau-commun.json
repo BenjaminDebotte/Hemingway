@@ -4,7 +4,11 @@
     "name": "Maquereau commun",
     "scientificName": "Scomber scombrus",
     "family": "Scombridés",
-    "localNames": ["Maquereau", "Lacet", "Breton"],
+    "localNames": [
+      "Maquereau",
+      "Lacet",
+      "Breton"
+    ],
     "category": "Carnassier marin",
     "identificationNotes": "Dos vert-bleu métallique zébré de lignes sinueuses noires, ventre blanc nacré irisé, petites pinnules natatoires caractéristiques entre la deuxième dorsale et la queue très échancrée."
   },
@@ -68,7 +72,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Tous coefficients ; les marées de vives-eaux rassemblent les bancs.",
       "tidalPhase": "Mi-marée de flot ou de jusant avec courant porteur bien établi.",
-      "slackVsCurrent": "Moins actif lors des étales complètes."
+      "slackVsCurrent": "Moins actif lors des étales complètes.",
+      "ruleOfTwelfths": "H3 et H4 (3/12 de mi-marée) : vitesse de pointe du courant regroupant les bancs de sprats au large"
     },
     "weatherImpact": {
       "favorableWinds": "Mer calme à peu agitée facilitant le repérage visuel des oiseaux en plongée.",
@@ -104,8 +109,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 0, 0, 1, 2, 3, 3, 2, 0, 0, 0],
-    "bateau": [0, 0, 0, 0, 2, 3, 3, 3, 3, 2, 0, 0]
+    "canal": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      0,
+      0,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      3,
+      3,
+      3,
+      3,
+      2,
+      0,
+      0
+    ]
   },
   "localSecret": "Au large de Ouistreham, observez l'horizon marin : des mouettes tournoyant et plongeant signalent une chasse de maquereaux. Approchez le bateau sans couper les gaz trop brusquement et lancez un jig de 20g sur la périphérie pour multiplier les prises sans effrayer le banc."
 }

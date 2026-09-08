@@ -4,7 +4,11 @@
     "name": "Bar commun (ou Bar franc)",
     "scientificName": "Dicentrarchus labrax",
     "family": "Moronidés",
-    "localNames": ["Loup", "Drille", "Loubine"],
+    "localNames": [
+      "Loup",
+      "Drille",
+      "Loubine"
+    ],
     "category": "Carnassier marin",
     "identificationNotes": "Corps fuselé argenté, 2 nageoires dorsales séparées, tache sombre diffuse sur l'opercule armé d'épines. Flancs immaculés à l'âge adulte."
   },
@@ -69,7 +73,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients 70-90 (vives-eaux) sur roches ; 45-65 (mortes-eaux) sur épaves.",
       "tidalPhase": "Flot (portant à l'Est) : crée de forts upwellings sur la pointe des plateaux.",
-      "slackVsCurrent": "Maximum d'activité à mi-marée quand le jus plaque le fourrage."
+      "slackVsCurrent": "Maximum d'activité à mi-marée quand le jus plaque le fourrage.",
+      "ruleOfTwelfths": "H3 et H4 (les deux tiers de 3/12e, mi-marée) : courant maximal et chasses violentes sur les têtes de roche"
     },
     "weatherImpact": {
       "favorableWinds": "Vents de Sud/SO (terre) : mer plate, eau limpide, idéal leurres de surface.",
@@ -106,8 +111,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 0, 1, 2, 2, 2, 2, 3, 3, 3, 1],
-    "bateau": [0, 0, 0, 0, 2, 3, 3, 3, 3, 2, 1, 0]
+    "canal": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      1
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0
+    ]
   },
   "localSecret": "Postez-vous sous Pegasus Bridge 10 min après l'ouverture du sas d'Ouistreham : l'onde d'eau salée déclenche systématiquement 2 à 3 touches franches sur un Black Minnow 90 Kaki."
 }

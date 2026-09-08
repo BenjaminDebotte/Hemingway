@@ -136,11 +136,12 @@
         },
         "tideAndCurrent": {
           "type": "object",
-          "required": ["bestCoefficients", "tidalPhase", "slackVsCurrent"],
+          "required": ["bestCoefficients", "tidalPhase", "slackVsCurrent", "ruleOfTwelfths"],
           "properties": {
             "bestCoefficients": { "type": "string", "description": "Coefficients de marée recommandés" },
             "tidalPhase": { "type": "string", "description": "Flot (Est) vs Jusant (Ouest)" },
-            "slackVsCurrent": { "type": "string", "description": "Étales vs plein courant" }
+            "slackVsCurrent": { "type": "string", "description": "Étales vs plein courant" },
+            "ruleOfTwelfths": { "type": "string", "description": "Créneau optimal selon la règle des douzièmes de marée (H1 à H6)" }
           }
         },
         "weatherImpact": {

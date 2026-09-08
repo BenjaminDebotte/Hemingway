@@ -4,7 +4,11 @@
     "name": "Daurade grise (Griset)",
     "scientificName": "Spondyliosoma cantharus",
     "family": "Sparidés",
-    "localNames": ["Griset", "Bramie", "Canthe"],
+    "localNames": [
+      "Griset",
+      "Bramie",
+      "Canthe"
+    ],
     "category": "Sparidé",
     "identificationNotes": "Corps ovale et comprimé gris argenté avec des lignes longitudinales dorées plus ou moins nettes, livrée nuptiale sombre chez le mâle avec des reflets bleutés, dents incisiformes pointues."
   },
@@ -65,7 +69,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients moyens de 50 à 75 pour maintenir une dérive lente et maîtrisée.",
       "tidalPhase": "Début de flot et début de jusant avec courant bien établi sur les roches.",
-      "slackVsCurrent": "Morsures franches en plein courant faiblissant à l'approche de l'étale."
+      "slackVsCurrent": "Morsures franches en plein courant faiblissant à l'approche de l'étale.",
+      "ruleOfTwelfths": "H2-H3 et H4-H5 (2/12 à 3/12) : dérive soutenue sur les moulières naturelles des Roches de Lion"
     },
     "weatherImpact": {
       "favorableWinds": "Vent de terre modéré (Sud/SO) maintenant une eau claire et une houle maniable.",
@@ -101,8 +106,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    "bateau": [0, 0, 0, 0, 1, 2, 3, 3, 3, 2, 1, 0]
+    "canal": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0
+    ]
   },
   "localSecret": "Sur le plateau des Roches du Calvados, coupez de très fines lanières d'encornet blanc (3 mm de large sur 3 cm de long) et eschez-les en laissant flotter une pointe libre : la daurade grise mordille sans méfiance et s'auto-ferre dès que le bateau avance doucement en dérive !"
 }

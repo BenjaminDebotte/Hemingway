@@ -4,7 +4,11 @@
     "name": "Tacaud commun",
     "scientificName": "Trisopterus luscus",
     "family": "Gadidés",
-    "localNames": ["Goujon de mer", "Guitan", "Tacot"],
+    "localNames": [
+      "Goujon de mer",
+      "Guitan",
+      "Tacot"
+    ],
     "category": "Carnassier marin",
     "identificationNotes": "Corps haut et comprimé cuivré orné de 4 à 5 bandes sombres verticales transversales, long barbillon mentonnier très visible, tache noire à la base des pectorales, anus situé très en avant."
   },
@@ -68,7 +72,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Tous coefficients ; se pêche facilement même lors des courants faibles.",
       "tidalPhase": "Activité continue tout au long du montant et du descendant.",
-      "slackVsCurrent": "Pêche la plus productive aux étales au ras de l'épave."
+      "slackVsCurrent": "Pêche la plus productive aux étales au ras de l'épave.",
+      "ruleOfTwelfths": "H1 et H6 (1/12, étales de marée) : indispensable pour caler les montages au ras de la ferraille"
     },
     "weatherImpact": {
       "favorableWinds": "Toute météo navigable permettant de caler le bateau au-dessus de la structure.",
@@ -103,8 +108,34 @@
     ]
   },
   "calendar": {
-    "canal": [2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2],
-    "bateau": [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+    "canal": [
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2
+    ],
+    "bateau": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ]
   },
   "localSecret": "Sur les épaves du Débarquement, si vous recherchez un gros congre ou un bar trophée, pêchez d'abord un petit tacaud de 15 cm à la dandinette et remettez-le aussitôt à l'eau comme vif sur une grosse ligne : c'est la proie favorite des géants de l'épave !"
 }

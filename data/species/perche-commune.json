@@ -4,7 +4,11 @@
     "name": "Perche commune",
     "scientificName": "Perca fluviatilis",
     "family": "Percidés",
-    "localNames": ["Zèbre", "Perchaude", "Perchot"],
+    "localNames": [
+      "Zèbre",
+      "Perchaude",
+      "Perchot"
+    ],
     "category": "Carnassier eau douce / saumâtre",
     "identificationNotes": "Corps trapu et bossu chez les gros sujets, dos verdâtre orné de 5 à 9 bandes transversales sombres, nageoires pelviennes et anale d'un rouge-orangé vif, première dorsale épineuse arborant une tache noire distinctive à l'arrière."
   },
@@ -70,7 +74,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Préfère les eaux calmes du canal à faible circulation d'eau de mer",
       "tidalPhase": "Non applicable",
-      "slackVsCurrent": "Très active en eau calme"
+      "slackVsCurrent": "Très active en eau calme",
+      "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
     },
     "weatherImpact": {
       "favorableWinds": "Beau temps ensoleillé, vent faible créant une légère brise de surface",
@@ -103,8 +108,34 @@
     ]
   },
   "calendar": {
-    "canal": [1, 1, 0, 0, 2, 3, 3, 3, 3, 3, 2, 1],
-    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    "canal": [
+      1,
+      1,
+      0,
+      0,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "localSecret": "Autour des pontons du Bassin Saint-Pierre et le long des coques amarrées à Colombelles, lancez une petite lame vibrante de 5g le long de la structure et ramenez-la par saccades rapides entre deux eaux. L'effet de panique déclenche les attaques réflexes des grosses perches 'bossues' (35 cm+) !"
 }

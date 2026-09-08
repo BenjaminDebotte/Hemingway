@@ -4,7 +4,11 @@
     "name": "Silure glane",
     "scientificName": "Silurus glanis",
     "family": "Siluridés",
-    "localNames": ["Moustachu", "Glane", "Géant des eaux douces"],
+    "localNames": [
+      "Moustachu",
+      "Glane",
+      "Géant des eaux douces"
+    ],
     "category": "Carnassier eau douce / saumâtre",
     "identificationNotes": "Corps anguilliforme massif sans écaille recouvert d'un épais mucus protecteur, tête aplatie gigantesque armée de 6 barbillons (2 très longs sur la mâchoire supérieure et 4 courts sous la gorge), minuscule dorsale reculée et nageoire anale extrêmement longue."
   },
@@ -70,7 +74,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Non applicable",
       "tidalPhase": "Non applicable",
-      "slackVsCurrent": "Sédentaire calé au fond des fosses"
+      "slackVsCurrent": "Sédentaire calé au fond des fosses",
+      "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
     },
     "weatherImpact": {
       "favorableWinds": "Chaleur estivale étouffante et temps orageux lourd stimulant son appétit",
@@ -102,8 +107,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 1, 2, 3, 3, 3, 3, 3, 2, 0, 0],
-    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    "canal": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      0,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "localSecret": "Sous le Viaduc de Calix par 8 m de fond, déposez en soirée une grappe de 15 gros vers de terreau panachée avec 2 lanières d'encornet frais sur un montage muni d'un petit flotteur sous-marin de 20g : le cocktail visuel et olfactif décollé de 30 cm de la vase déclenche des attaques brutales de silures dépassant souvent 1m80 !"
 }

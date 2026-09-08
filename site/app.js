@@ -444,8 +444,12 @@ function renderCardBack(fish) {
           <div class="spot-item"><strong>Épaves 1944 :</strong> ${fish.bateau.habitats.epavesDDay}</div>
           <div class="spot-item"><strong>Bancs de sable :</strong> ${fish.bateau.habitats.bancsDeSableEtRidens}</div>
         </div>
-        <div style="font-size: 0.68rem; color: var(--slate-700); margin-bottom: 0.3rem;">
+        <div style="font-size: 0.72rem; color: var(--slate-700); margin-bottom: 0.35rem;">
           <strong>🌊 Marée & Vents :</strong> ${fish.bateau.tideAndCurrent.bestCoefficients} | ${fish.bateau.weatherImpact.favorableWinds}
+        </div>
+        <div class="twelfths-banner">
+          <div class="twelfths-title">⏱️ Règle des douzièmes (Créneau optimal)</div>
+          <div class="twelfths-text">${fish.bateau.tideAndCurrent.ruleOfTwelfths}</div>
         </div>
         <ul class="tactics-bullets">
           ${fish.bateau.tactics.map(t => `<li>${t}</li>`).join('')}

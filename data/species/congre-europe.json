@@ -4,7 +4,11 @@
     "name": "Congre d'Europe",
     "scientificName": "Conger conger",
     "family": "Congridés",
-    "localNames": ["Anguille de mer", "Fielas", "Siffleur (jeune)"],
+    "localNames": [
+      "Anguille de mer",
+      "Fielas",
+      "Siffleur (jeune)"
+    ],
     "category": "Poisson de roche / épave",
     "identificationNotes": "Corps serpentiforme très puissant gris ardoise à noirâtre, nageoire dorsale débutant nettement en arrière de l'extrémité des pectorales (contrairement à l'anguille), mâchoires redoutables garnies de dents coupantes très serrées."
   },
@@ -68,7 +72,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients faibles (35 à 55) pour mouiller le bateau avec précision au-dessus des tôles.",
       "tidalPhase": "Les étales de pleine et basse mer facilitent la descente du montage dans les cales.",
-      "slackVsCurrent": "Pêche la plus productive au moment où le courant faiblit."
+      "slackVsCurrent": "Pêche la plus productive au moment où le courant faiblit.",
+      "ruleOfTwelfths": "H6 et H1 (1/12, étale de pleine/basse mer) : courant nul requis pour descendre l'appât au cœur de l'épave"
     },
     "weatherImpact": {
       "favorableWinds": "Mer très calme permettant le mouillage sur épave en toute sécurité.",
@@ -104,8 +109,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 0, 1, 2, 3, 3, 3, 3, 2, 1, 0],
-    "bateau": [2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 2]
+    "canal": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0
+    ],
+    "bateau": [
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2
+    ]
   },
   "localSecret": "Sur les épaves du Débarquement, écrasez légèrement la tête d'un maquereau frais avant de le descendre au fond : le jus huileux qui s'échappe crée une piste olfactive irrésistible dans le courant de marée qui fait sortir les congres monstres (plus de 15 kg) de leurs tôles d'acier."
 }

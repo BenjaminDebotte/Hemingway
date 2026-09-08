@@ -4,7 +4,11 @@
     "name": "Merlan",
     "scientificName": "Merlangius merlangus",
     "family": "Gadidés",
-    "localNames": ["Merlan franc", "Gogot", "Merluche"],
+    "localNames": [
+      "Merlan franc",
+      "Gogot",
+      "Merluche"
+    ],
     "category": "Carnassier marin",
     "identificationNotes": "Corps allongé argenté à dos brun-jaune, tache noire très distincte à l'aisselle de la nageoire pectorale, trois nageoires dorsales rapprochées, pas de barbillon mentonnier visible chez l'adulte."
   },
@@ -69,7 +73,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients modérés de 45 à 70 pour éviter de trop lourdes plombées.",
       "tidalPhase": "Actif durant tout le cycle de marée avec pic aux étales de basse mer.",
-      "slackVsCurrent": "Pêche facilitée lors des ralentissements de courant."
+      "slackVsCurrent": "Pêche facilitée lors des ralentissements de courant.",
+      "ruleOfTwelfths": "H5-H6 et H1-H2 (1/12 à 2/12) : marée ralentie facilitant la tenue des lignes au ras de la vase"
     },
     "weatherImpact": {
       "favorableWinds": "Vent faible de terre (Sud/Sud-Est) assurant une mer maniable en hiver.",
@@ -104,8 +109,34 @@
     ]
   },
   "calendar": {
-    "canal": [3, 3, 1, 0, 0, 0, 0, 0, 1, 2, 3, 3],
-    "bateau": [3, 3, 2, 0, 0, 0, 0, 0, 2, 3, 3, 3]
+    "canal": [
+      3,
+      3,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      3,
+      3
+    ],
+    "bateau": [
+      3,
+      3,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      3,
+      3,
+      3
+    ]
   },
   "localSecret": "En hiver dans le canal de Caen, installez-vous sur les quais de Blainville ou d'Hérouville après le coucher du soleil : une lamelle de maquereau eschée avec une petite perle phosphorescente rechargée à la lampe UV attire les bancs de gros merlans (35 cm+) stationnés dans 8 m d'eau."
 }

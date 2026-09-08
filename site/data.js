@@ -75,7 +75,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients 70-90 (vives-eaux) sur roches ; 45-65 (mortes-eaux) sur épaves.",
         "tidalPhase": "Flot (portant à l'Est) : crée de forts upwellings sur la pointe des plateaux.",
-        "slackVsCurrent": "Maximum d'activité à mi-marée quand le jus plaque le fourrage."
+        "slackVsCurrent": "Maximum d'activité à mi-marée quand le jus plaque le fourrage.",
+        "ruleOfTwelfths": "H3 et H4 (les deux tiers de 3/12e, mi-marée) : courant maximal et chasses violentes sur les têtes de roche"
       },
       "weatherImpact": {
         "favorableWinds": "Vents de Sud/SO (terre) : mer plate, eau limpide, idéal leurres de surface.",
@@ -217,7 +218,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients de 60 à 80 pour une dérive modérée.",
         "tidalPhase": "Flot montant ramenant les poissons vers les plages et ridens.",
-        "slackVsCurrent": "Plein courant de 2e et 3e heure de marée le long des couloirs de sable."
+        "slackVsCurrent": "Plein courant de 2e et 3e heure de marée le long des couloirs de sable.",
+        "ruleOfTwelfths": "H2 et H3 (2/12 puis 3/12) : accélération du flot montant sur les ridens sablonneux"
       },
       "weatherImpact": {
         "favorableWinds": "Vent faible de Sud/Sud-Ouest ou brise thermique d'Est formant un clapot modéré.",
@@ -356,7 +358,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients faibles de 40 à 60 (mortes-eaux) pour dériver sur épaves.",
         "tidalPhase": "Étales de marée et début de renverse pour pêcher à l'aplomb des structures.",
-        "slackVsCurrent": "Courant modéré idéal pour l'ascenseur sans bannière excessive."
+        "slackVsCurrent": "Courant modéré idéal pour l'ascenseur sans bannière excessive.",
+        "ruleOfTwelfths": "H1, H2, H5 et H6 (1/12 et 2/12) : étales et début/fin de marée quand le courant faiblit sous 1.2 nœud"
       },
       "weatherImpact": {
         "favorableWinds": "Vent de Sud/SO nul à faible : dérive stable indispensable au-dessus des épaves.",
@@ -497,7 +500,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Tous coefficients ; les marées de vives-eaux rassemblent les bancs.",
         "tidalPhase": "Mi-marée de flot ou de jusant avec courant porteur bien établi.",
-        "slackVsCurrent": "Moins actif lors des étales complètes."
+        "slackVsCurrent": "Moins actif lors des étales complètes.",
+        "ruleOfTwelfths": "H3 et H4 (3/12 de mi-marée) : vitesse de pointe du courant regroupant les bancs de sprats au large"
       },
       "weatherImpact": {
         "favorableWinds": "Mer calme à peu agitée facilitant le repérage visuel des oiseaux en plongée.",
@@ -638,7 +642,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients de 50 à 80 assurant une bonne circulation d'eau.",
         "tidalPhase": "Activité continue tout au long du flot et du début de jusant.",
-        "slackVsCurrent": "Très active en plein courant de surface."
+        "slackVsCurrent": "Très active en plein courant de surface.",
+        "ruleOfTwelfths": "H2 à H4 (2/12 à 3/12) : courant porteur bien établi avec clapot de surface favorable"
       },
       "weatherImpact": {
         "favorableWinds": "Mer d'huile ou très légère brise thermique réchauffant la surface.",
@@ -778,7 +783,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients modérés de 45 à 70 pour éviter de trop lourdes plombées.",
         "tidalPhase": "Actif durant tout le cycle de marée avec pic aux étales de basse mer.",
-        "slackVsCurrent": "Pêche facilitée lors des ralentissements de courant."
+        "slackVsCurrent": "Pêche facilitée lors des ralentissements de courant.",
+        "ruleOfTwelfths": "H5-H6 et H1-H2 (1/12 à 2/12) : marée ralentie facilitant la tenue des lignes au ras de la vase"
       },
       "weatherImpact": {
         "favorableWinds": "Vent faible de terre (Sud/Sud-Est) assurant une mer maniable en hiver.",
@@ -918,7 +924,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Tous coefficients ; se pêche facilement même lors des courants faibles.",
         "tidalPhase": "Activité continue tout au long du montant et du descendant.",
-        "slackVsCurrent": "Pêche la plus productive aux étales au ras de l'épave."
+        "slackVsCurrent": "Pêche la plus productive aux étales au ras de l'épave.",
+        "ruleOfTwelfths": "H1 et H6 (1/12, étales de marée) : indispensable pour caler les montages au ras de la ferraille"
       },
       "weatherImpact": {
         "favorableWinds": "Toute météo navigable permettant de caler le bateau au-dessus de la structure.",
@@ -1059,7 +1066,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients moyens de 55 à 75 permettant de tenir le fond sans dérive trop forte.",
         "tidalPhase": "Les deux dernières heures de flot et la première heure de jusant.",
-        "slackVsCurrent": "Activité intense dès que le courant faiblit à l'approche de la pleine mer."
+        "slackVsCurrent": "Activité intense dès que le courant faiblit à l'approche de la pleine mer.",
+        "ruleOfTwelfths": "H2 et H5 (2/12 du marnage) : courant modéré idéal pour ancrer les montages au crabe ou couteau"
       },
       "weatherImpact": {
         "favorableWinds": "Vent de terre (Sud/Sud-Ouest), mer calme et eau cristalline réchauffée.",
@@ -1197,7 +1205,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients moyens de 50 à 75 pour maintenir une dérive lente et maîtrisée.",
         "tidalPhase": "Début de flot et début de jusant avec courant bien établi sur les roches.",
-        "slackVsCurrent": "Morsures franches en plein courant faiblissant à l'approche de l'étale."
+        "slackVsCurrent": "Morsures franches en plein courant faiblissant à l'approche de l'étale.",
+        "ruleOfTwelfths": "H2-H3 et H4-H5 (2/12 à 3/12) : dérive soutenue sur les moulières naturelles des Roches de Lion"
       },
       "weatherImpact": {
         "favorableWinds": "Vent de terre modéré (Sud/SO) maintenant une eau claire et une houle maniable.",
@@ -1340,7 +1349,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Tous coefficients ; se pêche facilement par mortes-eaux.",
         "tidalPhase": "Les deux dernières heures de jusant et première heure de flot.",
-        "slackVsCurrent": "Pêche optimale en dérive très lente sur les fonds meubles."
+        "slackVsCurrent": "Pêche optimale en dérive très lente sur les fonds meubles.",
+        "ruleOfTwelfths": "H2 à H5 (2/12 à 3/12) : dérive lente et continue faisant glisser le plomb sur les bancs de sable"
       },
       "weatherImpact": {
         "favorableWinds": "Vent faible permettant de faire dériver le bateau lentement sur le sable.",
@@ -1480,7 +1490,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients moyens de 50 à 75 assurant une dérive continue.",
         "tidalPhase": "Flot montant et début de jusant quand le courant pousse sur les bancs.",
-        "slackVsCurrent": "Très active en courant modéré ; s'enfouit lors des très violents courants."
+        "slackVsCurrent": "Très active en courant modéré ; s'enfouit lors des très violents courants.",
+        "ruleOfTwelfths": "H2 à H4 (2/12 à 3/12) : courant actif décollant les arénicoles sur les ridens de Bernières"
       },
       "weatherImpact": {
         "favorableWinds": "Vent faible de Sud ou brise d'Est permettant une dérive linéaire régulière.",
@@ -1620,7 +1631,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients faibles à moyens (40 à 65) pour une dérive douce.",
         "tidalPhase": "Les deux dernières heures de flot et l'étale de pleine mer nocturne.",
-        "slackVsCurrent": "S'alimente activement quand le courant ralentit."
+        "slackVsCurrent": "S'alimente activement quand le courant ralentit.",
+        "ruleOfTwelfths": "H5 et H6 (fin de flot et étale de nuit, 1/12) : courant ralenti permettant la prospection olfactive"
       },
       "weatherImpact": {
         "favorableWinds": "Nuits douces d'été sans vent avec mer parfaitement calme et lisse.",
@@ -1756,7 +1768,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients de 55 à 80 assurant une dérive régulière du bateau.",
         "tidalPhase": "Les heures de plein courant de flot et de jusant créant les ridens.",
-        "slackVsCurrent": "Chasseur à l'affût actif lorsque le courant balaye les lançons."
+        "slackVsCurrent": "Chasseur à l'affût actif lorsque le courant balaye les lançons.",
+        "ruleOfTwelfths": "H3 et H4 (les 3/12e de mi-marée) : courant fort créant les ridens où le lançon dérive à 1.5 nœud"
       },
       "weatherImpact": {
         "favorableWinds": "Vent régulier de 2 à 3 Beaufort permettant une dérive linéaire sans à-coups.",
@@ -1894,7 +1907,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients moyens de 45 à 70 pour pêcher à l'aplomb des trous.",
         "tidalPhase": "Les étales de marée et les périodes de ralentissement de courant.",
-        "slackVsCurrent": "S'alimente au cœur de sa faille quand le courant ne la contraint pas à lutter."
+        "slackVsCurrent": "S'alimente au cœur de sa faille quand le courant ne la contraint pas à lutter.",
+        "ruleOfTwelfths": "H1 et H6 (1/12, étales) : absence de dérive indispensable pour pêcher à l'aplomb des failles rocheuses"
       },
       "weatherImpact": {
         "favorableWinds": "Vent faible de terre (Sud/SO), eau claire et soleil éclairant les fonds rocheux.",
@@ -2035,7 +2049,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients faibles (35 à 55) pour mouiller le bateau avec précision au-dessus des tôles.",
         "tidalPhase": "Les étales de pleine et basse mer facilitent la descente du montage dans les cales.",
-        "slackVsCurrent": "Pêche la plus productive au moment où le courant faiblit."
+        "slackVsCurrent": "Pêche la plus productive au moment où le courant faiblit.",
+        "ruleOfTwelfths": "H6 et H1 (1/12, étale de pleine/basse mer) : courant nul requis pour descendre l'appât au cœur de l'épave"
       },
       "weatherImpact": {
         "favorableWinds": "Mer très calme permettant le mouillage sur épave en toute sécurité.",
@@ -2177,7 +2192,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients de 60 à 85 apportant une eau riche sur les roches.",
         "tidalPhase": "Les deux premières heures de flot montant sur les plateaux côtiers.",
-        "slackVsCurrent": "S'alimente activement dans les zones d'amorti de courant."
+        "slackVsCurrent": "S'alimente activement dans les zones d'amorti de courant.",
+        "ruleOfTwelfths": "H1 et H2 (début de flot, 1/12 puis 2/12) : le banc monte explorer les plateaux découvrants"
       },
       "weatherImpact": {
         "favorableWinds": "Beau temps chaud, vent faible de terre maintenant une surface lisse.",
@@ -2317,7 +2333,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients de 65 à 90 créant un fort courant côtier.",
         "tidalPhase": "Mi-marée de flot quand l'eau monte rapidement sur l'estran.",
-        "slackVsCurrent": "Nage à contre-courant très activement."
+        "slackVsCurrent": "Nage à contre-courant très activement.",
+        "ruleOfTwelfths": "H2 à H4 (2/12 à 3/12) : fort courant de flot longeant les plages et bancs de sable"
       },
       "weatherImpact": {
         "favorableWinds": "Brise thermique d'Est ou de Sud créant un léger clapot de surface.",
@@ -2458,7 +2475,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Non applicable",
         "tidalPhase": "Non applicable",
-        "slackVsCurrent": "Très actif en eau calme"
+        "slackVsCurrent": "Très actif en eau calme",
+        "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
       },
       "weatherImpact": {
         "favorableWinds": "Beau temps chaud sans vent facilitant la pêche au coup",
@@ -2597,7 +2615,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients de 60 à 85 créant une forte dynamique côtière.",
         "tidalPhase": "Mi-marée montante poussant les migrateurs vers l'estuaire.",
-        "slackVsCurrent": "Activité maximale dans les vagues de déferlement."
+        "slackVsCurrent": "Activité maximale dans les vagues de déferlement.",
+        "ruleOfTwelfths": "H2 et H3 (flot montant) : poussée d'eau salée guidant les migrateurs vers l'estuaire de l'Orne"
       },
       "weatherImpact": {
         "favorableWinds": "Vent thermique d'Ouest ou de Sud créant une belle risée sans eau mâchée.",
@@ -2736,7 +2755,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients de 70 à 95 (fortes marées facilitant la rentrée dans l'estuaire).",
         "tidalPhase": "Les trois premières heures de flot montant.",
-        "slackVsCurrent": "Très active en plein courant de marée montante."
+        "slackVsCurrent": "Très active en plein courant de marée montante.",
+        "ruleOfTwelfths": "H2 à H4 (flot montant) : fort courant d'appel marin favorisant la progression en baie"
       },
       "weatherImpact": {
         "favorableWinds": "Temps doux et printanier, vent d'Est ou de Sud.",
@@ -2877,7 +2897,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Non applicable",
         "tidalPhase": "Non applicable",
-        "slackVsCurrent": "Non applicable"
+        "slackVsCurrent": "Non applicable",
+        "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
       },
       "weatherImpact": {
         "favorableWinds": "Temps chaud et orageux en canal",
@@ -3014,7 +3035,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients de 40 à 65 pour maintenir une dérive lente de 0.5 à 1 nœud.",
         "tidalPhase": "Étales et débuts de courant où les turluttes restent proches du fond.",
-        "slackVsCurrent": "Très productive lorsque le bateau dérive doucement sans forcer."
+        "slackVsCurrent": "Très productive lorsque le bateau dérive doucement sans forcer.",
+        "ruleOfTwelfths": "H5, H6 et H1 (1/12 et étales) : courants doux impératifs pour faire nager les turluttes au fond"
       },
       "weatherImpact": {
         "favorableWinds": "Vent faible de terre (Sud/SO), mer calme et eau cristalline.",
@@ -3154,7 +3176,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Coefficients de 40 à 65 permettant une dérive douce à la verticale.",
         "tidalPhase": "Les deux dernières heures de flot et début de jusant au crépuscule.",
-        "slackVsCurrent": "Très actif au ralenti de courant en soirée."
+        "slackVsCurrent": "Très actif au ralenti de courant en soirée.",
+        "ruleOfTwelfths": "H5, H6 et H1 (ralentissement de marée) : dérive lente indispensable pour le tataki"
       },
       "weatherImpact": {
         "favorableWinds": "Mer très calme, vent de terre, ciel dégagé ou nuit claire.",
@@ -3295,7 +3318,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Préfère les faibles coefficients de marée qui limitent l'intrusion saline dans le canal",
         "tidalPhase": "Non applicable",
-        "slackVsCurrent": "Très actif dans les eaux lentes et amorties du canal"
+        "slackVsCurrent": "Très actif dans les eaux lentes et amorties du canal",
+        "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
       },
       "weatherImpact": {
         "favorableWinds": "Vent faible ou modéré évitant la formation d'une bannière dans la ligne",
@@ -3435,7 +3459,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Préfère les eaux calmes du canal à faible circulation d'eau de mer",
         "tidalPhase": "Non applicable",
-        "slackVsCurrent": "Très active en eau calme"
+        "slackVsCurrent": "Très active en eau calme",
+        "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
       },
       "weatherImpact": {
         "favorableWinds": "Beau temps ensoleillé, vent faible créant une légère brise de surface",
@@ -3575,7 +3600,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Non applicable",
         "tidalPhase": "Non applicable",
-        "slackVsCurrent": "Affectionne les eaux calmes et amorties"
+        "slackVsCurrent": "Affectionne les eaux calmes et amorties",
+        "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
       },
       "weatherImpact": {
         "favorableWinds": "Temps gris, doux et venteux créant un beau clapot de berge",
@@ -3714,7 +3740,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Non applicable",
         "tidalPhase": "Non applicable",
-        "slackVsCurrent": "Sédentaire calé au fond des fosses"
+        "slackVsCurrent": "Sédentaire calé au fond des fosses",
+        "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
       },
       "weatherImpact": {
         "favorableWinds": "Chaleur estivale étouffante et temps orageux lourd stimulant son appétit",
@@ -3854,7 +3881,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Non applicable",
         "tidalPhase": "Non applicable",
-        "slackVsCurrent": "S'alimente paisiblement en eau lente"
+        "slackVsCurrent": "S'alimente paisiblement en eau lente",
+        "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
       },
       "weatherImpact": {
         "favorableWinds": "Vent d'Ouest ou de Sud doux poussant sur la berge avec baisse barométrique",
@@ -3993,7 +4021,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Préfère les eaux calmes sans forts courants de vidange maritime",
         "tidalPhase": "Non applicable",
-        "slackVsCurrent": "Pêche optimale en eau stabilisée entre deux manœuvres d'écluse"
+        "slackVsCurrent": "Pêche optimale en eau stabilisée entre deux manœuvres d'écluse",
+        "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
       },
       "weatherImpact": {
         "favorableWinds": "Vent faible dans le dos de la rive facilitant la tenue de la grande canne",
@@ -4134,7 +4163,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Préfère les eaux calmes sans forte salinité",
         "tidalPhase": "Non applicable",
-        "slackVsCurrent": "Alimentation maximale en eau lente et stabilisée"
+        "slackVsCurrent": "Alimentation maximale en eau lente et stabilisée",
+        "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
       },
       "weatherImpact": {
         "favorableWinds": "Temps doux, couvert, vent faible créant une légère risée sans grosses vagues",
@@ -4273,7 +4303,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Non applicable",
         "tidalPhase": "Non applicable",
-        "slackVsCurrent": "Recherche les eaux mortes et calmes"
+        "slackVsCurrent": "Recherche les eaux mortes et calmes",
+        "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
       },
       "weatherImpact": {
         "favorableWinds": "Matinées chaudes et humides sans un souffle d'air avec légère brume",
@@ -4413,7 +4444,8 @@ window.SPECIES_DATA = [
       "tideAndCurrent": {
         "bestCoefficients": "Non applicable",
         "tidalPhase": "Non applicable",
-        "slackVsCurrent": "Recherche les eaux de surface calmes"
+        "slackVsCurrent": "Recherche les eaux de surface calmes",
+        "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
       },
       "weatherImpact": {
         "favorableWinds": "Beau temps d'été ensoleillé avec surface lisse sans rides excessives",

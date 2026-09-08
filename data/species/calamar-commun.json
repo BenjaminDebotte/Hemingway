@@ -4,7 +4,11 @@
     "name": "Calamar commun (Encornet)",
     "scientificName": "Loligo vulgaris",
     "family": "Loliginidés",
-    "localNames": ["Encornet", "Chipiron", "Gale"],
+    "localNames": [
+      "Encornet",
+      "Chipiron",
+      "Gale"
+    ],
     "category": "Céphalopode",
     "identificationNotes": "Corps cylindrique élancé en fuseau effilé vers l'arrière, deux grandes nageoires latérales triangulaires formant un losange occupant les deux tiers postérieurs du manteau, 8 bras courts et 2 longs tentacules munis de ventouses armées d'anneaux cornés, plume transparente interne (gladius)."
   },
@@ -68,7 +72,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients de 40 à 65 permettant une dérive douce à la verticale.",
       "tidalPhase": "Les deux dernières heures de flot et début de jusant au crépuscule.",
-      "slackVsCurrent": "Très actif au ralenti de courant en soirée."
+      "slackVsCurrent": "Très actif au ralenti de courant en soirée.",
+      "ruleOfTwelfths": "H5, H6 et H1 (ralentissement de marée) : dérive lente indispensable pour le tataki"
     },
     "weatherImpact": {
       "favorableWinds": "Mer très calme, vent de terre, ciel dégagé ou nuit claire.",
@@ -103,8 +108,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 3, 2],
-    "bateau": [0, 0, 0, 0, 0, 0, 0, 1, 3, 3, 3, 2]
+    "canal": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      2,
+      3,
+      3,
+      2
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      3,
+      3,
+      3,
+      2
+    ]
   },
   "localSecret": "À Pegasus Bridge en novembre entre 21h et minuit, placez-vous sur le quai et lancez votre turlutte phosphorescente (préalablement chargée à la lampe UV) dans la zone d'ombre à 2 mètres de la limite de lumière projetée par les lampadaires : animez par deux coups secs puis laissez planer. Les attaques d'encornets se matérialisent par une lourdeur franche !"
 }

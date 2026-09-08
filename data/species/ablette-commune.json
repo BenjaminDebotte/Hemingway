@@ -4,7 +4,12 @@
     "name": "Ablette commune",
     "scientificName": "Alburnus alburnus",
     "family": "Cyprinidés",
-    "localNames": ["Ablette", "Nogea", "Roussette", "Miroir d'argent"],
+    "localNames": [
+      "Ablette",
+      "Nogea",
+      "Roussette",
+      "Miroir d'argent"
+    ],
     "category": "Cyprinidé / Poisson blanc",
     "identificationNotes": "Corps fin et élancé comprimé latéralement d'un blanc argenté éclatant très miroitant, bouche nettement dirigée vers le haut (supère) adaptée au happement des proies de surface, écailles très minces se détachant au moindre frottement, nageoire anale longue."
   },
@@ -70,7 +75,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Non applicable",
       "tidalPhase": "Non applicable",
-      "slackVsCurrent": "Recherche les eaux de surface calmes"
+      "slackVsCurrent": "Recherche les eaux de surface calmes",
+      "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
     },
     "weatherImpact": {
       "favorableWinds": "Beau temps d'été ensoleillé avec surface lisse sans rides excessives",
@@ -102,8 +108,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 1, 2, 3, 3, 3, 3, 3, 2, 1, 0],
-    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    "canal": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "localSecret": "Au Bassin Saint-Pierre à Caen, préparez une amorce presque liquide (consistance de pâte à crêpe) avec de la farine de maïs et du lait en poudre : jetez une petite cuillerée à chaque lancer. Le nuage blanc opaque reste suspendu dans les premiers 30 cm et déclenche un frénésie de gobages permettant d'attraper une ablette toutes les 15 secondes !"
 }

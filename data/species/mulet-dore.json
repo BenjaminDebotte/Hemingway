@@ -4,7 +4,11 @@
     "name": "Mulet doré",
     "scientificName": "Chelon auratus",
     "family": "Mugilidés",
-    "localNames": ["Mulet jaune", "Flavet", "Muge doré"],
+    "localNames": [
+      "Mulet jaune",
+      "Flavet",
+      "Muge doré"
+    ],
     "category": "Mugilidé",
     "identificationNotes": "Tache ronde jaune doré très éclatante sur la partie supérieure de l'opercule, lèvre supérieure mince et parfaitement lisse (sans papilles), corps plus effilé et svelte que le mulet lippu, dos gris-bleu clair."
   },
@@ -68,7 +72,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients de 65 à 90 créant un fort courant côtier.",
       "tidalPhase": "Mi-marée de flot quand l'eau monte rapidement sur l'estran.",
-      "slackVsCurrent": "Nage à contre-courant très activement."
+      "slackVsCurrent": "Nage à contre-courant très activement.",
+      "ruleOfTwelfths": "H2 à H4 (2/12 à 3/12) : fort courant de flot longeant les plages et bancs de sable"
     },
     "weatherImpact": {
       "favorableWinds": "Brise thermique d'Est ou de Sud créant un léger clapot de surface.",
@@ -103,8 +108,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 0, 0, 1, 2, 3, 3, 2, 1, 0, 0],
-    "bateau": [0, 0, 0, 0, 1, 3, 3, 3, 2, 1, 0, 0]
+    "canal": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      2,
+      1,
+      0,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      1,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0,
+      0
+    ]
   },
   "localSecret": "À la sortie de l'écluse d'Ouistreham, montez une cuiller tournante argentée n°1 dont vous remplacez le triple par un bas de ligne de 10 cm en 16/100 muni d'un hameçon n°8 garni d'un ver demi-dur. Ramenez à vitesse moyenne juste sous la pellicule : le reflet attire le mulet doré qui fond sur le ver !"
 }

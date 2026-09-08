@@ -4,7 +4,10 @@
     "name": "Turbot",
     "scientificName": "Scophthalmus maximus",
     "family": "Scophthalmidés",
-    "localNames": ["Turbot de sable", "Prince des sables"],
+    "localNames": [
+      "Turbot de sable",
+      "Prince des sables"
+    ],
     "category": "Poisson plat",
     "identificationNotes": "Corps rhomboïdal presque circulaire et très charnu, yeux situés sur le côté gauche, peau entièrement dépourvue d'écailles mais parsemée de gros tubercules osseux durs et coniques sur la face supérieure."
   },
@@ -65,7 +68,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Coefficients de 55 à 80 assurant une dérive régulière du bateau.",
       "tidalPhase": "Les heures de plein courant de flot et de jusant créant les ridens.",
-      "slackVsCurrent": "Chasseur à l'affût actif lorsque le courant balaye les lançons."
+      "slackVsCurrent": "Chasseur à l'affût actif lorsque le courant balaye les lançons.",
+      "ruleOfTwelfths": "H3 et H4 (les 3/12e de mi-marée) : courant fort créant les ridens où le lançon dérive à 1.5 nœud"
     },
     "weatherImpact": {
       "favorableWinds": "Vent régulier de 2 à 3 Beaufort permettant une dérive linéaire sans à-coups.",
@@ -101,8 +105,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    "bateau": [0, 0, 0, 0, 2, 3, 3, 3, 3, 2, 1, 0]
+    "canal": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      2,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0
+    ]
   },
   "localSecret": "Sur les ridens du banc de Bernières, taillez une lanière dans le ventre blanc d'un maquereau frais en lui donnant une forme effilée en queue d'hirondelle : avec la vitesse de dérive, la lanière ondule à 20 cm du fond sableux en émettant des reflets blancs irrésistibles pour les gros turbots camouflés !"
 }

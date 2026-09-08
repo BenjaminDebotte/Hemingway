@@ -4,7 +4,11 @@
     "name": "Anguille européenne",
     "scientificName": "Anguilla anguilla",
     "family": "Anguillidés",
-    "localNames": ["Anguille jaune", "Anguille argentée", "Civelle"],
+    "localNames": [
+      "Anguille jaune",
+      "Anguille argentée",
+      "Civelle"
+    ],
     "category": "Grand migrateur",
     "identificationNotes": "Corps serpentiforme cylindrique très visqueux, peau recouverte d'écailles microscopiques enfouies dans le mucus, nageoire dorsale continue avec la caudale et l'anale débutant loin en arrière de la tête, mâchoire inférieure saillante."
   },
@@ -70,7 +74,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Non applicable",
       "tidalPhase": "Non applicable",
-      "slackVsCurrent": "Non applicable"
+      "slackVsCurrent": "Non applicable",
+      "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
     },
     "weatherImpact": {
       "favorableWinds": "Temps chaud et orageux en canal",
@@ -102,8 +107,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 0, 1, 2, 3, 3, 3, 2, 1, 0, 0],
-    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    "canal": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "localSecret": "Dès la touche, ferrez et bridez autoritairement sans lui laisser le temps de faire un tour sur elle-même : l'anguille s'ancre avec sa queue dans la moindre faille d'enrochement du canal. Si elle s'enrroche, maintenez la ligne sous tension constante sans tirer, elle finira par relâcher prise au bout de quelques minutes."
 }

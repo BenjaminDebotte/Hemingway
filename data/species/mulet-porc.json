@@ -4,7 +4,11 @@
     "name": "Mulet porc",
     "scientificName": "Chelon ramada",
     "family": "Mugilidés",
-    "localNames": ["Mulet capiton", "Ramada", "Mulet de rivière"],
+    "localNames": [
+      "Mulet capiton",
+      "Ramada",
+      "Mulet de rivière"
+    ],
     "category": "Mugilidé",
     "identificationNotes": "Petite tache noire très nette à la base supérieure de la nageoire pectorale, lèvre supérieure fine et lisse sans tubercules, tête relativement petite, corps allongé gris plomb. Espèce la plus tolérante à l'eau douce pure."
   },
@@ -69,7 +73,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Non applicable",
       "tidalPhase": "Non applicable",
-      "slackVsCurrent": "Très actif en eau calme"
+      "slackVsCurrent": "Très actif en eau calme",
+      "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
     },
     "weatherImpact": {
       "favorableWinds": "Beau temps chaud sans vent facilitant la pêche au coup",
@@ -101,8 +106,34 @@
     ]
   },
   "calendar": {
-    "canal": [0, 0, 1, 2, 3, 3, 3, 3, 3, 2, 1, 0],
-    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    "canal": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      0
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "localSecret": "Aux abords des déversoirs pluviaux du Bassin Saint-Pierre à Caen, préparez une amorce constituée de pain trempé réduit en purée et de farine de maïs très traçante : lancez de petites boules régulières. Les mulets porcs se rassemblent en surface et s'emparent de minuscules flocons de mie montés sur hameçon n°14."
 }

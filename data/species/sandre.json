@@ -4,7 +4,10 @@
     "name": "Sandre",
     "scientificName": "Sander lucioperca",
     "family": "Percidés",
-    "localNames": ["Perche-brochet", "Yeux de verre"],
+    "localNames": [
+      "Perche-brochet",
+      "Yeux de verre"
+    ],
     "category": "Carnassier eau douce / saumâtre",
     "identificationNotes": "Corps allongé gris-verdâtre rayé de bandes sombres verticales, bouche armée de fortes canines ('crocs'), deux nageoires dorsales séparées par un petit espace, yeux vitreux très réfléchissants à la lumière."
   },
@@ -70,7 +73,8 @@
     "tideAndCurrent": {
       "bestCoefficients": "Préfère les faibles coefficients de marée qui limitent l'intrusion saline dans le canal",
       "tidalPhase": "Non applicable",
-      "slackVsCurrent": "Très actif dans les eaux lentes et amorties du canal"
+      "slackVsCurrent": "Très actif dans les eaux lentes et amorties du canal",
+      "ruleOfTwelfths": "Non applicable (espèce d'eau douce / canal non soumise aux marées maritimes de pleine mer)"
     },
     "weatherImpact": {
       "favorableWinds": "Vent faible ou modéré évitant la formation d'une bannière dans la ligne",
@@ -103,8 +107,34 @@
     ]
   },
   "calendar": {
-    "canal": [2, 1, 0, 0, 1, 2, 2, 2, 3, 3, 3, 2],
-    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    "canal": [
+      2,
+      1,
+      0,
+      0,
+      1,
+      2,
+      2,
+      2,
+      3,
+      3,
+      3,
+      2
+    ],
+    "bateau": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
   },
   "localSecret": "Le long des palplanches métalliques entre Calix et Colombelles, animez un shad souple sombre en drop-shot en descendant très lentement le long de la paroi. Le sandre se cale souvent à seulement 1 m sous la surface dans la concavité de la tôle, même par 8 m de fond !"
 }
