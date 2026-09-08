@@ -61,7 +61,14 @@
       "Poisson nageur type Rapala Countdown 7cm ou Duo Spearhead Ryuki 70S",
       "Cuiller ondulante fine argentée type Mepps Syclops 12g",
       "Streamer tandem noir et argenté monté sur tube fly"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Jerkbait minnow coulant 60-80mm (D-Contact 63/72, Ryuki 70) ou cuillère tournante dorée n°3",
+      "softLure": "Shad finesse 70-90mm (Black Minnow 70/90) coloris ayu/naturel en lancer-ramener rapide",
+      "naturalLure": "Vairon manié sur monture articulée ou bouquet vivant sous flotteur dérivant",
+      "hookTypeAndSize": "Triples étamés fins de fer n°8 à n°6 ou simple texan fin #1",
+      "leaderRequirement": "Fluorocarbone 20/100 à 24/100 résistant et parfaitement invisible"
+    }
   },
   "bateau": {
     "present": true,
@@ -88,7 +95,14 @@
     "recommendedLuresAndBaits": [
       "Cuiller ondulante fine côtière type Hansen Pilgrim ou Toby 15g argent/bleu",
       "Petit leurre de surface stickbait 90mm manié vivement"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Cuillère ondulante effilée 15-25g (Hansen Flash, More Silda) ou jerkbait côtier 90mm",
+      "softLure": "Slug ou shad effilé 80-110mm imitant le lançon ou le sprat",
+      "naturalLure": "Lançon vivant à la traîne lente ou petit sprat frais au flotteur coulissant",
+      "hookTypeAndSize": "Simple aberdeen renforcé n°2 à #1/0 ou triple marin étamé n°6",
+      "leaderRequirement": "Fluorocarbone 24/100 à 28/100 (2.5 m) souple"
+    }
   },
   "gear": {
     "canalCombo": {

@@ -61,7 +61,14 @@
       "Gros ver de terreau ou lombric bien vigoureux",
       "Petit poisson mort posé sur le fond (gardon ou épinoche)",
       "Tronçon de crevette fraîche"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable (espèce fouisseuse et nocturne, pêche de jour obligatoire)",
+      "softLure": "Non applicable",
+      "naturalLure": "Gros lombric à tête noire, bouquet de terreau ou morceau de poisson frais calé au fond",
+      "hookTypeAndSize": "Simple aberdeen à hampe longue n°6 à n°4 (dégorgeoir indispensable)",
+      "leaderRequirement": "Tresse souple 15-20 lbs ou fluorocarbone résistant 28/100 à 35/100 anti-vrillage"
+    }
   },
   "bateau": {
     "present": false,
@@ -86,7 +93,14 @@
     ],
     "recommendedLuresAndBaits": [
       "Non applicable en mer"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Non applicable",
+      "hookTypeAndSize": "Non applicable",
+      "leaderRequirement": "Non applicable"
+    }
   },
   "gear": {
     "canalCombo": {

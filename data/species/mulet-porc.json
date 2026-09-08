@@ -60,7 +60,14 @@
       "Mie de pain frais bien tassée",
       "Vers de vase (chironomes) ou pinkies blancs",
       "Pâte de fromage ou farine de chènevis"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Cuillère à mulet argentée avec empile de 5cm",
+      "softLure": "Micro-streamer vert ou micro-imitation d'algues en potence",
+      "naturalLure": "Pain chaillou, néréide de vase ou ver de terreau en dérive au bouchon",
+      "hookTypeAndSize": "Hameçon simple n°10 à n°12 fin de fer discret",
+      "leaderRequirement": "Nylon ou fluorocarbone 14/100 à 18/100 souple"
+    }
   },
   "bateau": {
     "present": false,
@@ -85,7 +92,14 @@
     ],
     "recommendedLuresAndBaits": [
       "Non applicable en mer"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Non applicable",
+      "hookTypeAndSize": "Non applicable",
+      "leaderRequirement": "Non applicable"
+    }
   },
   "gear": {
     "canalCombo": {

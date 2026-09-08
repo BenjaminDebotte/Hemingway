@@ -61,7 +61,14 @@
       "Vers arénicoles bien frais",
       "Gros vers de terreau ou lombrics (très efficace en haut-canal)",
       "Lanière de maquereau ou queue de crevette crue"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Micro-worm souple ou créature 5-7cm traîné très lentement sur les fonds vaseux",
+      "naturalLure": "Arénicole noire, demi-dure ou ver de terreau sur montage coulissant à empile traînante",
+      "hookTypeAndSize": "Hameçon aberdeen n°4 à n°2 à tige longue pour faciliter le dégorgeage",
+      "leaderRequirement": "Fluorocarbone 20/100 à 24/100 (1.5 m) souple"
+    }
   },
   "bateau": {
     "present": true,
@@ -89,7 +96,14 @@
       "Arénicole fraîche ou néréide",
       "Petite cuiller ondulante argentée montée avec un ver",
       "Lanière de poisson frais"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Cuillère plate hollandaise ondulante jaune/rouge servant de teaseur dandiné sur le sable",
+      "softLure": "Micro-finesse ou perles souples phosphorescentes intercalées devant l'esche",
+      "naturalLure": "Arénicoles fraîches ou néréides eschées à l'aiguille sur montage traîneau à perles",
+      "hookTypeAndSize": "Aberdeen étamé n°4 à n°1 à tige longue garnie d'ardillons de tige",
+      "leaderRequirement": "Fluorocarbone 25/100 à 28/100 résistant au frottement sur le sable coquillier"
+    }
   },
   "gear": {
     "canalCombo": {

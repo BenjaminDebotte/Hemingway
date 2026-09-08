@@ -82,7 +82,7 @@
     },
     "canal": {
       "type": "object",
-      "required": ["present", "presenceSeason", "keySpots", "triggers", "tactics", "recommendedLuresAndBaits"],
+      "required": ["present", "presenceSeason", "keySpots", "triggers", "tactics", "terminalTackle", "recommendedLuresAndBaits"],
       "properties": {
         "present": { "type": "boolean", "description": "Présence avérée dans le canal de Caen à Ouistreham" },
         "presenceSeason": { "type": "string", "description": "Période d'activité dans le canal" },
@@ -112,6 +112,17 @@
           "items": { "type": "string" },
           "description": "Techniques de pêche spécifiques au canal"
         },
+        "terminalTackle": {
+          "type": "object",
+          "required": ["rigidLure", "softLure", "naturalLure", "hookTypeAndSize", "leaderRequirement"],
+          "properties": {
+            "rigidLure": { "type": "string", "description": "Meilleur leurre dur adapté (poisson nageur, jerkbait, stickbait, casting jig) ou Non applicable" },
+            "softLure": { "type": "string", "description": "Meilleur leurre souple adapté (shad, slug, finess, créature) ou Non applicable" },
+            "naturalLure": { "type": "string", "description": "Meilleur appât naturel ou esche (vers marins, coquillages, vifs, graines)" },
+            "hookTypeAndSize": { "type": "string", "description": "Type précis et taille d'hameçon (texan, simple forgé, triple étamé, panier turlutte, n°...)" },
+            "leaderRequirement": { "type": "string", "description": "Spécification du bas de ligne ou pointe terminale (matériau, diamètre, résistance, anti-coupe)" }
+          }
+        },
         "recommendedLuresAndBaits": {
           "type": "array",
           "items": { "type": "string" },
@@ -121,7 +132,7 @@
     },
     "bateau": {
       "type": "object",
-      "required": ["present", "presenceSeason", "habitats", "tideAndCurrent", "weatherImpact", "tactics", "recommendedLuresAndBaits"],
+      "required": ["present", "presenceSeason", "habitats", "tideAndCurrent", "weatherImpact", "tactics", "terminalTackle", "recommendedLuresAndBaits"],
       "properties": {
         "present": { "type": "boolean", "description": "Présence avérée en mer sur la Côte de Nacre" },
         "presenceSeason": { "type": "string", "description": "Période de pêche en bateau" },
@@ -156,6 +167,17 @@
           "type": "array",
           "items": { "type": "string" },
           "description": "Techniques bateau (dérive, ascenseur, traction, tenya, posé)"
+        },
+        "terminalTackle": {
+          "type": "object",
+          "required": ["rigidLure", "softLure", "naturalLure", "hookTypeAndSize", "leaderRequirement"],
+          "properties": {
+            "rigidLure": { "type": "string", "description": "Meilleur leurre dur adapté (poisson nageur, jerkbait, stickbait, casting jig) ou Non applicable" },
+            "softLure": { "type": "string", "description": "Meilleur leurre souple adapté (shad, slug, finess, créature) ou Non applicable" },
+            "naturalLure": { "type": "string", "description": "Meilleur appât naturel ou esche (vers marins, coquillages, vifs, graines)" },
+            "hookTypeAndSize": { "type": "string", "description": "Type précis et taille d'hameçon (texan, simple forgé, triple étamé, panier turlutte, n°...)" },
+            "leaderRequirement": { "type": "string", "description": "Spécification du bas de ligne ou pointe terminale (matériau, diamètre, résistance, anti-coupe)" }
+          }
         },
         "recommendedLuresAndBaits": {
           "type": "array",

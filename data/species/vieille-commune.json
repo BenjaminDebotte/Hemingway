@@ -56,7 +56,14 @@
     ],
     "recommendedLuresAndBaits": [
       "Non applicable en canal"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Non applicable",
+      "hookTypeAndSize": "Non applicable",
+      "leaderRequirement": "Non applicable"
+    }
   },
   "bateau": {
     "present": true,
@@ -85,7 +92,14 @@
       "Petit crabe vert vivant entier esché par les pattes arrière",
       "Crevette bouquet fraîche ou cuite",
       "Créature souple type craw (Black Minnow, Dolive Craw) en montage texan"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Strictement déconseillé (accrochage et perte immédiate dans les blocs et laminaires)",
+      "softLure": "Créature ou écrevisse souple 9-12cm montée en texan plombé 15-35g au cœur des failles",
+      "naturalLure": "Crabe vert entier, crevette rose vivante ou chair de bernique à la palangrotte",
+      "hookTypeAndSize": "Texan Wide Gap fort de fer #2/0 à #4/0 ou simple renversé forgé n°1",
+      "leaderRequirement": "Fluorocarbone 35/100 à 45/100 très rigide résistant aux arêtes rocheuses tranchantes"
+    }
   },
   "gear": {
     "canalCombo": {

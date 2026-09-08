@@ -60,7 +60,14 @@
       "Fiiish Black Minnow 90 & 120 (Têtes 10g-12g Kaki)",
       "Asturie 110 / Patchinko 100 (Coloris 500G)",
       "Bouquet vivant récolté sur l'estran d'Ouistreham"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Stickbait flottant 110-130mm (Patchinko 125, Asturie 110) ou jerkbait coulant (Flashminnow 110)",
+      "softLure": "Shad 100-120mm sur tête texane articulée 10-18g (Black Minnow 120, Nitro Shad 120)",
+      "naturalLure": "Lançon vivant, arénicole noire au posé ou bouquet vivant à la calée",
+      "hookTypeAndSize": "Texan Wide Gap #2/0 à #3/0 (leurres) ou simple forgé renversé #1/0 à #2/0 (appâts)",
+      "leaderRequirement": "Fluorocarbone 100% 24/100 à 28/100 (2.5 m) résistant à l'abrasion des moules sauvages"
+    }
   },
   "bateau": {
     "present": true,
@@ -89,7 +96,14 @@
       "Crazy Sand Eel 150 & 180 (Tête 20-30g Kaki/Bleu)",
       "Patchinko 125 & 140 (Dos Jaune / Nacre)",
       "Lançon frais ou vivant sur montage potence"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Casting jig effilé 30-50g (chasses de surface) ou stickbait lourd 140mm sur les ridens",
+      "softLure": "Shad ou slug 120-160mm tête 25-45g (Crazy Sand Eel 150/180, Black Minnow 140) en traction",
+      "naturalLure": "Lançon vivant sur traîneau en dérive au ras du fond ou sardine entière à soutenir",
+      "hookTypeAndSize": "Texan Wide Gap renforcé 2X #3/0 à #5/0 ou aberdeen fort de fer #2/0 (lançon vivant)",
+      "leaderRequirement": "Fluorocarbone 30/100 à 35/100 (3 m, 6 à 8 kg) pour résister aux Roches du Calvados"
+    }
   },
   "gear": {
     "canalCombo": {

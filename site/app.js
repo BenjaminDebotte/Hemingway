@@ -17,6 +17,7 @@ const SVG_ICONS = {
   sparkle: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
   rotate: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.6-6.4L21 8"/><polyline points="21 3 21 8 16 8"/></svg>`,
   fish: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M19 12c-4 4-10 4-15 0 5-4 11-4 15 0z"/><path d="M4 12L2 9.5v5L4 12z"/><circle cx="15" cy="11" r="1" fill="currentColor"/></svg>`,
+  hook: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><circle cx="16" cy="4" r="2"/><path d="M16 6v7a5 5 0 0 1-10 0v-2l2 2"/></svg>`,
   moon: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`,
   compass: `<svg class="ui-icon" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polygon points="12 8 10 14 16 12 12 8"/></svg>`
 };
@@ -590,6 +591,40 @@ function renderGearBlock(fish, isTabbed = false, activeTab = 'canal') {
   `;
 }
 
+function renderTerminalTackleBlock(terminal, biotopeLabel, biotopeKey) {
+  if (!terminal) return '';
+
+  return `
+    <div class="terminal-tackle-card terminal-${biotopeKey}">
+      <div class="terminal-card-header">
+        <span class="terminal-card-title">${uiIcon('hook')} Armement & Top Leurres / Appâts ${biotopeLabel}</span>
+      </div>
+      <div class="terminal-specs-grid">
+        <div class="terminal-spec-item">
+          <span class="terminal-pill pill-rigid">Rigide</span>
+          <span class="terminal-val">${terminal.rigidLure}</span>
+        </div>
+        <div class="terminal-spec-item">
+          <span class="terminal-pill pill-soft">Souple</span>
+          <span class="terminal-val">${terminal.softLure}</span>
+        </div>
+        <div class="terminal-spec-item">
+          <span class="terminal-pill pill-natural">Naturel</span>
+          <span class="terminal-val">${terminal.naturalLure}</span>
+        </div>
+        <div class="terminal-spec-item">
+          <span class="terminal-pill pill-hook">Hameçon</span>
+          <span class="terminal-val">${terminal.hookTypeAndSize}</span>
+        </div>
+        <div class="terminal-spec-item">
+          <span class="terminal-pill pill-leader">Bas de ligne</span>
+          <span class="terminal-val">${terminal.leaderRequirement}</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function getHarvestGauge(bagLimit, speciesId) {
   const text = (bagLimit || '').toLowerCase();
 
@@ -789,10 +824,7 @@ function renderCardBack(fish, isFlipCard = false) {
         <ul class="tactics-bullets">
           ${fish.canal.tactics.map(t => `<li>${t}</li>`).join('')}
         </ul>
-        <div class="lures-row">
-          <span class="lures-title">Top Leurres/Appâts Canal :</span>
-          <span class="lures-list">${fish.canal.recommendedLuresAndBaits.join(' • ')}</span>
-        </div>
+        ${renderTerminalTackleBlock(fish.canal.terminalTackle, 'Canal', 'canal')}
       </div>
     ` : ''}
 
@@ -812,10 +844,7 @@ function renderCardBack(fish, isFlipCard = false) {
         <ul class="tactics-bullets">
           ${fish.bateau.tactics.map(t => `<li>${t}</li>`).join('')}
         </ul>
-        <div class="lures-row">
-          <span class="lures-title">Top Leurres/Appâts Mer :</span>
-          <span class="lures-list">${fish.bateau.recommendedLuresAndBaits.join(' • ')}</span>
-        </div>
+        ${renderTerminalTackleBlock(fish.bateau.terminalTackle, 'Mer', 'bateau')}
       </div>
     ` : ''}
 

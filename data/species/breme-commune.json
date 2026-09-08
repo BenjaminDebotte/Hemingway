@@ -62,7 +62,14 @@
       "Bouquet d'asticots rouges ou panaché asticot / grain de maïs doux",
       "Gros vers de terreau coupés en morceaux dans la cage feeder",
       "Wafters aromatisés ou maïs doux au method feeder"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Gros vers de terreau coupés, bouquet d'asticots rouges, maïs doux sur amorce collante",
+      "hookTypeAndSize": "Hameçon simple rond bronze n°16 à n°12",
+      "leaderRequirement": "Nylon souple 12/100 à 14/100 (montage feeder avec bas de ligne 50-70 cm)"
+    }
   },
   "bateau": {
     "present": false,
@@ -87,7 +94,14 @@
     ],
     "recommendedLuresAndBaits": [
       "Non applicable en mer"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Non applicable",
+      "hookTypeAndSize": "Non applicable",
+      "leaderRequirement": "Non applicable"
+    }
   },
   "gear": {
     "canalCombo": {

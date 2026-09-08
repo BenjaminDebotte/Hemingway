@@ -56,7 +56,14 @@
     ],
     "recommendedLuresAndBaits": [
       "Non applicable en canal"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Non applicable",
+      "hookTypeAndSize": "Non applicable",
+      "leaderRequirement": "Non applicable"
+    }
   },
   "bateau": {
     "present": true,
@@ -85,7 +92,14 @@
       "Arénicole fraîche découpée en petits tronçons",
       "Lanière fine d'encornet ou tentacule de seiche crue",
       "Coque fraîche ou pied de couteau ligaturé"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable (pêche traditionnelle à soutenir aux appâts)",
+      "softLure": "Micro-crevette souple ou petite tentacule sur tête fine 15-30g en dérive lente",
+      "naturalLure": "Arénicole, néréide dure, lanière étroite d'encornet ou lamelle de maquereau",
+      "hookTypeAndSize": "Simple forgé à tige moyenne n°4 à n°2 (chinu ou aberdeen court)",
+      "leaderRequirement": "Fluorocarbone souple 24/100 à 28/100 (empiles de 40 à 60 cm en potence)"
+    }
   },
   "gear": {
     "canalCombo": {

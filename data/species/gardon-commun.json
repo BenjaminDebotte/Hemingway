@@ -61,7 +61,14 @@
       "Vers de vase (chironomes) et pinkies rouges ou blancs",
       "Grains de chènevis cuits (indispensable pour sélectionner les gros spécimens)",
       "Pain blanc frais ou maïs doux au feeder"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Asticots, pinkies, vers de vase (fouille), graines de chènevis ou mie de pain",
+      "hookTypeAndSize": "Hameçon fin de fer doré ou bronze n°18 à n°14 à tige moyenne",
+      "leaderRequirement": "Nylon souple discret 8/100 à 12/100 (empile de 20 à 30 cm)"
+    }
   },
   "bateau": {
     "present": false,
@@ -86,7 +93,14 @@
     ],
     "recommendedLuresAndBaits": [
       "Non applicable en mer"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Non applicable",
+      "hookTypeAndSize": "Non applicable",
+      "leaderRequirement": "Non applicable"
+    }
   },
   "gear": {
     "canalCombo": {

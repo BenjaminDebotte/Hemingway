@@ -59,7 +59,14 @@
       "Arénicole fraîche ou néréide de roche",
       "Fiiish Black Minnow 70 / 90 (Tête 6g-10g Kaki)",
       "Crevette grise vivante sur hameçon n°4 fin de fer"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Petit jerkbait minnow suspending 70-90mm ou micro-stickbait 80mm dans les veines d'eau",
+      "softLure": "Shad fin 70-90mm (Black Minnow 90, One Up 3\") sur tête texane ou ronde 7-12g",
+      "naturalLure": "Arénicole fraîche, demi-dure de roche ou crevette grise vivante",
+      "hookTypeAndSize": "Texan fin #1 à #1/0 ou simple rond à œillet n°2 à n°4",
+      "leaderRequirement": "Fluorocarbone 20/100 à 24/100 discret (2 m)"
+    }
   },
   "bateau": {
     "present": true,
@@ -87,7 +94,14 @@
       "Crazy Sand Eel 100 (Coloris Nacre / Kaki)",
       "Arénicole fraîche sur empile basse 22/100",
       "Petite cuiller ondulante argentée 10-15g"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Casting jig compact 15-30g ou petit minnow coulant 80-90mm",
+      "softLure": "Slug ou shad effilé 90-110mm sur tête 15-28g en dérive sur les sables de Lion",
+      "naturalLure": "Arénicole entière ou bouquet vivant sur montage traîneau à empile traînante",
+      "hookTypeAndSize": "Simple rond à œillet n°2 à #1/0 forgé étamé",
+      "leaderRequirement": "Fluorocarbone 22/100 à 26/100 (2.5 m) discret sur fonds sablo-graveleux"
+    }
   },
   "gear": {
     "canalCombo": {

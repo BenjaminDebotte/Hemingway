@@ -60,7 +60,14 @@
       "One Up Shad 3\" et 4\" (Coloris 06 Pro Blue, 07 Green Weenie)",
       "Keitech Easy Shiner 3.5\" sur tête sabot ou football 7g",
       "Petit gardon ou ablette fraîche de 7 à 10 cm"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Jerkbait minnow suspending 90-110mm (Squad Minnow, Pointer) de nuit le long des palplanches",
+      "softLure": "Shad souple 80-120mm (One Up 4\", Easy Shiner, BM 90) sur tête sabot ou texane 7-14g",
+      "naturalLure": "Ablette ou petit gardon mort posé sur le fond ou vif piqué par la lèvre en dérive lente",
+      "hookTypeAndSize": "Simple texan #1/0 à #3/0 ou simple rond fin n°2 (vif/mort posé)",
+      "leaderRequirement": "Fluorocarbone souple 22/100 à 26/100 (2 m) d'une discrétion absolue"
+    }
   },
   "bateau": {
     "present": false,
@@ -85,7 +92,14 @@
     ],
     "recommendedLuresAndBaits": [
       "Non applicable en mer"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Non applicable",
+      "hookTypeAndSize": "Non applicable",
+      "leaderRequirement": "Non applicable"
+    }
   },
   "gear": {
     "canalCombo": {

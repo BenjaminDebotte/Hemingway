@@ -62,7 +62,14 @@
       "Bouillettes denses 20mm (Arômes Monster Crab, Scopex ou Épices)",
       "Grains de maïs doux géant panachés avec un faux maïs flottant jaune",
       "Pellets de flétan riches en huile (Halibut 16mm)"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable (cyprinidé fouisseur non carnassier)",
+      "softLure": "Non applicable (très marginalement nymphe artificielle à la mouche)",
+      "naturalLure": "Bouillette carnée ou fruitée 16-20mm, maïs doux géant, lupin ou noix tigrée",
+      "hookTypeAndSize": "Hameçon carpe forgé à œillet rentrant n°6 à n°4 monté sur cheveu",
+      "leaderRequirement": "Tresse gainée souple 20-25 lbs (20 cm) avec leadcore anti-abrasion sur les enrochements"
+    }
   },
   "bateau": {
     "present": false,
@@ -87,7 +94,14 @@
     ],
     "recommendedLuresAndBaits": [
       "Non applicable en mer"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Non applicable",
+      "hookTypeAndSize": "Non applicable",
+      "leaderRequirement": "Non applicable"
+    }
   },
   "gear": {
     "canalCombo": {

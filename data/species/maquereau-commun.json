@@ -59,7 +59,14 @@
       "Casting jig 15g-20g argenté / bleu holographique",
       "Raglou 65mm nacré blanc ou pailleté",
       "Lamelle d'encornet ou lanière de maquereau fraîche"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Petit casting jig chromé 10-20g ou cuillère ondulante étroite (Toby 12-18g)",
+      "softLure": "Micro-shad 50-70mm ou raglou blanc monté derrière un buldo ou plombée d'appel",
+      "naturalLure": "Lanière de maquereau frais ou tronçon d'arénicole sous petit flotteur",
+      "hookTypeAndSize": "Simple à œillet étamé n°4 à n°2 ou triple fin n°6",
+      "leaderRequirement": "Fluorocarbone souple 22/100 à 25/100 (1.5 m)"
+    }
   },
   "bateau": {
     "present": true,
@@ -88,7 +95,14 @@
       "Mitraillette à plumes blanches et reflets argentés (3 à 5 hameçons)",
       "Petit jig à dandinette 30g à 60g",
       "Cuiller ondulante type Toby 20g"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Casting jig 25-45g (chrome/bleu/rose) ou cuillère lourde dandinée dans les bouillons",
+      "softLure": "Mitraillette de plumes / sabiki (3 à 5 plumes étamées) ou chapelet de raglous 65mm",
+      "naturalLure": "Lanière de maquereau ou d'encornet frais sur palangrotte légère ou ligne de traîne",
+      "hookTypeAndSize": "Hameçons sabiki étamés n°2 à #1/0 montés en potence",
+      "leaderRequirement": "Nylon ou fluorocarbone 28/100 à 35/100 résistant aux vrillages en grappe"
+    }
   },
   "gear": {
     "canalCombo": {

@@ -59,7 +59,14 @@
       "Cuiller tournante argentée n°1 ou n°2 armée d'une empile courte",
       "Ver demi-dur ou néréide rouge fraîche",
       "Micro-streamer blanc ou olive pour la pêche au fouet"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Micro-cuillère tournante n°1 ou cuillère à mulet avec empile courte",
+      "softLure": "Micro-ver souple marron ou imitation crevette 3cm",
+      "naturalLure": "Néréide de roche fraîche, chair de coque ou pain pétri sous flotteur léger",
+      "hookTypeAndSize": "Simple fin de fer n°10 à n°8",
+      "leaderRequirement": "Fluorocarbone 16/100 à 18/100 ultra-discret"
+    }
   },
   "bateau": {
     "present": true,
@@ -87,7 +94,14 @@
       "Cuiller spéciale mulet à palette argentée et perles rouges",
       "Ver néréide de roche esché entier",
       "Petite cuiller ondulante 5g argentée"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Cuillère à mulet allongée avec teaser rouge en traîne côtière très lente",
+      "softLure": "Non applicable",
+      "naturalLure": "Néréides fraîches (demi-dures) sur empile traînante sur petits bancs de sable",
+      "hookTypeAndSize": "Simple fin n°8 à n°6",
+      "leaderRequirement": "Fluorocarbone 18/100 à 20/100"
+    }
   },
   "gear": {
     "canalCombo": {

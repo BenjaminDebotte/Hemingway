@@ -59,7 +59,14 @@
       "Arénicole fraîche ou ver blanc de sable",
       "Petite lamelle de couteau frais",
       "Queue de crevette grise crue décortiquée"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Petite imitation souple d'arénicole ou ver marin sur micro-tête sabot 5g",
+      "naturalLure": "Arénicole fraîche ou néréide de roche sur montage palangrotte à 2 empiles basses",
+      "hookTypeAndSize": "Simple aberdeen fin n°4 à n°2",
+      "leaderRequirement": "Fluorocarbone 20/100 à 24/100 souple"
+    }
   },
   "bateau": {
     "present": true,
@@ -87,7 +94,14 @@
       "Arénicole fraîche sur hameçon tige longue à ardillons n°4",
       "Chair de couteau fraîchement récolté",
       "Morceau de néréide de roche bien vigoureuse"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Plomb palette ou cuillère à fond plate jaune/phospho animée par petits bonds",
+      "softLure": "Perles flottantes attractives et micro-squid souple monté en tête d'empile",
+      "naturalLure": "Arénicoles bien fermes ou néréides blanches présentées entières à plat sur le sable",
+      "hookTypeAndSize": "Hameçon aberdeen n°2 à #1/0 spécial ver marin",
+      "leaderRequirement": "Fluorocarbone 25/100 à 30/100 (empiles traînantes de 60 à 80 cm)"
+    }
   },
   "gear": {
     "canalCombo": {

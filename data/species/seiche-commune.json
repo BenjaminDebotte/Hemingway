@@ -59,7 +59,14 @@
       "Turlutte DTD ou Yamashita taille 3.0 (Coloris Rose, Orange ou Naturel Maquereau)",
       "Turlutte plombée artisanale blanche à cage d'aiguilles",
       "Petite sardine fraîche ligaturée sur turlutte espagnole"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Turlutte Egi rigide #2.5 à #3.0 (rose, orange, glow) animée en dents de scie",
+      "softLure": "Turlutte souple tataki ou calamarette plombée 15-25g dandinée sur le fond",
+      "naturalLure": "Sardine fraîche ou tacaud ligaturé sur cage à appât avec couronne de pointes",
+      "hookTypeAndSize": "Double couronne d'aiguilles radiales sans ardillon (panier turlutte japonais)",
+      "leaderRequirement": "Fluorocarbone 22/100 à 26/100 souple sans mémoire (1.5 m)"
+    }
   },
   "bateau": {
     "present": true,
@@ -87,7 +94,14 @@
       "Turlutte Tataki Yamashita Oppai 7cm (Coloris Rose et Vert phospho)",
       "Turlutte Tip-Run plombée 30g à 50g",
       "Crevette artificielle phospho"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Turlutte Tip-Run lourde 30-50g ou turlutte Egi #3.5 plombée en tête en dérive du large",
+      "softLure": "Montage tataki en dérivation (2 turluttes souples au-dessus d'un plomb aronde)",
+      "naturalLure": "Poisson blanc ou maquereau ficelé sur turlutte à broche spéciale seiche",
+      "hookTypeAndSize": "Paniers doubles d'aiguilles inox taille standard #3.0/#3.5",
+      "leaderRequirement": "Fluorocarbone 26/100 à 30/100 (2 m) relié à un émerillon rolling"
+    }
   },
   "gear": {
     "canalCombo": {

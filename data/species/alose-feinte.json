@@ -59,7 +59,14 @@
       "Petite cuiller ondulante fine chromée ou dorée 7g à 10g",
       "Casting jig miniature 10g holographique",
       "Mouches noyées brillantes ou streamers en mylar"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Petite cuillère ondulante légère 7-12g argentée ou petit casting jig chromé 10-15g",
+      "softLure": "Micro-shad 50mm blanc ou nacré dandiné dans le courant des sas",
+      "naturalLure": "Asticot blanc ou ver marin miniature sous bouchon (moins efficace que les leurres)",
+      "hookTypeAndSize": "Triple fin n°10 à n°8 ou simple à œillet n°6",
+      "leaderRequirement": "Fluorocarbone 18/100 à 22/100 discret"
+    }
   },
   "bateau": {
     "present": true,
@@ -86,7 +93,14 @@
     "recommendedLuresAndBaits": [
       "Cuiller ondulante type Toby 10g argentée",
       "Mitraillette à micro-plumes blanches"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Mitraillette de plumes blanches/argentées avec petit jig d'appel 20-30g en dérive côtière",
+      "softLure": "Micro-raglou 55mm blanc nacré ou rose en train de 2 à 3 leurres",
+      "naturalLure": "Non applicable (chasses de pleine eau aux proies luisantes)",
+      "hookTypeAndSize": "Hameçons étamés sabiki n°6 à n°4",
+      "leaderRequirement": "Fluorocarbone 22/100 à 25/100 souple"
+    }
   },
   "gear": {
     "canalCombo": {

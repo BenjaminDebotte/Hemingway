@@ -59,7 +59,14 @@
       "Turlutte phosphorescente Yamashita Warm Jacket taille 2.5 ou 3.0 (Glow/Bleu)",
       "Turlutte DTD Flash Coloris Blanc / Rose",
       "Petite sardine fraîche ligaturée sur cage"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Turlutte de surface flottante ou suspending 7-10cm sous les réverbères de quai",
+      "softLure": "Petite turlutte souple phosphorescente dandinée sous la surface",
+      "naturalLure": "Petit poissonnet (sprat, lançon) monté sur aiguille à calamar avec panier terminal",
+      "hookTypeAndSize": "Couronne double de pointes acérées sans ardillon (paniers Egi fins)",
+      "leaderRequirement": "Fluorocarbone 20/100 à 24/100 très discret"
+    }
   },
   "bateau": {
     "present": true,
@@ -87,7 +94,14 @@
       "Turluttes Oppai Yamashita 7cm (Coloris Phospho / Tête Rouge)",
       "Turlutte plombée Tip-Run 30g à 45g",
       "Jig à calmar métallique lumineux"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Turlutte plombée 30-60g ou potence de turluttes Egi phosphorescentes",
+      "softLure": "Train de turluttes tataki souples multicolores dandiné en dérive crépusculaire",
+      "naturalLure": "Petite sardine entière montée sur turlutte plombée à ressort",
+      "hookTypeAndSize": "Double couronne d'aiguilles inox extra-piquantes",
+      "leaderRequirement": "Fluorocarbone souple 24/100 à 28/100 résistant aux frottements"
+    }
   },
   "gear": {
     "canalCombo": {

@@ -62,7 +62,14 @@ window.SPECIES_DATA = [
         "Fiiish Black Minnow 90 & 120 (Têtes 10g-12g Kaki)",
         "Asturie 110 / Patchinko 100 (Coloris 500G)",
         "Bouquet vivant récolté sur l'estran d'Ouistreham"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Stickbait flottant 110-130mm (Patchinko 125, Asturie 110) ou jerkbait coulant (Flashminnow 110)",
+        "softLure": "Shad 100-120mm sur tête texane articulée 10-18g (Black Minnow 120, Nitro Shad 120)",
+        "naturalLure": "Lançon vivant, arénicole noire au posé ou bouquet vivant à la calée",
+        "hookTypeAndSize": "Texan Wide Gap #2/0 à #3/0 (leurres) ou simple forgé renversé #1/0 à #2/0 (appâts)",
+        "leaderRequirement": "Fluorocarbone 100% 24/100 à 28/100 (2.5 m) résistant à l'abrasion des moules sauvages"
+      }
     },
     "bateau": {
       "present": true,
@@ -91,7 +98,14 @@ window.SPECIES_DATA = [
         "Crazy Sand Eel 150 & 180 (Tête 20-30g Kaki/Bleu)",
         "Patchinko 125 & 140 (Dos Jaune / Nacre)",
         "Lançon frais ou vivant sur montage potence"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Casting jig effilé 30-50g (chasses de surface) ou stickbait lourd 140mm sur les ridens",
+        "softLure": "Shad ou slug 120-160mm tête 25-45g (Crazy Sand Eel 150/180, Black Minnow 140) en traction",
+        "naturalLure": "Lançon vivant sur traîneau en dérive au ras du fond ou sardine entière à soutenir",
+        "hookTypeAndSize": "Texan Wide Gap renforcé 2X #3/0 à #5/0 ou aberdeen fort de fer #2/0 (lançon vivant)",
+        "leaderRequirement": "Fluorocarbone 30/100 à 35/100 (3 m, 6 à 8 kg) pour résister aux Roches du Calvados"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -205,7 +219,14 @@ window.SPECIES_DATA = [
         "Arénicole fraîche ou néréide de roche",
         "Fiiish Black Minnow 70 / 90 (Tête 6g-10g Kaki)",
         "Crevette grise vivante sur hameçon n°4 fin de fer"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Petit jerkbait minnow suspending 70-90mm ou micro-stickbait 80mm dans les veines d'eau",
+        "softLure": "Shad fin 70-90mm (Black Minnow 90, One Up 3\") sur tête texane ou ronde 7-12g",
+        "naturalLure": "Arénicole fraîche, demi-dure de roche ou crevette grise vivante",
+        "hookTypeAndSize": "Texan fin #1 à #1/0 ou simple rond à œillet n°2 à n°4",
+        "leaderRequirement": "Fluorocarbone 20/100 à 24/100 discret (2 m)"
+      }
     },
     "bateau": {
       "present": true,
@@ -233,7 +254,14 @@ window.SPECIES_DATA = [
         "Crazy Sand Eel 100 (Coloris Nacre / Kaki)",
         "Arénicole fraîche sur empile basse 22/100",
         "Petite cuiller ondulante argentée 10-15g"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Casting jig compact 15-30g ou petit minnow coulant 80-90mm",
+        "softLure": "Slug ou shad effilé 90-110mm sur tête 15-28g en dérive sur les sables de Lion",
+        "naturalLure": "Arénicole entière ou bouquet vivant sur montage traîneau à empile traînante",
+        "hookTypeAndSize": "Simple rond à œillet n°2 à #1/0 forgé étamé",
+        "leaderRequirement": "Fluorocarbone 22/100 à 26/100 (2.5 m) discret sur fonds sablo-graveleux"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -345,7 +373,14 @@ window.SPECIES_DATA = [
       "recommendedLuresAndBaits": [
         "Fiiish Black Minnow 90 (Tête 12g Kaki ou Bleu)",
         "Lançon frais monté sur tête plombée sabot 15g"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Petit jig métallique dandinette 15-25g le long des palplanches profondes (Ouistreham/Ranville)",
+        "softLure": "Shad souple 90-110mm coloris bleu/kaki sur tête 10-18g en verticale près des sas",
+        "naturalLure": "Lanière d'encornet frais ou crevette grise le long des murs de quai",
+        "hookTypeAndSize": "Simple fort de fer #1/0 ou tête plombée texane #2/0",
+        "leaderRequirement": "Fluorocarbone 26/100 à 30/100 résistant aux arêtes de palplanches métalliques"
+      }
     },
     "bateau": {
       "present": true,
@@ -374,7 +409,14 @@ window.SPECIES_DATA = [
         "Fiiish Black Minnow 140 / 160 (Têtes 60g à 120g Bleu ou Rose)",
         "Illex Nitro Shad 150 (Coloris Jelly Shad)",
         "Lançon vivant piqué par la gueule"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Slow jig ou casting jig lourd 60-120g en ascenseur vertical au-dessus des épaves 1944",
+        "softLure": "Gros shad ou slug effilé 150-220mm (Crazy Sand Eel 180/220, BM 140/160) tête 40-90g",
+        "naturalLure": "Lançon vivant au traîneau ou lanière de maquereau frais en dérive sur épaves",
+        "hookTypeAndSize": "Assist hooks doubles forgés 2X #2/0 à #4/0 (jig) ou texan fort #4/0 à #6/0",
+        "leaderRequirement": "Fluorocarbone 35/100 à 45/100 (3 m, 10 à 14 kg) indispensable pour brider hors des tôles"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -487,7 +529,14 @@ window.SPECIES_DATA = [
         "Casting jig 15g-20g argenté / bleu holographique",
         "Raglou 65mm nacré blanc ou pailleté",
         "Lamelle d'encornet ou lanière de maquereau fraîche"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Petit casting jig chromé 10-20g ou cuillère ondulante étroite (Toby 12-18g)",
+        "softLure": "Micro-shad 50-70mm ou raglou blanc monté derrière un buldo ou plombée d'appel",
+        "naturalLure": "Lanière de maquereau frais ou tronçon d'arénicole sous petit flotteur",
+        "hookTypeAndSize": "Simple à œillet étamé n°4 à n°2 ou triple fin n°6",
+        "leaderRequirement": "Fluorocarbone souple 22/100 à 25/100 (1.5 m)"
+      }
     },
     "bateau": {
       "present": true,
@@ -516,7 +565,14 @@ window.SPECIES_DATA = [
         "Mitraillette à plumes blanches et reflets argentés (3 à 5 hameçons)",
         "Petit jig à dandinette 30g à 60g",
         "Cuiller ondulante type Toby 20g"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Casting jig 25-45g (chrome/bleu/rose) ou cuillère lourde dandinée dans les bouillons",
+        "softLure": "Mitraillette de plumes / sabiki (3 à 5 plumes étamées) ou chapelet de raglous 65mm",
+        "naturalLure": "Lanière de maquereau ou d'encornet frais sur palangrotte légère ou ligne de traîne",
+        "hookTypeAndSize": "Hameçons sabiki étamés n°2 à #1/0 montés en potence",
+        "leaderRequirement": "Nylon ou fluorocarbone 28/100 à 35/100 résistant aux vrillages en grappe"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -629,7 +685,14 @@ window.SPECIES_DATA = [
         "Petite cuiller ondulante fine chromée 7g à 12g",
         "Lanière de lard ou peau de maquereau taillée en biseau",
         "Fil de soie de couleur rouge ou jaune fluo"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Cuillère ondulante argentée fine 10-15g ou petit jerkbait de surface 70mm",
+        "softLure": "Micro-finesse 50-60mm translucide sur micro-tête 3-5g ramené à vive allure",
+        "naturalLure": "Lanière de maquereau très étroite ou néréide sous flotteur coulissant (1 m d'eau)",
+        "hookTypeAndSize": "Simple aberdeen n°6 à n°8 (ou brin de soie dentaire/laine floche sans hameçon)",
+        "leaderRequirement": "Fluorocarbone 20/100 à 22/100 très discret"
+      }
     },
     "bateau": {
       "present": true,
@@ -656,7 +719,14 @@ window.SPECIES_DATA = [
       "recommendedLuresAndBaits": [
         "Petite cuiller Flashmer argentée 10g",
         "Petit leurre coulant pencil 60mm coloris maquereau"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Casting jig effilé 15-28g ou cuillère ondulante côtière ramenée rapidement en surface",
+        "softLure": "Raglou blanc 65mm monté derrière buldo ou bombette flottante",
+        "naturalLure": "Lanière étroite de poisson frais (maquereau, orphie) ou bouquet vivant en surface",
+        "hookTypeAndSize": "Simple aberdeen n°6 à tige longue ou triple miniature n°10",
+        "leaderRequirement": "Fluorocarbone 22/100 à 25/100 (2 m)"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -770,7 +840,14 @@ window.SPECIES_DATA = [
         "Arénicole fraîche bien gorgée de liquide",
         "Lanière de maquereau ou filet de hareng frais",
         "Tentacule d'encornet découpée finement"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable (inopérant en canal sur cette espèce benthique)",
+        "softLure": "Micro-shad 60mm glow ou worm souple dandiné au ras de la vase en hiver",
+        "naturalLure": "Arénicole, demi-dure ou tronçon d'encornet sur montage à 2 empiles au fond",
+        "hookTypeAndSize": "Simple aberdeen à tige longue n°4 à n°2 facilitant le dégorgeage",
+        "leaderRequirement": "Fluorocarbone ou nylon souple 22/100 à 25/100"
+      }
     },
     "bateau": {
       "present": true,
@@ -798,7 +875,14 @@ window.SPECIES_DATA = [
         "Filet de maquereau taillé en pointe de 5-7 cm",
         "Gros bouquets d'arénicoles ou vers de chalut",
         "Lanière d'encornet phosphorescente"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Petit pirk / jig dandinette 40-70g équipé d'une empile eschée au-dessus",
+        "softLure": "Gummi-makk rouge/blanc ou octopus souple 6-8cm monté en potence au-dessus du lest",
+        "naturalLure": "Lanières d'arénicole, morceaux de maquereau, tacaud ou lanières de seiche (3 empiles)",
+        "hookTypeAndSize": "Simple aberdeen forgé étamé n°2 à #1/0",
+        "leaderRequirement": "Fluorocarbone 28/100 à 32/100 résistant aux vrillages de fond en Manche"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -911,7 +995,14 @@ window.SPECIES_DATA = [
         "Tronçon d'arénicole ou ver néréide",
         "Bout de crevette grise crue",
         "Micro-lanière de calmar ou de maquereau"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Micro-grub ou petit ver souple aromatisé gratté le long des quais sombres",
+        "naturalLure": "Arénicole, ver de terreau, demi-dure ou chair de moule sur montage calé",
+        "hookTypeAndSize": "Simple fin de fer n°6 à n°4",
+        "leaderRequirement": "Fluorocarbone 20/100 à 22/100"
+      }
     },
     "bateau": {
       "present": true,
@@ -939,7 +1030,14 @@ window.SPECIES_DATA = [
         "Petits morceaux d'encornet ou de seiche (tenue parfaite à l'hameçon)",
         "Tronçons d'arénicoles fraîches",
         "Mitraillette fine plumes blanches hameçon n°6 à n°8"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Petit jig argenté 30-50g servant de lesteur dandiné au ras de l'épave",
+        "softLure": "Mitraillette de petits octopus phosphorescents 5cm montés en potence",
+        "naturalLure": "Arénicoles, morceaux d'encornet ou lanières de maquereau sur bas de ligne 3 empiles",
+        "hookTypeAndSize": "Simple rond étamé n°4 à n°2",
+        "leaderRequirement": "Nylon ou fluorocarbone 26/100 à 30/100 anti-emmêlement sur épave"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -1053,7 +1151,14 @@ window.SPECIES_DATA = [
         "Moule fraîche emboîtée ficelée au fil élastique",
         "Petit crabe vert vivant décortiqué ou entier (2-3 cm)",
         "Ver arénicole géant ou bibi de Sète bien gorgé d'eau"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable (espèce brouteuse non réceptive aux leurres durs)",
+        "softLure": "Micro-créature crabe/crevette souple (très marginalement en gratte lente)",
+        "naturalLure": "Crabe vert entier (pattes arrière ôtées), couteau frais ficelé ou bibi de Sète",
+        "hookTypeAndSize": "Simple forgé fort de fer 2X/3X renversé n°2 à #1/0 (anti-écrasement mâchoire)",
+        "leaderRequirement": "Fluorocarbone 100% 28/100 à 32/100 (2 m) résistant aux coquilles coupantes"
+      }
     },
     "bateau": {
       "present": true,
@@ -1082,7 +1187,14 @@ window.SPECIES_DATA = [
         "Couteau frais entier ficelé au fil latex",
         "Crabe vert vivant esché par les pattes arrière",
         "Tenya avec crevette bouquet crue"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Tenya lourd 30-50g à tête plate jaune/orange esché d'une gambas ou crevette fraîche",
+        "softLure": "Non applicable (privilégier l'association hybride tenya + esche naturelle)",
+        "naturalLure": "Crabe vert entier ligaturé au fil latex, couteau entier frais ou gros bibi en dérive",
+        "hookTypeAndSize": "Simple forgé fort de fer à pointe rentrante n°1 à #2/0 (Owner Cutting Point)",
+        "leaderRequirement": "Fluorocarbone 30/100 à 35/100 (2.5 m) impératif sur les Roches du Calvados"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -1192,7 +1304,14 @@ window.SPECIES_DATA = [
       ],
       "recommendedLuresAndBaits": [
         "Non applicable en canal"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Non applicable",
+        "hookTypeAndSize": "Non applicable",
+        "leaderRequirement": "Non applicable"
+      }
     },
     "bateau": {
       "present": true,
@@ -1221,7 +1340,14 @@ window.SPECIES_DATA = [
         "Arénicole fraîche découpée en petits tronçons",
         "Lanière fine d'encornet ou tentacule de seiche crue",
         "Coque fraîche ou pied de couteau ligaturé"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable (pêche traditionnelle à soutenir aux appâts)",
+        "softLure": "Micro-crevette souple ou petite tentacule sur tête fine 15-30g en dérive lente",
+        "naturalLure": "Arénicole, néréide dure, lanière étroite d'encornet ou lamelle de maquereau",
+        "hookTypeAndSize": "Simple forgé à tige moyenne n°4 à n°2 (chinu ou aberdeen court)",
+        "leaderRequirement": "Fluorocarbone souple 24/100 à 28/100 (empiles de 40 à 60 cm en potence)"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -1336,7 +1462,14 @@ window.SPECIES_DATA = [
         "Vers arénicoles bien frais",
         "Gros vers de terreau ou lombrics (très efficace en haut-canal)",
         "Lanière de maquereau ou queue de crevette crue"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Micro-worm souple ou créature 5-7cm traîné très lentement sur les fonds vaseux",
+        "naturalLure": "Arénicole noire, demi-dure ou ver de terreau sur montage coulissant à empile traînante",
+        "hookTypeAndSize": "Hameçon aberdeen n°4 à n°2 à tige longue pour faciliter le dégorgeage",
+        "leaderRequirement": "Fluorocarbone 20/100 à 24/100 (1.5 m) souple"
+      }
     },
     "bateau": {
       "present": true,
@@ -1364,7 +1497,14 @@ window.SPECIES_DATA = [
         "Arénicole fraîche ou néréide",
         "Petite cuiller ondulante argentée montée avec un ver",
         "Lanière de poisson frais"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Cuillère plate hollandaise ondulante jaune/rouge servant de teaseur dandiné sur le sable",
+        "softLure": "Micro-finesse ou perles souples phosphorescentes intercalées devant l'esche",
+        "naturalLure": "Arénicoles fraîches ou néréides eschées à l'aiguille sur montage traîneau à perles",
+        "hookTypeAndSize": "Aberdeen étamé n°4 à n°1 à tige longue garnie d'ardillons de tige",
+        "leaderRequirement": "Fluorocarbone 25/100 à 28/100 résistant au frottement sur le sable coquillier"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -1477,7 +1617,14 @@ window.SPECIES_DATA = [
         "Arénicole fraîche ou ver blanc de sable",
         "Petite lamelle de couteau frais",
         "Queue de crevette grise crue décortiquée"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Petite imitation souple d'arénicole ou ver marin sur micro-tête sabot 5g",
+        "naturalLure": "Arénicole fraîche ou néréide de roche sur montage palangrotte à 2 empiles basses",
+        "hookTypeAndSize": "Simple aberdeen fin n°4 à n°2",
+        "leaderRequirement": "Fluorocarbone 20/100 à 24/100 souple"
+      }
     },
     "bateau": {
       "present": true,
@@ -1505,7 +1652,14 @@ window.SPECIES_DATA = [
         "Arénicole fraîche sur hameçon tige longue à ardillons n°4",
         "Chair de couteau fraîchement récolté",
         "Morceau de néréide de roche bien vigoureuse"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Plomb palette ou cuillère à fond plate jaune/phospho animée par petits bonds",
+        "softLure": "Perles flottantes attractives et micro-squid souple monté en tête d'empile",
+        "naturalLure": "Arénicoles bien fermes ou néréides blanches présentées entières à plat sur le sable",
+        "hookTypeAndSize": "Hameçon aberdeen n°2 à #1/0 spécial ver marin",
+        "leaderRequirement": "Fluorocarbone 25/100 à 30/100 (empiles traînantes de 60 à 80 cm)"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -1618,7 +1772,14 @@ window.SPECIES_DATA = [
         "Petit ver néréide de roche bien frétillant",
         "Arénicole fraîche découpée en petits tronçons bien gorgés",
         "Ver mouron ou gravette blanche"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable (régime benthique nocturne strictement olfactif et tactile)",
+        "softLure": "Non applicable",
+        "naturalLure": "Arénicole noire ou néréide rouge ultra-fraîche déposée à plat sur la vase à la nuit",
+        "hookTypeAndSize": "Simple aberdeen fin n°8 à n°6 à hampe très longue (engamage profond)",
+        "leaderRequirement": "Fluorocarbone très souple 18/100 à 22/100 sans mémoire (1.5 m)"
+      }
     },
     "bateau": {
       "present": true,
@@ -1646,7 +1807,14 @@ window.SPECIES_DATA = [
         "Ver arénicole ou ver de vase frais",
         "Petite lamelle de néréide fraîche",
         "Morceau de chair de couteau très frais"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable (100% appâts naturels)",
+        "softLure": "Non applicable",
+        "naturalLure": "Arénicoles locales fraîches montées à l'aiguille sur bas de ligne 2 empiles traînantes",
+        "hookTypeAndSize": "Aberdeen n°8 à n°6 fin de fer à pointe rentrante ultra-affûtée",
+        "leaderRequirement": "Fluorocarbone limpide 22/100 à 25/100 avec émerillons rolling micro-baril"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -1755,7 +1923,14 @@ window.SPECIES_DATA = [
       ],
       "recommendedLuresAndBaits": [
         "Non applicable en canal"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Non applicable",
+        "hookTypeAndSize": "Non applicable",
+        "leaderRequirement": "Non applicable"
+      }
     },
     "bateau": {
       "present": true,
@@ -1784,7 +1959,14 @@ window.SPECIES_DATA = [
         "Lançon frais ou vivant piqué par la tête sur hameçon 2/0 ou 3/0",
         "Lanière de ventre de maquereau blanc brillant (12-15 cm)",
         "Tentacule d'encornet frais ou calmar"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Plomb lesteur plat ou cuillère à turbot lourde (60-120g) pour maintenir la dérive sur le fond",
+        "softLure": "Gros shad 15-18cm couleur sable/naturel traîné au ras du gravier par forte dérive",
+        "naturalLure": "Lançon vivant ou grand filet de maquereau frais monté sur traîneau en dérive soutenue",
+        "hookTypeAndSize": "Simple forgé fort de fer aberdeen ou live-bait #1/0 à #3/0",
+        "leaderRequirement": "Fluorocarbone 35/100 à 45/100 (résistance 10 kg) longueur 2 m"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -1894,7 +2076,14 @@ window.SPECIES_DATA = [
       ],
       "recommendedLuresAndBaits": [
         "Non applicable en canal"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Non applicable",
+        "hookTypeAndSize": "Non applicable",
+        "leaderRequirement": "Non applicable"
+      }
     },
     "bateau": {
       "present": true,
@@ -1923,7 +2112,14 @@ window.SPECIES_DATA = [
         "Petit crabe vert vivant entier esché par les pattes arrière",
         "Crevette bouquet fraîche ou cuite",
         "Créature souple type craw (Black Minnow, Dolive Craw) en montage texan"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Strictement déconseillé (accrochage et perte immédiate dans les blocs et laminaires)",
+        "softLure": "Créature ou écrevisse souple 9-12cm montée en texan plombé 15-35g au cœur des failles",
+        "naturalLure": "Crabe vert entier, crevette rose vivante ou chair de bernique à la palangrotte",
+        "hookTypeAndSize": "Texan Wide Gap fort de fer #2/0 à #4/0 ou simple renversé forgé n°1",
+        "leaderRequirement": "Fluorocarbone 35/100 à 45/100 très rigide résistant aux arêtes rocheuses tranchantes"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -2036,7 +2232,14 @@ window.SPECIES_DATA = [
         "Maquereau entier frais fendu sur le flanc pour diffuser l'huile",
         "Tacaud entier frais ou tête de seiche",
         "Sardine fraîche ligaturée au fil élastique"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable (espèce cavernicole guidée par un odorat puissant)",
+        "softLure": "Non applicable",
+        "naturalLure": "Gros morceau de maquereau, tête de tacaud écrasée ou calamar entier calé sur les blocs",
+        "hookTypeAndSize": "Hameçon simple forgé fort de fer n°4/0 à #6/0 à œillet soudé",
+        "leaderRequirement": "Câble acier gainé 49 brins 50 à 70 lbs (70 cm) + émerillon baril forgé anti-vrille"
+      }
     },
     "bateau": {
       "present": true,
@@ -2065,7 +2268,14 @@ window.SPECIES_DATA = [
         "Calmar entier frais ou gros tacaud vivant",
         "Demi-maquereau ou bonite ligaturée",
         "Gros morceau de seiche crue avec le blanc"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable (0% leurres)",
+        "softLure": "Non applicable",
+        "naturalLure": "Maquereau entier fendu, grosse seiche fraîche ou tacaud vivant déposé au cœur de l'épave",
+        "hookTypeAndSize": "Hameçon congre forgé 3X fort #6/0 à #8/0 extra-puissant",
+        "leaderRequirement": "Bas de ligne acier 80 lbs inox (1 m) relié à un émerillon baril haute puissance 1/0"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -2179,7 +2389,14 @@ window.SPECIES_DATA = [
         "Mie de pain blanc frais bien compactée sur l'œillet",
         "Pâte de pain mélangée à de l'huile de sardine",
         "Petit ver néréide ou demi-dur sur ligne fine"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Cuillère à mulet argentée spécifique munie d'une courte empile de 6cm eschée d'un ver",
+        "softLure": "Micro-worm souple ou néréide artificielle aromatisée (Gulp) en dérive lente",
+        "naturalLure": "Mie de pain flottante, pâte à base de sardine/fromage ou demi-dure sur ligne fine",
+        "hookTypeAndSize": "Simple forgé court n°10 à n°8 à micro-ardillon",
+        "leaderRequirement": "Fluorocarbone fin et souple 16/100 à 20/100 discret"
+      }
     },
     "bateau": {
       "present": true,
@@ -2207,7 +2424,14 @@ window.SPECIES_DATA = [
         "Cuiller tournante à mulet (palet argenté garni d'un ver)",
         "Morceau de pain frais dérivant",
         "Néréide de roche sur bas de ligne long"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Cuillère ondulante spéciale mulet traînée lentement au ras des têtes de roches",
+        "softLure": "Micro-mouche d'artifice en poils verts (imitation algues) montée en potence",
+        "naturalLure": "Demi-dure de roche bien vivante ou pâte de sardine sur bouchon coulissant",
+        "hookTypeAndSize": "Hameçon simple cristal ou chinu n°8 à n°6",
+        "leaderRequirement": "Fluorocarbone 18/100 à 22/100 souple (2 m)"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -2320,7 +2544,14 @@ window.SPECIES_DATA = [
         "Cuiller tournante argentée n°1 ou n°2 armée d'une empile courte",
         "Ver demi-dur ou néréide rouge fraîche",
         "Micro-streamer blanc ou olive pour la pêche au fouet"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Micro-cuillère tournante n°1 ou cuillère à mulet avec empile courte",
+        "softLure": "Micro-ver souple marron ou imitation crevette 3cm",
+        "naturalLure": "Néréide de roche fraîche, chair de coque ou pain pétri sous flotteur léger",
+        "hookTypeAndSize": "Simple fin de fer n°10 à n°8",
+        "leaderRequirement": "Fluorocarbone 16/100 à 18/100 ultra-discret"
+      }
     },
     "bateau": {
       "present": true,
@@ -2348,7 +2579,14 @@ window.SPECIES_DATA = [
         "Cuiller spéciale mulet à palette argentée et perles rouges",
         "Ver néréide de roche esché entier",
         "Petite cuiller ondulante 5g argentée"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Cuillère à mulet allongée avec teaser rouge en traîne côtière très lente",
+        "softLure": "Non applicable",
+        "naturalLure": "Néréides fraîches (demi-dures) sur empile traînante sur petits bancs de sable",
+        "hookTypeAndSize": "Simple fin n°8 à n°6",
+        "leaderRequirement": "Fluorocarbone 18/100 à 20/100"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -2462,7 +2700,14 @@ window.SPECIES_DATA = [
         "Mie de pain frais bien tassée",
         "Vers de vase (chironomes) ou pinkies blancs",
         "Pâte de fromage ou farine de chènevis"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Cuillère à mulet argentée avec empile de 5cm",
+        "softLure": "Micro-streamer vert ou micro-imitation d'algues en potence",
+        "naturalLure": "Pain chaillou, néréide de vase ou ver de terreau en dérive au bouchon",
+        "hookTypeAndSize": "Hameçon simple n°10 à n°12 fin de fer discret",
+        "leaderRequirement": "Nylon ou fluorocarbone 14/100 à 18/100 souple"
+      }
     },
     "bateau": {
       "present": false,
@@ -2487,7 +2732,14 @@ window.SPECIES_DATA = [
       ],
       "recommendedLuresAndBaits": [
         "Non applicable en mer"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Non applicable",
+        "hookTypeAndSize": "Non applicable",
+        "leaderRequirement": "Non applicable"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -2602,7 +2854,14 @@ window.SPECIES_DATA = [
         "Poisson nageur type Rapala Countdown 7cm ou Duo Spearhead Ryuki 70S",
         "Cuiller ondulante fine argentée type Mepps Syclops 12g",
         "Streamer tandem noir et argenté monté sur tube fly"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Jerkbait minnow coulant 60-80mm (D-Contact 63/72, Ryuki 70) ou cuillère tournante dorée n°3",
+        "softLure": "Shad finesse 70-90mm (Black Minnow 70/90) coloris ayu/naturel en lancer-ramener rapide",
+        "naturalLure": "Vairon manié sur monture articulée ou bouquet vivant sous flotteur dérivant",
+        "hookTypeAndSize": "Triples étamés fins de fer n°8 à n°6 ou simple texan fin #1",
+        "leaderRequirement": "Fluorocarbone 20/100 à 24/100 résistant et parfaitement invisible"
+      }
     },
     "bateau": {
       "present": true,
@@ -2629,7 +2888,14 @@ window.SPECIES_DATA = [
       "recommendedLuresAndBaits": [
         "Cuiller ondulante fine côtière type Hansen Pilgrim ou Toby 15g argent/bleu",
         "Petit leurre de surface stickbait 90mm manié vivement"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Cuillère ondulante effilée 15-25g (Hansen Flash, More Silda) ou jerkbait côtier 90mm",
+        "softLure": "Slug ou shad effilé 80-110mm imitant le lançon ou le sprat",
+        "naturalLure": "Lançon vivant à la traîne lente ou petit sprat frais au flotteur coulissant",
+        "hookTypeAndSize": "Simple aberdeen renforcé n°2 à #1/0 ou triple marin étamé n°6",
+        "leaderRequirement": "Fluorocarbone 24/100 à 28/100 (2.5 m) souple"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -2742,7 +3008,14 @@ window.SPECIES_DATA = [
         "Petite cuiller ondulante fine chromée ou dorée 7g à 10g",
         "Casting jig miniature 10g holographique",
         "Mouches noyées brillantes ou streamers en mylar"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Petite cuillère ondulante légère 7-12g argentée ou petit casting jig chromé 10-15g",
+        "softLure": "Micro-shad 50mm blanc ou nacré dandiné dans le courant des sas",
+        "naturalLure": "Asticot blanc ou ver marin miniature sous bouchon (moins efficace que les leurres)",
+        "hookTypeAndSize": "Triple fin n°10 à n°8 ou simple à œillet n°6",
+        "leaderRequirement": "Fluorocarbone 18/100 à 22/100 discret"
+      }
     },
     "bateau": {
       "present": true,
@@ -2769,7 +3042,14 @@ window.SPECIES_DATA = [
       "recommendedLuresAndBaits": [
         "Cuiller ondulante type Toby 10g argentée",
         "Mitraillette à micro-plumes blanches"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Mitraillette de plumes blanches/argentées avec petit jig d'appel 20-30g en dérive côtière",
+        "softLure": "Micro-raglou 55mm blanc nacré ou rose en train de 2 à 3 leurres",
+        "naturalLure": "Non applicable (chasses de pleine eau aux proies luisantes)",
+        "hookTypeAndSize": "Hameçons étamés sabiki n°6 à n°4",
+        "leaderRequirement": "Fluorocarbone 22/100 à 25/100 souple"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -2884,7 +3164,14 @@ window.SPECIES_DATA = [
         "Gros ver de terreau ou lombric bien vigoureux",
         "Petit poisson mort posé sur le fond (gardon ou épinoche)",
         "Tronçon de crevette fraîche"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable (espèce fouisseuse et nocturne, pêche de jour obligatoire)",
+        "softLure": "Non applicable",
+        "naturalLure": "Gros lombric à tête noire, bouquet de terreau ou morceau de poisson frais calé au fond",
+        "hookTypeAndSize": "Simple aberdeen à hampe longue n°6 à n°4 (dégorgeoir indispensable)",
+        "leaderRequirement": "Tresse souple 15-20 lbs ou fluorocarbone résistant 28/100 à 35/100 anti-vrillage"
+      }
     },
     "bateau": {
       "present": false,
@@ -2909,7 +3196,14 @@ window.SPECIES_DATA = [
       ],
       "recommendedLuresAndBaits": [
         "Non applicable en mer"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Non applicable",
+        "hookTypeAndSize": "Non applicable",
+        "leaderRequirement": "Non applicable"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -3022,7 +3316,14 @@ window.SPECIES_DATA = [
         "Turlutte DTD ou Yamashita taille 3.0 (Coloris Rose, Orange ou Naturel Maquereau)",
         "Turlutte plombée artisanale blanche à cage d'aiguilles",
         "Petite sardine fraîche ligaturée sur turlutte espagnole"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Turlutte Egi rigide #2.5 à #3.0 (rose, orange, glow) animée en dents de scie",
+        "softLure": "Turlutte souple tataki ou calamarette plombée 15-25g dandinée sur le fond",
+        "naturalLure": "Sardine fraîche ou tacaud ligaturé sur cage à appât avec couronne de pointes",
+        "hookTypeAndSize": "Double couronne d'aiguilles radiales sans ardillon (panier turlutte japonais)",
+        "leaderRequirement": "Fluorocarbone 22/100 à 26/100 souple sans mémoire (1.5 m)"
+      }
     },
     "bateau": {
       "present": true,
@@ -3050,7 +3351,14 @@ window.SPECIES_DATA = [
         "Turlutte Tataki Yamashita Oppai 7cm (Coloris Rose et Vert phospho)",
         "Turlutte Tip-Run plombée 30g à 50g",
         "Crevette artificielle phospho"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Turlutte Tip-Run lourde 30-50g ou turlutte Egi #3.5 plombée en tête en dérive du large",
+        "softLure": "Montage tataki en dérivation (2 turluttes souples au-dessus d'un plomb aronde)",
+        "naturalLure": "Poisson blanc ou maquereau ficelé sur turlutte à broche spéciale seiche",
+        "hookTypeAndSize": "Paniers doubles d'aiguilles inox taille standard #3.0/#3.5",
+        "leaderRequirement": "Fluorocarbone 26/100 à 30/100 (2 m) relié à un émerillon rolling"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -3163,7 +3471,14 @@ window.SPECIES_DATA = [
         "Turlutte phosphorescente Yamashita Warm Jacket taille 2.5 ou 3.0 (Glow/Bleu)",
         "Turlutte DTD Flash Coloris Blanc / Rose",
         "Petite sardine fraîche ligaturée sur cage"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Turlutte de surface flottante ou suspending 7-10cm sous les réverbères de quai",
+        "softLure": "Petite turlutte souple phosphorescente dandinée sous la surface",
+        "naturalLure": "Petit poissonnet (sprat, lançon) monté sur aiguille à calamar avec panier terminal",
+        "hookTypeAndSize": "Couronne double de pointes acérées sans ardillon (paniers Egi fins)",
+        "leaderRequirement": "Fluorocarbone 20/100 à 24/100 très discret"
+      }
     },
     "bateau": {
       "present": true,
@@ -3191,7 +3506,14 @@ window.SPECIES_DATA = [
         "Turluttes Oppai Yamashita 7cm (Coloris Phospho / Tête Rouge)",
         "Turlutte plombée Tip-Run 30g à 45g",
         "Jig à calmar métallique lumineux"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Turlutte plombée 30-60g ou potence de turluttes Egi phosphorescentes",
+        "softLure": "Train de turluttes tataki souples multicolores dandiné en dérive crépusculaire",
+        "naturalLure": "Petite sardine entière montée sur turlutte plombée à ressort",
+        "hookTypeAndSize": "Double couronne d'aiguilles inox extra-piquantes",
+        "leaderRequirement": "Fluorocarbone souple 24/100 à 28/100 résistant aux frottements"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -3305,7 +3627,14 @@ window.SPECIES_DATA = [
         "One Up Shad 3\" et 4\" (Coloris 06 Pro Blue, 07 Green Weenie)",
         "Keitech Easy Shiner 3.5\" sur tête sabot ou football 7g",
         "Petit gardon ou ablette fraîche de 7 à 10 cm"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Jerkbait minnow suspending 90-110mm (Squad Minnow, Pointer) de nuit le long des palplanches",
+        "softLure": "Shad souple 80-120mm (One Up 4\", Easy Shiner, BM 90) sur tête sabot ou texane 7-14g",
+        "naturalLure": "Ablette ou petit gardon mort posé sur le fond ou vif piqué par la lèvre en dérive lente",
+        "hookTypeAndSize": "Simple texan #1/0 à #3/0 ou simple rond fin n°2 (vif/mort posé)",
+        "leaderRequirement": "Fluorocarbone souple 22/100 à 26/100 (2 m) d'une discrétion absolue"
+      }
     },
     "bateau": {
       "present": false,
@@ -3330,7 +3659,14 @@ window.SPECIES_DATA = [
       ],
       "recommendedLuresAndBaits": [
         "Non applicable en mer"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Non applicable",
+        "hookTypeAndSize": "Non applicable",
+        "leaderRequirement": "Non applicable"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -3446,7 +3782,14 @@ window.SPECIES_DATA = [
         "Keitech Swing Impact 2.5\" ou 3\" (Coloris Wakasagi / Chartreuse)",
         "Illex Squirrel 61 SP ou Chubby 38",
         "Lame vibrante métallique 5g à 7g ou cuiller tournante n°2"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Crankbait compact, spintail métallique 10-14g ou petit jerkbait minnow 50-70mm",
+        "softLure": "Shad miniature 50-75mm ou worm monté en drop-shot le long des quais verticaux",
+        "naturalLure": "Gros ver de terreau, vairon vivant ou bouquet d'asticots au flotteur calé",
+        "hookTypeAndSize": "Hameçon drop-shot n°4 à n°2 ou tête plombée ronde n°2",
+        "leaderRequirement": "Fluorocarbone fin 18/100 à 22/100 (1.5 m)"
+      }
     },
     "bateau": {
       "present": false,
@@ -3471,7 +3814,14 @@ window.SPECIES_DATA = [
       ],
       "recommendedLuresAndBaits": [
         "Non applicable en mer"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Non applicable",
+        "hookTypeAndSize": "Non applicable",
+        "leaderRequirement": "Non applicable"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -3587,7 +3937,14 @@ window.SPECIES_DATA = [
         "Jerkbait type Buster Jerk 15cm (Coloris Perche ou Brochet)",
         "Shad souple 15cm (ex: Illex Dexter Shad ou Savage Gear Cannibal)",
         "Gros gardon vivant de 15 cm esché sous flotteur coulissant"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Jerkbait lourd sans bavette 12-15cm (Buster Jerk, Slider 10) ou grand spinnerbait tandem",
+        "softLure": "Gros shad paddle tail 15-20cm (Dexter Shad 150, Cannibal 15) armé d'un shallow rig",
+        "naturalLure": "Gardon ou carpeau vivant (12-18cm) au flotteur coulissant ou poisson mort manié",
+        "hookTypeAndSize": "Triples renforcés 2X n°2 à #1/0 ou simple texan Wide Gap géant #5/0 à #7/0",
+        "leaderRequirement": "Bas de ligne acier 49 brins 30 lbs ou fluorocarbone fort ≥ 80/100 (anti-coupe obligatoire)"
+      }
     },
     "bateau": {
       "present": false,
@@ -3612,7 +3969,14 @@ window.SPECIES_DATA = [
       ],
       "recommendedLuresAndBaits": [
         "Non applicable en mer"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Non applicable",
+        "hookTypeAndSize": "Non applicable",
+        "leaderRequirement": "Non applicable"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -3727,7 +4091,14 @@ window.SPECIES_DATA = [
         "Grosse brème vivante de 500g à 1 kg ou gros carassin",
         "Grappe de 15 à 20 gros vers de terre canadiens montés sur hameçon simple 4/0",
         "Shad XXL souple sombre (20 cm) sur tête plombée renforcée"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Grosse cuillère ondulante lourde 40-70g (effets de flash) ou gros crankbait bruiteur",
+        "softLure": "Gros shad 18-25cm sur tête plombée renforcée 25-50g ou leurre virgule géant",
+        "naturalLure": "Grappe de gros lombrics, encornets entiers décongelés ou gros vif d'un kilo",
+        "hookTypeAndSize": "Simple forgé ultra-puissant 4X #4/0 à #8/0 ou triple forgé taille #2/0 à #3/0",
+        "leaderRequirement": "Bas de ligne tresse armée haute résistance 60 à 100 kg (résistant aux râpes buccales)"
+      }
     },
     "bateau": {
       "present": false,
@@ -3752,7 +4123,14 @@ window.SPECIES_DATA = [
       ],
       "recommendedLuresAndBaits": [
         "Non applicable en mer"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Non applicable",
+        "hookTypeAndSize": "Non applicable",
+        "leaderRequirement": "Non applicable"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -3868,7 +4246,14 @@ window.SPECIES_DATA = [
         "Bouillettes denses 20mm (Arômes Monster Crab, Scopex ou Épices)",
         "Grains de maïs doux géant panachés avec un faux maïs flottant jaune",
         "Pellets de flétan riches en huile (Halibut 16mm)"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable (cyprinidé fouisseur non carnassier)",
+        "softLure": "Non applicable (très marginalement nymphe artificielle à la mouche)",
+        "naturalLure": "Bouillette carnée ou fruitée 16-20mm, maïs doux géant, lupin ou noix tigrée",
+        "hookTypeAndSize": "Hameçon carpe forgé à œillet rentrant n°6 à n°4 monté sur cheveu",
+        "leaderRequirement": "Tresse gainée souple 20-25 lbs (20 cm) avec leadcore anti-abrasion sur les enrochements"
+      }
     },
     "bateau": {
       "present": false,
@@ -3893,7 +4278,14 @@ window.SPECIES_DATA = [
       ],
       "recommendedLuresAndBaits": [
         "Non applicable en mer"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Non applicable",
+        "hookTypeAndSize": "Non applicable",
+        "leaderRequirement": "Non applicable"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -4008,7 +4400,14 @@ window.SPECIES_DATA = [
         "Vers de vase (chironomes) et pinkies rouges ou blancs",
         "Grains de chènevis cuits (indispensable pour sélectionner les gros spécimens)",
         "Pain blanc frais ou maïs doux au feeder"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Asticots, pinkies, vers de vase (fouille), graines de chènevis ou mie de pain",
+        "hookTypeAndSize": "Hameçon fin de fer doré ou bronze n°18 à n°14 à tige moyenne",
+        "leaderRequirement": "Nylon souple discret 8/100 à 12/100 (empile de 20 à 30 cm)"
+      }
     },
     "bateau": {
       "present": false,
@@ -4033,7 +4432,14 @@ window.SPECIES_DATA = [
       ],
       "recommendedLuresAndBaits": [
         "Non applicable en mer"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Non applicable",
+        "hookTypeAndSize": "Non applicable",
+        "leaderRequirement": "Non applicable"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -4150,7 +4556,14 @@ window.SPECIES_DATA = [
         "Bouquet d'asticots rouges ou panaché asticot / grain de maïs doux",
         "Gros vers de terreau coupés en morceaux dans la cage feeder",
         "Wafters aromatisés ou maïs doux au method feeder"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Gros vers de terreau coupés, bouquet d'asticots rouges, maïs doux sur amorce collante",
+        "hookTypeAndSize": "Hameçon simple rond bronze n°16 à n°12",
+        "leaderRequirement": "Nylon souple 12/100 à 14/100 (montage feeder avec bas de ligne 50-70 cm)"
+      }
     },
     "bateau": {
       "present": false,
@@ -4175,7 +4588,14 @@ window.SPECIES_DATA = [
       ],
       "recommendedLuresAndBaits": [
         "Non applicable en mer"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Non applicable",
+        "hookTypeAndSize": "Non applicable",
+        "leaderRequirement": "Non applicable"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -4290,7 +4710,14 @@ window.SPECIES_DATA = [
         "Gros ver de terreau bien rouge ou tronçon de lombric",
         "Panaché grain de maïs doux et bouquet d'asticots rouges",
         "Pain d'épice ou pâte sucrée au miel"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Ver de terreau rouge bien remuant, grain de maïs doux ou pain d'épice calé au fond",
+        "hookTypeAndSize": "Hameçon forgé fort de fer n°14 à n°10 à large ouverture",
+        "leaderRequirement": "Nylon ou fluorocarbone souple 14/100 à 16/100 discret dans les herbiers"
+      }
     },
     "bateau": {
       "present": false,
@@ -4315,7 +4742,14 @@ window.SPECIES_DATA = [
       ],
       "recommendedLuresAndBaits": [
         "Non applicable en mer"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Non applicable",
+        "hookTypeAndSize": "Non applicable",
+        "leaderRequirement": "Non applicable"
+      }
     },
     "gear": {
       "canalCombo": {
@@ -4431,7 +4865,14 @@ window.SPECIES_DATA = [
         "Pinkie blanc ou rouge miniature",
         "Ver de vase (chironome) enfilé sur hameçon très fin n°22 à n°24",
         "Amorce de surface ultra-fine type Tracix blanc ou jaune"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Pinkie unique, petit asticot blanc ou fragment de ver de vase sous flotteur plume",
+        "hookTypeAndSize": "Hameçon ultra-fin de fer sans ardillon n°22 à n°20",
+        "leaderRequirement": "Nylon ultra-fin 7/100 à 9/100 (15 cm) d'une extrême souplesse"
+      }
     },
     "bateau": {
       "present": false,
@@ -4456,7 +4897,14 @@ window.SPECIES_DATA = [
       ],
       "recommendedLuresAndBaits": [
         "Non applicable en mer"
-      ]
+      ],
+      "terminalTackle": {
+        "rigidLure": "Non applicable",
+        "softLure": "Non applicable",
+        "naturalLure": "Non applicable",
+        "hookTypeAndSize": "Non applicable",
+        "leaderRequirement": "Non applicable"
+      }
     },
     "gear": {
       "canalCombo": {

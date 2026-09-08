@@ -60,7 +60,14 @@
       "Moule fraîche emboîtée ficelée au fil élastique",
       "Petit crabe vert vivant décortiqué ou entier (2-3 cm)",
       "Ver arénicole géant ou bibi de Sète bien gorgé d'eau"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable (espèce brouteuse non réceptive aux leurres durs)",
+      "softLure": "Micro-créature crabe/crevette souple (très marginalement en gratte lente)",
+      "naturalLure": "Crabe vert entier (pattes arrière ôtées), couteau frais ficelé ou bibi de Sète",
+      "hookTypeAndSize": "Simple forgé fort de fer 2X/3X renversé n°2 à #1/0 (anti-écrasement mâchoire)",
+      "leaderRequirement": "Fluorocarbone 100% 28/100 à 32/100 (2 m) résistant aux coquilles coupantes"
+    }
   },
   "bateau": {
     "present": true,
@@ -89,7 +96,14 @@
       "Couteau frais entier ficelé au fil latex",
       "Crabe vert vivant esché par les pattes arrière",
       "Tenya avec crevette bouquet crue"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Tenya lourd 30-50g à tête plate jaune/orange esché d'une gambas ou crevette fraîche",
+      "softLure": "Non applicable (privilégier l'association hybride tenya + esche naturelle)",
+      "naturalLure": "Crabe vert entier ligaturé au fil latex, couteau entier frais ou gros bibi en dérive",
+      "hookTypeAndSize": "Simple forgé fort de fer à pointe rentrante n°1 à #2/0 (Owner Cutting Point)",
+      "leaderRequirement": "Fluorocarbone 30/100 à 35/100 (2.5 m) impératif sur les Roches du Calvados"
+    }
   },
   "gear": {
     "canalCombo": {

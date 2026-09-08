@@ -60,7 +60,14 @@
       "Arénicole fraîche bien gorgée de liquide",
       "Lanière de maquereau ou filet de hareng frais",
       "Tentacule d'encornet découpée finement"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable (inopérant en canal sur cette espèce benthique)",
+      "softLure": "Micro-shad 60mm glow ou worm souple dandiné au ras de la vase en hiver",
+      "naturalLure": "Arénicole, demi-dure ou tronçon d'encornet sur montage à 2 empiles au fond",
+      "hookTypeAndSize": "Simple aberdeen à tige longue n°4 à n°2 facilitant le dégorgeage",
+      "leaderRequirement": "Fluorocarbone ou nylon souple 22/100 à 25/100"
+    }
   },
   "bateau": {
     "present": true,
@@ -88,7 +95,14 @@
       "Filet de maquereau taillé en pointe de 5-7 cm",
       "Gros bouquets d'arénicoles ou vers de chalut",
       "Lanière d'encornet phosphorescente"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Petit pirk / jig dandinette 40-70g équipé d'une empile eschée au-dessus",
+      "softLure": "Gummi-makk rouge/blanc ou octopus souple 6-8cm monté en potence au-dessus du lest",
+      "naturalLure": "Lanières d'arénicole, morceaux de maquereau, tacaud ou lanières de seiche (3 empiles)",
+      "hookTypeAndSize": "Simple aberdeen forgé étamé n°2 à #1/0",
+      "leaderRequirement": "Fluorocarbone 28/100 à 32/100 résistant aux vrillages de fond en Manche"
+    }
   },
   "gear": {
     "canalCombo": {

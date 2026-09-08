@@ -61,7 +61,14 @@
       "Jerkbait type Buster Jerk 15cm (Coloris Perche ou Brochet)",
       "Shad souple 15cm (ex: Illex Dexter Shad ou Savage Gear Cannibal)",
       "Gros gardon vivant de 15 cm esché sous flotteur coulissant"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Jerkbait lourd sans bavette 12-15cm (Buster Jerk, Slider 10) ou grand spinnerbait tandem",
+      "softLure": "Gros shad paddle tail 15-20cm (Dexter Shad 150, Cannibal 15) armé d'un shallow rig",
+      "naturalLure": "Gardon ou carpeau vivant (12-18cm) au flotteur coulissant ou poisson mort manié",
+      "hookTypeAndSize": "Triples renforcés 2X n°2 à #1/0 ou simple texan Wide Gap géant #5/0 à #7/0",
+      "leaderRequirement": "Bas de ligne acier 49 brins 30 lbs ou fluorocarbone fort ≥ 80/100 (anti-coupe obligatoire)"
+    }
   },
   "bateau": {
     "present": false,
@@ -86,7 +93,14 @@
     ],
     "recommendedLuresAndBaits": [
       "Non applicable en mer"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Non applicable",
+      "hookTypeAndSize": "Non applicable",
+      "leaderRequirement": "Non applicable"
+    }
   },
   "gear": {
     "canalCombo": {

@@ -62,7 +62,14 @@
       "Pinkie blanc ou rouge miniature",
       "Ver de vase (chironome) enfilé sur hameçon très fin n°22 à n°24",
       "Amorce de surface ultra-fine type Tracix blanc ou jaune"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Pinkie unique, petit asticot blanc ou fragment de ver de vase sous flotteur plume",
+      "hookTypeAndSize": "Hameçon ultra-fin de fer sans ardillon n°22 à n°20",
+      "leaderRequirement": "Nylon ultra-fin 7/100 à 9/100 (15 cm) d'une extrême souplesse"
+    }
   },
   "bateau": {
     "present": false,
@@ -87,7 +94,14 @@
     ],
     "recommendedLuresAndBaits": [
       "Non applicable en mer"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Non applicable",
+      "hookTypeAndSize": "Non applicable",
+      "leaderRequirement": "Non applicable"
+    }
   },
   "gear": {
     "canalCombo": {

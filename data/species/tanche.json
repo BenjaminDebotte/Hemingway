@@ -60,7 +60,14 @@
       "Gros ver de terreau bien rouge ou tronçon de lombric",
       "Panaché grain de maïs doux et bouquet d'asticots rouges",
       "Pain d'épice ou pâte sucrée au miel"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Ver de terreau rouge bien remuant, grain de maïs doux ou pain d'épice calé au fond",
+      "hookTypeAndSize": "Hameçon forgé fort de fer n°14 à n°10 à large ouverture",
+      "leaderRequirement": "Nylon ou fluorocarbone souple 14/100 à 16/100 discret dans les herbiers"
+    }
   },
   "bateau": {
     "present": false,
@@ -85,7 +92,14 @@
     ],
     "recommendedLuresAndBaits": [
       "Non applicable en mer"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Non applicable",
+      "hookTypeAndSize": "Non applicable",
+      "leaderRequirement": "Non applicable"
+    }
   },
   "gear": {
     "canalCombo": {

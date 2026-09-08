@@ -59,7 +59,14 @@
       "Tronçon d'arénicole ou ver néréide",
       "Bout de crevette grise crue",
       "Micro-lanière de calmar ou de maquereau"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Micro-grub ou petit ver souple aromatisé gratté le long des quais sombres",
+      "naturalLure": "Arénicole, ver de terreau, demi-dure ou chair de moule sur montage calé",
+      "hookTypeAndSize": "Simple fin de fer n°6 à n°4",
+      "leaderRequirement": "Fluorocarbone 20/100 à 22/100"
+    }
   },
   "bateau": {
     "present": true,
@@ -87,7 +94,14 @@
       "Petits morceaux d'encornet ou de seiche (tenue parfaite à l'hameçon)",
       "Tronçons d'arénicoles fraîches",
       "Mitraillette fine plumes blanches hameçon n°6 à n°8"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Petit jig argenté 30-50g servant de lesteur dandiné au ras de l'épave",
+      "softLure": "Mitraillette de petits octopus phosphorescents 5cm montés en potence",
+      "naturalLure": "Arénicoles, morceaux d'encornet ou lanières de maquereau sur bas de ligne 3 empiles",
+      "hookTypeAndSize": "Simple rond étamé n°4 à n°2",
+      "leaderRequirement": "Nylon ou fluorocarbone 26/100 à 30/100 anti-emmêlement sur épave"
+    }
   },
   "gear": {
     "canalCombo": {

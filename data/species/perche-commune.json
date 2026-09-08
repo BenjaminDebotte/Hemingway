@@ -61,7 +61,14 @@
       "Keitech Swing Impact 2.5\" ou 3\" (Coloris Wakasagi / Chartreuse)",
       "Illex Squirrel 61 SP ou Chubby 38",
       "Lame vibrante métallique 5g à 7g ou cuiller tournante n°2"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Crankbait compact, spintail métallique 10-14g ou petit jerkbait minnow 50-70mm",
+      "softLure": "Shad miniature 50-75mm ou worm monté en drop-shot le long des quais verticaux",
+      "naturalLure": "Gros ver de terreau, vairon vivant ou bouquet d'asticots au flotteur calé",
+      "hookTypeAndSize": "Hameçon drop-shot n°4 à n°2 ou tête plombée ronde n°2",
+      "leaderRequirement": "Fluorocarbone fin 18/100 à 22/100 (1.5 m)"
+    }
   },
   "bateau": {
     "present": false,
@@ -86,7 +93,14 @@
     ],
     "recommendedLuresAndBaits": [
       "Non applicable en mer"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Non applicable",
+      "hookTypeAndSize": "Non applicable",
+      "leaderRequirement": "Non applicable"
+    }
   },
   "gear": {
     "canalCombo": {

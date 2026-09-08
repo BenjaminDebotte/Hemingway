@@ -59,7 +59,14 @@
       "Petit ver néréide de roche bien frétillant",
       "Arénicole fraîche découpée en petits tronçons bien gorgés",
       "Ver mouron ou gravette blanche"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable (régime benthique nocturne strictement olfactif et tactile)",
+      "softLure": "Non applicable",
+      "naturalLure": "Arénicole noire ou néréide rouge ultra-fraîche déposée à plat sur la vase à la nuit",
+      "hookTypeAndSize": "Simple aberdeen fin n°8 à n°6 à hampe très longue (engamage profond)",
+      "leaderRequirement": "Fluorocarbone très souple 18/100 à 22/100 sans mémoire (1.5 m)"
+    }
   },
   "bateau": {
     "present": true,
@@ -87,7 +94,14 @@
       "Ver arénicole ou ver de vase frais",
       "Petite lamelle de néréide fraîche",
       "Morceau de chair de couteau très frais"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable (100% appâts naturels)",
+      "softLure": "Non applicable",
+      "naturalLure": "Arénicoles locales fraîches montées à l'aiguille sur bas de ligne 2 empiles traînantes",
+      "hookTypeAndSize": "Aberdeen n°8 à n°6 fin de fer à pointe rentrante ultra-affûtée",
+      "leaderRequirement": "Fluorocarbone limpide 22/100 à 25/100 avec émerillons rolling micro-baril"
+    }
   },
   "gear": {
     "canalCombo": {

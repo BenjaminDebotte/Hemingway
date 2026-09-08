@@ -55,7 +55,14 @@
     ],
     "recommendedLuresAndBaits": [
       "Non applicable en canal"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable",
+      "softLure": "Non applicable",
+      "naturalLure": "Non applicable",
+      "hookTypeAndSize": "Non applicable",
+      "leaderRequirement": "Non applicable"
+    }
   },
   "bateau": {
     "present": true,
@@ -84,7 +91,14 @@
       "Lançon frais ou vivant piqué par la tête sur hameçon 2/0 ou 3/0",
       "Lanière de ventre de maquereau blanc brillant (12-15 cm)",
       "Tentacule d'encornet frais ou calmar"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Plomb lesteur plat ou cuillère à turbot lourde (60-120g) pour maintenir la dérive sur le fond",
+      "softLure": "Gros shad 15-18cm couleur sable/naturel traîné au ras du gravier par forte dérive",
+      "naturalLure": "Lançon vivant ou grand filet de maquereau frais monté sur traîneau en dérive soutenue",
+      "hookTypeAndSize": "Simple forgé fort de fer aberdeen ou live-bait #1/0 à #3/0",
+      "leaderRequirement": "Fluorocarbone 35/100 à 45/100 (résistance 10 kg) longueur 2 m"
+    }
   },
   "gear": {
     "canalCombo": {

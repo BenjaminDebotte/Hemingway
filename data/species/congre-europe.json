@@ -59,7 +59,14 @@
       "Maquereau entier frais fendu sur le flanc pour diffuser l'huile",
       "Tacaud entier frais ou tête de seiche",
       "Sardine fraîche ligaturée au fil élastique"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable (espèce cavernicole guidée par un odorat puissant)",
+      "softLure": "Non applicable",
+      "naturalLure": "Gros morceau de maquereau, tête de tacaud écrasée ou calamar entier calé sur les blocs",
+      "hookTypeAndSize": "Hameçon simple forgé fort de fer n°4/0 à #6/0 à œillet soudé",
+      "leaderRequirement": "Câble acier gainé 49 brins 50 à 70 lbs (70 cm) + émerillon baril forgé anti-vrille"
+    }
   },
   "bateau": {
     "present": true,
@@ -88,7 +95,14 @@
       "Calmar entier frais ou gros tacaud vivant",
       "Demi-maquereau ou bonite ligaturée",
       "Gros morceau de seiche crue avec le blanc"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Non applicable (0% leurres)",
+      "softLure": "Non applicable",
+      "naturalLure": "Maquereau entier fendu, grosse seiche fraîche ou tacaud vivant déposé au cœur de l'épave",
+      "hookTypeAndSize": "Hameçon congre forgé 3X fort #6/0 à #8/0 extra-puissant",
+      "leaderRequirement": "Bas de ligne acier 80 lbs inox (1 m) relié à un émerillon baril haute puissance 1/0"
+    }
   },
   "gear": {
     "canalCombo": {

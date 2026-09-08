@@ -976,8 +976,37 @@ body {
   margin-bottom: 0.25rem;
 }
 
-.interactive-card .lures-row {
-  padding: 0.22rem 0.42rem;
+.interactive-card .terminal-tackle-card {
+  padding: 0.28rem 0.45rem;
+  margin: 0.28rem 0;
+}
+
+.interactive-card .terminal-card-header {
+  margin-bottom: 0.2rem;
+  padding-bottom: 0.15rem;
+}
+
+.interactive-card .terminal-card-title {
+  font-size: 0.62rem;
+}
+
+.interactive-card .terminal-specs-grid {
+  gap: 0.18rem;
+}
+
+.interactive-card .terminal-spec-item {
+  font-size: 0.68rem;
+  line-height: 1.24;
+  gap: 0.35rem;
+}
+
+.interactive-card .terminal-pill {
+  font-size: 0.56rem;
+  padding: 0.05rem 0.25rem;
+  width: 4.4rem;
+}
+
+.interactive-card .terminal-val {
   font-size: 0.68rem;
 }
 
@@ -1946,23 +1975,111 @@ body {
   background: var(--teal-600);
 }
 
-.lures-row {
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  border-radius: 4px;
-  padding: 0.32rem 0.55rem;
-  font-size: 0.72rem;
-  line-height: 1.3;
+/* --- CARTOUCHE DÉDIÉ : TOP LEURRES & ARMEMENT --- */
+.terminal-tackle-card {
+  background: rgba(248, 250, 252, 0.9);
+  border: 1px solid rgba(203, 213, 225, 0.85);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.65rem;
+  margin: 0.45rem 0 0.35rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03);
 }
 
-.lures-title {
+.terminal-canal {
+  border-left: 3px solid var(--sky-500);
+}
+
+.terminal-bateau {
+  border-left: 3px solid var(--emerald-500);
+}
+
+.terminal-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.35rem;
+  padding-bottom: 0.22rem;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.75);
+}
+
+.terminal-card-title {
+  font-family: var(--font-display);
   font-weight: 800;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   color: var(--ocean-950);
-  margin-right: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
-.lures-list {
+.terminal-card-title .ui-icon {
+  color: var(--gold-600);
+}
+
+.terminal-specs-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.terminal-spec-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  font-size: 0.73rem;
+  line-height: 1.32;
+}
+
+.terminal-pill {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.08rem 0.38rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  width: 5.2rem;
+  text-align: center;
+}
+
+.pill-rigid {
+  background: rgba(30, 58, 138, 0.09);
+  color: #1e40af;
+  border: 1px solid rgba(30, 58, 138, 0.22);
+}
+
+.pill-soft {
+  background: rgba(14, 165, 233, 0.1);
+  color: #0369a1;
+  border: 1px solid rgba(14, 165, 233, 0.25);
+}
+
+.pill-natural {
+  background: rgba(217, 119, 6, 0.1);
+  color: #b45309;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+}
+
+.pill-hook {
+  background: rgba(16, 185, 129, 0.1);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.pill-leader {
+  background: rgba(100, 116, 139, 0.12);
+  color: #334155;
+  border: 1px solid rgba(100, 116, 139, 0.25);
+}
+
+.terminal-val {
   color: var(--slate-700);
+  font-size: 0.72rem;
+  word-break: break-word;
 }
 
 /* --- COMBOS MATÉRIEL COMPACTS --- */
@@ -2170,7 +2287,21 @@ body.print-mode .print-view-container {
 .a4-sheet-preview .twelfth-frac-label { font-size: 4.6pt; }
 .a4-sheet-preview .twelfths-note { font-size: 6.6pt; line-height: 1.22; }
 .a4-sheet-preview .tactics-bullets { font-size: 6.6pt; line-height: 1.24; gap: 0.5mm; margin-bottom: 1mm; }
-.a4-sheet-preview .lures-row { padding: 1mm 1.5mm; font-size: 6.6pt; }
+.a4-sheet-preview .terminal-tackle-card {
+  padding: 0.6mm 1mm;
+  margin: 0.6mm 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 3px;
+  background: #f8fafc;
+}
+.a4-sheet-preview .terminal-canal { border-left: 2px solid #0284c7; }
+.a4-sheet-preview .terminal-bateau { border-left: 2px solid #059669; }
+.a4-sheet-preview .terminal-card-header { margin-bottom: 0.3mm; padding-bottom: 0.2mm; border-bottom: 1px solid #e2e8f0; }
+.a4-sheet-preview .terminal-card-title { font-size: 5.4pt; }
+.a4-sheet-preview .terminal-specs-grid { gap: 0.3mm; }
+.a4-sheet-preview .terminal-spec-item { font-size: 6.1pt; line-height: 1.16; gap: 0.6mm; }
+.a4-sheet-preview .terminal-pill { font-size: 4.6pt; padding: 0.15mm 0.5mm; width: 13mm; }
+.a4-sheet-preview .terminal-val { font-size: 6.1pt; line-height: 1.16; }
 .a4-sheet-preview .combos-compact-card { padding: 1.2mm 2mm; margin-top: auto; margin-bottom: 0; }
 .a4-sheet-preview .combo-line { font-size: 6.6pt; line-height: 1.22; }
 .a4-sheet-preview .combo-tag { font-size: 5.6pt; padding: 0.5mm 1.2mm; }

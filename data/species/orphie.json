@@ -59,7 +59,14 @@
       "Petite cuiller ondulante fine chromée 7g à 12g",
       "Lanière de lard ou peau de maquereau taillée en biseau",
       "Fil de soie de couleur rouge ou jaune fluo"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Cuillère ondulante argentée fine 10-15g ou petit jerkbait de surface 70mm",
+      "softLure": "Micro-finesse 50-60mm translucide sur micro-tête 3-5g ramené à vive allure",
+      "naturalLure": "Lanière de maquereau très étroite ou néréide sous flotteur coulissant (1 m d'eau)",
+      "hookTypeAndSize": "Simple aberdeen n°6 à n°8 (ou brin de soie dentaire/laine floche sans hameçon)",
+      "leaderRequirement": "Fluorocarbone 20/100 à 22/100 très discret"
+    }
   },
   "bateau": {
     "present": true,
@@ -86,7 +93,14 @@
     "recommendedLuresAndBaits": [
       "Petite cuiller Flashmer argentée 10g",
       "Petit leurre coulant pencil 60mm coloris maquereau"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Casting jig effilé 15-28g ou cuillère ondulante côtière ramenée rapidement en surface",
+      "softLure": "Raglou blanc 65mm monté derrière buldo ou bombette flottante",
+      "naturalLure": "Lanière étroite de poisson frais (maquereau, orphie) ou bouquet vivant en surface",
+      "hookTypeAndSize": "Simple aberdeen n°6 à tige longue ou triple miniature n°10",
+      "leaderRequirement": "Fluorocarbone 22/100 à 25/100 (2 m)"
+    }
   },
   "gear": {
     "canalCombo": {

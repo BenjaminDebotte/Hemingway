@@ -60,7 +60,14 @@
       "Mie de pain blanc frais bien compactée sur l'œillet",
       "Pâte de pain mélangée à de l'huile de sardine",
       "Petit ver néréide ou demi-dur sur ligne fine"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Cuillère à mulet argentée spécifique munie d'une courte empile de 6cm eschée d'un ver",
+      "softLure": "Micro-worm souple ou néréide artificielle aromatisée (Gulp) en dérive lente",
+      "naturalLure": "Mie de pain flottante, pâte à base de sardine/fromage ou demi-dure sur ligne fine",
+      "hookTypeAndSize": "Simple forgé court n°10 à n°8 à micro-ardillon",
+      "leaderRequirement": "Fluorocarbone fin et souple 16/100 à 20/100 discret"
+    }
   },
   "bateau": {
     "present": true,
@@ -88,7 +95,14 @@
       "Cuiller tournante à mulet (palet argenté garni d'un ver)",
       "Morceau de pain frais dérivant",
       "Néréide de roche sur bas de ligne long"
-    ]
+    ],
+    "terminalTackle": {
+      "rigidLure": "Cuillère ondulante spéciale mulet traînée lentement au ras des têtes de roches",
+      "softLure": "Micro-mouche d'artifice en poils verts (imitation algues) montée en potence",
+      "naturalLure": "Demi-dure de roche bien vivante ou pâte de sardine sur bouchon coulissant",
+      "hookTypeAndSize": "Hameçon simple cristal ou chinu n°8 à n°6",
+      "leaderRequirement": "Fluorocarbone 18/100 à 22/100 souple (2 m)"
+    }
   },
   "gear": {
     "canalCombo": {
