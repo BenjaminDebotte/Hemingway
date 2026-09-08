@@ -2,6 +2,31 @@
    FICHES TECHNIQUES PÊCHE LITTORAL NORMAND - STYLES MODERNES & IMPRESSION
    ========================================================================== */
 
+/* Typographie Basis Grotesque Pro Medium */
+@font-face {
+  font-family: "Basis Grotesque Pro Medium";
+  src: local("Basis Grotesque Pro Medium"),
+       local("BasisGrotesquePro-Medium"),
+       local("Basis Grotesque Pro"),
+       url("../fonts/BasisGrotesquePro-Medium.woff2") format("woff2"),
+       url("../fonts/BasisGrotesquePro-Medium.woff") format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Basis Grotesque Pro";
+  src: local("Basis Grotesque Pro Medium"),
+       local("BasisGrotesquePro-Medium"),
+       local("Basis Grotesque Pro"),
+       url("../fonts/BasisGrotesquePro-Medium.woff2") format("woff2"),
+       url("../fonts/BasisGrotesquePro-Medium.woff") format("woff");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Nuances Océaniques Profondes & Calcaire Normand */
   --ocean-950: #060e1a;
@@ -143,9 +168,9 @@
   --theme-gauge-track: #e5e5e5;
   --theme-gauge-fill: #000000;
 
-  /* Typographie De School : Monospace & Grotesk Technique */
-  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Typographie : Grotesk Technique & Monospace */
+  --font-sans: "Basis Grotesque Pro Medium", "Basis Grotesque Pro", "Basis Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Basis Grotesque Pro Medium", "Basis Grotesque Pro", "Basis Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "Courier Prime", "Courier New", "JetBrains Mono", ui-monospace, monospace;
 
   /* Architecture Minimaliste De School : Zéro Rayon (0px) & Zéro Arrondi */
@@ -188,6 +213,7 @@
 
 body {
   font-family: var(--font-sans);
+  font-weight: 500;
   background-color: var(--theme-bg);
   background-image: none;
   color: var(--theme-text-main);

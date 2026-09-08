@@ -14,7 +14,10 @@ const MIME_TYPES = {
   '.json': 'application/json; charset=utf-8',
   '.svg': 'image/svg+xml',
   '.png': 'image/png',
-  '.ico': 'image/x-icon'
+  '.ico': 'image/x-icon',
+  '.woff2': 'font/woff2',
+  '.woff': 'font/woff',
+  '.ttf': 'font/ttf'
 };
 
 // 1. Démarrer le serveur HTTP local
@@ -354,6 +357,27 @@ const cardFaceBgInPrint = await cdp.evaluate(`
 assert(
   cardFaceBgInPrint === 'rgb(255, 255, 255)' || cardFaceBgInPrint === '#ffffff',
   `Fond de carte en mode print forcé à blanc papier (${cardFaceBgInPrint})`
+);
+
+console.log('\n--- AXE 9 : TYPOGRAPHIE & BASE FONT (BASIS GROTESQUE PRO MEDIUM) ---');
+await cdp.send('Emulation.setEmulatedMedia', { media: '' });
+await new Promise(r => setTimeout(r, 100));
+const bodyFontFamily = await cdp.evaluate('getComputedStyle(document.body).fontFamily');
+assert(
+  bodyFontFamily.includes('Basis Grotesque Pro Medium'),
+  `Font-family du body inclut "Basis Grotesque Pro Medium" (${bodyFontFamily})`
+);
+const bodyFontWeight = await cdp.evaluate('getComputedStyle(document.body).fontWeight');
+assert(
+  bodyFontWeight === '500',
+  `Font-weight du body calibré sur Medium (500) (${bodyFontWeight})`
+);
+const fontFacesLoaded = await cdp.evaluate(`
+  document.fonts.check('500 16px "Basis Grotesque Pro Medium"')
+`);
+assert(
+  fontFacesLoaded === true,
+  'Police "Basis Grotesque Pro Medium" chargée et validée dans document.fonts'
 );
 
 console.log(`\n============================================================`);
