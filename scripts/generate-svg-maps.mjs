@@ -48,15 +48,13 @@ while (extended) {
   }
 }
 
-// S'assurer que le trait de côte va d'Ouest (Courseulles: lon -0.50) vers Est (Sallenelles: lon -0.15)
 if (coastChain[0][0] > coastChain[coastChain.length - 1][0]) {
   coastChain.reverse();
 }
-// Filtrer la zone utile Courseulles (-0.48) à Sallenelles (-0.22)
 coastChain = coastChain.filter(p => p[0] >= -0.48 && p[0] <= -0.22);
-console.log('Coastline chain stitched:', coastChain.length, 'points from', coastChain[0], 'to', coastChain[coastChain.length - 1]);
+console.log('Coastline chain stitched:', coastChain.length, 'points');
 
-// Ramer-Douglas-Peucker pour simplifier les points tout en gardant une précision au 10e de millimètre
+// Ramer-Douglas-Peucker
 function rdp(points, epsilon) {
   if (points.length <= 2) return points;
   let dmax = 0;
@@ -66,7 +64,6 @@ function rdp(points, epsilon) {
 
   for (let i = 1; i < points.length - 1; i++) {
     const p = points[i];
-    // Distance de p à la droite ab
     const d = Math.abs((b[1] - a[1]) * p[0] - (b[0] - a[0]) * p[1] + b[0] * a[1] - b[1] * a[0]) / Math.hypot(b[1] - a[1], b[0] - a[0]);
     if (d > dmax) {
       index = i;
@@ -89,11 +86,10 @@ console.log('Coastline simplified to:', simplifiedCoast.length, 'points');
 const simplifiedCanal = rdp(canalCoords, 0.00015);
 console.log('Canal simplified to:', simplifiedCanal.length, 'points');
 
-// Projection pour Map 1 : Canal Horizontal Stylisé Haute-Densité
-// Le canal va de Caen (Bassin St-Pierre) à Ouistreham.
-// On projette sur un viewBox 420 x 140
-// X de 30 (Caen) à 390 (Ouistreham)
-// Calcul de la distance cumulée le long du canal pour chaque point
+// ==========================================================================
+// 1. PROJECTION CARTE DÉDIÉE CANAL (FACE B MONO-BIOTOPE)
+// ViewBox 430 x 250 (remplit parfaitement le conteneur ~474 x 350 px)
+// ==========================================================================
 let totalCanalDist = 0;
 const canalDists = [0];
 for (let i = 1; i < simplifiedCanal.length; i++) {
@@ -102,52 +98,57 @@ for (let i = 1; i < simplifiedCanal.length; i++) {
   canalDists.push(totalCanalDist);
 }
 
-// Projection le long d'une douce sinusoïde réaliste qui respecte la courbure d'OSM
 const canalSvgPoints = simplifiedCanal.map((p, i) => {
   const frac = canalDists[i] / totalCanalDist;
-  const x = 35 + frac * (410 - 35);
-  // Déviation latérale par rapport à la ligne droite Caen -> Ouistreham
+  const x = 32 + frac * (408 - 32);
   const start = simplifiedCanal[0];
   const end = simplifiedCanal[simplifiedCanal.length - 1];
   const dx = end[0] - start[0];
   const dy = end[1] - start[1];
   const lineDist = Math.hypot(dx, dy);
   const perp = ((p[0] - start[0]) * -dy + (p[1] - start[1]) * dx) / lineDist;
-  const y = 80 - perp * 850; // Calibré pour centrer verticalement
+  const y = 118 - perp * 950;
   return [Math.round(x * 10) / 10, Math.round(y * 10) / 10];
 });
-
 const canalPathD = 'M ' + canalSvgPoints.map(p => `${p[0]},${p[1]}`).join(' L ');
 
-// Projection pour Map 2 : Côte de Nacre Maritime (Courseulles -> Ouistreham)
-// ViewBox 420 x 140
-// Longitudes : -0.47 (Ouest) à -0.23 (Est) -> X : 25 à 395
-// Latitudes : 49.27 (Sud) à 49.37 (Nord, mer) -> Y : 130 à 15
+// Lit parallèle de l'Orne (naturelle) qui serpente à côté du canal
+const ornePathPoints = canalSvgPoints.map((pt, i) => {
+  const offset = Math.sin((i / (canalSvgPoints.length - 1)) * Math.PI * 3.5) * 16 + 18;
+  return [pt[0], Math.round((pt[1] + offset) * 10) / 10];
+});
+const ornePathD = 'M ' + ornePathPoints.map(p => `${p[0]},${p[1]}`).join(' L ');
+
+// ==========================================================================
+// 2. PROJECTION CARTE DÉDIÉE CÔTE DE NACRE (FACE B MONO-BIOTOPE)
+// ViewBox 430 x 240 (remplit parfaitement le conteneur ~474 x 280-310 px)
+// ==========================================================================
 const minLonCoast = -0.475;
-const maxLonCoast = -0.230;
-const minLatCoast = 49.272;
+const maxLonCoast = -0.228;
+const minLatCoast = 49.270;
 const maxLatCoast = 49.365;
 
 function projectMer(lon, lat) {
-  const x = 25 + ((lon - minLonCoast) / (maxLonCoast - minLonCoast)) * (395 - 25);
-  const y = 135 - ((lat - minLatCoast) / (maxLatCoast - minLatCoast)) * (135 - 15);
+  const x = 25 + ((lon - minLonCoast) / (maxLonCoast - minLonCoast)) * (405 - 25);
+  const y = 185 - ((lat - minLatCoast) / (maxLatCoast - minLatCoast)) * (185 - 20);
   return [Math.round(x * 10) / 10, Math.round(y * 10) / 10];
 }
 
 const coastSvgPoints = simplifiedCoast.map(p => projectMer(p[0], p[1]));
 const coastPathD = 'M ' + coastSvgPoints.map(p => `${p[0]},${p[1]}`).join(' L ');
 
-// Projection pour Map 3 : Carte d'Ensemble Régionale (pour bloc Notes Face A)
-// ViewBox 200 x 85
-// Englobe Caen (49.18, -0.36) jusqu'à la mer (49.34, -0.46 à -0.23)
+// ==========================================================================
+// 3. PROJECTION MINI-CARTE RÉGIONALE D'ENSEMBLE (FACE A DUAL-BIOTOPE)
+// ViewBox 200 x 190 (remplit parfaitement le conteneur carré ~240 x 240 px)
+// ==========================================================================
 const minLonReg = -0.470;
 const maxLonReg = -0.220;
-const minLatReg = 49.175;
-const maxLatReg = 49.345;
+const minLatReg = 49.172;
+const maxLatReg = 49.358;
 
 function projectReg(lon, lat) {
-  const x = 12 + ((lon - minLonReg) / (maxLonReg - minLonReg)) * (188 - 12);
-  const y = 76 - ((lat - minLatReg) / (maxLatReg - minLatReg)) * (76 - 10);
+  const x = 15 + ((lon - minLonReg) / (maxLonReg - minLonReg)) * (185 - 15);
+  const y = 175 - ((lat - minLatReg) / (maxLatReg - minLatReg)) * (175 - 16);
   return [Math.round(x * 10) / 10, Math.round(y * 10) / 10];
 }
 
@@ -174,6 +175,7 @@ import { uiIcon } from './icons.js';
 // Chemins projetés précis issus d'OpenStreetMap
 export const GEO_PATHS = {
   canalMain: "${canalPathD}",
+  orneRiver: "${ornePathD}",
   coastline: "${coastPathD}",
   regCanal: "${regCanalPathD}",
   regCoast: "${regCoastPathD}"
@@ -193,7 +195,7 @@ export function renderCanalDedicatedMap(fish) {
         <span class="map-badge-osm">Tracé Officiel OSM</span>
       </div>
       <div class="map-svg-wrap">
-        <svg viewBox="0 0 430 150" class="halieutic-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Carte du Canal de Caen de Caen à Ouistreham">
+        <svg viewBox="0 0 430 245" class="halieutic-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Carte du Canal de Caen de Caen à Ouistreham">
           <defs>
             <linearGradient id="canalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
               <stop offset="0%" stop-color="var(--theme-canal-accent)" stop-opacity="0.9" />
@@ -205,64 +207,88 @@ export function renderCanalDedicatedMap(fish) {
           </defs>
 
           <!-- Grille bathymétrique d'arrière-plan -->
-          <rect width="430" height="150" fill="url(#canalGrid)" />
+          <rect width="430" height="245" fill="url(#canalGrid)" />
+
+          <!-- Fleuve Orne (lit naturel parallèle) -->
+          <path d="\${GEO_PATHS.orneRiver}" fill="none" stroke="var(--theme-canal-surface-border)" stroke-width="2.5" stroke-dasharray="4 2" opacity="0.65" />
+          <text x="210" y="152" font-family="var(--font-sans)" font-size="6.5" font-style="italic" font-weight="600" fill="var(--theme-text-faint)" opacity="0.8">Lit naturel de l'Orne (cours parallèle)</text>
 
           <!-- Tracé du Canal de Caen issu d'OpenStreetMap -->
           <!-- Halo d'eau extérieur -->
-          <path d="\${GEO_PATHS.canalMain}" fill="none" stroke="var(--theme-canal-accent)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.12" />
+          <path d="\${GEO_PATHS.canalMain}" fill="none" stroke="var(--theme-canal-accent)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" opacity="0.12" />
           <!-- Chenal navigable DPM -->
-          <path d="\${GEO_PATHS.canalMain}" fill="none" stroke="url(#canalGradient)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="\${GEO_PATHS.canalMain}" fill="none" stroke="url(#canalGradient)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" />
           <!-- Axe central de navigation -->
-          <path d="\${GEO_PATHS.canalMain}" fill="none" stroke="#ffffff" stroke-width="1" stroke-dasharray="3 3" opacity="0.75" />
+          <path d="\${GEO_PATHS.canalMain}" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.8" />
 
-          <!-- Repères & Postes Clés Halieutiques -->
+          <!-- Repères & Postes Clés Halieutiques (Alternance Haut/Bas aérée) -->
           <!-- 1. Bassin Saint-Pierre & Pont de la Fonderie (km 0) -->
-          <g class="map-spot-marker" transform="translate(35, 78)">
-            <circle r="4.5" fill="var(--theme-canal-accent)" stroke="#ffffff" stroke-width="1.2" />
-            <text x="0" y="16" text-anchor="middle" class="map-label-main">Bassin St-Pierre</text>
-            <text x="0" y="24" text-anchor="middle" class="map-label-sub">km 0 • Eaux douces</text>
+          <g class="map-spot-marker" transform="translate(34, 116)">
+            <circle r="5" fill="var(--theme-canal-accent)" stroke="#ffffff" stroke-width="1.4" />
+            <line x1="0" y1="-5" x2="0" y2="-42" stroke="var(--theme-canal-accent)" stroke-width="1" stroke-dasharray="2 2" />
+            <rect x="-30" y="-76" width="60" height="30" rx="3" fill="var(--theme-surface-subtle)" stroke="var(--theme-surface-subtle-border)" stroke-width="0.8" />
+            <text x="0" y="-62" text-anchor="middle" class="map-label-main">Bassin St-Pierre</text>
+            <text x="0" y="-51" text-anchor="middle" class="map-label-sub">km 0 • Eaux douces</text>
           </g>
 
           <!-- 2. Viaduc de Calix (km 2.5) -->
-          <g class="map-spot-marker" transform="translate(98, 77)">
-            <line x1="0" y1="-8" x2="0" y2="8" stroke="var(--theme-text-title)" stroke-width="2" stroke-linecap="round" />
-            <circle r="3" fill="var(--theme-text-title)" />
-            <text x="0" y="-12" text-anchor="middle" class="map-label-main">Viaduc de Calix</text>
-            <text x="0" y="17" text-anchor="middle" class="map-label-sub">Piles & Fosses (9m)</text>
+          <g class="map-spot-marker" transform="translate(100, 115)">
+            <line x1="0" y1="-10" x2="0" y2="10" stroke="var(--theme-text-title)" stroke-width="2.5" stroke-linecap="round" />
+            <circle r="3.2" fill="var(--theme-text-title)" />
+            <line x1="0" y1="10" x2="0" y2="40" stroke="var(--theme-text-title)" stroke-width="1" stroke-dasharray="2 2" />
+            <rect x="-32" y="44" width="64" height="30" rx="3" fill="var(--theme-surface-subtle)" stroke="var(--theme-surface-subtle-border)" stroke-width="0.8" />
+            <text x="0" y="58" text-anchor="middle" class="map-label-main">Viaduc de Calix</text>
+            <text x="0" y="68" text-anchor="middle" class="map-label-sub">Piles & Fosse 9m</text>
           </g>
 
           <!-- 3. Quais de Colombelles / Hérouville (km 4.5) -->
-          <g class="map-spot-marker" transform="translate(162, 79)">
-            <rect x="-3" y="-3" width="6" height="6" fill="var(--theme-canal-accent)" stroke="#ffffff" stroke-width="1" />
-            <text x="0" y="-11" text-anchor="middle" class="map-label-main">Colombelles</text>
-            <text x="0" y="16" text-anchor="middle" class="map-label-sub">Palplanches métal</text>
+          <g class="map-spot-marker" transform="translate(168, 117)">
+            <rect x="-3.5" y="-3.5" width="7" height="7" fill="var(--theme-canal-accent)" stroke="#ffffff" stroke-width="1.2" />
+            <line x1="0" y1="-5" x2="0" y2="-42" stroke="var(--theme-canal-accent)" stroke-width="1" stroke-dasharray="2 2" />
+            <rect x="-30" y="-76" width="60" height="30" rx="3" fill="var(--theme-surface-subtle)" stroke="var(--theme-surface-subtle-border)" stroke-width="0.8" />
+            <text x="0" y="-62" text-anchor="middle" class="map-label-main">Colombelles</text>
+            <text x="0" y="-51" text-anchor="middle" class="map-label-sub">Palplanches métal</text>
           </g>
 
           <!-- 4. Bassin d'Évitement de Blainville (km 7.5) -->
-          <g class="map-spot-marker" transform="translate(235, 76)">
-            <circle r="4" fill="none" stroke="var(--theme-canal-accent)" stroke-width="1.8" stroke-dasharray="2 2" />
-            <circle r="2" fill="var(--theme-canal-accent)" />
-            <text x="0" y="-12" text-anchor="middle" class="map-label-main">Blainville</text>
-            <text x="0" y="17" text-anchor="middle" class="map-label-sub">Évitement & Fosse</text>
+          <g class="map-spot-marker" transform="translate(242, 114)">
+            <circle r="5" fill="none" stroke="var(--theme-canal-accent)" stroke-width="2" stroke-dasharray="2 2" />
+            <circle r="2.5" fill="var(--theme-canal-accent)" />
+            <line x1="0" y1="10" x2="0" y2="40" stroke="var(--theme-canal-accent)" stroke-width="1" stroke-dasharray="2 2" />
+            <rect x="-30" y="44" width="60" height="30" rx="3" fill="var(--theme-surface-subtle)" stroke="var(--theme-surface-subtle-border)" stroke-width="0.8" />
+            <text x="0" y="58" text-anchor="middle" class="map-label-main">Blainville</text>
+            <text x="0" y="68" text-anchor="middle" class="map-label-sub">Évitement & Fosse</text>
           </g>
 
           <!-- 5. Pont de Bénouville / Pegasus Bridge (km 10.5) -->
-          <g class="map-spot-marker" transform="translate(315, 85)">
-            <line x1="0" y1="-8" x2="0" y2="8" stroke="var(--theme-text-title)" stroke-width="2" stroke-linecap="round" />
-            <circle r="3" fill="var(--theme-text-title)" />
-            <text x="0" y="-12" text-anchor="middle" class="map-label-main">Pegasus Bridge</text>
-            <text x="0" y="17" text-anchor="middle" class="map-label-sub">Bénouville • Remous</text>
+          <g class="map-spot-marker" transform="translate(322, 126)">
+            <line x1="0" y1="-10" x2="0" y2="10" stroke="var(--theme-text-title)" stroke-width="2.5" stroke-linecap="round" />
+            <circle r="3.2" fill="var(--theme-text-title)" />
+            <line x1="0" y1="-5" x2="0" y2="-42" stroke="var(--theme-text-title)" stroke-width="1" stroke-dasharray="2 2" />
+            <rect x="-34" y="-76" width="68" height="30" rx="3" fill="var(--theme-surface-subtle)" stroke="var(--theme-surface-subtle-border)" stroke-width="0.8" />
+            <text x="0" y="-62" text-anchor="middle" class="map-label-main">Pegasus Bridge</text>
+            <text x="0" y="-51" text-anchor="middle" class="map-label-sub">Bénouville • Remous</text>
           </g>
 
           <!-- 6. Écluses d'Ouistreham & Mer (km 14) -->
-          <g class="map-spot-marker" transform="translate(398, 88)">
-            <circle r="5" fill="var(--theme-bateau-accent)" stroke="#ffffff" stroke-width="1.4" />
-            <text x="-4" y="-13" text-anchor="middle" class="map-label-main">Ouistreham</text>
-            <text x="-4" y="18" text-anchor="middle" class="map-label-sub">Écluses & DPM Mer</text>
+          <g class="map-spot-marker" transform="translate(402, 130)">
+            <circle r="5.5" fill="var(--theme-bateau-accent)" stroke="#ffffff" stroke-width="1.6" />
+            <line x1="0" y1="10" x2="0" y2="40" stroke="var(--theme-bateau-accent)" stroke-width="1" stroke-dasharray="2 2" />
+            <rect x="-34" y="44" width="64" height="30" rx="3" fill="var(--theme-surface-subtle)" stroke="var(--theme-surface-subtle-border)" stroke-width="0.8" />
+            <text x="-2" y="58" text-anchor="middle" class="map-label-main">Ouistreham</text>
+            <text x="-2" y="68" text-anchor="middle" class="map-label-sub">Écluses & Mer</text>
+          </g>
+
+          <!-- Profil Bathymétrique et Caractéristiques Techniques du Chenal -->
+          <g class="map-canal-strip" transform="translate(30, 204)">
+            <rect x="0" y="0" width="375" height="24" rx="3" fill="var(--theme-surface-subtle)" stroke="var(--theme-surface-subtle-border)" stroke-width="0.8" />
+            <text x="12" y="15" font-family="var(--font-mono)" font-size="6.8" font-weight="700" fill="var(--theme-canal-accent)">BASSIN SAINT-PIERRE ➔ ÉCLUSES : 14 KM</text>
+            <text x="210" y="15" font-family="var(--font-mono)" font-size="6.2" font-weight="600" fill="var(--theme-text-muted)">Profondeur moyenne : 9.5 m • Largeur : 70 m</text>
+            <text x="365" y="15" text-anchor="end" font-family="var(--font-mono)" font-size="6.2" font-weight="700" fill="var(--theme-bateau-accent)">DPM</text>
           </g>
 
           <!-- Boussole & Échelle -->
-          <g class="map-legend-group" transform="translate(18, 134)">
+          <g class="map-legend-group" transform="translate(30, 20)">
             <line x1="0" y1="0" x2="60" y2="0" stroke="var(--theme-text-title)" stroke-width="1.5" />
             <line x1="0" y1="-3" x2="0" y2="3" stroke="var(--theme-text-title)" stroke-width="1.5" />
             <line x1="30" y1="-2" x2="30" y2="2" stroke="var(--theme-text-title)" stroke-width="1" />
@@ -271,10 +297,10 @@ export function renderCanalDedicatedMap(fish) {
           </g>
 
           <g class="map-compass" transform="translate(405, 30)">
-            <circle r="11" fill="var(--theme-card-inner-bg)" stroke="var(--theme-surface-subtle-border)" stroke-width="0.8" />
-            <path d="M 405 21 L 407 30 L 403 30 Z" fill="var(--theme-canal-accent)" />
-            <path d="M 405 39 L 407 30 L 403 30 Z" fill="var(--theme-text-muted)" opacity="0.4" />
-            <text x="405" y="17" text-anchor="middle" font-size="7" font-weight="800" fill="var(--theme-text-title)">N</text>
+            <circle r="12" fill="var(--theme-card-inner-bg)" stroke="var(--theme-surface-subtle-border)" stroke-width="0.8" />
+            <path d="M 405 20 L 408 30 L 402 30 Z" fill="var(--theme-canal-accent)" />
+            <path d="M 405 40 L 408 30 L 402 30 Z" fill="var(--theme-text-muted)" opacity="0.4" />
+            <text x="405" y="16" text-anchor="middle" font-size="7.5" font-weight="800" fill="var(--theme-text-title)">N</text>
           </g>
         </svg>
       </div>
@@ -299,88 +325,99 @@ export function renderCoteDeNacreDedicatedMap(fish) {
         <span class="map-badge-osm">Littoral Officiel OSM</span>
       </div>
       <div class="map-svg-wrap">
-        <svg viewBox="0 0 430 150" class="halieutic-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Carte marine Côte de Nacre et Roches du Calvados">
+        <svg viewBox="0 0 430 230" class="halieutic-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Carte marine Côte de Nacre et Roches du Calvados">
           <defs>
             <linearGradient id="merDepthGradient" x1="0%" y1="100%" x2="0%" y2="0%">
               <stop offset="0%" stop-color="var(--theme-bateau-surface)" stop-opacity="0.4" />
-              <stop offset="100%" stop-color="var(--theme-bateau-accent)" stop-opacity="0.18" />
+              <stop offset="100%" stop-color="var(--theme-bateau-accent)" stop-opacity="0.22" />
             </linearGradient>
-            <pattern id="reefPattern" width="8" height="8" patternUnits="userSpaceOnUse">
-              <path d="M 0 4 L 4 0 L 8 4 L 4 8 Z" fill="none" stroke="var(--theme-bateau-accent)" stroke-width="0.6" opacity="0.4" />
+            <pattern id="reefPattern" width="10" height="10" patternUnits="userSpaceOnUse">
+              <path d="M 0 5 L 5 0 L 10 5 L 5 10 Z" fill="none" stroke="var(--theme-bateau-accent)" stroke-width="0.8" opacity="0.45" />
             </pattern>
           </defs>
 
           <!-- Surface de la Manche -->
-          <rect x="0" y="0" width="430" height="150" fill="url(#merDepthGradient)" />
+          <rect x="0" y="0" width="430" height="230" fill="url(#merDepthGradient)" />
+
+          <!-- Isobaths de fond marin (-15m et -25m) -->
+          <path d="M 0 65 Q 120 75 220 55 T 430 45" fill="none" stroke="var(--theme-bateau-accent)" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.5" />
+          <text x="390" y="42" font-family="var(--font-mono)" font-size="6" fill="var(--theme-bateau-accent)" opacity="0.8">-20 m</text>
+
+          <path d="M 0 115 Q 110 120 220 105 T 430 95" fill="none" stroke="var(--theme-bateau-accent)" stroke-width="0.8" stroke-dasharray="4 4" opacity="0.5" />
+          <text x="390" y="92" font-family="var(--font-mono)" font-size="6" fill="var(--theme-bateau-accent)" opacity="0.8">-10 m</text>
 
           <!-- Plateau des Roches du Calvados (fonds rocheux 5-15m au large) -->
-          <ellipse cx="205" cy="50" rx="110" ry="26" fill="url(#reefPattern)" stroke="var(--theme-bateau-accent)" stroke-width="1" stroke-dasharray="3 3" opacity="0.75" />
-          <text x="205" y="47" text-anchor="middle" class="map-zone-title">PLATEAU DES ROCHES DU CALVADOS</text>
-          <text x="205" y="57" text-anchor="middle" class="map-zone-sub">Plateau calcaire & laminaires (5 à 15 m)</text>
+          <ellipse cx="218" cy="80" rx="105" ry="28" fill="url(#reefPattern)" stroke="var(--theme-bateau-accent)" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.85" />
+          <rect x="110" y="66" width="216" height="26" rx="3" fill="var(--theme-card-inner-bg)" stroke="var(--theme-bateau-accent)" stroke-width="0.8" opacity="0.9" />
+          <text x="218" y="77" text-anchor="middle" class="map-zone-title">PLATEAU DES ROCHES DU CALVADOS</text>
+          <text x="218" y="87" text-anchor="middle" class="map-zone-sub">Plateau calcaire & laminaires (5 à 15 m)</text>
 
           <!-- Banc de Bernières / Ridens -->
-          <ellipse cx="115" cy="42" rx="45" ry="12" fill="var(--theme-surface-subtle)" stroke="var(--theme-text-muted)" stroke-width="0.8" stroke-dasharray="2 2" opacity="0.6" />
-          <text x="115" y="44" text-anchor="middle" class="map-zone-sand">Ridens de Bernières</text>
+          <ellipse cx="120" cy="120" rx="42" ry="12" fill="var(--theme-surface-subtle)" stroke="var(--theme-text-muted)" stroke-width="1" stroke-dasharray="2 2" opacity="0.75" />
+          <text x="120" y="122" text-anchor="middle" class="map-zone-sand">Ridens de Bernières</text>
 
           <!-- Zone des Épaves du Débarquement 1944 (Sword & Juno) -->
-          <g class="map-wreck-group" transform="translate(295, 38)">
-            <circle r="8" fill="var(--theme-secret-surface)" stroke="var(--theme-secret-border)" stroke-width="1" />
-            <text x="0" y="3" text-anchor="middle" font-size="8" font-weight="900" fill="var(--theme-secret-text)">⚓</text>
-            <text x="0" y="-11" text-anchor="middle" class="map-zone-wreck">Épaves 1944 (Sword)</text>
-            <text x="0" y="17" text-anchor="middle" class="map-label-sub">15 à 28 m de fond</text>
+          <g class="map-wreck-group" transform="translate(345, 58)">
+            <circle r="9" fill="var(--theme-secret-surface)" stroke="var(--theme-secret-border)" stroke-width="1.2" />
+            <text x="0" y="3.5" text-anchor="middle" font-size="9" font-weight="900" fill="var(--theme-secret-text)">⚓</text>
+            <rect x="-42" y="-32" width="84" height="24" rx="2" fill="var(--theme-surface-subtle)" stroke="var(--theme-secret-border)" stroke-width="0.6" />
+            <text x="0" y="-20" text-anchor="middle" class="map-zone-wreck">Épaves 1944 (Sword)</text>
+            <text x="0" y="-10" text-anchor="middle" class="map-label-sub">15 à 28 m de fond</text>
           </g>
 
-          <g class="map-wreck-group" transform="translate(70, 48)">
-            <circle r="7" fill="var(--theme-secret-surface)" stroke="var(--theme-secret-border)" stroke-width="1" />
-            <text x="0" y="3" text-anchor="middle" font-size="7" font-weight="900" fill="var(--theme-secret-text)">⚓</text>
-            <text x="0" y="-10" text-anchor="middle" class="map-zone-wreck">Épaves Juno</text>
+          <g class="map-wreck-group" transform="translate(68, 52)">
+            <circle r="8.5" fill="var(--theme-secret-surface)" stroke="var(--theme-secret-border)" stroke-width="1.2" />
+            <text x="0" y="3.5" text-anchor="middle" font-size="8.5" font-weight="900" fill="var(--theme-secret-text)">⚓</text>
+            <rect x="-35" y="-30" width="70" height="22" rx="2" fill="var(--theme-surface-subtle)" stroke="var(--theme-secret-border)" stroke-width="0.6" />
+            <text x="0" y="-19" text-anchor="middle" class="map-zone-wreck">Épaves Juno</text>
+            <text x="0" y="-10" text-anchor="middle" class="map-label-sub">Secteur Graye</text>
           </g>
 
           <!-- Trait de côte officiel OSM -->
           <!-- Terre (estran/côte) -->
-          <path d="\${GEO_PATHS.coastline} L 430 150 L 0 150 Z" fill="var(--theme-card-inner-bg)" stroke="none" opacity="0.95" />
-          <path d="\${GEO_PATHS.coastline}" fill="none" stroke="var(--theme-text-title)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="\${GEO_PATHS.coastline} L 430 230 L 0 230 Z" fill="var(--theme-card-inner-bg)" stroke="none" opacity="0.95" />
+          <path d="\${GEO_PATHS.coastline}" fill="none" stroke="var(--theme-text-title)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
 
           <!-- Villes côtières & Amers portuaires -->
           <!-- Courseulles -->
-          <g transform="translate(48, 122)">
-            <circle r="2.8" fill="var(--theme-text-title)" />
-            <text x="0" y="11" text-anchor="middle" class="map-label-main">Courseulles</text>
-            <text x="0" y="18" text-anchor="middle" class="map-label-sub">Juno • Port</text>
+          <g transform="translate(48, 194)">
+            <circle r="3" fill="var(--theme-text-title)" />
+            <text x="0" y="12" text-anchor="middle" class="map-label-main">Courseulles</text>
+            <text x="0" y="21" text-anchor="middle" class="map-label-sub">Juno • Port</text>
           </g>
 
           <!-- Bernières / St-Aubin -->
-          <g transform="translate(132, 118)">
-            <circle r="2.4" fill="var(--theme-text-muted)" />
-            <text x="0" y="11" text-anchor="middle" class="map-label-main">Bernières</text>
+          <g transform="translate(132, 190)">
+            <circle r="2.6" fill="var(--theme-text-muted)" />
+            <text x="0" y="12" text-anchor="middle" class="map-label-main">Bernières</text>
           </g>
 
           <!-- Luc-sur-Mer -->
-          <g transform="translate(205, 114)">
-            <circle r="2.4" fill="var(--theme-text-muted)" />
-            <text x="0" y="11" text-anchor="middle" class="map-label-main">Luc-sur-Mer</text>
+          <g transform="translate(205, 186)">
+            <circle r="2.6" fill="var(--theme-text-muted)" />
+            <text x="0" y="12" text-anchor="middle" class="map-label-main">Luc-sur-Mer</text>
           </g>
 
           <!-- Lion-sur-Mer -->
-          <g transform="translate(262, 115)">
-            <circle r="2.8" fill="var(--theme-text-title)" />
-            <text x="0" y="11" text-anchor="middle" class="map-label-main">Lion-sur-Mer</text>
-            <text x="0" y="18" text-anchor="middle" class="map-label-sub">Falaise</text>
+          <g transform="translate(265, 187)">
+            <circle r="3" fill="var(--theme-text-title)" />
+            <text x="0" y="12" text-anchor="middle" class="map-label-main">Lion-sur-Mer</text>
+            <text x="0" y="21" text-anchor="middle" class="map-label-sub">Falaise</text>
           </g>
 
           <!-- Ouistreham / Riva-Bella -->
-          <g transform="translate(372, 118)">
-            <circle r="3.2" fill="var(--theme-bateau-accent)" stroke="#ffffff" stroke-width="1" />
-            <text x="0" y="11" text-anchor="middle" class="map-label-main">Ouistreham</text>
-            <text x="0" y="18" text-anchor="middle" class="map-label-sub">Riva-Bella • Chenal</text>
+          <g transform="translate(378, 190)">
+            <circle r="3.6" fill="var(--theme-bateau-accent)" stroke="#ffffff" stroke-width="1.2" />
+            <text x="0" y="12" text-anchor="middle" class="map-label-main">Ouistreham</text>
+            <text x="0" y="21" text-anchor="middle" class="map-label-sub">Riva-Bella • Chenal</text>
           </g>
 
           <!-- Échelle nautique -->
-          <g class="map-legend-group" transform="translate(18, 22)">
-            <line x1="0" y1="0" x2="55" y2="0" stroke="var(--theme-text-title)" stroke-width="1.4" />
-            <line x1="0" y1="-3" x2="0" y2="3" stroke="var(--theme-text-title)" stroke-width="1.4" />
-            <line x1="55" y1="-3" x2="55" y2="3" stroke="var(--theme-text-title)" stroke-width="1.4" />
-            <text x="27" y="-4" text-anchor="middle" class="map-scale-text">3 Milles nautiques</text>
+          <g class="map-legend-group" transform="translate(20, 24)">
+            <line x1="0" y1="0" x2="60" y2="0" stroke="var(--theme-text-title)" stroke-width="1.5" />
+            <line x1="0" y1="-3" x2="0" y2="3" stroke="var(--theme-text-title)" stroke-width="1.5" />
+            <line x1="60" y1="-3" x2="60" y2="3" stroke="var(--theme-text-title)" stroke-width="1.5" />
+            <text x="30" y="-5" text-anchor="middle" class="map-scale-text">3 Milles nautiques</text>
           </g>
         </svg>
       </div>
@@ -394,47 +431,59 @@ export function renderCoteDeNacreDedicatedMap(fish) {
 /**
  * Mini-Carte Régionale d'Ensemble : Canal + Côte de Nacre
  * Utilisée sur la Face A (Recto) dans le bloc Notes scindé en 2 pour les espèces mixtes
+ * ViewBox 200 x 185 : remplit parfaitement le bloc carré ~240 x 240 px
  */
 export function renderRegionalMiniMap() {
   return \`
     <div class="regional-mini-map" aria-label="Carte de situation Canal de Caen et Côte de Nacre">
       <div class="mini-map-title-row">
-        <span class="mini-map-title">Littoral Calvados • Caen à la Mer</span>
+        <span class="mini-map-title">Littoral Calvados • Caen ➔ Mer</span>
         <span class="mini-map-tag">OSM</span>
       </div>
       <div class="mini-map-svg-wrap">
-        <svg viewBox="0 0 195 82" class="mini-map-svg" preserveAspectRatio="xMidYMid meet">
+        <svg viewBox="0 0 200 185" class="mini-map-svg" preserveAspectRatio="xMidYMid meet">
           <!-- Mer de la Manche -->
-          <rect x="0" y="0" width="195" height="38" fill="var(--theme-bateau-surface)" opacity="0.35" />
+          <rect x="0" y="0" width="200" height="78" fill="var(--theme-bateau-surface)" opacity="0.4" />
 
           <!-- Roches du Calvados -->
-          <ellipse cx="108" cy="18" rx="42" ry="10" fill="none" stroke="var(--theme-bateau-accent)" stroke-width="0.8" stroke-dasharray="2 2" opacity="0.7" />
-          <text x="108" y="17" text-anchor="middle" font-size="4.2" font-weight="700" fill="var(--theme-bateau-accent)" letter-spacing="0.04em">ROCHES DU CALVADOS</text>
+          <ellipse cx="108" cy="38" rx="44" ry="12" fill="none" stroke="var(--theme-bateau-accent)" stroke-width="1" stroke-dasharray="2 2" opacity="0.8" />
+          <text x="108" y="36" text-anchor="middle" font-size="5.2" font-weight="800" fill="var(--theme-bateau-accent)" letter-spacing="0.04em">ROCHES DU CALVADOS</text>
+          <text x="108" y="44" text-anchor="middle" font-size="4.2" font-weight="600" fill="var(--theme-text-title)">Hauts-fonds 5-15m</text>
 
           <!-- Épaves Sword -->
-          <text x="156" y="14" text-anchor="middle" font-size="4.8">⚓</text>
+          <circle cx="160" cy="30" r="4" fill="var(--theme-secret-surface)" stroke="var(--theme-secret-border)" stroke-width="0.8" />
+          <text x="160" y="32" text-anchor="middle" font-size="5.2" font-weight="900" fill="var(--theme-secret-text)">⚓</text>
+          <text x="160" y="24" text-anchor="middle" font-size="4.5" font-weight="700" fill="var(--theme-secret-text)">Épaves Sword</text>
+
+          <!-- Épaves Juno -->
+          <circle cx="48" cy="32" r="3.5" fill="var(--theme-secret-surface)" stroke="var(--theme-secret-border)" stroke-width="0.8" />
+          <text x="48" y="34" text-anchor="middle" font-size="4.8" font-weight="900" fill="var(--theme-secret-text)">⚓</text>
 
           <!-- Trait de côte OSM -->
-          <path d="\${GEO_PATHS.regCoast} L 195 82 L 0 82 Z" fill="var(--theme-card-inner-bg)" stroke="none" />
-          <path d="\${GEO_PATHS.regCoast}" fill="none" stroke="var(--theme-text-title)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="\${GEO_PATHS.regCoast} L 200 185 L 0 185 Z" fill="var(--theme-card-inner-bg)" stroke="none" />
+          <path d="\${GEO_PATHS.regCoast}" fill="none" stroke="var(--theme-text-title)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
 
           <!-- Villes côtières -->
-          <text x="35" y="32" font-size="4.4" font-weight="600" fill="var(--theme-text-muted)">Courseulles</text>
-          <text x="96" y="32" font-size="4.4" font-weight="600" fill="var(--theme-text-muted)">Luc</text>
-          <text x="155" y="34" font-size="4.8" font-weight="700" fill="var(--theme-bateau-accent)">Ouistreham</text>
+          <text x="30" y="68" font-size="5" font-weight="700" fill="var(--theme-text-title)">Courseulles</text>
+          <text x="105" y="70" font-size="4.8" font-weight="600" fill="var(--theme-text-muted)">Lion-sur-Mer</text>
+          <text x="166" y="72" font-size="5.4" font-weight="800" fill="var(--theme-bateau-accent)">Ouistreham</text>
 
           <!-- Tracé du Canal de Caen à la mer (14 km) -->
-          <path d="\${GEO_PATHS.regCanal}" fill="none" stroke="var(--theme-canal-accent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="\${GEO_PATHS.regCanal}" fill="none" stroke="#ffffff" stroke-width="0.7" stroke-dasharray="1.5 1.5" />
+          <path d="\${GEO_PATHS.regCanal}" fill="none" stroke="var(--theme-canal-accent)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.3" />
+          <path d="\${GEO_PATHS.regCanal}" fill="none" stroke="var(--theme-canal-accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="\${GEO_PATHS.regCanal}" fill="none" stroke="#ffffff" stroke-width="0.8" stroke-dasharray="2 2" />
 
           <!-- Repères Canal -->
           <!-- Pegasus Bridge -->
-          <circle cx="140" cy="52" r="1.4" fill="var(--theme-text-title)" />
-          <text x="143" y="53" font-size="3.8" fill="var(--theme-text-muted)">Pegasus</text>
+          <circle cx="152" cy="115" r="2" fill="var(--theme-text-title)" />
+          <rect x="120" y="120" width="46" height="12" rx="2" fill="var(--theme-surface-subtle)" stroke="var(--theme-surface-subtle-border)" stroke-width="0.5" />
+          <text x="143" y="128.5" text-anchor="middle" font-size="4.8" font-weight="700" fill="var(--theme-text-title)">Pegasus Bridge</text>
 
           <!-- Caen Bassin St-Pierre -->
-          <circle cx="106" cy="74" r="2" fill="var(--theme-canal-accent)" stroke="#ffffff" stroke-width="0.6" />
-          <text x="100" y="75" text-anchor="end" font-size="4.8" font-weight="700" fill="var(--theme-canal-accent)">Caen</text>
+          <circle cx="94" cy="166" r="3" fill="var(--theme-canal-accent)" stroke="#ffffff" stroke-width="1" />
+          <rect x="36" y="158" width="52" height="14" rx="2" fill="var(--theme-surface-subtle)" stroke="var(--theme-canal-accent)" stroke-width="0.8" />
+          <text x="62" y="167.5" text-anchor="middle" font-size="5.4" font-weight="800" fill="var(--theme-canal-accent)">CAEN (Bassin St-Pierre)</text>
+          <text x="96" y="178" font-size="4.4" font-style="italic" fill="var(--theme-text-muted)">14 km jusqu'à la mer</text>
         </svg>
       </div>
     </div>
@@ -443,4 +492,4 @@ export function renderRegionalMiniMap() {
 `;
 
 fs.writeFileSync('site/js/geo-maps.js', moduleContent);
-console.log('Fichier site/js/geo-maps.js généré avec succès !');
+console.log('Fichier site/js/geo-maps.js mis à jour avec les nouvelles échelles !');
