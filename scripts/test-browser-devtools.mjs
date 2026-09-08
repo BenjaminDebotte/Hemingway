@@ -494,7 +494,11 @@ const spaceOccupancy = await cdp.evaluate(`
       const t = c.querySelector('.verso-title')?.textContent || '';
       return t.includes('Brochet') || t.includes('Sandre') || t.includes('Silure');
     });
-    const monoSection = monoCard?.querySelector('.verso-header + .biotope-section:last-child') || monoCard?.querySelector('.biotope-section');
+    const monoSection = monoCard?.querySelector('.biotope-section');
+    const monoMap = monoCard?.querySelector('.biotope-map-card');
+
+    // Vérifier présence de la mini-carte régionale sur Face A (Bar commun)
+    const hasRegionalMap = Boolean(rectoCard.querySelector('.notes-box-split .regional-mini-map'));
 
     return {
       rectoWidth,
@@ -503,10 +507,15 @@ const spaceOccupancy = await cdp.evaluate(`
       rectoFullWidth,
       notesBoxH,
       notesLines,
+      hasRegionalMap,
       dualCanalH: dualCanalSec ? dualCanalSec.offsetHeight : 0,
       dualBateauH: dualBateauSec ? dualBateauSec.offsetHeight : 0,
+      dualCardH: dualCard ? dualCard.offsetHeight : 0,
+      dualCardScrollH: dualCard ? dualCard.scrollHeight : 0,
       monoSectionH: monoSection ? monoSection.offsetHeight : 0,
-      monoCardH: monoCard ? monoCard.offsetHeight : 0
+      monoMapH: monoMap ? monoMap.offsetHeight : 0,
+      monoCardH: monoCard ? monoCard.offsetHeight : 0,
+      monoCardScrollH: monoCard ? monoCard.scrollHeight : 0
     };
   })()
 `);
@@ -514,10 +523,14 @@ const spaceOccupancy = await cdp.evaluate(`
 assert(spaceOccupancy.rectoFullWidth, `Face A (Recto) : Tous les blocs occupent la pleine largeur utile (largeur: ${spaceOccupancy.rectoWidth}px)`);
 assert(spaceOccupancy.notesBoxH >= 60, `Face A (Recto) : Le bloc de notes manuscrites s'étire pour combler l'espace bas (${spaceOccupancy.notesBoxH}px)`);
 assert(spaceOccupancy.notesLines.every(h => h >= 14), `Face A (Recto) : Les 3 lignes de notes manuscrites prennent toute la hauteur (${spaceOccupancy.notesLines.join(', ')}px)`);
+assert(spaceOccupancy.hasRegionalMap, `Face A (Recto) : Mini-carte régionale OSM intégrée dans le bloc notes scindé`);
 assert(spaceOccupancy.rectoScrollHeight <= spaceOccupancy.rectoHeight + 2, `Face A (Recto) : Zéro débordement vertical (scrollH: ${spaceOccupancy.rectoScrollHeight}px <= h: ${spaceOccupancy.rectoHeight}px)`);
 
-assert(spaceOccupancy.dualCanalH >= 250 && spaceOccupancy.dualBateauH >= 250, `Face B Dual : Les volets Canal (${spaceOccupancy.dualCanalH}px) et Mer (${spaceOccupancy.dualBateauH}px) occupent tout l'espace disponible équitablement`);
-assert(spaceOccupancy.monoSectionH >= 550, `Face B Mono : L'unique volet biotope s'étire en plein format (${spaceOccupancy.monoSectionH}px sur ${spaceOccupancy.monoCardH}px)`);
+assert(spaceOccupancy.dualCanalH >= 250 && spaceOccupancy.dualBateauH >= 250, `Face B Dual : Les sections Canal (${spaceOccupancy.dualCanalH}px) et Mer (${spaceOccupancy.dualBateauH}px) occupent tout l'espace disponible`);
+assert(spaceOccupancy.dualCardScrollH <= spaceOccupancy.dualCardH + 2, `Face B Dual : Zéro débordement vertical (scrollH: ${spaceOccupancy.dualCardScrollH}px <= h: ${spaceOccupancy.dualCardH}px)`);
+
+assert(spaceOccupancy.monoSectionH >= 240 && spaceOccupancy.monoMapH >= 200, `Face B Mono : Section tactique (${spaceOccupancy.monoSectionH}px) + Carte OSM (${spaceOccupancy.monoMapH}px) occupent tout l'espace disponible`);
+assert(spaceOccupancy.monoCardScrollH <= spaceOccupancy.monoCardH + 2, `Face B Mono : Zéro débordement vertical (scrollH: ${spaceOccupancy.monoCardScrollH}px <= h: ${spaceOccupancy.monoCardH}px)`);
 
 // Rétablir le mode Déplié
 await cdp.evaluate('document.querySelector(\'.mode-btn[data-mode="duo"]\').click()');

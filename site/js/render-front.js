@@ -4,10 +4,12 @@
 
 import { uiIcon } from './icons.js';
 import { renderHarvestPill, renderMorphologyGauge } from './parsers.js';
+import { renderRegionalMiniMap } from './geo-maps.js';
 
 export const MONTHS = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'];
 
 export function renderCardFront(fish) {
+  const isDual = fish.canal.present && fish.bateau.present;
   const legalSize = fish.regulations.legalSizeCm
     ? `${fish.regulations.legalSizeCm} cm`
     : 'Non fixée';
@@ -98,16 +100,35 @@ export function renderCardFront(fish) {
       ` : ''}
     </div>
 
-    <div class="notes-box">
-      <div class="notes-header">
-        <span class="notes-title">${uiIcon('pen')} Notes :</span>
-        <span class="notes-hint">Date • Coef • Poste • Prises / Montages</span>
+    ${isDual ? `
+      <div class="notes-box notes-box-split">
+        <div class="notes-split-col notes-col-map">
+          ${renderRegionalMiniMap()}
+        </div>
+        <div class="notes-split-col notes-col-lines">
+          <div class="notes-header">
+            <span class="notes-title">${uiIcon('pen')} Notes :</span>
+            <span class="notes-hint">Date • Coef • Prises</span>
+          </div>
+          <div class="notes-lines" aria-label="Lignes pour notes manuscrites">
+            <div class="notes-line"></div>
+            <div class="notes-line"></div>
+            <div class="notes-line"></div>
+          </div>
+        </div>
       </div>
-      <div class="notes-lines" aria-label="Lignes pour notes manuscrites">
-        <div class="notes-line"></div>
-        <div class="notes-line"></div>
-        <div class="notes-line"></div>
+    ` : `
+      <div class="notes-box">
+        <div class="notes-header">
+          <span class="notes-title">${uiIcon('pen')} Notes :</span>
+          <span class="notes-hint">Date • Coef • Poste • Prises / Montages</span>
+        </div>
+        <div class="notes-lines" aria-label="Lignes pour notes manuscrites">
+          <div class="notes-line"></div>
+          <div class="notes-line"></div>
+          <div class="notes-line"></div>
+        </div>
       </div>
-    </div>
+    `}
   `;
 }

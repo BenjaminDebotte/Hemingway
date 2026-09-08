@@ -9,6 +9,10 @@ import {
   renderTwelfthsGauge,
   renderExhaustiveTackleBlock
 } from './parsers.js';
+import {
+  renderCanalDedicatedMap,
+  renderCoteDeNacreDedicatedMap
+} from './geo-maps.js';
 
 export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 'all') {
   const isDual = fish.canal.present && fish.bateau.present;
@@ -26,12 +30,12 @@ export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 
     </div>
 
     ${isFlipCard && isDual ? `
-      <div class="biotope-card-switcher" role="tablist" aria-label="Choisir le biotope terrain">
+      <div class="biotope-card-switcher" role="tablist" aria-label="Choisir le milieu">
         <button type="button" class="biotope-switch-btn ${defaultTab === 'canal' ? 'active' : ''}" data-tab="canal" onclick="switchCardBiotope(event, '${fish.id}', 'canal')">
-          ${uiIcon('anchor')} Volet Canal de Caen
+          ${uiIcon('anchor')} Canal de Caen
         </button>
         <button type="button" class="biotope-switch-btn ${defaultTab === 'bateau' ? 'active' : ''}" data-tab="bateau" onclick="switchCardBiotope(event, '${fish.id}', 'bateau')">
-          ${uiIcon('boat')} Volet Côte de Nacre
+          ${uiIcon('boat')} Côte de Nacre
         </button>
       </div>
     ` : ''}
@@ -39,7 +43,7 @@ export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 
     ${fish.canal.present ? `
       <div class="biotope-section section-canal ${canalHidden}">
         <div class="section-header-row">
-          <div class="block-title section-canal-title">${uiIcon('anchor')} Volet Canal de Caen à la mer</div>
+          <div class="block-title section-canal-title">${uiIcon('anchor')} Canal de Caen</div>
           <span class="presence-badge">${fish.canal.presenceSeason}</span>
         </div>
         <div class="spots-chip-grid">
@@ -53,12 +57,13 @@ export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 
         </ul>
         ${renderExhaustiveTackleBlock(fish.canal.terminalTackle, fish.gear.canalCombo, 'Canal', 'canal')}
       </div>
+      ${!isDual ? renderCanalDedicatedMap(fish) : ''}
     ` : ''}
 
     ${fish.bateau.present ? `
       <div class="biotope-section section-bateau ${bateauHidden}">
         <div class="section-header-row">
-          <div class="block-title section-bateau-title">${uiIcon('boat')} Volet Côte de Nacre en Bateau</div>
+          <div class="block-title section-bateau-title">${uiIcon('boat')} Côte de Nacre</div>
           <span class="presence-badge">${fish.bateau.presenceSeason}</span>
         </div>
         <div class="spots-chip-grid">
@@ -73,6 +78,7 @@ export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 
         </ul>
         ${renderExhaustiveTackleBlock(fish.bateau.terminalTackle, fish.gear.boatCombo, 'Mer', 'bateau')}
       </div>
+      ${!isDual ? renderCoteDeNacreDedicatedMap(fish) : ''}
     ` : ''}
   `;
 }

@@ -203,6 +203,87 @@ body.print-mode .print-view-container {
   display: none;
 }
 
+/* Notes box scindée en 2 pour les espèces mixtes (Mini-carte OSM + Lignes) */
+.a4-sheet-preview .notes-box.notes-box-split {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2mm;
+  padding: 1mm 1.8mm;
+  align-items: stretch;
+}
+
+.a4-sheet-preview .notes-split-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  height: 100%;
+}
+
+.a4-sheet-preview .notes-col-map {
+  padding: 0.6mm 1.2mm;
+  border: 1px solid var(--theme-surface-subtle-border);
+  background: var(--theme-card-inner-bg);
+  box-sizing: border-box;
+}
+
+.a4-sheet-preview .regional-mini-map {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.a4-sheet-preview .mini-map-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4mm;
+}
+
+.a4-sheet-preview .mini-map-title {
+  font-size: 4.8pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--theme-text-title);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.a4-sheet-preview .mini-map-tag {
+  font-family: var(--font-mono);
+  font-size: 4.2pt;
+  font-weight: 800;
+  padding: 0.1mm 0.8mm;
+  border-radius: 2px;
+  background: var(--theme-canal-badge-bg);
+  color: var(--theme-canal-badge-text);
+  border: 1px solid var(--theme-canal-badge-border);
+}
+
+.a4-sheet-preview .mini-map-svg-wrap {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a4-sheet-preview .mini-map-svg {
+  width: 100%;
+  height: auto;
+  max-height: 16mm;
+  display: block;
+}
+
+.a4-sheet-preview .notes-col-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
 /* Face B (Verso) - Utilisation optimale de tout l'espace disponible */
 .a4-sheet-preview .verso-header {
   padding-bottom: 1.5mm;
@@ -223,7 +304,8 @@ body.print-mode .print-view-container {
   min-height: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 0.8mm;
   padding: 1.4mm 2mm;
   margin-bottom: 0.8mm;
   width: 100%;
@@ -234,56 +316,117 @@ body.print-mode .print-view-container {
   margin-bottom: 0;
 }
 
-/* Espèces mono-biotope (Eau douce/Canal seul ou Mer/Bateau seul) : occupation plein format */
-.a4-sheet-preview .verso-header + .biotope-section:last-child,
-.a4-sheet-preview .biotope-section:only-of-type {
+/* Espèces mono-biotope (Eau douce/Canal seul ou Mer/Bateau seul) : section compacte en haut */
+.a4-sheet-preview .verso-header + .biotope-section:not(:last-child) {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.9mm;
+  padding: 1.6mm 2.2mm;
+  margin-bottom: 1.2mm;
+}
+
+/* Carte dédiée Face B mono-biotope */
+.a4-sheet-preview .biotope-map-card {
   flex: 1 1 auto;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2.2mm 2.8mm;
+  padding: 1.2mm 2mm;
+  margin-top: 0;
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: 0;
+  background: var(--theme-card-inner-bg);
+  box-sizing: border-box;
+  width: 100%;
 }
-.a4-sheet-preview .verso-header + .biotope-section:last-child .spots-chip-grid,
-.a4-sheet-preview .biotope-section:only-of-type .spots-chip-grid {
-  gap: 1.8mm;
-  margin-bottom: 1.4mm;
+
+.a4-sheet-preview .map-card-canal {
+  border-left: 2.5px solid var(--theme-canal-accent);
 }
-.a4-sheet-preview .verso-header + .biotope-section:last-child .spot-chip,
-.a4-sheet-preview .biotope-section:only-of-type .spot-chip {
-  padding: 1.8mm 2.2mm;
-  font-size: 7.2pt;
-  line-height: 1.28;
+
+.a4-sheet-preview .map-card-mer {
+  border-left: 2.5px solid var(--theme-bateau-accent);
 }
-.a4-sheet-preview .verso-header + .biotope-section:last-child .canal-triggers-cockpit,
-.a4-sheet-preview .verso-header + .biotope-section:last-child .tide-weather-cockpit,
-.a4-sheet-preview .biotope-section:only-of-type .canal-triggers-cockpit,
-.a4-sheet-preview .biotope-section:only-of-type .tide-weather-cockpit {
-  gap: 1.8mm;
-  margin-bottom: 1.4mm;
+
+.a4-sheet-preview .map-card-header {
+  margin-bottom: 0.6mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.a4-sheet-preview .verso-header + .biotope-section:last-child .trigger-card,
-.a4-sheet-preview .verso-header + .biotope-section:last-child .cockpit-box,
-.a4-sheet-preview .biotope-section:only-of-type .trigger-card,
-.a4-sheet-preview .biotope-section:only-of-type .cockpit-box {
-  padding: 1.8mm 2.2mm;
-  font-size: 7.2pt;
-  line-height: 1.28;
+
+.a4-sheet-preview .map-header-title {
+  font-size: 5.6pt;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--theme-text-title);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
 }
-.a4-sheet-preview .verso-header + .biotope-section:last-child .tactics-bullets,
-.a4-sheet-preview .biotope-section:only-of-type .tactics-bullets {
-  font-size: 7.4pt;
-  line-height: 1.35;
-  gap: 1.2mm;
-  margin-bottom: 1.4mm;
+
+.a4-sheet-preview .map-badge-osm {
+  font-family: var(--font-mono);
+  font-size: 4.8pt;
+  font-weight: 700;
+  padding: 0.2mm 0.8mm;
+  border-radius: var(--radius-full);
+  background: var(--theme-surface-inset);
+  color: var(--theme-text-muted);
+  border: 1px solid var(--theme-surface-subtle-border);
 }
-.a4-sheet-preview .verso-header + .biotope-section:last-child .terminal-tackle-card,
-.a4-sheet-preview .biotope-section:only-of-type .terminal-tackle-card {
-  padding: 1.8mm 2.4mm;
+
+.a4-sheet-preview .map-svg-wrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
-.a4-sheet-preview .verso-header + .biotope-section:last-child .terminal-spec-item,
-.a4-sheet-preview .biotope-section:only-of-type .terminal-spec-item {
+
+.a4-sheet-preview .halieutic-svg {
+  width: 100%;
+  height: auto;
+  max-height: 38mm;
+  display: block;
+}
+
+.a4-sheet-preview .map-card-footer {
+  margin-top: 0.6mm;
+  padding-top: 0.5mm;
+  border-top: 1px dashed var(--theme-surface-subtle-border);
+  font-size: 5.2pt;
+  line-height: 1.18;
+  color: var(--theme-text-muted);
+}
+
+.a4-sheet-preview .section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5mm;
+  margin-bottom: 0.6mm;
+  flex-shrink: 0;
+}
+
+.a4-sheet-preview .section-header-row .block-title {
+  margin-bottom: 0 !important;
+  white-space: nowrap;
   font-size: 6.8pt;
-  line-height: 1.25;
+}
+
+.a4-sheet-preview .section-header-row .presence-badge {
+  font-size: 5.4pt;
+  padding: 0.2mm 0.8mm;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 62%;
 }
 
 .a4-sheet-preview .presence-badge { font-size: 6.2pt; padding: 0.5mm 1.2mm; }
@@ -515,6 +658,12 @@ body.print-mode .print-view-container {
     color: #000000 !important;
   }
 
+  .a4-sheet-preview .notes-box.notes-box-split {
+    display: grid !important;
+    grid-template-columns: 1.15fr 1fr !important;
+    gap: 2mm !important;
+  }
+
   .a4-sheet-preview .notes-lines {
     flex: 1 1 auto !important;
     display: flex !important;
@@ -531,11 +680,22 @@ body.print-mode .print-view-container {
     flex: 1 1 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: space-between !important;
+    justify-content: flex-start !important;
+    gap: 0.8mm !important;
   }
 
-  .a4-sheet-preview .biotope-section:only-of-type {
+  .a4-sheet-preview .verso-header + .biotope-section:not(:last-child) {
+    flex: 0 0 auto !important;
+    gap: 0.9mm !important;
+  }
+
+  .a4-sheet-preview .biotope-map-card {
     flex: 1 1 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    background: #ffffff !important;
+    border: 1px solid #000000 !important;
   }
 
   .a4-sheet-preview .twelfths-card,

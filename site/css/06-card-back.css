@@ -623,3 +623,126 @@
   gap: 0.35rem;
   margin-bottom: 0.2rem;
 }
+
+/* --- CARTES HALIEUTIQUES VECTORIELLES (OSM) FACE B MONO-BIOTOPE --- */
+.biotope-map-card {
+  background: var(--theme-card-inner-bg);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: var(--radius-sm);
+  padding: 0.48rem 0.68rem;
+  margin-top: 0.4rem;
+  box-shadow: 0 1px 2px var(--theme-shadow-ambient);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.map-card-canal {
+  border-left: 3.5px solid var(--theme-canal-accent);
+}
+
+.map-card-mer {
+  border-left: 3.5px solid var(--theme-bateau-accent);
+}
+
+.map-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.map-header-title {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--theme-text-title);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.map-badge-osm {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  font-weight: 700;
+  padding: 0.08rem 0.35rem;
+  border-radius: var(--radius-full);
+  background: var(--theme-surface-inset);
+  color: var(--theme-text-muted);
+  border: 1px solid var(--theme-surface-subtle-border);
+}
+
+.map-svg-wrap {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.halieutic-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-card-footer {
+  margin-top: 0.28rem;
+  padding-top: 0.22rem;
+  border-top: 1px dashed var(--theme-surface-subtle-border);
+  font-size: 0.62rem;
+  line-height: 1.25;
+  color: var(--theme-text-muted);
+}
+
+.map-label-main {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  font-weight: 800;
+  fill: var(--theme-text-title);
+}
+
+.map-label-sub {
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  font-weight: 600;
+  fill: var(--theme-text-muted);
+}
+
+.map-zone-title {
+  font-family: var(--font-sans);
+  font-size: 8.5px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  fill: var(--theme-bateau-accent);
+}
+
+.map-zone-sub {
+  font-family: var(--font-mono);
+  font-size: 6.5px;
+  font-weight: 600;
+  fill: var(--theme-text-title);
+}
+
+.map-zone-sand {
+  font-family: var(--font-sans);
+  font-size: 7.5px;
+  font-weight: 700;
+  fill: var(--theme-text-muted);
+}
+
+.map-zone-wreck {
+  font-family: var(--font-sans);
+  font-size: 8px;
+  font-weight: 800;
+  fill: var(--theme-secret-text);
+}
+
+.map-scale-text {
+  font-family: var(--font-mono);
+  font-size: 6px;
+  font-weight: 700;
+  fill: var(--theme-text-title);
+}
