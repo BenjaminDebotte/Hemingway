@@ -6,6 +6,11 @@
   display: none;
 }
 
+body.print-mode {
+  background-color: #f8fafc;
+  background-image: none;
+}
+
 body.print-mode .main-container {
   display: none;
 }
@@ -22,8 +27,8 @@ body.print-mode .print-view-container {
 .a4-sheet-preview {
   width: 297mm;
   height: 210mm;
-  background: var(--theme-surface-inset);
-  box-shadow: none;
+  background: #ffffff;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
   border: 1px solid var(--theme-card-outer-border);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -62,8 +67,92 @@ body.print-mode .print-view-container {
   flex-direction: column;
   justify-content: space-between;
   gap: 1.2mm;
-  background: var(--theme-card-inner-bg);
+  background: #ffffff;
   color: var(--theme-text-main);
+}
+
+/* Fond blanc net pour tous les blocs et capsules internes en mode impression */
+.a4-sheet-preview .recognition-box,
+.a4-sheet-preview .regs-block,
+.a4-sheet-preview .reg-pill,
+.a4-sheet-preview .bio-card,
+.a4-sheet-preview .secret-local-box,
+.a4-sheet-preview .notes-box,
+.a4-sheet-preview .notes-col-map,
+.a4-sheet-preview .mini-map-legend-bar,
+.a4-sheet-preview .biotope-section,
+.a4-sheet-preview .section-canal,
+.a4-sheet-preview .section-bateau,
+.a4-sheet-preview .biotope-map-card,
+.a4-sheet-preview .spot-chip,
+.a4-sheet-preview .trigger-card,
+.a4-sheet-preview .cockpit-box,
+.a4-sheet-preview .twelfths-card,
+.a4-sheet-preview .terminal-tackle-card,
+.a4-sheet-preview .waypoints-block,
+.a4-sheet-preview .waypoint-card,
+.a4-sheet-preview .map-legend-bar,
+.a4-sheet-preview .map-habitat-chip,
+.a4-sheet-preview .map-badge-osm,
+.a4-sheet-preview .presence-badge,
+.a4-sheet-preview .diet-tag,
+.a4-sheet-preview .terminal-pill,
+.a4-sheet-preview .twelfths-hours-pill,
+.a4-sheet-preview .twelfths-flow-pill,
+.a4-sheet-preview .verso-badge {
+  background: #ffffff;
+}
+
+/* Adaptation pour épreuve nocturne en Mode Nuit (si activé manuellement) */
+html[data-mode="dark"] body.print-mode {
+  background-color: var(--theme-bg);
+}
+
+html[data-mode="dark"] .a4-sheet-preview {
+  background: var(--theme-surface-inset);
+  box-shadow: none;
+}
+
+html[data-mode="dark"] .a4-sheet-preview .card-face {
+  background: var(--theme-card-inner-bg);
+}
+
+html[data-mode="dark"] .a4-sheet-preview .recognition-box,
+html[data-mode="dark"] .a4-sheet-preview .regs-block,
+html[data-mode="dark"] .a4-sheet-preview .reg-pill,
+html[data-mode="dark"] .a4-sheet-preview .bio-card,
+html[data-mode="dark"] .a4-sheet-preview .secret-local-box,
+html[data-mode="dark"] .a4-sheet-preview .notes-box,
+html[data-mode="dark"] .a4-sheet-preview .notes-col-map,
+html[data-mode="dark"] .a4-sheet-preview .mini-map-legend-bar,
+html[data-mode="dark"] .a4-sheet-preview .biotope-section,
+html[data-mode="dark"] .a4-sheet-preview .section-canal,
+html[data-mode="dark"] .a4-sheet-preview .section-bateau,
+html[data-mode="dark"] .a4-sheet-preview .biotope-map-card,
+html[data-mode="dark"] .a4-sheet-preview .spot-chip,
+html[data-mode="dark"] .a4-sheet-preview .trigger-card,
+html[data-mode="dark"] .a4-sheet-preview .cockpit-box,
+html[data-mode="dark"] .a4-sheet-preview .twelfths-card,
+html[data-mode="dark"] .a4-sheet-preview .terminal-tackle-card,
+html[data-mode="dark"] .a4-sheet-preview .waypoints-block,
+html[data-mode="dark"] .a4-sheet-preview .waypoint-card,
+html[data-mode="dark"] .a4-sheet-preview .map-legend-bar,
+html[data-mode="dark"] .a4-sheet-preview .map-habitat-chip,
+html[data-mode="dark"] .a4-sheet-preview .map-badge-osm,
+html[data-mode="dark"] .a4-sheet-preview .presence-badge,
+html[data-mode="dark"] .a4-sheet-preview .diet-tag,
+html[data-mode="dark"] .a4-sheet-preview .terminal-pill,
+html[data-mode="dark"] .a4-sheet-preview .twelfths-hours-pill,
+html[data-mode="dark"] .a4-sheet-preview .twelfths-flow-pill,
+html[data-mode="dark"] .a4-sheet-preview .verso-badge {
+  background: var(--theme-surface-subtle);
+}
+
+html[data-mode="dark"] .a4-sheet-preview .regs-block,
+html[data-mode="dark"] .a4-sheet-preview .notes-col-map,
+html[data-mode="dark"] .a4-sheet-preview .biotope-map-card,
+html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
+  background: var(--theme-card-inner-bg);
 }
 
 .a4-sheet-preview .card-face > * {
@@ -141,7 +230,7 @@ body.print-mode .print-view-container {
   line-height: 1.25;
   margin: 1.5mm 0;
   border: 1px solid var(--theme-secret-border);
-  background: var(--theme-secret-surface);
+  background: #ffffff;
   color: var(--theme-secret-text);
   width: 100%;
   box-sizing: border-box;
@@ -172,7 +261,7 @@ body.print-mode .print-view-container {
   padding: 1.2mm 2.2mm;
   border: 1px dashed var(--theme-card-divider);
   border-radius: 0;
-  background: var(--theme-surface-subtle);
+  background: #ffffff;
   color: var(--theme-text-main);
   width: 100%;
   box-sizing: border-box;
@@ -223,7 +312,7 @@ body.print-mode .print-view-container {
 .a4-sheet-preview .notes-col-map {
   padding: 0.6mm 1.2mm;
   border: 1px solid var(--theme-surface-subtle-border);
-  background: var(--theme-card-inner-bg);
+  background: #ffffff;
   box-sizing: border-box;
 }
 
@@ -293,7 +382,7 @@ body.print-mode .print-view-container {
   font-size: 3.8pt;
   font-weight: 700;
   color: var(--theme-text-muted);
-  background: var(--theme-surface-subtle);
+  background: #ffffff;
   border: 1px solid var(--theme-surface-subtle-border);
   border-radius: 0;
   width: 100%;
@@ -375,7 +464,7 @@ body.print-mode .print-view-container {
   margin-top: 0;
   border: 1px solid var(--theme-surface-subtle-border);
   border-radius: 0;
-  background: var(--theme-card-inner-bg);
+  background: #ffffff;
   box-sizing: border-box;
   width: 100%;
 }
@@ -412,7 +501,7 @@ body.print-mode .print-view-container {
   font-weight: 700;
   padding: 0.2mm 0.8mm;
   border-radius: var(--radius-full);
-  background: var(--theme-surface-inset);
+  background: #ffffff;
   color: var(--theme-text-muted);
   border: 1px solid var(--theme-surface-subtle-border);
 }
@@ -445,7 +534,7 @@ body.print-mode .print-view-container {
   padding: 0.3mm 0.8mm;
   margin-top: 0.5mm;
   margin-bottom: 0.3mm;
-  background: var(--theme-surface-subtle);
+  background: #ffffff;
   border: 1px solid var(--theme-surface-subtle-border);
   border-radius: 0;
   font-family: var(--font-mono);
@@ -490,7 +579,7 @@ body.print-mode .print-view-container {
 .a4-sheet-preview .map-habitat-chip {
   padding: 0.7mm 1.1mm;
   border: 1px solid var(--theme-surface-subtle-border);
-  background: var(--theme-surface-subtle);
+  background: #ffffff;
   border-radius: 0;
   box-sizing: border-box;
   display: flex;
@@ -615,7 +704,7 @@ body.print-mode .print-view-container {
 .a4-sheet-preview .wind-desc-text { font-size: 6.2pt; line-height: 1.18; }
 .a4-sheet-preview .twelfths-card {
   border: 1px solid var(--theme-surface-subtle-border);
-  background: var(--theme-surface-subtle);
+  background: #ffffff;
   color: var(--theme-text-main);
   box-shadow: none;
   border-radius: 0;
@@ -652,7 +741,7 @@ body.print-mode .print-view-container {
   margin: 0.5mm 0;
   border: 1px solid var(--theme-surface-subtle-border);
   border-radius: 0;
-  background: var(--theme-surface-subtle);
+  background: #ffffff;
   color: var(--theme-text-main);
   width: 100%;
   box-sizing: border-box;
@@ -824,7 +913,7 @@ body.print-mode .print-view-container {
 
   .a4-sheet-preview .twelfths-card,
   .a4-sheet-preview .terminal-tackle-card {
-    background: #f8fafc !important;
+    background: #ffffff !important;
     border: 1px solid #cbd5e1 !important;
     color: #000000 !important;
   }
@@ -843,7 +932,7 @@ body.print-mode .print-view-container {
   }
 
   .a4-sheet-preview .waypoints-block {
-    background: #f8fafc !important;
+    background: #ffffff !important;
     border: 1px solid #cbd5e1 !important;
   }
 
@@ -871,7 +960,7 @@ body.print-mode .print-view-container {
   gap: 0.2mm !important;
   border-radius: 0 !important;
   border: 1px solid var(--theme-surface-subtle-border) !important;
-  background: var(--theme-surface-subtle) !important;
+  background: #ffffff;
   flex-shrink: 0 !important;
 }
 
@@ -899,7 +988,7 @@ body.print-mode .print-view-container {
   padding: 0.2mm 0.5mm !important;
   border: 1px solid var(--theme-surface-subtle-border) !important;
   border-radius: 0 !important;
-  background: var(--theme-card-inner-bg) !important;
+  background: #ffffff;
   min-width: 0 !important;
   gap: 0.2mm !important;
 }
@@ -941,4 +1030,12 @@ body.print-mode .print-view-container {
 
 .a4-sheet-preview .coord-decimal {
   display: none !important;
+}
+
+html[data-mode="dark"] .a4-sheet-preview .waypoints-block {
+  background: var(--theme-surface-subtle) !important;
+}
+
+html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
+  background: var(--theme-card-inner-bg) !important;
 }
