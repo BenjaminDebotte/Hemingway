@@ -185,15 +185,20 @@ Toutes les espèces sont indexées dans `data/species-index.json`, garantissant 
 Le projet fonctionne sans dépendances lourdes grâce à Node.js natif :
 
 ```bash
+# Démarrer le serveur local avec rechargement automatique (Watch Mode)
+npm start
+# ou npm run dev
+# ➡️ Accédez à l'application sur : http://localhost:3000
+# ⚡ Surveille automatiquement les dossiers data/, scripts/ et site/ et redémarre à chaque modification
+
+# Démarrer le serveur en mode simple (sans watch)
+npm run serve
+
 # Valider l'intégrité de la base de données (schéma, index et densité texte)
 npm run validate
 
-# Compiler et assembler les 32 fiches dans l'application web
+# Compiler manuellement les 32 fiches dans l'application web
 npm run build
-
-# Démarrer le serveur local de visualisation et d'impression
-npm start
-# ➡️ Accédez à l'application sur : http://localhost:3000
 ```
 
 > **Astuce :** Vous pouvez également ouvrir directement `site/index.html` dans votre navigateur (Chrome, Edge, Firefox) sans aucun serveur : le fichier `site/data.js` fonctionne de manière 100 % autonome sans blocage CORS.

@@ -1,9 +1,13 @@
 import http from 'http';
 import fs from 'fs';
 import path from 'path';
+import { buildSite } from './build-site.mjs';
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const SITE_DIR = path.resolve('site');
+
+// Recompilation automatique des données au démarrage / redémarrage
+buildSite(true);
 
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
@@ -32,7 +36,10 @@ const server = http.createServer((req, res) => {
     const ext = path.extname(filePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || 'application/octet-stream';
 
-    res.writeHead(200, { 'Content-Type': contentType });
+    res.writeHead(200, {
+      'Content-Type': contentType,
+      'Cache-Control': 'no-cache'
+    });
     const stream = fs.createReadStream(filePath);
     stream.pipe(res);
   });
@@ -40,7 +47,8 @@ const server = http.createServer((req, res) => {
 
 server.listen(PORT, () => {
   console.log(`\n============================================================`);
-  console.log(`🎣 Fiches Pêche Normandie - Serveur local démarré`);
-  console.log(`➡️  Ouvrez dans votre navigateur : http://localhost:${PORT}`);
+  console.log(`🎣 Fiches Pêche Normandie — Serveur actif [Watch Mode]`);
+  console.log(`➡️  Disponible sur : http://localhost:${PORT}`);
+  console.log(`⚡ Surveillance active : redémarrage automatique en cas de modification`);
   console.log(`============================================================\n`);
 });

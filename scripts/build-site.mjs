@@ -1,31 +1,41 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-const index = JSON.parse(fs.readFileSync('data/species-index.json', 'utf8'));
+export function buildSite(quiet = false) {
+  const index = JSON.parse(fs.readFileSync('data/species-index.json', 'utf8'));
 
-console.log('Lecture et assemblage des 32 espèces...');
+  if (!quiet) console.log('Lecture et assemblage des espèces...');
 
-const allSpecies = [];
+  const allSpecies = [];
 
-for (const entry of index.species) {
-  const filePath = path.resolve(entry.file);
-  if (!fs.existsSync(filePath)) {
-    console.error(`Fichier manquant : ${entry.file}`);
-    process.exit(1);
+  for (const entry of index.species) {
+    const filePath = path.resolve(entry.file);
+    if (!fs.existsSync(filePath)) {
+      console.error(`Fichier manquant : ${entry.file}`);
+      return false;
+    }
+    const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    allSpecies.push(data);
   }
-  const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-  allSpecies.push(data);
-}
 
-fs.mkdirSync('site', { recursive: true });
+  fs.mkdirSync('site', { recursive: true });
 
-// Export sous forme de fichier JS autonome (window.SPECIES_DATA)
-// pour fonctionner nativement en double-cliquant sur index.html sans problème de CORS
-const dataJsContent = `// Données générées automatiquement - 32 espèces de Normandie
+  const dataJsContent = `// Données générées automatiquement - 32 espèces de Normandie
 window.SPECIES_DATA = ${JSON.stringify(allSpecies, null, 2)};
 window.PROJECT_INDEX = ${JSON.stringify(index, null, 2)};
 `;
 
-fs.writeFileSync('site/data.js', dataJsContent, 'utf8');
+  fs.writeFileSync('site/data.js', dataJsContent, 'utf8');
 
-console.log(`✓ Fichier site/data.js généré avec succès (${allSpecies.length} espèces).`);
+  if (!quiet) {
+    console.log(`✓ Fichier site/data.js généré avec succès (${allSpecies.length} espèces).`);
+  }
+  return true;
+}
+
+// Exécution directe via CLI
+const __filename = fileURLToPath(import.meta.url);
+if (process.argv[1] === __filename) {
+  buildSite();
+}

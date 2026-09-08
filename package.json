@@ -6,8 +6,9 @@
   "scripts": {
     "validate": "node scripts/validate-species.mjs",
     "build": "node scripts/build-site.mjs",
-    "start": "node scripts/serve.mjs",
-    "dev": "node scripts/serve.mjs"
+    "start": "node --watch --watch-path=data --watch-path=scripts --watch-path=site scripts/serve.mjs",
+    "dev": "node --watch --watch-path=data --watch-path=scripts --watch-path=site scripts/serve.mjs",
+    "serve": "node scripts/serve.mjs"
   },
   "keywords": [
     "peche",

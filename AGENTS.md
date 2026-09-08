@@ -114,12 +114,12 @@ Avant toute soumission de code ou modification de données, exécuter impérativ
 npm run validate
 # ou node scripts/validate-species.mjs
 
-# Recompilation des données pour le web et l'impression
-npm run build
-# ou node scripts/build-site.mjs
-
-# Lancement du serveur local de visualisation et d'impression
+# Lancement du serveur local avec rechargement automatique (Watch Mode)
 npm start
+# ou npm run dev (surveille data/, scripts/ et site/ et redémarre automatiquement)
+
+# Recompilation manuelle des données
+npm run build
 ```
 
 Le script vérifie :
