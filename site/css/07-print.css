@@ -22,9 +22,9 @@ body.print-mode .print-view-container {
 .a4-sheet-preview {
   width: 297mm;
   height: 210mm;
-  background: var(--white);
-  box-shadow: 0 16px 40px -10px rgb(6 14 26 / 0.22);
-  border: 1px solid rgb(15 23 42 / 0.12);
+  background: var(--theme-surface-inset);
+  box-shadow: none;
+  border: 1px solid var(--theme-card-outer-border);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5mm;
@@ -43,7 +43,7 @@ body.print-mode .print-view-container {
   bottom: 0;
   left: 148.5mm;
   width: 0;
-  border-left: 1px dashed rgba(148, 163, 184, 0.6);
+  border-left: 1px dashed var(--theme-card-divider);
   pointer-events: none;
   z-index: 2;
 }
@@ -51,8 +51,8 @@ body.print-mode .print-view-container {
 /* Les 2 fiches A5 dans la planche A4 */
 .a4-sheet-preview .card-face {
   height: 200mm;
-  border: 1px solid #cbd5e1;
-  border-radius: 4px;
+  border: 1px solid var(--theme-card-inner-border);
+  border-radius: 0;
   padding: 4mm 5mm;
   font-size: 7.5pt;
   line-height: 1.28;
@@ -62,7 +62,8 @@ body.print-mode .print-view-container {
   flex-direction: column;
   justify-content: space-between;
   gap: 1.2mm;
-  background: #ffffff;
+  background: var(--theme-card-inner-bg);
+  color: var(--theme-text-main);
 }
 
 .a4-sheet-preview .card-face > * {
@@ -105,9 +106,10 @@ body.print-mode .print-view-container {
   min-height: 16mm;
   margin-top: 0;
   padding: 1.0mm 2mm 1.2mm;
-  border: 1px dashed #94a3b8;
-  border-radius: 3px;
-  background: #ffffff;
+  border: 1px dashed var(--theme-card-divider);
+  border-radius: 0;
+  background: var(--theme-surface-subtle);
+  color: var(--theme-text-main);
 }
 .a4-sheet-preview .notes-header {
   margin-bottom: 0.5mm;
@@ -128,7 +130,7 @@ body.print-mode .print-view-container {
   flex: 1;
   min-height: 4mm;
   max-height: 6.5mm;
-  border-bottom: 1px dashed #cbd5e1;
+  border-bottom: 1px dashed var(--theme-card-divider);
 }
 .a4-sheet-preview .notes-line::before {
   display: none;
@@ -158,7 +160,15 @@ body.print-mode .print-view-container {
 .a4-sheet-preview .coef-track { height: 4.5px; }
 .a4-sheet-preview .coef-labels { font-size: 5pt; }
 .a4-sheet-preview .wind-desc-text { font-size: 6.2pt; line-height: 1.18; }
-.a4-sheet-preview .twelfths-card { border: 1px solid #cbd5e1; background: #f8fafc; box-shadow: none; padding: 1mm 1.8mm; margin: 0.8mm 0; }
+.a4-sheet-preview .twelfths-card {
+  border: 1px solid var(--theme-surface-subtle-border);
+  background: var(--theme-surface-subtle);
+  color: var(--theme-text-main);
+  box-shadow: none;
+  border-radius: 0;
+  padding: 1mm 1.8mm;
+  margin: 0.8mm 0;
+}
 .a4-sheet-preview .twelfths-title { font-size: 6.2pt; }
 .a4-sheet-preview .twelfths-hours-pill { font-size: 6pt; padding: 0.4mm 1.2mm; }
 .a4-sheet-preview .twelfths-flow-pill { font-size: 5.8pt; padding: 0.4mm 1mm; }
@@ -172,13 +182,14 @@ body.print-mode .print-view-container {
 .a4-sheet-preview .terminal-tackle-card {
   padding: 0.6mm 1mm;
   margin: 0.5mm 0;
-  border: 1px solid #cbd5e1;
-  border-radius: 3px;
-  background: #f8fafc;
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: 0;
+  background: var(--theme-surface-subtle);
+  color: var(--theme-text-main);
 }
 .a4-sheet-preview .terminal-canal { border-left: 2px solid var(--theme-canal-accent); }
 .a4-sheet-preview .terminal-bateau { border-left: 2px solid var(--theme-bateau-accent); }
-.a4-sheet-preview .terminal-card-header { margin-bottom: 0.25mm; padding-bottom: 0.2mm; border-bottom: 1px solid #e2e8f0; }
+.a4-sheet-preview .terminal-card-header { margin-bottom: 0.25mm; padding-bottom: 0.2mm; border-bottom: 1px solid var(--theme-surface-subtle-border); }
 .a4-sheet-preview .terminal-card-title { font-size: 5.4pt; }
 .a4-sheet-preview .terminal-specs-grid {
   display: grid;
@@ -209,24 +220,27 @@ body.print-mode .print-view-container {
     --theme-bg: #ffffff !important;
     --theme-card-outer-bg: #ffffff !important;
     --theme-card-inner-bg: #ffffff !important;
-    --theme-text-title: #0f172a !important;
-    --theme-text-main: #1e293b !important;
-    --theme-text-muted: #475569 !important;
-    --theme-text-faint: #64748b !important;
+    --theme-card-inner-border: #000000 !important;
+    --theme-card-divider: #000000 !important;
+    --theme-text-title: #000000 !important;
+    --theme-text-main: #000000 !important;
+    --theme-text-muted: #404040 !important;
+    --theme-text-faint: #737373 !important;
     --theme-surface-subtle: #f8fafc !important;
     --theme-surface-inset: #f1f5f9 !important;
-    --theme-surface-subtle-border: #e2e8f0 !important;
-    --theme-border-subtle: #e2e8f0 !important;
+    --theme-surface-subtle-border: #000000 !important;
+    --theme-border-subtle: #cbd5e1 !important;
     --theme-reg-pill-bg: #f8fafc !important;
-    --theme-reg-pill-border: #e2e8f0 !important;
-    --theme-reg-pill-label: #64748b !important;
-    --theme-badge-cat-bg: #0f172a !important;
+    --theme-reg-pill-border: #000000 !important;
+    --theme-reg-pill-label: #525252 !important;
+    --theme-badge-cat-bg: #000000 !important;
     --theme-badge-cat-text: #ffffff !important;
   }
 
   html, body {
     background: #ffffff !important;
     background-image: none !important;
+    color: #000000 !important;
     margin: 0 !important;
     padding: 0 !important;
     font-size: 7.5pt !important;
@@ -267,6 +281,7 @@ body.print-mode .print-view-container {
     gap: 5mm !important;
     box-shadow: none !important;
     border: none !important;
+    background: #ffffff !important;
     page-break-after: always !important;
     break-after: page !important;
   }
@@ -278,7 +293,27 @@ body.print-mode .print-view-container {
   .a4-sheet-preview .card-face {
     height: 200mm !important;
     padding: 4mm 5mm !important;
-    border: 1px solid #cbd5e1 !important;
+    border: 1px solid #000000 !important;
+    border-radius: 0 !important;
+    background: #ffffff !important;
+    color: #000000 !important;
     overflow: hidden !important;
+  }
+
+  .a4-sheet-preview .notes-box {
+    background: #ffffff !important;
+    border: 1px dashed #000000 !important;
+    color: #000000 !important;
+  }
+
+  .a4-sheet-preview .notes-line {
+    border-bottom: 1px dashed #cbd5e1 !important;
+  }
+
+  .a4-sheet-preview .twelfths-card,
+  .a4-sheet-preview .terminal-tackle-card {
+    background: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #000000 !important;
   }
 }

@@ -386,6 +386,84 @@ assert(
   'Police "Basis Grotesque Pro Medium" chargée et validée dans document.fonts'
 );
 
+console.log('\n--- AXE 10 : VÉRIFICATION DU MODE PLANCHES A4 (11 THÈMES × JOUR / NUIT) ---');
+await cdp.evaluate('document.querySelector(\'.mode-btn[data-mode="print"]\').click()');
+await new Promise(r => setTimeout(r, 120));
+
+for (const th of themes) {
+  // Test Mode Jour
+  await cdp.evaluate(`
+    (() => {
+      document.querySelector('.theme-opt-btn[data-theme-val="${th}"]').click();
+      document.querySelector('.mode-switch-btn[data-mode-val="light"]').click();
+      return true;
+    })()
+  `);
+  await new Promise(r => setTimeout(r, 60));
+
+  const lightStyles = await cdp.evaluate(`
+    (() => {
+      const card = document.querySelector('.a4-sheet-preview .card-face');
+      const title = document.querySelector('.a4-sheet-preview .species-title');
+      const sheet = document.querySelector('.a4-sheet-preview');
+      return {
+        cardBg: getComputedStyle(card).backgroundColor,
+        textColor: getComputedStyle(card).color,
+        titleColor: getComputedStyle(title).color,
+        sheetBg: getComputedStyle(sheet).backgroundColor
+      };
+    })()
+  `);
+
+  const isLightValid = await cdp.evaluate(`
+    (() => {
+      const parseRgb = str => (str.match(/\\d+/g) || []).map(Number);
+      const lum = rgb => (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255;
+      const cardLum = lum(parseRgb('${lightStyles.cardBg}'));
+      const textLum = lum(parseRgb('${lightStyles.textColor}'));
+      return cardLum > 0.6 && textLum < 0.4 && cardLum > textLum;
+    })()
+  `);
+  assert(isLightValid, `Mode A4 / '${th}' (Jour) : Lisibilité et contraste validés (carte: ${lightStyles.cardBg}, texte: ${lightStyles.textColor})`);
+
+  // Test Mode Nuit
+  await cdp.evaluate(`
+    (() => {
+      document.querySelector('.mode-switch-btn[data-mode-val="dark"]').click();
+      return true;
+    })()
+  `);
+  await new Promise(r => setTimeout(r, 60));
+
+  const darkStyles = await cdp.evaluate(`
+    (() => {
+      const card = document.querySelector('.a4-sheet-preview .card-face');
+      const title = document.querySelector('.a4-sheet-preview .species-title');
+      const sheet = document.querySelector('.a4-sheet-preview');
+      return {
+        cardBg: getComputedStyle(card).backgroundColor,
+        textColor: getComputedStyle(card).color,
+        titleColor: getComputedStyle(title).color,
+        sheetBg: getComputedStyle(sheet).backgroundColor
+      };
+    })()
+  `);
+
+  const isDarkValid = await cdp.evaluate(`
+    (() => {
+      const parseRgb = str => (str.match(/\\d+/g) || []).map(Number);
+      const lum = rgb => (0.299 * rgb[0] + 0.587 * rgb[1] + 0.114 * rgb[2]) / 255;
+      const cardLum = lum(parseRgb('${darkStyles.cardBg}'));
+      const textLum = lum(parseRgb('${darkStyles.textColor}'));
+      return cardLum < 0.35 && textLum > 0.65 && textLum > cardLum;
+    })()
+  `);
+  assert(isDarkValid, `Mode A4 / '${th}' (Nuit) : Lisibilité nocturne validée (carte: ${darkStyles.cardBg}, texte: ${darkStyles.textColor})`);
+}
+
+// Rétablir le mode Déplié
+await cdp.evaluate('document.querySelector(\'.mode-btn[data-mode="duo"]\').click()');
+
 console.log(`\n============================================================`);
 console.log(`BILAN DEVTOOLS : ${passedTests}/${totalTests} tests réussis`);
 console.log(`============================================================\n`);
