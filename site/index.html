@@ -65,8 +65,8 @@
         <!-- SÉLECTEUR DE THÈME DYNAMIQUE (3 UNIVERS × JOUR/NUIT) -->
         <div class="theme-picker-wrap">
           <button id="btn-theme-trigger" class="theme-trigger-btn" aria-haspopup="dialog" aria-expanded="false" aria-label="Choisir l'univers de couleur et le mode Jour/Nuit">
-            <span class="theme-trigger-dot" id="theme-trigger-dot"></span>
-            <span class="theme-trigger-label" id="theme-trigger-label">Archief</span>
+            <span class="theme-trigger-dot" id="theme-trigger-dot" style="background-color: #334155;"></span>
+            <span class="theme-trigger-label" id="theme-trigger-label">Acier</span>
             <span class="theme-trigger-mode-icon" id="theme-trigger-mode-icon" aria-hidden="true">
               <svg class="ui-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
             </span>
@@ -80,7 +80,7 @@
             <div class="theme-section">
               <span class="theme-section-label">Éditions Risographe (Littoral)</span>
               <div class="theme-universes-grid" role="radiogroup" aria-label="Éditions Risographe Littoral">
-                <button type="button" class="theme-opt-btn active" data-theme-val="archief" role="radio" aria-checked="true">
+                <button type="button" class="theme-opt-btn" data-theme-val="archief" role="radio" aria-checked="false">
                   <span class="theme-opt-swatches">
                     <span class="theme-swatch" style="background: #000000;"></span>
                     <span class="theme-swatch" style="background: #ffffff; border: 1px solid #737373;"></span>
@@ -205,7 +205,7 @@
                   </span>
                 </button>
 
-                <button type="button" class="theme-opt-btn" data-theme-val="staal" role="radio" aria-checked="false">
+                <button type="button" class="theme-opt-btn active" data-theme-val="staal" role="radio" aria-checked="true">
                   <span class="theme-opt-swatches">
                     <span class="theme-swatch" style="background: #334155;"></span>
                     <span class="theme-swatch" style="background: #94a3b8;"></span>

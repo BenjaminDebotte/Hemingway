@@ -215,6 +215,12 @@ assert(triggerExpandedInit === 'false', `btn-theme-trigger a aria-expanded="fals
 const popoverHiddenInit = await cdp.evaluate('document.getElementById("theme-popover").hasAttribute("hidden")');
 assert(popoverHiddenInit === true, `theme-popover est masqué par défaut`);
 
+const initialTheme = await cdp.evaluate('document.documentElement.getAttribute("data-theme")');
+assert(initialTheme === 'staal', `Thème par défaut initial appliqué au chargement: '${initialTheme}' (attendu: 'staal')`);
+
+const initialLabel = await cdp.evaluate('document.getElementById("theme-trigger-label").textContent.trim()');
+assert(initialLabel === 'Acier', `Label initial du déclencheur: '${initialLabel}' (attendu: 'Acier')`);
+
 // Clic sur le déclencheur
 await cdp.evaluate('document.getElementById("btn-theme-trigger").click()');
 const triggerExpandedAfter = await cdp.evaluate('document.getElementById("btn-theme-trigger").getAttribute("aria-expanded")');

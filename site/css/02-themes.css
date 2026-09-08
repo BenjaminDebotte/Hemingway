@@ -15,8 +15,7 @@
 html[data-theme="archief"][data-mode="light"],
 html[data-theme="deschool"][data-mode="light"],
 html[data-theme="archief"]:not([data-mode="dark"]),
-html[data-theme="deschool"]:not([data-mode="dark"]),
-:root:not([data-theme]):not([data-mode="dark"]) {
+html[data-theme="deschool"]:not([data-mode="dark"]) {
   --theme-bg: #f9f6ef;
   --theme-bg-pattern-dot: rgb(0 0 0 / 0.05);
   --theme-header-bg: #000000;
@@ -97,8 +96,7 @@ html[data-theme="deschool"]:not([data-mode="dark"]),
 
 /* 0B. Archief - Mode Nuit (Club Zwart Pure Black & White) */
 html[data-theme="archief"][data-mode="dark"],
-html[data-theme="deschool"][data-mode="dark"],
-html[data-mode="dark"]:not([data-theme]) {
+html[data-theme="deschool"][data-mode="dark"] {
   --theme-bg: #000000;
   --theme-bg-pattern-dot: rgb(255 255 255 / 0.04);
   --theme-header-bg: #000000;
@@ -1675,7 +1673,8 @@ html[data-theme="asfalt"][data-mode="dark"] {
 
 /* 10A. Staal - Mode Jour (Papier Acier Froid & Encre Gris Fer #334155) */
 html[data-theme="staal"][data-mode="light"],
-html[data-theme="staal"]:not([data-mode="dark"]) {
+html[data-theme="staal"]:not([data-mode="dark"]),
+:root:not([data-theme]):not([data-mode="dark"]) {
   --theme-bg: #e8ecf0;
   --theme-bg-pattern-dot: rgb(51 65 85 / 0.05);
   --theme-header-bg: #000000;
@@ -1755,7 +1754,8 @@ html[data-theme="staal"]:not([data-mode="dark"]) {
 }
 
 /* 10B. Staal - Mode Nuit (Acier Sombre & Lame Métallique #94a3b8) */
-html[data-theme="staal"][data-mode="dark"] {
+html[data-theme="staal"][data-mode="dark"],
+html[data-mode="dark"]:not([data-theme]) {
   --theme-bg: #07090c;
   --theme-bg-pattern-dot: rgb(148 163 184 / 0.04);
   --theme-header-bg: #000000;

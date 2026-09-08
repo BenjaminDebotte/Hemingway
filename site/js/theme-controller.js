@@ -73,12 +73,22 @@ export const MODE_ICONS = {
   dark: `<svg class="ui-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`
 };
 
-export let currentThemeUniverse = 'archief';
+export let currentThemeUniverse = 'staal';
 export let currentThemeMode = 'light';
 
 export function initThemeController() {
   let savedTheme = localStorage.getItem(STORAGE_KEY_THEME);
   const savedMode = localStorage.getItem(STORAGE_KEY_MODE);
+
+  // Initialisation par défaut sur Staal
+  const SEEN_STAAL_KEY = 'peche-seen-staal-default-v1';
+  if (!localStorage.getItem(SEEN_STAAL_KEY)) {
+    try {
+      localStorage.setItem(SEEN_STAAL_KEY, '1');
+      localStorage.setItem(STORAGE_KEY_THEME, 'staal');
+    } catch (e) {}
+    savedTheme = 'staal';
+  }
 
   // Migration de l'ancien token 'deschool' vers 'archief'
   if (savedTheme === 'deschool') {
@@ -96,7 +106,7 @@ export function initThemeController() {
   if (savedTheme && THEME_DEFINITIONS[savedTheme]) {
     currentThemeUniverse = savedTheme;
   } else {
-    currentThemeUniverse = 'archief';
+    currentThemeUniverse = 'staal';
   }
 
   if (savedMode === 'light' || savedMode === 'dark') {
@@ -190,7 +200,7 @@ export function applyTheme(theme, mode, persist = true) {
   const dotEl = document.getElementById('theme-trigger-dot');
   const modeIconEl = document.getElementById('theme-trigger-mode-icon');
 
-  const themeMeta = THEME_DEFINITIONS[theme] || THEME_DEFINITIONS.archief;
+  const themeMeta = THEME_DEFINITIONS[theme] || THEME_DEFINITIONS.staal;
 
   if (labelEl) {
     labelEl.textContent = themeMeta.label;
