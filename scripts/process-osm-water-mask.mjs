@@ -256,7 +256,19 @@ const htmlMer = `
         html: '${SVG.pier} Jetée Luc',
         pos: [49.3183, -0.3473],
         cls: 'badge-pier', dotCls: 'pin-dot-pier',
-        style: 'transform: translate(7px, -50%);'
+        style: 'transform: translate(-100%, -50%); margin-left: -7px;'
+      },
+      {
+        html: '${SVG.reef} Lion-sur-Mer',
+        pos: [49.3030, -0.3160],
+        cls: 'badge-mer',
+        style: 'transform: translate(-100%, 4px); margin-left: -6px;'
+      },
+      {
+        html: '${SVG.sandbank} Hermanville',
+        pos: [49.2940, -0.2980],
+        cls: 'badge-mer',
+        style: 'transform: translate(-50%, 8px);'
       },
       {
         html: '${SVG.wreck} Courbet 1944',
@@ -267,7 +279,7 @@ const htmlMer = `
       {
         html: '${SVG.slipway} Ouistreham',
         pos: [49.2880, -0.2520],
-        style: 'transform: translate(-100%, -50%); margin-left: -7px;'
+        style: 'transform: translate(7px, -50%);'
       }
     ];
 
@@ -368,9 +380,11 @@ const htmlRegional = `
       { html: '${SVG.permit} Caen', pos: [49.1838, -0.3561], style: 'transform: translate(6px, -50%);' },
       { html: '${SVG.bridge} Calix', pos: [49.1866, -0.3293], style: 'transform: translate(6px, 2px);' },
       { html: '${SVG.bridge} Pegasus', pos: [49.2420, -0.2745], style: 'transform: translate(6px, -50%);' },
-      { html: '${SVG.locks} Ouistreham', pos: [49.2803, -0.2491], style: 'transform: translate(-100%, -50%); margin-left: -6px;' },
+      { html: '${SVG.locks} Ouistreham', pos: [49.2803, -0.2491], style: 'transform: translate(6px, -50%);' },
+      { html: '${SVG.sandbank} Hermanville', pos: [49.2940, -0.2980], style: 'transform: translate(-100%, 6px); margin-left: -4px;' },
+      { html: '${SVG.reef} Lion', pos: [49.3030, -0.3160], style: 'transform: translate(6px, -50%);' },
+      { html: '${SVG.pier} Luc', pos: [49.3183, -0.3473], style: 'transform: translate(-100%, -50%); margin-left: -6px;' },
       { html: '${SVG.reef} Roches', pos: [49.3580, -0.3600], style: 'transform: translate(-50%, -100%); margin-top: -6px;' },
-      { html: '${SVG.pier} Luc', pos: [49.3183, -0.3473], style: 'transform: translate(6px, -50%);' },
       { html: '${SVG.slipway} Courseulles', pos: [49.3360, -0.4570], style: 'transform: translate(6px, -50%);' }
     ];
 
