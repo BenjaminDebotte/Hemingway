@@ -183,11 +183,54 @@ function renderApp() {
 
   if (currentViewMode === 'duo') {
     renderDuoView(speciesList);
+    setupScrollObserver();
   } else if (currentViewMode === 'flip') {
     renderFlipView(speciesList);
+    setupScrollObserver();
   } else {
     renderPrintView(speciesList);
   }
+}
+
+// --------------------------------------------------------------------------
+// CHORÉGRAPHIE CINÉMATIQUE & INTERSECTION OBSERVER
+// --------------------------------------------------------------------------
+
+function setupScrollObserver() {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.duo-card-shell, .interactive-card').forEach(el => {
+      el.classList.add('is-revealed');
+    });
+    return;
+  }
+
+  const cards = document.querySelectorAll('.duo-card-shell, .interactive-card');
+  if (!cards.length) return;
+
+  if (window._cardObserver) {
+    window._cardObserver.disconnect();
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    cards.forEach(el => el.classList.add('is-revealed'));
+    return;
+  }
+
+  window._cardObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.04,
+    rootMargin: '20px 0px -20px 0px'
+  });
+
+  cards.forEach(card => {
+    window._cardObserver.observe(card);
+  });
 }
 
 // --------------------------------------------------------------------------
@@ -210,7 +253,7 @@ function renderDuoView(speciesList) {
 
   container.className = 'duo-cards-container';
   container.innerHTML = speciesList.map((fish, index) => `
-    <article class="duo-card-shell" id="duo-${fish.id}" style="animation-delay: ${Math.min(index * 40, 400)}ms;">
+    <article class="duo-card-shell" id="duo-${fish.id}" style="transition-delay: ${Math.min(index * 35, 240)}ms;">
       <div class="duo-card">
         <div class="duo-card-column col-recto">
           ${renderCardFront(fish)}
@@ -243,7 +286,7 @@ function renderFlipView(speciesList) {
 
   container.className = 'cards-grid';
   container.innerHTML = speciesList.map((fish, index) => `
-    <article class="interactive-card" id="card-${fish.id}" style="animation-delay: ${Math.min(index * 40, 400)}ms;">
+    <article class="interactive-card" id="card-${fish.id}" style="transition-delay: ${Math.min(index * 35, 240)}ms;">
       <button type="button" class="card-flip-trigger" onclick="toggleCardFlip('${fish.id}')" title="Tourner la fiche" aria-label="Tourner la fiche technique de ${fish.identity.name}">
         <span class="flip-icon-wrap" aria-hidden="true">${uiIcon('rotate')}</span>
       </button>
