@@ -833,4 +833,112 @@ body.print-mode .print-view-container {
   .a4-sheet-preview .mini-map-osm-img {
     filter: none !important;
   }
+
+  .a4-sheet-preview .map-pins-layer,
+  .a4-sheet-preview .map-pin-tooltip,
+  .a4-sheet-preview .btn-copy-coords,
+  .a4-sheet-preview .btn-nav-coords,
+  .a4-sheet-preview .waypoints-badge-wgs84 {
+    display: none !important;
+  }
+
+  .a4-sheet-preview .waypoints-block {
+    background: #f8fafc !important;
+    border: 1px solid #cbd5e1 !important;
+  }
+
+  .a4-sheet-preview .waypoint-card {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+}
+
+/* ==========================================================================
+   WAYPOINTS & REPÈRES GPS (CALIBRATION A5 SCREEN PROOF & PRINT)
+   ========================================================================== */
+
+.a4-sheet-preview .map-pins-layer,
+.a4-sheet-preview .map-pin-tooltip,
+.a4-sheet-preview .btn-copy-coords,
+.a4-sheet-preview .btn-nav-coords,
+.a4-sheet-preview .waypoints-badge-wgs84 {
+  display: none !important;
+}
+
+.a4-sheet-preview .waypoints-block {
+  padding: 0.35mm 0.8mm !important;
+  margin: 0.3mm 0 !important;
+  gap: 0.2mm !important;
+  border-radius: 0 !important;
+  border: 1px solid var(--theme-surface-subtle-border) !important;
+  background: var(--theme-surface-subtle) !important;
+  flex-shrink: 0 !important;
+}
+
+.a4-sheet-preview .waypoints-header-row {
+  margin-bottom: 0.1mm !important;
+}
+
+.a4-sheet-preview .waypoints-title {
+  font-size: 5.2pt !important;
+  line-height: 1.1 !important;
+}
+
+.a4-sheet-preview .waypoints-title .ui-icon {
+  width: 1.8mm !important;
+  height: 1.8mm !important;
+}
+
+.a4-sheet-preview .waypoints-cards-list {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 0.6mm !important;
+}
+
+.a4-sheet-preview .waypoint-card {
+  padding: 0.2mm 0.5mm !important;
+  border: 1px solid var(--theme-surface-subtle-border) !important;
+  border-radius: 0 !important;
+  background: var(--theme-card-inner-bg) !important;
+  min-width: 0 !important;
+  gap: 0.2mm !important;
+}
+
+.a4-sheet-preview .waypoint-icon-badge {
+  display: none !important;
+}
+
+.a4-sheet-preview .waypoint-name-row {
+  gap: 0.25mm !important;
+}
+
+.a4-sheet-preview .waypoint-name {
+  font-size: 5.4pt !important;
+  line-height: 1.05 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.a4-sheet-preview .waypoint-depth-pill {
+  font-size: 4.4pt !important;
+  padding: 0.05mm 0.3mm !important;
+  line-height: 1 !important;
+}
+
+.a4-sheet-preview .waypoint-coords-wrap {
+  gap: 0.3mm !important;
+}
+
+.a4-sheet-preview .coord-prefix {
+  font-size: 4.4pt !important;
+}
+
+.a4-sheet-preview .coord-nautical .coord-val {
+  font-size: 5.1pt !important;
+  letter-spacing: -0.02em !important;
+}
+
+.a4-sheet-preview .coord-decimal {
+  display: none !important;
 }

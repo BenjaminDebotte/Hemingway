@@ -575,7 +575,9 @@
   border: 1px solid var(--theme-surface-subtle-border);
   border-radius: var(--radius-sm);
   padding: 0.35rem 0.45rem;
-  overflow: hidden;
+  overflow: visible;
+  position: relative;
+  z-index: 5;
 }
 
 .regional-mini-map {
@@ -634,8 +636,9 @@
   height: 100%;
   min-height: 0;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   border-radius: var(--radius-sm);
+  position: relative;
 }
 
 .mini-map-osm-img,

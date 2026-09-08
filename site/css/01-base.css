@@ -295,6 +295,55 @@ a:hover,
 .twelfths-title .ui-icon { width: 14px; height: 14px; }
 .cal-label .ui-icon { width: 13px; height: 13px; vertical-align: -0.12em; }
 
+/* ==========================================================================
+   GLOBAL TOAST NOTIFICATIONS (GPS COPIÉ & NOTIFICATIONS)
+   ========================================================================== */
+
+.global-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--theme-surface-subtle);
+  color: var(--theme-text-title);
+  border: 1.5px solid var(--theme-text-title);
+  border-radius: var(--radius-full, 9999px);
+  padding: 0.45rem 1rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.2s;
+  max-width: 90vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.global-toast.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.global-toast .toast-icon {
+  display: inline-flex;
+  color: var(--theme-canal-accent);
+}
+
+.global-toast .toast-icon .ui-icon {
+  width: 14px;
+  height: 14px;
+}
+
 
 /* ==========================================================================
    ACCESSIBILITY & MOTION RESTRAINT (Principles 10 & 15)

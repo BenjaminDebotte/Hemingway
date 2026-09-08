@@ -2,9 +2,88 @@
 // CARTOGRAPHIE HALIEUTIQUE OFFICIELLE OPENSTREETMAP (OSM)
 // ==========================================================================
 // Cartes réelles authentiques issues du cadastre cartographique OpenStreetMap
-// Intégration haute-densité et haute-résolution pour consultation écran et impression A4
+// Repères interactifs vectoriels WGS84 avec infobulles de coordonnées complètes
 
 import { uiIcon } from './icons.js';
+import { getSpotsForMap } from './spots-data.js';
+
+/**
+ * Génère la couche de repères interactifs avec coordonnées WGS84 au survol
+ */
+function renderPinsLayer(mapType) {
+  const spots = getSpotsForMap(mapType);
+  if (!spots || !spots.length) return '';
+
+  return `
+    <div class="map-pins-layer" aria-label="Repères GPS interactifs">
+      ${spots.map(spot => {
+        const top = spot.mapPos.top;
+        const left = spot.mapPos.left;
+        const isTop = top < 35;
+        const isRight = left > 65;
+        const isLeft = left < 35;
+        const alignClasses = [
+          isTop ? 'align-down' : 'align-up',
+          isRight ? 'align-left' : (isLeft ? 'align-right' : 'align-center')
+        ].join(' ');
+
+        return `
+          <div
+            class="map-interactive-pin ${alignClasses} pin-zone-${spot.zone}"
+            style="left: ${left}%; top: ${top}%;"
+            data-spot-id="${spot.id}"
+            tabindex="0"
+            role="button"
+            aria-label="${spot.name} - ${spot.nautical}"
+          >
+            <div class="pin-beacon">
+              <span class="pin-dot"></span>
+              <span class="pin-pulse"></span>
+            </div>
+            <div class="map-pin-tooltip" role="tooltip">
+              <div class="tooltip-header">
+                <span class="tooltip-title">${uiIcon(spot.icon)} ${spot.shortName}</span>
+                <span class="tooltip-depth">${spot.depth}</span>
+              </div>
+              <p class="tooltip-tip">${spot.tip}</p>
+              <div class="tooltip-coords-box">
+                <div class="tooltip-coord-row">
+                  <span class="coord-tag">Marin :</span>
+                  <strong class="coord-val val-nautical">${spot.nautical}</strong>
+                </div>
+                <div class="tooltip-coord-row">
+                  <span class="coord-tag">Décimal :</span>
+                  <span class="coord-val val-decimal">${spot.decimal}</span>
+                </div>
+              </div>
+              <div class="tooltip-actions">
+                <button
+                  type="button"
+                  class="tooltip-btn-copy"
+                  data-nautical="${spot.nautical}"
+                  data-decimal="${spot.decimal}"
+                  data-name="${spot.shortName}"
+                  title="Copier les coordonnées dans le presse-papier"
+                >
+                  ${uiIcon('copy')} <span>Copier GPS</span>
+                </button>
+                <a
+                  href="${spot.mapsUrl}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="tooltip-btn-nav"
+                  title="Ouvrir dans Google Maps"
+                >
+                  ${uiIcon('compass')} <span>Maps ↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+  `;
+}
 
 /**
  * Carte Dédiée : Canal de Caen à la mer (14 km)
@@ -25,12 +104,13 @@ export function renderCanalDedicatedMap(fish) {
           title="Ouvrir le Canal de Caen sur OpenStreetMap"
         >OSM ↗</a>
       </div>
-      <div class="map-img-wrap">
+      <div class="map-img-wrap interactive-map-container" data-map="canal">
         <img
           src="images/maps/canal-caen.png"
           alt="Carte OpenStreetMap du Canal de Caen de Caen à Ouistreham avec postes halieutiques"
           class="halieutic-osm-img"
         />
+        ${renderPinsLayer('canal')}
       </div>
       <div class="map-legend-bar" aria-label="Légende cartographique du Canal">
         <span class="legend-title">Légende :</span>
@@ -56,7 +136,7 @@ export function renderCanalDedicatedMap(fish) {
         </div>
       </div>
       <div class="map-card-footer">
-        <span class="map-footer-tip"><strong>Déclencheur hydro :</strong> Les chasses remontent le canal au rythme de l'onde de marée montante d'Ouistreham.</span>
+        <span class="map-footer-tip"><strong>Déclencheur hydro :</strong> Les chasses remontent le canal au rythme de l'onde de marée montante d'Ouistreham. Survoler un repère pour relever ses coordonnées GPS exactes.</span>
       </div>
     </div>
   `;
@@ -81,12 +161,13 @@ export function renderCoteDeNacreDedicatedMap(fish) {
           title="Ouvrir la Côte de Nacre sur OpenStreetMap"
         >OSM ↗</a>
       </div>
-      <div class="map-img-wrap">
+      <div class="map-img-wrap interactive-map-container" data-map="mer">
         <img
           src="images/maps/cote-de-nacre.png"
           alt="Carte OpenStreetMap de la Côte de Nacre et du Plateau des Roches du Calvados"
           class="halieutic-osm-img"
         />
+        ${renderPinsLayer('mer')}
       </div>
       <div class="map-legend-bar" aria-label="Légende cartographique de la Côte de Nacre">
         <span class="legend-title">Légende :</span>
@@ -111,7 +192,7 @@ export function renderCoteDeNacreDedicatedMap(fish) {
         </div>
       </div>
       <div class="map-card-footer">
-        <span class="map-footer-tip"><strong>Zone des épaves :</strong> Les tombants des Roches et carcasses 1944 créent des caches à congre et lieus record.</span>
+        <span class="map-footer-tip"><strong>Zone des épaves :</strong> Les tombants des Roches et carcasses 1944 créent des caches à congre et lieus record. Survoler un repère pour relever ses coordonnées GPS exactes.</span>
       </div>
     </div>
   `;
@@ -134,12 +215,13 @@ export function renderRegionalMiniMap() {
           title="Ouvrir le secteur Caen - Côte de Nacre sur OpenStreetMap"
         >OSM ↗</a>
       </div>
-      <div class="mini-map-img-wrap">
+      <div class="mini-map-img-wrap interactive-map-container" data-map="reg">
         <img
           src="images/maps/calvados-overview.png"
           alt="Carte OpenStreetMap de situation reliant Caen à la Côte de Nacre"
           class="mini-map-osm-img"
         />
+        ${renderPinsLayer('reg')}
       </div>
       <div class="mini-map-legend-bar" aria-label="Légende vue d'ensemble">
         <span>${uiIcon('permit')} AAPPMA</span>

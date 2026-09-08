@@ -4,6 +4,7 @@
 
 import { initThemeController } from './theme-controller.js';
 import { VIEW_HINTS, renderDuoView, renderFlipView, renderPrintView } from './views.js';
+import { uiIcon } from './icons.js';
 
 let currentFilterCategory = 'all';
 let currentFilterBiotope = 'all';
@@ -18,6 +19,7 @@ export function initApp() {
   setupFilterPills(data);
   setupSearch();
   setupToggles();
+  setupSpotInteractions();
   renderApp();
 }
 
@@ -227,6 +229,94 @@ window.switchCardBiotope = function(e, fishId, tab) {
   if (canalSection) canalSection.classList.toggle('tab-hidden', tab !== 'canal');
   if (bateauSection) bateauSection.classList.toggle('tab-hidden', tab !== 'bateau');
 };
+
+// --------------------------------------------------------------------------
+// INTERACTIONS WAYPOINTS GPS, COPIE & TOAST
+// --------------------------------------------------------------------------
+
+function setupSpotInteractions() {
+  document.addEventListener('click', (e) => {
+    // 1. Clic sur bouton de copie coordonnées
+    const copyBtn = e.target.closest('.btn-copy-coords, .tooltip-btn-copy');
+    if (copyBtn) {
+      e.preventDefault();
+      e.stopPropagation();
+      const nautical = copyBtn.dataset.nautical;
+      const decimal = copyBtn.dataset.decimal;
+      const name = copyBtn.dataset.name || 'Spot';
+      const textToCopy = `${name} : ${nautical} (${decimal})`;
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(textToCopy).catch(() => {
+          fallbackCopyText(textToCopy);
+        });
+      } else {
+        fallbackCopyText(textToCopy);
+      }
+
+      if (navigator.vibrate) navigator.vibrate(40);
+      showToast(`📍 ${name} copié : ${nautical}`);
+
+      const originalHtml = copyBtn.innerHTML;
+      copyBtn.innerHTML = `${uiIcon('check')} <span>Copié !</span>`;
+      copyBtn.classList.add('copied');
+      setTimeout(() => {
+        copyBtn.innerHTML = originalHtml;
+        copyBtn.classList.remove('copied');
+      }, 1800);
+      return;
+    }
+
+    // 2. Clic sur repère de carte interactif (mobile / touch toggle)
+    const pin = e.target.closest('.map-interactive-pin');
+    if (pin) {
+      const wasActive = pin.classList.contains('active-pin');
+      document.querySelectorAll('.map-interactive-pin.active-pin').forEach(p => p.classList.remove('active-pin'));
+      if (!wasActive) {
+        pin.classList.add('active-pin');
+      }
+      return;
+    }
+
+    // 3. Clic en dehors des repères : fermer les infobulles actives
+    document.querySelectorAll('.map-interactive-pin.active-pin').forEach(p => p.classList.remove('active-pin'));
+  });
+}
+
+function fallbackCopyText(text) {
+  const textArea = document.createElement('textarea');
+  textArea.value = text;
+  textArea.style.position = 'fixed';
+  textArea.style.left = '-9999px';
+  document.body.appendChild(textArea);
+  textArea.focus();
+  textArea.select();
+  try {
+    document.execCommand('copy');
+  } catch (err) {
+    console.warn('Impossible de copier dans le presse-papier', err);
+  }
+  document.body.removeChild(textArea);
+}
+
+let toastTimeout = null;
+export function showToast(message, duration = 2600) {
+  let toast = document.getElementById('global-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'global-toast';
+    toast.className = 'global-toast';
+    document.body.appendChild(toast);
+  }
+
+  toast.innerHTML = `<span class="toast-icon">${uiIcon('crosshair')}</span> <span class="toast-msg">${message}</span>`;
+  toast.classList.add('visible');
+
+  if (toastTimeout) clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => {
+    toast.classList.remove('visible');
+  }, duration);
+}
 
 // Initialisation au chargement du DOM
 if (document.readyState === 'loading') {

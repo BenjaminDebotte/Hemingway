@@ -13,6 +13,82 @@ import {
   renderCanalDedicatedMap,
   renderCoteDeNacreDedicatedMap
 } from './geo-maps.js';
+import { getSpotsForFish } from './spots-data.js';
+
+/**
+ * Encart dédié « Repères & Waypoints GPS » sur Face B
+ * Présentation haute-précision au format marin WGS84 (DD° MM.MMM') avec copie décimale
+ */
+export function renderWaypointsBlock(fish, zone = null) {
+  const isDual = fish.canal.present && fish.bateau.present;
+  const maxSpots = isDual ? 2 : 3;
+  const spots = getSpotsForFish(fish, maxSpots, zone);
+  if (!spots.length) return '';
+
+  const zoneLabel = zone === 'canal' ? 'Canal de Caen' : (zone === 'bateau' ? 'Côte de Nacre' : 'Normandie');
+  const zoneIcon = zone === 'canal' ? 'anchor' : (zone === 'bateau' ? 'boat' : 'compass');
+
+  return `
+    <div class="waypoints-block waypoints-${zone || 'mixed'}" aria-label="Waypoints GPS de référence pour ${fish.identity.name}">
+      <div class="waypoints-header-row">
+        <div class="waypoints-title">
+          ${uiIcon(zoneIcon)} <span>Repères & Waypoints GPS • ${zoneLabel}</span>
+        </div>
+        <span class="waypoints-badge-wgs84">WGS84 Marin • Clic pour copier</span>
+      </div>
+      <div class="waypoints-cards-list">
+        ${spots.map(spot => `
+          <div class="waypoint-card" data-spot-id="${spot.id}">
+            <div class="waypoint-meta">
+              <span class="waypoint-icon-badge">${uiIcon(spot.icon)}</span>
+              <div class="waypoint-naming">
+                <div class="waypoint-name-row">
+                  <strong class="waypoint-name">${spot.name}</strong>
+                  <span class="waypoint-depth-pill">${spot.depth}</span>
+                </div>
+                <div class="waypoint-coords-wrap">
+                  <span class="waypoint-coord-item coord-nautical" title="Format marin sondeur traceur WGS84">
+                    <span class="coord-prefix">Marin :</span>
+                    <strong class="coord-val val-nautical">${spot.nautical}</strong>
+                  </span>
+                  <span class="waypoint-coord-item coord-decimal" title="Format décimal Google Maps / smartphone">
+                    <span class="coord-prefix">Décimal :</span>
+                    <span class="coord-val val-decimal">${spot.decimal}</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="waypoint-actions">
+              <button
+                type="button"
+                class="btn-copy-coords"
+                data-nautical="${spot.nautical}"
+                data-decimal="${spot.decimal}"
+                data-name="${spot.shortName}"
+                title="Copier les coordonnées GPS dans le presse-papier"
+                aria-label="Copier les coordonnées de ${spot.name}"
+              >
+                ${uiIcon('copy')}
+                <span class="btn-copy-label">Copier</span>
+              </button>
+              <a
+                href="${spot.mapsUrl}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-nav-coords"
+                title="Ouvrir ${spot.name} sur Google Maps"
+                aria-label="Ouvrir ${spot.name} sur Maps"
+              >
+                ${uiIcon('compass')}
+                <span class="btn-nav-label">Maps ↗</span>
+              </a>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
 
 export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 'all') {
   const isDual = fish.canal.present && fish.bateau.present;
@@ -51,6 +127,7 @@ export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 
           <div class="spot-chip"><span class="spot-tag">Palplanches</span> ${fish.canal.keySpots.palplanches}</div>
           <div class="spot-chip"><span class="spot-tag">Piles/Ponts</span> ${fish.canal.keySpots.pilesDePont}</div>
         </div>
+        ${renderWaypointsBlock(fish, 'canal')}
         ${renderCanalTriggers(fish.canal.triggers.ecluseesOuistreham, fish.canal.triggers.luminositeEtNuit)}
         <ul class="tactics-bullets">
           ${fish.canal.tactics.map(t => `<li>${t}</li>`).join('')}
@@ -71,6 +148,7 @@ export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 
           <div class="spot-chip"><span class="spot-tag">Épaves 1944</span> ${fish.bateau.habitats.epavesDDay}</div>
           <div class="spot-chip"><span class="spot-tag">Bancs/Ridens</span> ${fish.bateau.habitats.bancsDeSableEtRidens}</div>
         </div>
+        ${renderWaypointsBlock(fish, 'bateau')}
         ${renderTideAndWeather(fish.bateau.tideAndCurrent.bestCoefficients, fish.bateau.weatherImpact.favorableWinds)}
         ${renderTwelfthsGauge(fish.bateau.tideAndCurrent.ruleOfTwelfths)}
         <ul class="tactics-bullets">
