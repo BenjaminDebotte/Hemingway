@@ -7,7 +7,21 @@ if (!fs.existsSync('site/images/maps')) {
   fs.mkdirSync('site/images/maps', { recursive: true });
 }
 
-// 1. Template Canal de Caen avec micro-badges à icônes
+// Icônes vectorielles SVG 100% Noir & Blanc
+const SVG = {
+  permit: `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>`,
+  dpm: `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c2.5-3 5-3 7.5 0s5 3 7.5 0"/><path d="M2 17c2.5-3 5-3 7.5 0s5 3 7.5 0"/></svg>`,
+  bridge: `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18h18M4 18v-3c0-3.5 3-6 8-6s8 2.5 8 6v3M8 18v-5M12 18V9M16 18v-5M3 8h18"/></svg>`,
+  quay: `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><line x1="9" y1="4" x2="9" y2="20"/><line x1="15" y1="4" x2="15" y2="20"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="3" y1="15" x2="21" y2="15"/></svg>`,
+  slipway: `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20l20-5"/><path d="M6 14l2.5-1.5h6l3 1.5-1.5 2h-8z"/><line x1="11" y1="7" x2="11" y2="12.5"/></svg>`,
+  locks: `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><line x1="12" y1="4" x2="12" y2="20"/><path d="M7 10l5 2 5-2M7 14l5 2 5-2"/></svg>`,
+  reef: `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 3 3 19 21 19 12 3"/><polygon points="8 13 12 7 16 13 8 13"/></svg>`,
+  sandbank: `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8c3-2 6 2 10 0s7-2 10 0"/><path d="M2 13c3-2 6 2 10 0s7-2 10 0"/><path d="M2 18c3-2 6 2 10 0s7-2 10 0"/></svg>`,
+  wreck: `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="12" y1="7" x2="12" y2="17"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/><line x1="8.5" y1="15.5" x2="15.5" y2="8.5"/></svg>`,
+  pier: `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10h20M6 10v9M12 10v9M18 10v9M2 14h20"/></svg>`
+};
+
+// 1. Template Canal de Caen avec micro-badges vectoriels noir et blanc
 const htmlCanal = `
 <!DOCTYPE html>
 <html>
@@ -50,10 +64,16 @@ const htmlCanal = `
       box-shadow: 0 1px 3px rgba(0,0,0,0.25);
       display: inline-flex;
       align-items: center;
-      gap: 3px;
+      gap: 4px;
       z-index: 5;
     }
-    .spot-icon { font-size: 10.5px; }
+    .spot-badge svg {
+      width: 11px;
+      height: 11px;
+      display: inline-block;
+      vertical-align: -1px;
+      flex-shrink: 0;
+    }
     .spot-km { font-family: monospace; font-size: 8.5px; color: #475569; margin-left: 2px; }
     .badge-dpm { border-color: #0d9488; color: #047857; }
   </style>
@@ -73,41 +93,41 @@ const htmlCanal = `
       maxZoom: 17
     }).addTo(map);
 
-    // Micro-badges à icônes (texte minimal, lisibilité maximale)
+    // Micro-badges vectoriels noir et blanc
     const spots = [
       {
-        html: '<span class=\"spot-icon\">📜</span> Bassin St-Pierre <span class=\"spot-km\">km 0 • AAPPMA</span>',
+        html: '${SVG.permit} Bassin St-Pierre <span class=\"spot-km\">km 0 • AAPPMA</span>',
         pos: [49.1838, -0.3561],
         style: 'transform: translate(-100%, -50%); margin-left: -7px;'
       },
       {
-        html: '<span class=\"spot-icon\">🌊</span> Pont Fonderie <span class=\"spot-km\">Limite DPM</span>',
+        html: '${SVG.dpm} Pont Fonderie <span class=\"spot-km\">Limite DPM</span>',
         pos: [49.1834, -0.3518],
         cls: 'badge-dpm', dotCls: 'pin-dot-dpm',
         style: 'transform: translate(7px, 8px);'
       },
       {
-        html: '<span class=\"spot-icon\">🌉</span> Calix <span class=\"spot-km\">km 2.5</span>',
+        html: '${SVG.bridge} Calix <span class=\"spot-km\">km 2.5</span>',
         pos: [49.1866, -0.3293],
         style: 'transform: translate(7px, -50%);'
       },
       {
-        html: '<span class=\"spot-icon\">🏢</span> Colombelles <span class=\"spot-km\">km 4.5</span>',
+        html: '${SVG.quay} Colombelles <span class=\"spot-km\">km 4.5</span>',
         pos: [49.2085, -0.3090],
         style: 'transform: translate(7px, -50%);'
       },
       {
-        html: '<span class=\"spot-icon\">🚤</span> Cale Blainville <span class=\"spot-km\">km 7.5</span>',
+        html: '${SVG.slipway} Cale Blainville <span class=\"spot-km\">km 7.5</span>',
         pos: [49.2215, -0.3020],
         style: 'transform: translate(7px, -50%);'
       },
       {
-        html: '<span class=\"spot-icon\">🌉</span> Pegasus <span class=\"spot-km\">km 10.5</span>',
+        html: '${SVG.bridge} Pegasus <span class=\"spot-km\">km 10.5</span>',
         pos: [49.2420, -0.2745],
         style: 'transform: translate(7px, -50%);'
       },
       {
-        html: '<span class=\"spot-icon\">⚓</span> Écluses <span class=\"spot-km\">km 14 • Mer</span>',
+        html: '${SVG.locks} Écluses <span class=\"spot-km\">km 14 • Mer</span>',
         pos: [49.2803, -0.2491],
         style: 'transform: translate(-100%, -50%); margin-left: -7px;'
       }
@@ -138,7 +158,7 @@ const htmlCanal = `
 </html>
 `;
 
-// 2. Template Côte de Nacre avec micro-badges à icônes
+// 2. Template Côte de Nacre avec micro-badges vectoriels noir et blanc
 const htmlMer = `
 <!DOCTYPE html>
 <html>
@@ -183,13 +203,19 @@ const htmlMer = `
       box-shadow: 0 1px 3px rgba(0,0,0,0.25);
       display: inline-flex;
       align-items: center;
-      gap: 3px;
+      gap: 4px;
       z-index: 5;
+    }
+    .spot-badge svg {
+      width: 11px;
+      height: 11px;
+      display: inline-block;
+      vertical-align: -1px;
+      flex-shrink: 0;
     }
     .badge-mer { border-color: #0d9488; color: #047857; }
     .badge-wreck { border-color: #b45309; color: #78350f; }
     .badge-pier { border-color: #0284c7; color: #0369a1; }
-    .spot-icon { font-size: 10.5px; }
   </style>
 </head>
 <body>
@@ -207,39 +233,39 @@ const htmlMer = `
       maxZoom: 17
     }).addTo(map);
 
-    // Micro-badges à icônes pour la Côte de Nacre
+    // Micro-badges vectoriels noir et blanc
     const spots = [
       {
-        html: '<span class=\"spot-icon\">🚤</span> Cale Courseulles',
+        html: '${SVG.slipway} Cale Courseulles',
         pos: [49.3360, -0.4570],
         style: 'transform: translate(7px, -50%);'
       },
       {
-        html: '<span class=\"spot-icon\">🪨</span> Roches 6-15m',
+        html: '${SVG.reef} Roches 6-15m',
         pos: [49.3580, -0.3600],
         cls: 'badge-mer',
         style: 'transform: translate(-50%, -100%); margin-top: -6px;'
       },
       {
-        html: '<span class=\"spot-icon\">〰️</span> Ridens',
+        html: '${SVG.sandbank} Ridens',
         pos: [49.3500, -0.4150],
         cls: 'badge-mer',
         style: 'transform: translate(-50%, -100%); margin-top: -6px;'
       },
       {
-        html: '<span class=\"spot-icon\">🎣</span> Jetée Luc',
-        pos: [49.3183, -0.3473], // Jetée des Pêcheurs (pier)
+        html: '${SVG.pier} Jetée Luc',
+        pos: [49.3183, -0.3473],
         cls: 'badge-pier', dotCls: 'pin-dot-pier',
         style: 'transform: translate(7px, -50%);'
       },
       {
-        html: '<span class=\"spot-icon\">⚓</span> Courbet 1944',
-        pos: [49.3250, -0.2800], // Épaves Sword
+        html: '${SVG.wreck} Courbet 1944',
+        pos: [49.3250, -0.2800],
         cls: 'badge-wreck', dotCls: 'pin-dot-wreck',
         style: 'transform: translate(7px, -50%);'
       },
       {
-        html: '<span class=\"spot-icon\">🚤</span> Ouistreham',
+        html: '${SVG.slipway} Ouistreham',
         pos: [49.2880, -0.2520],
         style: 'transform: translate(-100%, -50%); margin-left: -7px;'
       }
@@ -270,7 +296,7 @@ const htmlMer = `
 </html>
 `;
 
-// 3. Template Vue d'ensemble Régionale avec micro-badges à icônes
+// 3. Template Vue d'ensemble Régionale avec micro-badges vectoriels noir et blanc
 const htmlRegional = `
 <!DOCTYPE html>
 <html>
@@ -311,10 +337,16 @@ const htmlRegional = `
       box-shadow: 0 1px 3px rgba(0,0,0,0.25);
       display: inline-flex;
       align-items: center;
-      gap: 2.5px;
+      gap: 3px;
       z-index: 5;
     }
-    .spot-icon { font-size: 9.5px; }
+    .spot-badge svg {
+      width: 10px;
+      height: 10px;
+      display: inline-block;
+      vertical-align: -1px;
+      flex-shrink: 0;
+    }
   </style>
 </head>
 <body>
@@ -333,13 +365,13 @@ const htmlRegional = `
     }).addTo(map);
 
     const spots = [
-      { html: '<span class=\"spot-icon\">📜</span> Caen', pos: [49.1838, -0.3561], style: 'transform: translate(6px, -50%);' },
-      { html: '<span class=\"spot-icon\">🌉</span> Calix', pos: [49.1866, -0.3293], style: 'transform: translate(6px, 2px);' },
-      { html: '<span class=\"spot-icon\">🌉</span> Pegasus', pos: [49.2420, -0.2745], style: 'transform: translate(6px, -50%);' },
-      { html: '<span class=\"spot-icon\">⚓</span> Ouistreham', pos: [49.2803, -0.2491], style: 'transform: translate(-100%, -50%); margin-left: -6px;' },
-      { html: '<span class=\"spot-icon\">🪨</span> Roches', pos: [49.3580, -0.3600], style: 'transform: translate(-50%, -100%); margin-top: -6px;' },
-      { html: '<span class=\"spot-icon\">🎣</span> Luc', pos: [49.3183, -0.3473], style: 'transform: translate(6px, -50%);' },
-      { html: '<span class=\"spot-icon\">🚤</span> Courseulles', pos: [49.3360, -0.4570], style: 'transform: translate(6px, -50%);' }
+      { html: '${SVG.permit} Caen', pos: [49.1838, -0.3561], style: 'transform: translate(6px, -50%);' },
+      { html: '${SVG.bridge} Calix', pos: [49.1866, -0.3293], style: 'transform: translate(6px, 2px);' },
+      { html: '${SVG.bridge} Pegasus', pos: [49.2420, -0.2745], style: 'transform: translate(6px, -50%);' },
+      { html: '${SVG.locks} Ouistreham', pos: [49.2803, -0.2491], style: 'transform: translate(-100%, -50%); margin-left: -6px;' },
+      { html: '${SVG.reef} Roches', pos: [49.3580, -0.3600], style: 'transform: translate(-50%, -100%); margin-top: -6px;' },
+      { html: '${SVG.pier} Luc', pos: [49.3183, -0.3473], style: 'transform: translate(6px, -50%);' },
+      { html: '${SVG.slipway} Courseulles', pos: [49.3360, -0.4570], style: 'transform: translate(6px, -50%);' }
     ];
 
     spots.forEach(s => {
@@ -369,8 +401,8 @@ fs.writeFileSync('site/temp-canal-bw.html', htmlCanal);
 fs.writeFileSync('site/temp-mer-bw.html', htmlMer);
 fs.writeFileSync('site/temp-reg-bw.html', htmlRegional);
 
-const PORT = 3363;
-const CDP_PORT = 9252;
+const PORT = 3364;
+const CDP_PORT = 9253;
 const SITE_DIR = path.resolve('site');
 
 const server = http.createServer((req, res) => {
@@ -480,11 +512,11 @@ async function captureAndProcessMap(pageUrl, width, height, outputFile) {
   });
 
   fs.writeFileSync(outputFile, Buffer.from(processedBase64.result.value, 'base64'));
-  console.log(`Saved icon-first map to ${outputFile}`);
+  console.log(`Saved 100% monochrome vector map to ${outputFile}`);
   ws.close();
 }
 
-console.log('Génération des cartes avec micro-badges et icônes...');
+console.log('Génération des cartes avec micro-badges vectoriels noir et blanc...');
 await captureAndProcessMap('temp-canal-bw.html', 800, 560, 'site/images/maps/canal-caen.png');
 await captureAndProcessMap('temp-mer-bw.html', 800, 500, 'site/images/maps/cote-de-nacre.png');
 await captureAndProcessMap('temp-reg-bw.html', 500, 500, 'site/images/maps/calvados-overview.png');

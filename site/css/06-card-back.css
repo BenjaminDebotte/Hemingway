@@ -737,12 +737,15 @@
 .map-legend-bar .legend-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.2rem;
+  gap: 0.25rem;
   white-space: nowrap;
 }
 
-.map-legend-bar .legend-sym {
-  font-size: 0.62rem;
+.map-legend-bar .ui-icon {
+  width: 0.72rem;
+  height: 0.72rem;
+  color: var(--theme-text-title);
+  flex-shrink: 0;
 }
 
 /* Grille des habitats dupliqués sur la carte */
@@ -777,6 +780,13 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
+}
+
+.map-habitat-tag .ui-icon {
+  width: 0.72rem;
+  height: 0.72rem;
+  color: var(--theme-text-title);
+  flex-shrink: 0;
 }
 
 .map-card-canal .map-habitat-tag {

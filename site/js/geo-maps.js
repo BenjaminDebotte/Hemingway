@@ -28,24 +28,24 @@ export function renderCanalDedicatedMap(fish) {
       </div>
       <div class="map-legend-bar" aria-label="Légende cartographique du Canal">
         <span class="legend-title">Légende :</span>
-        <span class="legend-item"><span class="legend-sym">📜</span> AAPPMA</span>
-        <span class="legend-item"><span class="legend-sym">🌊</span> DPM libre</span>
-        <span class="legend-item"><span class="legend-sym">🌉</span> Pont</span>
-        <span class="legend-item"><span class="legend-sym">🏢</span> Palplanches</span>
-        <span class="legend-item"><span class="legend-sym">🚤</span> Cale slipway</span>
-        <span class="legend-item"><span class="legend-sym">⚓</span> Écluses</span>
+        <span class="legend-item">${uiIcon('permit')} AAPPMA</span>
+        <span class="legend-item">${uiIcon('dpm')} DPM libre</span>
+        <span class="legend-item">${uiIcon('bridge')} Pont</span>
+        <span class="legend-item">${uiIcon('quay')} Palplanches</span>
+        <span class="legend-item">${uiIcon('slipway')} Cale slipway</span>
+        <span class="legend-item">${uiIcon('locks')} Écluses</span>
       </div>
       <div class="map-habitats-grid">
         <div class="map-habitat-chip">
-          <span class="map-habitat-tag">🪨 Enrochements</span>
+          <span class="map-habitat-tag">${uiIcon('reef')} Enrochements</span>
           <span class="map-habitat-val">${fish.canal.keySpots.enrochements}</span>
         </div>
         <div class="map-habitat-chip">
-          <span class="map-habitat-tag">🏢 Palplanches</span>
+          <span class="map-habitat-tag">${uiIcon('quay')} Palplanches</span>
           <span class="map-habitat-val">${fish.canal.keySpots.palplanches}</span>
         </div>
         <div class="map-habitat-chip">
-          <span class="map-habitat-tag">🌉 Piles / Ponts</span>
+          <span class="map-habitat-tag">${uiIcon('bridge')} Piles / Ponts</span>
           <span class="map-habitat-val">${fish.canal.keySpots.pilesDePont}</span>
         </div>
       </div>
@@ -78,23 +78,23 @@ export function renderCoteDeNacreDedicatedMap(fish) {
       </div>
       <div class="map-legend-bar" aria-label="Légende cartographique de la Côte de Nacre">
         <span class="legend-title">Légende :</span>
-        <span class="legend-item"><span class="legend-sym">🪨</span> Roches (6-15m)</span>
-        <span class="legend-item"><span class="legend-sym">〰️</span> Bancs / Ridens</span>
-        <span class="legend-item"><span class="legend-sym">⚓</span> Épave 1944</span>
-        <span class="legend-item"><span class="legend-sym">🎣</span> Jetée pêche</span>
-        <span class="legend-item"><span class="legend-sym">🚤</span> Cale slipway</span>
+        <span class="legend-item">${uiIcon('reef')} Roches (6-15m)</span>
+        <span class="legend-item">${uiIcon('sandbank')} Bancs / Ridens</span>
+        <span class="legend-item">${uiIcon('wreck')} Épave 1944</span>
+        <span class="legend-item">${uiIcon('pier')} Jetée pêche</span>
+        <span class="legend-item">${uiIcon('slipway')} Cale slipway</span>
       </div>
       <div class="map-habitats-grid">
         <div class="map-habitat-chip">
-          <span class="map-habitat-tag">🪨 Roches Calvados</span>
+          <span class="map-habitat-tag">${uiIcon('reef')} Roches Calvados</span>
           <span class="map-habitat-val">${fish.bateau.habitats.rochesDuCalvados}</span>
         </div>
         <div class="map-habitat-chip">
-          <span class="map-habitat-tag">⚓ Épaves 1944</span>
+          <span class="map-habitat-tag">${uiIcon('wreck')} Épaves 1944</span>
           <span class="map-habitat-val">${fish.bateau.habitats.epavesDDay}</span>
         </div>
         <div class="map-habitat-chip">
-          <span class="map-habitat-tag">〰️ Bancs / Ridens</span>
+          <span class="map-habitat-tag">${uiIcon('sandbank')} Bancs / Ridens</span>
           <span class="map-habitat-val">${fish.bateau.habitats.bancsDeSableEtRidens}</span>
         </div>
       </div>
@@ -124,10 +124,10 @@ export function renderRegionalMiniMap() {
         />
       </div>
       <div class="mini-map-legend-bar" aria-label="Légende vue d'ensemble">
-        <span>📜 AAPPMA</span>
-        <span>🌊 DPM</span>
-        <span>🪨 Roches</span>
-        <span>⚓ Épaves</span>
+        <span>${uiIcon('permit')} AAPPMA</span>
+        <span>${uiIcon('dpm')} DPM</span>
+        <span>${uiIcon('reef')} Roches</span>
+        <span>${uiIcon('wreck')} Épaves</span>
       </div>
     </div>
   `;

@@ -301,6 +301,19 @@ body.print-mode .print-view-container {
   flex-shrink: 0;
 }
 
+.a4-sheet-preview .mini-map-legend-bar span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3mm;
+}
+
+.a4-sheet-preview .mini-map-legend-bar .ui-icon {
+  width: 1.8mm;
+  height: 1.8mm;
+  color: var(--theme-text-title);
+  flex-shrink: 0;
+}
+
 .a4-sheet-preview .notes-col-lines {
   display: flex;
   flex-direction: column;
@@ -452,8 +465,15 @@ body.print-mode .print-view-container {
 .a4-sheet-preview .map-legend-bar .legend-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.4mm;
+  gap: 0.5mm;
   white-space: nowrap;
+}
+
+.a4-sheet-preview .map-legend-bar .ui-icon {
+  width: 2.2mm;
+  height: 2.2mm;
+  color: var(--theme-text-title);
+  flex-shrink: 0;
 }
 
 .a4-sheet-preview .map-habitats-grid {
@@ -486,6 +506,13 @@ body.print-mode .print-view-container {
   display: flex;
   align-items: center;
   gap: 0.8mm;
+}
+
+.a4-sheet-preview .map-habitat-tag .ui-icon {
+  width: 2.2mm;
+  height: 2.2mm;
+  color: var(--theme-text-title);
+  flex-shrink: 0;
 }
 
 .a4-sheet-preview .map-habitat-val {

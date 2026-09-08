@@ -654,3 +654,16 @@
   border: 1px solid var(--theme-surface-subtle-border);
   border-radius: 2px;
 }
+
+.mini-map-legend-bar span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.mini-map-legend-bar .ui-icon {
+  width: 0.62rem;
+  height: 0.62rem;
+  color: var(--theme-text-title);
+  flex-shrink: 0;
+}
