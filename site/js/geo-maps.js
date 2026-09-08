@@ -26,6 +26,20 @@ export function renderCanalDedicatedMap(fish) {
           class="halieutic-osm-img"
         />
       </div>
+      <div class="map-habitats-grid">
+        <div class="map-habitat-chip">
+          <span class="map-habitat-tag">🪨 Enrochements</span>
+          <span class="map-habitat-val">${fish.canal.keySpots.enrochements}</span>
+        </div>
+        <div class="map-habitat-chip">
+          <span class="map-habitat-tag">🏢 Palplanches</span>
+          <span class="map-habitat-val">${fish.canal.keySpots.palplanches}</span>
+        </div>
+        <div class="map-habitat-chip">
+          <span class="map-habitat-tag">🌉 Piles / Ponts</span>
+          <span class="map-habitat-val">${fish.canal.keySpots.pilesDePont}</span>
+        </div>
+      </div>
       <div class="map-card-footer">
         <span class="map-footer-tip"><strong>Déclencheur hydro :</strong> Les chasses remontent le canal au rythme de l'onde de marée montante d'Ouistreham.</span>
       </div>
@@ -52,6 +66,20 @@ export function renderCoteDeNacreDedicatedMap(fish) {
           alt="Carte OpenStreetMap de la Côte de Nacre et du Plateau des Roches du Calvados"
           class="halieutic-osm-img"
         />
+      </div>
+      <div class="map-habitats-grid">
+        <div class="map-habitat-chip">
+          <span class="map-habitat-tag">🪨 Roches Calvados</span>
+          <span class="map-habitat-val">${fish.bateau.habitats.rochesDuCalvados}</span>
+        </div>
+        <div class="map-habitat-chip">
+          <span class="map-habitat-tag">⚓ Épaves 1944</span>
+          <span class="map-habitat-val">${fish.bateau.habitats.epavesDDay}</span>
+        </div>
+        <div class="map-habitat-chip">
+          <span class="map-habitat-tag">〰️ Bancs / Ridens</span>
+          <span class="map-habitat-val">${fish.bateau.habitats.bancsDeSableEtRidens}</span>
+        </div>
       </div>
       <div class="map-card-footer">
         <span class="map-footer-tip"><strong>Zone des épaves :</strong> Les tombants des Roches et carcasses 1944 créent des caches à congre et lieus record.</span>

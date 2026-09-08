@@ -406,6 +406,43 @@ body.print-mode .print-view-container {
   display: block;
 }
 
+.a4-sheet-preview .map-habitats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1mm;
+  margin-top: 0.8mm;
+  margin-bottom: 0.5mm;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.a4-sheet-preview .map-habitat-chip {
+  padding: 0.7mm 1.1mm;
+  border: 1px solid var(--theme-surface-subtle-border);
+  background: var(--theme-surface-subtle);
+  border-radius: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+.a4-sheet-preview .map-habitat-tag {
+  font-size: 5.2pt;
+  font-weight: 800;
+  margin-bottom: 0.3mm;
+  display: flex;
+  align-items: center;
+  gap: 0.8mm;
+}
+
+.a4-sheet-preview .map-habitat-val {
+  font-size: 5.6pt;
+  line-height: 1.15;
+}
+
 .a4-sheet-preview .map-card-footer {
   margin-top: 0.6mm;
   padding-top: 0.5mm;

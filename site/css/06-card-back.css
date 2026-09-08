@@ -709,6 +709,54 @@
   color: var(--theme-text-muted);
 }
 
+/* Grille des habitats dupliqués sur la carte */
+.map-habitats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.2rem;
+  width: 100%;
+}
+
+.map-habitat-chip {
+  background: var(--theme-surface-subtle);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: var(--radius-sm);
+  padding: 0.28rem 0.45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 0;
+}
+
+.map-habitat-tag {
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--theme-text-title);
+  margin-bottom: 0.12rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.map-card-canal .map-habitat-tag {
+  color: var(--theme-canal-accent);
+}
+
+.map-card-mer .map-habitat-tag {
+  color: var(--theme-bateau-accent);
+}
+
+.map-habitat-val {
+  font-size: 0.68rem;
+  line-height: 1.25;
+  color: var(--theme-text-main);
+}
+
 .map-label-main {
   font-family: var(--font-sans);
   font-size: 8px;
