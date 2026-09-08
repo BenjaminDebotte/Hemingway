@@ -1,0 +1,23 @@
+{
+  "name": "peche-fiches-techniques-normandie",
+  "version": "1.0.0",
+  "description": "Générateur et viewer de fiches techniques halieutiques pour le littoral normand (Canal de Caen à la mer & Côte de Nacre en bateau)",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate-species.mjs",
+    "build": "node scripts/build-site.mjs",
+    "start": "node scripts/serve.mjs",
+    "dev": "node scripts/serve.mjs"
+  },
+  "keywords": [
+    "peche",
+    "normandie",
+    "calvados",
+    "caen",
+    "ouistreham",
+    "cote-de-nacre",
+    "fiches-techniques"
+  ],
+  "author": "Pêche Normandie",
+  "license": "MIT"
+}

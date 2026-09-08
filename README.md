@@ -160,6 +160,26 @@ Toutes les espèces sont indexées dans `data/species-index.json`, garantissant 
 
 ---
 
+## 💻 Utilisation & Commandes
+
+Le projet fonctionne sans dépendances lourdes grâce à Node.js natif :
+
+```bash
+# Valider l'intégrité de la base de données (schéma, index et densité texte)
+npm run validate
+
+# Compiler et assembler les 32 fiches dans l'application web
+npm run build
+
+# Démarrer le serveur local de visualisation et d'impression
+npm start
+# ➡️ Accédez à l'application sur : http://localhost:3000
+```
+
+> **Astuce :** Vous pouvez également ouvrir directement `site/index.html` dans votre navigateur (Chrome, Edge, Firefox) sans aucun serveur : le fichier `site/data.js` fonctionne de manière 100 % autonome sans blocage CORS.
+
+---
+
 ## 🧪 Validation Automatisée
 
 Le projet intègre un outil d'assurance qualité scripté en Node.js :
@@ -195,10 +215,11 @@ node scripts/validate-species.mjs
   - [x] Création du schéma JSON strict (`data/species.schema.json`).
   - [x] Rédaction et validation des 32 fiches techniques complètes (`data/species/*.json`).
   - [x] Création du validateur automatisé (`scripts/validate-species.mjs`).
-- [ ] **Phase 2 : Design & Templating HTML/CSS**
-  - [ ] Conception du composant visuel de fiche technique (style nautique moderne / glassmorphism épuré).
-  - [ ] Intégration des jauges d'activité, thermomètre mensuel et badges réglementaires.
-  - [ ] Feuille de style d'impression `@media print` calibrée au millimètre pour A4 paysage.
-- [ ] **Phase 3 : Dashboard & Générateur Web**
-  - [ ] Interface de navigation avec filtres dynamiques (Milieu, Famille, Saison).
-  - [ ] Moteur d'export PDF par lot ou à l'unité.
+- [x] **Phase 2 : Design & Générateur HTML/CSS**
+  - [x] Conception du composant visuel de fiche technique (style moderne marine / cartes A5).
+  - [x] Répartition Recto (Identité/Réglementation) / Verso (Terrain/Tactiques).
+  - [x] Intégration des jauges d'activité mensuelle thermique (12 mois) et badges réglementaires.
+  - [x] Feuille de style d'impression `@media print` calibrée au millimètre pour A4 paysage duplex.
+  - [x] Moteur d'imposition automatique par paire avec inversion horizontale au verso.
+  - [x] Viewer interactif avec retournement 3D (`🔄 Tourner la fiche`), recherche instantanée et filtres.
+  - [x] Script de compilation (`scripts/build-site.mjs`) et serveur local (`scripts/serve.mjs`).

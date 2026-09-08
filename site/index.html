@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiches Techniques Pêche — Littoral Normand</title>
+  <meta name="description" content="Guide technique et fiches halieutiques haute-densité pour la pêche sur le Canal de Caen à la mer et la Côte de Nacre en bateau.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- EN-TÊTE PRINCIPAL & CONTRÔLES -->
+  <header class="app-header">
+    <div class="header-top">
+      <div class="brand">
+        <div class="brand-icon">🐟</div>
+        <div>
+          <h1 class="brand-title">Fiches Techniques Pêche</h1>
+          <p class="brand-subtitle">Littoral Normand • Canal de Caen & Côte de Nacre</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="mode-segmented">
+          <button class="mode-btn active" data-mode="interactive">📱 Vue Interactive</button>
+          <button class="mode-btn" data-mode="print">📄 Planches A4 (Recto/Verso)</button>
+        </div>
+        <button id="btn-print" class="btn btn-gold">
+          <span>🖨️ Imprimer les fiches</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="controls-bar">
+      <div class="search-and-toggles">
+        <div class="search-input-wrap">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" class="search-input" placeholder="Rechercher un poisson, un leurre, un spot, une technique...">
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <label for="biotope-select" style="font-size: 0.8rem; color: var(--slate-300); font-weight: 600;">Milieu :</label>
+          <select id="biotope-select" style="background: rgb(255 255 255 / 0.15); color: #fff; border: 1px solid rgb(255 255 255 / 0.2); border-radius: 6px; padding: 0.5rem 0.75rem; font-size: 0.85rem;">
+            <option value="all" style="color: #000;">Tous les biotopes</option>
+            <option value="canal" style="color: #000;">⚓ Canal de Caen uniquement</option>
+            <option value="bateau" style="color: #000;">🚤 Côte de Nacre en bateau</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="filter-pills" id="category-pills">
+        <!-- Généré dynamiquement par JS -->
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENU PRINCIPAL : VUE INTERACTIVE -->
+  <main class="main-container">
+    <div class="view-stats">
+      <span id="view-stats">Chargement des données...</span>
+      <span style="font-size: 0.75rem; color: var(--slate-400);">Cliquez sur "🔄 Tourner la fiche" pour basculer entre Identité et Tactique</span>
+    </div>
+
+    <div class="cards-grid" id="cards-grid">
+      <!-- Généré dynamiquement par JS -->
+    </div>
+  </main>
+
+  <!-- CONTENEUR POUR L'IMPRESSION EN PLANCHES A4 RECTO/VERSO -->
+  <div class="print-view-container" id="print-sheets-container">
+    <!-- Généré dynamiquement par JS sous forme de planches A4 paysage (2 cartes par planche) -->
+  </div>
+
+  <!-- SCRIPT DES DONNÉES PUIS MOTEUR LOGIQUE -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -109,7 +109,16 @@ Tout agent rédigeant ou modifiant du contenu doit se conformer aux sources offi
 Avant toute soumission de code ou modification de données, exécuter impérativement :
 
 ```bash
-node scripts/validate-species.mjs
+# Validation complète
+npm run validate
+# ou node scripts/validate-species.mjs
+
+# Recompilation des données pour le web et l'impression
+npm run build
+# ou node scripts/build-site.mjs
+
+# Lancement du serveur local de visualisation et d'impression
+npm start
 ```
 
 Le script vérifie :
