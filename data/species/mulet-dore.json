@@ -1,0 +1,110 @@
+{
+  "id": "mulet-dore",
+  "identity": {
+    "name": "Mulet doré",
+    "scientificName": "Chelon auratus",
+    "family": "Mugilidés",
+    "localNames": ["Mulet jaune", "Flavet", "Muge doré"],
+    "category": "Mugilidé",
+    "identificationNotes": "Tache ronde jaune doré très éclatante sur la partie supérieure de l'opercule, lèvre supérieure mince et parfaitement lisse (sans papilles), corps plus effilé et svelte que le mulet lippu, dos gris-bleu clair."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": 20,
+    "recommendedSizeCm": 28,
+    "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Maille légale minimale de 20 cm en Manche et Atlantique",
+      "Poisson d'une remarquable combativité sur ligne ultra-légère"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "25 - 40 cm",
+    "maxLengthCm": "55 cm",
+    "averageWeightKg": "0.3 - 0.9 kg",
+    "maxWeightKg": "1.8 kg",
+    "diet": [
+      "Petits vers marins et néréides de surface",
+      "Petits crustacés pélagiques et alevins",
+      "Micro-algues et diatomées planctoniques"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Juin à Octobre (visiteur estival pélagique très nerveux)",
+    "keySpots": {
+      "enrochements": "Bordures ensoleillées et courants de surface de Bénouville.",
+      "palplanches": "Quais de l'avant-port de Ouistreham dans les veines d'eau rapides.",
+      "pilesDePont": "Remous rapides en aval de Pegasus Bridge lors des marées.",
+      "bergesArborees": "Rare dans les zones amont saumâtres ; préfère les eaux claires et salées.",
+      "structuresPortuaires": "Jetées et chenaux d'accès aux sas éclusiers de Ouistreham."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Se rue dans le courant puissant d'écluse pour intercepter les proies déportées.",
+      "traficNavires": "Chasse en meute compacte dans les vaguelettes de sillage des ferries.",
+      "luminositeEtNuit": "Activité maximale en plein soleil aux heures chaudes de l'après-midi.",
+      "turbidite": "Exige des eaux claires et salées ; fuit la vase et les eaux stagnantes."
+    },
+    "tactics": [
+      "Pêche à la cuiller à mulet traînée ou ramenée avec un ver néréide esché",
+      "Pêche à la bombette flottante et bas de ligne fin (14/100) esché d'un demi-dur",
+      "Pêche à la mouche en surface avec petite imitation de ver ou nymphe nacre"
+    ],
+    "recommendedLuresAndBaits": [
+      "Cuiller tournante argentée n°1 ou n°2 armée d'une empile courte",
+      "Ver demi-dur ou néréide rouge fraîche",
+      "Micro-streamer blanc ou olive pour la pêche au fouet"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Juin à Octobre (bancs rapides le long des plages de Côte de Nacre)",
+    "habitats": {
+      "rochesDuCalvados": "Lisières rocheuses de Luc et Lion bordant les plages de sable.",
+      "epavesDDay": "Occasionnel en surface au-dessus des caissons Phoenix côtiers.",
+      "bancsDeSableEtRidens": "Lignes de brisants sur les bancs de sable d'Ouistreham."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients de 65 à 90 créant un fort courant côtier.",
+      "tidalPhase": "Mi-marée de flot quand l'eau monte rapidement sur l'estran.",
+      "slackVsCurrent": "Nage à contre-courant très activement."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Brise thermique d'Est ou de Sud créant un léger clapot de surface.",
+      "unfavorableWinds": "Grand vent de Nord créant une grosse houle trouble."
+    },
+    "tactics": [
+      "Traîne très lente (1 nœud) le long des plages avec cuiller à mulet plombée léger",
+      "Lancer-ramener à la bombette depuis un bateau ancré sur une veine de courant"
+    ],
+    "recommendedLuresAndBaits": [
+      "Cuiller spéciale mulet à palette argentée et perles rouges",
+      "Ver néréide de roche esché entier",
+      "Petite cuiller ondulante 5g argentée"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne spinning légère ou bombette 2m70 - 3m30, puissance 5-15g",
+      "reel": "Taille 2000-2500 rapide",
+      "line": "Nylon 16/100 ou tresse PE 0.6",
+      "leader": "Fluorocarbone 14/100 à 16/100"
+    },
+    "boatCombo": {
+      "rod": "Canne lancer léger 2m10 - 2m40, puissance 5-20g",
+      "reel": "Taille 2500",
+      "line": "Tresse PE 0.8",
+      "leader": "Fluorocarbone 18/100"
+    },
+    "topEquipment": [
+      "Cuillers à mulet avec tige rallongée évitant les coupures sur les micro-dents",
+      "Boîte d'émerillons triples anti-vrillage indispensables pour les vers traînés"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 0, 1, 2, 3, 3, 2, 1, 0, 0],
+    "bateau": [0, 0, 0, 0, 1, 3, 3, 3, 2, 1, 0, 0]
+  },
+  "localSecret": "À la sortie de l'écluse d'Ouistreham, montez une cuiller tournante argentée n°1 dont vous remplacez le triple par un bas de ligne de 10 cm en 16/100 muni d'un hameçon n°8 garni d'un ver demi-dur. Ramenez à vitesse moyenne juste sous la pellicule : le reflet attire le mulet doré qui fond sur le ver !"
+}

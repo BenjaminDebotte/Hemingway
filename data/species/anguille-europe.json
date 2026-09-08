@@ -1,0 +1,109 @@
+{
+  "id": "anguille-europe",
+  "identity": {
+    "name": "Anguille européenne",
+    "scientificName": "Anguilla anguilla",
+    "family": "Anguillidés",
+    "localNames": ["Anguille jaune", "Anguille argentée", "Civelle"],
+    "category": "Grand migrateur",
+    "identificationNotes": "Corps serpentiforme cylindrique très visqueux, peau recouverte d'écailles microscopiques enfouies dans le mucus, nageoire dorsale continue avec la caudale et l'anale débutant loin en arrière de la tête, mâchoire inférieure saillante."
+  },
+  "regulations": {
+    "zone": "Canal de Caen à la mer (Réseau hydrographique Calvados)",
+    "legalSizeCm": null,
+    "recommendedSizeCm": 45,
+    "bagLimit": "Prélèvement strictement réglementé par arrêté préfectoral",
+    "closedSeason": "Ouverture restreinte pour l'anguille jaune ; fermeture totale de l'anguille argentée",
+    "specialRules": [
+      "Espèce classée en DANGER CRITIQUE d'extinction (Statut UICN)",
+      "Pêche de nuit FORMELLEMENT INTERDITE (> 30 min après coucher du soleil)",
+      "Carnet de capture obligatoire à détenir sur soi lors de la pêche (Art. R.436-64)"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "40 - 75 cm",
+    "maxLengthCm": "120 cm",
+    "averageWeightKg": "0.3 - 1.2 kg",
+    "maxWeightKg": "3.5 kg",
+    "diet": [
+      "Vers de terre et vers aquatiques benthiques",
+      "Petits poissons de fond (gobies, épinoches, alevins)",
+      "Petits crabes et crevettes d'eau saumâtre",
+      "Larves d'insectes aquatiques et mollusques"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Avril à Octobre (activité estivale diurne autorisée)",
+    "keySpots": {
+      "enrochements": "Failles des talus de pierres de Blainville, Colombelles et Bénouville.",
+      "palplanches": "Interstices boueux sous les parois métalliques et ducs d'Albe.",
+      "pilesDePont": "Zones calmes sous Pegasus Bridge et le Viaduc de Calix.",
+      "bergesArborees": "Racines d'arbres immergées et herbiers de Ranville.",
+      "structuresPortuaires": "Sorties de collecteurs pluviaux urbains et darses d'Hérouville."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Se met en quête de nourriture lors des remous d'eau salée sur les berges.",
+      "traficNavires": "Fouille les enrochements délavés par le ressac des navires.",
+      "luminositeEtNuit": "Activité naturelle nocturne, mais pêche légalement restreinte aux heures de jour.",
+      "turbidite": "Très active par temps lourd, orageux et lors des eaux très mâchées."
+    },
+    "tactics": [
+      "Pêche au posé sur le fond en journée par temps couvert avec un gros ver de terre",
+      "Pêche à la calée le long des enrochements avec plombée coulissante lourde",
+      "Pêche au cordeau ou ligne de fond strictement soumise aux autorisations spécifiques"
+    ],
+    "recommendedLuresAndBaits": [
+      "Gros ver de terreau ou lombric bien vigoureux",
+      "Petit poisson mort posé sur le fond (gardon ou épinoche)",
+      "Tronçon de crevette fraîche"
+    ]
+  },
+  "bateau": {
+    "present": false,
+    "presenceSeason": "Pêche récréative de l'anguille en mer strictement proscrite / sans objet",
+    "habitats": {
+      "rochesDuCalvados": "Non applicable",
+      "epavesDDay": "Non applicable",
+      "bancsDeSableEtRidens": "Non applicable"
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Non applicable",
+      "tidalPhase": "Non applicable",
+      "slackVsCurrent": "Non applicable"
+    },
+    "weatherImpact": {
+      "favorableWinds": "Temps chaud et orageux en canal",
+      "unfavorableWinds": "Froid et vent glacial qui la cloue au fond de la vase"
+    },
+    "tactics": [
+      "Pêche exclusive du bord sur le canal en période autorisée"
+    ],
+    "recommendedLuresAndBaits": [
+      "Non applicable en mer"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne forte 3m00 - 3m60, puissance 40-100g pour extirper rapidement l'anguille des roches",
+      "reel": "Taille 4000 robuste",
+      "line": "Nylon épais 35/100 à 40/100 pour résister aux arêtes coupantes des pierres",
+      "leader": "Bas de ligne direct ou tresse 30/100, hameçon forgé tige longue n°2 à n°4"
+    },
+    "boatCombo": {
+      "rod": "Non applicable",
+      "reel": "N/A",
+      "line": "N/A",
+      "leader": "N/A"
+    },
+    "topEquipment": [
+      "Chiffon sec ou journal indispensable pour saisir l'anguille sans qu'elle glisse",
+      "Carnet officiel de déclaration des captures d'anguille jaune (obligatoire lors des contrôles)"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 1, 2, 3, 3, 3, 2, 1, 0, 0],
+    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  },
+  "localSecret": "Dès la touche, ferrez et bridez autoritairement sans lui laisser le temps de faire un tour sur elle-même : l'anguille s'ancre avec sa queue dans la moindre faille d'enrochement du canal. Si elle s'enrroche, maintenez la ligne sous tension constante sans tirer, elle finira par relâcher prise au bout de quelques minutes."
+}

@@ -1,0 +1,110 @@
+{
+  "id": "plie-commune",
+  "identity": {
+    "name": "Plie commune (Carrelet)",
+    "scientificName": "Pleuronectes platessa",
+    "family": "Pleuronectidés",
+    "localNames": ["Carrelet", "Plie", "Pléhisse"],
+    "category": "Poisson plat",
+    "identificationNotes": "Peau très lisse au toucher (contrairement au flet rugueux), robe brune parsemée de taches rouge orangé vif très distinctes, crête osseuse de 4 à 7 petites bosses derrière les yeux situés sur le côté droit."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": 27,
+    "recommendedSizeCm": 30,
+    "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Maille minimale légale obligatoire de 27 cm en Manche Est",
+      "Marquage caudal recommandé dès la capture"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "27 - 42 cm",
+    "maxLengthCm": "70 cm",
+    "averageWeightKg": "0.3 - 1.0 kg",
+    "maxWeightKg": "3.5 kg",
+    "diet": [
+      "Petits coquillages bivalves broyés (tellines, donax, couteaux)",
+      "Vers arénicoles et néréides fouisseurs",
+      "Petits crustacés de sable et crevettes grises"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Mars à Novembre (concentrée sur le bas-canal à forte salinité)",
+    "keySpots": {
+      "enrochements": "Pied des talus sableux de Bénouville et Ranville.",
+      "palplanches": "Quais de l'avant-port de Ouistreham et zone du bassin de carénage.",
+      "pilesDePont": "Fond sablonneux sous Pegasus Bridge lors des marées d'équinoxe.",
+      "bergesArborees": "Rare sur les secteurs amont ; exige une eau marine bien oxygénée.",
+      "structuresPortuaires": "Fosses et cales de Ouistreham proches des portes d'écluse."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Activité intense lors de l'arrivée d'eau salée fraîche par le sas.",
+      "traficNavires": "Chasse les petits vers découverts par les hélices des navires.",
+      "luminositeEtNuit": "Activité marquée en début de matinée et en fin d'après-midi.",
+      "turbidite": "Préfère les eaux claires à modérément chargées en sable fin."
+    },
+    "tactics": [
+      "Pêche au posé avec montage potence 2 empiles traînantes plombées de 20-40g",
+      "Pêche à la calée eschée d'arénicoles fraîches présentées bien droites",
+      "Animation lente par petits tiraillements sur le fond de sable"
+    ],
+    "recommendedLuresAndBaits": [
+      "Arénicole fraîche ou ver blanc de sable",
+      "Petite lamelle de couteau frais",
+      "Queue de crevette grise crue décortiquée"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Avril à Décembre (abondante sur les sables de Côte de Nacre)",
+    "habitats": {
+      "rochesDuCalvados": "Cuvettes de sable fin et graviers insérées dans le plateau rocheux.",
+      "epavesDDay": "Plats de sable situés à 50-100 m en périphérie des épaves côtières.",
+      "bancsDeSableEtRidens": "Spot d'excellence : Banc de Bernières et ridens de Sword Beach (6-15m)."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients moyens de 50 à 75 assurant une dérive continue.",
+      "tidalPhase": "Flot montant et début de jusant quand le courant pousse sur les bancs.",
+      "slackVsCurrent": "Très active en courant modéré ; s'enfouit lors des très violents courants."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Vent faible de Sud ou brise d'Est permettant une dérive linéaire régulière.",
+      "unfavorableWinds": "Gros clapot de Nord-Est qui soulève la vase et trouble excessivement l'eau."
+    },
+    "tactics": [
+      "Dérive lente au traîneau à poisson plat ou cuiller plate plombée (40-80g)",
+      "Montage 2 ou 3 empiles courtes munies de perles rouges et blanches attractives"
+    ],
+    "recommendedLuresAndBaits": [
+      "Arénicole fraîche sur hameçon tige longue à ardillons n°4",
+      "Chair de couteau fraîchement récolté",
+      "Morceau de néréide de roche bien vigoureuse"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne calée ou feeder 2m70 - 3m00, scion fin détection",
+      "reel": "Taille 2500-3000",
+      "line": "Nylon 24/100 ou tresse PE 0.8",
+      "leader": "Fluorocarbone 20/100 à 22/100"
+    },
+    "boatCombo": {
+      "rod": "Canne bateau fine 2m10 - 2m40, puissance 20-70g",
+      "reel": "Taille 3000 à frein progressif",
+      "line": "Tresse 8 brins PE 1.0 (14/100)",
+      "leader": "Bas de ligne 25/100 avec perles rondes flottantes rouge/jaune"
+    },
+    "topEquipment": [
+      "Plombs montre ou plombs débrayables qui glissent sur le sable sans s'ensabler",
+      "Aiguille à arénicoles pour monter les vers entiers sans les couper"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 1, 2, 3, 3, 3, 3, 3, 2, 1, 0],
+    "bateau": [0, 0, 2, 3, 3, 3, 3, 3, 3, 3, 2, 0]
+  },
+  "localSecret": "Sur le banc de Bernières en bateau, montez une petite perle ovale jaune fluo et une rouge juste au-dessus de l'hameçon : la plie est très visuelle et curieuse, ces couleurs imitent de petits crustacés et déclenchent l'attaque 3 fois plus vite qu'un montage nu !"
+}

@@ -1,0 +1,111 @@
+{
+  "id": "merlan",
+  "identity": {
+    "name": "Merlan",
+    "scientificName": "Merlangius merlangus",
+    "family": "Gadidés",
+    "localNames": ["Merlan franc", "Gogot", "Merluche"],
+    "category": "Carnassier marin",
+    "identificationNotes": "Corps allongé argenté à dos brun-jaune, tache noire très distincte à l'aisselle de la nageoire pectorale, trois nageoires dorsales rapprochées, pas de barbillon mentonnier visible chez l'adulte."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": 27,
+    "recommendedSizeCm": 30,
+    "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Maille légale de 27 cm strictement applicable en Manche Est",
+      "Pêche hivernale réputée du bord et en bateau"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "27 - 40 cm",
+    "maxLengthCm": "70 cm",
+    "averageWeightKg": "0.3 - 0.9 kg",
+    "maxWeightKg": "3.0 kg",
+    "diet": [
+      "Petits poissons de fond (tacauds, gobies, alevins)",
+      "Crevettes et petits crabes",
+      "Vers marins (néréides et arénicoles)",
+      "Lanières de céphalopodes et poissons"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Octobre à Février (visiteur d'eaux froides dans les bassins profonds)",
+    "keySpots": {
+      "enrochements": "Pied des talus par 7 à 9 m de fond entre Bénouville et Blainville.",
+      "palplanches": "Quais d'Hérouville et de Colombelles dans les fosses de dragage.",
+      "pilesDePont": "Fosses profondes sous le Viaduc de Calix abritées des courants forts.",
+      "bergesArborees": "Présent uniquement dans la partie profonde du chenal de navigation.",
+      "structuresPortuaires": "Nouveau Bassin et bassin de Calix : postes d'hivernage privilégiés."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Les apports d'eau de mer froide lors des marées hautes hivernales poussent les bancs à l'intérieur.",
+      "traficNavires": "Se remet en quête de nourriture après le passage des cargos qui soulèvent la vase.",
+      "luminositeEtNuit": "Espèce lucifuge s'alimentant principalement à la tombée de la nuit et durant les nuits d'hiver.",
+      "turbidite": "Très tolérant aux eaux chargées et teintées de l'hiver normand."
+    },
+    "tactics": [
+      "Pêche au posé sur le fond avec bas de ligne à 2 ou 3 empiles courtes",
+      "Pêche au ver arénicole ou lamelle de maquereau eschée généreusement",
+      "Drop-shot lourd au ras du fond avec lanière d'encornet"
+    ],
+    "recommendedLuresAndBaits": [
+      "Arénicole fraîche bien gorgée de liquide",
+      "Lanière de maquereau ou filet de hareng frais",
+      "Tentacule d'encornet découpée finement"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Septembre à Mars (période hivernale d'abondance au large)",
+    "habitats": {
+      "rochesDuCalvados": "Fonds de graviers et coquilles entourant le plateau de Bernières.",
+      "epavesDDay": "Secteurs de sable et vase à proximité immédiate des épaves de 1944 (20-30m).",
+      "bancsDeSableEtRidens": "Fosses vaseuses situées entre les bancs de sable du Calvados."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients modérés de 45 à 70 pour éviter de trop lourdes plombées.",
+      "tidalPhase": "Actif durant tout le cycle de marée avec pic aux étales de basse mer.",
+      "slackVsCurrent": "Pêche facilitée lors des ralentissements de courant."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Vent faible de terre (Sud/Sud-Est) assurant une mer maniable en hiver.",
+      "unfavorableWinds": "Tempêtes de Nord-Ouest rendant les sorties en mer impossibles."
+    },
+    "tactics": [
+      "Pêche à soutenir à l'ancre ou en dérive lente sur fond sablo-vaseux",
+      "Montage palangrotte à 3 empiles perles fluorescentes pour attirer le poisson dans l'obscurité"
+    ],
+    "recommendedLuresAndBaits": [
+      "Filet de maquereau taillé en pointe de 5-7 cm",
+      "Gros bouquets d'arénicoles ou vers de chalut",
+      "Lanière d'encornet phosphorescente"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne calée ou feeder lourd 3m30 - 3m60, puissance 30-80g",
+      "reel": "Taille 3000-4000 robuste",
+      "line": "Nylon 28/100 ou tresse PE 1.0",
+      "leader": "Bas de ligne 25/100 avec hameçons n°2 à n°4"
+    },
+    "boatCombo": {
+      "rod": "Canne à soutenir buscle 2m10 - 2m70 avec scion sensible en fibre de verre",
+      "reel": "Taille 4000 avec frein progressif",
+      "line": "Tresse 8 brins PE 1.2 terminée par un arraché nylon",
+      "leader": "Montage 3 empiles en fluorocarbone 30/100"
+    },
+    "topEquipment": [
+      "Perles phosphorescentes montées au-dessus des hameçons (déclencheur visuel majeur)",
+      "Combinaison de flottaison chaude pour les sorties hivernales sur le canal et en mer"
+    ]
+  },
+  "calendar": {
+    "canal": [3, 3, 1, 0, 0, 0, 0, 0, 1, 2, 3, 3],
+    "bateau": [3, 3, 2, 0, 0, 0, 0, 0, 2, 3, 3, 3]
+  },
+  "localSecret": "En hiver dans le canal de Caen, installez-vous sur les quais de Blainville ou d'Hérouville après le coucher du soleil : une lamelle de maquereau eschée avec une petite perle phosphorescente rechargée à la lampe UV attire les bancs de gros merlans (35 cm+) stationnés dans 8 m d'eau."
+}

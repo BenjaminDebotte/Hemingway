@@ -1,0 +1,108 @@
+{
+  "id": "tanche",
+  "identity": {
+    "name": "Tanche",
+    "scientificName": "Tinca tinca",
+    "family": "Cyprinidés",
+    "localNames": ["Beurrée", "Docteur", "Tanche de vase"],
+    "category": "Cyprinidé / Poisson blanc",
+    "identificationNotes": "Corps trapu et épais vert-olive sombre à reflets cuivrés dorés, peau recouverte d'écailles minuscules profondément enrobées dans un épais mucus transparent, petits yeux d'un rouge-rubis caractéristique, bouche terminale ornée de 2 petits barbillons délicats, nageoires larges et arrondies."
+  },
+  "regulations": {
+    "zone": "Canal de Caen à la mer (Bassin St-Pierre & berges arborées)",
+    "legalSizeCm": null,
+    "recommendedSizeCm": 25,
+    "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+    "closedSeason": "Pêche autorisée toute l'année",
+    "specialRules": [
+      "Bassin Saint-Pierre : Carte fédérale de pêche obligatoire",
+      "Poisson d'une grande valeur sportive et patrimoniale : remise à l'eau conseillée"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "25 - 45 cm",
+    "maxLengthCm": "65 cm",
+    "averageWeightKg": "0.6 - 2.0 kg",
+    "maxWeightKg": "4.5 kg",
+    "diet": [
+      "Vers de vase (chironomes) et gros vers de terre",
+      "Petits mollusques d'eau douce (limnées, planorbes, pisidies)",
+      "Larves de phryganes et petits crustacés d'herbiers",
+      "Graines et débris végétaux tendres"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Mai à Octobre (activité estivale marquée aux premières chaleurs)",
+    "keySpots": {
+      "enrochements": "Creux de talus calmes où se déposent des feuilles mortes et de la vase.",
+      "palplanches": "Quais ombragés d'Hérouville dans les coins abrités des courants.",
+      "pilesDePont": "Fond vaseux tranquille sous les ponts secondaires du canal.",
+      "bergesArborees": "Spot d'excellence : sous les frondaisons de saules et herbiers denses de Ranville.",
+      "structuresPortuaires": "Darses et fonds limoneux abrités du Bassin Saint-Pierre."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Se réfugie dans la vase dense lors des forts courants d'eau salée.",
+      "traficNavires": "Attend le retour au calme complet pour sortir des herbiers.",
+      "luminositeEtNuit": "Activité maximale à l'aube naissante et au crépuscule ; lucifuge en pleine journée.",
+      "turbidite": "Très adaptée aux eaux douces sombres et riches en matière organique."
+    },
+    "tactics": [
+      "Pêche à la grande canne au ras des herbiers avec flotteur sensible et traîne de 5 cm",
+      "Pêche au method feeder discret avec micro-pellets sucrés et maïs doux",
+      "Pêche au flotteur anglais (waggler) calé sur une trouée entre deux herbiers"
+    ],
+    "recommendedLuresAndBaits": [
+      "Gros ver de terreau bien rouge ou tronçon de lombric",
+      "Panaché grain de maïs doux et bouquet d'asticots rouges",
+      "Pain d'épice ou pâte sucrée au miel"
+    ]
+  },
+  "bateau": {
+    "present": false,
+    "presenceSeason": "Espèce strictement absente en mer ouverte",
+    "habitats": {
+      "rochesDuCalvados": "Non applicable (poisson d'eau douce)",
+      "epavesDDay": "Non applicable",
+      "bancsDeSableEtRidens": "Non applicable"
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Non applicable",
+      "tidalPhase": "Non applicable",
+      "slackVsCurrent": "Recherche les eaux mortes et calmes"
+    },
+    "weatherImpact": {
+      "favorableWinds": "Matinées chaudes et humides sans un souffle d'air avec légère brume",
+      "unfavorableWinds": "Vent froid et sec qui stoppe net les bullages en surface"
+    },
+    "tactics": [
+      "Pêche du bord le long des herbiers du canal"
+    ],
+    "recommendedLuresAndBaits": [
+      "Non applicable en mer"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne au coup renforcée 6m à 8m ou canne feeder souple 3m30, puissance 15-40g",
+      "reel": "Taille 2500 fluide (pour le feeder)",
+      "line": "Nylon 16/100 à 18/100 discret",
+      "leader": "Fluorocarbone 12/100 à 14/100, hameçon forgé rond n°12 à n°16"
+    },
+    "boatCombo": {
+      "rod": "Non applicable",
+      "reel": "N/A",
+      "line": "N/A",
+      "leader": "N/A"
+    },
+    "topEquipment": [
+      "Épuisette fine à mailles souples (le mucus protecteur de la tanche est très délicat)",
+      "Amorce foncée à base de chapelure rousse et de tourteau de maïs"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 1, 2, 3, 3, 3, 3, 2, 1, 0, 0],
+    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  },
+  "localSecret": "Au lever du jour le long des herbiers de Ranville, surveillez la surface de l'eau : des grappes de minuscules bulles serrées indiquent qu'une tanche fouille la vase. Déposez délicatement à cet endroit un ver de terreau coiffé d'un asticot rouge sur un flotteur fin : la touche se traduit par une remontée magique du flotteur qui s'incline !"
+}

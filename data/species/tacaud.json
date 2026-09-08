@@ -1,0 +1,110 @@
+{
+  "id": "tacaud",
+  "identity": {
+    "name": "Tacaud commun",
+    "scientificName": "Trisopterus luscus",
+    "family": "Gadidés",
+    "localNames": ["Goujon de mer", "Guitan", "Tacot"],
+    "category": "Carnassier marin",
+    "identificationNotes": "Corps haut et comprimé cuivré orné de 4 à 5 bandes sombres verticales transversales, long barbillon mentonnier très visible, tache noire à la base des pectorales, anus situé très en avant."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": null,
+    "recommendedSizeCm": 20,
+    "bagLimit": "Non soumis à quota journalier strict",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Prélèvement raisonné pour consommation personnelle immédiate (chair fragile)",
+      "Excellente esche fraîche pour la traque du bar ou du congre sur épave"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "18 - 30 cm",
+    "maxLengthCm": "45 cm",
+    "averageWeightKg": "0.15 - 0.5 kg",
+    "maxWeightKg": "1.5 kg",
+    "diet": [
+      "Petits crustacés benthiques (crevettes, puces de mer, petits crabes)",
+      "Vers marins polychètes",
+      "Petits mollusques et alevins de poissons"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Toute l'année (omniprésent le long des structures métalliques)",
+    "keySpots": {
+      "enrochements": "Anfractuosités des blocs de pierre immergés entre 4 et 8 m de fond.",
+      "palplanches": "Poste roi : collé à la verticale le long des tôles d'acier d'Hérouville et Ouistreham.",
+      "pilesDePont": "Contre les piliers de Pegasus Bridge et du Viaduc de Calix.",
+      "bergesArborees": "Présent dans les fosses profondes longeant les berges de Ranville.",
+      "structuresPortuaires": "Ducs d'Albe, cales de carénage et avant-port de Ouistreham."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Activité constante stimulée par tout mouvement d'eau salée.",
+      "traficNavires": "Se saisit immédiatement des invertébrés décollés par les remous des navires.",
+      "luminositeEtNuit": "Mord aussi bien en plein jour que de nuit au pied des structures ombragées.",
+      "turbidite": "Très tolérant aux eaux mâchées grâce à son barbillon tactile et olfactif."
+    },
+    "tactics": [
+      "Pêche à la dandinette verticale le long des palplanches avec petit ver ou morceau de crevette",
+      "Montage palangrotte fine à 2 empiles courtes plombée de 15g à 30g",
+      "Pêche au drop-shot ultra-léger esché d'un tronçon d'arénicole"
+    ],
+    "recommendedLuresAndBaits": [
+      "Tronçon d'arénicole ou ver néréide",
+      "Bout de crevette grise crue",
+      "Micro-lanière de calmar ou de maquereau"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Toute l'année (colonies massives sur les épaves de Nacre)",
+    "habitats": {
+      "rochesDuCalvados": "Trous et failles du plateau calcaire de Lion-sur-Mer.",
+      "epavesDDay": "Fourmille par milliers sur les superstructures des épaves de Sword et Juno.",
+      "bancsDeSableEtRidens": "Rares sur le sable nu ; présent uniquement aux abords des débris durs."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Tous coefficients ; se pêche facilement même lors des courants faibles.",
+      "tidalPhase": "Activité continue tout au long du montant et du descendant.",
+      "slackVsCurrent": "Pêche la plus productive aux étales au ras de l'épave."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Toute météo navigable permettant de caler le bateau au-dessus de la structure.",
+      "unfavorableWinds": "Grand vent empêchant la tenue verticale de la ligne sur le poste."
+    },
+    "tactics": [
+      "Pêche à soutenir au ras de la ferraille avec bas de ligne 3 empiles (plomb 60-120g)",
+      "Dandinette au petit jig ou sabiki muni de morceaux d'esches"
+    ],
+    "recommendedLuresAndBaits": [
+      "Petits morceaux d'encornet ou de seiche (tenue parfaite à l'hameçon)",
+      "Tronçons d'arénicoles fraîches",
+      "Mitraillette fine plumes blanches hameçon n°6 à n°8"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne courte et maniable 1m80 - 2m10, puissance 5-25g, scion sensible",
+      "reel": "Taille 2000-2500 garni de nylon ou tresse fine",
+      "line": "Nylon 22/100 ou tresse PE 0.8",
+      "leader": "Bas de ligne 20/100 avec hameçons n°6 à n°8"
+    },
+    "boatCombo": {
+      "rod": "Canne à soutenir buscle 2m10 - 2m40, scion fin",
+      "reel": "Taille 3000-4000",
+      "line": "Tresse 8 brins PE 1.2",
+      "leader": "Bas de ligne 3 empiles en fluorocarbone 28/100"
+    },
+    "topEquipment": [
+      "Dégorgeoir fin indispensable (le tacaud avale souvent très profondément l'esche)",
+      "Glacière avec glace pour conserver immédiatement les poissons destinés à la friture"
+    ]
+  },
+  "calendar": {
+    "canal": [2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2],
+    "bateau": [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+  },
+  "localSecret": "Sur les épaves du Débarquement, si vous recherchez un gros congre ou un bar trophée, pêchez d'abord un petit tacaud de 15 cm à la dandinette et remettez-le aussitôt à l'eau comme vif sur une grosse ligne : c'est la proie favorite des géants de l'épave !"
+}

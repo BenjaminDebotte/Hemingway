@@ -1,0 +1,112 @@
+{
+  "id": "daurade-royale",
+  "identity": {
+    "name": "Daurade royale",
+    "scientificName": "Sparus aurata",
+    "family": "Sparidés",
+    "localNames": ["Vraie daurade", "Sourcil d'or", "Belle aux sourcils d'or"],
+    "category": "Sparidé",
+    "identificationNotes": "Bande dorée brillante très nette entre les deux yeux soulignée d'une ligne noire, grande tache sombre à l'origine de la ligne latérale, mâchoires puissantes pavées de molaires broyeuses de coquillages."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": 23,
+    "recommendedSizeCm": 35,
+    "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Ablation obligatoire du bas du lobe caudal dès la capture conservée",
+      "Pêche libre en aval du Pont de la Fonderie (DPM)"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "30 - 50 cm",
+    "maxLengthCm": "70 cm",
+    "averageWeightKg": "0.8 - 2.5 kg",
+    "maxWeightKg": "7.0 kg",
+    "diet": [
+      "Moules bleues (Mytilus edulis) et huîtres sauvages",
+      "Crabes verts et étrilles broyés entiers",
+      "Coquillages fouisseurs (couteaux, coques, palourdes)",
+      "Vers arénicoles et bibis"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Mai à Octobre (estivale très active remontant jusqu'à Colombelles)",
+    "keySpots": {
+      "enrochements": "Talus rocheux de Blainville et Bénouville tapissés de petites moules et balanes.",
+      "palplanches": "Poste suprême : quai métallique d'Hérouville où elle broute les grappes de moules.",
+      "pilesDePont": "Fond des piles de Pegasus Bridge où le courant dépose les coquillages.",
+      "bergesArborees": "Tronçons salés abrités du vent en plein été.",
+      "structuresPortuaires": "Quais industriels désaffectés et bassins d'évitement de Ouistreham."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "L'appel d'eau salée chaude lors du plein montant stimule sa quête de coquillages.",
+      "traficNavires": "L'onde de sillage décroche les moules fragiles des parois métalliques.",
+      "luminositeEtNuit": "Mord principalement en plein soleil aux heures les plus chaudes de la marée.",
+      "turbidite": "Préfère les eaux claires à légèrement laiteuses pour repérer les bancs de moules."
+    },
+    "tactics": [
+      "Pêche à la moule emboîtée ou crabe vert esché au ras des palplanches métalliques",
+      "Pêche au posé avec montage coulissant très discret (fluorocarbone 26/100) et frein desserré",
+      "Pêche au flotteur coulissant lourd plaquant l'esche à 20 cm du fond enroché"
+    ],
+    "recommendedLuresAndBaits": [
+      "Moule fraîche emboîtée ficelée au fil élastique",
+      "Petit crabe vert vivant décortiqué ou entier (2-3 cm)",
+      "Ver arénicole géant ou bibi de Sète bien gorgé d'eau"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Juin à Octobre (prospections sur les moulières de Nacre)",
+    "habitats": {
+      "rochesDuCalvados": "Moulières naturelles et champs de laminaires au large de Luc et Bernières.",
+      "epavesDDay": "Abords coquilliers et fractures rocheuses entourant les épaves de 1944.",
+      "bancsDeSableEtRidens": "Lisières mixtes sable-roche où prolifèrent les couteaux."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients moyens de 55 à 75 permettant de tenir le fond sans dérive trop forte.",
+      "tidalPhase": "Les deux dernières heures de flot et la première heure de jusant.",
+      "slackVsCurrent": "Activité intense dès que le courant faiblit à l'approche de la pleine mer."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Vent de terre (Sud/Sud-Ouest), mer calme et eau cristalline réchauffée.",
+      "unfavorableWinds": "Vent de Nord-Est hachant le plan d'eau et troublant les moulières."
+    },
+    "tactics": [
+      "Mouillage à l'ancre en amont d'une moulière et pêche en dérive légère au couteau ficelé",
+      "Pêche au Tenya (30-60g) esché d'une crevette entière ou d'un crabe sur le plateau rocheux",
+      "Montage coulissant lourd (olive 60-100g) traînant sur le fond de coquilles"
+    ],
+    "recommendedLuresAndBaits": [
+      "Couteau frais entier ficelé au fil latex",
+      "Crabe vert vivant esché par les pattes arrière",
+      "Tenya avec crevette bouquet crue"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne sensible 2m40 - 2m70 avec scion buscle résonnant, puissance 10-40g",
+      "reel": "Taille 3000 à frein micrométrique fluide et débrayable",
+      "line": "Tresse 8 brins PE 1.0 (14/100)",
+      "leader": "2.5m de fluorocarbone très discret en 24/100 à 28/100, hameçon forgé fort de fer n°1 à n°2"
+    },
+    "boatCombo": {
+      "rod": "Canne buscle bateau 2m20 - 2m50, scion fin détection tactile",
+      "reel": "Taille 4000 robuste",
+      "line": "Tresse PE 1.2 à 1.5",
+      "leader": "Fluorocarbone 35/100 résistant aux frottements des coquilles, hameçon fort de fer 1/0"
+    },
+    "topEquipment": [
+      "Fil élastique de ligature fin pour ligaturer les moules et couteaux sans les écraser",
+      "Aiguille à escher les coquillages pour passer le bas de ligne proprement"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 0, 1, 2, 3, 3, 2, 1, 0, 0],
+    "bateau": [0, 0, 0, 0, 1, 2, 3, 3, 3, 1, 0, 0]
+  },
+  "localSecret": "Le long des palplanches d'Hérouville, grattez la tôle avec un râteau ou un manche plombé pour faire tomber quelques moules au fond : 10 minutes après, descendez délicatement un crabe vert vivant le long de la paroi. La daurade royale ne résiste jamais à cette amorce naturelle !"
+}

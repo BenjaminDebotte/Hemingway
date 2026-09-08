@@ -1,0 +1,110 @@
+{
+  "id": "lieu-jaune",
+  "identity": {
+    "name": "Lieu jaune",
+    "scientificName": "Pollachius pollachius",
+    "family": "Gadidés",
+    "localNames": ["Lieu", "Colin jaune", "Goberge"],
+    "category": "Carnassier marin",
+    "identificationNotes": "Mâchoire inférieure nettement proéminente, ligne latérale sombre s'incurvant fortement au-dessus des pectorales, pas de barbillon mentonnier chez l'adulte, robe bronze dorée à reflets verdâtres."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": 42,
+    "recommendedSizeCm": 50,
+    "bagLimit": "2 lieux jaunes par jour et par pêcheur (Arrêté du 24/12/2024)",
+    "closedSeason": "Fermeture totale du 1er janvier au 30 avril (interdiction de capture)",
+    "specialRules": [
+      "Pratique du pêcher-relâcher formellement INTERDITE (Art. 3 Arrêté 24/12/2024)",
+      "Ablation obligatoire du bas du lobe caudal dès la mise à bord ou capture"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "45 - 75 cm",
+    "maxLengthCm": "105 cm",
+    "averageWeightKg": "1.5 - 4.5 kg",
+    "maxWeightKg": "12 kg",
+    "diet": [
+      "Lançons et petits sprats en bancs denses",
+      "Petits chinchards et tacauds d'épave",
+      "Seiches, casserons et calmars",
+      "Crabes de roche et crevettes"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Mai à Novembre (jeunes et subadultes cantonnés au bas-canal)",
+    "keySpots": {
+      "enrochements": "Failles rocheuses profondes de Bénouville et du bassin d'évitement.",
+      "palplanches": "Quais de l'avant-port de Ouistreham : se tient calé dans l'ombre verticale.",
+      "pilesDePont": "Rare sous Pegasus ; occasionnel lors des éclusées de vives-eaux.",
+      "bergesArborees": "Absent des berges amont ; espèce sténohaline exigeant une forte salinité.",
+      "structuresPortuaires": "Fosses du sas éclusier et musoirs de jetée de Ouistreham."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Se met en chasse frénétique lors des arrivées massives d'eau de mer.",
+      "traficNavires": "Chasse dans les tourbillons profonds créés par les ferries à quai.",
+      "luminositeEtNuit": "Chasseur d'eaux sombres fuyant le plein soleil : actif à l'aube et par ciel gris.",
+      "turbidite": "Préfère les eaux claires ; fuit les eaux trop mâchées du canal."
+    },
+    "tactics": [
+      "Animation verticale au leurre souple (shad 90-110mm) le long des quais",
+      "Pêche au poisson mort posé ou lançon manié dans les fosses de l'avant-port"
+    ],
+    "recommendedLuresAndBaits": [
+      "Fiiish Black Minnow 90 (Tête 12g Kaki ou Bleu)",
+      "Lançon frais monté sur tête plombée sabot 15g"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Mai à Décembre (fermé de janvier à avril inclus)",
+    "habitats": {
+      "rochesDuCalvados": "Tombants profonds et laminaires au large de Lion (18 à 25m).",
+      "epavesDDay": "Spot roi : Épaves 1944 de Juno et Sword (25 à 35m) tenant des records.",
+      "bancsDeSableEtRidens": "Peu présent sur le sable nu ; collé aux aspérités dures du fond."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients faibles de 40 à 60 (mortes-eaux) pour dériver sur épaves.",
+      "tidalPhase": "Étales de marée et début de renverse pour pêcher à l'aplomb des structures.",
+      "slackVsCurrent": "Courant modéré idéal pour l'ascenseur sans bannière excessive."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Vent de Sud/SO nul à faible : dérive stable indispensable au-dessus des épaves.",
+      "unfavorableWinds": "Vent de Nord/Est créant une houle courte empêchant la tenue verticale."
+    },
+    "tactics": [
+      "Technique de l'Ascenseur : shad plombé (60-120g) remonté lentement sans jerker",
+      "Slow jigging métallique (80-150g) au ras des tôles et fractures de coques",
+      "Dérive au lançon vivant sur traîneau en amont de l'épave"
+    ],
+    "recommendedLuresAndBaits": [
+      "Fiiish Black Minnow 140 / 160 (Têtes 60g à 120g Bleu ou Rose)",
+      "Illex Nitro Shad 150 (Coloris Jelly Shad)",
+      "Lançon vivant piqué par la gueule"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne spinning 2m10, puissance 10-35g, action rapide",
+      "reel": "Taille 3000 avec tresse de qualité",
+      "line": "Tresse 8 brins PE 1.0 (14/100)",
+      "leader": "2m de fluorocarbone 28/100"
+    },
+    "boatCombo": {
+      "rod": "Canne épave 2m00 - 2m20, puissance 30-120g ou 50-150g scion sensible",
+      "reel": "Taille 4000-5000 frein carbone 8kg+ ou tambour tournant léger",
+      "line": "Tresse 8 brins PE 1.5 à 2.0 (20-23/100)",
+      "leader": "4m de fluorocarbone résistant 45/100 à 55/100 pour frotter les tôles"
+    },
+    "topEquipment": [
+      "Sondeur bathymétrique précis pour caler les dérives au mètre près sur les épaves",
+      "Grappin ou ancre flottante pour réguler la vitesse de dérive en mer"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 0, 1, 2, 2, 2, 2, 1, 1, 0],
+    "bateau": [0, 0, 0, 0, 2, 3, 3, 3, 3, 3, 2, 0]
+  },
+  "localSecret": "Sur les épaves de Sword Beach, si vous prenez une touche à 10 m au-dessus de la ferraille lors de la remontée en ascenseur, ne ferrez pas violemment : continuez simplement de mouliner régulièrement. Le lieu jaune engame par l'arrière et s'auto-ferre sous la tension !"
+}

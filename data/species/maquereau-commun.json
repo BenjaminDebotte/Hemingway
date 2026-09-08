@@ -1,0 +1,111 @@
+{
+  "id": "maquereau-commun",
+  "identity": {
+    "name": "Maquereau commun",
+    "scientificName": "Scomber scombrus",
+    "family": "Scombridés",
+    "localNames": ["Maquereau", "Lacet", "Breton"],
+    "category": "Carnassier marin",
+    "identificationNotes": "Dos vert-bleu métallique zébré de lignes sinueuses noires, ventre blanc nacré irisé, petites pinnules natatoires caractéristiques entre la deuxième dorsale et la queue très échancrée."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": 20,
+    "recommendedSizeCm": 25,
+    "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Ablation obligatoire du lobe inférieur de la nageoire caudale",
+      "Dérogation de marquage : peut être effectué juste avant le débarquement"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "25 - 38 cm",
+    "maxLengthCm": "50 cm",
+    "averageWeightKg": "0.25 - 0.6 kg",
+    "maxWeightKg": "1.2 kg",
+    "diet": [
+      "Petits sprats et alevins de harengs",
+      "Lançons et ammodites",
+      "Petits crustacés pélagiques et euphausiacés"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Juin à Septembre (incursions éclair lors des éclusées d'Ouistreham)",
+    "keySpots": {
+      "enrochements": "Bordures rocheuses de Bénouville lors des rentrées de bancs d'alevins.",
+      "palplanches": "Quais de l'avant-port de Ouistreham et chenal d'accès au sas.",
+      "pilesDePont": "Rare sous Pegasus Bridge ; incursions rapides par forte marée.",
+      "bergesArborees": "Absent des zones amont à faible salinité.",
+      "structuresPortuaires": "Jetées du musoir extérieur et cales du port de plaisance de Ouistreham."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "L'ouverture des sas aspire des bancs entiers de sprats suivis des maquereaux.",
+      "traficNavires": "Les remous des ferries et cargos concentrent les chasses en surface.",
+      "luminositeEtNuit": "Activité maximale en pleine journée par beau temps ensoleillé.",
+      "turbidite": "Chasseur à vue strict : fuit dès que les eaux deviennent trop troubles."
+    },
+    "tactics": [
+      "Lancer-ramener rapide au petit casting jig métallique de 15 à 25g",
+      "Pêche au bouchon coulissant esché d'une lamelle de maquereau ou d'un sprat",
+      "Bombette de surface avec petit leurre souple type raglou 65mm"
+    ],
+    "recommendedLuresAndBaits": [
+      "Casting jig 15g-20g argenté / bleu holographique",
+      "Raglou 65mm nacré blanc ou pailleté",
+      "Lamelle d'encornet ou lanière de maquereau fraîche"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Mai à Octobre (apogée de Juillet à Septembre au large)",
+    "habitats": {
+      "rochesDuCalvados": "Têtes de roche de Lion et Luc : chasses bouillonnantes sous les mouettes.",
+      "epavesDDay": "Au-dessus des épaves du large (20-30m) où se regroupent les bancs de fourrage.",
+      "bancsDeSableEtRidens": "Lignes de courant entre les bancs de sable et la pleine mer."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Tous coefficients ; les marées de vives-eaux rassemblent les bancs.",
+      "tidalPhase": "Mi-marée de flot ou de jusant avec courant porteur bien établi.",
+      "slackVsCurrent": "Moins actif lors des étales complètes."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Mer calme à peu agitée facilitant le repérage visuel des oiseaux en plongée.",
+      "unfavorableWinds": "Vent fort de Nord-Est formant une mer blanche masquant les chasses."
+    },
+    "tactics": [
+      "Pêche à la mitraillette (train de plumes ou peaux de poisson) lestée de 50 à 100g",
+      "Pêche ultra-sportive au petit leurre à lancer sur canne légère dans les chasses",
+      "Traîne côtière légère au ras des plateaux rocheux"
+    ],
+    "recommendedLuresAndBaits": [
+      "Mitraillette à plumes blanches et reflets argentés (3 à 5 hameçons)",
+      "Petit jig à dandinette 30g à 60g",
+      "Cuiller ondulante type Toby 20g"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne spinning 2m10 - 2m40, puissance 5-25g, lancer rapide",
+      "reel": "Taille 2500 à récupération rapide",
+      "line": "Tresse 8 brins fine PE 0.8 (12/100)",
+      "leader": "1.5m de fluorocarbone 22/100"
+    },
+    "boatCombo": {
+      "rod": "Canne bateau polyvalente 2m10 - 2m40, puissance 30-100g",
+      "reel": "Taille 3000-4000 robuste",
+      "line": "Nylon 35/100 ou tresse PE 1.2",
+      "leader": "Bas de ligne mitraillette 30/100 résistant"
+    },
+    "topEquipment": [
+      "Jumelles marines étanches pour repérer les rassemblements de sternes et goélands au large",
+      "Glacière avec glace fondante (indispensable pour conserver la chair fragile du maquereau en été)"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 0, 1, 2, 3, 3, 2, 0, 0, 0],
+    "bateau": [0, 0, 0, 0, 2, 3, 3, 3, 3, 2, 0, 0]
+  },
+  "localSecret": "Au large de Ouistreham, observez l'horizon marin : des mouettes tournoyant et plongeant signalent une chasse de maquereaux. Approchez le bateau sans couper les gaz trop brusquement et lancez un jig de 20g sur la périphérie pour multiplier les prises sans effrayer le banc."
+}

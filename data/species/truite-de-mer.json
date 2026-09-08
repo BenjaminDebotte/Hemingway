@@ -1,0 +1,111 @@
+{
+  "id": "truite-de-mer",
+  "identity": {
+    "name": "Truite de mer",
+    "scientificName": "Salmo trutta trutta",
+    "family": "Salmonidés",
+    "localNames": ["Bécard", "Truite blanche", "Finock (jeune)"],
+    "category": "Grand migrateur",
+    "identificationNotes": "Corps fuselé argenté parsemé de points noirs souvent en forme de croix ou d'étoiles (disparition des points rouges en mer), petite nageoire adipeuse entre la dorsale et la queue, queue peu échancrée à pédoncule épais."
+  },
+  "regulations": {
+    "zone": "Manche Est - Bassin de l'Orne / CIEM 7.d (Calvados)",
+    "legalSizeCm": 35,
+    "recommendedSizeCm": 40,
+    "bagLimit": "1 à 2 par jour selon arrêtés régionaux migrateurs",
+    "closedSeason": "Fermeture totale hivernale pendant la fraie sur les frayères de l'Orne",
+    "specialRules": [
+      "Timbre CPMA migrateurs obligatoire en secteur fluvial d'eau douce",
+      "Déclaration obligatoire des captures (carnet migrateurs)",
+      "Pêche aux filets interdite dans l'embouchure de l'Orne"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "40 - 65 cm",
+    "maxLengthCm": "90 cm",
+    "averageWeightKg": "1.2 - 4.0 kg",
+    "maxWeightKg": "9.0 kg",
+    "diet": [
+      "Lançons vivants et sprats en mer",
+      "Crevettes bouquets et puces de mer",
+      "Petits poissons de surface (gobies, épinoches)",
+      "Ne s'alimente pratiquement plus lors de la montaison fluviale"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Mai à Octobre (couloir de remontée migratoire vers le fleuve Orne)",
+    "keySpots": {
+      "enrochements": "Talus de Bénouville et Blainville où les poissons marquent une halte.",
+      "palplanches": "Quais de Colombelles : transite le long des parois dans le courant frais.",
+      "pilesDePont": "Sous Pegasus Bridge et le Viaduc de Calix dans les veines d'eau rapides.",
+      "bergesArborees": "Tronçons frais et ombragés de Ranville à l'abri du soleil d'été.",
+      "structuresPortuaires": "Sas éclusier et avant-port de Ouistreham (point d'entrée en eau saumâtre)."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "L'ouverture du sas crée le courant d'appel qui guide les migrateurs dans le canal.",
+      "traficNavires": "Fuit le sillage des gros navires en se plaquant au pied des talus.",
+      "luminositeEtNuit": "Montaison active à la tombée de la nuit et par temps d'orage pluvieux.",
+      "turbidite": "Déclenchement majeur lors des coups d'eau douce après de gros orages estivaux."
+    },
+    "tactics": [
+      "Lancer-ramener rapide au poisson nageur coulant (minnow 70-90mm) dans le chenal",
+      "Animation de cuillers ondulantes fines ou tournantes n°3 argentées le long des berges",
+      "Pêche à la mouche (canne à deux mains) avec streamer sombre au crépuscule"
+    ],
+    "recommendedLuresAndBaits": [
+      "Poisson nageur type Rapala Countdown 7cm ou Duo Spearhead Ryuki 70S",
+      "Cuiller ondulante fine argentée type Mepps Syclops 12g",
+      "Streamer tandem noir et argenté monté sur tube fly"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Avril à Septembre (chasses côtières avant la remontée en rivière)",
+    "habitats": {
+      "rochesDuCalvados": "Lisières côtières entre roches et plages de Lion-sur-Mer et Hermanville.",
+      "epavesDDay": "Rare sur les épaves profondes du large ; inféodée à la bande côtière des 0-10m.",
+      "bancsDeSableEtRidens": "Embouchure de l'Orne et pointe du Siège à Ouistreham."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients de 60 à 85 créant une forte dynamique côtière.",
+      "tidalPhase": "Mi-marée montante poussant les migrateurs vers l'estuaire.",
+      "slackVsCurrent": "Activité maximale dans les vagues de déferlement."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Vent thermique d'Ouest ou de Sud créant une belle risée sans eau mâchée.",
+      "unfavorableWinds": "Grand vent de Nord soulevant une boue de craie sur la côte."
+    },
+    "tactics": [
+      "Traîne côtière très rapide (3 à 4 nœuds) à 100-300 m du rivage avec petite cuiller ondulante",
+      "Lancer sur les bordures rocheuses peu profondes depuis une embarcation légère ou kayak"
+    ],
+    "recommendedLuresAndBaits": [
+      "Cuiller ondulante fine côtière type Hansen Pilgrim ou Toby 15g argent/bleu",
+      "Petit leurre de surface stickbait 90mm manié vivement"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Spinning 2m40 - 2m70, puissance 10-30g, action semi-parabolique pour encaisser les sauts",
+      "reel": "Taille 3000 avec frein doux et régulier",
+      "line": "Tresse 8 brins PE 0.8 à 1.0 (12-14/100)",
+      "leader": "2m de fluorocarbone 24/100 à 26/100"
+    },
+    "boatCombo": {
+      "rod": "Canne lancer 2m40 - 2m70, puissance 15-40g",
+      "reel": "Taille 3000-4000",
+      "line": "Tresse PE 1.0",
+      "leader": "Fluorocarbone 28/100"
+    },
+    "topEquipment": [
+      "Épuisette large à filet en silicone doux pour préserver les écailles d'argent fragiles",
+      "Pince dégorgeoir pour ôter rapidement les triples sans blesser le poisson à la gorge"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 1, 2, 3, 3, 3, 2, 1, 0, 0],
+    "bateau": [0, 0, 0, 2, 3, 3, 3, 2, 1, 0, 0, 0]
+  },
+  "localSecret": "Lors des coups d'eau orageux de juillet-août, postez-vous à la tombée de la nuit en aval immédiat de Pegasus Bridge : les truites de mer en migration s'arrêtent dans la zone de calme créée par la pile. Un poisson nageur suspending de 7 cm ramené par à-coups vigoureux déclenche des attaques foudroyantes accompagnées de bonds spectaculaires !"
+}

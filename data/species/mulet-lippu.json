@@ -1,0 +1,111 @@
+{
+  "id": "mulet-lippu",
+  "identity": {
+    "name": "Mulet lippu",
+    "scientificName": "Chelon labrosus",
+    "family": "Mugilidés",
+    "localNames": ["Mulet à grosses lèvres", "Muge", "Grosse lèvre"],
+    "category": "Mugilidé",
+    "identificationNotes": "Lèvre supérieure exceptionnellement épaisse et charnue garnie de rangées de tubercules verruqueux (papilles), pas de tache operculaire dorée, opercule armé d'une seule écaille pointue, corps fuselé gris ardoise."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": 30,
+    "recommendedSizeCm": 35,
+    "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Maille légale de 30 cm en Manche et Atlantique",
+      "Pêche très technique à la ligne fine exigeant patience et discrétion"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "35 - 55 cm",
+    "maxLengthCm": "75 cm",
+    "averageWeightKg": "0.8 - 2.5 kg",
+    "maxWeightKg": "4.5 kg",
+    "diet": [
+      "Algues filamenteuses et biofilm brouté sur les roches",
+      "Débris organiques et vase superficielle triée",
+      "Petits invertébrés benthiques et vers marins",
+      "Pain frais et mie flottante en zone portuaire"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Avril à Novembre (omniprésent le long des quais urbains et écluses)",
+    "keySpots": {
+      "enrochements": "Talus rocheux où les bancs broutent les algues vertes sous la surface.",
+      "palplanches": "Quais de Colombelles, Hérouville et Ouistreham : broute la tôle métallique.",
+      "pilesDePont": "Piles de Pegasus Bridge et du Viaduc de Calix dans les zones de remous calmes.",
+      "bergesArborees": "Tronçons ombragés où les insectes et bourgeons tombent à l'eau en été.",
+      "structuresPortuaires": "Pontons du Bassin Saint-Pierre et bassins de radoub de Ouistreham."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Se regroupe par centaines dans le contre-courant créé par l'ouverture des sas.",
+      "traficNavires": "Vient brouter immédiatement les parois des quais nettoyées par les remous.",
+      "luminositeEtNuit": "Très actif par journée chaude et ensoleillée ; marsouine en surface.",
+      "turbidite": "Supporte très bien les eaux troubles et chargées en matières organiques."
+    },
+    "tactics": [
+      "Pêche au pain flottant (mie pressée sur hameçon n°8 à n°10) sous buldo discret",
+      "Pêche au coup à la pâte de sardine ou au ver demi-dur avec flotteur effilé",
+      "Pêche à la calée fine le long des palplanches avec un montage coulissant léger"
+    ],
+    "recommendedLuresAndBaits": [
+      "Mie de pain blanc frais bien compactée sur l'œillet",
+      "Pâte de pain mélangée à de l'huile de sardine",
+      "Petit ver néréide ou demi-dur sur ligne fine"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Mai à Octobre (bancs côtiers sur les roches et petits ports)",
+    "habitats": {
+      "rochesDuCalvados": "Hauts-fonds et têtes rocheuses émergentes couvertes de laminaires de Lion.",
+      "epavesDDay": "Abords de surface des caissons Phoenix d'Arromanches et récifs côtiers.",
+      "bancsDeSableEtRidens": "Zones de brisants proches des plages sablonneuses."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients de 60 à 85 apportant une eau riche sur les roches.",
+      "tidalPhase": "Les deux premières heures de flot montant sur les plateaux côtiers.",
+      "slackVsCurrent": "S'alimente activement dans les zones d'amorti de courant."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Beau temps chaud, vent faible de terre maintenant une surface lisse.",
+      "unfavorableWinds": "Vent froid de Nord créant une grosse houle qui le fait fuir au large."
+    },
+    "tactics": [
+      "Pêche à la traîne légère côtière avec cuiller à mulet et ver néréide",
+      "Ligne flottante amorcée au pain dérivant le long des roches de bordure"
+    ],
+    "recommendedLuresAndBaits": [
+      "Cuiller tournante à mulet (palet argenté garni d'un ver)",
+      "Morceau de pain frais dérivant",
+      "Néréide de roche sur bas de ligne long"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne match ou bolognaise 3m90 - 4m50, action douce pour préserver la lèvre",
+      "reel": "Taille 2500 frein très progressif et fluide",
+      "line": "Nylon 16/100 à 18/100",
+      "leader": "Fluorocarbone fin 14/100 à 16/100, hameçon forgé n°8 à n°12"
+    },
+    "boatCombo": {
+      "rod": "Canne fine 2m40 - 2m70, puissance 10-30g",
+      "reel": "Taille 3000",
+      "line": "Nylon 20/100",
+      "leader": "Fluorocarbone 16/100 à 18/100"
+    },
+    "topEquipment": [
+      "Épuisette à mailles textiles fines (sa peau et ses écailles fragiles perdent leur mucus facilement)",
+      "Sac de pain de mie frais et boîte hermétique pour préparer l'amorce de surface"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 1, 2, 3, 3, 3, 3, 3, 2, 1, 0],
+    "bateau": [0, 0, 0, 1, 2, 3, 3, 3, 2, 1, 0, 0]
+  },
+  "localSecret": "Au Bassin Saint-Pierre et à Pegasus Bridge, lancez quelques croûtes de pain pour faire monter le banc de mulets lippus en surface. Pêchez avec une bouchée de mie de pain blanche légèrement humidifiée et pressée uniquement autour de la hampe de l'hameçon : le mulet aspire la mie libre et engame l'hameçon en douceur !"
+}

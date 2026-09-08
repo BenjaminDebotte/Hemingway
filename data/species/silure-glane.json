@@ -1,0 +1,109 @@
+{
+  "id": "silure-glane",
+  "identity": {
+    "name": "Silure glane",
+    "scientificName": "Silurus glanis",
+    "family": "Siluridés",
+    "localNames": ["Moustachu", "Glane", "Géant des eaux douces"],
+    "category": "Carnassier eau douce / saumâtre",
+    "identificationNotes": "Corps anguilliforme massif sans écaille recouvert d'un épais mucus protecteur, tête aplatie gigantesque armée de 6 barbillons (2 très longs sur la mâchoire supérieure et 4 courts sous la gorge), minuscule dorsale reculée et nageoire anale extrêmement longue."
+  },
+  "regulations": {
+    "zone": "Canal de Caen à la mer (Bassin St-Pierre jusqu'à Colombelles)",
+    "legalSizeCm": null,
+    "recommendedSizeCm": 100,
+    "bagLimit": "Non soumis à quota journalier statutaire",
+    "closedSeason": "Autorisé toute l'année (soumis aux règles de fermeture carnassiers pour les leurres)",
+    "specialRules": [
+      "Bassin Saint-Pierre : Carte fédérale de pêche obligatoire",
+      "Matériel ultra-puissant indispensable pour maîtriser ces géants sans casse",
+      "Remise à l'eau soignée recommandée pour les grands spécimens"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "100 - 180 cm",
+    "maxLengthCm": "260 cm+",
+    "averageWeightKg": "10 - 50 kg",
+    "maxWeightKg": "100 kg+",
+    "diet": [
+      "Grosses brèmes, carpes et gardons",
+      "Mulets et poissons marins remontant le canal",
+      "Écrevisses et gros coquillages d'eau douce",
+      "Oiseaux aquatiques et rongeurs en surface"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Mai à Octobre (activité thermique maximale en eau tiède)",
+    "keySpots": {
+      "enrochements": "Fosses profondes creusées au pied des talus entre Calix et Colombelles.",
+      "palplanches": "Quais industriels profonds de Colombelles et d'Hérouville (8-9m de fond).",
+      "pilesDePont": "Spot d'exception : fosse sous le Viaduc de Calix où se calent les plus gros spécimens.",
+      "bergesArborees": "Rives ombragées profondes de Blainville lors des journées d'été caniculaires.",
+      "structuresPortuaires": "Nouveau Bassin et darses de chargement abritées des courants violents."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Se tient dans les couches profondes et profite des gros poissons fourrage déstabilisés.",
+      "traficNavires": "Insensible au passage des navires ; réveillé par les vibrations de fond.",
+      "luminositeEtNuit": "Activité nocturne et crépusculaire majeure guidée par ses barbillons ultrasensibles.",
+      "turbidite": "Extraordinaire efficacité en eau trouble et mâchée grâce à sa ligne latérale résonnante."
+    },
+    "tactics": [
+      "Pêche au posé lourd avec gros vif (brème de 1 kg ou gros mulet) sur montage bouée ou flotteur sous-marin",
+      "Pêche aux leurres souples imposants (shad 18-25cm plombé 40-80g) dandiné au ras du fond",
+      "Pêche au clonk depuis une embarcation avec grappe d'encornets ou gros vers canadiens"
+    ],
+    "recommendedLuresAndBaits": [
+      "Grosse brème vivante de 500g à 1 kg ou gros carassin",
+      "Grappe de 15 à 20 gros vers de terre canadiens montés sur hameçon simple 4/0",
+      "Shad XXL souple sombre (20 cm) sur tête plombée renforcée"
+    ]
+  },
+  "bateau": {
+    "present": false,
+    "presenceSeason": "Espèce strictement absente en mer ouverte",
+    "habitats": {
+      "rochesDuCalvados": "Non applicable (poisson d'eau douce)",
+      "epavesDDay": "Non applicable",
+      "bancsDeSableEtRidens": "Non applicable"
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Non applicable",
+      "tidalPhase": "Non applicable",
+      "slackVsCurrent": "Sédentaire calé au fond des fosses"
+    },
+    "weatherImpact": {
+      "favorableWinds": "Chaleur estivale étouffante et temps orageux lourd stimulant son appétit",
+      "unfavorableWinds": "Chute brutale de température qui le plonge en léthargie hivernale"
+    },
+    "tactics": [
+      "Pêche du bord le long des quais du canal ou en bateau en eaux intérieures calmes"
+    ],
+    "recommendedLuresAndBaits": [
+      "Non applicable en mer"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne silure puissante 2m70 - 3m00, puissance 150-400g, blank carbone renforcé",
+      "reel": "Taille 6500 à 10000 frein de combat puissant (15kg+)",
+      "line": "Tresse 8 brins ultra-résistante en PE 4.0 à 6.0 (40 à 50/100, résistance 50-70 kg)",
+      "leader": "Bas de ligne en tresse kevlar ou monofilament 100/100 de 1m, hameçons forgés 3/0 à 6/0"
+    },
+    "boatCombo": {
+      "rod": "Non applicable",
+      "reel": "N/A",
+      "line": "N/A",
+      "leader": "N/A"
+    },
+    "topEquipment": [
+      "Gants de protection en cuir renforcé (indispensables pour la prise à la mâchoire inférieure)",
+      "Tapis de réception géant étanche pour poser le poisson sur le quai sans abîmer son mucus"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 1, 2, 3, 3, 3, 3, 3, 2, 0, 0],
+    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  },
+  "localSecret": "Sous le Viaduc de Calix par 8 m de fond, déposez en soirée une grappe de 15 gros vers de terreau panachée avec 2 lanières d'encornet frais sur un montage muni d'un petit flotteur sous-marin de 20g : le cocktail visuel et olfactif décollé de 30 cm de la vase déclenche des attaques brutales de silures dépassant souvent 1m80 !"
+}

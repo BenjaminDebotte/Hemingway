@@ -1,0 +1,109 @@
+{
+  "id": "alose-feinte",
+  "identity": {
+    "name": "Alose feinte",
+    "scientificName": "Alosa fallax",
+    "family": "Clupéidés",
+    "localNames": ["Gatte", "Coupar", "Pucelle"],
+    "category": "Grand migrateur",
+    "identificationNotes": "Corps haut comprimé argenté brillant, rangée longitudinale de 4 à 8 taches noires distinctes sur le flanc derrière l'opercule, écailles caduques très brillantes, nageoire caudale profondément fourchue."
+  },
+  "regulations": {
+    "zone": "Manche Est - Estuaire de l'Orne / Canal (Calvados)",
+    "legalSizeCm": 30,
+    "recommendedSizeCm": 35,
+    "bagLimit": "Prélèvement très limité (migrateur patrimonial protégé)",
+    "closedSeason": "Fermée hors période de montaison printanière",
+    "specialRules": [
+      "Poisson migrateur anadrome remontant les fleuves côtiers pour la reproduction",
+      "Pêche sportive aux leurres légers avec remise à l'eau recommandée"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "30 - 45 cm",
+    "maxLengthCm": "55 cm",
+    "averageWeightKg": "0.4 - 1.2 kg",
+    "maxWeightKg": "2.0 kg",
+    "diet": [
+      "Petits sprats et alevins pélagiques en mer",
+      "Crustacés planctoniques et puces d'eau",
+      "Ne s'alimente pratiquement pas lors de la montaison (attaque par agressivité réflexe)"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Avril à Juin (montaison printanière vers les frayères de l'Orne)",
+    "keySpots": {
+      "enrochements": "Bordures de Bénouville et Blainville où elle progresse en bancs serrés.",
+      "palplanches": "Quais de Colombelles le long des zones de courant continu.",
+      "pilesDePont": "Veines d'eau puissantes sous Pegasus Bridge et le Viaduc de Calix.",
+      "bergesArborees": "Tronçons bordés d'arbres lors des pauses de montaison en journée.",
+      "structuresPortuaires": "Sas éclusier et avant-port de Ouistreham (franchissement des portes)."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "L'appel de courant d'eau douce mêlée à l'eau salée déclenche le passage des bancs.",
+      "traficNavires": "Fait éclater le banc qui se reforme aussitôt le calme revenu.",
+      "luminositeEtNuit": "Montaison active en milieu de journée ensoleillée et en fin d'après-midi.",
+      "turbidite": "Très sensible à la lumière ; attaque les reflets brillants par eau claire."
+    },
+    "tactics": [
+      "Animation de petits casting jigs plombés ou cuillers ondulantes brillantes (7-15g)",
+      "Pêche à la mouche avec streamer fluo (rose, chartreuse ou blanc) ramené par saccades rapides",
+      "Train de 2 ou 3 micro-mouches brillantes sous un lest coulant"
+    ],
+    "recommendedLuresAndBaits": [
+      "Petite cuiller ondulante fine chromée ou dorée 7g à 10g",
+      "Casting jig miniature 10g holographique",
+      "Mouches noyées brillantes ou streamers en mylar"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Mars à Mai (rassemblement en baie avant l'entrée dans le canal)",
+    "habitats": {
+      "rochesDuCalvados": "Rare sur les hauts-fonds rocheux purs.",
+      "epavesDDay": "Non applicable (poisson pélagique côtier).",
+      "bancsDeSableEtRidens": "Secteur de l'embouchure de l'Orne et bancs côtiers de Sword Beach."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients de 70 à 95 (fortes marées facilitant la rentrée dans l'estuaire).",
+      "tidalPhase": "Les trois premières heures de flot montant.",
+      "slackVsCurrent": "Très active en plein courant de marée montante."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Temps doux et printanier, vent d'Est ou de Sud.",
+      "unfavorableWinds": "Coup de froid tardif bloquant la montaison au large."
+    },
+    "tactics": [
+      "Lancer-ramener au jig léger dans les veines de courant devant Ouistreham",
+      "Pêche à la traîne côtière très légère avec petite cuiller ondulante"
+    ],
+    "recommendedLuresAndBaits": [
+      "Cuiller ondulante type Toby 10g argentée",
+      "Mitraillette à micro-plumes blanches"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne lancer léger 2m20 - 2m40, puissance 3-15g, action souple pour ne pas déchirer sa bouche fragile",
+      "reel": "Taille 2000-2500 fluide",
+      "line": "Nylon souple 18/100 ou tresse PE 0.6 avec long bas de ligne",
+      "leader": "Fluorocarbone 16/100 à 18/100"
+    },
+    "boatCombo": {
+      "rod": "Canne fine 2m10 - 2m40, puissance 5-20g",
+      "reel": "Taille 2500",
+      "line": "Tresse PE 0.8",
+      "leader": "Fluorocarbone 20/100"
+    },
+    "topEquipment": [
+      "Épuisette fine obligatoire : l'alose feinte a des écailles très fragiles qui se détachent au contact",
+      "Hameçons simples sans ardillon recommandés pour faciliter la décroche rapide sans traumatisme"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 2, 3, 2, 0, 0, 0, 0, 0, 0],
+    "bateau": [0, 0, 1, 3, 2, 1, 0, 0, 0, 0, 0, 0]
+  },
+  "localSecret": "En mai sous le pont de Colombelles et à Bénouville, repérez les remous de surface trahissant le passage des aloses feintes. Lancez une petite cuiller ondulante argentée de 7g en travers du courant et ramenez très vite sans temps mort : l'alose attaque par réflexe d'agressivité territoriale !"
+}

@@ -1,0 +1,110 @@
+{
+  "id": "gardon-commun",
+  "identity": {
+    "name": "Gardon commun",
+    "scientificName": "Rutilus rutilus",
+    "family": "Cyprinidés",
+    "localNames": ["Gardon", "Rousse", "Roche"],
+    "category": "Cyprinidé / Poisson blanc",
+    "identificationNotes": "Corps fuselé argenté, œil avec un iris teinté de rouge-orangé très caractéristique, nageoires pelviennes et anale orangées à rouges, insertion de la nageoire dorsale située exactement à l'aplomb des nageoires ventrales."
+  },
+  "regulations": {
+    "zone": "Canal de Caen à la mer (Bassin St-Pierre, Calix, Hérouville, Colombelles, Blainville)",
+    "legalSizeCm": null,
+    "recommendedSizeCm": 15,
+    "bagLimit": "Non soumis à quota journalier strict (prélèvement raisonné)",
+    "closedSeason": "Pêche au coup autorisée toute l'année à une ligne (non affecté par la fermeture carnassiers)",
+    "specialRules": [
+      "Bassin Saint-Pierre (amont Pont de la Fonderie) : Carte de pêche AAPPMA obligatoire",
+      "En aval du Pont de la Fonderie (Domaine Public Maritime) : Pêche libre sans permis fédéral",
+      "Interdiction formelle de relâcher des poissons d'eau douce en milieu purement marin"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "12 - 25 cm",
+    "maxLengthCm": "45 cm",
+    "averageWeightKg": "0.1 - 0.35 kg",
+    "maxWeightKg": "1.5 kg",
+    "diet": [
+      "Larves aquatiques d'insectes (chironomes / vers de vase)",
+      "Petits bivalves et gastéropodes des roches",
+      "Débris végétaux et algues filamenteuses encroûtantes",
+      "Mousses et biofilm tapissant les palplanches"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Toute l'année (activité optimale d'Avril à Novembre)",
+    "keySpots": {
+      "enrochements": "Pied du talus entre 3 et 6 m : les bancs fouillent les anfractuosités des pierres à la recherche d'invertébrés.",
+      "palplanches": "Quais métalliques verticaux riches en algues : les gardons broutent la tôle entre 1 et 3 m sous la surface.",
+      "pilesDePont": "Zones de calme derrière les piles de Calix et Colombelles, abri contre les remous des navires.",
+      "bergesArborees": "Sous les saules et peupliers de Ranville et Bénouville : postes d'été exceptionnels profitant de l'ombre et des chutes d'insectes.",
+      "structuresPortuaires": "Pontons du Bassin Saint-Pierre et darses d'Hérouville : rassemblement massif de bancs en période hivernale."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "L'accélération brutale du courant lors des sas impose d'alourdir la ligne (passer à un flotteur plat ou au feeder) pour maintenir l'esche immobile.",
+      "traficNavires": "Le ressac des péniches et cargos remet en suspension les particules d'amorce : pic de touches 5 à 10 minutes après le retour au calme.",
+      "luminositeEtNuit": "Poissons très actifs au lever du jour et au coucher du soleil. En plein été, les postes ombragés sous les arbres restent productifs toute la journée.",
+      "turbidite": "Par eau claire, utiliser une amorce sombre (noire) et des lignes très discrètes. Par eau teintée après les pluies, une amorce plus claire et traçante attire les bancs de loin."
+    },
+    "tactics": [
+      "Pêche au coup à la grande canne (9m50 à 11m50) avec ligne fine (8/100 à 10/100) et flotteur effilé (0.75g à 2g)",
+      "Pêche au feeder / cage feeder au milieu du chenal (par 8m de fond) avec scion très sensible (quiver 0.75 à 1 oz)",
+      "Pêche à la graine (chènevis cuit et blé) sur le pied de berge pour cibler les gros gardons d'un demi-livre"
+    ],
+    "recommendedLuresAndBaits": [
+      "Vers de vase (chironomes) et pinkies rouges ou blancs",
+      "Grains de chènevis cuits (indispensable pour sélectionner les gros spécimens)",
+      "Pain blanc frais ou maïs doux au feeder"
+    ]
+  },
+  "bateau": {
+    "present": false,
+    "presenceSeason": "Espèce strictement absente en mer ouverte",
+    "habitats": {
+      "rochesDuCalvados": "Non applicable (poisson d'eau douce)",
+      "epavesDDay": "Non applicable",
+      "bancsDeSableEtRidens": "Non applicable"
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Préfère les eaux calmes sans forts courants de vidange maritime",
+      "tidalPhase": "Non applicable",
+      "slackVsCurrent": "Pêche optimale en eau stabilisée entre deux manœuvres d'écluse"
+    },
+    "weatherImpact": {
+      "favorableWinds": "Vent faible dans le dos de la rive facilitant la tenue de la grande canne",
+      "unfavorableWinds": "Grand vent de travers rendant impossible la détection des touches sur flotteur fin"
+    },
+    "tactics": [
+      "Pêche au coup classique du bord le long du chemin de halage"
+    ],
+    "recommendedLuresAndBaits": [
+      "Non applicable en mer"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Grande canne à emmanchements 9m50 - 11m00 ou canne feeder 3m30 - 3m60 puissance 20-60g",
+      "reel": "Taille 3000 match garni de nylon coulant (pour la pêche au feeder)",
+      "line": "Corps de ligne en nylon 12/100 à 14/100 (feeder) ou 10/100 (coup)",
+      "leader": "Bas de ligne 20 à 30 cm en fluorocarbone ou nylon fin 7/100 à 9/100, hameçon n°18 à n°22"
+    },
+    "boatCombo": {
+      "rod": "Non applicable",
+      "reel": "N/A",
+      "line": "N/A",
+      "leader": "N/A"
+    },
+    "topEquipment": [
+      "Station de pêche ou siège modulaire réglable pour les talus inclinés du canal",
+      "Rouleau à déboîter sur trépied stable pour le chemin de halage",
+      "Bourriche micro-mailles de 3 à 4 m pour maintenir les prises dans l'eau profonde"
+    ]
+  },
+  "calendar": {
+    "canal": [1, 1, 2, 2, 3, 3, 3, 3, 3, 2, 2, 1],
+    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  },
+  "localSecret": "Dans le canal de Caen, incorporez 25 à 30% de terre de Somme ou d'argile lourde dans votre amorce : cela empêche les boules d'amorce de dévaler le talus d'enrochement vers les 9 m de fond et ancre solidement le coup malgré le ressac créé par les cargos."
+}

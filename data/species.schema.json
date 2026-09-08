@@ -1,0 +1,222 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FicheTechniquePoissonNormandie",
+  "description": "Schéma de données pour une fiche technique de pêche sur le littoral normand (Canal de Caen à la mer & Côte de Nacre en bateau)",
+  "type": "object",
+  "required": [
+    "id",
+    "identity",
+    "regulations",
+    "biology",
+    "canal",
+    "bateau",
+    "gear",
+    "calendar",
+    "localSecret"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Identifiant unique (slug kebab-case, ex: bar-commun)"
+    },
+    "identity": {
+      "type": "object",
+      "required": ["name", "scientificName", "family", "localNames", "category", "identificationNotes"],
+      "properties": {
+        "name": { "type": "string", "description": "Nom vernaculaire officiel" },
+        "scientificName": { "type": "string", "description": "Nom binominal latin" },
+        "family": { "type": "string", "description": "Famille biologique (ex: Moronidés, Sparidés)" },
+        "localNames": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Appellations locales normandes ou usuelles (ex: Loup, Drille, Griset)"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "Carnassier marin",
+            "Sparidé",
+            "Poisson plat",
+            "Poisson de roche / épave",
+            "Mugilidé",
+            "Grand migrateur",
+            "Céphalopode",
+            "Carnassier eau douce / saumâtre",
+            "Cyprinidé / Poisson blanc"
+          ],
+          "description": "Catégorie halieutique principale"
+        },
+        "identificationNotes": { "type": "string", "description": "Points visuels distinctifs d'identification rapide" }
+      }
+    },
+    "regulations": {
+      "type": "object",
+      "required": ["zone", "legalSizeCm", "bagLimit", "closedSeason", "specialRules"],
+      "properties": {
+        "zone": { "type": "string", "description": "Zone maritime d'application (Manche Est - CIEM 7.d)" },
+        "legalSizeCm": { "type": ["number", "null"], "description": "Taille minimale légale de capture en cm (null si non réglementé)" },
+        "recommendedSizeCm": { "type": ["number", "null"], "description": "Taille éthique / biologique conseillée en cm" },
+        "bagLimit": { "type": "string", "description": "Quota de capture récréative journalier par pêcheur" },
+        "closedSeason": { "type": "string", "description": "Période de fermeture biologique ou interdiction de capture" },
+        "specialRules": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Règles spécifiques (ex: marquage caudale, interdiction nocturne, domaine DPM)"
+        }
+      }
+    },
+    "biology": {
+      "type": "object",
+      "required": ["averageLengthCm", "maxLengthCm", "averageWeightKg", "maxWeightKg", "diet"],
+      "properties": {
+        "averageLengthCm": { "type": "string" },
+        "maxLengthCm": { "type": "string" },
+        "averageWeightKg": { "type": "string" },
+        "maxWeightKg": { "type": "string" },
+        "diet": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Régime alimentaire principal / proies cibles"
+        }
+      }
+    },
+    "canal": {
+      "type": "object",
+      "required": ["present", "presenceSeason", "keySpots", "triggers", "tactics", "recommendedLuresAndBaits"],
+      "properties": {
+        "present": { "type": "boolean", "description": "Présence avérée dans le canal de Caen à Ouistreham" },
+        "presenceSeason": { "type": "string", "description": "Période d'activité dans le canal" },
+        "keySpots": {
+          "type": "object",
+          "required": ["enrochements", "palplanches", "pilesDePont", "bergesArborees", "structuresPortuaires"],
+          "properties": {
+            "enrochements": { "type": "string", "description": "Comportement sur les talus de pierres (riprap)" },
+            "palplanches": { "type": "string", "description": "Comportement sur les quais métalliques verticaux" },
+            "pilesDePont": { "type": "string", "description": "Comportement autour des piles (Pegasus, Calix, Colombelles)" },
+            "bergesArborees": { "type": "string", "description": "Rôle des zones ombragées et du couvert végétal" },
+            "structuresPortuaires": { "type": "string", "description": "Ducs d'Albe, cales, sorties d'eau douce" }
+          }
+        },
+        "triggers": {
+          "type": "object",
+          "required": ["ecluseesOuistreham", "traficNavires", "luminositeEtNuit", "turbidite"],
+          "properties": {
+            "ecluseesOuistreham": { "type": "string", "description": "Impact du courant de vidange et de remplissage des sas" },
+            "traficNavires": { "type": "string", "description": "Impact du passage des cargos et ferries (effet piston)" },
+            "luminositeEtNuit": { "type": "string", "description": "Aube, crépuscule, et réaction aux éclairages urbains nocturnes" },
+            "turbidite": { "type": "string", "description": "Comportement selon la clarté (eau mâchée vs eau claire)" }
+          }
+        },
+        "tactics": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Techniques de pêche spécifiques au canal"
+        },
+        "recommendedLuresAndBaits": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Top leurres et appâts pour le canal"
+        }
+      }
+    },
+    "bateau": {
+      "type": "object",
+      "required": ["present", "presenceSeason", "habitats", "tideAndCurrent", "weatherImpact", "tactics", "recommendedLuresAndBaits"],
+      "properties": {
+        "present": { "type": "boolean", "description": "Présence avérée en mer sur la Côte de Nacre" },
+        "presenceSeason": { "type": "string", "description": "Période de pêche en bateau" },
+        "habitats": {
+          "type": "object",
+          "required": ["rochesDuCalvados", "epavesDDay", "bancsDeSableEtRidens"],
+          "properties": {
+            "rochesDuCalvados": { "type": "string", "description": "Pêche sur le grand plateau calcaire" },
+            "epavesDDay": { "type": "string", "description": "Pêche sur les épaves 1944 (15m à 35m)" },
+            "bancsDeSableEtRidens": { "type": "string", "description": "Pêche sur bancs de Lion / Bernières" }
+          }
+        },
+        "tideAndCurrent": {
+          "type": "object",
+          "required": ["bestCoefficients", "tidalPhase", "slackVsCurrent"],
+          "properties": {
+            "bestCoefficients": { "type": "string", "description": "Coefficients de marée recommandés" },
+            "tidalPhase": { "type": "string", "description": "Flot (Est) vs Jusant (Ouest)" },
+            "slackVsCurrent": { "type": "string", "description": "Étales vs plein courant" }
+          }
+        },
+        "weatherImpact": {
+          "type": "object",
+          "required": ["favorableWinds", "unfavorableWinds"],
+          "properties": {
+            "favorableWinds": { "type": "string", "description": "Vents favorables et état de mer idéal" },
+            "unfavorableWinds": { "type": "string", "description": "Vents défavorables (clapot, eau crayeuse)" }
+          }
+        },
+        "tactics": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Techniques bateau (dérive, ascenseur, traction, tenya, posé)"
+        },
+        "recommendedLuresAndBaits": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Top leurres et appâts en bateau"
+        }
+      }
+    },
+    "gear": {
+      "type": "object",
+      "required": ["canalCombo", "boatCombo", "topEquipment"],
+      "properties": {
+        "canalCombo": {
+          "type": "object",
+          "required": ["rod", "reel", "line", "leader"],
+          "properties": {
+            "rod": { "type": "string" },
+            "reel": { "type": "string" },
+            "line": { "type": "string" },
+            "leader": { "type": "string" }
+          }
+        },
+        "boatCombo": {
+          "type": "object",
+          "required": ["rod", "reel", "line", "leader"],
+          "properties": {
+            "rod": { "type": "string" },
+            "reel": { "type": "string" },
+            "line": { "type": "string" },
+            "leader": { "type": "string" }
+          }
+        },
+        "topEquipment": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Accessoires indispensables spécifiques (salabre long manche, épuisette bateau, etc.)"
+        }
+      }
+    },
+    "calendar": {
+      "type": "object",
+      "required": ["canal", "bateau"],
+      "properties": {
+        "canal": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 0, "maximum": 3 },
+          "minItems": 12,
+          "maxItems": 12,
+          "description": "Score d'activité mensuel de Janvier (index 0) à Décembre (index 11) : 0 = nul/absent, 1 = faible, 2 = moyen, 3 = excellent"
+        },
+        "bateau": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 0, "maximum": 3 },
+          "minItems": 12,
+          "maxItems": 12,
+          "description": "Score d'activité mensuel de Janvier (index 0) à Décembre (index 11)"
+        }
+      }
+    },
+    "localSecret": {
+      "type": "string",
+      "description": "Conseil d'expert ou astuce secrète des pêcheurs locaux normands"
+    }
+  }
+}

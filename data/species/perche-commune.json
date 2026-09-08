@@ -1,0 +1,110 @@
+{
+  "id": "perche-commune",
+  "identity": {
+    "name": "Perche commune",
+    "scientificName": "Perca fluviatilis",
+    "family": "Percidés",
+    "localNames": ["Zèbre", "Perchaude", "Perchot"],
+    "category": "Carnassier eau douce / saumâtre",
+    "identificationNotes": "Corps trapu et bossu chez les gros sujets, dos verdâtre orné de 5 à 9 bandes transversales sombres, nageoires pelviennes et anale d'un rouge-orangé vif, première dorsale épineuse arborant une tache noire distinctive à l'arrière."
+  },
+  "regulations": {
+    "zone": "Canal de Caen à la mer (Bassin St-Pierre, Hérouville, Colombelles, Blainville)",
+    "legalSizeCm": null,
+    "recommendedSizeCm": 25,
+    "bagLimit": "Non soumis à quota journalier strict en DPM (prélèvement raisonné)",
+    "closedSeason": "Fermeture synchronisée avec les carnassiers (fin janvier à fin mai)",
+    "specialRules": [
+      "Bassin Saint-Pierre : Carte fédérale de pêche obligatoire (zone fluviale)",
+      "En aval du Pont de la Fonderie : Pêche libre (DPM), respect des dates d'ouverture des carnassiers conseillé",
+      "Pêche au vif ou leurre interdite pendant la fermeture de reproduction"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "18 - 30 cm",
+    "maxLengthCm": "50 cm",
+    "averageWeightKg": "0.2 - 0.8 kg",
+    "maxWeightKg": "2.5 kg",
+    "diet": [
+      "Larves d'insectes aquatiques et vers",
+      "Alevins de gardons, ablettes et épinoches",
+      "Petites crevettes d'eau douce et saumâtre (Gammarus, Palaemonetes)",
+      "Petits gobies des enrochements"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Toute l'année (activité maximale de Mai à Novembre)",
+    "keySpots": {
+      "enrochements": "Chasse en bandes compactes dans les anfractuosités des blocs de pierre entre 1 et 4 m de profondeur.",
+      "palplanches": "Poste de prédilection : se tient en embuscade entre deux eaux collée aux parois d'acier pour surprendre les alevins.",
+      "pilesDePont": "Piliers de Calix et passerelles piétonnes : les gros spécimens solitaires ('bossues') se calent à l'abri du courant.",
+      "bergesArborees": "Sous les branchages surplombants et racines de saules : chasses de surface spectaculaires l'été sur les insectes et alevins.",
+      "structuresPortuaires": "Pontons du Bassin Saint-Pierre, ducs d'Albe et coques de bateaux : concentration exceptionnelle de bancs de perches."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Supporte modérément la salinité : reste dans la tranche d'eau de surface (eau douce moins dense) ou se replie vers l'amont lors des marées.",
+      "traficNavires": "Le ressac provoqué par les bateaux remue les bordures et met instantanément les perches en chasse.",
+      "luminositeEtNuit": "Chasseresse purement diurne chassant à vue. Les belles journées ensoleillées d'été et le milieu d'après-midi sont très productifs.",
+      "turbidite": "Préfère les eaux claires à modérément teintées. Par eau très trouble, privilégier les leurres vibrants (lames, spinners)."
+    },
+    "tactics": [
+      "Pêche aux petits leurres souples (shad 2\" à 3\", créatures) montés sur micro-tête plombée",
+      "Pêche au poisson nageur suspending (minnow 50-65mm) animé par de petits coups de scion secs (twitching)",
+      "Drop-shot le long des palplanches et au ras des pontons avec un ver de terre ou petit leurre souple"
+    ],
+    "recommendedLuresAndBaits": [
+      "Keitech Swing Impact 2.5\" ou 3\" (Coloris Wakasagi / Chartreuse)",
+      "Illex Squirrel 61 SP ou Chubby 38",
+      "Lame vibrante métallique 5g à 7g ou cuiller tournante n°2"
+    ]
+  },
+  "bateau": {
+    "present": false,
+    "presenceSeason": "Espèce strictement absente en mer ouverte",
+    "habitats": {
+      "rochesDuCalvados": "Non applicable (poisson d'eau douce)",
+      "epavesDDay": "Non applicable",
+      "bancsDeSableEtRidens": "Non applicable"
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Préfère les eaux calmes du canal à faible circulation d'eau de mer",
+      "tidalPhase": "Non applicable",
+      "slackVsCurrent": "Très active en eau calme"
+    },
+    "weatherImpact": {
+      "favorableWinds": "Beau temps ensoleillé, vent faible créant une légère brise de surface",
+      "unfavorableWinds": "Grand vent violent et pluie froide hivernale qui la clouent au fond"
+    },
+    "tactics": [
+      "Pêche de bordure au canal (street fishing très populaire à Caen et Hérouville)"
+    ],
+    "recommendedLuresAndBaits": [
+      "Non applicable en mer"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne Ultra-Light (UL) ou Light (L) 1m90 - 2m10, puissance 1-7g ou 2-10g, action rapide et scion sensible",
+      "reel": "Taille 1000 - 2000 léger et fluide",
+      "line": "Tresse 4 ou 8 brins très fine en PE 0.4 à 0.6 (6 à 8/100)",
+      "leader": "1.5m à 2m de fluorocarbone très discret en 16/100 à 20/100"
+    },
+    "boatCombo": {
+      "rod": "Non applicable",
+      "reel": "N/A",
+      "line": "N/A",
+      "leader": "N/A"
+    },
+    "topEquipment": [
+      "Épuisette à raquette ou télescopique avec filet en caoutchouc (préserve le mucus fragile des perches)",
+      "Petite pince fine pour décrocher sans blesser les petits hameçons",
+      "Boîte d'agrafes micro pour changer rapidement de leurre"
+    ]
+  },
+  "calendar": {
+    "canal": [1, 1, 0, 0, 2, 3, 3, 3, 3, 3, 2, 1],
+    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  },
+  "localSecret": "Autour des pontons du Bassin Saint-Pierre et le long des coques amarrées à Colombelles, lancez une petite lame vibrante de 5g le long de la structure et ramenez-la par saccades rapides entre deux eaux. L'effet de panique déclenche les attaques réflexes des grosses perches 'bossues' (35 cm+) !"
+}

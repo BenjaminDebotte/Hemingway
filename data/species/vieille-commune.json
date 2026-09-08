@@ -1,0 +1,108 @@
+{
+  "id": "vieille-commune",
+  "identity": {
+    "name": "Vieille commune",
+    "scientificName": "Labrus bergylta",
+    "family": "Labridés",
+    "localNames": ["Vieille grande", "Vras", "Tanche de mer"],
+    "category": "Poisson de roche / épave",
+    "identificationNotes": "Corps massif et puissant, grosses lèvres charnues bordées de dents coniques fortes, livrée extrêmement variable (du brun-vert marbré au rouge-orangé vif selon l'âge et la profondeur), nageoire dorsale longue garnie d'épines dures."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": null,
+    "recommendedSizeCm": 30,
+    "bagLimit": "Prélèvement très modéré (croissance lente et sédentarité marquée)",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Poisson territorial à forte valeur patrimoniale : privilégier le catch & release",
+      "Remise à l'eau rapide sur son trou d'origine pour préserver le plateau rocheux"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "30 - 45 cm",
+    "maxLengthCm": "60 cm",
+    "averageWeightKg": "0.8 - 2.2 kg",
+    "maxWeightKg": "4.5 kg",
+    "diet": [
+      "Crabes verts, étrilles et tourteaux juvéniles",
+      "Balanes, berniques et moules sauvages broyées",
+      "Crevettes bouquets et vers tubicoles",
+      "Ophiures et oursins"
+    ]
+  },
+  "canal": {
+    "present": false,
+    "presenceSeason": "Espèce strictement marine inféodée aux roches du large",
+    "keySpots": {
+      "enrochements": "Non applicable (espèce marine)",
+      "palplanches": "Non applicable",
+      "pilesDePont": "Non applicable",
+      "bergesArborees": "Non applicable",
+      "structuresPortuaires": "Non applicable"
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Non applicable",
+      "traficNavires": "Non applicable",
+      "luminositeEtNuit": "Non applicable",
+      "turbidite": "Non applicable"
+    },
+    "tactics": [
+      "Espèce exclusivement ciblée en bateau sur les plateaux rocheux et épaves"
+    ],
+    "recommendedLuresAndBaits": [
+      "Non applicable en canal"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Mai à Novembre (très active dès que l'eau dépasse 13°C)",
+    "habitats": {
+      "rochesDuCalvados": "Spot d'excellence : failles profondes, dalles de calcaire et laminaires de Lion à Bernières (5-18m).",
+      "epavesDDay": "Tôles rouillées, cales ouvertes et anfractuosités des épaves de 1944.",
+      "bancsDeSableEtRidens": "Absente des sables purs ; cantonnée aux blocs et cailloutis rocheux."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients moyens de 45 à 70 pour pêcher à l'aplomb des trous.",
+      "tidalPhase": "Les étales de marée et les périodes de ralentissement de courant.",
+      "slackVsCurrent": "S'alimente au cœur de sa faille quand le courant ne la contraint pas à lutter."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Vent faible de terre (Sud/SO), eau claire et soleil éclairant les fonds rocheux.",
+      "unfavorableWinds": "Forte houle de Nord qui secoue les laminaires et trouble les trous de roche."
+    },
+    "tactics": [
+      "Pêche au Tenya lourd (30-60g) esché d'un crabe vert ou d'une grosse crevette crue",
+      "Leurre souple imitation écrevisse ou créature monté en texan anti-accroc entre les laminaires",
+      "Pêche à soutenir au crabe ligaturé au ras des parois verticales rocheuses"
+    ],
+    "recommendedLuresAndBaits": [
+      "Petit crabe vert vivant entier esché par les pattes arrière",
+      "Crevette bouquet fraîche ou cuite",
+      "Créature souple type craw (Black Minnow, Dolive Craw) en montage texan"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Non applicable (pêche marine)",
+      "reel": "N/A",
+      "line": "N/A",
+      "leader": "N/A"
+    },
+    "boatCombo": {
+      "rod": "Canne puissante 2m00 - 2m20, puissance 20-70g avec talon rigide pour brider le poisson",
+      "reel": "Taille 3000-4000 frein serré (5-7kg) pour arracher la vieille du fond dès la touche",
+      "line": "Tresse 8 brins PE 1.5 (20/100)",
+      "leader": "2m de fluorocarbone épais en 40/100 à 45/100 résistant aux frottements des roches"
+    },
+    "topEquipment": [
+      "Hameçons texans renforcés pour extirper le poisson sans ouverture de l'hameçon",
+      "Pince à ligaturer le crabe avec fil latex"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "bateau": [0, 0, 0, 0, 2, 3, 3, 3, 3, 2, 1, 0]
+  },
+  "localSecret": "Dès que vous sentez les 'toques' sèches et brutales de la vieille sur les Roches du Calvados, ferrez immédiatement et bridez sans ménagement en moulinant aussitôt : la vieille tente d'entrer à reculons dans son trou en quelques fractions de seconde. Si elle y parvient, elle bloque ses opercules épineux et vous couperez la ligne !"
+}

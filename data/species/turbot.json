@@ -1,0 +1,108 @@
+{
+  "id": "turbot",
+  "identity": {
+    "name": "Turbot",
+    "scientificName": "Scophthalmus maximus",
+    "family": "Scophthalmidés",
+    "localNames": ["Turbot de sable", "Prince des sables"],
+    "category": "Poisson plat",
+    "identificationNotes": "Corps rhomboïdal presque circulaire et très charnu, yeux situés sur le côté gauche, peau entièrement dépourvue d'écailles mais parsemée de gros tubercules osseux durs et coniques sur la face supérieure."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": 30,
+    "recommendedSizeCm": 40,
+    "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Maille minimale légale de 30 cm strictement obligatoire en Manche",
+      "Poisson plat noble très recherché des pêcheurs sportifs en bateau"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "35 - 60 cm",
+    "maxLengthCm": "100 cm",
+    "averageWeightKg": "1.5 - 5.0 kg",
+    "maxWeightKg": "15 kg",
+    "diet": [
+      "Lançons vivants et ammodites",
+      "Petits poissons de fond (tacauds, sprats, gobies)",
+      "Crevettes et petits crabes de sable",
+      "Lanières de maquereaux et calmars"
+    ]
+  },
+  "canal": {
+    "present": false,
+    "presenceSeason": "Espèce strictement marine absente des eaux du canal",
+    "keySpots": {
+      "enrochements": "Non applicable (espèce marine)",
+      "palplanches": "Non applicable",
+      "pilesDePont": "Non applicable",
+      "bergesArborees": "Non applicable",
+      "structuresPortuaires": "Non applicable"
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Non applicable",
+      "traficNavires": "Non applicable",
+      "luminositeEtNuit": "Non applicable",
+      "turbidite": "Non applicable"
+    },
+    "tactics": [
+      "Espèce exclusivement pêchée en bateau sur les bancs de sable du large"
+    ],
+    "recommendedLuresAndBaits": [
+      "Non applicable en canal"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Mai à Novembre (optimal de Juin à Octobre en dérive)",
+    "habitats": {
+      "rochesDuCalvados": "Cuvettes de gros graviers et coquilles entourant les pointes rocheuses.",
+      "epavesDDay": "Secteurs de ridens sableux situés à 100-300 m des grandes épaves de 1944.",
+      "bancsDeSableEtRidens": "Spot d'excellence : Banc de Bernières, Banc de Lion et ridens de Courseulles (10-25m)."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients de 55 à 80 assurant une dérive régulière du bateau.",
+      "tidalPhase": "Les heures de plein courant de flot et de jusant créant les ridens.",
+      "slackVsCurrent": "Chasseur à l'affût actif lorsque le courant balaye les lançons."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Vent régulier de 2 à 3 Beaufort permettant une dérive linéaire sans à-coups.",
+      "unfavorableWinds": "Vent nul (dérive nulle) ou tempête de Nord soulevant une mer désordonnée."
+    },
+    "tactics": [
+      "Dérive lente (1 à 1.5 nœud) au traîneau ou plomb coulissant avec lançon vivant",
+      "Montage potence longue (1m50 à 2m) en fluorocarbone 35/100 esché d'une lanière de maquereau taillée en biseau",
+      "Pêche au shad souple fin (type slug ou sandeel) grattant les crêtes de ridens"
+    ],
+    "recommendedLuresAndBaits": [
+      "Lançon frais ou vivant piqué par la tête sur hameçon 2/0 ou 3/0",
+      "Lanière de ventre de maquereau blanc brillant (12-15 cm)",
+      "Tentacule d'encornet frais ou calmar"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Non applicable (pêche marine)",
+      "reel": "N/A",
+      "line": "N/A",
+      "leader": "N/A"
+    },
+    "boatCombo": {
+      "rod": "Canne bateau 2m10 - 2m30, puissance 30-100g, scion sensible mais réserve au talon",
+      "reel": "Taille 4000 robuste avec frein régulier",
+      "line": "Tresse 8 brins PE 1.2 à 1.5 (18-20/100)",
+      "leader": "Fluorocarbone 35/100 à 40/100 très résistant, hameçon forgé 2/0 à 4/0"
+    },
+    "topEquipment": [
+      "Ancre flottante (parachute de dérive) pour réguler la vitesse du bateau sur le banc de sable",
+      "Salabre large ou épuisette à large ouverture plate pour monter les gros turbots sans décrocher"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "bateau": [0, 0, 0, 0, 2, 3, 3, 3, 3, 2, 1, 0]
+  },
+  "localSecret": "Sur les ridens du banc de Bernières, taillez une lanière dans le ventre blanc d'un maquereau frais en lui donnant une forme effilée en queue d'hirondelle : avec la vitesse de dérive, la lanière ondule à 20 cm du fond sableux en émettant des reflets blancs irrésistibles pour les gros turbots camouflés !"
+}

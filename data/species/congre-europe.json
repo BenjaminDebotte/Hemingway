@@ -1,0 +1,111 @@
+{
+  "id": "congre-europe",
+  "identity": {
+    "name": "Congre d'Europe",
+    "scientificName": "Conger conger",
+    "family": "Congridés",
+    "localNames": ["Anguille de mer", "Fielas", "Siffleur (jeune)"],
+    "category": "Poisson de roche / épave",
+    "identificationNotes": "Corps serpentiforme très puissant gris ardoise à noirâtre, nageoire dorsale débutant nettement en arrière de l'extrémité des pectorales (contrairement à l'anguille), mâchoires redoutables garnies de dents coupantes très serrées."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": 60,
+    "recommendedSizeCm": 80,
+    "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Maille légale obligatoire de 60 cm (Annexe I Arrêté ministériel du 26/10/2012)",
+      "Bas de ligne en acier gainé ou monofilament 80/100 indispensable contre les dents"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "80 - 150 cm",
+    "maxLengthCm": "250 cm",
+    "averageWeightKg": "3.0 - 15.0 kg",
+    "maxWeightKg": "40 kg+",
+    "diet": [
+      "Poissons entiers (maquereaux, tacauds, grondins)",
+      "Céphalopodes entiers (seiches, poulpes, calmars)",
+      "Gros crabes et tourteaux broyés",
+      "Charognes fraîches de fond"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Avril à Décembre (tapis dans les failles profondes des enrochements salés)",
+    "keySpots": {
+      "enrochements": "Failles rocheuses profondes entre Bénouville, Ranville et Ouistreham.",
+      "palplanches": "Cavités sous les ducs d'Albe et pieds de palplanches des bassins de marée.",
+      "pilesDePont": "Cavités sombres sous les fondations de Pegasus Bridge.",
+      "bergesArborees": "Rare en amont saumâtre ; exige une salinité marine soutenue.",
+      "structuresPortuaires": "Fosses du musoir d'Ouistreham et cales profondes du port de commerce."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Les forts courants apportant des proies déstabilisées réveillent son appétit.",
+      "traficNavires": "Reste calé à l'abri dans son trou pendant les passages de navires.",
+      "luminositeEtNuit": "Activité de chasse quasi exclusivement nocturne ; sort de son antre à la nuit noire.",
+      "turbidite": "Chasseur olfactif guidé par ses narines tubulaires ; insensible à l'eau trouble."
+    },
+    "tactics": [
+      "Pêche au posé lourd de nuit avec poisson entier (maquereau ou sardine ficelée)",
+      "Montage coulissant direct avec plombée lourde 80-120g et empile acier de 80 cm"
+    ],
+    "recommendedLuresAndBaits": [
+      "Maquereau entier frais fendu sur le flanc pour diffuser l'huile",
+      "Tacaud entier frais ou tête de seiche",
+      "Sardine fraîche ligaturée au fil élastique"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Toute l'année (spécimens géants dans les cales des épaves 1944)",
+    "habitats": {
+      "rochesDuCalvados": "Profondes cavernes du plateau rocheux calcaire (12-22m).",
+      "epavesDDay": "Spot suprême : Épaves de Courseulles et Ouistreham (Empire Broadsword, Susan B. Anthony).",
+      "bancsDeSableEtRidens": "Absente des zones sableuses pures sans couvert métallique ou rocheux."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients faibles (35 à 55) pour mouiller le bateau avec précision au-dessus des tôles.",
+      "tidalPhase": "Les étales de pleine et basse mer facilitent la descente du montage dans les cales.",
+      "slackVsCurrent": "Pêche la plus productive au moment où le courant faiblit."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Mer très calme permettant le mouillage sur épave en toute sécurité.",
+      "unfavorableWinds": "Vent fort empêchant la stabilisation du bateau au-dessus de la ferraille."
+    },
+    "tactics": [
+      "Pêche à la calée lourde à l'aplomb de l'épave avec treuil ou canne puissante",
+      "Bas de ligne en câble d'acier 50-80 lbs avec hameçon forgé 6/0 à 8/0",
+      "Gros calmar entier ou tacaud vivant descendu directement à l'entrée de la faille"
+    ],
+    "recommendedLuresAndBaits": [
+      "Calmar entier frais ou gros tacaud vivant",
+      "Demi-maquereau ou bonite ligaturée",
+      "Gros morceau de seiche crue avec le blanc"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne puissante surfcasting lourd ou carpe 3m60, puissance 100-250g",
+      "reel": "Taille 6000-8000 robuste",
+      "line": "Nylon épais 45/100 ou tresse PE 2.5",
+      "leader": "Bas de ligne acier 50 lbs de 70 cm, hameçon 4/0"
+    },
+    "boatCombo": {
+      "rod": "Canne stand-up ou épave courte 1m80 - 2m10, puissance 30-50 lbs",
+      "reel": "Tambour tournant lourd ou gros moulinet spinning mer (frein 12kg+)",
+      "line": "Tresse 8 brins PE 3.0 à 4.0 (30-35/100)",
+      "leader": "Bas de ligne acier 80 lbs terminé par émerillon baril forgé et hameçon 7/0"
+    },
+    "topEquipment": [
+      "Gaffe ou salabre géant indispensable pour monter à bord un congre de 10 kg+",
+      "Chiffon épais et matraque pour maîtriser le poisson sur le pont du bateau"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 1, 2, 3, 3, 3, 3, 2, 1, 0],
+    "bateau": [2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 2]
+  },
+  "localSecret": "Sur les épaves du Débarquement, écrasez légèrement la tête d'un maquereau frais avant de le descendre au fond : le jus huileux qui s'échappe crée une piste olfactive irrésistible dans le courant de marée qui fait sortir les congres monstres (plus de 15 kg) de leurs tôles d'acier."
+}

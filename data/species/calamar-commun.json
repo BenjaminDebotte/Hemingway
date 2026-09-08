@@ -1,0 +1,110 @@
+{
+  "id": "calamar-commun",
+  "identity": {
+    "name": "Calamar commun (Encornet)",
+    "scientificName": "Loligo vulgaris",
+    "family": "Loliginidés",
+    "localNames": ["Encornet", "Chipiron", "Gale"],
+    "category": "Céphalopode",
+    "identificationNotes": "Corps cylindrique élancé en fuseau effilé vers l'arrière, deux grandes nageoires latérales triangulaires formant un losange occupant les deux tiers postérieurs du manteau, 8 bras courts et 2 longs tentacules munis de ventouses armées d'anneaux cornés, plume transparente interne (gladius)."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": null,
+    "recommendedSizeCm": 15,
+    "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Pêche récréative nocturne très prisée sous les éclairages artificiels",
+      "Excellent appât frais très recherché pour la traque du bar et du lieu"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "20 - 35 cm (manteau)",
+    "maxLengthCm": "50 cm",
+    "averageWeightKg": "0.3 - 1.0 kg",
+    "maxWeightKg": "2.5 kg",
+    "diet": [
+      "Sprats, lançons et petits maquereaux chassés en meute",
+      "Petites crevettes et euphausiacés pélagiques",
+      "Jeunes céphalopodes (cannibalisme fréquent)"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Octobre à Décembre (chasses automnales nocturnes très intenses)",
+    "keySpots": {
+      "enrochements": "Bordures profondes de Ranville et Bénouville à proximité des lumières.",
+      "palplanches": "Quais éclairés de Ouistreham et bassins de déchargement.",
+      "pilesDePont": "Spot d'excellence : Pegasus Bridge la nuit dans les cônes de lumière des lampadaires.",
+      "bergesArborees": "Peu présent sur les berges obscures ; attiré par la lumière urbaine.",
+      "structuresPortuaires": "Avant-port de Ouistreham et jetées éclairées du port de plaisance."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Pénètre dans le canal avec l'onde de marée haute froide d'automne.",
+      "traficNavires": "Chasse dans les tourbillons créés autour des quais après le départ des navires.",
+      "luminositeEtNuit": "Déclencheur suprême : les lampadaires projettent un cône lumineux qui concentre le sprat ; le calamar attaque depuis l'obscurité.",
+      "turbidite": "Exige une eau claire à modérément claire pour chasser ses proies pélagiques."
+    },
+    "tactics": [
+      "Lancer-ramener lent d'une turlutte Egi (taille 2.5 ou 3.0) phosphorescente à la limite d'ombre du pont",
+      "Pêche à la turlutte plombée dandinée doucement entre deux eaux sous les lampadaires",
+      "Pêche au bouchon lumineux avec une petite sardine fraîche ficelée sur turlutte"
+    ],
+    "recommendedLuresAndBaits": [
+      "Turlutte phosphorescente Yamashita Warm Jacket taille 2.5 ou 3.0 (Glow/Bleu)",
+      "Turlutte DTD Flash Coloris Blanc / Rose",
+      "Petite sardine fraîche ligaturée sur cage"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Septembre à Décembre (dérives au large en fin de journée et de nuit)",
+    "habitats": {
+      "rochesDuCalvados": "Fonds de graviers et tombants entourant les roches de Nacre (12-22m).",
+      "epavesDDay": "Abords des grandes épaves de 1944 où stationnent les bancs de sprats.",
+      "bancsDeSableEtRidens": "Veines de courant entre le large et les bancs côtiers."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients de 40 à 65 permettant une dérive douce à la verticale.",
+      "tidalPhase": "Les deux dernières heures de flot et début de jusant au crépuscule.",
+      "slackVsCurrent": "Très actif au ralenti de courant en soirée."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Mer très calme, vent de terre, ciel dégagé ou nuit claire.",
+      "unfavorableWinds": "Mer agitée et eau laiteuse qui dispersent les bancs de calmars."
+    },
+    "tactics": [
+      "Pêche au Tataki en dérive : train de 2 ou 3 turluttes souples agitées vivement puis pause de 5 secondes",
+      "Pêche à la turlutte plombée Tip-Run animée en dents de scie au ras du fond"
+    ],
+    "recommendedLuresAndBaits": [
+      "Turluttes Oppai Yamashita 7cm (Coloris Phospho / Tête Rouge)",
+      "Turlutte plombée Tip-Run 30g à 45g",
+      "Jig à calmar métallique lumineux"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne eging 2m30 - 2m60, action progressive souple pour ne pas déchirer les tentacules fragiles",
+      "reel": "Taille 2500 fluide avec frein doux",
+      "line": "Tresse 8 brins très fine PE 0.6 (10/100)",
+      "leader": "2m de fluorocarbone 20/100"
+    },
+    "boatCombo": {
+      "rod": "Canne tataki / eging bateau 2m00 - 2m20, scion très sensible",
+      "reel": "Taille 2500-3000",
+      "line": "Tresse PE 0.8",
+      "leader": "Fluorocarbone 24/100"
+    },
+    "topEquipment": [
+      "Lampe torche UV pour recharger instantanément la phosphorescence des turluttes la nuit",
+      "Épuisette à manche long pour hisser les calmars sans casser les tentacules"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 3, 2],
+    "bateau": [0, 0, 0, 0, 0, 0, 0, 1, 3, 3, 3, 2]
+  },
+  "localSecret": "À Pegasus Bridge en novembre entre 21h et minuit, placez-vous sur le quai et lancez votre turlutte phosphorescente (préalablement chargée à la lampe UV) dans la zone d'ombre à 2 mètres de la limite de lumière projetée par les lampadaires : animez par deux coups secs puis laissez planer. Les attaques d'encornets se matérialisent par une lourdeur franche !"
+}

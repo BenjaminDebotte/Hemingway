@@ -1,0 +1,113 @@
+{
+  "id": "bar-commun",
+  "identity": {
+    "name": "Bar commun (ou Bar franc)",
+    "scientificName": "Dicentrarchus labrax",
+    "family": "Moronidés",
+    "localNames": ["Loup", "Drille", "Loubine"],
+    "category": "Carnassier marin",
+    "identificationNotes": "Corps fuselé argenté, 2 nageoires dorsales séparées, tache sombre diffuse sur l'opercule armé d'épines. Flancs immaculés à l'âge adulte."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": 42,
+    "recommendedSizeCm": 48,
+    "bagLimit": "2 bars par jour et par pêcheur",
+    "closedSeason": "1er février au 31 mars : No-kill strict obligatoire en Manche",
+    "specialRules": [
+      "Ablation obligatoire du bas du lobe caudal dès la mise à bord ou au sec",
+      "Pêche libre en aval du Pont de la Fonderie (DPM maritime sans carte fédérale)"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "42 - 65 cm",
+    "maxLengthCm": "100 cm",
+    "averageWeightKg": "1.2 - 3.5 kg",
+    "maxWeightKg": "10 kg",
+    "diet": [
+      "Crevettes bouquets et grises (Palaemon)",
+      "Crabes verts et étrilles",
+      "Lançons et sprats",
+      "Casserons (jeunes seiches)"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Avril à Décembre (pic d'activité de Septembre à Novembre)",
+    "keySpots": {
+      "enrochements": "Talus rocheux Blainville-Bénouville : traque en bordure à la tombée du jour.",
+      "palplanches": "Quais de Colombelles : animations verticales au ras de la tôle.",
+      "pilesDePont": "Pegasus Bridge et Viaduc de Calix : postes d'embuscade dans les remous.",
+      "bergesArborees": "Ranville : ombrage des saules et chasses de surface estivales.",
+      "structuresPortuaires": "Ducs d'Albe et avant-port de Ouistreham : postes de rassemblement."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Déclencheur N°1 : l'afflux d'eau salée fraîche active les chasses 45 min.",
+      "traficNavires": "L'effet piston des cargos déloge les crabes : chasses dans le sillage.",
+      "luminositeEtNuit": "Chasse à la limite d'ombre des lampadaires sur les quais nocturnes.",
+      "turbidite": "Eau claire = leurres discrets naturels ; Eau mâchée = shads vibrants 12cm."
+    },
+    "tactics": [
+      "Stickbait de surface (110-130mm) à l'aube et au crépuscule",
+      "Shad souple à gratter (Black Minnow 90/120) sur les enrochements",
+      "Flotteur lumineux de nuit avec crevette bouquet vivante eschée par la queue"
+    ],
+    "recommendedLuresAndBaits": [
+      "Fiiish Black Minnow 90 & 120 (Têtes 10g-12g Kaki)",
+      "Asturie 110 / Patchinko 100 (Coloris 500G)",
+      "Bouquet vivant récolté sur l'estran d'Ouistreham"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Mai à Novembre (optimal Juin à Octobre)",
+    "habitats": {
+      "rochesDuCalvados": "Plateau de Lion et Bernières : laminaires et têtes de roche (6 à 15 m).",
+      "epavesDDay": "Épaves de Sword et Juno (15 à 30 m) : gros bars résidents calés sur les tôles.",
+      "bancsDeSableEtRidens": "Banc de Bernières : dérive lente au lançon vivant sur les ridens."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients 70-90 (vives-eaux) sur roches ; 45-65 (mortes-eaux) sur épaves.",
+      "tidalPhase": "Flot (portant à l'Est) : crée de forts upwellings sur la pointe des plateaux.",
+      "slackVsCurrent": "Maximum d'activité à mi-marée quand le jus plaque le fourrage."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Vents de Sud/SO (terre) : mer plate, eau limpide, idéal leurres de surface.",
+      "unfavorableWinds": "Vents de Nord/NE : clapot court, eau crayeuse. Privilégier les appâts au fond."
+    },
+    "tactics": [
+      "Pêche en traction au shad souple 120-150mm (tête 25-40g) dans le courant",
+      "Dérive au lançon vivant sur traîneau au ras des épaves 1944",
+      "Leurre de surface sur les têtes de roche peu profondes (5-8m)"
+    ],
+    "recommendedLuresAndBaits": [
+      "Crazy Sand Eel 150 & 180 (Tête 20-30g Kaki/Bleu)",
+      "Patchinko 125 & 140 (Dos Jaune / Nacre)",
+      "Lançon frais ou vivant sur montage potence"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Spinning 2m20 - 2m40, puissance 7-28g, action fast",
+      "reel": "Taille 2500-3000 frein doux et progressif",
+      "line": "Tresse 8 brins PE 0.8 à 1.0 (12-14/100)",
+      "leader": "2m fluorocarbone 22/100 à 26/100"
+    },
+    "boatCombo": {
+      "rod": "Canne 2m10 - 2m25, puissance 15-50g ou 30-90g pour épaves",
+      "reel": "Taille 3000-4000 marinisé robuste",
+      "line": "Tresse 8 brins PE 1.2 à 1.5 (18-20/100)",
+      "leader": "3m fluorocarbone 35/100 à 45/100 résistant à l'abrasion"
+    },
+    "topEquipment": [
+      "Épuisette à long manche télescopique (indispensable du haut des quais)",
+      "Pince à clamper longue pour décrocher sans risque",
+      "Lampe frontale à lumière rouge pour la discrétion nocturne"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 1, 2, 2, 2, 2, 3, 3, 3, 1],
+    "bateau": [0, 0, 0, 0, 2, 3, 3, 3, 3, 2, 1, 0]
+  },
+  "localSecret": "Postez-vous sous Pegasus Bridge 10 min après l'ouverture du sas d'Ouistreham : l'onde d'eau salée déclenche systématiquement 2 à 3 touches franches sur un Black Minnow 90 Kaki."
+}

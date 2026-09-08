@@ -1,0 +1,109 @@
+{
+  "id": "carpe-commune",
+  "identity": {
+    "name": "Carpe commune (et Miroir)",
+    "scientificName": "Cyprinus carpio",
+    "family": "Cyprinidés",
+    "localNames": ["Carpe miroir", "Carpe cuir", "Escargo", "Nourrice"],
+    "category": "Cyprinidé / Poisson blanc",
+    "identificationNotes": "Corps massif et trapu brun-doré avec de grandes écailles régulières (commune) ou quelques écailles géantes disséminées (miroir), bouche protractile dirigée vers le bas garnie de 4 barbillons (2 longs et 2 courts), première épine dorsale forte et dentelée."
+  },
+  "regulations": {
+    "zone": "Canal de Caen à la mer (Bassin St-Pierre jusqu'à Blainville)",
+    "legalSizeCm": null,
+    "recommendedSizeCm": 40,
+    "bagLimit": "Pratique du No-Kill généralisée et vivement encouragée",
+    "closedSeason": "Pêche autorisée toute l'année",
+    "specialRules": [
+      "Bassin Saint-Pierre : Carte fédérale de pêche obligatoire",
+      "Pêche de nuit autorisée UNIQUEMENT sur les secteurs labellisés 'carpe de nuit' par arrêté préfectoral",
+      "Interdiction formelle de maintenir des carpes captives de plus de 60 cm vivantes de nuit (transport illégal)"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "50 - 75 cm",
+    "maxLengthCm": "110 cm",
+    "averageWeightKg": "4.0 - 12.0 kg",
+    "maxWeightKg": "25 kg+",
+    "diet": [
+      "Vers de vase, larves benthiques et mollusques",
+      "Bivalves d'eau douce (anodontes, dreissènes)",
+      "Graines végétales, maïs doux et bouillettes",
+      "Petits crabes et biofilm des enrochements en zone saumâtre"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Avril à Novembre (très active dès que l'eau dépasse 14°C)",
+    "keySpots": {
+      "enrochements": "Pied des talus rocheux où la carpe glane les bivalves et vers entre les pierres.",
+      "palplanches": "Quais de Colombelles et d'Hérouville riches en moules d'eau douce encroûtées.",
+      "pilesDePont": "Fond calme autour des piliers du Viaduc de Calix et des passerelles urbaines.",
+      "bergesArborees": "Tronçons sous les saules et herbiers de Ranville et Bénouville (zones de tenue).",
+      "structuresPortuaires": "Nouveau Bassin et pontons du Bassin Saint-Pierre où elle s'alimente sous les coques."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Supporte très bien une salinité modérée ; se cale au fond pendant le jus.",
+      "traficNavires": "Fouille les sédiments fraîchement labourés par les hélices de cargos.",
+      "luminositeEtNuit": "Pics d'alimentation spectaculaires la nuit et aux premières lueurs du jour.",
+      "turbidite": "Poisson fouisseur insensible à la turbidité ; repère ses proies par l'odorat."
+    },
+    "tactics": [
+      "Pêche en batterie avec montages auto-ferrants au cheveu (plombée lourde 80-120g)",
+      "Amorçage ciblé au maïs doux, chènevis et bouillettes carnées ou fruitées",
+      "Pêche de bordure au feeder lourd ou method feeder le long des palplanches"
+    ],
+    "recommendedLuresAndBaits": [
+      "Bouillettes denses 20mm (Arômes Monster Crab, Scopex ou Épices)",
+      "Grains de maïs doux géant panachés avec un faux maïs flottant jaune",
+      "Pellets de flétan riches en huile (Halibut 16mm)"
+    ]
+  },
+  "bateau": {
+    "present": false,
+    "presenceSeason": "Espèce strictement absente en mer ouverte",
+    "habitats": {
+      "rochesDuCalvados": "Non applicable (poisson d'eau douce)",
+      "epavesDDay": "Non applicable",
+      "bancsDeSableEtRidens": "Non applicable"
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Non applicable",
+      "tidalPhase": "Non applicable",
+      "slackVsCurrent": "S'alimente paisiblement en eau lente"
+    },
+    "weatherImpact": {
+      "favorableWinds": "Vent d'Ouest ou de Sud doux poussant sur la berge avec baisse barométrique",
+      "unfavorableWinds": "Vent glacial d'Est qui fige le métabolisme des cyprinidés"
+    },
+    "tactics": [
+      "Pêche de poste du bord le long du chemin de halage du canal"
+    ],
+    "recommendedLuresAndBaits": [
+      "Non applicable en mer"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Batterie de cannes carpe 3m60 (12ft) ou 3m90, puissance 3.0 à 3.5 lbs pour brider devant les roches",
+      "reel": "Taille 6000-10000 débrayable ou à frein rapide avec grande contenance",
+      "line": "Nylon coulant résistant 35/100 à 40/100 (tête de ligne en fluorocarbone 50/100 anti-abrasion)",
+      "leader": "Tresse gainée sans ardillon de 20 cm, hameçon forgé téflonisé n°4 à n°6"
+    },
+    "boatCombo": {
+      "rod": "Non applicable",
+      "reel": "N/A",
+      "line": "N/A",
+      "leader": "N/A"
+    },
+    "topEquipment": [
+      "Tapis de réception matelassé à rebords hauts (indispensable sur le chemin de halage gravillonné)",
+      "Sac de pesée flottant et épuisette géante à bras de 42 pouces"
+    ]
+  },
+  "calendar": {
+    "canal": [1, 1, 2, 3, 3, 3, 2, 3, 3, 3, 2, 1],
+    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  },
+  "localSecret": "Sur les berges enrochées entre Calix et Blainville, intercalez une tête de ligne de 10 m en gros nylon 50/100 ou fluorocarbone : les carpes du canal ont une puissance phénoménale et se frottent immédiatement contre les blocs de pierres acérés pour couper la ligne fine !"
+}

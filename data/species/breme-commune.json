@@ -1,0 +1,110 @@
+{
+  "id": "breme-commune",
+  "identity": {
+    "name": "Brème commune",
+    "scientificName": "Abramis brama",
+    "family": "Cyprinidés",
+    "localNames": ["Brème", "Plate", "Plaquette" , "Baveuse"],
+    "category": "Cyprinidé / Poisson blanc",
+    "identificationNotes": "Corps très haut et très comprimé latéralement (profil en forme de plateau), robe bronze doré chez les gros adultes (argentée chez les jeunes), œil relativement petit par rapport à la tête, nageoire anale très longue, mucus abondant sur les écailles."
+  },
+  "regulations": {
+    "zone": "Canal de Caen à la mer (Bassin St-Pierre, Calix, Hérouville, Colombelles, Blainville)",
+    "legalSizeCm": null,
+    "recommendedSizeCm": 30,
+    "bagLimit": "Non soumis à quota journalier strict (prélèvement raisonné)",
+    "closedSeason": "Pêche au coup et au feeder autorisée toute l'année",
+    "specialRules": [
+      "Bassin Saint-Pierre : Carte fédérale de pêche obligatoire",
+      "En aval du Pont de la Fonderie : Domaine Public Maritime, pêche libre sans timbre piscicole",
+      "Remise à l'eau soignée recommandée pour les gros géniteurs de canal"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "30 - 55 cm",
+    "maxLengthCm": "75 cm",
+    "averageWeightKg": "1.0 - 3.0 kg",
+    "maxWeightKg": "6.0 kg",
+    "diet": [
+      "Vers de vase (chironomes) fouillés profondément dans le sédiment",
+      "Petits bivalves d'eau douce (pisidies, dreissènes)",
+      "Larves d'insectes benthiques",
+      "Graines, maïs et particules d'amorce"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Toute l'année (pic spectaculaire au printemps en Mai-Juin et à l'automne)",
+    "keySpots": {
+      "enrochements": "Pied du talus tout en bas de la cassure par 7 à 9 m de fond, là où la pente rejoint le lit de vase central.",
+      "palplanches": "Bas de quai métallique d'Hérouville et Colombelles où s'accumule la vase riche en nutriments.",
+      "pilesDePont": "Zones calmes en aval des piles du Viaduc de Calix : les gros bancs s'y rassemblent hors du chenal de navigation.",
+      "bergesArborees": "Bordures ombragées entre Blainville et Bénouville sur les fonds mous et limoneux.",
+      "structuresPortuaires": "Nouveau Bassin et darses calmes de Calix : postes d'hivernage majeurs pour les spécimens de plus de 3 kg."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "L'appel de courant oxygène le fond et stimule l'alimentation mais oblige à utiliser des feeders lourds (50g à 70g) pour ne pas dériver.",
+      "traficNavires": "Le passage des cargos brasse violemment la vase du fond : les brèmes profitent immédiatement des vers de vase déterrés par les remous.",
+      "luminositeEtNuit": "Poissons lucifuges préférant les faibles luminosités : matinée brumeuse, fin de journée et journées pluvieuses couvertes.",
+      "turbidite": "Parfaite adaptation aux eaux chargées et mâchées. Très attirée par les amorces jaunes, sucrées, collantes et fortement aromatisées (brasem / caramel)."
+    },
+    "tactics": [
+      "Pêche au feeder lourd (cage métal 40g à 60g) calé au milieu du canal sur le plat du chenal par 8m de profondeur",
+      "Pêche à la grande canne avec flotteur trapu (2g à 4g) et bas de ligne traînant de 10 à 15 cm sur le fond",
+      "Method feeder avec amorce collante ou micro-pellets et esche flottante (wafter jaune fluo)"
+    ],
+    "recommendedLuresAndBaits": [
+      "Bouquet d'asticots rouges ou panaché asticot / grain de maïs doux",
+      "Gros vers de terreau coupés en morceaux dans la cage feeder",
+      "Wafters aromatisés ou maïs doux au method feeder"
+    ]
+  },
+  "bateau": {
+    "present": false,
+    "presenceSeason": "Espèce strictement absente en mer ouverte",
+    "habitats": {
+      "rochesDuCalvados": "Non applicable (poisson d'eau douce)",
+      "epavesDDay": "Non applicable",
+      "bancsDeSableEtRidens": "Non applicable"
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Préfère les eaux calmes sans forte salinité",
+      "tidalPhase": "Non applicable",
+      "slackVsCurrent": "Alimentation maximale en eau lente et stabilisée"
+    },
+    "weatherImpact": {
+      "favorableWinds": "Temps doux, couvert, vent faible créant une légère risée sans grosses vagues",
+      "unfavorableWinds": "Grand vent froid du Nord qui plaque les poissons sur le fond sans activité"
+    },
+    "tactics": [
+      "Pêche au feeder du bord le long du canal"
+    ],
+    "recommendedLuresAndBaits": [
+      "Non applicable en mer"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne feeder puissante 3m60 - 3m90, puissance 40-90g pour propulser les cages au chenal et contrer le courant",
+      "reel": "Taille 4000 feeder avec frein progressif de précision",
+      "line": "Tresse 4 brins fine en PE 0.8 (10/100) pour fendre le courant, terminée par un arraché nylon de 6m en 24/100",
+      "leader": "Bas de ligne 50 à 70 cm en nylon 12/100 à 16/100, hameçon rond n°14 à n°18"
+    },
+    "boatCombo": {
+      "rod": "Non applicable",
+      "reel": "N/A",
+      "line": "N/A",
+      "leader": "N/A"
+    },
+    "topEquipment": [
+      "Tête d'épuisette large (ovale ou cuillère 50x40cm) indispensable pour épuiser les gros plateaux de 2kg+",
+      "Feeder arm orientable et support arrière pour positionner la canne haute face au canal",
+      "Ciseaux à vers pour hacher des vers de terreau et booster l'amorce dans la cage"
+    ]
+  },
+  "calendar": {
+    "canal": [1, 1, 2, 3, 3, 2, 2, 3, 3, 3, 2, 1],
+    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  },
+  "localSecret": "Pour sélectionner les grosses brèmes du canal de Caen et repousser les petits poissons, hachez 4 à 5 vers de terreau aux ciseaux et insérez-les au cœur de votre cage feeder entre deux pincées d'amorce au caramel. L'émission immédiate d'effluves déclenche les grosses brèmes qui 'bullent' distinctement en surface !"
+}

@@ -1,0 +1,110 @@
+{
+  "id": "sole-commune",
+  "identity": {
+    "name": "Sole commune",
+    "scientificName": "Solea solea",
+    "family": "Soléidés",
+    "localNames": ["Sole franche", "Sole de Manche", "Cordonnier"],
+    "category": "Poisson plat",
+    "identificationNotes": "Corps ovale allongé très caractéristique, museau arrondi proéminent surplombant la bouche arquée, nageoire pectorale de la face supérieure marquée d'une tache noire bien distincte à son extrémité, face aveugle garnie de villosités sensorielles."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": 24,
+    "recommendedSizeCm": 28,
+    "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Ablation obligatoire du bas du lobe de la nageoire caudale dès la capture",
+      "Maille légale stricte de 24 cm en Manche et Atlantique"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "24 - 38 cm",
+    "maxLengthCm": "55 cm",
+    "averageWeightKg": "0.25 - 0.7 kg",
+    "maxWeightKg": "2.5 kg",
+    "diet": [
+      "Petits vers polychètes benthiques (arénicoles, néréides)",
+      "Petits crustacés fouisseurs et puces de mer",
+      "Petits bivalves à coquille fine et ophiures"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Mai à Octobre (activité quasi exclusivement nocturne sur le fond de vase)",
+    "keySpots": {
+      "enrochements": "Replat central au pied des talus où s'accumule le sédiment fin.",
+      "palplanches": "Quais de Blainville et d'Hérouville sur les fonds de vase molle.",
+      "pilesDePont": "Zones calmes sans courant direct en aval des piles du canal.",
+      "bergesArborees": "Tronçons calmes de Ranville et Bénouville à l'abri du passage des bateaux.",
+      "structuresPortuaires": "Avant-port de Ouistreham et bassins de radoub sur substrat silteux."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "S'active modérément lors des apports d'eau de mer tiède en été.",
+      "traficNavires": "Reste enfouie sous la vase le jour et sort après l'arrêt du trafic de nuit.",
+      "luminositeEtNuit": "Facteur absolu : activité alimentaire démarrant 1h après le coucher du soleil.",
+      "turbidite": "Recherche les fonds vaseux et chasse grâce à ses récepteurs olfactifs et tactiles."
+    },
+    "tactics": [
+      "Pêche au posé de nuit avec montage à 2 empiles très fines plaquées sur la vase",
+      "Pêche à la calée eschée de petits vers néréides de roche ou vers demi-durs",
+      "Ligne totalement détendue au fond pour ne pas éveiller sa méfiance"
+    ],
+    "recommendedLuresAndBaits": [
+      "Petit ver néréide de roche bien frétillant",
+      "Arénicole fraîche découpée en petits tronçons bien gorgés",
+      "Ver mouron ou gravette blanche"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Mai à Novembre (chasses nocturnes sur les sables côtiers)",
+    "habitats": {
+      "rochesDuCalvados": "Fonds de sable fin situés entre les crêtes rocheuses du Calvados.",
+      "epavesDDay": "Plats de sable et de vase bordant les épaves côtières peu profondes (8-15m).",
+      "bancsDeSableEtRidens": "Sables vaseux et fonds meubles au large d'Ouistreham et Lion."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients faibles à moyens (40 à 65) pour une dérive douce.",
+      "tidalPhase": "Les deux dernières heures de flot et l'étale de pleine mer nocturne.",
+      "slackVsCurrent": "S'alimente activement quand le courant ralentit."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Nuits douces d'été sans vent avec mer parfaitement calme et lisse.",
+      "unfavorableWinds": "Houle d'Est ou de Nord soulevant les fonds et chassant les soles au large."
+    },
+    "tactics": [
+      "Pêche à l'ancre en soirée/nuit sur fond sablo-vaseux avec montage traînant",
+      "Empiles fines en fluorocarbone 20/100 munies de petits hameçons n°6 à n°8"
+    ],
+    "recommendedLuresAndBaits": [
+      "Ver arénicole ou ver de vase frais",
+      "Petite lamelle de néréide fraîche",
+      "Morceau de chair de couteau très frais"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne calée sensible 2m70 - 3m00, scion très souple",
+      "reel": "Taille 2500 fluide",
+      "line": "Nylon 22/100 souple",
+      "leader": "Fluorocarbone 18/100 à 20/100, hameçons n°6 à n°8 tige longue"
+    },
+    "boatCombo": {
+      "rod": "Canne buscle fine 2m10 - 2m40",
+      "reel": "Taille 3000",
+      "line": "Tresse fine PE 0.8 terminée par un bas de ligne discret",
+      "leader": "Fluorocarbone 22/100 très souple"
+    },
+    "topEquipment": [
+      "Lampe frontale à faisceau rouge pour escher la nuit sans effrayer les poissons de bordure",
+      "Petite pince fine pour décrocher sans déchirer la petite bouche arquée"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 0, 2, 3, 3, 3, 2, 1, 0, 0],
+    "bateau": [0, 0, 0, 0, 2, 3, 3, 3, 3, 1, 0, 0]
+  },
+  "localSecret": "Pour la sole dans le canal ou en mer, utilisez des hameçons fins de fer à tige longue (n°6 ou 8) et enfilez le ver jusqu'à recouvrir le nœud d'attache : la sole a une bouche minuscule et tâte longuement l'esche avant d'aspirer. Si elle sent l'acier du fer, elle recrache immédiatement !"
+}

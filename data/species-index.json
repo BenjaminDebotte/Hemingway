@@ -1,0 +1,312 @@
+{
+  "project": "Fiches Techniques Pêche - Littoral Normand",
+  "version": "1.2.0",
+  "printSpecification": {
+    "sheetFormat": "A4 Paysage (297mm x 210mm)",
+    "cardsPerSheet": 2,
+    "cardFormat": "A5 Portrait (~148mm x 210mm)",
+    "targetDensity": "Haute densité visuelle, badges concis, métriques et listes ciblées"
+  },
+  "speciesCount": 32,
+  "categories": [
+    "Carnassier marin",
+    "Sparidé",
+    "Poisson plat",
+    "Poisson de roche / épave",
+    "Mugilidé",
+    "Grand migrateur",
+    "Céphalopode",
+    "Carnassier eau douce / saumâtre",
+    "Cyprinidé / Poisson blanc"
+  ],
+  "species": [
+    {
+      "id": "bar-commun",
+      "name": "Bar commun (ou Bar franc)",
+      "scientificName": "Dicentrarchus labrax",
+      "category": "Carnassier marin",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/bar-commun.json"
+    },
+    {
+      "id": "bar-mouchete",
+      "name": "Bar moucheté",
+      "scientificName": "Dicentrarchus punctatus",
+      "category": "Carnassier marin",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/bar-mouchete.json"
+    },
+    {
+      "id": "lieu-jaune",
+      "name": "Lieu jaune",
+      "scientificName": "Pollachius pollachius",
+      "category": "Carnassier marin",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/lieu-jaune.json"
+    },
+    {
+      "id": "maquereau-commun",
+      "name": "Maquereau commun",
+      "scientificName": "Scomber scombrus",
+      "category": "Carnassier marin",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/maquereau-commun.json"
+    },
+    {
+      "id": "orphie",
+      "name": "Orphie (Aiguillette)",
+      "scientificName": "Belone belone",
+      "category": "Carnassier marin",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/orphie.json"
+    },
+    {
+      "id": "merlan",
+      "name": "Merlan",
+      "scientificName": "Merlangius merlangus",
+      "category": "Carnassier marin",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/merlan.json"
+    },
+    {
+      "id": "tacaud",
+      "name": "Tacaud commun",
+      "scientificName": "Trisopterus luscus",
+      "category": "Carnassier marin",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/tacaud.json"
+    },
+    {
+      "id": "daurade-royale",
+      "name": "Daurade royale",
+      "scientificName": "Sparus aurata",
+      "category": "Sparidé",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/daurade-royale.json"
+    },
+    {
+      "id": "daurade-grise",
+      "name": "Daurade grise (Griset)",
+      "scientificName": "Spondyliosoma cantharus",
+      "category": "Sparidé",
+      "canal": false,
+      "bateau": true,
+      "file": "data/species/daurade-grise.json"
+    },
+    {
+      "id": "flet-commun",
+      "name": "Flet commun",
+      "scientificName": "Platichthys flesus",
+      "category": "Poisson plat",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/flet-commun.json"
+    },
+    {
+      "id": "plie-commune",
+      "name": "Plie commune (Carrelet)",
+      "scientificName": "Pleuronectes platessa",
+      "category": "Poisson plat",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/plie-commune.json"
+    },
+    {
+      "id": "sole-commune",
+      "name": "Sole commune",
+      "scientificName": "Solea solea",
+      "category": "Poisson plat",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/sole-commune.json"
+    },
+    {
+      "id": "turbot",
+      "name": "Turbot",
+      "scientificName": "Scophthalmus maximus",
+      "category": "Poisson plat",
+      "canal": false,
+      "bateau": true,
+      "file": "data/species/turbot.json"
+    },
+    {
+      "id": "vieille-commune",
+      "name": "Vieille commune",
+      "scientificName": "Labrus bergylta",
+      "category": "Poisson de roche / épave",
+      "canal": false,
+      "bateau": true,
+      "file": "data/species/vieille-commune.json"
+    },
+    {
+      "id": "congre-europe",
+      "name": "Congre d'Europe",
+      "scientificName": "Conger conger",
+      "category": "Poisson de roche / épave",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/congre-europe.json"
+    },
+    {
+      "id": "mulet-lippu",
+      "name": "Mulet lippu",
+      "scientificName": "Chelon labrosus",
+      "category": "Mugilidé",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/mulet-lippu.json"
+    },
+    {
+      "id": "mulet-dore",
+      "name": "Mulet doré",
+      "scientificName": "Chelon auratus",
+      "category": "Mugilidé",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/mulet-dore.json"
+    },
+    {
+      "id": "mulet-porc",
+      "name": "Mulet porc",
+      "scientificName": "Chelon ramada",
+      "category": "Mugilidé",
+      "canal": true,
+      "bateau": false,
+      "file": "data/species/mulet-porc.json"
+    },
+    {
+      "id": "truite-de-mer",
+      "name": "Truite de mer",
+      "scientificName": "Salmo trutta trutta",
+      "category": "Grand migrateur",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/truite-de-mer.json"
+    },
+    {
+      "id": "alose-feinte",
+      "name": "Alose feinte",
+      "scientificName": "Alosa fallax",
+      "category": "Grand migrateur",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/alose-feinte.json"
+    },
+    {
+      "id": "anguille-europe",
+      "name": "Anguille européenne",
+      "scientificName": "Anguilla anguilla",
+      "category": "Grand migrateur",
+      "canal": true,
+      "bateau": false,
+      "file": "data/species/anguille-europe.json"
+    },
+    {
+      "id": "seiche-commune",
+      "name": "Seiche commune (et Casserons)",
+      "scientificName": "Sepia officinalis",
+      "category": "Céphalopode",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/seiche-commune.json"
+    },
+    {
+      "id": "calamar-commun",
+      "name": "Calamar commun (Encornet)",
+      "scientificName": "Loligo vulgaris",
+      "category": "Céphalopode",
+      "canal": true,
+      "bateau": true,
+      "file": "data/species/calamar-commun.json"
+    },
+    {
+      "id": "sandre",
+      "name": "Sandre",
+      "scientificName": "Sander lucioperca",
+      "category": "Carnassier eau douce / saumâtre",
+      "canal": true,
+      "bateau": false,
+      "file": "data/species/sandre.json"
+    },
+    {
+      "id": "perche-commune",
+      "name": "Perche commune",
+      "scientificName": "Perca fluviatilis",
+      "category": "Carnassier eau douce / saumâtre",
+      "canal": true,
+      "bateau": false,
+      "file": "data/species/perche-commune.json"
+    },
+    {
+      "id": "brochet",
+      "name": "Brochet",
+      "scientificName": "Esox lucius",
+      "category": "Carnassier eau douce / saumâtre",
+      "canal": true,
+      "bateau": false,
+      "file": "data/species/brochet.json"
+    },
+    {
+      "id": "silure-glane",
+      "name": "Silure glane",
+      "scientificName": "Silurus glanis",
+      "category": "Carnassier eau douce / saumâtre",
+      "canal": true,
+      "bateau": false,
+      "file": "data/species/silure-glane.json"
+    },
+    {
+      "id": "carpe-commune",
+      "name": "Carpe commune (et Miroir)",
+      "scientificName": "Cyprinus carpio",
+      "category": "Cyprinidé / Poisson blanc",
+      "canal": true,
+      "bateau": false,
+      "file": "data/species/carpe-commune.json"
+    },
+    {
+      "id": "gardon-commun",
+      "name": "Gardon commun",
+      "scientificName": "Rutilus rutilus",
+      "category": "Cyprinidé / Poisson blanc",
+      "canal": true,
+      "bateau": false,
+      "file": "data/species/gardon-commun.json"
+    },
+    {
+      "id": "breme-commune",
+      "name": "Brème commune",
+      "scientificName": "Abramis brama",
+      "category": "Cyprinidé / Poisson blanc",
+      "canal": true,
+      "bateau": false,
+      "file": "data/species/breme-commune.json"
+    },
+    {
+      "id": "tanche",
+      "name": "Tanche",
+      "scientificName": "Tinca tinca",
+      "category": "Cyprinidé / Poisson blanc",
+      "canal": true,
+      "bateau": false,
+      "file": "data/species/tanche.json"
+    },
+    {
+      "id": "ablette-commune",
+      "name": "Ablette commune",
+      "scientificName": "Alburnus alburnus",
+      "category": "Cyprinidé / Poisson blanc",
+      "canal": true,
+      "bateau": false,
+      "file": "data/species/ablette-commune.json"
+    }
+  ]
+}

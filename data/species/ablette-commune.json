@@ -1,0 +1,109 @@
+{
+  "id": "ablette-commune",
+  "identity": {
+    "name": "Ablette commune",
+    "scientificName": "Alburnus alburnus",
+    "family": "Cyprinidés",
+    "localNames": ["Ablette", "Nogea", "Roussette", "Miroir d'argent"],
+    "category": "Cyprinidé / Poisson blanc",
+    "identificationNotes": "Corps fin et élancé comprimé latéralement d'un blanc argenté éclatant très miroitant, bouche nettement dirigée vers le haut (supère) adaptée au happement des proies de surface, écailles très minces se détachant au moindre frottement, nageoire anale longue."
+  },
+  "regulations": {
+    "zone": "Canal de Caen à la mer (Bassin St-Pierre & biefs urbains)",
+    "legalSizeCm": null,
+    "recommendedSizeCm": 10,
+    "bagLimit": "Non soumis à quota journalier statutaire",
+    "closedSeason": "Pêche autorisée toute l'année",
+    "specialRules": [
+      "Bassin Saint-Pierre : Carte fédérale de pêche obligatoire",
+      "Poisson fourrage d'excellence pour la pêche au vif des carnassiers (sandre, perche)",
+      "Pêche de vitesse très réputée en compétition au coup"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "10 - 15 cm",
+    "maxLengthCm": "22 cm",
+    "averageWeightKg": "0.02 - 0.05 kg",
+    "maxWeightKg": "0.15 kg",
+    "diet": [
+      "Petits insectes de surface tombés à l'eau (moucherons, fourmis)",
+      "Larves aquatiques de moustiques et chironomes",
+      "Plancton animal et micro-crustacés d'eau douce",
+      "Particules d'amorce flottantes"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Avril à Novembre (très active en surface par temps ensoleillé)",
+    "keySpots": {
+      "enrochements": "Bordures abritées du vent où le banc gobe en surface.",
+      "palplanches": "Quais du Bassin Saint-Pierre et de Colombelles dans les zones calmes.",
+      "pilesDePont": "Zones de remous doux sous les passerelles piétonnes de Caen.",
+      "bergesArborees": "Sous les branches de saules d'où tombent pucerons et insectes.",
+      "structuresPortuaires": "Pontons flottants du port de plaisance de Caen (Bassin St-Pierre)."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Se réfugie en surface dans les darses calmes lors des courants de fond.",
+      "traficNavires": "Dispersée par les vagues, elle se regroupe en surface 3 minutes après.",
+      "luminositeEtNuit": "Poissons purement diurnes ; gobage frénétique par temps chaud et lumineux.",
+      "turbidite": "Préfère les eaux calmes pour chasser les insectes à vue."
+    },
+    "tactics": [
+      "Pêche de vitesse à la canne télescopique fine (3m à 4m) avec micro-flotteur effilé (0.2g à 0.5g)",
+      "Amorçage de surface très régulier avec une farine blanche traçante et nuageuse",
+      "Ligne très fine (7/100 à 8/100) eschée d'un asticot miniature (pinkie) ou ver de vase"
+    ],
+    "recommendedLuresAndBaits": [
+      "Pinkie blanc ou rouge miniature",
+      "Ver de vase (chironome) enfilé sur hameçon très fin n°22 à n°24",
+      "Amorce de surface ultra-fine type Tracix blanc ou jaune"
+    ]
+  },
+  "bateau": {
+    "present": false,
+    "presenceSeason": "Espèce strictement absente en mer ouverte",
+    "habitats": {
+      "rochesDuCalvados": "Non applicable (poisson d'eau douce)",
+      "epavesDDay": "Non applicable",
+      "bancsDeSableEtRidens": "Non applicable"
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Non applicable",
+      "tidalPhase": "Non applicable",
+      "slackVsCurrent": "Recherche les eaux de surface calmes"
+    },
+    "weatherImpact": {
+      "favorableWinds": "Beau temps d'été ensoleillé avec surface lisse sans rides excessives",
+      "unfavorableWinds": "Pluie froide et grand vent qui la font couler sur le fond"
+    },
+    "tactics": [
+      "Pêche du bord de vitesse dans les bassins urbains"
+    ],
+    "recommendedLuresAndBaits": [
+      "Non applicable en mer"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne au coup de vitesse télescopique en carbone très légère 3m00 à 4m50 avec scion en fibre pleine (action aiguille)",
+      "reel": "Non applicable (canne au coup directe)",
+      "line": "Corps de ligne en nylon très souple 8/100 à 10/100",
+      "leader": "Bas de ligne 15 cm en 6/100 à 8/100, micro-hameçon fin de fer n°20 à n°24"
+    },
+    "boatCombo": {
+      "rod": "Non applicable",
+      "reel": "N/A",
+      "line": "N/A",
+      "leader": "N/A"
+    },
+    "topEquipment": [
+      "Bourriche fine ou seau à vifs aéré pour conserver les ablettes bien vivantes",
+      "Coupelle d'amorçage rapide fixée sur le panier pour amorcer d'une seule main"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 1, 2, 3, 3, 3, 3, 3, 2, 1, 0],
+    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  },
+  "localSecret": "Au Bassin Saint-Pierre à Caen, préparez une amorce presque liquide (consistance de pâte à crêpe) avec de la farine de maïs et du lait en poudre : jetez une petite cuillerée à chaque lancer. Le nuage blanc opaque reste suspendu dans les premiers 30 cm et déclenche un frénésie de gobages permettant d'attraper une ablette toutes les 15 secondes !"
+}

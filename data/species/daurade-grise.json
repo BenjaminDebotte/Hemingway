@@ -1,0 +1,108 @@
+{
+  "id": "daurade-grise",
+  "identity": {
+    "name": "Daurade grise (Griset)",
+    "scientificName": "Spondyliosoma cantharus",
+    "family": "Sparidés",
+    "localNames": ["Griset", "Bramie", "Canthe"],
+    "category": "Sparidé",
+    "identificationNotes": "Corps ovale et comprimé gris argenté avec des lignes longitudinales dorées plus ou moins nettes, livrée nuptiale sombre chez le mâle avec des reflets bleutés, dents incisiformes pointues."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": 23,
+    "recommendedSizeCm": 28,
+    "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Maille légale de 23 cm strictement applicable en Manche Est",
+      "Pêche sportive réputée en dérive sur les plateaux rocheux"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "25 - 38 cm",
+    "maxLengthCm": "50 cm",
+    "averageWeightKg": "0.3 - 0.9 kg",
+    "maxWeightKg": "2.2 kg",
+    "diet": [
+      "Vers marins (arénicoles, néréides, siponcles)",
+      "Petits crustacés de roche et bernard-l'hermite",
+      "Petits coquillages et ophiures",
+      "Algues et débris organiques benthiques"
+    ]
+  },
+  "canal": {
+    "present": false,
+    "presenceSeason": "Espèce strictement marine absente des eaux calmes du canal",
+    "keySpots": {
+      "enrochements": "Non applicable (espèce marine)",
+      "palplanches": "Non applicable",
+      "pilesDePont": "Non applicable",
+      "bergesArborees": "Non applicable",
+      "structuresPortuaires": "Non applicable"
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Non applicable",
+      "traficNavires": "Non applicable",
+      "luminositeEtNuit": "Non applicable",
+      "turbidite": "Non applicable"
+    },
+    "tactics": [
+      "Espèce exclusivement ciblée en mer ouverte en bateau ou du bord sur roches"
+    ],
+    "recommendedLuresAndBaits": [
+      "Non applicable en canal"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Mai à Novembre (très abondante de Juillet à Octobre)",
+    "habitats": {
+      "rochesDuCalvados": "Poste roi : crêtes rocheuses et moulières de Lion, Luc et Bernières (8-18m).",
+      "epavesDDay": "Plateaux durs et amoncellements de ferraille des épaves de 1944 (18-28m).",
+      "bancsDeSableEtRidens": "Lisières de graviers entourant les bancs de sable côtiers."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients moyens de 50 à 75 pour maintenir une dérive lente et maîtrisée.",
+      "tidalPhase": "Début de flot et début de jusant avec courant bien établi sur les roches.",
+      "slackVsCurrent": "Morsures franches en plein courant faiblissant à l'approche de l'étale."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Vent de terre modéré (Sud/SO) maintenant une eau claire et une houle maniable.",
+      "unfavorableWinds": "Vent de Nord/Nord-Est créant une mer hachée qui plaque les sparidés dans les trous."
+    },
+    "tactics": [
+      "Pêche à soutenir fine (palangrotte 2 ou 3 empiles courtes en fluorocarbone 24/100)",
+      "Pêche au Tenya léger (20-40g) avec lanière d'encornet ou crevette grise",
+      "Dérive lente à l'arénicole ou morceau d'encornet au ras des têtes rocheuses"
+    ],
+    "recommendedLuresAndBaits": [
+      "Arénicole fraîche découpée en petits tronçons",
+      "Lanière fine d'encornet ou tentacule de seiche crue",
+      "Coque fraîche ou pied de couteau ligaturé"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Non applicable (pêche marine)",
+      "reel": "N/A",
+      "line": "N/A",
+      "leader": "N/A"
+    },
+    "boatCombo": {
+      "rod": "Canne buscle fine 2m10 - 2m40, scion très sensible pour détecter les touches tatillonnes",
+      "reel": "Taille 2500-3000 avec frein doux",
+      "line": "Tresse 8 brins fine PE 0.8 à 1.0 (12-14/100)",
+      "leader": "Montage 3 empiles en fluorocarbone 22/100 à 25/100, hameçons à palette forts n°4 à n°6"
+    },
+    "topEquipment": [
+      "Plombs d'amorce ou plombs poires plastifiés marron pour ne pas effrayer les sparidés",
+      "Bourriche flottante ou glacière pour garder les prises fraîches en plein été"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    "bateau": [0, 0, 0, 0, 1, 2, 3, 3, 3, 2, 1, 0]
+  },
+  "localSecret": "Sur le plateau des Roches du Calvados, coupez de très fines lanières d'encornet blanc (3 mm de large sur 3 cm de long) et eschez-les en laissant flotter une pointe libre : la daurade grise mordille sans méfiance et s'auto-ferre dès que le bateau avance doucement en dérive !"
+}

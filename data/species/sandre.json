@@ -1,0 +1,110 @@
+{
+  "id": "sandre",
+  "identity": {
+    "name": "Sandre",
+    "scientificName": "Sander lucioperca",
+    "family": "Percidés",
+    "localNames": ["Perche-brochet", "Yeux de verre"],
+    "category": "Carnassier eau douce / saumâtre",
+    "identificationNotes": "Corps allongé gris-verdâtre rayé de bandes sombres verticales, bouche armée de fortes canines ('crocs'), deux nageoires dorsales séparées par un petit espace, yeux vitreux très réfléchissants à la lumière."
+  },
+  "regulations": {
+    "zone": "Canal de Caen à la mer (Bassin St-Pierre jusqu'à Blainville)",
+    "legalSizeCm": 50,
+    "recommendedSizeCm": 60,
+    "bagLimit": "3 carnassiers par jour (eau douce) / Pêche raisonnée en DPM",
+    "closedSeason": "Dernier dimanche de janvier au dernier samedi de mai (période de reproduction)",
+    "specialRules": [
+      "Bassin Saint-Pierre (en amont du Pont de la Fonderie) : Carte de pêche AAPPMA obligatoire (eau douce)",
+      "En aval du Pont de la Fonderie (Domaine Public Maritime) : Pêche libre mais respect strict des dates d'ouverture et tailles de capture",
+      "Pêche de nuit interdite hors arrêtés spécifiques"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "45 - 70 cm",
+    "maxLengthCm": "100 cm",
+    "averageWeightKg": "1.5 - 4.0 kg",
+    "maxWeightKg": "11 kg",
+    "diet": [
+      "Petits gardons, ablettes et brèmes",
+      "Petits mulets dans la zone saumâtre",
+      "Gobies et épinoches des enrochements",
+      "Sprats déportés par les éclusées"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Toute l'année (pic d'activité automnal et hivernal de Septembre à Janvier)",
+    "keySpots": {
+      "enrochements": "Pied des talus de pierres par 7 à 9 m de fond. Les sandres se postent sur le substrat dur à la rupture de pente.",
+      "palplanches": "Quais métalliques verticaux d'Hérouville et Colombelles : ils se calent collés aux parois dans les rainures d'ombre.",
+      "pilesDePont": "Sous le Viaduc de Calix et l'ancien pont de Colombelles : piliers massifs offrant des zones de calme et d'obscurité totale.",
+      "bergesArborees": "Fosses ombragées sous les saules pleureurs entre Blainville et Bénouville, zone refuge estivale.",
+      "structuresPortuaires": "Nouveau Bassin et darses de Calix : bassins profonds protégés des courants où stationnent les gros spécimens l'hiver."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Sensible aux remontées brutales de salinité : remonte vers la surface ou vers l'amont (Calix/Bassin St-Pierre) lors des fortes éclusées.",
+      "traficNavires": "Le passage des cargos décolle les sédiments et déstabilise la blanchaille : frénésie de chasse 15 à 30 minutes après le passage du navire.",
+      "luminositeEtNuit": "Vision crépusculaire d'exception (tapetum lucidum). Chasses intenses à la tombée de la nuit à la frontière d'ombre des lampadaires urbains.",
+      "turbidite": "Adore les eaux teintées et mâchées. Les crues de l'Orne et les eaux laiteuses déclenchent des chasses en plein milieu de journée."
+    },
+    "tactics": [
+      "Pêche en linéaire lent au shad souple (3 à 4 pouces) avec tête plombée 5 à 10g au ras du fond",
+      "Drop-shot vertical le long des palplanches métalliques et ducs d'Albe",
+      "Pêche au posé d'un petit vif (gardon ou mulet) ou poisson mort manié sur les fosses"
+    ],
+    "recommendedLuresAndBaits": [
+      "One Up Shad 3\" et 4\" (Coloris 06 Pro Blue, 07 Green Weenie)",
+      "Keitech Easy Shiner 3.5\" sur tête sabot ou football 7g",
+      "Petit gardon ou ablette fraîche de 7 à 10 cm"
+    ]
+  },
+  "bateau": {
+    "present": false,
+    "presenceSeason": "Espèce strictement absente en mer ouverte",
+    "habitats": {
+      "rochesDuCalvados": "Non applicable (poisson d'eau douce/saumâtre)",
+      "epavesDDay": "Non applicable",
+      "bancsDeSableEtRidens": "Non applicable"
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Préfère les faibles coefficients de marée qui limitent l'intrusion saline dans le canal",
+      "tidalPhase": "Non applicable",
+      "slackVsCurrent": "Très actif dans les eaux lentes et amorties du canal"
+    },
+    "weatherImpact": {
+      "favorableWinds": "Vent faible ou modéré évitant la formation d'une bannière dans la ligne",
+      "unfavorableWinds": "Grand vent de Nord/Nord-Est perturbant le contrôle des leurres légers"
+    },
+    "tactics": [
+      "Espèce exclusivement ciblée du bord sur le canal ou en bateau en eaux intérieures"
+    ],
+    "recommendedLuresAndBaits": [
+      "Non applicable en mer"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne spinning 2m10 - 2m30, puissance 5-21g ou 7-28g, action de pointe rapide et très résonnante",
+      "reel": "Taille 2500 fluide avec frein micrométrique précis",
+      "line": "Tresse 8 brins très fine en PE 0.6 à 0.8 (10 à 12/100)",
+      "leader": "2.5m de fluorocarbone 20/100 à 25/100 très discret"
+    },
+    "boatCombo": {
+      "rod": "Non applicable (pêche canal)",
+      "reel": "N/A",
+      "line": "N/A",
+      "leader": "N/A"
+    },
+    "topEquipment": [
+      "Épuisette à manche télescopique de 3 à 4m (indispensable pour hisser les poissons depuis les hauts quais en palplanches)",
+      "Têtes plombées texanes ou football pour limiter les accrochages dans les enrochements",
+      "Lampe frontale discrète avec filtre rouge pour les prospections nocturnes"
+    ]
+  },
+  "calendar": {
+    "canal": [2, 1, 0, 0, 1, 2, 2, 2, 3, 3, 3, 2],
+    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  },
+  "localSecret": "Le long des palplanches métalliques entre Calix et Colombelles, animez un shad souple sombre en drop-shot en descendant très lentement le long de la paroi. Le sandre se cale souvent à seulement 1 m sous la surface dans la concavité de la tôle, même par 8 m de fond !"
+}

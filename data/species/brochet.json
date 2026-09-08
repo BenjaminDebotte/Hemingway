@@ -1,0 +1,109 @@
+{
+  "id": "brochet",
+  "identity": {
+    "name": "Brochet",
+    "scientificName": "Esox lucius",
+    "family": "Ésocidés",
+    "localNames": ["Bec", "Grand gousier", "Brochet maillé"],
+    "category": "Carnassier eau douce / saumâtre",
+    "identificationNotes": "Corps cylindrique allongé en forme de torpille, museau large aplati rappelant un bec de canard garni de plus de 700 dents acérées orientées vers l'arrière, nageoire dorsale très reculée à l'aplomb de l'anale, robe camouflage vert-olive mouchetée de jaune pâle."
+  },
+  "regulations": {
+    "zone": "Canal de Caen à la mer (Bassin St-Pierre & haut canal)",
+    "legalSizeCm": 60,
+    "recommendedSizeCm": 70,
+    "bagLimit": "Quota combiné : maximum 2 brochets par jour (dans la limite de 3 carnassiers)",
+    "closedSeason": "Fermeture spécifique du dernier dimanche de janvier au dernier samedi d'avril/mai",
+    "specialRules": [
+      "Bassin Saint-Pierre (amont Pont de la Fonderie) : Carte fédérale AAPPMA obligatoire",
+      "Pêche au vif, mort posé et leurre interdite durant la période de fermeture",
+      "Bas de ligne en acier ou gros fluorocarbone (80/100+) obligatoire contre les dents"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "50 - 85 cm",
+    "maxLengthCm": "130 cm",
+    "averageWeightKg": "1.5 - 6.0 kg",
+    "maxWeightKg": "18 kg",
+    "diet": [
+      "Poissons fourrage (gardons, rotengles, ablettes)",
+      "Perches et jeunes sandres",
+      "Grenouilles et petits rongeurs d'eau",
+      "Mulets juvéniles en zone saumâtre"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Mai à Janvier (fermeture biologique de reproduction au printemps)",
+    "keySpots": {
+      "enrochements": "Pointes d'enrochements et ruptures de pente herbeuses de Blainville.",
+      "palplanches": "Angles morts et décrochements d'ombre des quais de Colombelles.",
+      "pilesDePont": "Piliers du Viaduc de Calix et vieux pontons de bois du bassin portuaire.",
+      "bergesArborees": "Spot royal : tronçons sous les saules et herbiers denses de Ranville et Bénouville.",
+      "structuresPortuaires": "Bassin Saint-Pierre : coques de bateaux amarrés et pontons flottants."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Se plaque à l'abri des herbiers lors des forts flux d'eau salée.",
+      "traficNavires": "Chasse les gardons désorientés par le clapot des péniches le long des rives.",
+      "luminositeEtNuit": "Chasseur à vue diurne actif le matin et en fin d'après-midi par ciel voilé.",
+      "turbidite": "Préfère les eaux claires à légèrement teintées pour déclencher ses attaques réflexes."
+    },
+    "tactics": [
+      "Pêche au shad souple imposant (15 à 20 cm) plombé léger en bordure des herbiers",
+      "Animation de gros poissons nageurs jerkbaits (12-16 cm) avec pauses marquées",
+      "Pêche au posé d'un gros vif (gardon ou carassin) sous flotteur bouchon près des obstacles"
+    ],
+    "recommendedLuresAndBaits": [
+      "Jerkbait type Buster Jerk 15cm (Coloris Perche ou Brochet)",
+      "Shad souple 15cm (ex: Illex Dexter Shad ou Savage Gear Cannibal)",
+      "Gros gardon vivant de 15 cm esché sous flotteur coulissant"
+    ]
+  },
+  "bateau": {
+    "present": false,
+    "presenceSeason": "Espèce strictement absente en mer ouverte",
+    "habitats": {
+      "rochesDuCalvados": "Non applicable (poisson d'eau douce)",
+      "epavesDDay": "Non applicable",
+      "bancsDeSableEtRidens": "Non applicable"
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Non applicable",
+      "tidalPhase": "Non applicable",
+      "slackVsCurrent": "Affectionne les eaux calmes et amorties"
+    },
+    "weatherImpact": {
+      "favorableWinds": "Temps gris, doux et venteux créant un beau clapot de berge",
+      "unfavorableWinds": "Grand gel hivernal figeant les herbiers de surface"
+    },
+    "tactics": [
+      "Pêche du bord le long du canal ou en float-tube sur les bassins autorisés"
+    ],
+    "recommendedLuresAndBaits": [
+      "Non applicable en mer"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne spinning ou casting puissante 2m20 - 2m50, puissance 20-80g",
+      "reel": "Taille 4000 spinning robuste ou moulinet casting profil rond/low-profile",
+      "line": "Tresse 8 brins PE 2.0 (23/100) pour brider les poissons près des herbiers",
+      "leader": "Bas de ligne acier 49 brins 40 lbs ou fluorocarbone 80/100 (50 cm minimum)"
+    },
+    "boatCombo": {
+      "rod": "Non applicable",
+      "reel": "N/A",
+      "line": "N/A",
+      "leader": "N/A"
+    },
+    "topEquipment": [
+      "Pince à bec long (30 cm) obligatoire pour décrocher en toute sécurité sans contact avec les dents",
+      "Épuisette à très grande ouverture avec filet à mailles caoutchoutées larges"
+    ]
+  },
+  "calendar": {
+    "canal": [1, 0, 0, 0, 2, 3, 2, 2, 3, 3, 3, 2],
+    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  },
+  "localSecret": "Au Bassin Saint-Pierre et sur les darses de Colombelles, pêchez avec un jerkbait coulant de 15 cm : lancez le long des péniches amarrées, donnez deux coups de scion vifs pour désaxer le leurre et marquez une pause de 4 secondes complètes. C'est à la reprise que le brochet surgit de dessous la coque !"
+}

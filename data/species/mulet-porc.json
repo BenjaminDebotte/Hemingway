@@ -1,0 +1,108 @@
+{
+  "id": "mulet-porc",
+  "identity": {
+    "name": "Mulet porc",
+    "scientificName": "Chelon ramada",
+    "family": "Mugilidés",
+    "localNames": ["Mulet capiton", "Ramada", "Mulet de rivière"],
+    "category": "Mugilidé",
+    "identificationNotes": "Petite tache noire très nette à la base supérieure de la nageoire pectorale, lèvre supérieure fine et lisse sans tubercules, tête relativement petite, corps allongé gris plomb. Espèce la plus tolérante à l'eau douce pure."
+  },
+  "regulations": {
+    "zone": "Canal de Caen à la mer (Bassin St-Pierre jusqu'à Ouistreham)",
+    "legalSizeCm": 20,
+    "recommendedSizeCm": 28,
+    "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Bassin Saint-Pierre (amont Pont de la Fonderie) : Carte AAPPMA requise",
+      "En aval : DPM libre sans permis fédéral"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "30 - 45 cm",
+    "maxLengthCm": "60 cm",
+    "averageWeightKg": "0.4 - 1.5 kg",
+    "maxWeightKg": "2.8 kg",
+    "diet": [
+      "Vase organique et détritus benthiques triés",
+      "Algues d'eau douce encroûtant les quais",
+      "Vers de vase (chironomes) et petites larves",
+      "Mie de pain et déchets organiques urbains"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Avril à Novembre (remonte très loin en ville jusqu'au Bassin Saint-Pierre)",
+    "keySpots": {
+      "enrochements": "Talus rocheux de Blainville et Colombelles où il fouille la vase.",
+      "palplanches": "Quais métalliques verticaux riches en mousses et biofilm.",
+      "pilesDePont": "Sous le Viaduc de Calix et l'ancien pont de Colombelles.",
+      "bergesArborees": "Bordures abritées de Ranville et Bénouville.",
+      "structuresPortuaires": "Sorties de collecteurs pluviaux urbains et pontons de Caen (Bassin St-Pierre)."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Peu sensible aux éclusées ; colonise en permanence le haut du canal.",
+      "traficNavires": "Vient fouiller les bordures agitées par le passage des péniches.",
+      "luminositeEtNuit": "Activité intense en plein jour aux heures chaudes en surface.",
+      "turbidite": "Extraordinaire tolérance aux eaux troubles et urbaines."
+    },
+    "tactics": [
+      "Pêche au coup à la grande canne avec ligne fine et esche au pain ou asticot",
+      "Pêche au flotteur sensible esché d'un ver de terreau ou de vase",
+      "Pêche au feeder léger avec amorce traçante très nuageuse"
+    ],
+    "recommendedLuresAndBaits": [
+      "Mie de pain frais bien tassée",
+      "Vers de vase (chironomes) ou pinkies blancs",
+      "Pâte de fromage ou farine de chènevis"
+    ]
+  },
+  "bateau": {
+    "present": false,
+    "presenceSeason": "Espèce migrant vers le large uniquement en hiver pour la reproduction",
+    "habitats": {
+      "rochesDuCalvados": "Non applicable (poisson d'estuaire et canal)",
+      "epavesDDay": "Non applicable",
+      "bancsDeSableEtRidens": "Non applicable"
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Non applicable",
+      "tidalPhase": "Non applicable",
+      "slackVsCurrent": "Très actif en eau calme"
+    },
+    "weatherImpact": {
+      "favorableWinds": "Beau temps chaud sans vent facilitant la pêche au coup",
+      "unfavorableWinds": "Grand vent créant trop de clapot de berge"
+    },
+    "tactics": [
+      "Pêche exclusive du bord le long du canal et dans les bassins urbains"
+    ],
+    "recommendedLuresAndBaits": [
+      "Non applicable en mer"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Grande canne au coup 7m - 9m50 ou canne bolognaise 4m00, scion très souple",
+      "reel": "Taille 2000 léger (pour la bolognaise)",
+      "line": "Nylon 14/100 à 16/100",
+      "leader": "Fluorocarbone fin 10/100 à 12/100, hameçon cristal fin n°12 à n°16"
+    },
+    "boatCombo": {
+      "rod": "Non applicable",
+      "reel": "N/A",
+      "line": "N/A",
+      "leader": "N/A"
+    },
+    "topEquipment": [
+      "Amorce très nuageuse blanche pour maintenir le banc sous la canne",
+      "Épuisette fine indispensable pour hisser le poisson hors de l'eau"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 1, 2, 3, 3, 3, 3, 3, 2, 1, 0],
+    "bateau": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  },
+  "localSecret": "Aux abords des déversoirs pluviaux du Bassin Saint-Pierre à Caen, préparez une amorce constituée de pain trempé réduit en purée et de farine de maïs très traçante : lancez de petites boules régulières. Les mulets porcs se rassemblent en surface et s'emparent de minuscules flocons de mie montés sur hameçon n°14."
+}

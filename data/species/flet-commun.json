@@ -1,0 +1,111 @@
+{
+  "id": "flet-commun",
+  "identity": {
+    "name": "Flet commun",
+    "scientificName": "Platichthys flesus",
+    "family": "Pleuronectidés",
+    "localNames": ["Flet", "Picaud", "Sole bâtarde", "Flondre"],
+    "category": "Poisson plat",
+    "identificationNotes": "Corps plat ovale avec yeux généralement situés sur le côté droit (mais parfois à gauche), peau rugueuse au toucher due à de petits tubercules épineux le long de la ligne latérale et des nageoires. Pas de taches orange vif (contrairement à la plie)."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": null,
+    "recommendedSizeCm": 25,
+    "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Attention : ne pas confondre avec la plie (qui a une maille stricte de 27 cm et des taches orange)",
+      "Pêche autorisée toute l'année dans le canal et sur le littoral"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "22 - 35 cm",
+    "maxLengthCm": "50 cm",
+    "averageWeightKg": "0.2 - 0.7 kg",
+    "maxWeightKg": "2.0 kg",
+    "diet": [
+      "Vers de vase (chironomes) et arénicoles",
+      "Petits bivalves (tellines, coques) et brouteurs de fond",
+      "Petits crustacés et crevettes grises",
+      "Petits alevins posés sur la vase"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Toute l'année (champion de l'euryhalinité, remonte jusqu'au Bassin Saint-Pierre)",
+    "keySpots": {
+      "enrochements": "Pied des talus par 5 à 8 m de fond où les pierres rejoignent la vase.",
+      "palplanches": "Bas de quai de Colombelles et d'Hérouville dans les dépôts de sédiments.",
+      "pilesDePont": "Zones limoneuses sous Pegasus Bridge et le Viaduc de Calix.",
+      "bergesArborees": "Plats de vase bordant les rives ombragées de Ranville et Bénouville.",
+      "structuresPortuaires": "Nouveau Bassin et Bassin Saint-Pierre (très présent en zone urbaine)."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "S'active avec les courants d'eau salée mais reste très actif en eau douce stagnante.",
+      "traficNavires": "Fouille la vase fraîchement mise en suspension par le sillage des bateaux.",
+      "luminositeEtNuit": "Actif de jour comme de nuit, particulièrement au coucher du soleil.",
+      "turbidite": "Parfaitement adapté aux eaux saumâtres et très chargées en sédiments."
+    },
+    "tactics": [
+      "Pêche au posé avec montage plombée coulissante et empile traînante sur le fond",
+      "Pêche à la calée eschée d'arénicoles fraîches ou gros vers de terreau",
+      "Pêche au feeder sur le canal avec amorce terreuse et vers coupés"
+    ],
+    "recommendedLuresAndBaits": [
+      "Vers arénicoles bien frais",
+      "Gros vers de terreau ou lombrics (très efficace en haut-canal)",
+      "Lanière de maquereau ou queue de crevette crue"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Avril à Décembre (abondant en baie de Sallenelles et estuaire)",
+    "habitats": {
+      "rochesDuCalvados": "Absent des roches pures ; localisé sur les cuvettes de sable environnantes.",
+      "epavesDDay": "Occasionnel sur les fonds sablo-vaseux ceinturant les épaves côtières.",
+      "bancsDeSableEtRidens": "Sables fins et bancs de vase de l'embouchure de l'Orne et Sword Beach."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Tous coefficients ; se pêche facilement par mortes-eaux.",
+      "tidalPhase": "Les deux dernières heures de jusant et première heure de flot.",
+      "slackVsCurrent": "Pêche optimale en dérive très lente sur les fonds meubles."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Vent faible permettant de faire dériver le bateau lentement sur le sable.",
+      "unfavorableWinds": "Mer très agitée compliquant la perception des touches fines sur le fond."
+    },
+    "tactics": [
+      "Dérive lente avec traîneau plat ou cuiller à flet plombée 30-60g",
+      "Montage 2 empiles courtes garnies de perles jaunes et rouges attractives"
+    ],
+    "recommendedLuresAndBaits": [
+      "Arénicole fraîche ou néréide",
+      "Petite cuiller ondulante argentée montée avec un ver",
+      "Lanière de poisson frais"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne feeder ou calée 2m70 - 3m30, scion sensible, puissance 15-50g",
+      "reel": "Taille 2500-3000 classique",
+      "line": "Nylon 24/100 ou tresse fine",
+      "leader": "Bas de ligne 20/100 à 22/100, hameçon tige longue n°4 à n°6"
+    },
+    "boatCombo": {
+      "rod": "Canne fine 2m10 - 2m40, puissance 20-60g",
+      "reel": "Taille 3000",
+      "line": "Tresse 8 brins PE 1.0",
+      "leader": "Fluorocarbone 25/100 avec hameçons spéciaux poissons plats à ardillons sur la tige"
+    },
+    "topEquipment": [
+      "Cuillers plates à poisson plat (rouge/jaune) qui soulèvent la vase en dérive",
+      "Aiguille à vers pour ne pas déchirer l'esche lors des lancers"
+    ]
+  },
+  "calendar": {
+    "canal": [2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2],
+    "bateau": [1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 2, 1]
+  },
+  "localSecret": "Dans le canal de Caen entre Blainville et Hérouville, faites glisser lentement votre plombée de 10 cm toutes les 2 minutes le long du fond de vase : le nuage de limon soulevé attire immédiatement les flets curieux qui se ruent sur l'arénicole !"
+}

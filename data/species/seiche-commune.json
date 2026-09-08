@@ -1,0 +1,110 @@
+{
+  "id": "seiche-commune",
+  "identity": {
+    "name": "Seiche commune (et Casserons)",
+    "scientificName": "Sepia officinalis",
+    "family": "Sépiidés",
+    "localNames": ["Margate", "Casseron (jeune)", "Sep"],
+    "category": "Céphalopode",
+    "identificationNotes": "Corps ovale aplati bordé d'une nageoire ondulante continue, os interne calcaire épais ('os de seiche'), tête munie de 8 bras et 2 longs tentacules préhensiles rétractiles, yeux très évolués en forme de W, capacité spectaculaire de mimétisme chromatique."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": null,
+    "recommendedSizeCm": 15,
+    "bagLimit": "Prélèvement raisonné pour consommation personnelle",
+    "closedSeason": "Aucune fermeture biologique récréative",
+    "specialRules": [
+      "Pêche récréative libre à la turlutte (eging) du bord et en bateau",
+      "Période de reproduction printanière à protéger (rejets des femelles prêtes à pondre conseillés)"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "15 - 28 cm (manteau)",
+    "maxLengthCm": "40 cm",
+    "averageWeightKg": "0.3 - 1.2 kg",
+    "maxWeightKg": "3.0 kg",
+    "diet": [
+      "Crabes verts et petits tourteaux",
+      "Crevettes bouquets et grises broyées par son bec de perroquet",
+      "Petits poissons de fond (gobies, sprats, alevins)"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Avril à Juin (grosses reproductrices) et Septembre à Novembre (casserons)",
+    "keySpots": {
+      "enrochements": "Talus rocheux de Bénouville et Blainville où elle chasse les crabes.",
+      "palplanches": "Quais de Ouistreham et de Ranville : longe les parois métalliques.",
+      "pilesDePont": "Zones éclairées la nuit sous Pegasus Bridge attirant les alevins.",
+      "bergesArborees": "Tronçons salés calmes lors des journées ensoleillées de printemps.",
+      "structuresPortuaires": "Avant-port, darses et musoirs de Ouistreham (spot numéro 1)."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Pénètre en nombre dans le canal avec l'eau salée montante des écluses.",
+      "traficNavires": "Chasse dans les zones calmes après le passage des cargos.",
+      "luminositeEtNuit": "Très active de nuit sous les lampadaires urbains qui concentrent le fretin.",
+      "turbidite": "Préfère les eaux claires à légèrement teintées pour chasser à vue."
+    },
+    "tactics": [
+      "Pêche à la turlutte japonaise (Egi taille 2.5 à 3.5) animée par tirées lentes (bichi-bichi)",
+      "Pêche au flotteur coulissant lumineux esché d'une sardine entière sur cage à turlutte",
+      "Animation verticale le long des quais avec turlutte plombée ou turlutte plombée en tête"
+    ],
+    "recommendedLuresAndBaits": [
+      "Turlutte DTD ou Yamashita taille 3.0 (Coloris Rose, Orange ou Naturel Maquereau)",
+      "Turlutte plombée artisanale blanche à cage d'aiguilles",
+      "Petite sardine fraîche ligaturée sur turlutte espagnole"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Avril à Novembre (dérives sur les plateaux de Côte de Nacre)",
+    "habitats": {
+      "rochesDuCalvados": "Champs de laminaires et moulières de Lion et Luc (8-16m).",
+      "epavesDDay": "Fonds de graviers ceinturant les épaves de 1944.",
+      "bancsDeSableEtRidens": "Lisières mixtes sable-roche où elle s'enfouit à l'affût."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients de 40 à 65 pour maintenir une dérive lente de 0.5 à 1 nœud.",
+      "tidalPhase": "Étales et débuts de courant où les turluttes restent proches du fond.",
+      "slackVsCurrent": "Très productive lorsque le bateau dérive doucement sans forcer."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Vent faible de terre (Sud/SO), mer calme et eau cristalline.",
+      "unfavorableWinds": "Grand vent de Nord créant une eau laiteuse crayeuse bloquant sa vision."
+    },
+    "tactics": [
+      "Dérive lente avec montage Tataki (2 petites turluttes flottantes et plombée terminale 40-80g)",
+      "Pêche en dérive au ras du fond avec turlutte plombée type Tip-Run"
+    ],
+    "recommendedLuresAndBaits": [
+      "Turlutte Tataki Yamashita Oppai 7cm (Coloris Rose et Vert phospho)",
+      "Turlutte Tip-Run plombée 30g à 50g",
+      "Crevette artificielle phospho"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Canne eging spécifique ou spinning sensible 2m20 - 2m50, puissance 5-20g, action douce",
+      "reel": "Taille 2500 fluide",
+      "line": "Tresse fine 8 brins PE 0.6 à 0.8 (10-12/100)",
+      "leader": "2m de fluorocarbone 20/100 à 24/100"
+    },
+    "boatCombo": {
+      "rod": "Canne eging bateau / tataki 2m00 - 2m20, scion souple et sensible",
+      "reel": "Taille 2500-3000",
+      "line": "Tresse PE 0.8 à 1.0",
+      "leader": "Fluorocarbone 26/100"
+    },
+    "topEquipment": [
+      "Seau avec couvercle hermétique ou vivier (attention aux puissants jets d'encre noire)",
+      "Gaffe fine ou épuisette à mailles plastifiées faciles à rincer"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 2, 3, 2, 0, 1, 3, 3, 2, 0],
+    "bateau": [0, 0, 0, 2, 3, 3, 2, 2, 3, 3, 2, 0]
+  },
+  "localSecret": "En automne sous les lampadaires du quai de Ranville et de Ouistreham, animez une petite turlutte rose de taille 2.5 par des tirées très douces entre deux eaux : les bancs de casserons (jeunes seiches très tendres) chassent les sprats et s'accrochent avec une sensation de 'poids mort' très nette !"
+}

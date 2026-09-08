@@ -1,0 +1,110 @@
+{
+  "id": "bar-mouchete",
+  "identity": {
+    "name": "Bar moucheté",
+    "scientificName": "Dicentrarchus punctatus",
+    "family": "Moronidés",
+    "localNames": ["Pitorre", "Moucheté", "Pigassou"],
+    "category": "Carnassier marin",
+    "identificationNotes": "Ponctuations noires nettes sur le dos et les flancs conservées à l'âge adulte. Tache noire très marquée sur le bord de l'opercule. Profil plus trapu que le bar commun."
+  },
+  "regulations": {
+    "zone": "Manche Est - CIEM 7.d (Calvados)",
+    "legalSizeCm": 30,
+    "recommendedSizeCm": 35,
+    "bagLimit": "Prélèvement raisonné (non soumis au quota européen strict du bar commun)",
+    "closedSeason": "Aucune fermeture biologique légale spécifique en Manche",
+    "specialRules": [
+      "Attention : ne pas confondre avec un juvénile de bar commun (qui perd ses taches vers 20 cm)",
+      "Marquage caudal conseillé dès la capture pour éviter tout litige lors des contrôles"
+    ]
+  },
+  "biology": {
+    "averageLengthCm": "25 - 40 cm",
+    "maxLengthCm": "60 cm",
+    "averageWeightKg": "0.3 - 1.2 kg",
+    "maxWeightKg": "2.5 kg",
+    "diet": [
+      "Vers arénicoles et néréides fouisseurs",
+      "Petits crabes de sable et crevettes grises",
+      "Petits alevins de soles et de sprats"
+    ]
+  },
+  "canal": {
+    "present": true,
+    "presenceSeason": "Juin à Septembre (visiteur estival rare dans le bas-canal salé)",
+    "keySpots": {
+      "enrochements": "Talus rocheux de Bénouville et Ranville sur fond à tendance sableuse.",
+      "palplanches": "Quais de l'avant-port de Ouistreham et zone du bassin d'évitement.",
+      "pilesDePont": "Abords aval de Pegasus Bridge lors des fortes marées d'équinoxe.",
+      "bergesArborees": "Rare sur les secteurs d'eau douce amont ; se limite aux zones salées.",
+      "structuresPortuaires": "Ducs d'Albe et cales de mise à l'eau de Ouistreham."
+    },
+    "triggers": {
+      "ecluseesOuistreham": "Pénètre dans le canal à l'occasion des sas de marée haute estivaux.",
+      "traficNavires": "Chasse sur les fonds de graviers et sable brassés par les mouvements d'eau.",
+      "luminositeEtNuit": "Activité marquée aux aurores sur les zones peu profondes et calmes.",
+      "turbidite": "Supporte très bien les eaux troubles générées par le ressac d'estran."
+    },
+    "tactics": [
+      "Pêche au posé avec montage coulissant fin esché d'une belle arénicole",
+      "Animation lente d'un petit leurre souple 7-9cm au ras du fond sablonneux",
+      "Pêche à la crevette grise vivante sous un flotteur sensible"
+    ],
+    "recommendedLuresAndBaits": [
+      "Arénicole fraîche ou néréide de roche",
+      "Fiiish Black Minnow 70 / 90 (Tête 6g-10g Kaki)",
+      "Crevette grise vivante sur hameçon n°4 fin de fer"
+    ]
+  },
+  "bateau": {
+    "present": true,
+    "presenceSeason": "Juin à Octobre (estival sur les bordures sablonneuses de Côte de Nacre)",
+    "habitats": {
+      "rochesDuCalvados": "Lisières de sable entourant le plateau calcaire de Lion-sur-Mer.",
+      "epavesDDay": "Occasionnel aux abords des petites épaves côtières peu profondes (8-12m).",
+      "bancsDeSableEtRidens": "Banc de Bernières et ridens sableux au large de Sword Beach."
+    },
+    "tideAndCurrent": {
+      "bestCoefficients": "Coefficients de 60 à 80 pour une dérive modérée.",
+      "tidalPhase": "Flot montant ramenant les poissons vers les plages et ridens.",
+      "slackVsCurrent": "Plein courant de 2e et 3e heure de marée le long des couloirs de sable."
+    },
+    "weatherImpact": {
+      "favorableWinds": "Vent faible de Sud/Sud-Ouest ou brise thermique d'Est formant un clapot modéré.",
+      "unfavorableWinds": "Vent fort de Nord/Nord-Ouest écrasant la zone côtière de rouleaux."
+    },
+    "tactics": [
+      "Dérive lente au ver arénicole manié sur traîneau en bordure de sable",
+      "Lancer-ramener au petit slug ou shad souple dans les vagues de bordure"
+    ],
+    "recommendedLuresAndBaits": [
+      "Crazy Sand Eel 100 (Coloris Nacre / Kaki)",
+      "Arénicole fraîche sur empile basse 22/100",
+      "Petite cuiller ondulante argentée 10-15g"
+    ]
+  },
+  "gear": {
+    "canalCombo": {
+      "rod": "Spinning 2m10 - 2m30, puissance 5-20g, scion sensible",
+      "reel": "Taille 2500 léger garni de tresse fine",
+      "line": "Tresse 8 brins PE 0.6 à 0.8 (10-12/100)",
+      "leader": "2m de fluorocarbone 20/100 à 24/100"
+    },
+    "boatCombo": {
+      "rod": "Canne fine 2m10 - 2m20, puissance 10-35g",
+      "reel": "Taille 3000 mer frein progressif",
+      "line": "Tresse 8 brins PE 1.0 (14-16/100)",
+      "leader": "2.5m de fluorocarbone 25/100 à 30/100"
+    },
+    "topEquipment": [
+      "Aiguille à vers à bout creux pour enfiler les arénicoles proprement",
+      "Petite boîte isotherme pour garder les vers au frais lors des chaleurs estivales"
+    ]
+  },
+  "calendar": {
+    "canal": [0, 0, 0, 0, 1, 2, 2, 2, 1, 0, 0, 0],
+    "bateau": [0, 0, 0, 0, 1, 2, 3, 3, 2, 1, 0, 0]
+  },
+  "localSecret": "Vérifiez bien la nageoire operculaire : le moucheté a une tache noire foncée très nette. Sa maille légale est de 30 cm, mais veillez à ne pas le confondre avec un jeune bar commun de 30 cm dont la maille reste 42 cm !"
+}
