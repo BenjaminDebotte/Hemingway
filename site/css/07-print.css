@@ -74,45 +74,112 @@ body.print-mode .print-view-container {
 /* Calibrage typographique et structurel A5 (Screen Proof & Print) */
 .a4-sheet-preview .species-title { font-size: 11.5pt; line-height: 1.15; margin-bottom: 0.8mm; }
 .a4-sheet-preview .species-scientific { font-size: 8pt; }
-.a4-sheet-preview .card-header { padding-bottom: 1.5mm; margin-bottom: 1.5mm; }
-.a4-sheet-preview .recognition-box { padding: 1.5mm 2.5mm; margin-bottom: 1.5mm; font-size: 7.2pt; line-height: 1.26; }
+.a4-sheet-preview .card-header { padding-bottom: 1.5mm; margin-bottom: 1.5mm; width: 100%; box-sizing: border-box; }
+.a4-sheet-preview .recognition-box {
+  padding: 1.5mm 2.5mm;
+  margin-bottom: 1.5mm;
+  font-size: 7.2pt;
+  line-height: 1.26;
+  width: 100%;
+  box-sizing: border-box;
+}
 .a4-sheet-preview .recognition-title { font-size: 6.8pt; }
-.a4-sheet-preview .regs-block { padding: 1.5mm 2.2mm; margin-bottom: 1.5mm; }
+.a4-sheet-preview .regs-block {
+  padding: 1.5mm 2.2mm;
+  margin-bottom: 1.5mm;
+  width: 100%;
+  box-sizing: border-box;
+}
 .a4-sheet-preview .block-title { font-size: 7.2pt; margin-bottom: 1mm; }
-.a4-sheet-preview .reg-pill { padding: 1mm 1.5mm; }
+.a4-sheet-preview .regs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.4fr;
+  gap: 1.5mm;
+  width: 100%;
+  margin-bottom: 1mm;
+}
+.a4-sheet-preview .reg-pill {
+  padding: 1mm 1.5mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
+}
 .a4-sheet-preview .reg-pill-label { font-size: 5.6pt; margin-bottom: 0.5mm; }
 .a4-sheet-preview .reg-pill-val { font-size: 9pt; }
 .a4-sheet-preview .val-harvest { font-size: 7.6pt; }
-.a4-sheet-preview .harvest-gauge-track { height: 3.5px; }
+.a4-sheet-preview .harvest-gauge-track { height: 3.5px; width: 100%; }
 .a4-sheet-preview .harvest-gauge-cursor { top: -1.5px; bottom: -1.5px; width: 3px; }
 .a4-sheet-preview .harvest-gauge-ticks { font-size: 4.6pt; }
-.a4-sheet-preview .regs-rules-list { font-size: 6.8pt; line-height: 1.24; gap: 0.5mm; }
-.a4-sheet-preview .biology-section { margin-bottom: 1.5mm; gap: 1.8mm; }
-.a4-sheet-preview .bio-card { padding: 1.5mm 2.2mm; }
+.a4-sheet-preview .regs-rules-list { font-size: 6.8pt; line-height: 1.24; gap: 0.5mm; width: 100%; }
+.a4-sheet-preview .biology-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1.5mm;
+  gap: 1.8mm;
+  width: 100%;
+  box-sizing: border-box;
+}
+.a4-sheet-preview .bio-card {
+  padding: 1.5mm 2.2mm;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
 .a4-sheet-preview .bio-title { font-size: 6.2pt; margin-bottom: 0.8mm; }
-.a4-sheet-preview .size-gauge-track { height: 5px; }
+.a4-sheet-preview .size-gauge-track { height: 5px; width: 100%; }
 .a4-sheet-preview .size-gauge-labels { font-size: 6.8pt; }
 .a4-sheet-preview .bio-weight-row { font-size: 6.8pt; padding-top: 0.8mm; }
-.a4-sheet-preview .diet-tags { gap: 1mm; margin-top: 0.8mm; }
+.a4-sheet-preview .diet-tags { gap: 1mm; margin-top: 0.8mm; width: 100%; display: flex; flex-wrap: wrap; }
 .a4-sheet-preview .diet-tag { font-size: 6.2pt; padding: 0.5mm 1.2mm; }
-.a4-sheet-preview .calendar-block { padding-top: 1.2mm; margin-top: 0 !important; }
-.a4-sheet-preview .cal-row { margin-bottom: 0.8mm; gap: 1.5mm; }
-.a4-sheet-preview .cal-label { font-size: 6.4pt; width: 55px; }
-.a4-sheet-preview .month-cell { height: 13px; font-size: 5.2pt; }
+.a4-sheet-preview .secret-local-box {
+  padding: 1.5mm 2.5mm;
+  font-size: 7pt;
+  line-height: 1.25;
+  margin: 1.5mm 0;
+  border: 1px solid var(--theme-secret-border);
+  background: var(--theme-secret-surface);
+  color: var(--theme-secret-text);
+  width: 100%;
+  box-sizing: border-box;
+}
+.a4-sheet-preview .secret-title { font-size: 6.6pt; margin-bottom: 0.5mm; color: var(--theme-secret-accent); }
+.a4-sheet-preview .calendar-block {
+  padding-top: 1.2mm;
+  margin-top: 0 !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+.a4-sheet-preview .cal-row { margin-bottom: 0.8mm; gap: 1.5mm; width: 100%; display: flex; align-items: center; }
+.a4-sheet-preview .cal-label { font-size: 6.4pt; width: 55px; flex-shrink: 0; }
+.a4-sheet-preview .cal-months {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5px;
+  flex: 1 1 auto;
+  width: 100%;
+}
+.a4-sheet-preview .month-cell { height: 13px; font-size: 5.2pt; width: 100%; }
 .a4-sheet-preview .notes-box {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  min-height: 16mm;
+  min-height: 18mm;
   margin-top: 0;
-  padding: 1.0mm 2mm 1.2mm;
+  padding: 1.2mm 2.2mm;
   border: 1px dashed var(--theme-card-divider);
   border-radius: 0;
   background: var(--theme-surface-subtle);
   color: var(--theme-text-main);
+  width: 100%;
+  box-sizing: border-box;
 }
 .a4-sheet-preview .notes-header {
   margin-bottom: 0.5mm;
+  flex-shrink: 0;
 }
 .a4-sheet-preview .notes-title {
   font-size: 6.4pt;
@@ -121,43 +188,162 @@ body.print-mode .print-view-container {
   font-size: 5.2pt;
 }
 .a4-sheet-preview .notes-lines {
-  flex: 1;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  height: 100%;
 }
 .a4-sheet-preview .notes-line {
-  flex: 1;
-  min-height: 4mm;
-  max-height: 6.5mm;
+  flex: 1 1 auto;
+  min-height: 4.5mm;
   border-bottom: 1px dashed var(--theme-card-divider);
 }
 .a4-sheet-preview .notes-line::before {
   display: none;
 }
+
+/* Face B (Verso) - Utilisation optimale de tout l'espace disponible */
+.a4-sheet-preview .verso-header {
+  padding-bottom: 1.5mm;
+  margin-bottom: 1.2mm;
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.a4-sheet-preview .verso-eyebrow { font-size: 5.8pt; }
+.a4-sheet-preview .verso-title { font-size: 10.5pt; line-height: 1.15; }
+.a4-sheet-preview .verso-badge { font-size: 6.2pt; padding: 0.8mm 1.8mm; }
+
+.a4-sheet-preview .biotope-section {
+  flex: 1 1 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.4mm 2mm;
+  margin-bottom: 0.8mm;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.a4-sheet-preview .biotope-section:last-child {
+  margin-bottom: 0;
+}
+
+/* Espèces mono-biotope (Eau douce/Canal seul ou Mer/Bateau seul) : occupation plein format */
+.a4-sheet-preview .verso-header + .biotope-section:last-child,
 .a4-sheet-preview .biotope-section:only-of-type {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 2.2mm 2.8mm;
 }
-.a4-sheet-preview .verso-header { padding-bottom: 1.5mm; margin-bottom: 1.5mm; }
-.a4-sheet-preview .verso-eyebrow { font-size: 5.8pt; }
-.a4-sheet-preview .verso-title { font-size: 10.5pt; line-height: 1.15; }
-.a4-sheet-preview .verso-badge { font-size: 6.2pt; padding: 0.8mm 1.8mm; }
-.a4-sheet-preview .biotope-section { padding: 1.2mm 1.8mm; margin-bottom: 1.0mm; }
+.a4-sheet-preview .verso-header + .biotope-section:last-child .spots-chip-grid,
+.a4-sheet-preview .biotope-section:only-of-type .spots-chip-grid {
+  gap: 1.8mm;
+  margin-bottom: 1.4mm;
+}
+.a4-sheet-preview .verso-header + .biotope-section:last-child .spot-chip,
+.a4-sheet-preview .biotope-section:only-of-type .spot-chip {
+  padding: 1.8mm 2.2mm;
+  font-size: 7.2pt;
+  line-height: 1.28;
+}
+.a4-sheet-preview .verso-header + .biotope-section:last-child .canal-triggers-cockpit,
+.a4-sheet-preview .verso-header + .biotope-section:last-child .tide-weather-cockpit,
+.a4-sheet-preview .biotope-section:only-of-type .canal-triggers-cockpit,
+.a4-sheet-preview .biotope-section:only-of-type .tide-weather-cockpit {
+  gap: 1.8mm;
+  margin-bottom: 1.4mm;
+}
+.a4-sheet-preview .verso-header + .biotope-section:last-child .trigger-card,
+.a4-sheet-preview .verso-header + .biotope-section:last-child .cockpit-box,
+.a4-sheet-preview .biotope-section:only-of-type .trigger-card,
+.a4-sheet-preview .biotope-section:only-of-type .cockpit-box {
+  padding: 1.8mm 2.2mm;
+  font-size: 7.2pt;
+  line-height: 1.28;
+}
+.a4-sheet-preview .verso-header + .biotope-section:last-child .tactics-bullets,
+.a4-sheet-preview .biotope-section:only-of-type .tactics-bullets {
+  font-size: 7.4pt;
+  line-height: 1.35;
+  gap: 1.2mm;
+  margin-bottom: 1.4mm;
+}
+.a4-sheet-preview .verso-header + .biotope-section:last-child .terminal-tackle-card,
+.a4-sheet-preview .biotope-section:only-of-type .terminal-tackle-card {
+  padding: 1.8mm 2.4mm;
+}
+.a4-sheet-preview .verso-header + .biotope-section:last-child .terminal-spec-item,
+.a4-sheet-preview .biotope-section:only-of-type .terminal-spec-item {
+  font-size: 6.8pt;
+  line-height: 1.25;
+}
+
 .a4-sheet-preview .presence-badge { font-size: 6.2pt; padding: 0.5mm 1.2mm; }
-.a4-sheet-preview .spots-chip-grid { gap: 1mm; margin-bottom: 0.8mm; }
-.a4-sheet-preview .spot-chip { padding: 0.8mm 1.2mm; font-size: 6.4pt; line-height: 1.2; }
+.a4-sheet-preview .spots-chip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1mm;
+  margin-bottom: 0.8mm;
+  width: 100%;
+  box-sizing: border-box;
+}
+.a4-sheet-preview .spot-chip {
+  padding: 0.8mm 1.2mm;
+  font-size: 6.4pt;
+  line-height: 1.2;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .a4-sheet-preview .spot-tag { font-size: 5.2pt; margin-bottom: 0.3mm; }
-.a4-sheet-preview .canal-triggers-cockpit { gap: 1mm; margin-bottom: 0.8mm; }
-.a4-sheet-preview .trigger-card { padding: 0.8mm 1.2mm; font-size: 6.4pt; line-height: 1.2; }
+.a4-sheet-preview .canal-triggers-cockpit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1mm;
+  margin-bottom: 0.8mm;
+  width: 100%;
+  box-sizing: border-box;
+}
+.a4-sheet-preview .trigger-card {
+  padding: 0.8mm 1.2mm;
+  font-size: 6.4pt;
+  line-height: 1.2;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .a4-sheet-preview .trigger-header { font-size: 5.6pt; margin-bottom: 0.3mm; }
-.a4-sheet-preview .tide-weather-cockpit { gap: 1mm; margin-bottom: 0.8mm; }
-.a4-sheet-preview .cockpit-box { padding: 0.8mm 1.2mm; }
+.a4-sheet-preview .tide-weather-cockpit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1mm;
+  margin-bottom: 0.8mm;
+  width: 100%;
+  box-sizing: border-box;
+}
+.a4-sheet-preview .cockpit-box {
+  padding: 0.8mm 1.2mm;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .a4-sheet-preview .cockpit-box-title { font-size: 5.8pt; }
 .a4-sheet-preview .cockpit-pill-val { font-size: 5.6pt; }
-.a4-sheet-preview .coef-track { height: 4.5px; }
+.a4-sheet-preview .coef-track { height: 4.5px; width: 100%; }
 .a4-sheet-preview .coef-labels { font-size: 5pt; }
 .a4-sheet-preview .wind-desc-text { font-size: 6.2pt; line-height: 1.18; }
 .a4-sheet-preview .twelfths-card {
@@ -168,17 +354,32 @@ body.print-mode .print-view-container {
   border-radius: 0;
   padding: 1mm 1.8mm;
   margin: 0.8mm 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+.a4-sheet-preview .twelfths-chart-container {
+  display: flex;
+  align-items: center;
+  gap: 1.8mm;
+  width: 100%;
 }
 .a4-sheet-preview .twelfths-title { font-size: 6.2pt; }
 .a4-sheet-preview .twelfths-hours-pill { font-size: 6pt; padding: 0.4mm 1.2mm; }
 .a4-sheet-preview .twelfths-flow-pill { font-size: 5.8pt; padding: 0.4mm 1mm; }
-.a4-sheet-preview .twelfths-bell-curve { height: 22px; }
+.a4-sheet-preview .twelfths-bell-curve { height: 22px; flex-shrink: 0; }
 .a4-sheet-preview .twelfth-col { width: 16px; }
 .a4-sheet-preview .twelfth-bar-track { height: 12px; }
 .a4-sheet-preview .twelfth-hour-name { font-size: 5pt; }
 .a4-sheet-preview .twelfth-frac-label { font-size: 4.4pt; }
-.a4-sheet-preview .twelfths-note { font-size: 6.4pt; line-height: 1.18; }
-.a4-sheet-preview .tactics-bullets { font-size: 6.4pt; line-height: 1.2; gap: 0.4mm; margin-bottom: 0.6mm; }
+.a4-sheet-preview .twelfths-note { font-size: 6.4pt; line-height: 1.18; flex: 1 1 auto; }
+.a4-sheet-preview .tactics-bullets {
+  font-size: 6.4pt;
+  line-height: 1.2;
+  gap: 0.4mm;
+  margin-bottom: 0.6mm;
+  width: 100%;
+  box-sizing: border-box;
+}
 .a4-sheet-preview .terminal-tackle-card {
   padding: 0.6mm 1mm;
   margin: 0.5mm 0;
@@ -186,6 +387,8 @@ body.print-mode .print-view-container {
   border-radius: 0;
   background: var(--theme-surface-subtle);
   color: var(--theme-text-main);
+  width: 100%;
+  box-sizing: border-box;
 }
 .a4-sheet-preview .terminal-canal { border-left: 2px solid var(--theme-canal-accent); }
 .a4-sheet-preview .terminal-bateau { border-left: 2px solid var(--theme-bateau-accent); }
@@ -195,16 +398,15 @@ body.print-mode .print-view-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.3mm 1.5mm;
+  width: 100%;
 }
-.a4-sheet-preview .terminal-spec-item { font-size: 5.9pt; line-height: 1.15; gap: 0.6mm; }
+.a4-sheet-preview .terminal-spec-item { font-size: 5.9pt; line-height: 1.15; gap: 0.6mm; width: 100%; }
 .a4-sheet-preview .terminal-spec-item.spec-combo { grid-column: 1 / -1; }
 .a4-sheet-preview .terminal-pill { font-size: 4.5pt; padding: 0.15mm 0.5mm; width: 12mm; }
-.a4-sheet-preview .terminal-val { font-size: 5.9pt; line-height: 1.15; }
+.a4-sheet-preview .terminal-val { font-size: 5.9pt; line-height: 1.15; flex: 1 1 auto; }
 .a4-sheet-preview .combos-compact-card { display: none !important; }
 .a4-sheet-preview .combo-line { font-size: 6.6pt; line-height: 1.22; }
 .a4-sheet-preview .combo-tag { font-size: 5.6pt; padding: 0.5mm 1.2mm; }
-.a4-sheet-preview .secret-local-box { padding: 1.5mm 2.5mm; font-size: 7pt; line-height: 1.25; margin: 1.5mm 0; border: 1px solid var(--theme-secret-border); background: var(--theme-secret-surface); color: var(--theme-secret-text); }
-.a4-sheet-preview .secret-title { font-size: 6.6pt; margin-bottom: 0.5mm; color: var(--theme-secret-accent); }
 .a4-sheet-preview .ui-icon { width: 1.05em; height: 1.05em; }
 
 /* En impression réelle (@media print) */
@@ -298,16 +500,42 @@ body.print-mode .print-view-container {
     background: #ffffff !important;
     color: #000000 !important;
     overflow: hidden !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    gap: 1.2mm !important;
   }
 
   .a4-sheet-preview .notes-box {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
     background: #ffffff !important;
     border: 1px dashed #000000 !important;
     color: #000000 !important;
   }
 
+  .a4-sheet-preview .notes-lines {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-evenly !important;
+  }
+
   .a4-sheet-preview .notes-line {
+    flex: 1 1 auto !important;
     border-bottom: 1px dashed #cbd5e1 !important;
+  }
+
+  .a4-sheet-preview .biotope-section {
+    flex: 1 1 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+  }
+
+  .a4-sheet-preview .biotope-section:only-of-type {
+    flex: 1 1 auto !important;
   }
 
   .a4-sheet-preview .twelfths-card,

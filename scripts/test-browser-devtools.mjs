@@ -461,6 +461,64 @@ for (const th of themes) {
   assert(isDarkValid, `Mode A4 / '${th}' (Nuit) : Lisibilité nocturne validée (carte: ${darkStyles.cardBg}, texte: ${darkStyles.textColor})`);
 }
 
+console.log('\n--- AXE 11 : OCCUPATION OPTIMALE DE L\'ESPACE DISPONIBLE EN MODE A4 ---');
+const spaceOccupancy = await cdp.evaluate(`
+  (() => {
+    // 1. Analyse Face A (Recto)
+    const rectoCard = document.querySelector('.print-sheet-recto .card-face');
+    const rectoWidth = rectoCard.offsetWidth;
+    const rectoHeight = rectoCard.offsetHeight;
+    const notesBox = rectoCard.querySelector('.notes-box');
+    const notesBoxH = notesBox ? notesBox.offsetHeight : 0;
+    const notesLines = notesBox ? Array.from(notesBox.querySelectorAll('.notes-line')).map(l => l.offsetHeight) : [];
+
+    // Vérifier largeur des éléments Recto
+    const recognitionBox = rectoCard.querySelector('.recognition-box');
+    const regsBlock = rectoCard.querySelector('.regs-block');
+    const bioSection = rectoCard.querySelector('.biology-section');
+    const calBlock = rectoCard.querySelector('.calendar-block');
+
+    const rectoFullWidth = [recognitionBox, regsBlock, bioSection, calBlock, notesBox].every(el => {
+      return el ? el.offsetWidth >= rectoWidth * 0.9 : false;
+    });
+
+    // 2. Analyse Face B Dual-Biotope (Bar commun dans la première feuille Verso)
+    const versoSheets = Array.from(document.querySelectorAll('.print-sheet-verso'));
+    const dualCard = versoSheets[0]?.querySelectorAll('.card-face')[1]; // Bar commun est à droite sur verso
+    const dualCanalSec = dualCard?.querySelector('.section-canal');
+    const dualBateauSec = dualCard?.querySelector('.section-bateau');
+
+    // 3. Analyse Face B Mono-Biotope (Brochet ou Sandre)
+    const allVersoCards = Array.from(document.querySelectorAll('.print-sheet-verso .card-face'));
+    const monoCard = allVersoCards.find(c => {
+      const t = c.querySelector('.verso-title')?.textContent || '';
+      return t.includes('Brochet') || t.includes('Sandre') || t.includes('Silure');
+    });
+    const monoSection = monoCard?.querySelector('.verso-header + .biotope-section:last-child') || monoCard?.querySelector('.biotope-section');
+
+    return {
+      rectoWidth,
+      rectoHeight,
+      rectoScrollHeight: rectoCard.scrollHeight,
+      rectoFullWidth,
+      notesBoxH,
+      notesLines,
+      dualCanalH: dualCanalSec ? dualCanalSec.offsetHeight : 0,
+      dualBateauH: dualBateauSec ? dualBateauSec.offsetHeight : 0,
+      monoSectionH: monoSection ? monoSection.offsetHeight : 0,
+      monoCardH: monoCard ? monoCard.offsetHeight : 0
+    };
+  })()
+`);
+
+assert(spaceOccupancy.rectoFullWidth, `Face A (Recto) : Tous les blocs occupent la pleine largeur utile (largeur: ${spaceOccupancy.rectoWidth}px)`);
+assert(spaceOccupancy.notesBoxH >= 60, `Face A (Recto) : Le bloc de notes manuscrites s'étire pour combler l'espace bas (${spaceOccupancy.notesBoxH}px)`);
+assert(spaceOccupancy.notesLines.every(h => h >= 14), `Face A (Recto) : Les 3 lignes de notes manuscrites prennent toute la hauteur (${spaceOccupancy.notesLines.join(', ')}px)`);
+assert(spaceOccupancy.rectoScrollHeight <= spaceOccupancy.rectoHeight + 2, `Face A (Recto) : Zéro débordement vertical (scrollH: ${spaceOccupancy.rectoScrollHeight}px <= h: ${spaceOccupancy.rectoHeight}px)`);
+
+assert(spaceOccupancy.dualCanalH >= 250 && spaceOccupancy.dualBateauH >= 250, `Face B Dual : Les volets Canal (${spaceOccupancy.dualCanalH}px) et Mer (${spaceOccupancy.dualBateauH}px) occupent tout l'espace disponible équitablement`);
+assert(spaceOccupancy.monoSectionH >= 550, `Face B Mono : L'unique volet biotope s'étire en plein format (${spaceOccupancy.monoSectionH}px sur ${spaceOccupancy.monoCardH}px)`);
+
 // Rétablir le mode Déplié
 await cdp.evaluate('document.querySelector(\'.mode-btn[data-mode="duo"]\').click()');
 
