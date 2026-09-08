@@ -53,9 +53,6 @@
     "tactics": [
       "Espèce exclusivement pêchée en bateau sur les bancs de sable du large"
     ],
-    "recommendedLuresAndBaits": [
-      "Non applicable en canal"
-    ],
     "terminalTackle": {
       "rigidLure": "Non applicable",
       "softLure": "Non applicable",
@@ -86,11 +83,6 @@
       "Dérive lente (1 à 1.5 nœud) au traîneau ou plomb coulissant avec lançon vivant",
       "Montage potence longue (1m50 à 2m) en fluorocarbone 35/100 esché d'une lanière de maquereau taillée en biseau",
       "Pêche au shad souple fin (type slug ou sandeel) grattant les crêtes de ridens"
-    ],
-    "recommendedLuresAndBaits": [
-      "Lançon frais ou vivant piqué par la tête sur hameçon 2/0 ou 3/0",
-      "Lanière de ventre de maquereau blanc brillant (12-15 cm)",
-      "Tentacule d'encornet frais ou calmar"
     ],
     "terminalTackle": {
       "rigidLure": "Plomb lesteur plat ou cuillère à turbot lourde (60-120g) pour maintenir la dérive sur le fond",

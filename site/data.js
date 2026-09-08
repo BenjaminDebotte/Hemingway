@@ -58,11 +58,6 @@ window.SPECIES_DATA = [
         "Shad souple à gratter (Black Minnow 90/120) sur les enrochements",
         "Flotteur lumineux de nuit avec crevette bouquet vivante eschée par la queue"
       ],
-      "recommendedLuresAndBaits": [
-        "Fiiish Black Minnow 90 & 120 (Têtes 10g-12g Kaki)",
-        "Asturie 110 / Patchinko 100 (Coloris 500G)",
-        "Bouquet vivant récolté sur l'estran d'Ouistreham"
-      ],
       "terminalTackle": {
         "rigidLure": "Stickbait flottant 110-130mm (Patchinko 125, Asturie 110) ou jerkbait coulant (Flashminnow 110)",
         "softLure": "Shad 100-120mm sur tête texane articulée 10-18g (Black Minnow 120, Nitro Shad 120)",
@@ -93,11 +88,6 @@ window.SPECIES_DATA = [
         "Pêche en traction au shad souple 120-150mm (tête 25-40g) dans le courant",
         "Dérive au lançon vivant sur traîneau au ras des épaves 1944",
         "Leurre de surface sur les têtes de roche peu profondes (5-8m)"
-      ],
-      "recommendedLuresAndBaits": [
-        "Crazy Sand Eel 150 & 180 (Tête 20-30g Kaki/Bleu)",
-        "Patchinko 125 & 140 (Dos Jaune / Nacre)",
-        "Lançon frais ou vivant sur montage potence"
       ],
       "terminalTackle": {
         "rigidLure": "Casting jig effilé 30-50g (chasses de surface) ou stickbait lourd 140mm sur les ridens",
@@ -215,11 +205,6 @@ window.SPECIES_DATA = [
         "Animation lente d'un petit leurre souple 7-9cm au ras du fond sablonneux",
         "Pêche à la crevette grise vivante sous un flotteur sensible"
       ],
-      "recommendedLuresAndBaits": [
-        "Arénicole fraîche ou néréide de roche",
-        "Fiiish Black Minnow 70 / 90 (Tête 6g-10g Kaki)",
-        "Crevette grise vivante sur hameçon n°4 fin de fer"
-      ],
       "terminalTackle": {
         "rigidLure": "Petit jerkbait minnow suspending 70-90mm ou micro-stickbait 80mm dans les veines d'eau",
         "softLure": "Shad fin 70-90mm (Black Minnow 90, One Up 3\") sur tête texane ou ronde 7-12g",
@@ -249,11 +234,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Dérive lente au ver arénicole manié sur traîneau en bordure de sable",
         "Lancer-ramener au petit slug ou shad souple dans les vagues de bordure"
-      ],
-      "recommendedLuresAndBaits": [
-        "Crazy Sand Eel 100 (Coloris Nacre / Kaki)",
-        "Arénicole fraîche sur empile basse 22/100",
-        "Petite cuiller ondulante argentée 10-15g"
       ],
       "terminalTackle": {
         "rigidLure": "Casting jig compact 15-30g ou petit minnow coulant 80-90mm",
@@ -370,10 +350,6 @@ window.SPECIES_DATA = [
         "Animation verticale au leurre souple (shad 90-110mm) le long des quais",
         "Pêche au poisson mort posé ou lançon manié dans les fosses de l'avant-port"
       ],
-      "recommendedLuresAndBaits": [
-        "Fiiish Black Minnow 90 (Tête 12g Kaki ou Bleu)",
-        "Lançon frais monté sur tête plombée sabot 15g"
-      ],
       "terminalTackle": {
         "rigidLure": "Petit jig métallique dandinette 15-25g le long des palplanches profondes (Ouistreham/Ranville)",
         "softLure": "Shad souple 90-110mm coloris bleu/kaki sur tête 10-18g en verticale près des sas",
@@ -404,11 +380,6 @@ window.SPECIES_DATA = [
         "Technique de l'Ascenseur : shad plombé (60-120g) remonté lentement sans jerker",
         "Slow jigging métallique (80-150g) au ras des tôles et fractures de coques",
         "Dérive au lançon vivant sur traîneau en amont de l'épave"
-      ],
-      "recommendedLuresAndBaits": [
-        "Fiiish Black Minnow 140 / 160 (Têtes 60g à 120g Bleu ou Rose)",
-        "Illex Nitro Shad 150 (Coloris Jelly Shad)",
-        "Lançon vivant piqué par la gueule"
       ],
       "terminalTackle": {
         "rigidLure": "Slow jig ou casting jig lourd 60-120g en ascenseur vertical au-dessus des épaves 1944",
@@ -525,11 +496,6 @@ window.SPECIES_DATA = [
         "Pêche au bouchon coulissant esché d'une lamelle de maquereau ou d'un sprat",
         "Bombette de surface avec petit leurre souple type raglou 65mm"
       ],
-      "recommendedLuresAndBaits": [
-        "Casting jig 15g-20g argenté / bleu holographique",
-        "Raglou 65mm nacré blanc ou pailleté",
-        "Lamelle d'encornet ou lanière de maquereau fraîche"
-      ],
       "terminalTackle": {
         "rigidLure": "Petit casting jig chromé 10-20g ou cuillère ondulante étroite (Toby 12-18g)",
         "softLure": "Micro-shad 50-70mm ou raglou blanc monté derrière un buldo ou plombée d'appel",
@@ -560,11 +526,6 @@ window.SPECIES_DATA = [
         "Pêche à la mitraillette (train de plumes ou peaux de poisson) lestée de 50 à 100g",
         "Pêche ultra-sportive au petit leurre à lancer sur canne légère dans les chasses",
         "Traîne côtière légère au ras des plateaux rocheux"
-      ],
-      "recommendedLuresAndBaits": [
-        "Mitraillette à plumes blanches et reflets argentés (3 à 5 hameçons)",
-        "Petit jig à dandinette 30g à 60g",
-        "Cuiller ondulante type Toby 20g"
       ],
       "terminalTackle": {
         "rigidLure": "Casting jig 25-45g (chrome/bleu/rose) ou cuillère lourde dandinée dans les bouillons",
@@ -681,11 +642,6 @@ window.SPECIES_DATA = [
         "Animation rapide de petites cuillers ondulantes fines ou casting jigs légers (7-12g)",
         "Pêche au fil de soie sans hameçon (le bec s'emmêle dans les fibres de soie grasse)"
       ],
-      "recommendedLuresAndBaits": [
-        "Petite cuiller ondulante fine chromée 7g à 12g",
-        "Lanière de lard ou peau de maquereau taillée en biseau",
-        "Fil de soie de couleur rouge ou jaune fluo"
-      ],
       "terminalTackle": {
         "rigidLure": "Cuillère ondulante argentée fine 10-15g ou petit jerkbait de surface 70mm",
         "softLure": "Micro-finesse 50-60mm translucide sur micro-tête 3-5g ramené à vive allure",
@@ -715,10 +671,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Traîne très légère en surface avec cuiller ondulante ou petit poisson nageur (5-7cm)",
         "Lancer à vue sur les bancs d'orphies sautant hors de l'eau"
-      ],
-      "recommendedLuresAndBaits": [
-        "Petite cuiller Flashmer argentée 10g",
-        "Petit leurre coulant pencil 60mm coloris maquereau"
       ],
       "terminalTackle": {
         "rigidLure": "Casting jig effilé 15-28g ou cuillère ondulante côtière ramenée rapidement en surface",
@@ -836,11 +788,6 @@ window.SPECIES_DATA = [
         "Pêche au ver arénicole ou lamelle de maquereau eschée généreusement",
         "Drop-shot lourd au ras du fond avec lanière d'encornet"
       ],
-      "recommendedLuresAndBaits": [
-        "Arénicole fraîche bien gorgée de liquide",
-        "Lanière de maquereau ou filet de hareng frais",
-        "Tentacule d'encornet découpée finement"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable (inopérant en canal sur cette espèce benthique)",
         "softLure": "Micro-shad 60mm glow ou worm souple dandiné au ras de la vase en hiver",
@@ -870,11 +817,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Pêche à soutenir à l'ancre ou en dérive lente sur fond sablo-vaseux",
         "Montage palangrotte à 3 empiles perles fluorescentes pour attirer le poisson dans l'obscurité"
-      ],
-      "recommendedLuresAndBaits": [
-        "Filet de maquereau taillé en pointe de 5-7 cm",
-        "Gros bouquets d'arénicoles ou vers de chalut",
-        "Lanière d'encornet phosphorescente"
       ],
       "terminalTackle": {
         "rigidLure": "Petit pirk / jig dandinette 40-70g équipé d'une empile eschée au-dessus",
@@ -991,11 +933,6 @@ window.SPECIES_DATA = [
         "Montage palangrotte fine à 2 empiles courtes plombée de 15g à 30g",
         "Pêche au drop-shot ultra-léger esché d'un tronçon d'arénicole"
       ],
-      "recommendedLuresAndBaits": [
-        "Tronçon d'arénicole ou ver néréide",
-        "Bout de crevette grise crue",
-        "Micro-lanière de calmar ou de maquereau"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
         "softLure": "Micro-grub ou petit ver souple aromatisé gratté le long des quais sombres",
@@ -1025,11 +962,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Pêche à soutenir au ras de la ferraille avec bas de ligne 3 empiles (plomb 60-120g)",
         "Dandinette au petit jig ou sabiki muni de morceaux d'esches"
-      ],
-      "recommendedLuresAndBaits": [
-        "Petits morceaux d'encornet ou de seiche (tenue parfaite à l'hameçon)",
-        "Tronçons d'arénicoles fraîches",
-        "Mitraillette fine plumes blanches hameçon n°6 à n°8"
       ],
       "terminalTackle": {
         "rigidLure": "Petit jig argenté 30-50g servant de lesteur dandiné au ras de l'épave",
@@ -1147,11 +1079,6 @@ window.SPECIES_DATA = [
         "Pêche au posé avec montage coulissant très discret (fluorocarbone 26/100) et frein desserré",
         "Pêche au flotteur coulissant lourd plaquant l'esche à 20 cm du fond enroché"
       ],
-      "recommendedLuresAndBaits": [
-        "Moule fraîche emboîtée ficelée au fil élastique",
-        "Petit crabe vert vivant décortiqué ou entier (2-3 cm)",
-        "Ver arénicole géant ou bibi de Sète bien gorgé d'eau"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable (espèce brouteuse non réceptive aux leurres durs)",
         "softLure": "Micro-créature crabe/crevette souple (très marginalement en gratte lente)",
@@ -1182,11 +1109,6 @@ window.SPECIES_DATA = [
         "Mouillage à l'ancre en amont d'une moulière et pêche en dérive légère au couteau ficelé",
         "Pêche au Tenya (30-60g) esché d'une crevette entière ou d'un crabe sur le plateau rocheux",
         "Montage coulissant lourd (olive 60-100g) traînant sur le fond de coquilles"
-      ],
-      "recommendedLuresAndBaits": [
-        "Couteau frais entier ficelé au fil latex",
-        "Crabe vert vivant esché par les pattes arrière",
-        "Tenya avec crevette bouquet crue"
       ],
       "terminalTackle": {
         "rigidLure": "Tenya lourd 30-50g à tête plate jaune/orange esché d'une gambas ou crevette fraîche",
@@ -1302,9 +1224,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Espèce exclusivement ciblée en mer ouverte en bateau ou du bord sur roches"
       ],
-      "recommendedLuresAndBaits": [
-        "Non applicable en canal"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
         "softLure": "Non applicable",
@@ -1335,11 +1254,6 @@ window.SPECIES_DATA = [
         "Pêche à soutenir fine (palangrotte 2 ou 3 empiles courtes en fluorocarbone 24/100)",
         "Pêche au Tenya léger (20-40g) avec lanière d'encornet ou crevette grise",
         "Dérive lente à l'arénicole ou morceau d'encornet au ras des têtes rocheuses"
-      ],
-      "recommendedLuresAndBaits": [
-        "Arénicole fraîche découpée en petits tronçons",
-        "Lanière fine d'encornet ou tentacule de seiche crue",
-        "Coque fraîche ou pied de couteau ligaturé"
       ],
       "terminalTackle": {
         "rigidLure": "Non applicable (pêche traditionnelle à soutenir aux appâts)",
@@ -1458,11 +1372,6 @@ window.SPECIES_DATA = [
         "Pêche à la calée eschée d'arénicoles fraîches ou gros vers de terreau",
         "Pêche au feeder sur le canal avec amorce terreuse et vers coupés"
       ],
-      "recommendedLuresAndBaits": [
-        "Vers arénicoles bien frais",
-        "Gros vers de terreau ou lombrics (très efficace en haut-canal)",
-        "Lanière de maquereau ou queue de crevette crue"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
         "softLure": "Micro-worm souple ou créature 5-7cm traîné très lentement sur les fonds vaseux",
@@ -1492,11 +1401,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Dérive lente avec traîneau plat ou cuiller à flet plombée 30-60g",
         "Montage 2 empiles courtes garnies de perles jaunes et rouges attractives"
-      ],
-      "recommendedLuresAndBaits": [
-        "Arénicole fraîche ou néréide",
-        "Petite cuiller ondulante argentée montée avec un ver",
-        "Lanière de poisson frais"
       ],
       "terminalTackle": {
         "rigidLure": "Cuillère plate hollandaise ondulante jaune/rouge servant de teaseur dandiné sur le sable",
@@ -1613,11 +1517,6 @@ window.SPECIES_DATA = [
         "Pêche à la calée eschée d'arénicoles fraîches présentées bien droites",
         "Animation lente par petits tiraillements sur le fond de sable"
       ],
-      "recommendedLuresAndBaits": [
-        "Arénicole fraîche ou ver blanc de sable",
-        "Petite lamelle de couteau frais",
-        "Queue de crevette grise crue décortiquée"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
         "softLure": "Petite imitation souple d'arénicole ou ver marin sur micro-tête sabot 5g",
@@ -1647,11 +1546,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Dérive lente au traîneau à poisson plat ou cuiller plate plombée (40-80g)",
         "Montage 2 ou 3 empiles courtes munies de perles rouges et blanches attractives"
-      ],
-      "recommendedLuresAndBaits": [
-        "Arénicole fraîche sur hameçon tige longue à ardillons n°4",
-        "Chair de couteau fraîchement récolté",
-        "Morceau de néréide de roche bien vigoureuse"
       ],
       "terminalTackle": {
         "rigidLure": "Plomb palette ou cuillère à fond plate jaune/phospho animée par petits bonds",
@@ -1768,11 +1662,6 @@ window.SPECIES_DATA = [
         "Pêche à la calée eschée de petits vers néréides de roche ou vers demi-durs",
         "Ligne totalement détendue au fond pour ne pas éveiller sa méfiance"
       ],
-      "recommendedLuresAndBaits": [
-        "Petit ver néréide de roche bien frétillant",
-        "Arénicole fraîche découpée en petits tronçons bien gorgés",
-        "Ver mouron ou gravette blanche"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable (régime benthique nocturne strictement olfactif et tactile)",
         "softLure": "Non applicable",
@@ -1802,11 +1691,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Pêche à l'ancre en soirée/nuit sur fond sablo-vaseux avec montage traînant",
         "Empiles fines en fluorocarbone 20/100 munies de petits hameçons n°6 à n°8"
-      ],
-      "recommendedLuresAndBaits": [
-        "Ver arénicole ou ver de vase frais",
-        "Petite lamelle de néréide fraîche",
-        "Morceau de chair de couteau très frais"
       ],
       "terminalTackle": {
         "rigidLure": "Non applicable (100% appâts naturels)",
@@ -1921,9 +1805,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Espèce exclusivement pêchée en bateau sur les bancs de sable du large"
       ],
-      "recommendedLuresAndBaits": [
-        "Non applicable en canal"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
         "softLure": "Non applicable",
@@ -1954,11 +1835,6 @@ window.SPECIES_DATA = [
         "Dérive lente (1 à 1.5 nœud) au traîneau ou plomb coulissant avec lançon vivant",
         "Montage potence longue (1m50 à 2m) en fluorocarbone 35/100 esché d'une lanière de maquereau taillée en biseau",
         "Pêche au shad souple fin (type slug ou sandeel) grattant les crêtes de ridens"
-      ],
-      "recommendedLuresAndBaits": [
-        "Lançon frais ou vivant piqué par la tête sur hameçon 2/0 ou 3/0",
-        "Lanière de ventre de maquereau blanc brillant (12-15 cm)",
-        "Tentacule d'encornet frais ou calmar"
       ],
       "terminalTackle": {
         "rigidLure": "Plomb lesteur plat ou cuillère à turbot lourde (60-120g) pour maintenir la dérive sur le fond",
@@ -2074,9 +1950,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Espèce exclusivement ciblée en bateau sur les plateaux rocheux et épaves"
       ],
-      "recommendedLuresAndBaits": [
-        "Non applicable en canal"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
         "softLure": "Non applicable",
@@ -2107,11 +1980,6 @@ window.SPECIES_DATA = [
         "Pêche au Tenya lourd (30-60g) esché d'un crabe vert ou d'une grosse crevette crue",
         "Leurre souple imitation écrevisse ou créature monté en texan anti-accroc entre les laminaires",
         "Pêche à soutenir au crabe ligaturé au ras des parois verticales rocheuses"
-      ],
-      "recommendedLuresAndBaits": [
-        "Petit crabe vert vivant entier esché par les pattes arrière",
-        "Crevette bouquet fraîche ou cuite",
-        "Créature souple type craw (Black Minnow, Dolive Craw) en montage texan"
       ],
       "terminalTackle": {
         "rigidLure": "Strictement déconseillé (accrochage et perte immédiate dans les blocs et laminaires)",
@@ -2228,11 +2096,6 @@ window.SPECIES_DATA = [
         "Pêche au posé lourd de nuit avec poisson entier (maquereau ou sardine ficelée)",
         "Montage coulissant direct avec plombée lourde 80-120g et empile acier de 80 cm"
       ],
-      "recommendedLuresAndBaits": [
-        "Maquereau entier frais fendu sur le flanc pour diffuser l'huile",
-        "Tacaud entier frais ou tête de seiche",
-        "Sardine fraîche ligaturée au fil élastique"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable (espèce cavernicole guidée par un odorat puissant)",
         "softLure": "Non applicable",
@@ -2263,11 +2126,6 @@ window.SPECIES_DATA = [
         "Pêche à la calée lourde à l'aplomb de l'épave avec treuil ou canne puissante",
         "Bas de ligne en câble d'acier 50-80 lbs avec hameçon forgé 6/0 à 8/0",
         "Gros calmar entier ou tacaud vivant descendu directement à l'entrée de la faille"
-      ],
-      "recommendedLuresAndBaits": [
-        "Calmar entier frais ou gros tacaud vivant",
-        "Demi-maquereau ou bonite ligaturée",
-        "Gros morceau de seiche crue avec le blanc"
       ],
       "terminalTackle": {
         "rigidLure": "Non applicable (0% leurres)",
@@ -2385,11 +2243,6 @@ window.SPECIES_DATA = [
         "Pêche au coup à la pâte de sardine ou au ver demi-dur avec flotteur effilé",
         "Pêche à la calée fine le long des palplanches avec un montage coulissant léger"
       ],
-      "recommendedLuresAndBaits": [
-        "Mie de pain blanc frais bien compactée sur l'œillet",
-        "Pâte de pain mélangée à de l'huile de sardine",
-        "Petit ver néréide ou demi-dur sur ligne fine"
-      ],
       "terminalTackle": {
         "rigidLure": "Cuillère à mulet argentée spécifique munie d'une courte empile de 6cm eschée d'un ver",
         "softLure": "Micro-worm souple ou néréide artificielle aromatisée (Gulp) en dérive lente",
@@ -2419,11 +2272,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Pêche à la traîne légère côtière avec cuiller à mulet et ver néréide",
         "Ligne flottante amorcée au pain dérivant le long des roches de bordure"
-      ],
-      "recommendedLuresAndBaits": [
-        "Cuiller tournante à mulet (palet argenté garni d'un ver)",
-        "Morceau de pain frais dérivant",
-        "Néréide de roche sur bas de ligne long"
       ],
       "terminalTackle": {
         "rigidLure": "Cuillère ondulante spéciale mulet traînée lentement au ras des têtes de roches",
@@ -2540,11 +2388,6 @@ window.SPECIES_DATA = [
         "Pêche à la bombette flottante et bas de ligne fin (14/100) esché d'un demi-dur",
         "Pêche à la mouche en surface avec petite imitation de ver ou nymphe nacre"
       ],
-      "recommendedLuresAndBaits": [
-        "Cuiller tournante argentée n°1 ou n°2 armée d'une empile courte",
-        "Ver demi-dur ou néréide rouge fraîche",
-        "Micro-streamer blanc ou olive pour la pêche au fouet"
-      ],
       "terminalTackle": {
         "rigidLure": "Micro-cuillère tournante n°1 ou cuillère à mulet avec empile courte",
         "softLure": "Micro-ver souple marron ou imitation crevette 3cm",
@@ -2574,11 +2417,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Traîne très lente (1 nœud) le long des plages avec cuiller à mulet plombée léger",
         "Lancer-ramener à la bombette depuis un bateau ancré sur une veine de courant"
-      ],
-      "recommendedLuresAndBaits": [
-        "Cuiller spéciale mulet à palette argentée et perles rouges",
-        "Ver néréide de roche esché entier",
-        "Petite cuiller ondulante 5g argentée"
       ],
       "terminalTackle": {
         "rigidLure": "Cuillère à mulet allongée avec teaser rouge en traîne côtière très lente",
@@ -2696,11 +2534,6 @@ window.SPECIES_DATA = [
         "Pêche au flotteur sensible esché d'un ver de terreau ou de vase",
         "Pêche au feeder léger avec amorce traçante très nuageuse"
       ],
-      "recommendedLuresAndBaits": [
-        "Mie de pain frais bien tassée",
-        "Vers de vase (chironomes) ou pinkies blancs",
-        "Pâte de fromage ou farine de chènevis"
-      ],
       "terminalTackle": {
         "rigidLure": "Cuillère à mulet argentée avec empile de 5cm",
         "softLure": "Micro-streamer vert ou micro-imitation d'algues en potence",
@@ -2729,9 +2562,6 @@ window.SPECIES_DATA = [
       },
       "tactics": [
         "Pêche exclusive du bord le long du canal et dans les bassins urbains"
-      ],
-      "recommendedLuresAndBaits": [
-        "Non applicable en mer"
       ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
@@ -2850,11 +2680,6 @@ window.SPECIES_DATA = [
         "Animation de cuillers ondulantes fines ou tournantes n°3 argentées le long des berges",
         "Pêche à la mouche (canne à deux mains) avec streamer sombre au crépuscule"
       ],
-      "recommendedLuresAndBaits": [
-        "Poisson nageur type Rapala Countdown 7cm ou Duo Spearhead Ryuki 70S",
-        "Cuiller ondulante fine argentée type Mepps Syclops 12g",
-        "Streamer tandem noir et argenté monté sur tube fly"
-      ],
       "terminalTackle": {
         "rigidLure": "Jerkbait minnow coulant 60-80mm (D-Contact 63/72, Ryuki 70) ou cuillère tournante dorée n°3",
         "softLure": "Shad finesse 70-90mm (Black Minnow 70/90) coloris ayu/naturel en lancer-ramener rapide",
@@ -2884,10 +2709,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Traîne côtière très rapide (3 à 4 nœuds) à 100-300 m du rivage avec petite cuiller ondulante",
         "Lancer sur les bordures rocheuses peu profondes depuis une embarcation légère ou kayak"
-      ],
-      "recommendedLuresAndBaits": [
-        "Cuiller ondulante fine côtière type Hansen Pilgrim ou Toby 15g argent/bleu",
-        "Petit leurre de surface stickbait 90mm manié vivement"
       ],
       "terminalTackle": {
         "rigidLure": "Cuillère ondulante effilée 15-25g (Hansen Flash, More Silda) ou jerkbait côtier 90mm",
@@ -3004,11 +2825,6 @@ window.SPECIES_DATA = [
         "Pêche à la mouche avec streamer fluo (rose, chartreuse ou blanc) ramené par saccades rapides",
         "Train de 2 ou 3 micro-mouches brillantes sous un lest coulant"
       ],
-      "recommendedLuresAndBaits": [
-        "Petite cuiller ondulante fine chromée ou dorée 7g à 10g",
-        "Casting jig miniature 10g holographique",
-        "Mouches noyées brillantes ou streamers en mylar"
-      ],
       "terminalTackle": {
         "rigidLure": "Petite cuillère ondulante légère 7-12g argentée ou petit casting jig chromé 10-15g",
         "softLure": "Micro-shad 50mm blanc ou nacré dandiné dans le courant des sas",
@@ -3038,10 +2854,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Lancer-ramener au jig léger dans les veines de courant devant Ouistreham",
         "Pêche à la traîne côtière très légère avec petite cuiller ondulante"
-      ],
-      "recommendedLuresAndBaits": [
-        "Cuiller ondulante type Toby 10g argentée",
-        "Mitraillette à micro-plumes blanches"
       ],
       "terminalTackle": {
         "rigidLure": "Mitraillette de plumes blanches/argentées avec petit jig d'appel 20-30g en dérive côtière",
@@ -3160,11 +2972,6 @@ window.SPECIES_DATA = [
         "Pêche à la calée le long des enrochements avec plombée coulissante lourde",
         "Pêche au cordeau ou ligne de fond strictement soumise aux autorisations spécifiques"
       ],
-      "recommendedLuresAndBaits": [
-        "Gros ver de terreau ou lombric bien vigoureux",
-        "Petit poisson mort posé sur le fond (gardon ou épinoche)",
-        "Tronçon de crevette fraîche"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable (espèce fouisseuse et nocturne, pêche de jour obligatoire)",
         "softLure": "Non applicable",
@@ -3193,9 +3000,6 @@ window.SPECIES_DATA = [
       },
       "tactics": [
         "Pêche exclusive du bord sur le canal en période autorisée"
-      ],
-      "recommendedLuresAndBaits": [
-        "Non applicable en mer"
       ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
@@ -3312,11 +3116,6 @@ window.SPECIES_DATA = [
         "Pêche au flotteur coulissant lumineux esché d'une sardine entière sur cage à turlutte",
         "Animation verticale le long des quais avec turlutte plombée ou turlutte plombée en tête"
       ],
-      "recommendedLuresAndBaits": [
-        "Turlutte DTD ou Yamashita taille 3.0 (Coloris Rose, Orange ou Naturel Maquereau)",
-        "Turlutte plombée artisanale blanche à cage d'aiguilles",
-        "Petite sardine fraîche ligaturée sur turlutte espagnole"
-      ],
       "terminalTackle": {
         "rigidLure": "Turlutte Egi rigide #2.5 à #3.0 (rose, orange, glow) animée en dents de scie",
         "softLure": "Turlutte souple tataki ou calamarette plombée 15-25g dandinée sur le fond",
@@ -3346,11 +3145,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Dérive lente avec montage Tataki (2 petites turluttes flottantes et plombée terminale 40-80g)",
         "Pêche en dérive au ras du fond avec turlutte plombée type Tip-Run"
-      ],
-      "recommendedLuresAndBaits": [
-        "Turlutte Tataki Yamashita Oppai 7cm (Coloris Rose et Vert phospho)",
-        "Turlutte Tip-Run plombée 30g à 50g",
-        "Crevette artificielle phospho"
       ],
       "terminalTackle": {
         "rigidLure": "Turlutte Tip-Run lourde 30-50g ou turlutte Egi #3.5 plombée en tête en dérive du large",
@@ -3467,11 +3261,6 @@ window.SPECIES_DATA = [
         "Pêche à la turlutte plombée dandinée doucement entre deux eaux sous les lampadaires",
         "Pêche au bouchon lumineux avec une petite sardine fraîche ficelée sur turlutte"
       ],
-      "recommendedLuresAndBaits": [
-        "Turlutte phosphorescente Yamashita Warm Jacket taille 2.5 ou 3.0 (Glow/Bleu)",
-        "Turlutte DTD Flash Coloris Blanc / Rose",
-        "Petite sardine fraîche ligaturée sur cage"
-      ],
       "terminalTackle": {
         "rigidLure": "Turlutte de surface flottante ou suspending 7-10cm sous les réverbères de quai",
         "softLure": "Petite turlutte souple phosphorescente dandinée sous la surface",
@@ -3501,11 +3290,6 @@ window.SPECIES_DATA = [
       "tactics": [
         "Pêche au Tataki en dérive : train de 2 ou 3 turluttes souples agitées vivement puis pause de 5 secondes",
         "Pêche à la turlutte plombée Tip-Run animée en dents de scie au ras du fond"
-      ],
-      "recommendedLuresAndBaits": [
-        "Turluttes Oppai Yamashita 7cm (Coloris Phospho / Tête Rouge)",
-        "Turlutte plombée Tip-Run 30g à 45g",
-        "Jig à calmar métallique lumineux"
       ],
       "terminalTackle": {
         "rigidLure": "Turlutte plombée 30-60g ou potence de turluttes Egi phosphorescentes",
@@ -3623,11 +3407,6 @@ window.SPECIES_DATA = [
         "Drop-shot vertical le long des palplanches métalliques et ducs d'Albe",
         "Pêche au posé d'un petit vif (gardon ou mulet) ou poisson mort manié sur les fosses"
       ],
-      "recommendedLuresAndBaits": [
-        "One Up Shad 3\" et 4\" (Coloris 06 Pro Blue, 07 Green Weenie)",
-        "Keitech Easy Shiner 3.5\" sur tête sabot ou football 7g",
-        "Petit gardon ou ablette fraîche de 7 à 10 cm"
-      ],
       "terminalTackle": {
         "rigidLure": "Jerkbait minnow suspending 90-110mm (Squad Minnow, Pointer) de nuit le long des palplanches",
         "softLure": "Shad souple 80-120mm (One Up 4\", Easy Shiner, BM 90) sur tête sabot ou texane 7-14g",
@@ -3656,9 +3435,6 @@ window.SPECIES_DATA = [
       },
       "tactics": [
         "Espèce exclusivement ciblée du bord sur le canal ou en bateau en eaux intérieures"
-      ],
-      "recommendedLuresAndBaits": [
-        "Non applicable en mer"
       ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
@@ -3778,11 +3554,6 @@ window.SPECIES_DATA = [
         "Pêche au poisson nageur suspending (minnow 50-65mm) animé par de petits coups de scion secs (twitching)",
         "Drop-shot le long des palplanches et au ras des pontons avec un ver de terre ou petit leurre souple"
       ],
-      "recommendedLuresAndBaits": [
-        "Keitech Swing Impact 2.5\" ou 3\" (Coloris Wakasagi / Chartreuse)",
-        "Illex Squirrel 61 SP ou Chubby 38",
-        "Lame vibrante métallique 5g à 7g ou cuiller tournante n°2"
-      ],
       "terminalTackle": {
         "rigidLure": "Crankbait compact, spintail métallique 10-14g ou petit jerkbait minnow 50-70mm",
         "softLure": "Shad miniature 50-75mm ou worm monté en drop-shot le long des quais verticaux",
@@ -3811,9 +3582,6 @@ window.SPECIES_DATA = [
       },
       "tactics": [
         "Pêche de bordure au canal (street fishing très populaire à Caen et Hérouville)"
-      ],
-      "recommendedLuresAndBaits": [
-        "Non applicable en mer"
       ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
@@ -3933,11 +3701,6 @@ window.SPECIES_DATA = [
         "Animation de gros poissons nageurs jerkbaits (12-16 cm) avec pauses marquées",
         "Pêche au posé d'un gros vif (gardon ou carassin) sous flotteur bouchon près des obstacles"
       ],
-      "recommendedLuresAndBaits": [
-        "Jerkbait type Buster Jerk 15cm (Coloris Perche ou Brochet)",
-        "Shad souple 15cm (ex: Illex Dexter Shad ou Savage Gear Cannibal)",
-        "Gros gardon vivant de 15 cm esché sous flotteur coulissant"
-      ],
       "terminalTackle": {
         "rigidLure": "Jerkbait lourd sans bavette 12-15cm (Buster Jerk, Slider 10) ou grand spinnerbait tandem",
         "softLure": "Gros shad paddle tail 15-20cm (Dexter Shad 150, Cannibal 15) armé d'un shallow rig",
@@ -3966,9 +3729,6 @@ window.SPECIES_DATA = [
       },
       "tactics": [
         "Pêche du bord le long du canal ou en float-tube sur les bassins autorisés"
-      ],
-      "recommendedLuresAndBaits": [
-        "Non applicable en mer"
       ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
@@ -4087,11 +3847,6 @@ window.SPECIES_DATA = [
         "Pêche aux leurres souples imposants (shad 18-25cm plombé 40-80g) dandiné au ras du fond",
         "Pêche au clonk depuis une embarcation avec grappe d'encornets ou gros vers canadiens"
       ],
-      "recommendedLuresAndBaits": [
-        "Grosse brème vivante de 500g à 1 kg ou gros carassin",
-        "Grappe de 15 à 20 gros vers de terre canadiens montés sur hameçon simple 4/0",
-        "Shad XXL souple sombre (20 cm) sur tête plombée renforcée"
-      ],
       "terminalTackle": {
         "rigidLure": "Grosse cuillère ondulante lourde 40-70g (effets de flash) ou gros crankbait bruiteur",
         "softLure": "Gros shad 18-25cm sur tête plombée renforcée 25-50g ou leurre virgule géant",
@@ -4120,9 +3875,6 @@ window.SPECIES_DATA = [
       },
       "tactics": [
         "Pêche du bord le long des quais du canal ou en bateau en eaux intérieures calmes"
-      ],
-      "recommendedLuresAndBaits": [
-        "Non applicable en mer"
       ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
@@ -4242,11 +3994,6 @@ window.SPECIES_DATA = [
         "Amorçage ciblé au maïs doux, chènevis et bouillettes carnées ou fruitées",
         "Pêche de bordure au feeder lourd ou method feeder le long des palplanches"
       ],
-      "recommendedLuresAndBaits": [
-        "Bouillettes denses 20mm (Arômes Monster Crab, Scopex ou Épices)",
-        "Grains de maïs doux géant panachés avec un faux maïs flottant jaune",
-        "Pellets de flétan riches en huile (Halibut 16mm)"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable (cyprinidé fouisseur non carnassier)",
         "softLure": "Non applicable (très marginalement nymphe artificielle à la mouche)",
@@ -4275,9 +4022,6 @@ window.SPECIES_DATA = [
       },
       "tactics": [
         "Pêche de poste du bord le long du chemin de halage du canal"
-      ],
-      "recommendedLuresAndBaits": [
-        "Non applicable en mer"
       ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
@@ -4396,11 +4140,6 @@ window.SPECIES_DATA = [
         "Pêche au feeder / cage feeder au milieu du chenal (par 8m de fond) avec scion très sensible (quiver 0.75 à 1 oz)",
         "Pêche à la graine (chènevis cuit et blé) sur le pied de berge pour cibler les gros gardons d'un demi-livre"
       ],
-      "recommendedLuresAndBaits": [
-        "Vers de vase (chironomes) et pinkies rouges ou blancs",
-        "Grains de chènevis cuits (indispensable pour sélectionner les gros spécimens)",
-        "Pain blanc frais ou maïs doux au feeder"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
         "softLure": "Non applicable",
@@ -4429,9 +4168,6 @@ window.SPECIES_DATA = [
       },
       "tactics": [
         "Pêche au coup classique du bord le long du chemin de halage"
-      ],
-      "recommendedLuresAndBaits": [
-        "Non applicable en mer"
       ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
@@ -4552,11 +4288,6 @@ window.SPECIES_DATA = [
         "Pêche à la grande canne avec flotteur trapu (2g à 4g) et bas de ligne traînant de 10 à 15 cm sur le fond",
         "Method feeder avec amorce collante ou micro-pellets et esche flottante (wafter jaune fluo)"
       ],
-      "recommendedLuresAndBaits": [
-        "Bouquet d'asticots rouges ou panaché asticot / grain de maïs doux",
-        "Gros vers de terreau coupés en morceaux dans la cage feeder",
-        "Wafters aromatisés ou maïs doux au method feeder"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
         "softLure": "Non applicable",
@@ -4585,9 +4316,6 @@ window.SPECIES_DATA = [
       },
       "tactics": [
         "Pêche au feeder du bord le long du canal"
-      ],
-      "recommendedLuresAndBaits": [
-        "Non applicable en mer"
       ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
@@ -4706,11 +4434,6 @@ window.SPECIES_DATA = [
         "Pêche au method feeder discret avec micro-pellets sucrés et maïs doux",
         "Pêche au flotteur anglais (waggler) calé sur une trouée entre deux herbiers"
       ],
-      "recommendedLuresAndBaits": [
-        "Gros ver de terreau bien rouge ou tronçon de lombric",
-        "Panaché grain de maïs doux et bouquet d'asticots rouges",
-        "Pain d'épice ou pâte sucrée au miel"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
         "softLure": "Non applicable",
@@ -4739,9 +4462,6 @@ window.SPECIES_DATA = [
       },
       "tactics": [
         "Pêche du bord le long des herbiers du canal"
-      ],
-      "recommendedLuresAndBaits": [
-        "Non applicable en mer"
       ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
@@ -4861,11 +4581,6 @@ window.SPECIES_DATA = [
         "Amorçage de surface très régulier avec une farine blanche traçante et nuageuse",
         "Ligne très fine (7/100 à 8/100) eschée d'un asticot miniature (pinkie) ou ver de vase"
       ],
-      "recommendedLuresAndBaits": [
-        "Pinkie blanc ou rouge miniature",
-        "Ver de vase (chironome) enfilé sur hameçon très fin n°22 à n°24",
-        "Amorce de surface ultra-fine type Tracix blanc ou jaune"
-      ],
       "terminalTackle": {
         "rigidLure": "Non applicable",
         "softLure": "Non applicable",
@@ -4894,9 +4609,6 @@ window.SPECIES_DATA = [
       },
       "tactics": [
         "Pêche du bord de vitesse dans les bassins urbains"
-      ],
-      "recommendedLuresAndBaits": [
-        "Non applicable en mer"
       ],
       "terminalTackle": {
         "rigidLure": "Non applicable",

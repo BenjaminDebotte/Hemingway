@@ -56,11 +56,6 @@
       "Pêche au flotteur sensible esché d'un ver de terreau ou de vase",
       "Pêche au feeder léger avec amorce traçante très nuageuse"
     ],
-    "recommendedLuresAndBaits": [
-      "Mie de pain frais bien tassée",
-      "Vers de vase (chironomes) ou pinkies blancs",
-      "Pâte de fromage ou farine de chènevis"
-    ],
     "terminalTackle": {
       "rigidLure": "Cuillère à mulet argentée avec empile de 5cm",
       "softLure": "Micro-streamer vert ou micro-imitation d'algues en potence",
@@ -89,9 +84,6 @@
     },
     "tactics": [
       "Pêche exclusive du bord le long du canal et dans les bassins urbains"
-    ],
-    "recommendedLuresAndBaits": [
-      "Non applicable en mer"
     ],
     "terminalTackle": {
       "rigidLure": "Non applicable",

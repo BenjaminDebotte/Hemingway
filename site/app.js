@@ -564,42 +564,31 @@ function renderMorphologyGauge(biology) {
   `;
 }
 
-function renderGearBlock(fish, isTabbed = false, activeTab = 'canal') {
-  const hasCanal = fish.canal.present && fish.gear.canalCombo && fish.gear.canalCombo.rod && !fish.gear.canalCombo.rod.includes('Non applicable');
-  const hasBoat = fish.bateau.present && fish.gear.boatCombo && fish.gear.boatCombo.rod && !fish.gear.boatCombo.rod.includes('Non applicable');
-
-  if (!hasCanal && !hasBoat) return '';
-
-  const canalHidden = isTabbed && activeTab !== 'canal' ? 'tab-hidden' : '';
-  const bateauHidden = isTabbed && activeTab !== 'bateau' ? 'tab-hidden' : '';
-
-  return `
-    <div class="combos-compact-card">
-      ${hasCanal ? `
-        <div class="combo-line combo-line-canal ${canalHidden}">
-          <span class="combo-tag tag-canal">${uiIcon('anchor')} Canal</span>
-          <span class="combo-specs"><strong>Canne :</strong> ${fish.gear.canalCombo.rod} • <strong>Ligne :</strong> ${fish.gear.canalCombo.line} • <strong>BDL :</strong> ${fish.gear.canalCombo.leader}</span>
-        </div>
-      ` : ''}
-      ${hasBoat ? `
-        <div class="combo-line combo-line-bateau ${bateauHidden}">
-          <span class="combo-tag tag-mer">${uiIcon('boat')} Bateau</span>
-          <span class="combo-specs"><strong>Canne :</strong> ${fish.gear.boatCombo.rod} • <strong>Ligne :</strong> ${fish.gear.boatCombo.line} • <strong>BDL :</strong> ${fish.gear.boatCombo.leader}</span>
-        </div>
-      ` : ''}
-    </div>
-  `;
-}
-
-function renderTerminalTackleBlock(terminal, biotopeLabel, biotopeKey) {
+function renderExhaustiveTackleBlock(terminal, combo, biotopeLabel, biotopeKey) {
   if (!terminal) return '';
+
+  const hasCombo = combo && combo.rod && !combo.rod.includes('Non applicable');
 
   return `
     <div class="terminal-tackle-card terminal-${biotopeKey}">
       <div class="terminal-card-header">
-        <span class="terminal-card-title">${uiIcon('hook')} Armement & Top Leurres / Appâts ${biotopeLabel}</span>
+        <span class="terminal-card-title">${uiIcon('rod')} Matériel, Armement & Leurres ${biotopeLabel}</span>
       </div>
       <div class="terminal-specs-grid">
+        ${hasCombo ? `
+          <div class="terminal-spec-item spec-combo">
+            <span class="terminal-pill pill-combo">Combo</span>
+            <span class="terminal-val"><strong>Canne :</strong> ${combo.rod} • <strong>Ligne :</strong> ${combo.line}</span>
+          </div>
+        ` : ''}
+        <div class="terminal-spec-item">
+          <span class="terminal-pill pill-leader">Bas de ligne</span>
+          <span class="terminal-val">${terminal.leaderRequirement}</span>
+        </div>
+        <div class="terminal-spec-item">
+          <span class="terminal-pill pill-hook">Hameçon</span>
+          <span class="terminal-val">${terminal.hookTypeAndSize}</span>
+        </div>
         <div class="terminal-spec-item">
           <span class="terminal-pill pill-rigid">Rigide</span>
           <span class="terminal-val">${terminal.rigidLure}</span>
@@ -611,14 +600,6 @@ function renderTerminalTackleBlock(terminal, biotopeLabel, biotopeKey) {
         <div class="terminal-spec-item">
           <span class="terminal-pill pill-natural">Naturel</span>
           <span class="terminal-val">${terminal.naturalLure}</span>
-        </div>
-        <div class="terminal-spec-item">
-          <span class="terminal-pill pill-hook">Hameçon</span>
-          <span class="terminal-val">${terminal.hookTypeAndSize}</span>
-        </div>
-        <div class="terminal-spec-item">
-          <span class="terminal-pill pill-leader">Bas de ligne</span>
-          <span class="terminal-val">${terminal.leaderRequirement}</span>
         </div>
       </div>
     </div>
@@ -824,7 +805,7 @@ function renderCardBack(fish, isFlipCard = false) {
         <ul class="tactics-bullets">
           ${fish.canal.tactics.map(t => `<li>${t}</li>`).join('')}
         </ul>
-        ${renderTerminalTackleBlock(fish.canal.terminalTackle, 'Canal', 'canal')}
+        ${renderExhaustiveTackleBlock(fish.canal.terminalTackle, fish.gear.canalCombo, 'Canal', 'canal')}
       </div>
     ` : ''}
 
@@ -844,10 +825,8 @@ function renderCardBack(fish, isFlipCard = false) {
         <ul class="tactics-bullets">
           ${fish.bateau.tactics.map(t => `<li>${t}</li>`).join('')}
         </ul>
-        ${renderTerminalTackleBlock(fish.bateau.terminalTackle, 'Mer', 'bateau')}
+        ${renderExhaustiveTackleBlock(fish.bateau.terminalTackle, fish.gear.boatCombo, 'Mer', 'bateau')}
       </div>
     ` : ''}
-
-    ${renderGearBlock(fish, isFlipCard && isDual, defaultTab)}
   `;
 }

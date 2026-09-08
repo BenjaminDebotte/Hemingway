@@ -57,11 +57,6 @@
       "Pêche au feeder / cage feeder au milieu du chenal (par 8m de fond) avec scion très sensible (quiver 0.75 à 1 oz)",
       "Pêche à la graine (chènevis cuit et blé) sur le pied de berge pour cibler les gros gardons d'un demi-livre"
     ],
-    "recommendedLuresAndBaits": [
-      "Vers de vase (chironomes) et pinkies rouges ou blancs",
-      "Grains de chènevis cuits (indispensable pour sélectionner les gros spécimens)",
-      "Pain blanc frais ou maïs doux au feeder"
-    ],
     "terminalTackle": {
       "rigidLure": "Non applicable",
       "softLure": "Non applicable",
@@ -90,9 +85,6 @@
     },
     "tactics": [
       "Pêche au coup classique du bord le long du chemin de halage"
-    ],
-    "recommendedLuresAndBaits": [
-      "Non applicable en mer"
     ],
     "terminalTackle": {
       "rigidLure": "Non applicable",

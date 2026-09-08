@@ -56,11 +56,6 @@
       "Pêche au method feeder discret avec micro-pellets sucrés et maïs doux",
       "Pêche au flotteur anglais (waggler) calé sur une trouée entre deux herbiers"
     ],
-    "recommendedLuresAndBaits": [
-      "Gros ver de terreau bien rouge ou tronçon de lombric",
-      "Panaché grain de maïs doux et bouquet d'asticots rouges",
-      "Pain d'épice ou pâte sucrée au miel"
-    ],
     "terminalTackle": {
       "rigidLure": "Non applicable",
       "softLure": "Non applicable",
@@ -89,9 +84,6 @@
     },
     "tactics": [
       "Pêche du bord le long des herbiers du canal"
-    ],
-    "recommendedLuresAndBaits": [
-      "Non applicable en mer"
     ],
     "terminalTackle": {
       "rigidLure": "Non applicable",

@@ -54,9 +54,6 @@
     "tactics": [
       "Espèce exclusivement ciblée en mer ouverte en bateau ou du bord sur roches"
     ],
-    "recommendedLuresAndBaits": [
-      "Non applicable en canal"
-    ],
     "terminalTackle": {
       "rigidLure": "Non applicable",
       "softLure": "Non applicable",
@@ -87,11 +84,6 @@
       "Pêche à soutenir fine (palangrotte 2 ou 3 empiles courtes en fluorocarbone 24/100)",
       "Pêche au Tenya léger (20-40g) avec lanière d'encornet ou crevette grise",
       "Dérive lente à l'arénicole ou morceau d'encornet au ras des têtes rocheuses"
-    ],
-    "recommendedLuresAndBaits": [
-      "Arénicole fraîche découpée en petits tronçons",
-      "Lanière fine d'encornet ou tentacule de seiche crue",
-      "Coque fraîche ou pied de couteau ligaturé"
     ],
     "terminalTackle": {
       "rigidLure": "Non applicable (pêche traditionnelle à soutenir aux appâts)",

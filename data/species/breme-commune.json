@@ -58,11 +58,6 @@
       "Pêche à la grande canne avec flotteur trapu (2g à 4g) et bas de ligne traînant de 10 à 15 cm sur le fond",
       "Method feeder avec amorce collante ou micro-pellets et esche flottante (wafter jaune fluo)"
     ],
-    "recommendedLuresAndBaits": [
-      "Bouquet d'asticots rouges ou panaché asticot / grain de maïs doux",
-      "Gros vers de terreau coupés en morceaux dans la cage feeder",
-      "Wafters aromatisés ou maïs doux au method feeder"
-    ],
     "terminalTackle": {
       "rigidLure": "Non applicable",
       "softLure": "Non applicable",
@@ -91,9 +86,6 @@
     },
     "tactics": [
       "Pêche au feeder du bord le long du canal"
-    ],
-    "recommendedLuresAndBaits": [
-      "Non applicable en mer"
     ],
     "terminalTackle": {
       "rigidLure": "Non applicable",

@@ -57,11 +57,6 @@
       "Animation de gros poissons nageurs jerkbaits (12-16 cm) avec pauses marquées",
       "Pêche au posé d'un gros vif (gardon ou carassin) sous flotteur bouchon près des obstacles"
     ],
-    "recommendedLuresAndBaits": [
-      "Jerkbait type Buster Jerk 15cm (Coloris Perche ou Brochet)",
-      "Shad souple 15cm (ex: Illex Dexter Shad ou Savage Gear Cannibal)",
-      "Gros gardon vivant de 15 cm esché sous flotteur coulissant"
-    ],
     "terminalTackle": {
       "rigidLure": "Jerkbait lourd sans bavette 12-15cm (Buster Jerk, Slider 10) ou grand spinnerbait tandem",
       "softLure": "Gros shad paddle tail 15-20cm (Dexter Shad 150, Cannibal 15) armé d'un shallow rig",
@@ -90,9 +85,6 @@
     },
     "tactics": [
       "Pêche du bord le long du canal ou en float-tube sur les bassins autorisés"
-    ],
-    "recommendedLuresAndBaits": [
-      "Non applicable en mer"
     ],
     "terminalTackle": {
       "rigidLure": "Non applicable",

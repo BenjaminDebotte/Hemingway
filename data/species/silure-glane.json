@@ -57,11 +57,6 @@
       "Pêche aux leurres souples imposants (shad 18-25cm plombé 40-80g) dandiné au ras du fond",
       "Pêche au clonk depuis une embarcation avec grappe d'encornets ou gros vers canadiens"
     ],
-    "recommendedLuresAndBaits": [
-      "Grosse brème vivante de 500g à 1 kg ou gros carassin",
-      "Grappe de 15 à 20 gros vers de terre canadiens montés sur hameçon simple 4/0",
-      "Shad XXL souple sombre (20 cm) sur tête plombée renforcée"
-    ],
     "terminalTackle": {
       "rigidLure": "Grosse cuillère ondulante lourde 40-70g (effets de flash) ou gros crankbait bruiteur",
       "softLure": "Gros shad 18-25cm sur tête plombée renforcée 25-50g ou leurre virgule géant",
@@ -90,9 +85,6 @@
     },
     "tactics": [
       "Pêche du bord le long des quais du canal ou en bateau en eaux intérieures calmes"
-    ],
-    "recommendedLuresAndBaits": [
-      "Non applicable en mer"
     ],
     "terminalTackle": {
       "rigidLure": "Non applicable",

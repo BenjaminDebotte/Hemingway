@@ -56,11 +56,6 @@
       "Pêche au coup à la pâte de sardine ou au ver demi-dur avec flotteur effilé",
       "Pêche à la calée fine le long des palplanches avec un montage coulissant léger"
     ],
-    "recommendedLuresAndBaits": [
-      "Mie de pain blanc frais bien compactée sur l'œillet",
-      "Pâte de pain mélangée à de l'huile de sardine",
-      "Petit ver néréide ou demi-dur sur ligne fine"
-    ],
     "terminalTackle": {
       "rigidLure": "Cuillère à mulet argentée spécifique munie d'une courte empile de 6cm eschée d'un ver",
       "softLure": "Micro-worm souple ou néréide artificielle aromatisée (Gulp) en dérive lente",
@@ -90,11 +85,6 @@
     "tactics": [
       "Pêche à la traîne légère côtière avec cuiller à mulet et ver néréide",
       "Ligne flottante amorcée au pain dérivant le long des roches de bordure"
-    ],
-    "recommendedLuresAndBaits": [
-      "Cuiller tournante à mulet (palet argenté garni d'un ver)",
-      "Morceau de pain frais dérivant",
-      "Néréide de roche sur bas de ligne long"
     ],
     "terminalTackle": {
       "rigidLure": "Cuillère ondulante spéciale mulet traînée lentement au ras des têtes de roches",

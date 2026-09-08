@@ -2046,6 +2046,12 @@ body {
   text-align: center;
 }
 
+.pill-combo {
+  background: rgba(99, 102, 241, 0.09);
+  color: #4338ca;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
 .pill-rigid {
   background: rgba(30, 58, 138, 0.09);
   color: #1e40af;
@@ -2060,7 +2066,7 @@ body {
 
 .pill-natural {
   background: rgba(217, 119, 6, 0.1);
-  color: #b45309;
+  color: #92400e;
   border: 1px solid rgba(217, 119, 6, 0.25);
 }
 
@@ -2261,48 +2267,53 @@ body.print-mode .print-view-container {
 .a4-sheet-preview .verso-eyebrow { font-size: 5.8pt; }
 .a4-sheet-preview .verso-title { font-size: 10.5pt; line-height: 1.15; }
 .a4-sheet-preview .verso-badge { font-size: 6.2pt; padding: 0.8mm 1.8mm; }
-.a4-sheet-preview .biotope-section { padding: 1.5mm 2.2mm; margin-bottom: 1.5mm; }
+.a4-sheet-preview .biotope-section { padding: 1.2mm 1.8mm; margin-bottom: 1.0mm; }
 .a4-sheet-preview .presence-badge { font-size: 6.2pt; padding: 0.5mm 1.2mm; }
-.a4-sheet-preview .spots-chip-grid { gap: 1.2mm; margin-bottom: 1.2mm; }
-.a4-sheet-preview .spot-chip { padding: 1mm 1.5mm; font-size: 6.6pt; line-height: 1.22; }
-.a4-sheet-preview .spot-tag { font-size: 5.4pt; margin-bottom: 0.4mm; }
-.a4-sheet-preview .canal-triggers-cockpit { gap: 1.5mm; margin-bottom: 1.5mm; }
-.a4-sheet-preview .trigger-card { padding: 1mm 1.5mm; font-size: 6.6pt; line-height: 1.22; }
-.a4-sheet-preview .trigger-header { font-size: 5.8pt; margin-bottom: 0.4mm; }
-.a4-sheet-preview .tide-weather-cockpit { gap: 1.5mm; margin-bottom: 1.5mm; }
-.a4-sheet-preview .cockpit-box { padding: 1mm 1.5mm; }
-.a4-sheet-preview .cockpit-box-title { font-size: 6pt; }
-.a4-sheet-preview .cockpit-pill-val { font-size: 5.8pt; }
-.a4-sheet-preview .coef-track { height: 5px; }
-.a4-sheet-preview .coef-labels { font-size: 5.2pt; }
-.a4-sheet-preview .wind-desc-text { font-size: 6.4pt; line-height: 1.2; }
-.a4-sheet-preview .twelfths-card { border: 1px solid #cbd5e1; background: #f8fafc; box-shadow: none; padding: 1.5mm 2.2mm; margin: 1.5mm 0; }
-.a4-sheet-preview .twelfths-title { font-size: 6.4pt; }
-.a4-sheet-preview .twelfths-hours-pill { font-size: 6.2pt; padding: 0.5mm 1.5mm; }
-.a4-sheet-preview .twelfths-flow-pill { font-size: 6pt; padding: 0.5mm 1.2mm; }
-.a4-sheet-preview .twelfths-bell-curve { height: 25px; }
-.a4-sheet-preview .twelfth-col { width: 17px; }
-.a4-sheet-preview .twelfth-bar-track { height: 14px; }
-.a4-sheet-preview .twelfth-hour-name { font-size: 5.2pt; }
-.a4-sheet-preview .twelfth-frac-label { font-size: 4.6pt; }
-.a4-sheet-preview .twelfths-note { font-size: 6.6pt; line-height: 1.22; }
-.a4-sheet-preview .tactics-bullets { font-size: 6.6pt; line-height: 1.24; gap: 0.5mm; margin-bottom: 1mm; }
+.a4-sheet-preview .spots-chip-grid { gap: 1mm; margin-bottom: 0.8mm; }
+.a4-sheet-preview .spot-chip { padding: 0.8mm 1.2mm; font-size: 6.4pt; line-height: 1.2; }
+.a4-sheet-preview .spot-tag { font-size: 5.2pt; margin-bottom: 0.3mm; }
+.a4-sheet-preview .canal-triggers-cockpit { gap: 1mm; margin-bottom: 0.8mm; }
+.a4-sheet-preview .trigger-card { padding: 0.8mm 1.2mm; font-size: 6.4pt; line-height: 1.2; }
+.a4-sheet-preview .trigger-header { font-size: 5.6pt; margin-bottom: 0.3mm; }
+.a4-sheet-preview .tide-weather-cockpit { gap: 1mm; margin-bottom: 0.8mm; }
+.a4-sheet-preview .cockpit-box { padding: 0.8mm 1.2mm; }
+.a4-sheet-preview .cockpit-box-title { font-size: 5.8pt; }
+.a4-sheet-preview .cockpit-pill-val { font-size: 5.6pt; }
+.a4-sheet-preview .coef-track { height: 4.5px; }
+.a4-sheet-preview .coef-labels { font-size: 5pt; }
+.a4-sheet-preview .wind-desc-text { font-size: 6.2pt; line-height: 1.18; }
+.a4-sheet-preview .twelfths-card { border: 1px solid #cbd5e1; background: #f8fafc; box-shadow: none; padding: 1mm 1.8mm; margin: 0.8mm 0; }
+.a4-sheet-preview .twelfths-title { font-size: 6.2pt; }
+.a4-sheet-preview .twelfths-hours-pill { font-size: 6pt; padding: 0.4mm 1.2mm; }
+.a4-sheet-preview .twelfths-flow-pill { font-size: 5.8pt; padding: 0.4mm 1mm; }
+.a4-sheet-preview .twelfths-bell-curve { height: 22px; }
+.a4-sheet-preview .twelfth-col { width: 16px; }
+.a4-sheet-preview .twelfth-bar-track { height: 12px; }
+.a4-sheet-preview .twelfth-hour-name { font-size: 5pt; }
+.a4-sheet-preview .twelfth-frac-label { font-size: 4.4pt; }
+.a4-sheet-preview .twelfths-note { font-size: 6.4pt; line-height: 1.18; }
+.a4-sheet-preview .tactics-bullets { font-size: 6.4pt; line-height: 1.2; gap: 0.4mm; margin-bottom: 0.6mm; }
 .a4-sheet-preview .terminal-tackle-card {
   padding: 0.6mm 1mm;
-  margin: 0.6mm 0;
+  margin: 0.5mm 0;
   border: 1px solid #cbd5e1;
   border-radius: 3px;
   background: #f8fafc;
 }
 .a4-sheet-preview .terminal-canal { border-left: 2px solid #0284c7; }
 .a4-sheet-preview .terminal-bateau { border-left: 2px solid #059669; }
-.a4-sheet-preview .terminal-card-header { margin-bottom: 0.3mm; padding-bottom: 0.2mm; border-bottom: 1px solid #e2e8f0; }
+.a4-sheet-preview .terminal-card-header { margin-bottom: 0.25mm; padding-bottom: 0.2mm; border-bottom: 1px solid #e2e8f0; }
 .a4-sheet-preview .terminal-card-title { font-size: 5.4pt; }
-.a4-sheet-preview .terminal-specs-grid { gap: 0.3mm; }
-.a4-sheet-preview .terminal-spec-item { font-size: 6.1pt; line-height: 1.16; gap: 0.6mm; }
-.a4-sheet-preview .terminal-pill { font-size: 4.6pt; padding: 0.15mm 0.5mm; width: 13mm; }
-.a4-sheet-preview .terminal-val { font-size: 6.1pt; line-height: 1.16; }
-.a4-sheet-preview .combos-compact-card { padding: 1.2mm 2mm; margin-top: auto; margin-bottom: 0; }
+.a4-sheet-preview .terminal-specs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.3mm 1.5mm;
+}
+.a4-sheet-preview .terminal-spec-item { font-size: 5.9pt; line-height: 1.15; gap: 0.6mm; }
+.a4-sheet-preview .terminal-spec-item.spec-combo { grid-column: 1 / -1; }
+.a4-sheet-preview .terminal-pill { font-size: 4.5pt; padding: 0.15mm 0.5mm; width: 12mm; }
+.a4-sheet-preview .terminal-val { font-size: 5.9pt; line-height: 1.15; }
+.a4-sheet-preview .combos-compact-card { display: none !important; }
 .a4-sheet-preview .combo-line { font-size: 6.6pt; line-height: 1.22; }
 .a4-sheet-preview .combo-tag { font-size: 5.6pt; padding: 0.5mm 1.2mm; }
 .a4-sheet-preview .secret-local-box { padding: 1.5mm 2.5mm; font-size: 7pt; line-height: 1.25; margin: 1.5mm 0; }

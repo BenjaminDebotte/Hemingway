@@ -58,11 +58,6 @@
       "Amorçage ciblé au maïs doux, chènevis et bouillettes carnées ou fruitées",
       "Pêche de bordure au feeder lourd ou method feeder le long des palplanches"
     ],
-    "recommendedLuresAndBaits": [
-      "Bouillettes denses 20mm (Arômes Monster Crab, Scopex ou Épices)",
-      "Grains de maïs doux géant panachés avec un faux maïs flottant jaune",
-      "Pellets de flétan riches en huile (Halibut 16mm)"
-    ],
     "terminalTackle": {
       "rigidLure": "Non applicable (cyprinidé fouisseur non carnassier)",
       "softLure": "Non applicable (très marginalement nymphe artificielle à la mouche)",
@@ -91,9 +86,6 @@
     },
     "tactics": [
       "Pêche de poste du bord le long du chemin de halage du canal"
-    ],
-    "recommendedLuresAndBaits": [
-      "Non applicable en mer"
     ],
     "terminalTackle": {
       "rigidLure": "Non applicable",

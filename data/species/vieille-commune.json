@@ -54,9 +54,6 @@
     "tactics": [
       "Espèce exclusivement ciblée en bateau sur les plateaux rocheux et épaves"
     ],
-    "recommendedLuresAndBaits": [
-      "Non applicable en canal"
-    ],
     "terminalTackle": {
       "rigidLure": "Non applicable",
       "softLure": "Non applicable",
@@ -87,11 +84,6 @@
       "Pêche au Tenya lourd (30-60g) esché d'un crabe vert ou d'une grosse crevette crue",
       "Leurre souple imitation écrevisse ou créature monté en texan anti-accroc entre les laminaires",
       "Pêche à soutenir au crabe ligaturé au ras des parois verticales rocheuses"
-    ],
-    "recommendedLuresAndBaits": [
-      "Petit crabe vert vivant entier esché par les pattes arrière",
-      "Crevette bouquet fraîche ou cuite",
-      "Créature souple type craw (Black Minnow, Dolive Craw) en montage texan"
     ],
     "terminalTackle": {
       "rigidLure": "Strictement déconseillé (accrochage et perte immédiate dans les blocs et laminaires)",

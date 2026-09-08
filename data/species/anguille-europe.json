@@ -57,11 +57,6 @@
       "Pêche à la calée le long des enrochements avec plombée coulissante lourde",
       "Pêche au cordeau ou ligne de fond strictement soumise aux autorisations spécifiques"
     ],
-    "recommendedLuresAndBaits": [
-      "Gros ver de terreau ou lombric bien vigoureux",
-      "Petit poisson mort posé sur le fond (gardon ou épinoche)",
-      "Tronçon de crevette fraîche"
-    ],
     "terminalTackle": {
       "rigidLure": "Non applicable (espèce fouisseuse et nocturne, pêche de jour obligatoire)",
       "softLure": "Non applicable",
@@ -90,9 +85,6 @@
     },
     "tactics": [
       "Pêche exclusive du bord sur le canal en période autorisée"
-    ],
-    "recommendedLuresAndBaits": [
-      "Non applicable en mer"
     ],
     "terminalTackle": {
       "rigidLure": "Non applicable",
