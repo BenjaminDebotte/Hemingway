@@ -88,7 +88,7 @@
     "terminalTackle": {
       "rigidLure": "Non applicable (100% appâts naturels)",
       "softLure": "Non applicable",
-      "naturalLure": "Arénicoles locales fraîches montées à l'aiguille sur bas de ligne 2 empiles traînantes",
+      "naturalLure": "Arénicoles locales fraîches montées à l'aiguille sur BDL 2 empiles traînantes",
       "hookTypeAndSize": "Aberdeen n°8 à n°6 fin de fer à pointe rentrante ultra-affûtée",
       "leaderRequirement": "Fluorocarbone limpide 22/100 à 25/100 avec émerillons rolling micro-baril"
     }
@@ -103,7 +103,7 @@
     "boatCombo": {
       "rod": "Canne buscle fine 2m10 - 2m40",
       "reel": "Taille 3000",
-      "line": "Tresse fine PE 0.8 terminée par un bas de ligne discret",
+      "line": "Tresse fine PE 0.8 terminée par un BDL discret",
       "leader": "Fluorocarbone 22/100 très souple"
     },
     "topEquipment": [

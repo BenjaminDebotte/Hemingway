@@ -52,7 +52,7 @@
     },
     "tactics": [
       "Pêche à la cuiller à mulet traînée ou ramenée avec un ver néréide esché",
-      "Pêche à la bombette flottante et bas de ligne fin (14/100) esché d'un demi-dur",
+      "Pêche à la bombette flottante et BDL fin (14/100) esché d'un demi-dur",
       "Pêche à la mouche en surface avec petite imitation de ver ou nymphe nacre"
     ],
     "terminalTackle": {
@@ -141,5 +141,5 @@
       0
     ]
   },
-  "localSecret": "À la sortie de l'écluse d'Ouistreham, montez une cuiller tournante argentée n°1 dont vous remplacez le triple par un bas de ligne de 10 cm en 16/100 muni d'un hameçon n°8 garni d'un ver demi-dur. Ramenez à vitesse moyenne juste sous la pellicule : le reflet attire le mulet doré qui fond sur le ver !"
+  "localSecret": "À la sortie de l'écluse d'Ouistreham, montez une cuiller tournante argentée n°1 dont vous remplacez le triple par un BDL de 10 cm en 16/100 muni d'un hameçon n°8 garni d'un ver demi-dur. Ramenez à vitesse moyenne juste sous la pellicule : le reflet attire le mulet doré qui fond sur le ver !"
 }

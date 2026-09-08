@@ -51,7 +51,7 @@
       "turbidite": "Exige une eau limpide pour repérer ses proies avec son long bec."
     },
     "tactics": [
-      "Pêche à la bombette flottante ou buldo avec bas de ligne long (1m80) et lanière d'orphie",
+      "Pêche à la bombette flottante ou buldo avec BDL long (1m80) et lanière d'orphie",
       "Animation rapide de petites cuillers ondulantes fines ou casting jigs légers (7-12g)",
       "Pêche au fil de soie sans hameçon (le bec s'emmêle dans les fibres de soie grasse)"
     ],
@@ -104,7 +104,7 @@
       "rod": "Canne polyvalente 2m10 - 2m40, puissance 10-30g",
       "reel": "Taille 2500-3000",
       "line": "Tresse 8 brins PE 0.8",
-      "leader": "Bas de ligne 20/100"
+      "leader": "BDL 20/100"
     },
     "topEquipment": [
       "Bombettes flottantes de 15g à 25g avec émerillon triple anti-vrillage",

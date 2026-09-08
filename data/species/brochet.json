@@ -21,7 +21,7 @@
     "specialRules": [
       "Bassin Saint-Pierre (amont Pont de la Fonderie) : Carte fédérale AAPPMA obligatoire",
       "Pêche au vif, mort posé et leurre interdite durant la période de fermeture",
-      "Bas de ligne en acier ou gros fluorocarbone (80/100+) obligatoire contre les dents"
+      "BDL en acier ou gros fluorocarbone (80/100+) obligatoire contre les dents"
     ]
   },
   "biology": {
@@ -62,7 +62,7 @@
       "softLure": "Gros shad paddle tail 15-20cm (Dexter Shad 150, Cannibal 15) armé d'un shallow rig",
       "naturalLure": "Gardon ou carpeau vivant (12-18cm) au flotteur coulissant ou poisson mort manié",
       "hookTypeAndSize": "Triples renforcés 2X n°2 à #1/0 ou simple texan Wide Gap géant #5/0 à #7/0",
-      "leaderRequirement": "Bas de ligne acier 49 brins 30 lbs ou fluorocarbone fort ≥ 80/100 (anti-coupe obligatoire)"
+      "leaderRequirement": "BDL acier 49 brins 30 lbs ou fluorocarbone fort ≥ 80/100 (anti-coupe obligatoire)"
     }
   },
   "bateau": {
@@ -99,7 +99,7 @@
       "rod": "Canne spinning ou casting puissante 2m20 - 2m50, puissance 20-80g",
       "reel": "Taille 4000 spinning robuste ou moulinet casting profil rond/low-profile",
       "line": "Tresse 8 brins PE 2.0 (23/100) pour brider les poissons près des herbiers",
-      "leader": "Bas de ligne acier 49 brins 40 lbs ou fluorocarbone 80/100 (50 cm minimum)"
+      "leader": "BDL acier 49 brins 40 lbs ou fluorocarbone 80/100 (50 cm minimum)"
     },
     "boatCombo": {
       "rod": "Non applicable",

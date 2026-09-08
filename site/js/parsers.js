@@ -226,7 +226,7 @@ export function renderExhaustiveTackleBlock(terminal, combo, biotopeLabel, bioto
           </div>
         ` : ''}
         <div class="terminal-spec-item">
-          <span class="terminal-pill pill-leader">Bas de ligne</span>
+          <span class="terminal-pill pill-leader">BDL</span>
           <span class="terminal-val">${terminal.leaderRequirement}</span>
         </div>
         <div class="terminal-spec-item">

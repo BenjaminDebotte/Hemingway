@@ -120,7 +120,7 @@
             "softLure": { "type": "string", "description": "Meilleur leurre souple adapté (shad, slug, finess, créature) ou Non applicable" },
             "naturalLure": { "type": "string", "description": "Meilleur appât naturel ou esche (vers marins, coquillages, vifs, graines)" },
             "hookTypeAndSize": { "type": "string", "description": "Type précis et taille d'hameçon (texan, simple forgé, triple étamé, panier turlutte, n°...)" },
-            "leaderRequirement": { "type": "string", "description": "Spécification du bas de ligne ou pointe terminale (matériau, diamètre, résistance, anti-coupe)" }
+            "leaderRequirement": { "type": "string", "description": "Spécification du BDL ou pointe terminale (matériau, diamètre, résistance, anti-coupe)" }
           }
         }
       }
@@ -171,7 +171,7 @@
             "softLure": { "type": "string", "description": "Meilleur leurre souple adapté (shad, slug, finess, créature) ou Non applicable" },
             "naturalLure": { "type": "string", "description": "Meilleur appât naturel ou esche (vers marins, coquillages, vifs, graines)" },
             "hookTypeAndSize": { "type": "string", "description": "Type précis et taille d'hameçon (texan, simple forgé, triple étamé, panier turlutte, n°...)" },
-            "leaderRequirement": { "type": "string", "description": "Spécification du bas de ligne ou pointe terminale (matériau, diamètre, résistance, anti-coupe)" }
+            "leaderRequirement": { "type": "string", "description": "Spécification du BDL ou pointe terminale (matériau, diamètre, résistance, anti-coupe)" }
           }
         }
       }

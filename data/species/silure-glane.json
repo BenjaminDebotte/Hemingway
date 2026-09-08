@@ -62,7 +62,7 @@
       "softLure": "Gros shad 18-25cm sur tête plombée renforcée 25-50g ou leurre virgule géant",
       "naturalLure": "Grappe de gros lombrics, encornets entiers décongelés ou gros vif d'un kilo",
       "hookTypeAndSize": "Simple forgé ultra-puissant 4X #4/0 à #8/0 ou triple forgé taille #2/0 à #3/0",
-      "leaderRequirement": "Bas de ligne tresse armée haute résistance 60 à 100 kg (résistant aux râpes buccales)"
+      "leaderRequirement": "BDL tresse armée haute résistance 60 à 100 kg (résistant aux râpes buccales)"
     }
   },
   "bateau": {
@@ -99,7 +99,7 @@
       "rod": "Canne silure puissante 2m70 - 3m00, puissance 150-400g, blank carbone renforcé",
       "reel": "Taille 6500 à 10000 frein de combat puissant (15kg+)",
       "line": "Tresse 8 brins ultra-résistante en PE 4.0 à 6.0 (40 à 50/100, résistance 50-70 kg)",
-      "leader": "Bas de ligne en tresse kevlar ou monofilament 100/100 de 1m, hameçons forgés 3/0 à 6/0"
+      "leader": "BDL en tresse kevlar ou monofilament 100/100 de 1m, hameçons forgés 3/0 à 6/0"
     },
     "boatCombo": {
       "rod": "Non applicable",

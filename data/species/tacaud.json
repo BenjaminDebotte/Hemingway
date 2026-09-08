@@ -82,13 +82,13 @@
       "unfavorableWinds": "Grand vent empêchant la tenue verticale de la ligne sur le poste."
     },
     "tactics": [
-      "Pêche à soutenir au ras de la ferraille avec bas de ligne 3 empiles (plomb 60-120g)",
+      "Pêche à soutenir au ras de la ferraille avec BDL 3 empiles (plomb 60-120g)",
       "Dandinette au petit jig ou sabiki muni de morceaux d'esches"
     ],
     "terminalTackle": {
       "rigidLure": "Petit jig argenté 30-50g servant de lesteur dandiné au ras de l'épave",
       "softLure": "Mitraillette de petits octopus phosphorescents 5cm montés en potence",
-      "naturalLure": "Arénicoles, morceaux d'encornet ou lanières de maquereau sur bas de ligne 3 empiles",
+      "naturalLure": "Arénicoles, morceaux d'encornet ou lanières de maquereau sur BDL 3 empiles",
       "hookTypeAndSize": "Simple rond étamé n°4 à n°2",
       "leaderRequirement": "Nylon ou fluorocarbone 26/100 à 30/100 anti-emmêlement sur épave"
     }
@@ -98,13 +98,13 @@
       "rod": "Canne courte et maniable 1m80 - 2m10, puissance 5-25g, scion sensible",
       "reel": "Taille 2000-2500 garni de nylon ou tresse fine",
       "line": "Nylon 22/100 ou tresse PE 0.8",
-      "leader": "Bas de ligne 20/100 avec hameçons n°6 à n°8"
+      "leader": "BDL 20/100 avec hameçons n°6 à n°8"
     },
     "boatCombo": {
       "rod": "Canne à soutenir buscle 2m10 - 2m40, scion fin",
       "reel": "Taille 3000-4000",
       "line": "Tresse 8 brins PE 1.2",
-      "leader": "Bas de ligne 3 empiles en fluorocarbone 28/100"
+      "leader": "BDL 3 empiles en fluorocarbone 28/100"
     },
     "topEquipment": [
       "Dégorgeoir fin indispensable (le tacaud avale souvent très profondément l'esche)",

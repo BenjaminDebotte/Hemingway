@@ -546,7 +546,7 @@ window.SPECIES_DATA = [
         "rod": "Canne bateau polyvalente 2m10 - 2m40, puissance 30-100g",
         "reel": "Taille 3000-4000 robuste",
         "line": "Nylon 35/100 ou tresse PE 1.2",
-        "leader": "Bas de ligne mitraillette 30/100 résistant"
+        "leader": "BDL mitraillette 30/100 résistant"
       },
       "topEquipment": [
         "Jumelles marines étanches pour repérer les rassemblements de sternes et goélands au large",
@@ -638,7 +638,7 @@ window.SPECIES_DATA = [
         "turbidite": "Exige une eau limpide pour repérer ses proies avec son long bec."
       },
       "tactics": [
-        "Pêche à la bombette flottante ou buldo avec bas de ligne long (1m80) et lanière d'orphie",
+        "Pêche à la bombette flottante ou buldo avec BDL long (1m80) et lanière d'orphie",
         "Animation rapide de petites cuillers ondulantes fines ou casting jigs légers (7-12g)",
         "Pêche au fil de soie sans hameçon (le bec s'emmêle dans les fibres de soie grasse)"
       ],
@@ -691,7 +691,7 @@ window.SPECIES_DATA = [
         "rod": "Canne polyvalente 2m10 - 2m40, puissance 10-30g",
         "reel": "Taille 2500-3000",
         "line": "Tresse 8 brins PE 0.8",
-        "leader": "Bas de ligne 20/100"
+        "leader": "BDL 20/100"
       },
       "topEquipment": [
         "Bombettes flottantes de 15g à 25g avec émerillon triple anti-vrillage",
@@ -784,7 +784,7 @@ window.SPECIES_DATA = [
         "turbidite": "Très tolérant aux eaux chargées et teintées de l'hiver normand."
       },
       "tactics": [
-        "Pêche au posé sur le fond avec bas de ligne à 2 ou 3 empiles courtes",
+        "Pêche au posé sur le fond avec BDL à 2 ou 3 empiles courtes",
         "Pêche au ver arénicole ou lamelle de maquereau eschée généreusement",
         "Drop-shot lourd au ras du fond avec lanière d'encornet"
       ],
@@ -831,7 +831,7 @@ window.SPECIES_DATA = [
         "rod": "Canne calée ou feeder lourd 3m30 - 3m60, puissance 30-80g",
         "reel": "Taille 3000-4000 robuste",
         "line": "Nylon 28/100 ou tresse PE 1.0",
-        "leader": "Bas de ligne 25/100 avec hameçons n°2 à n°4"
+        "leader": "BDL 25/100 avec hameçons n°2 à n°4"
       },
       "boatCombo": {
         "rod": "Canne à soutenir buscle 2m10 - 2m70 avec scion sensible en fibre de verre",
@@ -960,13 +960,13 @@ window.SPECIES_DATA = [
         "unfavorableWinds": "Grand vent empêchant la tenue verticale de la ligne sur le poste."
       },
       "tactics": [
-        "Pêche à soutenir au ras de la ferraille avec bas de ligne 3 empiles (plomb 60-120g)",
+        "Pêche à soutenir au ras de la ferraille avec BDL 3 empiles (plomb 60-120g)",
         "Dandinette au petit jig ou sabiki muni de morceaux d'esches"
       ],
       "terminalTackle": {
         "rigidLure": "Petit jig argenté 30-50g servant de lesteur dandiné au ras de l'épave",
         "softLure": "Mitraillette de petits octopus phosphorescents 5cm montés en potence",
-        "naturalLure": "Arénicoles, morceaux d'encornet ou lanières de maquereau sur bas de ligne 3 empiles",
+        "naturalLure": "Arénicoles, morceaux d'encornet ou lanières de maquereau sur BDL 3 empiles",
         "hookTypeAndSize": "Simple rond étamé n°4 à n°2",
         "leaderRequirement": "Nylon ou fluorocarbone 26/100 à 30/100 anti-emmêlement sur épave"
       }
@@ -976,13 +976,13 @@ window.SPECIES_DATA = [
         "rod": "Canne courte et maniable 1m80 - 2m10, puissance 5-25g, scion sensible",
         "reel": "Taille 2000-2500 garni de nylon ou tresse fine",
         "line": "Nylon 22/100 ou tresse PE 0.8",
-        "leader": "Bas de ligne 20/100 avec hameçons n°6 à n°8"
+        "leader": "BDL 20/100 avec hameçons n°6 à n°8"
       },
       "boatCombo": {
         "rod": "Canne à soutenir buscle 2m10 - 2m40, scion fin",
         "reel": "Taille 3000-4000",
         "line": "Tresse 8 brins PE 1.2",
-        "leader": "Bas de ligne 3 empiles en fluorocarbone 28/100"
+        "leader": "BDL 3 empiles en fluorocarbone 28/100"
       },
       "topEquipment": [
         "Dégorgeoir fin indispensable (le tacaud avale souvent très profondément l'esche)",
@@ -1133,7 +1133,7 @@ window.SPECIES_DATA = [
       },
       "topEquipment": [
         "Fil élastique de ligature fin pour ligaturer les moules et couteaux sans les écraser",
-        "Aiguille à escher les coquillages pour passer le bas de ligne proprement"
+        "Aiguille à escher les coquillages pour passer le BDL proprement"
       ]
     },
     "calendar": {
@@ -1415,7 +1415,7 @@ window.SPECIES_DATA = [
         "rod": "Canne feeder ou calée 2m70 - 3m30, scion sensible, puissance 15-50g",
         "reel": "Taille 2500-3000 classique",
         "line": "Nylon 24/100 ou tresse fine",
-        "leader": "Bas de ligne 20/100 à 22/100, hameçon tige longue n°4 à n°6"
+        "leader": "BDL 20/100 à 22/100, hameçon tige longue n°4 à n°6"
       },
       "boatCombo": {
         "rod": "Canne fine 2m10 - 2m40, puissance 20-60g",
@@ -1566,7 +1566,7 @@ window.SPECIES_DATA = [
         "rod": "Canne bateau fine 2m10 - 2m40, puissance 20-70g",
         "reel": "Taille 3000 à frein progressif",
         "line": "Tresse 8 brins PE 1.0 (14/100)",
-        "leader": "Bas de ligne 25/100 avec perles rondes flottantes rouge/jaune"
+        "leader": "BDL 25/100 avec perles rondes flottantes rouge/jaune"
       },
       "topEquipment": [
         "Plombs montre ou plombs débrayables qui glissent sur le sable sans s'ensabler",
@@ -1695,7 +1695,7 @@ window.SPECIES_DATA = [
       "terminalTackle": {
         "rigidLure": "Non applicable (100% appâts naturels)",
         "softLure": "Non applicable",
-        "naturalLure": "Arénicoles locales fraîches montées à l'aiguille sur bas de ligne 2 empiles traînantes",
+        "naturalLure": "Arénicoles locales fraîches montées à l'aiguille sur BDL 2 empiles traînantes",
         "hookTypeAndSize": "Aberdeen n°8 à n°6 fin de fer à pointe rentrante ultra-affûtée",
         "leaderRequirement": "Fluorocarbone limpide 22/100 à 25/100 avec émerillons rolling micro-baril"
       }
@@ -1710,7 +1710,7 @@ window.SPECIES_DATA = [
       "boatCombo": {
         "rod": "Canne buscle fine 2m10 - 2m40",
         "reel": "Taille 3000",
-        "line": "Tresse fine PE 0.8 terminée par un bas de ligne discret",
+        "line": "Tresse fine PE 0.8 terminée par un BDL discret",
         "leader": "Fluorocarbone 22/100 très souple"
       },
       "topEquipment": [
@@ -2061,7 +2061,7 @@ window.SPECIES_DATA = [
       "closedSeason": "Aucune fermeture biologique récréative",
       "specialRules": [
         "Maille légale obligatoire de 60 cm (Annexe I Arrêté ministériel du 26/10/2012)",
-        "Bas de ligne en acier gainé ou monofilament 80/100 indispensable contre les dents"
+        "BDL en acier gainé ou monofilament 80/100 indispensable contre les dents"
       ]
     },
     "biology": {
@@ -2124,7 +2124,7 @@ window.SPECIES_DATA = [
       },
       "tactics": [
         "Pêche à la calée lourde à l'aplomb de l'épave avec treuil ou canne puissante",
-        "Bas de ligne en câble d'acier 50-80 lbs avec hameçon forgé 6/0 à 8/0",
+        "BDL en câble d'acier 50-80 lbs avec hameçon forgé 6/0 à 8/0",
         "Gros calmar entier ou tacaud vivant descendu directement à l'entrée de la faille"
       ],
       "terminalTackle": {
@@ -2132,7 +2132,7 @@ window.SPECIES_DATA = [
         "softLure": "Non applicable",
         "naturalLure": "Maquereau entier fendu, grosse seiche fraîche ou tacaud vivant déposé au cœur de l'épave",
         "hookTypeAndSize": "Hameçon congre forgé 3X fort #6/0 à #8/0 extra-puissant",
-        "leaderRequirement": "Bas de ligne acier 80 lbs inox (1 m) relié à un émerillon baril haute puissance 1/0"
+        "leaderRequirement": "BDL acier 80 lbs inox (1 m) relié à un émerillon baril haute puissance 1/0"
       }
     },
     "gear": {
@@ -2140,13 +2140,13 @@ window.SPECIES_DATA = [
         "rod": "Canne puissante surfcasting lourd ou carpe 3m60, puissance 100-250g",
         "reel": "Taille 6000-8000 robuste",
         "line": "Nylon épais 45/100 ou tresse PE 2.5",
-        "leader": "Bas de ligne acier 50 lbs de 70 cm, hameçon 4/0"
+        "leader": "BDL acier 50 lbs de 70 cm, hameçon 4/0"
       },
       "boatCombo": {
         "rod": "Canne stand-up ou épave courte 1m80 - 2m10, puissance 30-50 lbs",
         "reel": "Tambour tournant lourd ou gros moulinet spinning mer (frein 12kg+)",
         "line": "Tresse 8 brins PE 3.0 à 4.0 (30-35/100)",
-        "leader": "Bas de ligne acier 80 lbs terminé par émerillon baril forgé et hameçon 7/0"
+        "leader": "BDL acier 80 lbs terminé par émerillon baril forgé et hameçon 7/0"
       },
       "topEquipment": [
         "Gaffe ou salabre géant indispensable pour monter à bord un congre de 10 kg+",
@@ -2385,7 +2385,7 @@ window.SPECIES_DATA = [
       },
       "tactics": [
         "Pêche à la cuiller à mulet traînée ou ramenée avec un ver néréide esché",
-        "Pêche à la bombette flottante et bas de ligne fin (14/100) esché d'un demi-dur",
+        "Pêche à la bombette flottante et BDL fin (14/100) esché d'un demi-dur",
         "Pêche à la mouche en surface avec petite imitation de ver ou nymphe nacre"
       ],
       "terminalTackle": {
@@ -2474,7 +2474,7 @@ window.SPECIES_DATA = [
         0
       ]
     },
-    "localSecret": "À la sortie de l'écluse d'Ouistreham, montez une cuiller tournante argentée n°1 dont vous remplacez le triple par un bas de ligne de 10 cm en 16/100 muni d'un hameçon n°8 garni d'un ver demi-dur. Ramenez à vitesse moyenne juste sous la pellicule : le reflet attire le mulet doré qui fond sur le ver !"
+    "localSecret": "À la sortie de l'écluse d'Ouistreham, montez une cuiller tournante argentée n°1 dont vous remplacez le triple par un BDL de 10 cm en 16/100 muni d'un hameçon n°8 garni d'un ver demi-dur. Ramenez à vitesse moyenne juste sous la pellicule : le reflet attire le mulet doré qui fond sur le ver !"
   },
   {
     "id": "mulet-porc",
@@ -2867,7 +2867,7 @@ window.SPECIES_DATA = [
       "canalCombo": {
         "rod": "Canne lancer léger 2m20 - 2m40, puissance 3-15g, action souple pour ne pas déchirer sa bouche fragile",
         "reel": "Taille 2000-2500 fluide",
-        "line": "Nylon souple 18/100 ou tresse PE 0.6 avec long bas de ligne",
+        "line": "Nylon souple 18/100 ou tresse PE 0.6 avec long BDL",
         "leader": "Fluorocarbone 16/100 à 18/100"
       },
       "boatCombo": {
@@ -3014,7 +3014,7 @@ window.SPECIES_DATA = [
         "rod": "Canne forte 3m00 - 3m60, puissance 40-100g pour extirper rapidement l'anguille des roches",
         "reel": "Taille 4000 robuste",
         "line": "Nylon épais 35/100 à 40/100 pour résister aux arêtes coupantes des pierres",
-        "leader": "Bas de ligne direct ou tresse 30/100, hameçon forgé tige longue n°2 à n°4"
+        "leader": "BDL direct ou tresse 30/100, hameçon forgé tige longue n°2 à n°4"
       },
       "boatCombo": {
         "rod": "Non applicable",
@@ -3665,7 +3665,7 @@ window.SPECIES_DATA = [
       "specialRules": [
         "Bassin Saint-Pierre (amont Pont de la Fonderie) : Carte fédérale AAPPMA obligatoire",
         "Pêche au vif, mort posé et leurre interdite durant la période de fermeture",
-        "Bas de ligne en acier ou gros fluorocarbone (80/100+) obligatoire contre les dents"
+        "BDL en acier ou gros fluorocarbone (80/100+) obligatoire contre les dents"
       ]
     },
     "biology": {
@@ -3706,7 +3706,7 @@ window.SPECIES_DATA = [
         "softLure": "Gros shad paddle tail 15-20cm (Dexter Shad 150, Cannibal 15) armé d'un shallow rig",
         "naturalLure": "Gardon ou carpeau vivant (12-18cm) au flotteur coulissant ou poisson mort manié",
         "hookTypeAndSize": "Triples renforcés 2X n°2 à #1/0 ou simple texan Wide Gap géant #5/0 à #7/0",
-        "leaderRequirement": "Bas de ligne acier 49 brins 30 lbs ou fluorocarbone fort ≥ 80/100 (anti-coupe obligatoire)"
+        "leaderRequirement": "BDL acier 49 brins 30 lbs ou fluorocarbone fort ≥ 80/100 (anti-coupe obligatoire)"
       }
     },
     "bateau": {
@@ -3743,7 +3743,7 @@ window.SPECIES_DATA = [
         "rod": "Canne spinning ou casting puissante 2m20 - 2m50, puissance 20-80g",
         "reel": "Taille 4000 spinning robuste ou moulinet casting profil rond/low-profile",
         "line": "Tresse 8 brins PE 2.0 (23/100) pour brider les poissons près des herbiers",
-        "leader": "Bas de ligne acier 49 brins 40 lbs ou fluorocarbone 80/100 (50 cm minimum)"
+        "leader": "BDL acier 49 brins 40 lbs ou fluorocarbone 80/100 (50 cm minimum)"
       },
       "boatCombo": {
         "rod": "Non applicable",
@@ -3852,7 +3852,7 @@ window.SPECIES_DATA = [
         "softLure": "Gros shad 18-25cm sur tête plombée renforcée 25-50g ou leurre virgule géant",
         "naturalLure": "Grappe de gros lombrics, encornets entiers décongelés ou gros vif d'un kilo",
         "hookTypeAndSize": "Simple forgé ultra-puissant 4X #4/0 à #8/0 ou triple forgé taille #2/0 à #3/0",
-        "leaderRequirement": "Bas de ligne tresse armée haute résistance 60 à 100 kg (résistant aux râpes buccales)"
+        "leaderRequirement": "BDL tresse armée haute résistance 60 à 100 kg (résistant aux râpes buccales)"
       }
     },
     "bateau": {
@@ -3889,7 +3889,7 @@ window.SPECIES_DATA = [
         "rod": "Canne silure puissante 2m70 - 3m00, puissance 150-400g, blank carbone renforcé",
         "reel": "Taille 6500 à 10000 frein de combat puissant (15kg+)",
         "line": "Tresse 8 brins ultra-résistante en PE 4.0 à 6.0 (40 à 50/100, résistance 50-70 kg)",
-        "leader": "Bas de ligne en tresse kevlar ou monofilament 100/100 de 1m, hameçons forgés 3/0 à 6/0"
+        "leader": "BDL en tresse kevlar ou monofilament 100/100 de 1m, hameçons forgés 3/0 à 6/0"
       },
       "boatCombo": {
         "rod": "Non applicable",
@@ -4182,7 +4182,7 @@ window.SPECIES_DATA = [
         "rod": "Grande canne à emmanchements 9m50 - 11m00 ou canne feeder 3m30 - 3m60 puissance 20-60g",
         "reel": "Taille 3000 match garni de nylon coulant (pour la pêche au feeder)",
         "line": "Corps de ligne en nylon 12/100 à 14/100 (feeder) ou 10/100 (coup)",
-        "leader": "Bas de ligne 20 à 30 cm en fluorocarbone ou nylon fin 7/100 à 9/100, hameçon n°18 à n°22"
+        "leader": "BDL 20 à 30 cm en fluorocarbone ou nylon fin 7/100 à 9/100, hameçon n°18 à n°22"
       },
       "boatCombo": {
         "rod": "Non applicable",
@@ -4285,7 +4285,7 @@ window.SPECIES_DATA = [
       },
       "tactics": [
         "Pêche au feeder lourd (cage métal 40g à 60g) calé au milieu du canal sur le plat du chenal par 8m de profondeur",
-        "Pêche à la grande canne avec flotteur trapu (2g à 4g) et bas de ligne traînant de 10 à 15 cm sur le fond",
+        "Pêche à la grande canne avec flotteur trapu (2g à 4g) et BDL traînant de 10 à 15 cm sur le fond",
         "Method feeder avec amorce collante ou micro-pellets et esche flottante (wafter jaune fluo)"
       ],
       "terminalTackle": {
@@ -4293,7 +4293,7 @@ window.SPECIES_DATA = [
         "softLure": "Non applicable",
         "naturalLure": "Gros vers de terreau coupés, bouquet d'asticots rouges, maïs doux sur amorce collante",
         "hookTypeAndSize": "Hameçon simple rond bronze n°16 à n°12",
-        "leaderRequirement": "Nylon souple 12/100 à 14/100 (montage feeder avec bas de ligne 50-70 cm)"
+        "leaderRequirement": "Nylon souple 12/100 à 14/100 (montage feeder avec BDL 50-70 cm)"
       }
     },
     "bateau": {
@@ -4330,7 +4330,7 @@ window.SPECIES_DATA = [
         "rod": "Canne feeder puissante 3m60 - 3m90, puissance 40-90g pour propulser les cages au chenal et contrer le courant",
         "reel": "Taille 4000 feeder avec frein progressif de précision",
         "line": "Tresse 4 brins fine en PE 0.8 (10/100) pour fendre le courant, terminée par un arraché nylon de 6m en 24/100",
-        "leader": "Bas de ligne 50 à 70 cm en nylon 12/100 à 16/100, hameçon rond n°14 à n°18"
+        "leader": "BDL 50 à 70 cm en nylon 12/100 à 16/100, hameçon rond n°14 à n°18"
       },
       "boatCombo": {
         "rod": "Non applicable",
@@ -4623,7 +4623,7 @@ window.SPECIES_DATA = [
         "rod": "Canne au coup de vitesse télescopique en carbone très légère 3m00 à 4m50 avec scion en fibre pleine (action aiguille)",
         "reel": "Non applicable (canne au coup directe)",
         "line": "Corps de ligne en nylon très souple 8/100 à 10/100",
-        "leader": "Bas de ligne 15 cm en 6/100 à 8/100, micro-hameçon fin de fer n°20 à n°24"
+        "leader": "BDL 15 cm en 6/100 à 8/100, micro-hameçon fin de fer n°20 à n°24"
       },
       "boatCombo": {
         "rod": "Non applicable",
