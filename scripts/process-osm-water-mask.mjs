@@ -7,7 +7,7 @@ if (!fs.existsSync('site/images/maps')) {
   fs.mkdirSync('site/images/maps', { recursive: true });
 }
 
-// 1. Template Canal de Caen avec coordonnées géographiques exactes
+// 1. Template Canal de Caen avec micro-badges à icônes
 const htmlCanal = `
 <!DOCTYPE html>
 <html>
@@ -24,15 +24,10 @@ const htmlCanal = `
     }
     #map { width: 800px; height: 560px; background: #ffffff; }
 
-    .pin-marker {
-      position: relative;
-    }
+    .pin-marker { position: relative; }
     .pin-dot {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 8px;
-      height: 8px;
+      position: absolute; left: 0; top: 0;
+      width: 7px; height: 7px;
       background: #0284c7;
       border: 1.5px solid #ffffff;
       border-radius: 50%;
@@ -40,31 +35,32 @@ const htmlCanal = `
       transform: translate(-50%, -50%);
       z-index: 10;
     }
+    .pin-dot-dpm { background: #0d9488; }
     .spot-badge {
       position: absolute;
       background: #ffffff;
       color: #0f172a;
       border: 1.5px solid #0f172a;
       border-radius: 3px;
-      padding: 2.5px 6px;
-      font-size: 10.5px;
+      padding: 2px 5px;
+      font-size: 10px;
       font-weight: 800;
       letter-spacing: -0.01em;
       white-space: nowrap;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.25);
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 3px;
       z-index: 5;
     }
-    .spot-icon { font-size: 10.5px; color: #0284c7; }
-    .spot-km { font-family: monospace; font-size: 9px; color: #475569; margin-left: 2px; }
+    .spot-icon { font-size: 10.5px; }
+    .spot-km { font-family: monospace; font-size: 8.5px; color: #475569; margin-left: 2px; }
+    .badge-dpm { border-color: #0d9488; color: #047857; }
   </style>
 </head>
 <body>
   <div id="map"></div>
   <script>
-    // Bounding box Canal : cadrage au millimètre
     const map = L.map('map', {
       zoomControl: false,
       attributionControl: false
@@ -77,37 +73,43 @@ const htmlCanal = `
       maxZoom: 17
     }).addTo(map);
 
-    // Positions géographiques réelles mesurées au mètre sur OpenStreetMap
+    // Micro-badges à icônes (texte minimal, lisibilité maximale)
     const spots = [
       {
-        name: 'Bassin St-Pierre (Caen)', km: 'km 0',
+        html: '<span class=\"spot-icon\">📜</span> Bassin St-Pierre <span class=\"spot-km\">km 0 • AAPPMA</span>',
         pos: [49.1838, -0.3561],
-        style: 'transform: translate(-100%, -50%); margin-left: -8px;'
+        style: 'transform: translate(-100%, -50%); margin-left: -7px;'
       },
       {
-        name: 'Viaduc de Calix (N814)', km: 'km 2.5',
-        pos: [49.1866, -0.3293], // Coordonnée exacte du pont N814 franchissant le canal
-        style: 'transform: translate(8px, -100%); margin-top: -4px;'
+        html: '<span class=\"spot-icon\">🌊</span> Pont Fonderie <span class=\"spot-km\">Limite DPM</span>',
+        pos: [49.1834, -0.3518],
+        cls: 'badge-dpm', dotCls: 'pin-dot-dpm',
+        style: 'transform: translate(7px, 8px);'
       },
       {
-        name: 'Quais de Colombelles', km: 'km 4.5',
-        pos: [49.2085, -0.3090], // Quai de Normandie / ducs d'Albe
-        style: 'transform: translate(8px, -50%);'
+        html: '<span class=\"spot-icon\">🌉</span> Calix <span class=\"spot-km\">km 2.5</span>',
+        pos: [49.1866, -0.3293],
+        style: 'transform: translate(7px, -50%);'
       },
       {
-        name: 'Bassin d\\'évitement (Blainville)', km: 'km 7.5',
-        pos: [49.2215, -0.3020], // Élargissement du canal de Blainville
-        style: 'transform: translate(8px, -50%);'
+        html: '<span class=\"spot-icon\">🏢</span> Colombelles <span class=\"spot-km\">km 4.5</span>',
+        pos: [49.2085, -0.3090],
+        style: 'transform: translate(7px, -50%);'
       },
       {
-        name: 'Pegasus Bridge (Bénouville)', km: 'km 10.5',
-        pos: [49.2420, -0.2745], // Pont basculant D514
-        style: 'transform: translate(8px, -50%);'
+        html: '<span class=\"spot-icon\">🚤</span> Cale Blainville <span class=\"spot-km\">km 7.5</span>',
+        pos: [49.2215, -0.3020],
+        style: 'transform: translate(7px, -50%);'
       },
       {
-        name: 'Écluses d\\'Ouistreham', km: 'km 14',
-        pos: [49.2803, -0.2491], // Sas d'écluse maritime
-        style: 'transform: translate(-100%, -50%); margin-left: -8px;'
+        html: '<span class=\"spot-icon\">🌉</span> Pegasus <span class=\"spot-km\">km 10.5</span>',
+        pos: [49.2420, -0.2745],
+        style: 'transform: translate(7px, -50%);'
+      },
+      {
+        html: '<span class=\"spot-icon\">⚓</span> Écluses <span class=\"spot-km\">km 14 • Mer</span>',
+        pos: [49.2803, -0.2491],
+        style: 'transform: translate(-100%, -50%); margin-left: -7px;'
       }
     ];
 
@@ -117,9 +119,9 @@ const htmlCanal = `
           className: 'custom-pin',
           html: \`
             <div class="pin-marker">
-              <div class="pin-dot"></div>
-              <div class="spot-badge" style="\${s.style}">
-                <span class="spot-icon">⚓</span> \${s.name} <span class="spot-km">\${s.km}</span>
+              <div class="pin-dot \${s.dotCls || ''}"></div>
+              <div class="spot-badge \${s.cls || ''}" style="\${s.style}">
+                \${s.html}
               </div>
             </div>
           \`,
@@ -136,7 +138,7 @@ const htmlCanal = `
 </html>
 `;
 
-// 2. Template Côte de Nacre avec coordonnées géographiques exactes
+// 2. Template Côte de Nacre avec micro-badges à icônes
 const htmlMer = `
 <!DOCTYPE html>
 <html>
@@ -156,7 +158,7 @@ const htmlMer = `
     .pin-marker { position: relative; }
     .pin-dot {
       position: absolute; left: 0; top: 0;
-      width: 8px; height: 8px;
+      width: 7px; height: 7px;
       background: #0d9488;
       border: 1.5px solid #ffffff;
       border-radius: 50%;
@@ -165,6 +167,7 @@ const htmlMer = `
       z-index: 10;
     }
     .pin-dot-wreck { background: #b45309; }
+    .pin-dot-pier { background: #0284c7; }
 
     .spot-badge {
       position: absolute;
@@ -172,21 +175,21 @@ const htmlMer = `
       color: #0f172a;
       border: 1.5px solid #0f172a;
       border-radius: 3px;
-      padding: 2.5px 6px;
-      font-size: 10.5px;
+      padding: 2px 5px;
+      font-size: 10px;
       font-weight: 800;
       letter-spacing: -0.01em;
       white-space: nowrap;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.25);
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 3px;
       z-index: 5;
     }
-    .badge-mer { border-color: #0369a1; color: #0f172a; }
+    .badge-mer { border-color: #0d9488; color: #047857; }
     .badge-wreck { border-color: #b45309; color: #78350f; }
-    .spot-icon-mer { color: #0284c7; font-size: 10.5px; }
-    .spot-icon-wreck { color: #b45309; font-size: 10.5px; }
+    .badge-pier { border-color: #0284c7; color: #0369a1; }
+    .spot-icon { font-size: 10.5px; }
   </style>
 </head>
 <body>
@@ -204,37 +207,41 @@ const htmlMer = `
       maxZoom: 17
     }).addTo(map);
 
-    // Coordonnées marines réelles au large
+    // Micro-badges à icônes pour la Côte de Nacre
     const spots = [
       {
-        name: 'Courseulles-sur-Mer (Juno)',
+        html: '<span class=\"spot-icon\">🚤</span> Cale Courseulles',
         pos: [49.3360, -0.4570],
-        cls: '', icon: '⛵',
-        style: 'transform: translate(8px, -50%);'
+        style: 'transform: translate(7px, -50%);'
       },
       {
-        name: 'Plateau des Roches du Calvados (6-15m)',
-        pos: [49.3580, -0.3600], // 1.5 milles au large de Lion/Luc
-        cls: 'badge-mer', icon: '🪨',
-        style: 'transform: translate(-50%, -100%); margin-top: -8px;'
+        html: '<span class=\"spot-icon\">🪨</span> Roches 6-15m',
+        pos: [49.3580, -0.3600],
+        cls: 'badge-mer',
+        style: 'transform: translate(-50%, -100%); margin-top: -6px;'
       },
       {
-        name: 'Ridens de Bernières (Bancs)',
-        pos: [49.3500, -0.4150], // Banc de sable au large de Bernières
-        cls: 'badge-mer', icon: '〰️',
-        style: 'transform: translate(-50%, -100%); margin-top: -8px;'
+        html: '<span class=\"spot-icon\">〰️</span> Ridens',
+        pos: [49.3500, -0.4150],
+        cls: 'badge-mer',
+        style: 'transform: translate(-50%, -100%); margin-top: -6px;'
       },
       {
-        name: 'Épaves Sword 1944 (Courbet)',
-        pos: [49.3250, -0.2800], // Zone d'immersion du Courbet / Gooseberry
-        cls: 'badge-wreck', icon: '⚓', dotCls: 'pin-dot-wreck',
-        style: 'transform: translate(8px, -50%);'
+        html: '<span class=\"spot-icon\">🎣</span> Jetée Luc',
+        pos: [49.3183, -0.3473], // Jetée des Pêcheurs (pier)
+        cls: 'badge-pier', dotCls: 'pin-dot-pier',
+        style: 'transform: translate(7px, -50%);'
       },
       {
-        name: 'Ouistreham Riva-Bella (Chenal)',
+        html: '<span class=\"spot-icon\">⚓</span> Courbet 1944',
+        pos: [49.3250, -0.2800], // Épaves Sword
+        cls: 'badge-wreck', dotCls: 'pin-dot-wreck',
+        style: 'transform: translate(7px, -50%);'
+      },
+      {
+        html: '<span class=\"spot-icon\">🚤</span> Ouistreham',
         pos: [49.2880, -0.2520],
-        cls: '', icon: '⛵',
-        style: 'transform: translate(-100%, -50%); margin-left: -8px;'
+        style: 'transform: translate(-100%, -50%); margin-left: -7px;'
       }
     ];
 
@@ -245,8 +252,8 @@ const htmlMer = `
           html: \`
             <div class="pin-marker">
               <div class="pin-dot \${s.dotCls || ''}"></div>
-              <div class="spot-badge \${s.cls}" style="\${s.style}">
-                <span class="spot-icon-mer">\${s.icon}</span> \${s.name}
+              <div class="spot-badge \${s.cls || ''}" style="\${s.style}">
+                \${s.html}
               </div>
             </div>
           \`,
@@ -263,7 +270,7 @@ const htmlMer = `
 </html>
 `;
 
-// 3. Template Vue d'ensemble Régionale avec coordonnées exactes
+// 3. Template Vue d'ensemble Régionale avec micro-badges à icônes
 const htmlRegional = `
 <!DOCTYPE html>
 <html>
@@ -297,17 +304,17 @@ const htmlRegional = `
       color: #0f172a;
       border: 1.5px solid #0f172a;
       border-radius: 3px;
-      padding: 2px 5px;
-      font-size: 10px;
+      padding: 1.5px 4px;
+      font-size: 9.5px;
       font-weight: 800;
       white-space: nowrap;
       box-shadow: 0 1px 3px rgba(0,0,0,0.25);
       display: inline-flex;
       align-items: center;
-      gap: 3px;
+      gap: 2.5px;
       z-index: 5;
     }
-    .spot-badge-accent { border-color: #0284c7; color: #0369a1; }
+    .spot-icon { font-size: 9.5px; }
   </style>
 </head>
 <body>
@@ -326,12 +333,13 @@ const htmlRegional = `
     }).addTo(map);
 
     const spots = [
-      { name: 'Caen (Bassin St-Pierre)', pos: [49.1838, -0.3561], cls: 'spot-badge-accent', style: 'transform: translate(6px, -50%);' },
-      { name: 'Viaduc de Calix', pos: [49.1866, -0.3293], cls: '', style: 'transform: translate(6px, 2px);' },
-      { name: 'Pegasus Bridge', pos: [49.2420, -0.2745], cls: '', style: 'transform: translate(6px, -50%);' },
-      { name: 'Ouistreham', pos: [49.2803, -0.2491], cls: 'spot-badge-accent', style: 'transform: translate(-100%, -50%); margin-left: -6px;' },
-      { name: 'Roches du Calvados', pos: [49.3580, -0.3600], cls: '', style: 'transform: translate(-50%, -100%); margin-top: -6px;' },
-      { name: 'Courseulles', pos: [49.3360, -0.4570], cls: '', style: 'transform: translate(6px, -50%);' }
+      { html: '<span class=\"spot-icon\">📜</span> Caen', pos: [49.1838, -0.3561], style: 'transform: translate(6px, -50%);' },
+      { html: '<span class=\"spot-icon\">🌉</span> Calix', pos: [49.1866, -0.3293], style: 'transform: translate(6px, 2px);' },
+      { html: '<span class=\"spot-icon\">🌉</span> Pegasus', pos: [49.2420, -0.2745], style: 'transform: translate(6px, -50%);' },
+      { html: '<span class=\"spot-icon\">⚓</span> Ouistreham', pos: [49.2803, -0.2491], style: 'transform: translate(-100%, -50%); margin-left: -6px;' },
+      { html: '<span class=\"spot-icon\">🪨</span> Roches', pos: [49.3580, -0.3600], style: 'transform: translate(-50%, -100%); margin-top: -6px;' },
+      { html: '<span class=\"spot-icon\">🎣</span> Luc', pos: [49.3183, -0.3473], style: 'transform: translate(6px, -50%);' },
+      { html: '<span class=\"spot-icon\">🚤</span> Courseulles', pos: [49.3360, -0.4570], style: 'transform: translate(6px, -50%);' }
     ];
 
     spots.forEach(s => {
@@ -341,7 +349,7 @@ const htmlRegional = `
           html: \`
             <div class="pin-marker">
               <div class="pin-dot"></div>
-              <div class="spot-badge \${s.cls}" style="\${s.style}">\${s.name}</div>
+              <div class="spot-badge" style="\${s.style}">\${s.html}</div>
             </div>
           \`,
           iconSize: [0, 0],
@@ -361,8 +369,8 @@ fs.writeFileSync('site/temp-canal-bw.html', htmlCanal);
 fs.writeFileSync('site/temp-mer-bw.html', htmlMer);
 fs.writeFileSync('site/temp-reg-bw.html', htmlRegional);
 
-const PORT = 3362;
-const CDP_PORT = 9251;
+const PORT = 3363;
+const CDP_PORT = 9252;
 const SITE_DIR = path.resolve('site');
 
 const server = http.createServer((req, res) => {
@@ -417,7 +425,6 @@ async function captureAndProcessMap(pageUrl, width, height, outputFile) {
     clip: { x: 0, y: 0, width, height, scale: 2 }
   });
 
-  // Pixel classification: water in universal nautical blue, land in crisp B&W with white background
   const processedBase64 = await send('Runtime.evaluate', {
     expression: `new Promise((resolve) => {
       const img = new Image();
@@ -473,11 +480,11 @@ async function captureAndProcessMap(pageUrl, width, height, outputFile) {
   });
 
   fs.writeFileSync(outputFile, Buffer.from(processedBase64.result.value, 'base64'));
-  console.log(`Saved exact B&W + Water Colored map to ${outputFile}`);
+  console.log(`Saved icon-first map to ${outputFile}`);
   ws.close();
 }
 
-console.log('Génération des cartes de haute précision géographique...');
+console.log('Génération des cartes avec micro-badges et icônes...');
 await captureAndProcessMap('temp-canal-bw.html', 800, 560, 'site/images/maps/canal-caen.png');
 await captureAndProcessMap('temp-mer-bw.html', 800, 500, 'site/images/maps/cote-de-nacre.png');
 await captureAndProcessMap('temp-reg-bw.html', 500, 500, 'site/images/maps/calvados-overview.png');
