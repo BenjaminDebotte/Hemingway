@@ -91,6 +91,27 @@ function setupToggles() {
       }, 300);
     });
   }
+
+  // Interception standard de l'impression système (Ctrl+P / Menu navigateur)
+  window.addEventListener('beforeprint', () => {
+    if (currentViewMode !== 'print') {
+      window.__prevViewMode = currentViewMode;
+      currentViewMode = 'print';
+      document.body.classList.add('print-mode');
+      document.querySelectorAll('.mode-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === 'print'));
+      renderApp();
+    }
+  });
+
+  window.addEventListener('afterprint', () => {
+    if (window.__prevViewMode) {
+      currentViewMode = window.__prevViewMode;
+      window.__prevViewMode = null;
+      document.body.classList.toggle('print-mode', currentViewMode === 'print');
+      document.querySelectorAll('.mode-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === currentViewMode));
+      renderApp();
+    }
+  });
 }
 
 // --------------------------------------------------------------------------
@@ -213,39 +234,33 @@ window.toggleCardFlip = function(id) {
   }
 };
 
-window.switchCardBiotope = function(e, fishId, tab) {
+export function switchCardTab(fishId, tab, e) {
   if (e) e.stopPropagation();
   const card = document.getElementById(`card-${fishId}`);
   if (!card) return;
-  const switcher = card.querySelector('.biotope-card-switcher:not(.mono-card-switcher)');
+
+  const isMono = tab === 'tactique' || tab === 'carte';
+  const switcher = card.querySelector(isMono ? '.mono-card-switcher' : '.biotope-card-switcher:not(.mono-card-switcher)');
   if (switcher) {
     switcher.querySelectorAll('.biotope-switch-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.tab === tab);
+      const isActive = btn.dataset.tab === tab;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
     });
   }
-  const canalSection = card.querySelector('.section-canal');
-  const bateauSection = card.querySelector('.section-bateau');
 
-  if (canalSection) canalSection.classList.toggle('tab-hidden', tab !== 'canal');
-  if (bateauSection) bateauSection.classList.toggle('tab-hidden', tab !== 'bateau');
-};
-
-window.switchMonoCardTab = function(e, fishId, tab) {
-  if (e) e.stopPropagation();
-  const card = document.getElementById(`card-${fishId}`);
-  if (!card) return;
-  const switcher = card.querySelector('.mono-card-switcher');
-  if (switcher) {
-    switcher.querySelectorAll('.biotope-switch-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.tab === tab);
-    });
+  if (isMono) {
+    card.querySelector('.biotope-section')?.classList.toggle('tab-hidden', tab !== 'tactique');
+    card.querySelector('.mono-map-wrap')?.classList.toggle('tab-hidden', tab !== 'carte');
+  } else {
+    card.querySelector('.section-canal')?.classList.toggle('tab-hidden', tab !== 'canal');
+    card.querySelector('.section-bateau')?.classList.toggle('tab-hidden', tab !== 'bateau');
   }
-  const biotopeSection = card.querySelector('.biotope-section');
-  const mapWrap = card.querySelector('.mono-map-wrap');
+}
 
-  if (biotopeSection) biotopeSection.classList.toggle('tab-hidden', tab !== 'tactique');
-  if (mapWrap) mapWrap.classList.toggle('tab-hidden', tab !== 'carte');
-};
+window.switchCardTab = switchCardTab;
+window.switchCardBiotope = (e, fishId, tab) => switchCardTab(fishId, tab, e);
+window.switchMonoCardTab = (e, fishId, tab) => switchCardTab(fishId, tab, e);
 
 // --------------------------------------------------------------------------
 // INTERACTIONS WAYPOINTS GPS, COPIE & TOAST

@@ -90,6 +90,32 @@ export function renderWaypointsBlock(fish, zone = null) {
   `;
 }
 
+function renderFlipSwitcher(fish, isDual, defaultTab) {
+  if (isDual) {
+    return `
+      <div class="biotope-card-switcher" role="tablist" aria-label="Choisir le milieu">
+        <button type="button" class="biotope-switch-btn ${defaultTab === 'canal' ? 'active' : ''}" data-tab="canal" role="tab" aria-selected="${defaultTab === 'canal'}" onclick="switchCardBiotope(event, '${fish.id}', 'canal')">
+          ${uiIcon('anchor')} Canal de Caen
+        </button>
+        <button type="button" class="biotope-switch-btn ${defaultTab === 'bateau' ? 'active' : ''}" data-tab="bateau" role="tab" aria-selected="${defaultTab === 'bateau'}" onclick="switchCardBiotope(event, '${fish.id}', 'bateau')">
+          ${uiIcon('boat')} Côte de Nacre
+        </button>
+      </div>
+    `;
+  }
+  const icon = fish.canal.present ? 'anchor' : 'boat';
+  return `
+    <div class="biotope-card-switcher mono-card-switcher" role="tablist" aria-label="Choisir la vue tactique ou cartographique">
+      <button type="button" class="biotope-switch-btn active" data-tab="tactique" role="tab" aria-selected="true" onclick="switchMonoCardTab(event, '${fish.id}', 'tactique')">
+        ${uiIcon(icon)} Tactique & Postes
+      </button>
+      <button type="button" class="biotope-switch-btn" data-tab="carte" role="tab" aria-selected="false" onclick="switchMonoCardTab(event, '${fish.id}', 'carte')">
+        ${uiIcon('compass')} Carte Interactive OSM
+      </button>
+    </div>
+  `;
+}
+
 export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 'all') {
   const isDual = fish.canal.present && fish.bateau.present;
   const defaultTab = currentFilterBiotope === 'bateau' ? 'bateau' : 'canal';
@@ -105,27 +131,7 @@ export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 
       <span class="verso-badge">Guide Pratique</span>
     </div>
 
-    ${isFlipCard && isDual ? `
-      <div class="biotope-card-switcher" role="tablist" aria-label="Choisir le milieu">
-        <button type="button" class="biotope-switch-btn ${defaultTab === 'canal' ? 'active' : ''}" data-tab="canal" onclick="switchCardBiotope(event, '${fish.id}', 'canal')">
-          ${uiIcon('anchor')} Canal de Caen
-        </button>
-        <button type="button" class="biotope-switch-btn ${defaultTab === 'bateau' ? 'active' : ''}" data-tab="bateau" onclick="switchCardBiotope(event, '${fish.id}', 'bateau')">
-          ${uiIcon('boat')} Côte de Nacre
-        </button>
-      </div>
-    ` : ''}
-
-    ${isFlipCard && !isDual ? `
-      <div class="biotope-card-switcher mono-card-switcher" role="tablist" aria-label="Choisir la vue tactique ou cartographique">
-        <button type="button" class="biotope-switch-btn active" data-tab="tactique" onclick="switchMonoCardTab(event, '${fish.id}', 'tactique')">
-          ${uiIcon(fish.canal.present ? 'anchor' : 'boat')} Tactique & Postes
-        </button>
-        <button type="button" class="biotope-switch-btn" data-tab="carte" onclick="switchMonoCardTab(event, '${fish.id}', 'carte')">
-          ${uiIcon('compass')} Carte Interactive OSM
-        </button>
-      </div>
-    ` : ''}
+    ${isFlipCard ? renderFlipSwitcher(fish, isDual, defaultTab) : ''}
 
     ${fish.canal.present ? `
       <div class="biotope-section section-canal ${canalHidden}">

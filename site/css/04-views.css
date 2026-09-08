@@ -163,103 +163,6 @@
   }
 }
 
-@media (max-width: 768px) {
-  .app-header {
-    position: relative;
-    top: auto;
-    margin: 0.5rem 0.5rem 1rem 0.5rem;
-    padding: 0.95rem 1.15rem;
-    border-radius: 0;
-  }
-  .header-top {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1rem;
-  }
-  .header-actions {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-    gap: 0.65rem;
-  }
-  .mode-segmented {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .mode-btn {
-    padding: 0.45rem 0.35rem;
-    font-size: 0.72rem;
-    justify-content: center;
-  }
-  .theme-picker-wrap {
-    width: 100%;
-  }
-  .theme-trigger-btn {
-    width: 100%;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-  }
-  .theme-popover {
-    position: fixed;
-    top: auto;
-    bottom: 1rem;
-    left: 1rem;
-    right: 1rem;
-    width: auto;
-    max-width: calc(100vw - 2rem);
-    z-index: 300;
-  }
-  .btn-gold.btn-island {
-    width: 100%;
-    justify-content: space-between;
-  }
-  .search-and-toggles {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .biotope-select {
-    width: 100%;
-  }
-  .cards-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  .interactive-card {
-    height: 820px;
-  }
-  .duo-card-shell {
-    padding: 0;
-    border-radius: 0;
-  }
-  .duo-card {
-    padding: 1.15rem 1.1rem;
-    border-radius: 0;
-  }
-  .card-face-shell {
-    padding: 0;
-    border-radius: 0;
-  }
-  .card-face-shell .card-face {
-    border-radius: 0;
-    padding: 1.15rem 1.1rem;
-  }
-  .tide-weather-cockpit {
-    grid-template-columns: 1fr;
-  }
-  .canal-triggers-cockpit {
-    grid-template-columns: 1fr;
-  }
-  .twelfths-chart-container {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
-  }
-  .twelfths-bell-curve {
-    justify-content: space-around;
-  }
-}
-
 /* --- MODE 2 : VUE CARTE FLIP RÉVERSIBLE (GÉOMÉTRIE A5 RATIO 1:1.414 SANS SCROLL) --- */
 .cards-grid {
   display: grid;
@@ -379,7 +282,7 @@
 
 .biotope-switch-btn.active {
   background: var(--theme-canal-accent);
-  color: #ffffff;
+  color: var(--theme-canal-badge-text);
   box-shadow: 0 1px 2px var(--theme-shadow-ambient);
 }
 
@@ -795,42 +698,6 @@
   width: 3.8rem;
 }
 
-.interactive-card .pill-combo {
-  background: var(--theme-surface-inset);
-  color: var(--theme-text-title);
-  border: 1px solid var(--theme-surface-subtle-border);
-}
-
-.interactive-card .pill-rigid {
-  background: var(--theme-canal-surface);
-  color: var(--theme-canal-accent);
-  border: 1px solid var(--theme-canal-surface-border);
-}
-
-.interactive-card .pill-soft {
-  background: var(--theme-bateau-surface);
-  color: var(--theme-bateau-accent);
-  border: 1px solid var(--theme-bateau-surface-border);
-}
-
-.interactive-card .pill-natural {
-  background: var(--theme-secret-surface);
-  color: var(--theme-secret-text);
-  border: 1px solid var(--theme-secret-border);
-}
-
-.interactive-card .pill-hook {
-  background: var(--theme-surface-subtle);
-  color: var(--theme-bateau-accent);
-  border: 1px solid var(--theme-bateau-surface-border);
-}
-
-.interactive-card .pill-leader {
-  background: var(--theme-surface-inset);
-  color: var(--theme-text-muted);
-  border: 1px solid var(--theme-surface-subtle-border);
-}
-
 .interactive-card .terminal-val {
   font-size: 0.63rem;
 }
@@ -879,7 +746,7 @@
 .card-flip-trigger:hover {
   background: var(--theme-canal-accent);
   border-color: var(--theme-canal-accent);
-  color: #ffffff;
+  color: var(--theme-canal-badge-text);
   box-shadow: 0 2px 4px var(--theme-shadow-ambient);
   transform: translateY(-1px);
 }
@@ -890,4 +757,106 @@
 
 .card-flip-trigger:active {
   transform: translateY(0) scale(0.94);
+}
+
+/* ==========================================================================
+   RESPONSIVE MOBILE & PETITS ÉCRANS (Placé en fin de cascade)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .app-header {
+    position: relative;
+    top: auto;
+    margin: 0.5rem 0.5rem 1rem 0.5rem;
+    padding: 0.95rem 1.15rem;
+    border-radius: 0;
+  }
+  .header-top {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .header-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.65rem;
+  }
+  .mode-segmented {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .mode-btn {
+    padding: 0.45rem 0.35rem;
+    font-size: 0.72rem;
+    justify-content: center;
+  }
+  .theme-picker-wrap {
+    width: 100%;
+  }
+  .theme-trigger-btn {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+  }
+  .theme-popover {
+    position: fixed;
+    top: auto;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+    max-width: calc(100vw - 2rem);
+    z-index: 300;
+  }
+  .btn-gold.btn-island {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .search-and-toggles {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .biotope-select {
+    width: 100%;
+  }
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .interactive-card {
+    height: 870px;
+    max-width: 100%;
+  }
+  .duo-card-shell {
+    padding: 0;
+    border-radius: 0;
+  }
+  .duo-card {
+    padding: 1.15rem 1.1rem;
+    border-radius: 0;
+  }
+  .card-face-shell {
+    padding: 0;
+    border-radius: 0;
+  }
+  .card-face-shell .card-face {
+    border-radius: 0;
+    padding: 1.15rem 1.1rem;
+  }
+  .tide-weather-cockpit {
+    grid-template-columns: 1fr;
+  }
+  .canal-triggers-cockpit {
+    grid-template-columns: 1fr;
+  }
+  .twelfths-chart-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .twelfths-bell-curve {
+    justify-content: space-around;
+  }
 }
