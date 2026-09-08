@@ -26,6 +26,15 @@ export function renderCanalDedicatedMap(fish) {
           class="halieutic-osm-img"
         />
       </div>
+      <div class="map-legend-bar" aria-label="Légende cartographique du Canal">
+        <span class="legend-title">Légende :</span>
+        <span class="legend-item"><span class="legend-sym">📜</span> AAPPMA</span>
+        <span class="legend-item"><span class="legend-sym">🌊</span> DPM libre</span>
+        <span class="legend-item"><span class="legend-sym">🌉</span> Pont</span>
+        <span class="legend-item"><span class="legend-sym">🏢</span> Palplanches</span>
+        <span class="legend-item"><span class="legend-sym">🚤</span> Cale slipway</span>
+        <span class="legend-item"><span class="legend-sym">⚓</span> Écluses</span>
+      </div>
       <div class="map-habitats-grid">
         <div class="map-habitat-chip">
           <span class="map-habitat-tag">🪨 Enrochements</span>
@@ -67,6 +76,14 @@ export function renderCoteDeNacreDedicatedMap(fish) {
           class="halieutic-osm-img"
         />
       </div>
+      <div class="map-legend-bar" aria-label="Légende cartographique de la Côte de Nacre">
+        <span class="legend-title">Légende :</span>
+        <span class="legend-item"><span class="legend-sym">🪨</span> Roches (6-15m)</span>
+        <span class="legend-item"><span class="legend-sym">〰️</span> Bancs / Ridens</span>
+        <span class="legend-item"><span class="legend-sym">⚓</span> Épave 1944</span>
+        <span class="legend-item"><span class="legend-sym">🎣</span> Jetée pêche</span>
+        <span class="legend-item"><span class="legend-sym">🚤</span> Cale slipway</span>
+      </div>
       <div class="map-habitats-grid">
         <div class="map-habitat-chip">
           <span class="map-habitat-tag">🪨 Roches Calvados</span>
@@ -105,6 +122,12 @@ export function renderRegionalMiniMap() {
           alt="Carte OpenStreetMap de situation reliant Caen à la Côte de Nacre"
           class="mini-map-osm-img"
         />
+      </div>
+      <div class="mini-map-legend-bar" aria-label="Légende vue d'ensemble">
+        <span>📜 AAPPMA</span>
+        <span>🌊 DPM</span>
+        <span>🪨 Roches</span>
+        <span>⚓ Épaves</span>
       </div>
     </div>
   `;

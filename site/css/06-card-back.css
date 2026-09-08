@@ -709,6 +709,42 @@
   color: var(--theme-text-muted);
 }
 
+/* Barre de légende cartographique compacte */
+.map-legend-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.55rem;
+  padding: 0.2rem 0.4rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.15rem;
+  background: var(--theme-surface-subtle);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  line-height: 1.2;
+  color: var(--theme-text-muted);
+}
+
+.map-legend-bar .legend-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--theme-text-title);
+}
+
+.map-legend-bar .legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  white-space: nowrap;
+}
+
+.map-legend-bar .legend-sym {
+  font-size: 0.62rem;
+}
+
 /* Grille des habitats dupliqués sur la carte */
 .map-habitats-grid {
   display: grid;

@@ -639,3 +639,18 @@
 [data-theme-mode="dark"] .mini-map-osm-img {
   filter: invert(0.9) hue-rotate(180deg) brightness(0.85) contrast(1.15);
 }
+
+.mini-map-legend-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.12rem 0.25rem;
+  margin-top: 0.15rem;
+  font-family: var(--font-mono);
+  font-size: 0.48rem;
+  font-weight: 700;
+  color: var(--theme-text-muted);
+  background: var(--theme-surface-subtle);
+  border: 1px solid var(--theme-surface-subtle-border);
+  border-radius: 2px;
+}
