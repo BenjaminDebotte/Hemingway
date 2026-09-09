@@ -145,7 +145,7 @@
       <div class="filter-controls-grid">
         <!-- 1. CATÉGORIE -->
         <div class="multiselect-wrap" id="wrap-category">
-          <button type="button" class="multiselect-trigger" id="trigger-category" aria-haspopup="listbox" aria-expanded="false" aria-controls="popover-category">
+          <button type="button" class="multiselect-trigger" id="trigger-category" aria-haspopup="true" aria-expanded="false" aria-controls="popover-category">
             <span class="filter-label">Catégorie :</span>
             <span class="multiselect-text" id="label-category">Toutes</span>
             <svg class="ui-icon arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
@@ -182,7 +182,7 @@
 
         <!-- 2. BIOTOPE -->
         <div class="multiselect-wrap" id="wrap-biotope">
-          <button type="button" class="multiselect-trigger" id="trigger-biotope" aria-haspopup="listbox" aria-expanded="false" aria-controls="popover-biotope">
+          <button type="button" class="multiselect-trigger" id="trigger-biotope" aria-haspopup="true" aria-expanded="false" aria-controls="popover-biotope">
             <span class="filter-label">Biotope :</span>
             <span class="multiselect-text" id="label-biotope">Tous</span>
             <svg class="ui-icon arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
@@ -211,7 +211,7 @@
 
         <!-- 3. PERMIS / RÉGIME -->
         <div class="multiselect-wrap" id="wrap-permit">
-          <button type="button" class="multiselect-trigger" id="trigger-permit" aria-haspopup="listbox" aria-expanded="false" aria-controls="popover-permit">
+          <button type="button" class="multiselect-trigger" id="trigger-permit" aria-haspopup="true" aria-expanded="false" aria-controls="popover-permit">
             <span class="filter-label">Permis :</span>
             <span class="multiselect-text" id="label-permit">Tous</span>
             <svg class="ui-icon arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
@@ -236,7 +236,7 @@
 
         <!-- 4. RÈGLEMENT -->
         <div class="multiselect-wrap" id="wrap-regulation">
-          <button type="button" class="multiselect-trigger" id="trigger-regulation" aria-haspopup="listbox" aria-expanded="false" aria-controls="popover-regulation">
+          <button type="button" class="multiselect-trigger" id="trigger-regulation" aria-haspopup="true" aria-expanded="false" aria-controls="popover-regulation">
             <span class="filter-label">Règlement :</span>
             <span class="multiselect-text" id="label-regulation">Toutes</span>
             <svg class="ui-icon arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
@@ -263,7 +263,7 @@
 
         <!-- 5. ACTIVITÉ -->
         <div class="multiselect-wrap" id="wrap-month">
-          <button type="button" class="multiselect-trigger" id="trigger-month" aria-haspopup="listbox" aria-expanded="false" aria-controls="popover-month">
+          <button type="button" class="multiselect-trigger" id="trigger-month" aria-haspopup="true" aria-expanded="false" aria-controls="popover-month">
             <span class="filter-label">Activité :</span>
             <span class="multiselect-text" id="label-month">Tous mois</span>
             <svg class="ui-icon arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
@@ -329,7 +329,7 @@
   <!-- CONTENU PRINCIPAL : VUE INTERACTIVE -->
   <main class="main-container">
     <div class="view-stats">
-      <span id="view-stats" class="view-stats-count">Chargement des données...</span>
+      <span id="view-stats" class="view-stats-count" role="status" aria-live="polite">Chargement des données...</span>
       <span id="view-hint" class="view-hint">Mode Déplié : Face A (Identité) et Face B (Tactique) affichées côte-à-côte</span>
     </div>
 

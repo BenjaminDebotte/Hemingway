@@ -1465,6 +1465,9 @@ html[data-mode="dark"]:not([data-theme]) {
 html[data-theme="deschool"][data-mode="light"],
 html[data-theme="deschool"]:not([data-mode="dark"]) {
   --theme-bg: #f4f1ea;
+  --theme-header-bg: #f4f1ea;
+  --theme-header-border: #000000;
+  --theme-header-text: #000000;
 
   --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
@@ -1493,7 +1496,7 @@ html[data-theme="deschool"]:not([data-mode="dark"]) {
   --theme-bateau-badge-text: #000000;
   --theme-bateau-badge-border: #000000;
 
-  --theme-secret-accent: #e05344;
+  --theme-secret-accent: #c83222;
   --theme-secret-surface: #f4efe6;
   --theme-secret-border: #000000;
   --theme-secret-text: #000000;
@@ -1502,7 +1505,7 @@ html[data-theme="deschool"]:not([data-mode="dark"]) {
   --theme-reg-pill-border: #000000;
   --theme-reg-pill-label: #333333;
   --theme-reg-legal: #000000;
-  --theme-reg-nokill: #e05344;
+  --theme-reg-nokill: #c83222;
 
   --theme-badge-cat-bg: #000000;
   --theme-badge-cat-text: #ffffff;
@@ -1512,16 +1515,16 @@ html[data-theme="deschool"]:not([data-mode="dark"]) {
   --theme-btn-primary-text: #ffffff;
 
   --theme-segmented-bg: #111111;
-  --theme-segmented-active-bg: #e05344;
+  --theme-segmented-active-bg: #c83222;
   --theme-segmented-active-text: #ffffff;
 
   --theme-pill-bg: #111111;
   --theme-pill-border: #000000;
-  --theme-pill-active-bg: #e05344;
+  --theme-pill-active-bg: #c83222;
   --theme-pill-active-text: #ffffff;
 
   --theme-gauge-track: #e5e5e5;
-  --theme-accent-red: #e05344;
+  --theme-accent-red: #c83222;
 }
 
 /* 12B. De School - Mode Nuit (Night Club Blueprint) */
@@ -1598,8 +1601,8 @@ html[data-theme="deschool"][data-mode="dark"] {
 html[data-theme="deschool"]:not([data-mode="dark"]) body {
   background-color: var(--theme-bg);
   background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0.13) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 0, 0, 0.13) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 0, 0, 0.28) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.28) 1px, transparent 1px);
   background-size: 32px 32px;
 }
 
@@ -1728,7 +1731,7 @@ html[data-theme="deschool"] .month-cell {
 
 html[data-theme="deschool"]:not([data-mode="dark"]) .month-cell.heat-0 {
   background-color: #ffffff !important;
-  color: #a0a0a0 !important;
+  color: #525252 !important;
   font-weight: 500 !important;
   border-color: #d0d0d0 !important;
 }

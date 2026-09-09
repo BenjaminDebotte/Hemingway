@@ -27,17 +27,15 @@
   font-display: swap;
 }
 
-/* Typographie Basis Grotesque Mono (variante technique de la famille Colophon Foundry) */
+/* Typographie Basis Grotesque Mono (variante technique avec fallback JetBrains Mono) */
 @font-face {
   font-family: "Basis Grotesque Mono";
   src: local("Basis Grotesque Mono Medium"),
        local("BasisGrotesqueMono-Medium"),
        local("Basis Grotesque Mono"),
        local("BasisGrotesqueMono"),
-       url("../fonts/BasisGrotesqueMono-Medium.woff2") format("woff2"),
-       url("../fonts/BasisGrotesqueMono-Medium.woff") format("woff"),
-       url("../fonts/BasisGrotesqueMono-Regular.woff2") format("woff2"),
-       url("../fonts/BasisGrotesqueMono-Regular.woff") format("woff");
+       local("JetBrains Mono"),
+       local("Courier New");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;

@@ -100,6 +100,7 @@ function setupSearch() {
     clearBtn.addEventListener('click', () => {
       searchInput.value = '';
       filterState.searchTerm = '';
+      searchInput.focus();
       clearBtn.hidden = true;
       triggerSearch();
     });
