@@ -1831,30 +1831,67 @@ html[data-theme="deschool"] .tackle-val {
   color: var(--theme-text-main, #000000) !important;
 }
 
-/* Calendar Fills (Heatmap 12 Months) */
+/* Calendar Fills (Heatmap 12 Months - Clean Solid High-Contrast Fills) */
 html[data-theme="deschool"] .month-cell {
   border: 1px solid var(--theme-card-inner-border, #000000) !important;
+  background-image: none !important;
+  border-radius: 0 !important;
+  font-family: "JetBrains Mono", "Basis Grotesque Mono", monospace !important;
+  font-size: 0.65rem !important;
 }
+
+html[data-theme="deschool"]:not([data-mode="dark"]) .month-cell.heat-0 {
+  background-color: #ffffff !important;
+  color: #a0a0a0 !important;
+  font-weight: 500 !important;
+  border-color: #d0d0d0 !important;
+}
+
+html[data-theme="deschool"]:not([data-mode="dark"]) .month-cell.heat-1 {
+  background-color: #e8e4da !important;
+  color: #000000 !important;
+  font-weight: 700 !important;
+  border-color: #000000 !important;
+}
+
+html[data-theme="deschool"]:not([data-mode="dark"]) .month-cell.heat-2 {
+  background-color: #404040 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border-color: #000000 !important;
+}
+
 html[data-theme="deschool"]:not([data-mode="dark"]) .month-cell.heat-3 {
   background-color: #000000 !important;
   color: #ffffff !important;
-  font-weight: 700;
+  font-weight: 800 !important;
+  border-color: #000000 !important;
 }
-html[data-theme="deschool"]:not([data-mode="dark"]) .month-cell.heat-2 {
-  background-image: radial-gradient(#000000 1.2px, transparent 1.2px) !important;
-  background-size: 4px 4px !important;
+
+html[data-theme="deschool"][data-mode="dark"] .month-cell.heat-0 {
+  background-color: #111111 !important;
+  color: #555555 !important;
+  border-color: #222222 !important;
+}
+
+html[data-theme="deschool"][data-mode="dark"] .month-cell.heat-1 {
+  background-color: #222222 !important;
+  color: #dddddd !important;
+  border-color: #333333 !important;
+}
+
+html[data-theme="deschool"][data-mode="dark"] .month-cell.heat-2 {
+  background-color: #ef4444 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  border-color: #ef4444 !important;
+}
+
+html[data-theme="deschool"][data-mode="dark"] .month-cell.heat-3 {
   background-color: #ffffff !important;
   color: #000000 !important;
-  font-weight: 700;
-}
-html[data-theme="deschool"]:not([data-mode="dark"]) .month-cell.heat-1 {
-  background: repeating-linear-gradient(45deg, #000000 0, #000000 1px, #ffffff 1px, #ffffff 4px) !important;
-  color: #000000 !important;
-  font-weight: 700;
-}
-html[data-theme="deschool"]:not([data-mode="dark"]) .month-cell.heat-0 {
-  background-color: #ffffff !important;
-  color: #888888 !important;
+  font-weight: 800 !important;
+  border-color: #ffffff !important;
 }
 
 /* Ticket Accent Red Details */

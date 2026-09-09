@@ -441,6 +441,22 @@
   background: var(--theme-bateau-accent);
 }
 
+/* Manifest Rows Override (removes pseudo-element bullets for manifest lists) */
+.tactics-manifest-list,
+.tactics-manifest-list li,
+.tactic-manifest-row {
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.tactics-manifest-list li::before,
+.tactic-manifest-row::before {
+  content: none !important;
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
 /* --- CARTOUCHE DÉDIÉ : TOP LEURRES & ARMEMENT --- */
 .terminal-tackle-card {
   background: var(--theme-surface-subtle);
