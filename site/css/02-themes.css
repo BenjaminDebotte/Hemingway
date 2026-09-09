@@ -1771,15 +1771,17 @@ html[data-theme="deschool"] .tactic-manifest-row:last-child {
   border-bottom: none !important;
 }
 
-html[data-theme="deschool"] .tactic-index {
-  font-family: "JetBrains Mono", "Basis Grotesque Mono", monospace !important;
-  font-weight: 700 !important;
-  font-size: 0.68rem !important;
+html[data-theme="deschool"] .tactic-icon-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 0.85rem !important;
   color: var(--theme-accent-red, #e05344) !important;
-  background: var(--theme-surface-subtle, #f4efe6) !important;
-  padding: 0.05rem 0.3rem !important;
-  border: 1px solid var(--theme-card-inner-border, #000000) !important;
-  border-radius: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin-top: 0.1rem !important;
+  flex-shrink: 0 !important;
 }
 
 html[data-theme="deschool"] .tactic-text {

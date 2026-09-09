@@ -15,6 +15,25 @@ import {
 } from './geo-maps.js';
 import { getSpotsForFish } from './spots-data.js';
 
+export function getTacticIconName(tacticText = '') {
+  const text = tacticText.toLowerCase();
+
+  if (/éclus|courant|piston|vidange|chasse|appel/i.test(text)) return 'zap';
+  if (/nuit|obscur|lumièr|lampadaire|cône|ombre|crépuscule/i.test(text)) return 'moon';
+  if (/épave|epave|dday|d-day|tôle|carcasse/i.test(text)) return 'wreck';
+  if (/roche|plateau|roches|caillou/i.test(text)) return 'reef';
+  if (/banc|sable|riden|dune/i.test(text)) return 'sandbank';
+  if (/ancre|mouillage|enrochement|palplanche|quai|piler|pont/i.test(text)) return 'anchor';
+  if (/bateau|dérive|moteur|sondeur|ancrage|coque/i.test(text)) return 'boat';
+  if (/marée|marnage|étale|coef|jusant|flot/i.test(text)) return 'wave';
+  if (/heure|horaire|moment|temps|saison/i.test(text)) return 'clock';
+  if (/canne|animation|moulinet|scion|tirée|traction|vitesse|mouliner/i.test(text)) return 'rod';
+  if (/leurre|jig|souple|hameçon|suiveur|appât|ver|grappin|montage|bas de ligne/i.test(text)) return 'hook';
+  if (/discrétion|finesse|fluorocarbone|transparence|furtif/i.test(text)) return 'sparkle';
+
+  return 'compass';
+}
+
 /**
  * Encart dédié « Repères & Waypoints GPS » sur Face B
  * Présentation haute-précision au format marin WGS84 (DD° MM.MMM') avec copie décimale
@@ -146,7 +165,7 @@ export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 
         ${renderWaypointsBlock(fish, 'canal')}
         ${renderCanalTriggers(fish.canal.triggers.ecluseesOuistreham, fish.canal.triggers.luminositeEtNuit)}
         <ul class="tactics-bullets tactics-manifest-list">
-          ${fish.canal.tactics.map((t, idx) => `<li class="tactic-manifest-row"><span class="tactic-index">0${idx + 1}</span><span class="tactic-text">${t}</span></li>`).join('')}
+          ${fish.canal.tactics.map(t => `<li class="tactic-manifest-row"><span class="tactic-icon-badge">${uiIcon(getTacticIconName(t))}</span><span class="tactic-text">${t}</span></li>`).join('')}
         </ul>
         ${renderExhaustiveTackleBlock(fish.canal.terminalTackle, fish.gear.canalCombo, 'Canal', 'canal')}
       </div>
@@ -168,7 +187,7 @@ export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 
         ${renderTideAndWeather(fish.bateau.tideAndCurrent.bestCoefficients, fish.bateau.weatherImpact.favorableWinds)}
         ${renderTwelfthsGauge(fish.bateau.tideAndCurrent.ruleOfTwelfths)}
         <ul class="tactics-bullets tactics-manifest-list">
-          ${fish.bateau.tactics.map((t, idx) => `<li class="tactic-manifest-row"><span class="tactic-index">0${idx + 1}</span><span class="tactic-text">${t}</span></li>`).join('')}
+          ${fish.bateau.tactics.map(t => `<li class="tactic-manifest-row"><span class="tactic-icon-badge">${uiIcon(getTacticIconName(t))}</span><span class="tactic-text">${t}</span></li>`).join('')}
         </ul>
         ${renderExhaustiveTackleBlock(fish.bateau.terminalTackle, fish.gear.boatCombo, 'Mer', 'bateau')}
       </div>

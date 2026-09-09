@@ -457,6 +457,16 @@
   height: 0 !important;
 }
 
+.tactic-icon-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--theme-canal-accent);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
 /* --- CARTOUCHE DÉDIÉ : TOP LEURRES & ARMEMENT --- */
 .terminal-tackle-card {
   background: var(--theme-surface-subtle);
@@ -534,37 +544,37 @@
 .pill-combo {
   background: var(--theme-surface-inset);
   color: var(--theme-text-title);
-  border: 1px solid var(--theme-surface-subtle-border);
+  border: none;
 }
 
 .pill-rigid {
   background: var(--theme-canal-surface);
   color: var(--theme-canal-accent);
-  border: 1px solid var(--theme-canal-surface-border);
+  border: none;
 }
 
 .pill-soft {
   background: var(--theme-bateau-surface);
   color: var(--theme-bateau-accent);
-  border: 1px solid var(--theme-bateau-surface-border);
+  border: none;
 }
 
 .pill-natural {
   background: var(--theme-secret-surface);
   color: var(--theme-secret-text);
-  border: 1px solid var(--theme-secret-border);
+  border: none;
 }
 
 .pill-hook {
   background: var(--theme-surface-subtle);
   color: var(--theme-bateau-accent);
-  border: 1px solid var(--theme-bateau-surface-border);
+  border: none;
 }
 
 .pill-leader {
   background: var(--theme-surface-inset);
   color: var(--theme-text-muted);
-  border: 1px solid var(--theme-surface-subtle-border);
+  border: none;
 }
 
 .terminal-val {
