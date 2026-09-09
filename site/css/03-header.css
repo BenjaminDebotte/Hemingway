@@ -218,7 +218,7 @@
 
 .biotope-label {
   font-size: 0.74rem;
-  color: var(--theme-header-text-muted);
+  color: var(--theme-header-text, #ffffff);
   font-family: var(--font-mono);
   font-weight: 700;
   text-transform: uppercase;
@@ -255,8 +255,8 @@
 }
 
 .biotope-select option {
-  background: var(--theme-card-outer-bg);
-  color: var(--theme-text-title);
+  background: var(--theme-input-bg, #111111);
+  color: var(--theme-input-text, #ffffff);
 }
 
 .filter-pills {

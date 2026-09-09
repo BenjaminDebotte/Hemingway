@@ -287,6 +287,11 @@
   box-shadow: 0 1px 2px var(--theme-shadow-ambient);
 }
 
+.biotope-switch-btn[data-tab="bateau"].active {
+  background: var(--theme-bateau-accent);
+  color: var(--theme-canal-badge-text);
+}
+
 .interactive-card .tab-hidden {
   display: none !important;
 }
@@ -644,8 +649,8 @@
 }
 
 .interactive-card .twelfths-bell-curve {
-  height: 38px;
-  padding: 2px 4px 0;
+  height: 44px;
+  padding: 2px 4px 2px;
   gap: 3px;
 }
 
@@ -666,7 +671,8 @@
 
 .interactive-card .twelfth-frac-label {
   font-family: var(--font-mono);
-  font-size: 0.52rem;
+  font-size: 0.54rem;
+  font-weight: 600;
 }
 
 .interactive-card .twelfths-note {

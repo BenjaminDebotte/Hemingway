@@ -86,7 +86,7 @@
   align-items: center;
   flex-wrap: wrap;
   font-size: 0.74rem;
-  color: var(--theme-text-faint);
+  color: var(--theme-text-muted);
   margin-top: 0.18rem;
 }
 

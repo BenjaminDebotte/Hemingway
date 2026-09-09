@@ -308,7 +308,7 @@
   font-weight: 800;
   font-size: 0.68rem;
   background: var(--theme-bateau-accent);
-  color: var(--theme-bateau-badge-text);
+  color: var(--theme-canal-badge-text);
   padding: 0.12rem 0.48rem;
   border-radius: var(--radius-full);
 }
@@ -335,8 +335,8 @@
   display: flex;
   align-items: flex-end;
   gap: 3.5px;
-  height: 38px;
-  padding: 2px 4px 0;
+  height: 44px;
+  padding: 2px 4px 2px;
   background: var(--theme-card-inner-bg);
   border: 1px solid var(--theme-surface-subtle-border);
   border-radius: 4px;
@@ -397,13 +397,14 @@
 .twelfth-frac-label {
   font-family: var(--font-mono);
   font-size: 0.52rem;
-  color: var(--theme-text-faint);
+  color: var(--theme-text-muted);
+  font-weight: 600;
   line-height: 1;
 }
 
 .twelfth-col.active .twelfth-frac-label {
   color: var(--theme-bateau-accent);
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .twelfths-note {
