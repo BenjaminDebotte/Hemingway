@@ -1817,13 +1817,20 @@ html[data-theme="deschool"] .tackle-manifest-row:last-child {
   border-bottom: none !important;
 }
 
-html[data-theme="deschool"] .tackle-label {
+html[data-theme="deschool"] .tackle-label,
+html[data-theme="deschool"] .terminal-pill {
   font-family: "JetBrains Mono", "Basis Grotesque Mono", monospace !important;
   font-size: 0.62rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   color: var(--theme-accent-red, #e05344) !important;
   margin-bottom: 0.15rem !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: max-content !important;
+  align-self: flex-start !important;
+  display: inline-block !important;
+  padding: 0 !important;
 }
 
 html[data-theme="deschool"] .tackle-val {

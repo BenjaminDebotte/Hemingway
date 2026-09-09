@@ -521,12 +521,14 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
-  padding: 0.08rem 0.38rem;
+  padding: 0.08rem 0.45rem;
   border-radius: 4px;
   white-space: nowrap;
   flex-shrink: 0;
-  width: 5.2rem;
-  text-align: center;
+  width: auto;
+  max-width: max-content;
+  align-self: flex-start;
+  text-align: left;
 }
 
 .pill-combo {
