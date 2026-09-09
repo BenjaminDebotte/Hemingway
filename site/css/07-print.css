@@ -367,7 +367,7 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
 .a4-sheet-preview .mini-map-svg {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: fill;
   display: block;
 }
 
@@ -540,7 +540,7 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
 .a4-sheet-preview .halieutic-svg {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: fill;
   display: block;
 }
 

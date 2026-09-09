@@ -658,7 +658,7 @@
 .halieutic-osm-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: fill;
   background: var(--theme-surface-subtle);
   display: block;
   transition: filter 0.25s ease;
@@ -1051,7 +1051,20 @@ html[data-mode="dark"] .halieutic-osm-img {
 
 .interactive-map-container {
   position: relative !important;
-  overflow: visible !important;
+  overflow: hidden !important;
+  width: 100%;
+}
+
+.interactive-map-container[data-map="canal"] {
+  aspect-ratio: 1600 / 1120;
+}
+
+.interactive-map-container[data-map="mer"] {
+  aspect-ratio: 1600 / 1000;
+}
+
+.interactive-map-container[data-map="reg"] {
+  aspect-ratio: 1000 / 1000;
 }
 
 .map-pins-layer {

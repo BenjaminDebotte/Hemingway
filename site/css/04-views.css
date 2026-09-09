@@ -450,7 +450,7 @@
 .interactive-card .mini-map-osm-img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
+  object-fit: fill !important;
 }
 
 .interactive-card .mini-map-legend-bar {
@@ -504,7 +504,7 @@
 .interactive-card .biotope-map-card .halieutic-osm-img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
+  object-fit: fill !important;
 }
 
 .interactive-card .notes-lines {
