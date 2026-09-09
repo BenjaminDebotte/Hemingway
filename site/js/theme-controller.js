@@ -12,9 +12,9 @@ export const THEME_DEFINITIONS = {
     color: '#000000'
   },
   deschool: {
-    label: 'Archief',
-    name: 'Archief',
-    color: '#000000'
+    label: 'De School',
+    name: 'De School Brutalist',
+    color: '#e05344'
   },
   estran: {
     label: 'Varech',
@@ -70,6 +70,7 @@ export const THEME_DEFINITIONS = {
 
 export const THEME_OPTIONS = [
   { val: 'archief', name: 'Archief', desc: 'Brutalisme Minimaliste • Papier & Zwart', swatches: ['#000000', '#ffffff', '#f9f6ef'] },
+  { val: 'deschool', name: 'De School Brutalist', desc: 'Grille Blueprint • Industrial & Ticket Red', swatches: ['#e05344', '#000000', '#f4f1ea'] },
   { val: 'estran', name: 'Estran & Varech', desc: 'Vert Risographe • Laminaires & Estran', swatches: ['#047857', '#10b981', '#f5f8f5'] },
   { val: 'epaves', name: 'Épaves & Rouille', desc: 'Terracotta 1944 • Acier Brut & Brique', swatches: ['#c2410c', '#fb923c', '#fbf7f4'] },
   { val: 'dune', name: 'Dune & Calcaire', desc: 'Ocre Sable • Plages de Nacre', swatches: ['#b45309', '#d97706', '#fbf9f2'] },
@@ -118,14 +119,6 @@ export function initThemeController() {
       localStorage.setItem(STORAGE_KEY_THEME, 'staal');
     } catch (e) {}
     savedTheme = 'staal';
-  }
-
-  // Migration de l'ancien token 'deschool' vers 'archief'
-  if (savedTheme === 'deschool') {
-    savedTheme = 'archief';
-    try {
-      localStorage.setItem(STORAGE_KEY_THEME, 'archief');
-    } catch (e) {}
   }
 
   // Migration de l'ancien thème 'tactical'

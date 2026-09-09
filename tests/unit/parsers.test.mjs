@@ -5,7 +5,9 @@ import {
   parseCoefficients,
   formatWindCondition,
   parseLengths,
-  getHarvestGauge
+  getHarvestGauge,
+  requiresPermit,
+  getPermitInfo
 } from '../../site/js/parsers.js';
 
 test('parseTwelfths - parses H3 à H4 correctly', () => {
@@ -55,4 +57,44 @@ test('getHarvestGauge - legal quotas and bag limits', () => {
   assert.equal(getHarvestGauge('2 lieux par jour par pêcheur', 'lieu-jaune').shortLabel, '2 / jour');
   assert.equal(getHarvestGauge('No-kill obligatoire', 'bar-commun').shortLabel, 'No-Kill');
   assert.equal(getHarvestGauge('Prélèvement non soumis à quota', 'gardon-commun').shortLabel, 'Libre');
+});
+
+test('requiresPermit - identifies freshwater and AAPPMA permit requirements', () => {
+  const freshwaterFish = {
+    identity: { category: 'Carnassier eau douce / saumâtre' },
+    regulations: { specialRules: ['Carte AAPPMA obligatoire'] }
+  };
+  assert.equal(requiresPermit(freshwaterFish), true);
+
+  const cyprinid = {
+    identity: { category: 'Cyprinidé / Poisson blanc' },
+    regulations: { specialRules: [] }
+  };
+  assert.equal(requiresPermit(cyprinid), true);
+
+  const marineFish = {
+    identity: { category: 'Carnassier marin' },
+    regulations: { specialRules: ['Pêche libre en aval du Pont de la Fonderie (DPM maritime sans carte fédérale)'] }
+  };
+  assert.equal(requiresPermit(marineFish), false);
+});
+
+test('getPermitInfo - provides detailed permit status for DPM and Bassin St-Pierre', () => {
+  const sandre = {
+    identity: { category: 'Carnassier eau douce / saumâtre' },
+    regulations: { specialRules: ['Bassin Saint-Pierre (en amont du Pont de la Fonderie) : Carte de pêche AAPPMA obligatoire (eau douce)'] }
+  };
+  const infoSandre = getPermitInfo(sandre);
+  assert.equal(infoSandre.dpmFree, true);
+  assert.equal(infoSandre.requiresAAPPMAInBassin, true);
+  assert.equal(infoSandre.badgeLabel, 'AAPPMA si Bassin St-Pierre');
+
+  const bar = {
+    identity: { category: 'Carnassier marin' },
+    regulations: { specialRules: ['Pêche libre en aval du Pont de la Fonderie (DPM maritime sans carte fédérale)'] }
+  };
+  const infoBar = getPermitInfo(bar);
+  assert.equal(infoBar.dpmFree, true);
+  assert.equal(infoBar.requiresAAPPMAInBassin, false);
+  assert.equal(infoBar.badgeLabel, 'Pêche libre DPM');
 });

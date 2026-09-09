@@ -116,7 +116,8 @@ function renderFlipSwitcher(fish, isDual, defaultTab) {
 
 export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 'all') {
   const isDual = fish.canal.present && fish.bateau.present;
-  const defaultTab = currentFilterBiotope === 'bateau' ? 'bateau' : 'canal';
+  const isBateauBiotope = typeof currentFilterBiotope === 'string' && currentFilterBiotope.includes('bateau');
+  const defaultTab = isBateauBiotope && !fish.canal.present ? 'bateau' : (isBateauBiotope ? 'bateau' : 'canal');
   const canalHidden = isFlipCard && isDual && defaultTab !== 'canal' ? 'tab-hidden' : '';
   const bateauHidden = isFlipCard && isDual && defaultTab !== 'bateau' ? 'tab-hidden' : '';
 

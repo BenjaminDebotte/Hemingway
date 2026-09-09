@@ -290,3 +290,38 @@ export function renderHarvestPill(bagLimit, speciesId) {
     </div>
   `;
 }
+
+/**
+ * Analyse le régime de permis / carte de pêche pour une espèce :
+ * - Sur tout le canal maritime DPM (de Caen aval à Ouistreham) & mer : Pêche libre sans permis.
+ * - Au Bassin Saint-Pierre (amont Pont de la Fonderie) : Carte AAPPMA requise pour les espèces d'eau douce.
+ * - Pour les grands migrateurs (Truite de mer) : Timbre CPMA en zone fluviale d'eau douce.
+ */
+export function getPermitInfo(fish) {
+  if (!fish) return { dpmFree: true, requiresAAPPMAInBassin: false, requiresCPMA: false, badgeLabel: 'Pêche libre DPM' };
+  const category = fish.identity?.category || '';
+  const isFreshwater = category.includes('eau douce') || category.includes('Cyprinidé');
+  const rules = fish.regulations?.specialRules || [];
+  const mentionsBassin = rules.some(r => /Bassin Saint-Pierre|Bassin St-Pierre/i.test(r) && /carte|aappma|fédérale/i.test(r));
+  const requiresAAPPMAInBassin = isFreshwater || mentionsBassin;
+  const requiresCPMA = rules.some(r => /CPMA/i.test(r));
+
+  let badgeLabel = 'Pêche libre DPM';
+  if (requiresCPMA) {
+    badgeLabel = 'CPMA (Fluvial)';
+  } else if (requiresAAPPMAInBassin) {
+    badgeLabel = 'AAPPMA si Bassin St-Pierre';
+  }
+
+  return {
+    dpmFree: true,
+    requiresAAPPMAInBassin,
+    requiresCPMA,
+    badgeLabel
+  };
+}
+
+export function requiresPermit(fish) {
+  const info = getPermitInfo(fish);
+  return info.requiresCPMA || info.requiresAAPPMAInBassin;
+}

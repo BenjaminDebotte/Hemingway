@@ -13,9 +13,7 @@
 
 /* 0A. Archief - Mode Jour (Papier Archief & Encre Noire) */
 html[data-theme="archief"][data-mode="light"],
-html[data-theme="deschool"][data-mode="light"],
-html[data-theme="archief"]:not([data-mode="dark"]),
-html[data-theme="deschool"]:not([data-mode="dark"]) {
+html[data-theme="archief"]:not([data-mode="dark"]) {
   --theme-bg: #f9f6ef;
 
   --theme-card-outer-border: #000000;
@@ -76,8 +74,7 @@ html[data-theme="deschool"]:not([data-mode="dark"]) {
 }
 
 /* 0B. Archief - Mode Nuit (Club Zwart Pure Black & White) */
-html[data-theme="archief"][data-mode="dark"],
-html[data-theme="deschool"][data-mode="dark"] {
+html[data-theme="archief"][data-mode="dark"] {
   --theme-bg: #000000;
   --theme-header-border: #262626;
   --theme-controls-bg: #111111;
@@ -1458,4 +1455,271 @@ html[data-mode="dark"]:not([data-theme]) {
   --theme-pill-active-text: #000000;
 
   --theme-gauge-track: #1e2733;
+}
+
+/* ==========================================================================
+   DE SCHOOL BRUTALIST — BLUEPRINT GRID & INDUSTRIAL TICKET AESTHETIC
+   ========================================================================== */
+
+/* 12A. De School - Mode Jour (Warm Cream, Blueprint Grid & Ticket Red) */
+html[data-theme="deschool"][data-mode="light"],
+html[data-theme="deschool"]:not([data-mode="dark"]) {
+  --theme-bg: #f4f1ea;
+
+  --theme-card-outer-border: #000000;
+  --theme-card-inner-bg: #ffffff;
+  --theme-card-inner-border: #000000;
+  --theme-card-divider: #000000;
+  --theme-surface-subtle: #f4efe6;
+  --theme-surface-subtle-border: #000000;
+  --theme-surface-inset: #ffffff;
+
+  --theme-text-title: #000000;
+  --theme-text-main: #000000;
+  --theme-text-muted: #333333;
+  --theme-text-faint: #555555;
+
+  --theme-canal-accent: #000000;
+  --theme-canal-surface: #f4efe6;
+  --theme-canal-surface-border: #000000;
+  --theme-canal-badge-bg: #000000;
+  --theme-canal-badge-text: #ffffff;
+  --theme-canal-badge-border: #000000;
+
+  --theme-bateau-accent: #000000;
+  --theme-bateau-surface: #ffffff;
+  --theme-bateau-surface-border: #000000;
+  --theme-bateau-badge-bg: #ffffff;
+  --theme-bateau-badge-text: #000000;
+  --theme-bateau-badge-border: #000000;
+
+  --theme-secret-accent: #e05344;
+  --theme-secret-surface: #f4efe6;
+  --theme-secret-border: #000000;
+  --theme-secret-text: #000000;
+
+  --theme-reg-pill-bg: #f4efe6;
+  --theme-reg-pill-border: #000000;
+  --theme-reg-pill-label: #333333;
+  --theme-reg-legal: #000000;
+  --theme-reg-nokill: #e05344;
+
+  --theme-badge-cat-bg: #000000;
+  --theme-badge-cat-text: #ffffff;
+  --theme-badge-cat-border: #000000;
+
+  --theme-btn-primary-bg: #000000;
+  --theme-btn-primary-text: #ffffff;
+
+  --theme-segmented-bg: #111111;
+  --theme-segmented-active-bg: #e05344;
+  --theme-segmented-active-text: #ffffff;
+
+  --theme-pill-bg: #111111;
+  --theme-pill-border: #000000;
+  --theme-pill-active-bg: #e05344;
+  --theme-pill-active-text: #ffffff;
+
+  --theme-gauge-track: #e5e5e5;
+  --theme-accent-red: #e05344;
+}
+
+/* 12B. De School - Mode Nuit (Night Club Blueprint) */
+html[data-theme="deschool"][data-mode="dark"] {
+  --theme-bg: #080808;
+  --theme-header-border: #262626;
+  --theme-controls-bg: #111111;
+  --theme-controls-border: #262626;
+  --theme-input-border: #333333;
+
+  --theme-card-outer-border: #262626;
+  --theme-card-inner-bg: #111111;
+  --theme-card-inner-border: #262626;
+  --theme-card-divider: #262626;
+  --theme-surface-subtle: #181818;
+  --theme-surface-subtle-border: #262626;
+  --theme-surface-inset: #080808;
+
+  --theme-text-title: #ffffff;
+  --theme-text-main: #e5e5e5;
+  --theme-text-muted: #a3a3a3;
+  --theme-text-faint: #737373;
+
+  --theme-canal-accent: #ffffff;
+  --theme-canal-surface: #181818;
+  --theme-canal-surface-border: #333333;
+  --theme-canal-badge-bg: #ffffff;
+  --theme-canal-badge-text: #000000;
+  --theme-canal-badge-border: #ffffff;
+
+  --theme-bateau-accent: #d4d4d4;
+  --theme-bateau-surface: #111111;
+  --theme-bateau-surface-border: #262626;
+  --theme-bateau-badge-bg: #262626;
+  --theme-bateau-badge-text: #ffffff;
+  --theme-bateau-badge-border: #404040;
+
+  --theme-secret-accent: #ef4444;
+  --theme-secret-surface: #181818;
+  --theme-secret-border: #333333;
+  --theme-secret-text: #ffffff;
+
+  --theme-reg-pill-bg: #181818;
+  --theme-reg-pill-border: #262626;
+  --theme-reg-pill-label: #a3a3a3;
+  --theme-reg-legal: #ffffff;
+  --theme-reg-nokill: #ef4444;
+
+  --theme-badge-cat-bg: #ffffff;
+  --theme-badge-cat-text: #000000;
+  --theme-badge-cat-border: #ffffff;
+
+  --theme-btn-primary-bg: #ffffff;
+  --theme-btn-primary-text: #000000;
+
+  --theme-segmented-bg: #1a1a1a;
+  --theme-segmented-active-bg: #ef4444;
+  --theme-segmented-active-text: #ffffff;
+
+  --theme-pill-bg: #1a1a1a;
+  --theme-pill-border: #333333;
+  --theme-pill-active-bg: #ef4444;
+  --theme-pill-active-text: #ffffff;
+
+  --theme-gauge-track: #262626;
+  --theme-accent-red: #ef4444;
+}
+
+/* ==========================================================================
+   DE SCHOOL SPECIFIC STRUCTURAL OVERRIDES & UTILITIES
+   ========================================================================== */
+
+/* Exposed Blueprint Graph Paper Grid Background */
+html[data-theme="deschool"]:not([data-mode="dark"]) body {
+  background-color: var(--theme-bg);
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.13) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.13) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+html[data-theme="deschool"][data-mode="dark"] body {
+  background-color: #080808;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Zero Border-Radius Across All De School Components */
+html[data-theme="deschool"] .app-header,
+html[data-theme="deschool"] .controls-bar,
+html[data-theme="deschool"] .duo-card,
+html[data-theme="deschool"] .interactive-card,
+html[data-theme="deschool"] .card-front,
+html[data-theme="deschool"] .card-back,
+html[data-theme="deschool"] .badge-cat,
+html[data-theme="deschool"] .badge-biotope,
+html[data-theme="deschool"] .presence-badge,
+html[data-theme="deschool"] .mode-segmented,
+html[data-theme="deschool"] .mode-segmented button,
+html[data-theme="deschool"] .search-input-wrap,
+html[data-theme="deschool"] .search-input,
+html[data-theme="deschool"] .filter-pill,
+html[data-theme="deschool"] .multiselect-trigger,
+html[data-theme="deschool"] .multiselect-popover,
+html[data-theme="deschool"] .theme-popover,
+html[data-theme="deschool"] .btn-action,
+html[data-theme="deschool"] .reg-pill,
+html[data-theme="deschool"] .month-cell,
+html[data-theme="deschool"] .waypoint-card,
+html[data-theme="deschool"] .secret-local-box,
+html[data-theme="deschool"] .brand-logo-box,
+html[data-theme="deschool"] .gauge-bar,
+html[data-theme="deschool"] .spot-chip,
+html[data-theme="deschool"] .theme-opt-btn,
+html[data-theme="deschool"] .diet-tag,
+html[data-theme="deschool"] .harvest-pill,
+html[data-theme="deschool"] .biotope-switch-btn {
+  border-radius: 0 !important;
+}
+
+/* Monospace & Typographic Overrides */
+html[data-theme="deschool"] .brand-eyebrow,
+html[data-theme="deschool"] .brand-subtitle,
+html[data-theme="deschool"] .badge-cat,
+html[data-theme="deschool"] .badge-biotope,
+html[data-theme="deschool"] .reg-pill-label,
+html[data-theme="deschool"] .reg-pill-val,
+html[data-theme="deschool"] .waypoint-coord-item,
+html[data-theme="deschool"] .month-cell,
+html[data-theme="deschool"] .cal-label,
+html[data-theme="deschool"] .gauge-label,
+html[data-theme="deschool"] .filter-pill,
+html[data-theme="deschool"] .btn-action,
+html[data-theme="deschool"] .species-scientific,
+html[data-theme="deschool"] .waypoint-badge-wgs84 {
+  font-family: "JetBrains Mono", "Basis Grotesque Mono", monospace;
+}
+
+html[data-theme="deschool"] .species-title,
+html[data-theme="deschool"] .verso-title {
+  font-family: "Basis Grotesque Pro Medium", "Plus Jakarta Sans", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+/* Stippling Texture for Secret Card */
+html[data-theme="deschool"]:not([data-mode="dark"]) .secret-local-box {
+  background-image: radial-gradient(#000000 1.2px, transparent 1.2px) !important;
+  background-size: 6px 6px !important;
+  background-color: #f4efe6 !important;
+  border: 1.5px solid #000000 !important;
+}
+html[data-theme="deschool"][data-mode="dark"] .secret-local-box {
+  background-image: radial-gradient(#ffffff 1px, transparent 1px) !important;
+  background-size: 6px 6px !important;
+  background-color: #111111 !important;
+  border: 1.5px solid #262626 !important;
+}
+
+/* Calendar Fills (Heatmap 12 Months) */
+html[data-theme="deschool"] .month-cell {
+  border: 1px solid var(--theme-card-inner-border, #000000) !important;
+}
+html[data-theme="deschool"]:not([data-mode="dark"]) .month-cell.heat-3 {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  font-weight: 700;
+}
+html[data-theme="deschool"]:not([data-mode="dark"]) .month-cell.heat-2 {
+  background-image: radial-gradient(#000000 1.2px, transparent 1.2px) !important;
+  background-size: 4px 4px !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  font-weight: 700;
+}
+html[data-theme="deschool"]:not([data-mode="dark"]) .month-cell.heat-1 {
+  background: repeating-linear-gradient(45deg, #000000 0, #000000 1px, #ffffff 1px, #ffffff 4px) !important;
+  color: #000000 !important;
+  font-weight: 700;
+}
+html[data-theme="deschool"]:not([data-mode="dark"]) .month-cell.heat-0 {
+  background-color: #ffffff !important;
+  color: #888888 !important;
+}
+
+/* Ticket Accent Red Details */
+html[data-theme="deschool"] .btn-copy-coords,
+html[data-theme="deschool"] .btn-nav-coords {
+  color: var(--theme-accent-red, #e05344) !important;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+html[data-theme="deschool"] .pill-count,
+html[data-theme="deschool"] .waypoint-badge-wgs84 {
+  background-color: var(--theme-accent-red, #e05344) !important;
+  color: #ffffff !important;
 }

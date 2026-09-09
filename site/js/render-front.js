@@ -3,7 +3,7 @@
 // ==========================================================================
 
 import { uiIcon } from './icons.js';
-import { renderHarvestPill, renderMorphologyGauge } from './parsers.js';
+import { renderHarvestPill, renderMorphologyGauge, getPermitInfo } from './parsers.js';
 import { renderRegionalMiniMap } from './geo-maps.js';
 
 export const MONTHS = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'];
@@ -18,12 +18,16 @@ export function renderCardFront(fish) {
     ? `${fish.regulations.recommendedSizeCm} cm`
     : 'N/A';
 
+  const permitInfo = getPermitInfo(fish);
+
   return `
     <div class="card-header">
       <div class="header-badges">
         <span class="badge-cat">${fish.identity.category}</span>
         ${fish.canal.present ? `<span class="badge-biotope badge-canal">${uiIcon('anchor')} Canal de Caen</span>` : ''}
         ${fish.bateau.present ? `<span class="badge-biotope badge-mer">${uiIcon('boat')} Côte de Nacre</span>` : ''}
+        ${permitInfo.requiresCPMA ? `<span class="badge-biotope badge-permit" title="Timbre CPMA migrateurs obligatoire en secteur fluvial d'eau douce">${uiIcon('scale')} CPMA (Fluvial)</span>` : ''}
+        ${permitInfo.requiresAAPPMAInBassin ? `<span class="badge-biotope badge-permit-bassin" title="Pêche libre sans permis sur tout le canal DPM (Caen à Ouistreham) • Carte AAPPMA requise uniquement au Bassin St-Pierre">${uiIcon('scale')} AAPPMA si Bassin St-Pierre</span>` : ''}
       </div>
       <h2 class="species-title">${fish.identity.name}</h2>
       <div class="species-meta">

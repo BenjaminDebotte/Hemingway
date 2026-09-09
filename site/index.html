@@ -23,6 +23,10 @@
   <header class="app-header">
     <div class="header-top">
       <div class="brand">
+        <div class="brand-logo-box" aria-hidden="true">
+          <span>PECHE</span>
+          <span>NORM.</span>
+        </div>
         <div class="brand-icon" aria-hidden="true">
           <svg class="ui-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
             <path d="M19 12c-4 4-10 4-15 0 5-4 11-4 15 0z"/>
@@ -100,6 +104,11 @@
           </div>
         </div>
 
+        <button id="btn-toggle-print-maps" class="btn btn-print-maps active" type="button" title="Activer / désactiver la présence des cartes cartographiques lors de l'impression A4" aria-pressed="true">
+          <svg class="ui-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <span id="print-maps-label">Cartes impression : OUI</span>
+        </button>
+
         <button id="btn-print" class="btn btn-gold btn-island" aria-label="Imprimer les fiches techniques au format A4">
           <span class="btn-text">Imprimer les fiches</span>
           <span class="btn-icon-bubble" aria-hidden="true">
@@ -114,6 +123,7 @@
     </div>
 
     <div class="controls-bar">
+      <!-- RANGÉE 1 : BARRE DE RECHERCHE + OPTION REGEX + EFFACER -->
       <div class="search-and-toggles">
         <div class="search-input-wrap">
           <span class="search-icon" aria-hidden="true">
@@ -122,22 +132,197 @@
               <line x1="21" y1="21" x2="16.65" y2="16.65"/>
             </svg>
           </span>
-          <input type="text" id="search-input" class="search-input" placeholder="Rechercher un poisson, un leurre, un spot, une technique..." aria-label="Recherche">
+          <input type="text" id="search-input" class="search-input" placeholder="Rechercher (nom, leurre, spot, mot-clé, regex...)" aria-label="Recherche">
+          <button type="button" id="search-clear-btn" class="search-clear-btn" aria-label="Effacer la recherche" hidden title="Effacer la recherche">×</button>
+          <button type="button" id="btn-regex-toggle" class="regex-toggle-btn" title="Activer / désactiver la recherche par expression régulière (Regex)" aria-pressed="false">
+            <code>.*</code> <span>Regex</span>
+          </button>
+          <span id="regex-error-badge" class="regex-error-badge" role="alert" aria-live="polite" hidden>Regex invalide</span>
         </div>
+      </div>
 
-        <div class="biotope-filter-wrap">
-          <label for="biotope-select" class="biotope-label">Milieu :</label>
-          <select id="biotope-select" class="biotope-select">
-            <option value="all">Tous les biotopes</option>
-            <option value="canal">Canal de Caen uniquement</option>
-            <option value="bateau">Côte de Nacre en bateau</option>
+      <!-- RANGÉE 2 : FILTRES AVANCÉS MENUS DÉROULANTS SÉLECTION MULTIPLE -->
+      <div class="filter-controls-grid">
+        <!-- 1. CATÉGORIE -->
+        <div class="multiselect-wrap" id="wrap-category">
+          <button type="button" class="multiselect-trigger" id="trigger-category" aria-haspopup="listbox" aria-expanded="false" aria-controls="popover-category">
+            <span class="filter-label">Catégorie :</span>
+            <span class="multiselect-text" id="label-category">Toutes</span>
+            <svg class="ui-icon arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="multiselect-popover" id="popover-category" hidden>
+            <label class="multiselect-option option-all">
+              <input type="checkbox" name="cat" value="all" checked>
+              <span>Toutes les catégories</span>
+            </label>
+            <div class="multiselect-divider"></div>
+            <label class="multiselect-option"><input type="checkbox" name="cat" value="Carnassier marin"><span>Carnassier marin</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="cat" value="Sparidé"><span>Sparidé</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="cat" value="Poisson plat"><span>Poisson plat</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="cat" value="Poisson de roche / épave"><span>Poisson de roche / épave</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="cat" value="Mugilidé"><span>Mugilidé</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="cat" value="Grand migrateur"><span>Grand migrateur</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="cat" value="Céphalopode"><span>Céphalopode</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="cat" value="Carnassier eau douce / saumâtre"><span>Carnassier eau douce / saumâtre</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="cat" value="Cyprinidé / Poisson blanc"><span>Cyprinidé / Poisson blanc</span></label>
+          </div>
+          <select id="category-select" class="filter-select-hidden" hidden>
+            <option value="all">Toutes les catégories</option>
+            <option value="Carnassier marin">Carnassier marin</option>
+            <option value="Sparidé">Sparidé</option>
+            <option value="Poisson plat">Poisson plat</option>
+            <option value="Poisson de roche / épave">Poisson de roche / épave</option>
+            <option value="Mugilidé">Mugilidé</option>
+            <option value="Grand migrateur">Grand migrateur</option>
+            <option value="Céphalopode">Céphalopode</option>
+            <option value="Carnassier eau douce / saumâtre">Carnassier eau douce / saumâtre</option>
+            <option value="Cyprinidé / Poisson blanc">Cyprinidé / Poisson blanc</option>
           </select>
         </div>
+
+        <!-- 2. BIOTOPE -->
+        <div class="multiselect-wrap" id="wrap-biotope">
+          <button type="button" class="multiselect-trigger" id="trigger-biotope" aria-haspopup="listbox" aria-expanded="false" aria-controls="popover-biotope">
+            <span class="filter-label">Biotope :</span>
+            <span class="multiselect-text" id="label-biotope">Tous</span>
+            <svg class="ui-icon arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="multiselect-popover" id="popover-biotope" hidden>
+            <label class="multiselect-option option-all">
+              <input type="checkbox" name="biotope" value="all" checked>
+              <span>Tous les biotopes</span>
+            </label>
+            <div class="multiselect-divider"></div>
+            <label class="multiselect-option"><input type="checkbox" name="biotope" value="canal"><span>Présent au Canal de Caen</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="biotope" value="bateau"><span>Présent en Bateau / Mer</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="biotope" value="canal_only"><span>Exclusif Canal de Caen</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="biotope" value="bateau_only"><span>Exclusif Côte de Nacre (Bateau)</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="biotope" value="both"><span>Présent partout (Canal & Bateau)</span></label>
+          </div>
+          <select id="biotope-select" class="filter-select-hidden" hidden>
+            <option value="all">Tous les biotopes</option>
+            <option value="canal">Présent au Canal de Caen</option>
+            <option value="bateau">Présent en Bateau / Mer</option>
+            <option value="canal_only">Exclusif Canal de Caen</option>
+            <option value="bateau_only">Exclusif Côte de Nacre (Bateau)</option>
+            <option value="both">Présent partout (Canal & Bateau)</option>
+          </select>
+        </div>
+
+        <!-- 3. PERMIS / RÉGIME -->
+        <div class="multiselect-wrap" id="wrap-permit">
+          <button type="button" class="multiselect-trigger" id="trigger-permit" aria-haspopup="listbox" aria-expanded="false" aria-controls="popover-permit">
+            <span class="filter-label">Permis :</span>
+            <span class="multiselect-text" id="label-permit">Tous</span>
+            <svg class="ui-icon arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="multiselect-popover" id="popover-permit" hidden>
+            <label class="multiselect-option option-all">
+              <input type="checkbox" name="permit" value="all" checked>
+              <span>Tous régimes</span>
+            </label>
+            <div class="multiselect-divider"></div>
+            <label class="multiselect-option"><input type="checkbox" name="permit" value="free_dpm"><span>Pêche libre DPM (Sans permis)</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="permit" value="bassin_st_pierre"><span>AAPPMA (Bassin St-Pierre)</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="permit" value="cpma_fluvial"><span>Timbre CPMA (Migrateurs)</span></label>
+          </div>
+          <select id="permit-select" class="filter-select-hidden" hidden>
+            <option value="all">Tous régimes</option>
+            <option value="free_dpm">Pêche libre DPM (Sans permis)</option>
+            <option value="bassin_st_pierre">AAPPMA (Bassin St-Pierre)</option>
+            <option value="cpma_fluvial">Timbre CPMA (Migrateurs)</option>
+          </select>
+        </div>
+
+        <!-- 4. RÈGLEMENT -->
+        <div class="multiselect-wrap" id="wrap-regulation">
+          <button type="button" class="multiselect-trigger" id="trigger-regulation" aria-haspopup="listbox" aria-expanded="false" aria-controls="popover-regulation">
+            <span class="filter-label">Règlement :</span>
+            <span class="multiselect-text" id="label-regulation">Toutes</span>
+            <svg class="ui-icon arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="multiselect-popover" id="popover-regulation" hidden>
+            <label class="multiselect-option option-all">
+              <input type="checkbox" name="regulation" value="all" checked>
+              <span>Toutes contraintes</span>
+            </label>
+            <div class="multiselect-divider"></div>
+            <label class="multiselect-option"><input type="checkbox" name="regulation" value="legal_size"><span>Maille légale (Taille min.)</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="regulation" value="bag_limit"><span>Quota journalier de capture</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="regulation" value="closed_season"><span>Période de fermeture</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="regulation" value="no_kill"><span>Pratique No-Kill / Graciation</span></label>
+          </div>
+          <select id="regulation-select" class="filter-select-hidden" hidden>
+            <option value="all">Toutes contraintes</option>
+            <option value="legal_size">Maille légale (Taille min.)</option>
+            <option value="bag_limit">Quota journalier de capture</option>
+            <option value="closed_season">Période de fermeture</option>
+            <option value="no_kill">Pratique No-Kill / Graciation</option>
+          </select>
+        </div>
+
+        <!-- 5. ACTIVITÉ -->
+        <div class="multiselect-wrap" id="wrap-month">
+          <button type="button" class="multiselect-trigger" id="trigger-month" aria-haspopup="listbox" aria-expanded="false" aria-controls="popover-month">
+            <span class="filter-label">Activité :</span>
+            <span class="multiselect-text" id="label-month">Tous mois</span>
+            <svg class="ui-icon arrow-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="multiselect-popover" id="popover-month" hidden>
+            <label class="multiselect-option option-all">
+              <input type="checkbox" name="month" value="all" checked>
+              <span>Tous les mois</span>
+            </label>
+            <div class="multiselect-divider"></div>
+            <label class="multiselect-option"><input type="checkbox" name="month" value="1"><span>Janvier</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="month" value="2"><span>Février</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="month" value="3"><span>Mars</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="month" value="4"><span>Avril</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="month" value="5"><span>Mai</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="month" value="6"><span>Juin</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="month" value="7"><span>Juillet</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="month" value="8"><span>Août</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="month" value="9"><span>Septembre</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="month" value="10"><span>Octobre</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="month" value="11"><span>Novembre</span></label>
+            <label class="multiselect-option"><input type="checkbox" name="month" value="12"><span>Décembre</span></label>
+          </div>
+          <select id="month-select" class="filter-select-hidden" hidden>
+            <option value="all">Tous les mois</option>
+            <option value="1">Janvier</option>
+            <option value="2">Février</option>
+            <option value="3">Mars</option>
+            <option value="4">Avril</option>
+            <option value="5">Mai</option>
+            <option value="6">Juin</option>
+            <option value="7">Juillet</option>
+            <option value="8">Août</option>
+            <option value="9">Septembre</option>
+            <option value="10">Octobre</option>
+            <option value="11">Novembre</option>
+            <option value="12">Décembre</option>
+          </select>
+        </div>
+
+        <!-- BASCULE COMBINAISON : ET / OU -->
+        <div class="logic-mode-wrap">
+          <span class="logic-label">Combinaison :</span>
+          <div class="logic-segmented" role="radiogroup" aria-label="Mode de combinaison des filtres">
+            <button type="button" class="logic-mode-btn active" data-logic="and" role="radio" aria-checked="true" title="Combine les filtres avec la logique ET (Tous les critères doivent être satisfaits)">ET</button>
+            <button type="button" class="logic-mode-btn" data-logic="or" role="radio" aria-checked="false" title="Combine les filtres avec la logique OU (Au moins un critère doit être satisfait)">OU</button>
+          </div>
+        </div>
+
+        <div class="filter-reset-wrap">
+          <button type="button" id="btn-reset-filters" class="btn-reset-filters" hidden>
+            <svg class="ui-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            <span id="reset-filters-label">Effacer les filtres</span>
+          </button>
+        </div>
       </div>
 
-      <div class="filter-pills" id="category-pills">
-        <!-- Généré dynamiquement par JS -->
-      </div>
+      <!-- BADGES INTERACTIFS DES FILTRES ACTIFS -->
+      <div id="active-filters-bar" class="active-filters-bar" aria-live="polite" hidden></div>
     </div>
   </header>
 

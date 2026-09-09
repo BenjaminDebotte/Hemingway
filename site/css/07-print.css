@@ -450,25 +450,70 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
   flex: 1 1 auto;
 }
 
-/* Espèces mono-biotope (Eau douce/Canal seul ou Mer/Bateau seul) : section compacte en haut */
+/* Espèces mono-biotope (Eau douce/Canal seul ou Mer/Bateau seul) : calibrage compact quand la carte est présente */
 .a4-sheet-preview .card-face:has(.mono-map-wrap) .biotope-section {
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 0.8mm;
-  padding: 1.4mm 2mm;
-  margin-bottom: 1mm;
+  padding: 1mm 1.5mm !important;
+  gap: 0.5mm !important;
+  margin-bottom: 0.5mm !important;
 }
 
-/* Carte dédiée Face B mono-biotope */
+.a4-sheet-preview .card-face:has(.mono-map-wrap) .waypoints-block {
+  margin-bottom: 0.5mm !important;
+}
+
+.a4-sheet-preview .card-face:has(.mono-map-wrap) .waypoint-card {
+  padding: 0.5mm 1mm !important;
+}
+
+.a4-sheet-preview .card-face:has(.mono-map-wrap) .tide-weather-cockpit {
+  gap: 1mm !important;
+}
+
+.a4-sheet-preview .card-face:has(.mono-map-wrap) .cockpit-box {
+  padding: 1mm 1.5mm !important;
+}
+
+.a4-sheet-preview .card-face:has(.mono-map-wrap) .twelfths-card {
+  padding: 1mm 1.5mm !important;
+}
+
+.a4-sheet-preview .card-face:has(.mono-map-wrap) .tactics-bullets {
+  font-size: 5.8pt !important;
+  line-height: 1.15 !important;
+  margin: 0.5mm 0 !important;
+}
+
+.a4-sheet-preview .card-face:has(.mono-map-wrap) .terminal-tackle-card {
+  padding: 1mm 1.5mm !important;
+}
+
 .a4-sheet-preview .mono-map-wrap {
-  flex: 1 1 auto;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  height: 100%;
+  flex: 1 1 120px !important;
+  min-height: 0 !important;
+  max-height: 48mm !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Option Impression Sans Cartes (body.no-print-maps) */
+body.no-print-maps .a4-sheet-preview .mono-map-wrap,
+body.no-print-maps .a4-sheet-preview .notes-col-map {
+  display: none !important;
+}
+
+body.no-print-maps .a4-sheet-preview .notes-box.notes-box-split {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+body.no-print-maps .a4-sheet-preview .notes-col-lines {
+  width: 100% !important;
+}
+
+body.no-print-maps .a4-sheet-preview .card-face .biotope-section {
+  flex: 1 1 auto !important;
+  gap: 0.9mm !important;
 }
 
 .a4-sheet-preview .biotope-map-card {
@@ -1020,16 +1065,17 @@ html[data-mode="dark"] .a4-sheet-preview .verso-badge {
   }
 
   .a4-sheet-preview .card-face:has(.mono-map-wrap) .biotope-section {
-    flex: 0 0 auto !important;
-    gap: 0.9mm !important;
+    padding: 1mm 1.5mm !important;
+    gap: 0.5mm !important;
   }
 
   .a4-sheet-preview .mono-map-wrap {
-    flex: 1 1 auto !important;
+    flex: 1 1 120px !important;
     min-height: 0 !important;
+    max-height: 48mm !important;
+    overflow: hidden !important;
     display: flex !important;
     flex-direction: column !important;
-    overflow: hidden !important;
   }
 
   .a4-sheet-preview .biotope-map-card {
