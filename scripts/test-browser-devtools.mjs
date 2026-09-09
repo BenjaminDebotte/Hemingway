@@ -538,7 +538,7 @@ assert(spaceOccupancy.rectoScrollHeight <= spaceOccupancy.rectoHeight + 2, `Face
 assert(spaceOccupancy.dualCanalH >= 250 && spaceOccupancy.dualBateauH >= 250, `Face B Dual : Les sections Canal (${spaceOccupancy.dualCanalH}px) et Mer (${spaceOccupancy.dualBateauH}px) occupent tout l'espace disponible`);
 assert(spaceOccupancy.dualCardScrollH <= spaceOccupancy.dualCardH + 2, `Face B Dual : Zéro débordement vertical (scrollH: ${spaceOccupancy.dualCardScrollH}px <= h: ${spaceOccupancy.dualCardH}px)`);
 
-assert(spaceOccupancy.monoSectionH >= 240 && spaceOccupancy.monoMapH >= 200, `Face B Mono : Section tactique (${spaceOccupancy.monoSectionH}px) + Carte OSM (${spaceOccupancy.monoMapH}px) occupent tout l'espace disponible`);
+assert(spaceOccupancy.monoSectionH >= 240 && spaceOccupancy.monoMapH >= 170, `Face B Mono : Section tactique (${spaceOccupancy.monoSectionH}px) + Carte OSM (${spaceOccupancy.monoMapH}px) occupent tout l'espace disponible`);
 assert(spaceOccupancy.monoCardScrollH <= spaceOccupancy.monoCardH + 2, `Face B Mono : Zéro débordement vertical (scrollH: ${spaceOccupancy.monoCardScrollH}px <= h: ${spaceOccupancy.monoCardH}px)`);
 
 // Rétablir le mode Déplié

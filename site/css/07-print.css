@@ -825,7 +825,12 @@ body.no-print-maps .a4-sheet-preview .card-face .biotope-section {
   width: 100%;
 }
 .a4-sheet-preview .terminal-spec-item { font-size: 5.8pt; line-height: 1.15; gap: 0.4mm; width: 100%; }
-.a4-sheet-preview .terminal-spec-item.spec-combo { grid-column: 1 / -1; }
+.a4-sheet-preview .terminal-spec-item.spec-combo {
+  grid-column: 1 / -1;
+  padding: 0.2mm 0.5mm;
+  margin-bottom: 0;
+  border-radius: 0;
+}
 .a4-sheet-preview .terminal-pill { font-size: 4.8pt; padding: 0.2mm 0.8mm; width: auto; max-width: max-content; align-self: flex-start; }
 .a4-sheet-preview .pill-combo {
   background: #f1f5f9 !important;
