@@ -214,36 +214,36 @@ export function renderExhaustiveTackleBlock(terminal, combo, biotopeLabel, bioto
   const hasCombo = combo && combo.rod && !combo.rod.includes('Non applicable');
 
   return `
-    <div class="terminal-tackle-card tackle-manifest-table terminal-${biotopeKey}">
-      <div class="terminal-card-header tackle-manifest-title">
+    <div class="terminal-tackle-card terminal-${biotopeKey}">
+      <div class="terminal-card-header">
         <span class="terminal-card-title">${uiIcon('rod')} Matériel, Armement & Leurres ${biotopeLabel}</span>
       </div>
-      <div class="terminal-specs-grid tackle-manifest-rows">
+      <div class="terminal-specs-grid">
         ${hasCombo ? `
-          <div class="terminal-spec-item spec-combo tackle-manifest-row">
-            <span class="terminal-pill pill-combo tackle-label">[ COMBO CANNE / LIGNE ]</span>
-            <span class="terminal-val tackle-val"><strong>Canne :</strong> ${combo.rod} • <strong>Ligne :</strong> ${combo.line}</span>
+          <div class="terminal-spec-item spec-combo">
+            <span class="terminal-pill pill-combo">Combo</span>
+            <span class="terminal-val"><strong>Canne :</strong> ${combo.rod} • <strong>Ligne :</strong> ${combo.line}</span>
           </div>
         ` : ''}
-        <div class="terminal-spec-item tackle-manifest-row">
-          <span class="terminal-pill pill-leader tackle-label">[ BAS DE LIGNE ]</span>
-          <span class="terminal-val tackle-val">${terminal.leaderRequirement}</span>
+        <div class="terminal-spec-item">
+          <span class="terminal-pill pill-leader">BDL</span>
+          <span class="terminal-val">${terminal.leaderRequirement}</span>
         </div>
-        <div class="terminal-spec-item tackle-manifest-row">
-          <span class="terminal-pill pill-hook tackle-label">[ HAMEÇON ]</span>
-          <span class="terminal-val tackle-val">${terminal.hookTypeAndSize}</span>
+        <div class="terminal-spec-item">
+          <span class="terminal-pill pill-hook">Hameçon</span>
+          <span class="terminal-val">${terminal.hookTypeAndSize}</span>
         </div>
-        <div class="terminal-spec-item tackle-manifest-row">
-          <span class="terminal-pill pill-rigid tackle-label">[ LEURRE RIGIDE ]</span>
-          <span class="terminal-val tackle-val">${terminal.rigidLure}</span>
+        <div class="terminal-spec-item">
+          <span class="terminal-pill pill-rigid">Rigide</span>
+          <span class="terminal-val">${terminal.rigidLure}</span>
         </div>
-        <div class="terminal-spec-item tackle-manifest-row">
-          <span class="terminal-pill pill-soft tackle-label">[ LEURRE SOUPLE ]</span>
-          <span class="terminal-val tackle-val">${terminal.softLure}</span>
+        <div class="terminal-spec-item">
+          <span class="terminal-pill pill-soft">Souple</span>
+          <span class="terminal-val">${terminal.softLure}</span>
         </div>
-        <div class="terminal-spec-item tackle-manifest-row">
-          <span class="terminal-pill pill-natural tackle-label">[ APPÂT NATUREL ]</span>
-          <span class="terminal-val tackle-val">${terminal.naturalLure}</span>
+        <div class="terminal-spec-item">
+          <span class="terminal-pill pill-natural">Naturel</span>
+          <span class="terminal-val">${terminal.naturalLure}</span>
         </div>
       </div>
     </div>

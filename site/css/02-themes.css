@@ -1682,162 +1682,39 @@ html[data-theme="deschool"][data-mode="dark"] .secret-local-box {
   border: 1.5px solid #262626 !important;
 }
 
-/* ==========================================================================
-   DE SCHOOL FACE B STRUCTURAL MANIFEST MATRIX STYLES
-   ========================================================================== */
-
-/* 1. Habitats & Spots Manifest Matrix (3-Column Grid Table) */
-html[data-theme="deschool"] .spots-manifest-matrix {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 0 !important;
+/* De School Pure CSS Component Overrides */
+html[data-theme="deschool"] .spot-chip {
   border: 1px solid var(--theme-card-inner-border, #000000) !important;
-  background: var(--theme-card-inner-bg, #ffffff) !important;
-  margin-bottom: 0.5rem !important;
-}
-
-html[data-theme="deschool"] .spot-manifest-cell {
-  padding: 0.4rem 0.5rem !important;
-  border-right: 1px solid var(--theme-card-inner-border, #000000) !important;
-  background: transparent !important;
   border-radius: 0 !important;
+  background: var(--theme-card-inner-bg, #ffffff) !important;
 }
 
-html[data-theme="deschool"] .spot-manifest-cell:last-child {
-  border-right: none !important;
-}
-
-html[data-theme="deschool"] .spot-manifest-tag {
+html[data-theme="deschool"] .spot-tag {
   font-family: "JetBrains Mono", "Basis Grotesque Mono", monospace !important;
-  font-size: 0.65rem !important;
   font-weight: 700 !important;
-  text-transform: uppercase !important;
   color: var(--theme-accent-red, #e05344) !important;
-  display: block !important;
-  margin-bottom: 0.2rem !important;
 }
 
-/* 2. Triggers & Conditions Manifest Rows (2-Column Industrial Split) */
-html[data-theme="deschool"] .triggers-manifest-row,
-html[data-theme="deschool"] .conditions-manifest-row {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 0 !important;
-  border: 1px solid var(--theme-card-inner-border, #000000) !important;
-  background: var(--theme-card-inner-bg, #ffffff) !important;
-  margin-bottom: 0.5rem !important;
-}
-
-html[data-theme="deschool"] .trigger-manifest-cell,
-html[data-theme="deschool"] .condition-manifest-cell {
-  padding: 0.45rem 0.6rem !important;
-  border-right: 1px solid var(--theme-card-inner-border, #000000) !important;
-  border-radius: 0 !important;
-  background: transparent !important;
-}
-
-html[data-theme="deschool"] .trigger-manifest-cell:last-child,
-html[data-theme="deschool"] .condition-manifest-cell:last-child {
-  border-right: none !important;
-}
-
-html[data-theme="deschool"] .trigger-manifest-header,
-html[data-theme="deschool"] .cockpit-box-title {
-  font-family: "JetBrains Mono", "Basis Grotesque Mono", monospace !important;
-  font-size: 0.68rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  color: var(--theme-text-title, #000000) !important;
-}
-
-/* 3. Indexed Tactical Protocol Rows */
-html[data-theme="deschool"] .tactics-manifest-list {
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 0 0.5rem 0 !important;
-  border: 1px solid var(--theme-card-inner-border, #000000) !important;
-  background: var(--theme-card-inner-bg, #ffffff) !important;
-}
-
-html[data-theme="deschool"] .tactic-manifest-row {
-  display: flex !important;
-  align-items: flex-start !important;
-  gap: 0.6rem !important;
-  padding: 0.35rem 0.55rem !important;
-  border-bottom: 1px solid var(--theme-card-inner-border, #000000) !important;
-}
-
-html[data-theme="deschool"] .tactic-manifest-row:last-child {
-  border-bottom: none !important;
-}
-
-html[data-theme="deschool"] .tactic-icon-badge {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 0.85rem !important;
-  color: var(--theme-accent-red, #e05344) !important;
-  background: transparent !important;
-  border: none !important;
-  padding: 0 !important;
-  margin-top: 0.1rem !important;
-  flex-shrink: 0 !important;
-}
-
-html[data-theme="deschool"] .tactic-text {
-  font-size: 0.72rem !important;
-  line-height: 1.35 !important;
-  color: var(--theme-text-main, #000000) !important;
-}
-
-/* 4. Equipment & Tackle Spec Manifest Table */
-html[data-theme="deschool"] .tackle-manifest-table {
-  border: 1px solid var(--theme-card-inner-border, #000000) !important;
-  border-radius: 0 !important;
-  background: var(--theme-card-inner-bg, #ffffff) !important;
-  margin-bottom: 0.5rem !important;
-}
-
-html[data-theme="deschool"] .tackle-manifest-title {
-  font-family: "JetBrains Mono", "Basis Grotesque Mono", monospace !important;
-  font-size: 0.68rem !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  padding: 0.35rem 0.55rem !important;
-  background: var(--theme-surface-subtle, #f4efe6) !important;
-  border-bottom: 1px solid var(--theme-card-inner-border, #000000) !important;
-}
-
-html[data-theme="deschool"] .tackle-manifest-row {
-  display: flex !important;
-  flex-direction: column !important;
-  padding: 0.3rem 0.55rem !important;
-  border-bottom: 1px solid var(--theme-card-inner-border, #000000) !important;
-}
-
-html[data-theme="deschool"] .tackle-manifest-row:last-child {
-  border-bottom: none !important;
-}
-
-html[data-theme="deschool"] .tackle-label,
-html[data-theme="deschool"] .terminal-pill {
+html[data-theme="deschool"] .terminal-pill,
+html[data-theme="deschool"] .pill-combo,
+html[data-theme="deschool"] .pill-leader,
+html[data-theme="deschool"] .pill-hook,
+html[data-theme="deschool"] .pill-rigid,
+html[data-theme="deschool"] .pill-soft,
+html[data-theme="deschool"] .pill-natural {
   font-family: "JetBrains Mono", "Basis Grotesque Mono", monospace !important;
   font-size: 0.62rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   color: var(--theme-accent-red, #e05344) !important;
-  margin-bottom: 0.15rem !important;
   width: auto !important;
   min-width: 0 !important;
   max-width: max-content !important;
   align-self: flex-start !important;
   display: inline-block !important;
   padding: 0 !important;
-}
-
-html[data-theme="deschool"] .tackle-val {
-  font-size: 0.72rem !important;
-  color: var(--theme-text-main, #000000) !important;
+  border: none !important;
+  background: transparent !important;
 }
 
 /* Calendar Fills (Heatmap 12 Months - Clean Solid High-Contrast Fills) */

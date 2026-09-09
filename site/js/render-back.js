@@ -15,25 +15,6 @@ import {
 } from './geo-maps.js';
 import { getSpotsForFish } from './spots-data.js';
 
-export function getTacticIconName(tacticText = '') {
-  const text = tacticText.toLowerCase();
-
-  if (/éclus|courant|piston|vidange|chasse|appel/i.test(text)) return 'zap';
-  if (/nuit|obscur|lumièr|lampadaire|cône|ombre|crépuscule/i.test(text)) return 'moon';
-  if (/épave|epave|dday|d-day|tôle|carcasse/i.test(text)) return 'wreck';
-  if (/roche|plateau|roches|caillou/i.test(text)) return 'reef';
-  if (/banc|sable|riden|dune/i.test(text)) return 'sandbank';
-  if (/ancre|mouillage|enrochement|palplanche|quai|piler|pont/i.test(text)) return 'anchor';
-  if (/bateau|dérive|moteur|sondeur|ancrage|coque/i.test(text)) return 'boat';
-  if (/marée|marnage|étale|coef|jusant|flot/i.test(text)) return 'wave';
-  if (/heure|horaire|moment|temps|saison/i.test(text)) return 'clock';
-  if (/canne|animation|moulinet|scion|tirée|traction|vitesse|mouliner/i.test(text)) return 'rod';
-  if (/leurre|jig|souple|hameçon|suiveur|appât|ver|grappin|montage|bas de ligne/i.test(text)) return 'hook';
-  if (/discrétion|finesse|fluorocarbone|transparence|furtif/i.test(text)) return 'sparkle';
-
-  return 'compass';
-}
-
 /**
  * Encart dédié « Repères & Waypoints GPS » sur Face B
  * Présentation haute-précision au format marin WGS84 (DD° MM.MMM') avec copie décimale
@@ -48,16 +29,16 @@ export function renderWaypointsBlock(fish, zone = null) {
   const zoneIcon = zone === 'canal' ? 'anchor' : (zone === 'bateau' ? 'boat' : 'compass');
 
   return `
-    <div class="waypoints-block waypoints-manifest-table waypoints-${zone || 'mixed'}" aria-label="Waypoints GPS de référence pour ${fish.identity.name}">
+    <div class="waypoints-block waypoints-${zone || 'mixed'}" aria-label="Waypoints GPS de référence pour ${fish.identity.name}">
       <div class="waypoints-header-row">
         <div class="waypoints-title">
           ${uiIcon(zoneIcon)} <span>Repères & Waypoints GPS • ${zoneLabel}</span>
         </div>
         <span class="waypoints-badge-wgs84">WGS84 Marin • Clic pour copier</span>
       </div>
-      <div class="waypoints-cards-list waypoints-manifest-rows">
+      <div class="waypoints-cards-list">
         ${spots.map(spot => `
-          <div class="waypoint-card waypoint-manifest-row" data-spot-id="${spot.id}">
+          <div class="waypoint-card" data-spot-id="${spot.id}">
             <span class="waypoint-icon-badge">${uiIcon(spot.icon)}</span>
             <div class="waypoint-details">
               <div class="waypoint-name-row">
@@ -157,15 +138,15 @@ export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 
           <div class="block-title section-canal-title">${uiIcon('anchor')} Canal de Caen</div>
           <span class="presence-badge">${fish.canal.presenceSeason}</span>
         </div>
-        <div class="spots-chip-grid spots-manifest-matrix">
-          <div class="spot-chip spot-manifest-cell"><span class="spot-tag spot-manifest-tag">[ ENROCHEMENTS ]</span> ${fish.canal.keySpots.enrochements}</div>
-          <div class="spot-chip spot-manifest-cell"><span class="spot-tag spot-manifest-tag">[ PALPLANCHES ]</span> ${fish.canal.keySpots.palplanches}</div>
-          <div class="spot-chip spot-manifest-cell"><span class="spot-tag spot-manifest-tag">[ PILES DE PONTS ]</span> ${fish.canal.keySpots.pilesDePont}</div>
+        <div class="spots-chip-grid">
+          <div class="spot-chip"><span class="spot-tag">Enrochements</span> ${fish.canal.keySpots.enrochements}</div>
+          <div class="spot-chip"><span class="spot-tag">Palplanches</span> ${fish.canal.keySpots.palplanches}</div>
+          <div class="spot-chip"><span class="spot-tag">Piles/Ponts</span> ${fish.canal.keySpots.pilesDePont}</div>
         </div>
         ${renderWaypointsBlock(fish, 'canal')}
         ${renderCanalTriggers(fish.canal.triggers.ecluseesOuistreham, fish.canal.triggers.luminositeEtNuit)}
-        <ul class="tactics-bullets tactics-manifest-list">
-          ${fish.canal.tactics.map(t => `<li class="tactic-manifest-row"><span class="tactic-icon-badge">${uiIcon(getTacticIconName(t))}</span><span class="tactic-text">${t}</span></li>`).join('')}
+        <ul class="tactics-bullets">
+          ${fish.canal.tactics.map(t => `<li>${t}</li>`).join('')}
         </ul>
         ${renderExhaustiveTackleBlock(fish.canal.terminalTackle, fish.gear.canalCombo, 'Canal', 'canal')}
       </div>
@@ -178,16 +159,16 @@ export function renderCardBack(fish, isFlipCard = false, currentFilterBiotope = 
           <div class="block-title section-bateau-title">${uiIcon('boat')} Côte de Nacre</div>
           <span class="presence-badge">${fish.bateau.presenceSeason}</span>
         </div>
-        <div class="spots-chip-grid spots-manifest-matrix">
-          <div class="spot-chip spot-manifest-cell"><span class="spot-tag spot-manifest-tag">[ ROCHES CALVADOS ]</span> ${fish.bateau.habitats.rochesDuCalvados}</div>
-          <div class="spot-chip spot-manifest-cell"><span class="spot-tag spot-manifest-tag">[ ÉPAVES 1944 ]</span> ${fish.bateau.habitats.epavesDDay}</div>
-          <div class="spot-chip spot-manifest-cell"><span class="spot-tag spot-manifest-tag">[ BANCS & RIDENS ]</span> ${fish.bateau.habitats.bancsDeSableEtRidens}</div>
+        <div class="spots-chip-grid">
+          <div class="spot-chip"><span class="spot-tag">Roches Calvados</span> ${fish.bateau.habitats.rochesDuCalvados}</div>
+          <div class="spot-chip"><span class="spot-tag">Épaves 1944</span> ${fish.bateau.habitats.epavesDDay}</div>
+          <div class="spot-chip"><span class="spot-tag">Bancs/Ridens</span> ${fish.bateau.habitats.bancsDeSableEtRidens}</div>
         </div>
         ${renderWaypointsBlock(fish, 'bateau')}
         ${renderTideAndWeather(fish.bateau.tideAndCurrent.bestCoefficients, fish.bateau.weatherImpact.favorableWinds)}
         ${renderTwelfthsGauge(fish.bateau.tideAndCurrent.ruleOfTwelfths)}
-        <ul class="tactics-bullets tactics-manifest-list">
-          ${fish.bateau.tactics.map(t => `<li class="tactic-manifest-row"><span class="tactic-icon-badge">${uiIcon(getTacticIconName(t))}</span><span class="tactic-text">${t}</span></li>`).join('')}
+        <ul class="tactics-bullets">
+          ${fish.bateau.tactics.map(t => `<li>${t}</li>`).join('')}
         </ul>
         ${renderExhaustiveTackleBlock(fish.bateau.terminalTackle, fish.gear.boatCombo, 'Mer', 'bateau')}
       </div>
