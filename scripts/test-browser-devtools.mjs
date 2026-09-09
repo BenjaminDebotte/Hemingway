@@ -7,6 +7,15 @@ const PORT = 3334;
 const CDP_PORT = 9223;
 const SITE_DIR = path.resolve('site');
 
+const isQuick = process.argv.includes('--quick');
+const themeArg = process.argv.find(a => a.startsWith('--theme='))?.split('=')[1];
+const allThemes = ['archief', 'estran', 'epaves', 'dune', 'carbon', 'shom', 'beton', 'krant', 'kraft', 'asfalt', 'staal'];
+const themesToTest = themeArg ? [themeArg] : (isQuick ? ['staal'] : allThemes);
+
+if (isQuick) {
+  console.log('[TEST-DEVTOOLS] Mode rapide activé (--quick) : test ciblé sur 1 thème.');
+}
+
 const MIME_TYPES = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
@@ -233,7 +242,7 @@ const popoverHiddenAfterEsc = await cdp.evaluate('document.getElementById("theme
 assert(popoverHiddenAfterEsc === true, 'Le popover se referme avec la touche Échap');
 
 console.log('\n--- AXE 4 : MATRICE MULTI-THÈMES (11 NUANCES GRAPHISTES × JOUR/NUIT) ---');
-const themes = ['archief', 'estran', 'epaves', 'dune', 'carbon', 'shom', 'beton', 'krant', 'kraft', 'asfalt', 'staal'];
+const themes = themesToTest;
 for (const th of themes) {
   await cdp.evaluate(`
     (() => {

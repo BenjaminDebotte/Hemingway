@@ -103,6 +103,26 @@
   --white: #ffffff;
 
   /* ==========================================================================
+     DESIGN TOKENS DE LAYOUT & COMPOSANTS UNIFIÉS (ÉCRAN / IMPRESSION)
+     ========================================================================== */
+  --card-padding-x: 1.1rem;
+  --card-padding-y: 1.15rem;
+
+  --fs-title: 1.25rem;
+  --fs-subtitle: 0.85rem;
+  --fs-block-title: 0.85rem;
+  --fs-body: 0.78rem;
+  --fs-sm: 0.72rem;
+  --fs-xs: 0.65rem;
+
+  --padding-box: 0.6rem 0.8rem;
+  --padding-chip: 0.32rem 0.55rem;
+  --padding-pill: 0.15rem 0.5rem;
+
+  --gap-section: 0.6rem;
+  --gap-grid: 0.4rem;
+
+  /* ==========================================================================
      DESIGN TOKENS SÉMANTIQUES UNIFIÉS (--theme-*)
      ========================================================================== */
 
