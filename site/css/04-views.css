@@ -441,16 +441,18 @@
 }
 
 .interactive-card .mini-map-img-wrap {
-  flex: 1 1 auto !important;
-  min-height: 50px !important;
-  max-height: 85px !important;
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  flex: 0 0 auto !important;
+  aspect-ratio: 1 / 1 !important;
   overflow: hidden !important;
 }
 
 .interactive-card .mini-map-osm-img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: fill !important;
+  object-fit: contain !important;
 }
 
 .interactive-card .mini-map-legend-bar {
@@ -493,18 +495,28 @@
   overflow: hidden !important;
 }
 
-.interactive-card .biotope-map-card .map-img-wrap {
-  flex: 1 1 auto !important;
-  min-height: 180px !important;
-  max-height: 380px !important;
-  overflow: hidden !important;
+.interactive-card .map-card-canal .map-img-wrap {
+  aspect-ratio: 800 / 560 !important;
   position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  flex: 0 0 auto !important;
+  overflow: hidden !important;
+}
+
+.interactive-card .map-card-mer .map-img-wrap {
+  aspect-ratio: 800 / 500 !important;
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  flex: 0 0 auto !important;
+  overflow: hidden !important;
 }
 
 .interactive-card .biotope-map-card .halieutic-osm-img {
   width: 100% !important;
   height: 100% !important;
-  object-fit: fill !important;
+  object-fit: contain !important;
 }
 
 .interactive-card .notes-lines {
