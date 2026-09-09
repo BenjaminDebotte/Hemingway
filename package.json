@@ -7,9 +7,10 @@
     "validate": "node scripts/validate-species.mjs",
     "build": "node scripts/build-site.mjs",
     "test:unit": "node --test tests/unit/*.test.mjs",
+    "test:maps": "node scripts/test-map-pins-alignment.mjs",
     "test:e2e": "node scripts/test-browser-devtools.mjs",
-    "test:quick": "npm run test:unit && node scripts/test-browser-devtools.mjs --quick",
-    "test": "npm run test:unit && npm run test:e2e",
+    "test:quick": "npm run test:unit && node scripts/test-map-pins-alignment.mjs && node scripts/test-browser-devtools.mjs --quick",
+    "test": "npm run test:unit && node scripts/test-map-pins-alignment.mjs && npm run test:e2e",
     "start": "node --watch --watch-path=data --watch-path=scripts --watch-path=site/index.html --watch-path=site/css --watch-path=site/js --watch-path=site/fonts scripts/serve.mjs",
     "dev": "node --watch --watch-path=data --watch-path=scripts --watch-path=site/index.html --watch-path=site/css --watch-path=site/js --watch-path=site/fonts scripts/serve.mjs",
     "serve": "node scripts/serve.mjs"
