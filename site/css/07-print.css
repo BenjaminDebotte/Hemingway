@@ -830,42 +830,42 @@ body.no-print-maps .a4-sheet-preview .card-face .biotope-section {
 .a4-sheet-preview .pill-combo {
   background: #f1f5f9 !important;
   color: #0f172a !important;
-  border: 1px solid #cbd5e1 !important;
+  border: none !important;
 }
 .a4-sheet-preview .pill-leader {
   background: #f8fafc !important;
   color: #475569 !important;
-  border: 1px solid #e2e8f0 !important;
+  border: none !important;
 }
 .a4-sheet-preview .pill-hook {
   background: #f1f5f9 !important;
   color: #1e293b !important;
-  border: 1px solid #cbd5e1 !important;
+  border: none !important;
 }
 .a4-sheet-preview .pill-rigid {
   background: #f0fdf4 !important;
   color: #166534 !important;
-  border: 1px solid #bbf7d0 !important;
+  border: none !important;
 }
 .a4-sheet-preview .pill-soft {
   background: #eff6ff !important;
   color: #1e40af !important;
-  border: 1px solid #bfdbfe !important;
+  border: none !important;
 }
 .a4-sheet-preview .pill-natural {
   background: #fffbeb !important;
   color: #92400e !important;
-  border: 1px solid #fde68a !important;
+  border: none !important;
 }
 .a4-sheet-preview .twelfths-hours-pill {
   background: #1e293b !important;
   color: #ffffff !important;
-  border: 1px solid #0f172a !important;
+  border: none !important;
 }
 .a4-sheet-preview .twelfths-flow-pill {
   background: #f1f5f9 !important;
   color: #0f172a !important;
-  border: 1px solid #cbd5e1 !important;
+  border: none !important;
 }
 .a4-sheet-preview .verso-badge {
   background: #f8fafc !important;
@@ -876,12 +876,12 @@ body.no-print-maps .a4-sheet-preview .card-face .biotope-section {
 html[data-mode="dark"] .a4-sheet-preview .pill-combo {
   background: var(--theme-surface-subtle) !important;
   color: var(--theme-text-title) !important;
-  border: 1px solid var(--theme-surface-subtle-border) !important;
+  border: none !important;
 }
 html[data-mode="dark"] .a4-sheet-preview .pill-leader {
   background: var(--theme-surface-inset) !important;
   color: var(--theme-text-muted) !important;
-  border: 1px solid var(--theme-surface-subtle-border) !important;
+  border: none !important;
 }
 html[data-mode="dark"] .a4-sheet-preview .pill-hook {
   background: var(--theme-surface-subtle) !important;
