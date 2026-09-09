@@ -47,6 +47,7 @@ const MULTISELECT_LABELS = {
   },
   regulation: {
     all: 'Toutes',
+    no_constraint: 'Aucune contrainte',
     legal_size: 'Maille légale',
     bag_limit: 'Quota journalier',
     closed_season: 'Période de fermeture',
@@ -497,7 +498,14 @@ function getFilteredSpecies() {
       let matchReg = false;
 
       for (const val of filterState.regulations) {
-        if (val === 'legal_size' && fish.regulations.legalSizeCm !== null) matchReg = true;
+        if (val === 'no_constraint') {
+          const hasLegalSize = fish.regulations.legalSizeCm !== null;
+          const bl = (fish.regulations.bagLimit || '').toLowerCase();
+          const hasBagLimit = bl && !bl.includes('aucun') && !bl.includes('illimité') && !bl.includes('non soumis') && !bl.includes('raisonné') && !bl.includes('modéré');
+          const cs = (fish.regulations.closedSeason || '').toLowerCase();
+          const hasClosedSeason = cs && !cs.includes('aucune') && !cs.includes('toute l\'année');
+          if (!hasLegalSize && !hasBagLimit && !hasClosedSeason) matchReg = true;
+        } else if (val === 'legal_size' && fish.regulations.legalSizeCm !== null) matchReg = true;
         else if (val === 'bag_limit') {
           const bl = (fish.regulations.bagLimit || '').toLowerCase();
           if (bl && !bl.includes('aucun') && !bl.includes('illimité') && !bl.includes('non soumis') && !bl.includes('raisonné') && !bl.includes('modéré')) matchReg = true;

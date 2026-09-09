@@ -10,9 +10,9 @@ export const MONTHS = ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D
 
 export function renderCardFront(fish) {
   const isDual = fish.canal.present && fish.bateau.present;
-  const legalSize = fish.regulations.legalSizeCm
-    ? `${fish.regulations.legalSizeCm} cm`
-    : 'Non fixée';
+  const isNoSize = fish.regulations.legalSizeCm === null;
+  const legalSizeText = isNoSize ? 'Aucune contrainte' : `${fish.regulations.legalSizeCm} cm`;
+  const legalSizeClass = isNoSize ? 'val-faint val-long' : 'val-green';
 
   const recSize = fish.regulations.recommendedSizeCm
     ? `${fish.regulations.recommendedSizeCm} cm`
@@ -51,7 +51,7 @@ export function renderCardFront(fish) {
       <div class="regs-grid">
         <div class="reg-pill">
           <span class="reg-pill-label">Maille légale</span>
-          <span class="reg-pill-val ${fish.regulations.legalSizeCm ? 'val-green' : ''}">${legalSize}</span>
+          <span class="reg-pill-val ${legalSizeClass}">${legalSizeText}</span>
         </div>
         <div class="reg-pill">
           <span class="reg-pill-label">Taille éthique</span>
