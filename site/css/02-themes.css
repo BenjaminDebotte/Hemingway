@@ -17,7 +17,6 @@ html[data-theme="deschool"][data-mode="light"],
 html[data-theme="archief"]:not([data-mode="dark"]),
 html[data-theme="deschool"]:not([data-mode="dark"]) {
   --theme-bg: #f9f6ef;
-  --theme-bg-pattern-dot: rgb(0 0 0 / 0.05);
 
   --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
@@ -51,7 +50,6 @@ html[data-theme="deschool"]:not([data-mode="dark"]) {
   --theme-secret-border: #000000;
   --theme-secret-text: #000000;
 
-  --theme-reg-title: #000000;
   --theme-reg-pill-bg: #f4efe6;
   --theme-reg-pill-border: #000000;
   --theme-reg-pill-label: #525252;
@@ -64,7 +62,6 @@ html[data-theme="deschool"]:not([data-mode="dark"]) {
 
   --theme-btn-primary-bg: #000000;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #262626;
 
   --theme-segmented-bg: #171717;
   --theme-segmented-active-bg: #ffffff;
@@ -76,14 +73,12 @@ html[data-theme="deschool"]:not([data-mode="dark"]) {
   --theme-pill-active-text: #000000;
 
   --theme-gauge-track: #e5e5e5;
-  --theme-gauge-fill: #000000;
 }
 
 /* 0B. Archief - Mode Nuit (Club Zwart Pure Black & White) */
 html[data-theme="archief"][data-mode="dark"],
 html[data-theme="deschool"][data-mode="dark"] {
   --theme-bg: #000000;
-  --theme-bg-pattern-dot: rgb(255 255 255 / 0.04);
   --theme-header-border: #262626;
   --theme-controls-bg: #111111;
   --theme-controls-border: #262626;
@@ -121,7 +116,6 @@ html[data-theme="deschool"][data-mode="dark"] {
   --theme-secret-border: #333333;
   --theme-secret-text: #ffffff;
 
-  --theme-reg-title: #ffffff;
   --theme-reg-pill-bg: #121212;
   --theme-reg-pill-border: #262626;
   --theme-reg-pill-label: #737373;
@@ -134,7 +128,6 @@ html[data-theme="deschool"][data-mode="dark"] {
 
   --theme-btn-primary-bg: #ffffff;
   --theme-btn-primary-text: #000000;
-  --theme-btn-primary-hover: #e5e5e5;
 
   --theme-segmented-bg: #000000;
   --theme-segmented-active-bg: #ffffff;
@@ -146,7 +139,6 @@ html[data-theme="deschool"][data-mode="dark"] {
   --theme-pill-active-text: #000000;
 
   --theme-gauge-track: #1c1c1c;
-  --theme-gauge-fill: #ffffff;
 }
 
 /* --------------------------------------------------------------------------
@@ -157,7 +149,6 @@ html[data-theme="deschool"][data-mode="dark"] {
 html[data-theme="estran"][data-mode="light"],
 html[data-theme="estran"]:not([data-mode="dark"]) {
   --theme-bg: #f5f8f5;
-  --theme-bg-pattern-dot: rgb(4 120 87 / 0.05);
 
   --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
@@ -191,7 +182,6 @@ html[data-theme="estran"]:not([data-mode="dark"]) {
   --theme-secret-border: #047857;
   --theme-secret-text: #047857;
 
-  --theme-reg-title: #000000;
   --theme-reg-pill-bg: #edf4ee;
   --theme-reg-pill-border: #000000;
   --theme-reg-pill-label: #525252;
@@ -204,7 +194,6 @@ html[data-theme="estran"]:not([data-mode="dark"]) {
 
   --theme-btn-primary-bg: #047857;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #065f46;
 
   --theme-segmented-bg: #171717;
   --theme-segmented-active-bg: #047857;
@@ -216,13 +205,11 @@ html[data-theme="estran"]:not([data-mode="dark"]) {
   --theme-pill-active-text: #ffffff;
 
   --theme-gauge-track: #e5ede6;
-  --theme-gauge-fill: #047857;
 }
 
 /* 1B. Estran - Mode Nuit (Club Noir Absolu & Vert Risographe #10b981) */
 html[data-theme="estran"][data-mode="dark"] {
   --theme-bg: #000000;
-  --theme-bg-pattern-dot: rgb(16 185 129 / 0.04);
   --theme-header-border: #262626;
   --theme-controls-bg: #111111;
   --theme-controls-border: #262626;
@@ -260,7 +247,6 @@ html[data-theme="estran"][data-mode="dark"] {
   --theme-secret-border: #10b981;
   --theme-secret-text: #34d399;
 
-  --theme-reg-title: #ffffff;
   --theme-reg-pill-bg: #0e1913;
   --theme-reg-pill-border: #262626;
   --theme-reg-pill-label: #737373;
@@ -273,7 +259,6 @@ html[data-theme="estran"][data-mode="dark"] {
 
   --theme-btn-primary-bg: #10b981;
   --theme-btn-primary-text: #000000;
-  --theme-btn-primary-hover: #34d399;
 
   --theme-segmented-bg: #000000;
   --theme-segmented-active-bg: #10b981;
@@ -285,7 +270,6 @@ html[data-theme="estran"][data-mode="dark"] {
   --theme-pill-active-text: #000000;
 
   --theme-gauge-track: #16281e;
-  --theme-gauge-fill: #10b981;
 }
 
 /* --------------------------------------------------------------------------
@@ -296,7 +280,6 @@ html[data-theme="estran"][data-mode="dark"] {
 html[data-theme="epaves"][data-mode="light"],
 html[data-theme="epaves"]:not([data-mode="dark"]) {
   --theme-bg: #fbf7f4;
-  --theme-bg-pattern-dot: rgb(194 65 12 / 0.05);
 
   --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
@@ -330,7 +313,6 @@ html[data-theme="epaves"]:not([data-mode="dark"]) {
   --theme-secret-border: #c2410c;
   --theme-secret-text: #c2410c;
 
-  --theme-reg-title: #000000;
   --theme-reg-pill-bg: #f6ebe5;
   --theme-reg-pill-border: #000000;
   --theme-reg-pill-label: #525252;
@@ -343,7 +325,6 @@ html[data-theme="epaves"]:not([data-mode="dark"]) {
 
   --theme-btn-primary-bg: #c2410c;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #9a3412;
 
   --theme-segmented-bg: #171717;
   --theme-segmented-active-bg: #c2410c;
@@ -355,13 +336,11 @@ html[data-theme="epaves"]:not([data-mode="dark"]) {
   --theme-pill-active-text: #ffffff;
 
   --theme-gauge-track: #eedfd7;
-  --theme-gauge-fill: #c2410c;
 }
 
 /* 2B. Épaves - Mode Nuit (Club Noir Absolu & Encre Forge #f97316) */
 html[data-theme="epaves"][data-mode="dark"] {
   --theme-bg: #000000;
-  --theme-bg-pattern-dot: rgb(249 115 22 / 0.04);
   --theme-header-border: #262626;
   --theme-controls-bg: #111111;
   --theme-controls-border: #262626;
@@ -399,7 +378,6 @@ html[data-theme="epaves"][data-mode="dark"] {
   --theme-secret-border: #f97316;
   --theme-secret-text: #fb923c;
 
-  --theme-reg-title: #ffffff;
   --theme-reg-pill-bg: #19110d;
   --theme-reg-pill-border: #262626;
   --theme-reg-pill-label: #737373;
@@ -412,7 +390,6 @@ html[data-theme="epaves"][data-mode="dark"] {
 
   --theme-btn-primary-bg: #ea580c;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #f97316;
 
   --theme-segmented-bg: #000000;
   --theme-segmented-active-bg: #ea580c;
@@ -424,7 +401,6 @@ html[data-theme="epaves"][data-mode="dark"] {
   --theme-pill-active-text: #ffffff;
 
   --theme-gauge-track: #29160e;
-  --theme-gauge-fill: #f97316;
 }
 
 /* --------------------------------------------------------------------------
@@ -435,7 +411,6 @@ html[data-theme="epaves"][data-mode="dark"] {
 html[data-theme="dune"][data-mode="light"],
 html[data-theme="dune"]:not([data-mode="dark"]) {
   --theme-bg: #fbf9f2;
-  --theme-bg-pattern-dot: rgb(180 83 9 / 0.05);
 
   --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
@@ -469,7 +444,6 @@ html[data-theme="dune"]:not([data-mode="dark"]) {
   --theme-secret-border: #b45309;
   --theme-secret-text: #b45309;
 
-  --theme-reg-title: #000000;
   --theme-reg-pill-bg: #f6f0df;
   --theme-reg-pill-border: #000000;
   --theme-reg-pill-label: #525252;
@@ -482,7 +456,6 @@ html[data-theme="dune"]:not([data-mode="dark"]) {
 
   --theme-btn-primary-bg: #b45309;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #92400e;
 
   --theme-segmented-bg: #171717;
   --theme-segmented-active-bg: #b45309;
@@ -494,13 +467,11 @@ html[data-theme="dune"]:not([data-mode="dark"]) {
   --theme-pill-active-text: #ffffff;
 
   --theme-gauge-track: #eee6d0;
-  --theme-gauge-fill: #b45309;
 }
 
 /* 3B. Dune - Mode Nuit (Club Noir Absolu & Encre Ambre Ocre #f59e0b) */
 html[data-theme="dune"][data-mode="dark"] {
   --theme-bg: #000000;
-  --theme-bg-pattern-dot: rgb(245 158 11 / 0.04);
   --theme-header-border: #262626;
   --theme-controls-bg: #111111;
   --theme-controls-border: #262626;
@@ -538,7 +509,6 @@ html[data-theme="dune"][data-mode="dark"] {
   --theme-secret-border: #f59e0b;
   --theme-secret-text: #f59e0b;
 
-  --theme-reg-title: #ffffff;
   --theme-reg-pill-bg: #19140c;
   --theme-reg-pill-border: #262626;
   --theme-reg-pill-label: #737373;
@@ -551,7 +521,6 @@ html[data-theme="dune"][data-mode="dark"] {
 
   --theme-btn-primary-bg: #d97706;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #f59e0b;
 
   --theme-segmented-bg: #000000;
   --theme-segmented-active-bg: #d97706;
@@ -563,7 +532,6 @@ html[data-theme="dune"][data-mode="dark"] {
   --theme-pill-active-text: #ffffff;
 
   --theme-gauge-track: #291e0e;
-  --theme-gauge-fill: #f59e0b;
 }
 
 /* --------------------------------------------------------------------------
@@ -576,7 +544,6 @@ html[data-theme="carbon"]:not([data-mode="dark"]),
 html[data-theme="tactical"][data-mode="light"],
 html[data-theme="tactical"]:not([data-mode="dark"]) {
   --theme-bg: #f7f7f5;
-  --theme-bg-pattern-dot: rgb(77 124 15 / 0.05);
 
   --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
@@ -610,7 +577,6 @@ html[data-theme="tactical"]:not([data-mode="dark"]) {
   --theme-secret-border: #4d7c0f;
   --theme-secret-text: #4d7c0f;
 
-  --theme-reg-title: #000000;
   --theme-reg-pill-bg: #eeeeeb;
   --theme-reg-pill-border: #000000;
   --theme-reg-pill-label: #525252;
@@ -623,7 +589,6 @@ html[data-theme="tactical"]:not([data-mode="dark"]) {
 
   --theme-btn-primary-bg: #4d7c0f;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #365314;
 
   --theme-segmented-bg: #171717;
   --theme-segmented-active-bg: #4d7c0f;
@@ -635,14 +600,12 @@ html[data-theme="tactical"]:not([data-mode="dark"]) {
   --theme-pill-active-text: #ffffff;
 
   --theme-gauge-track: #e6e6e2;
-  --theme-gauge-fill: #65a30d;
 }
 
 /* 4B. Carbone - Mode Nuit (Club Noir Absolu & Signal Acid Lime #84cc16) */
 html[data-theme="carbon"][data-mode="dark"],
 html[data-theme="tactical"][data-mode="dark"] {
   --theme-bg: #000000;
-  --theme-bg-pattern-dot: rgb(132 204 22 / 0.04);
   --theme-header-border: #262626;
   --theme-controls-bg: #111111;
   --theme-controls-border: #262626;
@@ -680,7 +643,6 @@ html[data-theme="tactical"][data-mode="dark"] {
   --theme-secret-border: #84cc16;
   --theme-secret-text: #a3e635;
 
-  --theme-reg-title: #ffffff;
   --theme-reg-pill-bg: #10140c;
   --theme-reg-pill-border: #262626;
   --theme-reg-pill-label: #737373;
@@ -693,7 +655,6 @@ html[data-theme="tactical"][data-mode="dark"] {
 
   --theme-btn-primary-bg: #84cc16;
   --theme-btn-primary-text: #000000;
-  --theme-btn-primary-hover: #a3e635;
 
   --theme-segmented-bg: #000000;
   --theme-segmented-active-bg: #84cc16;
@@ -705,7 +666,6 @@ html[data-theme="tactical"][data-mode="dark"] {
   --theme-pill-active-text: #000000;
 
   --theme-gauge-track: #1a260c;
-  --theme-gauge-fill: #84cc16;
 }
 
 /* --------------------------------------------------------------------------
@@ -716,7 +676,6 @@ html[data-theme="tactical"][data-mode="dark"] {
 html[data-theme="shom"][data-mode="light"],
 html[data-theme="shom"]:not([data-mode="dark"]) {
   --theme-bg: #f4f6fa;
-  --theme-bg-pattern-dot: rgb(29 78 216 / 0.05);
 
   --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
@@ -750,7 +709,6 @@ html[data-theme="shom"]:not([data-mode="dark"]) {
   --theme-secret-border: #1d4ed8;
   --theme-secret-text: #1d4ed8;
 
-  --theme-reg-title: #000000;
   --theme-reg-pill-bg: #e9eef7;
   --theme-reg-pill-border: #000000;
   --theme-reg-pill-label: #525252;
@@ -763,7 +721,6 @@ html[data-theme="shom"]:not([data-mode="dark"]) {
 
   --theme-btn-primary-bg: #1d4ed8;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #1e40af;
 
   --theme-segmented-bg: #171717;
   --theme-segmented-active-bg: #1d4ed8;
@@ -775,13 +732,11 @@ html[data-theme="shom"]:not([data-mode="dark"]) {
   --theme-pill-active-text: #ffffff;
 
   --theme-gauge-track: #dce3f0;
-  --theme-gauge-fill: #1d4ed8;
 }
 
 /* 5B. SHOM - Mode Nuit (Club Noir Absolu & Encre Cobalt #3b82f6) */
 html[data-theme="shom"][data-mode="dark"] {
   --theme-bg: #000000;
-  --theme-bg-pattern-dot: rgb(59 130 246 / 0.04);
   --theme-header-border: #262626;
   --theme-controls-bg: #111111;
   --theme-controls-border: #262626;
@@ -819,7 +774,6 @@ html[data-theme="shom"][data-mode="dark"] {
   --theme-secret-border: #3b82f6;
   --theme-secret-text: #60a5fa;
 
-  --theme-reg-title: #ffffff;
   --theme-reg-pill-bg: #0c1322;
   --theme-reg-pill-border: #262626;
   --theme-reg-pill-label: #737373;
@@ -832,7 +786,6 @@ html[data-theme="shom"][data-mode="dark"] {
 
   --theme-btn-primary-bg: #3b82f6;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #60a5fa;
 
   --theme-segmented-bg: #000000;
   --theme-segmented-active-bg: #3b82f6;
@@ -844,7 +797,6 @@ html[data-theme="shom"][data-mode="dark"] {
   --theme-pill-active-text: #ffffff;
 
   --theme-gauge-track: #132038;
-  --theme-gauge-fill: #60a5fa;
 }
 
 /* ==========================================================================
@@ -859,7 +811,6 @@ html[data-theme="shom"][data-mode="dark"] {
 html[data-theme="beton"][data-mode="light"],
 html[data-theme="beton"]:not([data-mode="dark"]) {
   --theme-bg: #edece8;
-  --theme-bg-pattern-dot: rgb(0 0 0 / 0.05);
 
   --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
@@ -893,7 +844,6 @@ html[data-theme="beton"]:not([data-mode="dark"]) {
   --theme-secret-border: #000000;
   --theme-secret-text: #000000;
 
-  --theme-reg-title: #000000;
   --theme-reg-pill-bg: #dfded9;
   --theme-reg-pill-border: #000000;
   --theme-reg-pill-label: #525252;
@@ -906,7 +856,6 @@ html[data-theme="beton"]:not([data-mode="dark"]) {
 
   --theme-btn-primary-bg: #262626;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #404040;
 
   --theme-segmented-bg: #171717;
   --theme-segmented-active-bg: #ffffff;
@@ -918,13 +867,11 @@ html[data-theme="beton"]:not([data-mode="dark"]) {
   --theme-pill-active-text: #000000;
 
   --theme-gauge-track: #d5d4ce;
-  --theme-gauge-fill: #404040;
 }
 
 /* 6B. Beton - Mode Nuit (Béton Obscur & Ciment Lumineux #e5e5e5) */
 html[data-theme="beton"][data-mode="dark"] {
   --theme-bg: #0a0a0a;
-  --theme-bg-pattern-dot: rgb(255 255 255 / 0.04);
   --theme-header-border: #262626;
   --theme-controls-bg: #111111;
   --theme-controls-border: #262626;
@@ -962,7 +909,6 @@ html[data-theme="beton"][data-mode="dark"] {
   --theme-secret-border: #333333;
   --theme-secret-text: #ffffff;
 
-  --theme-reg-title: #ffffff;
   --theme-reg-pill-bg: #1a1a1a;
   --theme-reg-pill-border: #262626;
   --theme-reg-pill-label: #737373;
@@ -975,7 +921,6 @@ html[data-theme="beton"][data-mode="dark"] {
 
   --theme-btn-primary-bg: #e5e5e5;
   --theme-btn-primary-text: #000000;
-  --theme-btn-primary-hover: #ffffff;
 
   --theme-segmented-bg: #000000;
   --theme-segmented-active-bg: #e5e5e5;
@@ -987,7 +932,6 @@ html[data-theme="beton"][data-mode="dark"] {
   --theme-pill-active-text: #000000;
 
   --theme-gauge-track: #262626;
-  --theme-gauge-fill: #a3a3a3;
 }
 
 /* --------------------------------------------------------------------------
@@ -998,7 +942,6 @@ html[data-theme="beton"][data-mode="dark"] {
 html[data-theme="krant"][data-mode="light"],
 html[data-theme="krant"]:not([data-mode="dark"]) {
   --theme-bg: #f2efe9;
-  --theme-bg-pattern-dot: rgb(0 0 0 / 0.05);
 
   --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
@@ -1032,7 +975,6 @@ html[data-theme="krant"]:not([data-mode="dark"]) {
   --theme-secret-border: #000000;
   --theme-secret-text: #000000;
 
-  --theme-reg-title: #000000;
   --theme-reg-pill-bg: #e8e4db;
   --theme-reg-pill-border: #000000;
   --theme-reg-pill-label: #525252;
@@ -1045,7 +987,6 @@ html[data-theme="krant"]:not([data-mode="dark"]) {
 
   --theme-btn-primary-bg: #171717;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #333333;
 
   --theme-segmented-bg: #171717;
   --theme-segmented-active-bg: #ffffff;
@@ -1057,13 +998,11 @@ html[data-theme="krant"]:not([data-mode="dark"]) {
   --theme-pill-active-text: #000000;
 
   --theme-gauge-track: #ded8ce;
-  --theme-gauge-fill: #171717;
 }
 
 /* 7B. Krant - Mode Nuit (Édition Minuit Charbon Furtif) */
 html[data-theme="krant"][data-mode="dark"] {
   --theme-bg: #0d0d0d;
-  --theme-bg-pattern-dot: rgb(255 255 255 / 0.04);
   --theme-header-border: #262626;
   --theme-controls-bg: #111111;
   --theme-controls-border: #262626;
@@ -1101,7 +1040,6 @@ html[data-theme="krant"][data-mode="dark"] {
   --theme-secret-border: #262626;
   --theme-secret-text: #ffffff;
 
-  --theme-reg-title: #ffffff;
   --theme-reg-pill-bg: #1a1a1a;
   --theme-reg-pill-border: #262626;
   --theme-reg-pill-label: #737373;
@@ -1114,7 +1052,6 @@ html[data-theme="krant"][data-mode="dark"] {
 
   --theme-btn-primary-bg: #ffffff;
   --theme-btn-primary-text: #000000;
-  --theme-btn-primary-hover: #e5e5e5;
 
   --theme-segmented-bg: #000000;
   --theme-segmented-active-bg: #ffffff;
@@ -1126,7 +1063,6 @@ html[data-theme="krant"][data-mode="dark"] {
   --theme-pill-active-text: #000000;
 
   --theme-gauge-track: #262626;
-  --theme-gauge-fill: #d4d4d4;
 }
 
 /* --------------------------------------------------------------------------
@@ -1137,7 +1073,6 @@ html[data-theme="krant"][data-mode="dark"] {
 html[data-theme="kraft"][data-mode="light"],
 html[data-theme="kraft"]:not([data-mode="dark"]) {
   --theme-bg: #ece2ce;
-  --theme-bg-pattern-dot: rgb(120 53 15 / 0.06);
 
   --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
@@ -1171,7 +1106,6 @@ html[data-theme="kraft"]:not([data-mode="dark"]) {
   --theme-secret-border: #78350f;
   --theme-secret-text: #78350f;
 
-  --theme-reg-title: #000000;
   --theme-reg-pill-bg: #e1d4bb;
   --theme-reg-pill-border: #000000;
   --theme-reg-pill-label: #525252;
@@ -1184,7 +1118,6 @@ html[data-theme="kraft"]:not([data-mode="dark"]) {
 
   --theme-btn-primary-bg: #78350f;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #92400e;
 
   --theme-segmented-bg: #171717;
   --theme-segmented-active-bg: #78350f;
@@ -1196,13 +1129,11 @@ html[data-theme="kraft"]:not([data-mode="dark"]) {
   --theme-pill-active-text: #ffffff;
 
   --theme-gauge-track: #d7c8ad;
-  --theme-gauge-fill: #92400e;
 }
 
 /* 8B. Kraft - Mode Nuit (Fibre Sombre & Encre Ambre Brûlé #d97706) */
 html[data-theme="kraft"][data-mode="dark"] {
   --theme-bg: #0b0906;
-  --theme-bg-pattern-dot: rgb(217 119 6 / 0.04);
   --theme-header-border: #262626;
   --theme-controls-bg: #111111;
   --theme-controls-border: #262626;
@@ -1240,7 +1171,6 @@ html[data-theme="kraft"][data-mode="dark"] {
   --theme-secret-border: #d97706;
   --theme-secret-text: #f59e0b;
 
-  --theme-reg-title: #ffffff;
   --theme-reg-pill-bg: #19140d;
   --theme-reg-pill-border: #262626;
   --theme-reg-pill-label: #737373;
@@ -1253,7 +1183,6 @@ html[data-theme="kraft"][data-mode="dark"] {
 
   --theme-btn-primary-bg: #d97706;
   --theme-btn-primary-text: #000000;
-  --theme-btn-primary-hover: #f59e0b;
 
   --theme-segmented-bg: #000000;
   --theme-segmented-active-bg: #d97706;
@@ -1265,7 +1194,6 @@ html[data-theme="kraft"][data-mode="dark"] {
   --theme-pill-active-text: #000000;
 
   --theme-gauge-track: #2b1b0b;
-  --theme-gauge-fill: #d97706;
 }
 
 /* --------------------------------------------------------------------------
@@ -1276,7 +1204,6 @@ html[data-theme="kraft"][data-mode="dark"] {
 html[data-theme="asfalt"][data-mode="light"],
 html[data-theme="asfalt"]:not([data-mode="dark"]) {
   --theme-bg: #e5e5e5;
-  --theme-bg-pattern-dot: rgb(0 0 0 / 0.05);
 
   --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
@@ -1310,7 +1237,6 @@ html[data-theme="asfalt"]:not([data-mode="dark"]) {
   --theme-secret-border: #000000;
   --theme-secret-text: #000000;
 
-  --theme-reg-title: #000000;
   --theme-reg-pill-bg: #d8d8d8;
   --theme-reg-pill-border: #000000;
   --theme-reg-pill-label: #525252;
@@ -1323,7 +1249,6 @@ html[data-theme="asfalt"]:not([data-mode="dark"]) {
 
   --theme-btn-primary-bg: #0a0a0a;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #262626;
 
   --theme-segmented-bg: #171717;
   --theme-segmented-active-bg: #ffffff;
@@ -1335,13 +1260,11 @@ html[data-theme="asfalt"]:not([data-mode="dark"]) {
   --theme-pill-active-text: #000000;
 
   --theme-gauge-track: #cccccc;
-  --theme-gauge-fill: #0a0a0a;
 }
 
 /* 9B. Asfalt - Mode Nuit (Bitume Profond & Craie Vive #ffffff) */
 html[data-theme="asfalt"][data-mode="dark"] {
   --theme-bg: #050505;
-  --theme-bg-pattern-dot: rgb(255 255 255 / 0.04);
   --theme-header-border: #262626;
   --theme-controls-bg: #111111;
   --theme-controls-border: #262626;
@@ -1379,7 +1302,6 @@ html[data-theme="asfalt"][data-mode="dark"] {
   --theme-secret-border: #262626;
   --theme-secret-text: #ffffff;
 
-  --theme-reg-title: #ffffff;
   --theme-reg-pill-bg: #141414;
   --theme-reg-pill-border: #262626;
   --theme-reg-pill-label: #737373;
@@ -1392,7 +1314,6 @@ html[data-theme="asfalt"][data-mode="dark"] {
 
   --theme-btn-primary-bg: #ffffff;
   --theme-btn-primary-text: #000000;
-  --theme-btn-primary-hover: #e5e5e5;
 
   --theme-segmented-bg: #000000;
   --theme-segmented-active-bg: #ffffff;
@@ -1404,7 +1325,6 @@ html[data-theme="asfalt"][data-mode="dark"] {
   --theme-pill-active-text: #000000;
 
   --theme-gauge-track: #262626;
-  --theme-gauge-fill: #ffffff;
 }
 
 /* --------------------------------------------------------------------------
@@ -1416,7 +1336,6 @@ html[data-theme="staal"][data-mode="light"],
 html[data-theme="staal"]:not([data-mode="dark"]),
 :root:not([data-theme]):not([data-mode="dark"]) {
   --theme-bg: #e8ecf0;
-  --theme-bg-pattern-dot: rgb(51 65 85 / 0.05);
 
   --theme-card-outer-border: #000000;
   --theme-card-inner-bg: #ffffff;
@@ -1450,7 +1369,6 @@ html[data-theme="staal"]:not([data-mode="dark"]),
   --theme-secret-border: #334155;
   --theme-secret-text: #334155;
 
-  --theme-reg-title: #000000;
   --theme-reg-pill-bg: #dbe2ea;
   --theme-reg-pill-border: #000000;
   --theme-reg-pill-label: #525252;
@@ -1463,7 +1381,6 @@ html[data-theme="staal"]:not([data-mode="dark"]),
 
   --theme-btn-primary-bg: #334155;
   --theme-btn-primary-text: #ffffff;
-  --theme-btn-primary-hover: #1e293b;
 
   --theme-segmented-bg: #171717;
   --theme-segmented-active-bg: #334155;
@@ -1475,14 +1392,12 @@ html[data-theme="staal"]:not([data-mode="dark"]),
   --theme-pill-active-text: #ffffff;
 
   --theme-gauge-track: #cdd5df;
-  --theme-gauge-fill: #334155;
 }
 
 /* 10B. Staal - Mode Nuit (Acier Sombre & Lame Métallique #94a3b8) */
 html[data-theme="staal"][data-mode="dark"],
 html[data-mode="dark"]:not([data-theme]) {
   --theme-bg: #07090c;
-  --theme-bg-pattern-dot: rgb(148 163 184 / 0.04);
   --theme-header-border: #262626;
   --theme-controls-bg: #111111;
   --theme-controls-border: #262626;
@@ -1520,7 +1435,6 @@ html[data-mode="dark"]:not([data-theme]) {
   --theme-secret-border: #94a3b8;
   --theme-secret-text: #cbd5e1;
 
-  --theme-reg-title: #ffffff;
   --theme-reg-pill-bg: #11161d;
   --theme-reg-pill-border: #262626;
   --theme-reg-pill-label: #737373;
@@ -1533,7 +1447,6 @@ html[data-mode="dark"]:not([data-theme]) {
 
   --theme-btn-primary-bg: #94a3b8;
   --theme-btn-primary-text: #000000;
-  --theme-btn-primary-hover: #cbd5e1;
 
   --theme-segmented-bg: #000000;
   --theme-segmented-active-bg: #94a3b8;
@@ -1545,5 +1458,4 @@ html[data-mode="dark"]:not([data-theme]) {
   --theme-pill-active-text: #000000;
 
   --theme-gauge-track: #1e2733;
-  --theme-gauge-fill: #94a3b8;
 }

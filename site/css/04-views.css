@@ -178,6 +178,7 @@
   height: 870px; /* Hauteur A5 calibrée pour loger l'intégralité des sections et courbe des douzièmes */
   margin: 0 auto;
   position: relative;
+  contain: layout style;
 }
 
 .card-inner {

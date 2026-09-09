@@ -39,23 +39,21 @@ export function renderWaypointsBlock(fish, zone = null) {
       <div class="waypoints-cards-list">
         ${spots.map(spot => `
           <div class="waypoint-card" data-spot-id="${spot.id}">
-            <div class="waypoint-meta">
-              <span class="waypoint-icon-badge">${uiIcon(spot.icon)}</span>
-              <div class="waypoint-naming">
-                <div class="waypoint-name-row">
-                  <strong class="waypoint-name">${spot.name}</strong>
-                  <span class="waypoint-depth-pill">${spot.depth}</span>
-                </div>
-                <div class="waypoint-coords-wrap">
-                  <span class="waypoint-coord-item coord-nautical" title="Format marin sondeur traceur WGS84">
-                    <span class="coord-prefix">Marin :</span>
-                    <strong class="coord-val val-nautical">${spot.nautical}</strong>
-                  </span>
-                  <span class="waypoint-coord-item coord-decimal" title="Format décimal Google Maps / smartphone">
-                    <span class="coord-prefix">Décimal :</span>
-                    <span class="coord-val val-decimal">${spot.decimal}</span>
-                  </span>
-                </div>
+            <span class="waypoint-icon-badge">${uiIcon(spot.icon)}</span>
+            <div class="waypoint-details">
+              <div class="waypoint-name-row">
+                <strong class="waypoint-name">${spot.name}</strong>
+                <span class="waypoint-depth-pill">${spot.depth}</span>
+              </div>
+              <div class="waypoint-coords-wrap">
+                <span class="waypoint-coord-item coord-nautical" title="Format marin sondeur traceur WGS84">
+                  <span class="coord-prefix">Marin :</span>
+                  <strong class="coord-val val-nautical">${spot.nautical}</strong>
+                </span>
+                <span class="waypoint-coord-item coord-decimal" title="Format décimal Google Maps / smartphone">
+                  <span class="coord-prefix">Décimal :</span>
+                  <span class="coord-val val-decimal">${spot.decimal}</span>
+                </span>
               </div>
             </div>
             <div class="waypoint-actions">

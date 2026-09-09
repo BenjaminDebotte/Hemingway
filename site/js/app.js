@@ -53,9 +53,14 @@ function setupSearch() {
   const searchInput = document.getElementById('search-input');
   if (!searchInput) return;
 
+  let rafId = null;
+
   searchInput.addEventListener('input', (e) => {
     currentSearchTerm = e.target.value.toLowerCase().trim();
-    renderApp();
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      renderApp();
+    });
   });
 }
 

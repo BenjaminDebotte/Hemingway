@@ -106,25 +106,6 @@
   transform: scale(0.98);
 }
 
-.btn-primary {
-  background-color: var(--theme-canal-accent);
-  color: #ffffff;
-}
-
-.btn-primary:hover {
-  opacity: 0.92;
-}
-
-.btn-outline {
-  background-color: transparent;
-  border-color: var(--theme-controls-border);
-  color: var(--theme-header-text);
-}
-
-.btn-outline:hover {
-  background-color: var(--theme-controls-bg);
-}
-
 /* Minimalist Button CTA */
 .btn-gold.btn-island {
   position: relative;

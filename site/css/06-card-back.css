@@ -554,61 +554,6 @@
   word-break: break-word;
 }
 
-/* --- COMBOS MATÉRIEL COMPACTS --- */
-.combos-compact-card {
-  background: var(--theme-surface-subtle);
-  border: 1px solid var(--theme-surface-subtle-border);
-  border-radius: var(--radius-sm);
-  padding: 0.45rem 0.68rem;
-  margin-top: auto;
-  margin-bottom: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.28rem;
-}
-
-.combo-line {
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  font-size: 0.74rem;
-  line-height: 1.34;
-}
-
-.combo-tag {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 0.65rem;
-  text-transform: uppercase;
-  padding: 0.12rem 0.45rem;
-  border-radius: var(--radius-full);
-  white-space: nowrap;
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.28rem;
-}
-
-.tag-canal {
-  background: var(--theme-canal-badge-bg);
-  color: var(--theme-canal-badge-text);
-  border: 1px solid var(--theme-canal-badge-border);
-}
-
-.tag-mer {
-  background: var(--theme-bateau-badge-bg);
-  color: var(--theme-bateau-badge-text);
-  border: 1px solid var(--theme-bateau-badge-border);
-}
-
-.combo-specs {
-  color: var(--theme-text-muted);
-}
-
-.combo-specs strong {
-  color: var(--theme-text-title);
-}
-
 /* --- SECRET LOCAL (BRUSHED GOLD / BRASS FOIL) --- */
 .secret-local-box {
   background: var(--theme-secret-surface);
@@ -698,8 +643,7 @@
   border-color: var(--theme-border-title);
 }
 
-.map-img-wrap,
-.map-svg-wrap {
+.map-img-wrap {
   flex: 1 1 auto;
   display: flex;
   align-items: center;
@@ -711,8 +655,7 @@
   border-radius: 3px;
 }
 
-.halieutic-osm-img,
-.halieutic-svg {
+.halieutic-osm-img {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -964,10 +907,10 @@ html[data-mode="dark"] .halieutic-osm-img {
   background: var(--theme-surface-subtle);
 }
 
-.waypoint-meta {
+.waypoint-details {
   display: flex;
-  align-items: center;
-  gap: 0.45rem;
+  flex-direction: column;
+  gap: 0.12rem;
   min-width: 0;
   flex: 1 1 auto;
 }
@@ -988,13 +931,6 @@ html[data-mode="dark"] .halieutic-osm-img {
 .waypoint-icon-badge .ui-icon {
   width: 0.78rem;
   height: 0.78rem;
-}
-
-.waypoint-naming {
-  display: flex;
-  flex-direction: column;
-  gap: 0.12rem;
-  min-width: 0;
 }
 
 .waypoint-name-row {

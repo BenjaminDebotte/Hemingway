@@ -68,6 +68,36 @@ export const THEME_DEFINITIONS = {
   }
 };
 
+export const THEME_OPTIONS = [
+  { val: 'archief', name: 'Archief', desc: 'Brutalisme Minimaliste • Papier & Zwart', swatches: ['#000000', '#ffffff', '#f9f6ef'] },
+  { val: 'estran', name: 'Estran & Varech', desc: 'Vert Risographe • Laminaires & Estran', swatches: ['#047857', '#10b981', '#f5f8f5'] },
+  { val: 'epaves', name: 'Épaves & Rouille', desc: 'Terracotta 1944 • Acier Brut & Brique', swatches: ['#c2410c', '#fb923c', '#fbf7f4'] },
+  { val: 'dune', name: 'Dune & Calcaire', desc: 'Ocre Sable • Plages de Nacre', swatches: ['#b45309', '#d97706', '#fbf9f2'] },
+  { val: 'carbon', name: 'Carbone Sondeur', desc: 'Monochrome Tactique • Écran Sondeur', swatches: ['#65a30d', '#a3e635', '#f7f7f5'] },
+  { val: 'shom', name: 'Carte SHOM', desc: 'Bleu Hydrographique • Bathymétrie & Sondes', swatches: ['#1d4ed8', '#3b82f6', '#f4f6fa'] },
+  { val: 'beton', name: 'Béton Brut', desc: 'Gris Ouvrages Portuaires • Écluses & Quais', swatches: ['#525252', '#737373', '#edece8'] },
+  { val: 'krant', name: 'Journal & Fanzine', desc: 'Périodique & Gazette • Typographie Presse', swatches: ['#171717', '#404040', '#f2efe9'] },
+  { val: 'kraft', name: 'Carton Kraft', desc: 'Emballage Technique • Fibre & Pâte Brute', swatches: ['#78350f', '#b45309', '#ece2ce'] },
+  { val: 'asfalt', name: 'Bitume & Craie', desc: 'Enrochement Noir • Encre & Asphalte', swatches: ['#0a0a0a', '#262626', '#e5e5e5'] },
+  { val: 'staal', name: 'Acier & Poutres', desc: 'Gris Métal Brossé • Ponts & Armatures', swatches: ['#334155', '#475569', '#e8ecf0'] }
+];
+
+export function renderThemeOptions() {
+  const grid = document.getElementById('theme-universes-grid');
+  if (!grid) return;
+  grid.innerHTML = THEME_OPTIONS.map(t => `
+    <button type="button" class="theme-opt-btn" data-theme-val="${t.val}" role="radio" aria-checked="false">
+      <span class="theme-opt-swatches">
+        ${t.swatches.map(c => `<span class="theme-swatch" style="background: ${c};${c === '#ffffff' || c.startsWith('#f') || c.startsWith('#e') ? ' border: 1px solid #737373;' : ''}"></span>`).join('')}
+      </span>
+      <span class="theme-opt-info">
+        <span class="theme-opt-name">${t.name}</span>
+        <span class="theme-opt-desc">${t.desc}</span>
+      </span>
+    </button>
+  `).join('');
+}
+
 export const MODE_ICONS = {
   light: `<svg class="ui-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`,
   dark: `<svg class="ui-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`
@@ -116,6 +146,8 @@ export function initThemeController() {
   } else {
     currentThemeMode = 'light';
   }
+
+  renderThemeOptions();
 
   applyTheme(currentThemeUniverse, currentThemeMode, false);
 
