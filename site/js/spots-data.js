@@ -40,8 +40,8 @@ export const SPOTS_REGISTRY = [
     typeLabel: 'Eaux douces AAPPMA',
     tip: 'Bassin urbain à flot, amont Pont Fonderie (carte fédérale obligatoire). Postes de bordures, pontons et seuils pour perche, sandre et mulet.',
     speciesIds: ['perche-commune', 'sandre', 'brochet', 'carpe-commune', 'gardon-commun', 'breme-commune', 'mulet-lippu', 'anguille-europe', 'ablette-commune', 'tanche'],
-    canalPos: { left: 8.9, top: 94.7 },
-    regPos: { left: 43.3, top: 93.8 }
+    canalPos: { left: 30.5, top: 88.9 },
+    regPos: { left: 45.2, top: 86.2 }
   },
   {
     id: 'pont-fonderie',
@@ -54,7 +54,7 @@ export const SPOTS_REGISTRY = [
     typeLabel: 'Limite Maritime DPM',
     tip: 'Frontière juridique entre le domaine fluvial et maritime DPM. Piles maçonnées, seuils sous-marins et zone de tenue du silure et des bancs de blancs.',
     speciesIds: ['silure-glane', 'sandre', 'perche-commune', 'anguille-europe', 'carpe-commune', 'breme-commune', 'flet-commun'],
-    canalPos: { left: 12.2, top: 95.1 },
+    canalPos: { left: 32.0, top: 89.1 },
     regPos: null
   },
   {
@@ -68,8 +68,8 @@ export const SPOTS_REGISTRY = [
     typeLabel: 'Enrochements & Piles',
     tip: 'Enrochements immergés massifs et piles monumentales. Rupture de pente majeure, ombrage diurne et cônes lumineux nocturnes (bars, sandres record).',
     speciesIds: ['bar-commun', 'bar-mouchete', 'sandre', 'perche-commune', 'silure-glane', 'anguille-europe', 'truite-de-mer', 'flet-commun'],
-    canalPos: { left: 29.1, top: 92.2 },
-    regPos: { left: 54.5, top: 92.3 }
+    canalPos: { left: 40.3, top: 86.6 },
+    regPos: { left: 53.0, top: 85.0 }
   },
   {
     id: 'quais-colombelles',
@@ -82,7 +82,7 @@ export const SPOTS_REGISTRY = [
     typeLabel: 'Palplanches darses',
     tip: 'Lignes droites bordées de palplanches métalliques profondes. Dérives verticales au leurre souple et postes d\'affût pour percidés et poissons plats.',
     speciesIds: ['sandre', 'perche-commune', 'flet-commun', 'bar-commun', 'anguille-europe', 'alose-feinte'],
-    canalPos: { left: 44.4, top: 72.3 },
+    canalPos: { left: 47.6, top: 69.3 },
     regPos: null
   },
   {
@@ -96,7 +96,7 @@ export const SPOTS_REGISTRY = [
     typeLabel: 'Fosse portuaire',
     tip: 'Bassin commercial, darses draguées sabliers/ferraille. Cale de slipway et rupture de courant créant une zone de repli hivernal pour carnassiers.',
     speciesIds: ['sandre', 'brochet', 'bar-commun', 'perche-commune', 'silure-glane', 'carpe-commune', 'anguille-europe'],
-    canalPos: { left: 49.6, top: 60.5 },
+    canalPos: { left: 50.1, top: 58.9 },
     regPos: null
   },
   {
@@ -110,8 +110,8 @@ export const SPOTS_REGISTRY = [
     typeLabel: 'Étranglement de courant',
     tip: 'Goulot d\'étranglement hydraulique majeur. Courant puissant décuplé aux éclusées. Chasses violentes de bars francs sous les lampadaires nocturnes.',
     speciesIds: ['bar-commun', 'bar-mouchete', 'truite-de-mer', 'alose-feinte', 'sandre', 'mulet-lippu', 'anguille-europe'],
-    canalPos: { left: 70.3, top: 41.8 },
-    regPos: { left: 77.3, top: 63.2 }
+    canalPos: { left: 60.1, top: 42.5 },
+    regPos: { left: 69.0, top: 60.4 }
   },
   {
     id: 'ecluses-ouistreham',
@@ -124,8 +124,8 @@ export const SPOTS_REGISTRY = [
     typeLabel: 'Sas maritime DPM',
     tip: 'Porte d\'entrée maritime du canal. Remplissage des sas générant un puissant appel d\'eau salée oxygénée. Zone de concentration maximale de daurades et bars.',
     speciesIds: ['bar-commun', 'daurade-royale', 'mulet-lippu', 'mulet-dore', 'mulet-porc', 'flet-commun', 'seiche-commune', 'calamar-commun', 'truite-de-mer', 'alose-feinte'],
-    canalPos: { left: 89.4, top: 7.0 },
-    regPos: { left: 87.9, top: 43.0 }
+    canalPos: { left: 69.4, top: 12.0 },
+    regPos: { left: 76.4, top: 43.2 }
   },
 
   // --- SECTEUR CÔTE DE NACRE EN BATEAU ---
@@ -140,8 +140,8 @@ export const SPOTS_REGISTRY = [
     typeLabel: 'Cale slipway abritée',
     tip: 'Cale de mise à l\'eau Juno Beach protégée de la houle, musoir de jetée ouest et chenal rocheux. Accès immédiat aux Roches occidentales.',
     speciesIds: ['bar-commun', 'daurade-royale', 'daurade-grise', 'seiche-commune', 'calamar-commun', 'maquereau-commun', 'orphie'],
-    merPos: { left: 5.2, top: 30.5 },
-    regPos: { left: 1.3, top: 13.7 }
+    merPos: { left: 9.3, top: 33.4 },
+    regPos: { left: 15.8, top: 18.4 }
   },
   {
     id: 'ridens-bernieres',
@@ -154,8 +154,8 @@ export const SPOTS_REGISTRY = [
     typeLabel: 'Ondulations de fond sableux',
     tip: 'Bancs de sable coquillier et ridens sous-marins. Dérives idéales en mort manié ou train de plumes pour poissons plats, soles, turbots et daurades.',
     speciesIds: ['sole-commune', 'turbot', 'plie-commune', 'daurade-royale', 'daurade-grise', 'flet-commun', 'bar-commun', 'maquereau-commun'],
-    merPos: { left: 22.0, top: 15.8 },
-    regPos: null
+    merPos: { left: 24.5, top: 21.0 },
+    regPos: { left: 28.2, top: 12.0 }
   },
   {
     id: 'roches-calvados',
@@ -168,8 +168,8 @@ export const SPOTS_REGISTRY = [
     typeLabel: 'Récif calcaire tabulaire',
     tip: 'Plateau rocheux calcaire mythique de 15 milles. Tombants, champs de laminaires et failles. Le spot roi au leurre de surface pour bars francs et gros lieus.',
     speciesIds: ['bar-commun', 'bar-mouchete', 'lieu-jaune', 'vieille-commune', 'congre-europe', 'maquereau-commun', 'orphie', 'daurade-grise'],
-    merPos: { left: 44.0, top: 7.4 },
-    regPos: { left: 41.7, top: 2.1 }
+    merPos: { left: 44.5, top: 13.8 },
+    regPos: { left: 44.2, top: 8.6 }
   },
   {
     id: 'jetee-luc',
@@ -183,7 +183,7 @@ export const SPOTS_REGISTRY = [
     tip: 'Prolongement sous-marin de la jetée de Luc. Platiers découvrants, couloirs de dérive pour la seiche à la turlutte et chasses côtières d\'orphies et bars.',
     speciesIds: ['seiche-commune', 'calamar-commun', 'bar-commun', 'orphie', 'daurade-grise', 'vieille-commune', 'mulet-dore'],
     merPos: { left: 49.1, top: 49.2 },
-    regPos: { left: 47.0, top: 23.0 }
+    regPos: { left: 47.8, top: 26.2 }
   },
   {
     id: 'lion-sur-mer',
@@ -196,8 +196,8 @@ export const SPOTS_REGISTRY = [
     typeLabel: 'Récifs côtiers & sables',
     tip: 'Alternance de sables coquilliers et têtes de roches isolées. Excellente zone de mi-marée pour daurades grises, bars mouchetés et orphies en traîne.',
     speciesIds: ['daurade-grise', 'bar-mouchete', 'bar-commun', 'orphie', 'maquereau-commun', 'seiche-commune', 'plie-commune'],
-    merPos: { left: 61.6, top: 65.3 },
-    regPos: { left: 60.0, top: 31.1 }
+    merPos: { left: 60.6, top: 63.0 },
+    regPos: { left: 57.0, top: 33.0 }
   },
   {
     id: 'hermanville',
@@ -210,8 +210,8 @@ export const SPOTS_REGISTRY = [
     typeLabel: 'Bancs meubles & ridens',
     tip: 'Fonds de sable pur et couloirs de vers arénicoles. Postes de prédilection pour la sole à la calée nocturne et le turbot en dérive lente au lançon frais.',
     speciesIds: ['sole-commune', 'turbot', 'plie-commune', 'flet-commun', 'maquereau-commun', 'merlan'],
-    merPos: { left: 68.8, top: 74.7 },
-    regPos: { left: 67.5, top: 35.8 }
+    merPos: { left: 67.1, top: 71.0 },
+    regPos: { left: 62.2, top: 37.2 }
   },
   {
     id: 'epave-courbet',
@@ -224,8 +224,8 @@ export const SPOTS_REGISTRY = [
     typeLabel: 'Cuirassé 23 000 t coulé 1944',
     tip: 'Brise-lames Gooseberry 5 au large de Sword Beach. Écosystème sous-marin colossal : tanière à très gros congres, bancs de lieus jaunes, tacauds et bars.',
     speciesIds: ['lieu-jaune', 'congre-europe', 'tacaud', 'merlan', 'bar-commun', 'vieille-commune'],
-    merPos: { left: 76.0, top: 42.1 },
-    regPos: null
+    merPos: { left: 73.6, top: 43.4 },
+    regPos: { left: 67.4, top: 23.2 }
   },
   {
     id: 'ouistreham-riva-bella',
@@ -238,8 +238,8 @@ export const SPOTS_REGISTRY = [
     typeLabel: 'Cale slipway maritime DPM',
     tip: 'Cale de mise à l\'eau principale de Riva-Bella, musoir de jetée ouest. Confluence du canal et de la baie de Seine, poste de rentrée des dorades et bars.',
     speciesIds: ['bar-commun', 'daurade-royale', 'mulet-lippu', 'mulet-dore', 'seiche-commune', 'calamar-commun', 'flet-commun'],
-    merPos: { left: 87.2, top: 81.1 },
-    regPos: null
+    merPos: { left: 83.9, top: 76.4 },
+    regPos: { left: 75.6, top: 39.8 }
   },
   {
     id: 'epave-susan-anthony',
