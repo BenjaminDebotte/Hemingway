@@ -1,6 +1,6 @@
 # Multi-stage Dockerfile for Pêche Normandie - Fiches Techniques
 # Stage 1: Build & Validate
-FROM node:22-alpine AS builder
+FROM node:24-alpine AS builder
 
 WORKDIR /app
 
@@ -16,7 +16,7 @@ COPY site/ ./site/
 RUN node scripts/validate-species.mjs && node scripts/build-site.mjs
 
 # Stage 2: Runtime image
-FROM node:22-alpine AS runner
+FROM node:24-alpine AS runner
 
 WORKDIR /app
 
