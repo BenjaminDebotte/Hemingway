@@ -429,9 +429,9 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
   min-height: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  gap: 0.5mm;
-  padding: 1mm 1.8mm;
+  justify-content: space-between;
+  gap: 0.6mm;
+  padding: 1.2mm 2mm;
   margin-bottom: 0.5mm;
   width: 100%;
   box-sizing: border-box;
@@ -441,8 +441,17 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
   margin-bottom: 0;
 }
 
+/* Espèces dual-biotope (Canal + Bateau) : répartition proportionnelle de la hauteur */
+.a4-sheet-preview .card-face:not(:has(.mono-map-wrap)) .section-canal {
+  flex: 0 0 auto;
+}
+
+.a4-sheet-preview .card-face:not(:has(.mono-map-wrap)) .section-bateau {
+  flex: 1 1 auto;
+}
+
 /* Espèces mono-biotope (Eau douce/Canal seul ou Mer/Bateau seul) : section compacte en haut */
-.a4-sheet-preview .verso-header + .biotope-section:not(:last-child) {
+.a4-sheet-preview .card-face:has(.mono-map-wrap) .biotope-section {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
@@ -639,67 +648,67 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
 .a4-sheet-preview .section-header-row .block-title {
   margin-bottom: 0 !important;
   white-space: nowrap;
-  font-size: 6.5pt;
+  font-size: 7.2pt;
 }
 
 .a4-sheet-preview .section-header-row .presence-badge {
-  font-size: 5.2pt;
-  padding: 0.15mm 0.7mm;
+  font-size: 5.6pt;
+  padding: 0.2mm 0.8mm;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 62%;
 }
 
-.a4-sheet-preview .presence-badge { font-size: 6pt; padding: 0.4mm 1mm; }
+.a4-sheet-preview .presence-badge { font-size: 6.2pt; padding: 0.4mm 1mm; }
 .a4-sheet-preview .spots-chip-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.6mm;
-  margin-bottom: 0.5mm;
+  margin-bottom: 0.4mm;
   width: 100%;
   box-sizing: border-box;
 }
 .a4-sheet-preview .spot-chip {
-  padding: 0.45mm 0.9mm;
-  font-size: 5.9pt;
-  line-height: 1.15;
+  padding: 0.55mm 0.9mm;
+  font-size: 6.2pt;
+  line-height: 1.18;
   width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.a4-sheet-preview .spot-tag { font-size: 4.8pt; margin-bottom: 0.15mm; }
+.a4-sheet-preview .spot-tag { font-size: 5.0pt; margin-bottom: 0.15mm; }
 .a4-sheet-preview .canal-triggers-cockpit {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.6mm;
-  margin-bottom: 0.5mm;
+  margin-bottom: 0.4mm;
   width: 100%;
   box-sizing: border-box;
 }
 .a4-sheet-preview .trigger-card {
-  padding: 0.45mm 0.9mm;
-  font-size: 5.9pt;
-  line-height: 1.14;
+  padding: 0.55mm 0.9mm;
+  font-size: 6.2pt;
+  line-height: 1.18;
   width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.a4-sheet-preview .trigger-header { font-size: 5.2pt; margin-bottom: 0.2mm; }
+.a4-sheet-preview .trigger-header { font-size: 5.4pt; margin-bottom: 0.15mm; }
 .a4-sheet-preview .tide-weather-cockpit {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.6mm;
-  margin-bottom: 0.5mm;
+  margin-bottom: 0.4mm;
   width: 100%;
   box-sizing: border-box;
 }
 .a4-sheet-preview .cockpit-box {
-  padding: 0.45mm 0.9mm;
+  padding: 0.55mm 0.9mm;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -710,15 +719,15 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
 .a4-sheet-preview .cockpit-pill-val { font-size: 5.4pt; }
 .a4-sheet-preview .coef-track { height: 4px; width: 100%; }
 .a4-sheet-preview .coef-labels { font-size: 4.8pt; }
-.a4-sheet-preview .wind-desc-text { font-size: 5.8pt; line-height: 1.14; }
+.a4-sheet-preview .wind-desc-text { font-size: 6.0pt; line-height: 1.18; }
 .a4-sheet-preview .twelfths-card {
   border: 1px solid var(--theme-surface-subtle-border);
   background: #ffffff;
   color: var(--theme-text-main);
   box-shadow: none;
   border-radius: 0;
-  padding: 1mm 1.8mm;
-  margin: 0.6mm 0;
+  padding: 1mm 1.6mm;
+  margin: 0.4mm 0;
   width: 100%;
   box-sizing: border-box;
 }
@@ -732,27 +741,27 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
 .a4-sheet-preview .twelfths-hours-pill { font-size: 5.6pt; padding: 0.3mm 1mm; }
 .a4-sheet-preview .twelfths-flow-pill { font-size: 5.4pt; padding: 0.3mm 0.8mm; }
 .a4-sheet-preview .twelfths-bell-curve {
-  height: 28px;
+  height: 26px;
   padding: 1.5px 3px 0;
   gap: 2px;
   flex-shrink: 0;
 }
-.a4-sheet-preview .twelfth-col { width: 16px; }
-.a4-sheet-preview .twelfth-bar-track { height: 17px; }
-.a4-sheet-preview .twelfth-hour-name { font-size: 5pt; font-weight: 700; margin-top: 1px; }
-.a4-sheet-preview .twelfth-frac-label { font-size: 4.4pt; }
-.a4-sheet-preview .twelfths-note { font-size: 6pt; line-height: 1.18; flex: 1 1 auto; }
+.a4-sheet-preview .twelfth-col { width: 15px; }
+.a4-sheet-preview .twelfth-bar-track { height: 16px; }
+.a4-sheet-preview .twelfth-hour-name { font-size: 4.8pt; font-weight: 700; margin-top: 1px; }
+.a4-sheet-preview .twelfth-frac-label { font-size: 4.2pt; }
+.a4-sheet-preview .twelfths-note { font-size: 6.0pt; line-height: 1.18; flex: 1 1 auto; }
 .a4-sheet-preview .tactics-bullets {
-  font-size: 5.9pt;
-  line-height: 1.14;
-  gap: 0.2mm;
+  font-size: 6.1pt;
+  line-height: 1.18;
+  gap: 0.25mm;
   margin-bottom: 0.35mm;
   width: 100%;
   box-sizing: border-box;
 }
 .a4-sheet-preview .terminal-tackle-card {
-  padding: 0.35mm 0.8mm;
-  margin: 0.25mm 0;
+  padding: 0.55mm 0.9mm;
+  margin: 0.3mm 0;
   border: 1px solid var(--theme-surface-subtle-border);
   border-radius: 0;
   background: #ffffff;
@@ -763,16 +772,16 @@ html[data-mode="dark"] .a4-sheet-preview .waypoint-card {
 .a4-sheet-preview .terminal-canal { border-left: 2px solid var(--theme-canal-accent); }
 .a4-sheet-preview .terminal-bateau { border-left: 2px solid var(--theme-bateau-accent); }
 .a4-sheet-preview .terminal-card-header { margin-bottom: 0.15mm; padding-bottom: 0.15mm; border-bottom: 1px solid var(--theme-surface-subtle-border); }
-.a4-sheet-preview .terminal-card-title { font-size: 5.2pt; }
+.a4-sheet-preview .terminal-card-title { font-size: 5.6pt; font-weight: 800; }
 .a4-sheet-preview .terminal-specs-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.2mm 1mm;
   width: 100%;
 }
-.a4-sheet-preview .terminal-spec-item { font-size: 5.5pt; line-height: 1.1; gap: 0.4mm; width: 100%; }
+.a4-sheet-preview .terminal-spec-item { font-size: 5.8pt; line-height: 1.15; gap: 0.4mm; width: 100%; }
 .a4-sheet-preview .terminal-spec-item.spec-combo { grid-column: 1 / -1; }
-.a4-sheet-preview .terminal-pill { font-size: 4.5pt; padding: 0.15mm 0.5mm; width: 12mm; }
+.a4-sheet-preview .terminal-pill { font-size: 4.8pt; padding: 0.2mm 0.5mm; width: 13mm; }
 .a4-sheet-preview .pill-combo {
   background: #f1f5f9 !important;
   color: #0f172a !important;
@@ -998,11 +1007,19 @@ html[data-mode="dark"] .a4-sheet-preview .verso-badge {
     flex: 1 1 0 !important;
     display: flex !important;
     flex-direction: column !important;
-    justify-content: flex-start !important;
+    justify-content: space-between !important;
     gap: 0.8mm !important;
   }
 
-  .a4-sheet-preview .verso-header + .biotope-section:not(:last-child) {
+  .a4-sheet-preview .card-face:not(:has(.mono-map-wrap)) .section-canal {
+    flex: 0 0 auto !important;
+  }
+
+  .a4-sheet-preview .card-face:not(:has(.mono-map-wrap)) .section-bateau {
+    flex: 1 1 auto !important;
+  }
+
+  .a4-sheet-preview .card-face:has(.mono-map-wrap) .biotope-section {
     flex: 0 0 auto !important;
     gap: 0.9mm !important;
   }
@@ -1068,9 +1085,9 @@ html[data-mode="dark"] .a4-sheet-preview .verso-badge {
 }
 
 .a4-sheet-preview .waypoints-block {
-  padding: 0.2mm 0.6mm !important;
-  margin: 0.2mm 0 !important;
-  gap: 0.15mm !important;
+  padding: 0.5mm 0.9mm !important;
+  margin: 0.3mm 0 !important;
+  gap: 0.25mm !important;
   border-radius: 0 !important;
   border: 1px solid var(--theme-surface-subtle-border) !important;
   background: #ffffff;
@@ -1078,32 +1095,32 @@ html[data-mode="dark"] .a4-sheet-preview .verso-badge {
 }
 
 .a4-sheet-preview .waypoints-header-row {
-  margin-bottom: 0.1mm !important;
+  margin-bottom: 0.2mm !important;
 }
 
 .a4-sheet-preview .waypoints-title {
-  font-size: 5.2pt !important;
-  line-height: 1.1 !important;
+  font-size: 5.8pt !important;
+  line-height: 1.15 !important;
 }
 
 .a4-sheet-preview .waypoints-title .ui-icon {
-  width: 1.8mm !important;
-  height: 1.8mm !important;
+  width: 2mm !important;
+  height: 2mm !important;
 }
 
 .a4-sheet-preview .waypoints-cards-list {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
-  gap: 0.5mm !important;
+  gap: 0.6mm !important;
 }
 
 .a4-sheet-preview .waypoint-card {
-  padding: 0.12mm 0.35mm !important;
+  padding: 0.4mm 0.7mm !important;
   border: 1px solid var(--theme-surface-subtle-border) !important;
   border-radius: 0 !important;
   background: #ffffff;
   min-width: 0 !important;
-  gap: 0.15mm !important;
+  gap: 0.25mm !important;
 }
 
 .a4-sheet-preview .waypoint-icon-badge {
@@ -1111,33 +1128,33 @@ html[data-mode="dark"] .a4-sheet-preview .verso-badge {
 }
 
 .a4-sheet-preview .waypoint-name-row {
-  gap: 0.25mm !important;
+  gap: 0.3mm !important;
 }
 
 .a4-sheet-preview .waypoint-name {
-  font-size: 5.4pt !important;
-  line-height: 1.05 !important;
+  font-size: 5.8pt !important;
+  line-height: 1.12 !important;
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
 }
 
 .a4-sheet-preview .waypoint-depth-pill {
-  font-size: 4.4pt !important;
-  padding: 0.05mm 0.3mm !important;
+  font-size: 4.8pt !important;
+  padding: 0.1mm 0.4mm !important;
   line-height: 1 !important;
 }
 
 .a4-sheet-preview .waypoint-coords-wrap {
-  gap: 0.3mm !important;
+  gap: 0.4mm !important;
 }
 
 .a4-sheet-preview .coord-prefix {
-  font-size: 4.4pt !important;
+  font-size: 4.8pt !important;
 }
 
 .a4-sheet-preview .coord-nautical .coord-val {
-  font-size: 5.1pt !important;
+  font-size: 5.5pt !important;
   letter-spacing: -0.02em !important;
 }
 

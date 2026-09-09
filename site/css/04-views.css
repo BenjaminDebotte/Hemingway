@@ -845,11 +845,14 @@
     border-radius: 0;
     padding: 1.15rem 1.1rem;
   }
-  .tide-weather-cockpit {
-    grid-template-columns: 1fr;
-  }
+  .tide-weather-cockpit,
   .canal-triggers-cockpit {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+  .cockpit-box,
+  .trigger-card {
+    width: 100%;
+    flex: 1 1 auto;
   }
   .twelfths-chart-container {
     flex-direction: column;
