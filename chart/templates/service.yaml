@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "peche-fiches-normandie.fullname" . }}
+  labels:
+    {{- include "peche-fiches-normandie.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "peche-fiches-normandie.selectorLabels" . | nindent 4 }}

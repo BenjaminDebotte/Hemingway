@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Git and CI/CD
+.git/
+.gitignore
+
+# Documentation & internal agent task files
+docs/
+tasks/
+.pi/
+.agentignore
+DESCHOOL.md
+deschoolwebsite.jpg
+
+# Tests
+tests/
+
+# Environment files and logs
+.env
+.env.*
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.DS_Store

@@ -206,6 +206,97 @@ npm run validate
 npm run build
 ```
 
+---
+
+## ⚡ Déploiement GitOps avec FluxCD
+
+Le projet inclut les définitions **FluxCD** (`flux/`) pour un déploiement GitOps automatisé :
+
+```text
+flux/
+├── repository.yaml      # Source GitRepository pointant vers le dépôt
+├── release.yaml         # HelmRelease déployant le chart ./chart
+└── kustomization.yaml   # Bundle Kustomize pour FluxCD
+```
+
+### 1. Appliquer les ressources FluxCD directement
+```bash
+# Appliquer la source GitRepository et le HelmRelease
+kubectl apply -k flux/
+```
+
+### 2. Intégrer à un cluster géré par FluxCD (`flux-system`)
+Si votre cluster dispose de FluxCD configuré, vous pouvez ajouter l'application via la CLI Flux :
+```bash
+flux create source git peche-fiches-normandie \
+  --url=https://github.com/benjamindebotte/peche-fiches-techniques-normandie.git \
+  --branch=master \
+  --interval=1m
+
+flux create hr peche-fiches-normandie \
+  --chart=./chart \
+  --source=GitRepository/peche-fiches-normandie.flux-system \
+  --target-namespace=peche \
+  --create-target-namespace \
+  --interval=5m
+```
+
+---
+
+## ☸️ Déploiement Kubernetes avec Helm
+
+Le projet inclut un chart Helm (`chart/`) prêt pour Kubernetes :
+
+### 1. Installation de l'application via Helm
+```bash
+# Vérifier et prévisualiser les manifestes Kubernetes générés
+helm template peche-normandie chart/
+
+# Installer / Mettre à jour la release dans Kubernetes
+helm upgrade --install peche-normandie chart/ --namespace peche --create-namespace
+```
+
+### 2. Personnalisation des valeurs (`values.yaml`)
+Vous pouvez surcharger le nombre de répliques, le nom de domaine Ingress ou les ressources dans `chart/values.yaml` ou via `--set` :
+```bash
+helm upgrade --install peche-normandie chart/ \
+  --set replicaCount=3 \
+  --set ingress.enabled=true \
+  --set ingress.hosts[0].host=peche.votre-domaine.com
+```
+
+---
+
+## 🐳 Déploiement Container & Docker
+
+Le projet dispose d'une image Docker multi-stage optimisée et sécurisée basée sur `node:22-alpine` :
+
+### 1. Construction et Lancement avec Docker
+```bash
+# Construire l'image Docker
+docker build -t peche-fiches-normandie:latest .
+
+# Lancer le conteneur en arrière-plan (port 3000)
+docker run -d -p 3000:3000 --name peche-normandie peche-fiches-normandie:latest
+```
+
+### 2. Utilisation avec Docker Compose
+```bash
+# Démarrer le service
+docker compose up -d
+
+# Vérifier le statut et les logs
+docker compose ps
+docker compose logs -f
+```
+
+### 3. Pipeline CI/CD GitHub Actions
+Le workflow `.github/workflows/deploy-container.yml` automatise :
+* ✅ La validation du schéma JSON des 32 espèces et l'exécution des tests unitaires.
+* 📦 Le build et le push de l'image Docker multi-architecture sur **GitHub Container Registry (`ghcr.io`)**.
+* 🛡️ Un test de démarrage et de healthcheck du conteneur en environnement d'intégration.
+
+
 > **Astuce :** Vous pouvez également ouvrir directement `site/index.html` dans votre navigateur (Chrome, Edge, Firefox) sans aucun serveur : le fichier `site/data.js` fonctionne de manière 100 % autonome sans blocage CORS.
 
 ---
